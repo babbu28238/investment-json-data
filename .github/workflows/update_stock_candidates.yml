@@ -34,10 +34,10 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add stock_candidates.json v97_generation_summary.json v97_collection_errors.txt
+          git add stock_candidates.json app_data_status.json v101_generation_summary.json v101_collection_errors.txt
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto update stock_candidates.json"
+            git commit -m "V101 update stock candidates with data status"
             git push
           fi
