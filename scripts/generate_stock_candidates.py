@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-V99 KRX Universe Top50 Auto Selector
+V100 KRX Universe Top50 + Industry/Theme Mapping
 
-목표:
-- 임의 관심종목 50개가 아니라 KOSPI/KOSDAQ 전체 종목에서 자동 후보 선별
-- 거래대금 상위 유동성 종목을 1차 후보군으로 압축
-- 가격·기술지표 기반으로 상위 50개 stock_candidates.json 생성
-- 기존 앱 JSON 스키마와 호환 유지
+V99 개선점:
+- KOSPI/KOSDAQ 전체 자동 TOP 50 선별 유지
+- 종목명 기반 업종·테마 분류 강화
+- recentIssue에 자동선별 근거 + 업종/테마 설명 추가
+- selectionTags 필드 추가
+- industryConfidence 필드 추가
 
 주의:
-- 수급 조회는 안정성 문제로 비활성화
-- GitHub Actions 환경에서 pykrx 조회가 막히면 V99.1에서 fallback 구조로 보완
+- 수급 조회는 안정성 문제로 계속 비활성화
+- 업종 분류는 종목명/대표 키워드 기반 1차 매핑입니다.
+- V101에서 KRX 업종 코드 또는 외부 업종 DB 연동으로 고도화 예정
 """
 
 from __future__ import annotations
@@ -18,31 +20,180 @@ from __future__ import annotations
 import json
 import time
 from datetime import datetime, timedelta
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from pykrx import stock
 
 OUTPUT_JSON = "stock_candidates.json"
-SUMMARY_JSON = "v99_generation_summary.json"
-ERROR_LOG = "v99_collection_errors.txt"
+SUMMARY_JSON = "v100_generation_summary.json"
+ERROR_LOG = "v100_collection_errors.txt"
 
 LOOKBACK_DAYS = 180
 SLEEP_SECONDS = 0.10
 
-# 전체 시장에서 바로 모든 종목 OHLCV를 계산하면 오래 걸리므로,
-# 거래대금 상위 종목만 1차 후보군으로 압축합니다.
 UNIVERSE_TOP_N_BY_TRADING_VALUE = 350
 FINAL_TOP_N = 50
 
 MIN_PRICE = 3000
-MIN_TRADING_VALUE = 3_000_000_000  # 30억
-MIN_MARKET_CAP = 100_000_000_000   # 1,000억
+MIN_TRADING_VALUE = 3_000_000_000
+MIN_MARKET_CAP = 100_000_000_000
 
 EXCLUDE_KEYWORDS = [
-    "스팩", "SPAC", "ETN", "리츠", "인프라", "우선주", "우", "ETF"
+    "스팩", "SPAC", "ETN", "리츠", "인프라", "우선주", "ETF"
 ]
+
+
+# MARK: - 업종·테마 매핑
+
+THEME_RULES = [
+    {
+        "industry": "반도체·AI",
+        "keywords": [
+            "삼성전자", "SK하이닉스", "한미반도체", "이오테크닉스", "원익IPS", "원익QnC",
+            "심텍", "리노공업", "ISC", "하나마이크론", "테스", "주성엔지니어링", "에스앤에스텍",
+            "동진쎄미켐", "솔브레인", "DB하이텍", "LX세미콘", "파크시스템스", "유진테크",
+            "티씨케이", "피에스케이", "넥스틴", "제우스", "고영", "HPSP", "가온칩스",
+            "네패스", "덕산하이메탈", "코미코", "하나머티리얼즈", "케이씨텍"
+        ],
+        "tags": ["반도체", "AI", "HBM", "장비", "후공정"]
+    },
+    {
+        "industry": "방산·우주항공",
+        "keywords": [
+            "한화시스템", "한화에어로스페이스", "한국항공우주", "LIG넥스원", "현대로템",
+            "풍산", "쎄트렉아이", "인텔리안테크", "AP위성", "켄코아에어로스페이스",
+            "제노코", "퍼스텍", "빅텍", "휴니드", "아이쓰리시스템"
+        ],
+        "tags": ["방산", "우주항공", "수주", "수출", "국방"]
+    },
+    {
+        "industry": "조선·해양",
+        "keywords": [
+            "HD현대중공업", "HD한국조선해양", "삼성중공업", "한화오션", "HD현대미포",
+            "현대미포조선", "세진중공업", "태광", "성광벤드", "동성화인텍", "한국카본",
+            "STX엔진", "STX중공업", "HSD엔진", "한화엔진"
+        ],
+        "tags": ["조선", "LNG", "수주", "선박", "해양"]
+    },
+    {
+        "industry": "원전·전력·에너지",
+        "keywords": [
+            "두산에너빌리티", "한전기술", "한전KPS", "한국전력", "LS ELECTRIC", "LS전선아시아",
+            "효성중공업", "제룡전기", "HD현대일렉트릭", "일진전기", "대한전선", "지투파워",
+            "우진", "비에이치아이", "우리기술", "서전기전", "보성파워텍"
+        ],
+        "tags": ["원전", "전력기기", "전력망", "에너지", "인프라"]
+    },
+    {
+        "industry": "2차전지·소재",
+        "keywords": [
+            "LG에너지솔루션", "삼성SDI", "SK이노베이션", "엘앤에프", "에코프로비엠", "에코프로",
+            "포스코퓨처엠", "POSCO홀딩스", "롯데에너지머티리얼즈", "솔루스첨단소재", "천보",
+            "더블유씨피", "SK아이이테크놀로지", "대주전자재료", "나노신소재", "윤성에프앤씨",
+            "피엔티", "씨아이에스", "엔켐", "코스모신소재", "후성", "일진머티리얼즈"
+        ],
+        "tags": ["2차전지", "양극재", "전지박", "ESS", "소재"]
+    },
+    {
+        "industry": "자동차·모빌리티",
+        "keywords": [
+            "현대차", "기아", "현대모비스", "현대글로비스", "HL만도", "한온시스템",
+            "성우하이텍", "화신", "에스엘", "서연이화", "현대위아", "모트렉스",
+            "SNT모티브", "명신산업", "평화정공", "코리아에프티"
+        ],
+        "tags": ["자동차", "모빌리티", "전장", "주주환원", "밸류업"]
+    },
+    {
+        "industry": "금융·밸류업",
+        "keywords": [
+            "KB금융", "신한지주", "하나금융지주", "우리금융지주", "기업은행", "BNK금융지주",
+            "DGB금융지주", "JB금융지주", "삼성생명", "삼성화재", "현대해상", "DB손해보험",
+            "미래에셋증권", "한국금융지주", "키움증권", "NH투자증권", "메리츠금융지주"
+        ],
+        "tags": ["금융", "밸류업", "배당", "자사주", "금리"]
+    },
+    {
+        "industry": "바이오·제약",
+        "keywords": [
+            "삼성바이오로직스", "셀트리온", "SK바이오팜", "한미약품", "유한양행", "종근당",
+            "대웅제약", "녹십자", "알테오젠", "리가켐바이오", "HLB", "에이비엘바이오",
+            "오스코텍", "보로노이", "파마리서치", "휴젤", "메디톡스", "바이넥스",
+            "에스티팜", "동아에스티"
+        ],
+        "tags": ["바이오", "제약", "신약", "CDMO", "바이오시밀러"]
+    },
+    {
+        "industry": "화장품·소비재",
+        "keywords": [
+            "LG생활건강", "아모레퍼시픽", "코스맥스", "한국콜마", "클리오", "브이티",
+            "실리콘투", "아이패밀리에스씨", "마녀공장", "토니모리", "애경산업", "콜마비앤에이치",
+            "CJ제일제당", "오리온", "농심", "삼양식품", "롯데웰푸드", "하이트진로"
+        ],
+        "tags": ["화장품", "소비재", "K뷰티", "음식료", "중국소비"]
+    },
+    {
+        "industry": "인터넷·게임·콘텐츠",
+        "keywords": [
+            "NAVER", "카카오", "크래프톤", "엔씨소프트", "넷마블", "펄어비스", "카카오게임즈",
+            "위메이드", "컴투스", "디어유", "하이브", "JYP Ent.", "에스엠", "와이지엔터테인먼트",
+            "스튜디오드래곤", "CJ ENM", "콘텐트리중앙"
+        ],
+        "tags": ["인터넷", "AI", "게임", "콘텐츠", "플랫폼"]
+    },
+    {
+        "industry": "건설·기계·인프라",
+        "keywords": [
+            "현대건설", "대우건설", "삼성엔지니어링", "GS건설", "DL이앤씨", "HDC현대산업개발",
+            "두산밥캣", "HD현대건설기계", "HD현대인프라코어", "진성티이씨", "대창단조"
+        ],
+        "tags": ["건설", "기계", "인프라", "해외수주", "재건"]
+    },
+    {
+        "industry": "철강·화학·소재",
+        "keywords": [
+            "POSCO홀딩스", "현대제철", "세아베스틸지주", "동국제강", "고려아연", "풍산",
+            "LG화학", "롯데케미칼", "금호석유", "한화솔루션", "효성첨단소재", "코오롱인더",
+            "SKC", "롯데정밀화학", "대한유화", "애경케미칼", "PI첨단소재"
+        ],
+        "tags": ["철강", "화학", "소재", "스프레드", "업황회복"]
+    },
+    {
+        "industry": "유통·운송·관광",
+        "keywords": [
+            "신세계", "롯데쇼핑", "이마트", "현대백화점", "호텔신라", "하나투어", "모두투어",
+            "대한항공", "아시아나항공", "제주항공", "진에어", "HMM", "CJ대한통운", "팬오션"
+        ],
+        "tags": ["유통", "면세", "항공", "해운", "관광"]
+    }
+]
+
+
+def classify_industry_and_tags(name: str, code: str, market: str) -> tuple[str, list[str], str]:
+    n = str(name)
+
+    for rule in THEME_RULES:
+        for keyword in rule["keywords"]:
+            if keyword.upper() in n.upper():
+                return rule["industry"], rule["tags"], "high"
+
+    # 부분 키워드 fallback
+    fallback_rules = [
+        ("반도체·AI", ["반도체", "AI"], ["반도체", "테크"], "medium"),
+        ("바이오·제약", ["바이오", "제약", "약품", "팜"], ["바이오", "제약"], "medium"),
+        ("금융·밸류업", ["금융", "은행", "증권", "보험"], ["금융", "밸류업"], "medium"),
+        ("조선·해양", ["조선", "중공업", "오션"], ["조선", "수주"], "medium"),
+        ("화장품·소비재", ["화장품", "푸드", "식품", "제당"], ["소비재", "음식료"], "medium"),
+        ("자동차·모빌리티", ["모비스", "모터", "오토", "차"], ["자동차", "모빌리티"], "medium"),
+        ("철강·화학·소재", ["화학", "소재", "철강", "제철"], ["소재", "업황"], "medium"),
+        ("원전·전력·에너지", ["전력", "전기", "에너지"], ["전력", "에너지"], "medium"),
+    ]
+
+    for industry, keys, tags, confidence in fallback_rules:
+        if any(k.upper() in n.upper() for k in keys):
+            return industry, tags, confidence
+
+    return f"{market} 자동선별", ["자동선별", "거래대금"], "low"
 
 
 def ymd(dt: datetime) -> str:
@@ -90,11 +241,8 @@ def is_excluded_name(name: str) -> bool:
     for keyword in EXCLUDE_KEYWORDS:
         if keyword.upper() in upper_name:
             return True
-
-    # 한국 우선주 간단 제외. 예: 삼성전자우
     if str(name).endswith("우"):
         return True
-
     return False
 
 
@@ -136,9 +284,7 @@ def build_liquid_universe(base_date: str) -> pd.DataFrame:
     name_map = get_market_name_map(base_date)
     universe["name"] = universe["code"].map(name_map).fillna(universe["code"])
 
-    # pykrx 컬럼: 종가, 시가총액, 거래량, 거래대금, 상장주식수
-    required_cols = ["종가", "시가총액", "거래대금"]
-    for col in required_cols:
+    for col in ["종가", "시가총액", "거래대금"]:
         if col not in universe.columns:
             raise RuntimeError(f"필수 컬럼 누락: {col}")
 
@@ -219,28 +365,9 @@ def score_to_grade(score_value: int) -> str:
     return "D"
 
 
-def infer_industry(name: str, code: str, market: str) -> str:
-    # V99는 외부 업종 DB 없이 자동 선별하므로 우선 간단 분류만 제공합니다.
-    # V100에서 KRX 업종/테마 매핑을 붙일 예정입니다.
-    n = str(name)
-    if any(k in n for k in ["삼성전자", "SK하이닉스", "한미반도체", "이오테크닉스", "원익", "심텍"]):
-        return "반도체·AI"
-    if any(k in n for k in ["현대차", "기아", "모비스", "글로비스"]):
-        return "자동차"
-    if any(k in n for k in ["한화", "LIG", "한국항공", "현대로템"]):
-        return "방산·우주항공"
-    if any(k in n for k in ["조선", "오션", "중공업"]):
-        return "조선"
-    if any(k in n for k in ["금융", "은행", "지주", "KB", "신한", "하나", "우리"]):
-        return "금융·밸류업"
-    if any(k in n for k in ["바이오", "셀트리온", "한미약품", "삼성바이오"]):
-        return "바이오·제약"
-    if any(k in n for k in ["에너지", "전력", "두산"]):
-        return "에너지·원전"
-    return f"{market} 자동선별"
-
-
 def make_recent_issue(
+    industry: str,
+    tags: list[str],
     weekly_breakout: bool,
     daily_breakout: bool,
     rsi_value: float,
@@ -248,7 +375,9 @@ def make_recent_issue(
     trading_value: int,
     rank: int,
 ) -> str:
-    parts = [f"KRX 전체 자동선별 TOP {rank}"]
+    parts = [f"KRX 전체 자동선별 TOP {rank}", industry]
+    if tags:
+        parts.append("·".join(tags[:3]))
     if weekly_breakout:
         parts.append("주봉 구름대 돌파")
     if daily_breakout:
@@ -293,6 +422,8 @@ def calculate_candidate(row: pd.Series, base_date: str, rank_by_value: int) -> d
 
     trading_value = safe_int(row.get("거래대금", 0))
     market_cap = safe_int(row.get("시가총액", 0))
+
+    industry, tags, confidence = classify_industry_and_tags(name, code, market)
 
     technical = 38
 
@@ -344,6 +475,8 @@ def calculate_candidate(row: pd.Series, base_date: str, rank_by_value: int) -> d
     liquidity = int(max(0, min(12, liquidity)))
 
     issue = 0
+    if confidence == "high":
+        issue += 2
     if weekly_breakout and daily_breakout:
         issue += 4
     if macd_value > macd_signal and 45 <= rsi_value <= 70:
@@ -355,12 +488,13 @@ def calculate_candidate(row: pd.Series, base_date: str, rank_by_value: int) -> d
     elif rank_by_value <= 200:
         issue += 1
 
-    issue = int(max(0, min(8, issue)))
+    issue = int(max(0, min(10, issue)))
 
     score = int(max(0, min(100, technical + liquidity + issue)))
 
-    industry = infer_industry(name, code, market)
     recent_issue = make_recent_issue(
+        industry=industry,
+        tags=tags,
         weekly_breakout=weekly_breakout,
         daily_breakout=daily_breakout,
         rsi_value=rsi_value,
@@ -395,7 +529,9 @@ def calculate_candidate(row: pd.Series, base_date: str, rank_by_value: int) -> d
         "marketCap": market_cap,
         "rsi": round(rsi_value, 2),
         "universeRankByTradingValue": rank_by_value,
-        "selectionSource": "KRX_UNIVERSE_AUTO_TOP50_V99",
+        "selectionSource": "KRX_UNIVERSE_AUTO_TOP50_V100",
+        "selectionTags": tags,
+        "industryConfidence": confidence,
     }
 
 
@@ -414,8 +550,7 @@ def generate_stock_candidates():
                 candidates.append(item)
                 print(
                     f"[성공] {idx}/{len(universe)} {item['code']} {item['name']} "
-                    f"{item['grade']} {item['score']} "
-                    f"(기술 {item['technicalScore']}, 유동성 {item.get('tradingValue', 0):,})"
+                    f"{item['industry']} {item['grade']} {item['score']}"
                 )
         except Exception as e:
             msg = f"{row.get('code', '')} {row.get('name', '')}: {e}"
@@ -443,14 +578,19 @@ def generate_stock_candidates():
     with open(ERROR_LOG, "w", encoding="utf-8") as f:
         f.write("\n".join(errors))
 
+    industry_counts = {}
+    for item in final_candidates:
+        industry_counts[item["industry"]] = industry_counts.get(item["industry"], 0) + 1
+
     summary = {
-        "version": "V99_KRX_UNIVERSE_AUTO_TOP50",
+        "version": "V100_KRX_UNIVERSE_AUTO_TOP50_INDUSTRY_THEME",
         "generatedAt": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "baseDate": base_date,
         "universeTopNByTradingValue": UNIVERSE_TOP_N_BY_TRADING_VALUE,
         "candidateCalculatedCount": len(candidates),
         "finalCandidateCount": len(final_candidates),
         "errorCount": len(errors),
+        "industryCounts": industry_counts,
         "filters": {
             "minPrice": MIN_PRICE,
             "minTradingValue": MIN_TRADING_VALUE,
@@ -462,14 +602,15 @@ def generate_stock_candidates():
         json.dump(summary, f, ensure_ascii=False, indent=2)
 
     print("=" * 70)
-    print("V99 전체 시장 자동선별 완료")
+    print("V100 전체 시장 자동선별 + 업종·테마 분류 완료")
     print("분석 기준 거래일:", base_date)
     print("계산 후보 수:", len(candidates))
     print("최종 저장 후보 수:", len(final_candidates))
     print("오류 수:", len(errors))
+    print("업종 분포:", industry_counts)
     print("상위 10개:")
     for item in final_candidates[:10]:
-        print(item["code"], item["name"], item["grade"], item["score"], item["recentIssue"])
+        print(item["code"], item["name"], item["industry"], item["grade"], item["score"])
 
     return final_candidates
 
