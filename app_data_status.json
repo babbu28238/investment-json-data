@@ -1,8 +1,8 @@
 {
   "status": "warning",
   "version": "V101_DATA_STATUS_QUALITY_CHECK",
-  "generatedAt": "2026-05-28 18:24:27",
-  "baseDate": "20260528",
+  "generatedAt": "2026-05-29 18:19:28",
+  "baseDate": "20260529",
   "candidateCount": 50,
   "universeSource": "fallback_static_universe",
   "errorCount": 0,
@@ -10,29 +10,35 @@
     "KRX 전체 유니버스 조회 실패로 fallback 유니버스를 사용했습니다."
   ],
   "industryCounts": {
+    "반도체·AI": 6,
     "자동차·모빌리티": 7,
-    "인터넷·게임·콘텐츠": 3,
-    "유통·운송·관광": 3,
-    "철강·화학·소재": 2,
-    "반도체·AI": 7,
-    "바이오·제약": 2,
     "조선·해양": 3,
+    "인터넷·게임·콘텐츠": 4,
+    "2차전지·소재": 6,
+    "유통·운송·관광": 3,
+    "철강·화학·소재": 3,
     "금융·밸류업": 1,
-    "2차전지·소재": 7,
-    "KOSPI 자동선별": 9,
-    "방산·우주항공": 2,
-    "건설·기계·인프라": 1,
-    "화장품·소비재": 1,
-    "로봇·자동화": 1,
-    "원전·전력·에너지": 1
+    "바이오·제약": 3,
+    "KOSPI 자동선별": 8,
+    "방산·우주항공": 1,
+    "건설·기계·인프라": 3,
+    "원전·전력·에너지": 1,
+    "로봇·자동화": 1
   },
   "gradeCounts": {
-    "S": 14,
-    "A": 8,
-    "B": 23,
-    "C": 5
+    "S": 17,
+    "A": 15,
+    "B": 17,
+    "C": 1
   },
   "topCandidates": [
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "industry": "반도체·AI",
+      "grade": "S",
+      "score": 98
+    },
     {
       "name": "현대차",
       "code": "005380",
@@ -41,11 +47,39 @@
       "score": 98
     },
     {
+      "name": "기아",
+      "code": "000270",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "HD현대중공업",
+      "code": "329180",
+      "industry": "조선·해양",
+      "grade": "S",
+      "score": 96
+    },
+    {
       "name": "엔씨소프트",
       "code": "036570",
       "industry": "인터넷·게임·콘텐츠",
       "grade": "S",
       "score": 96
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "industry": "반도체·AI",
+      "grade": "S",
+      "score": 95
+    },
+    {
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "industry": "2차전지·소재",
+      "grade": "S",
+      "score": 95
     },
     {
       "name": "대한항공",
@@ -62,46 +96,11 @@
       "score": 95
     },
     {
-      "name": "삼성전자",
-      "code": "005930",
-      "industry": "반도체·AI",
-      "grade": "S",
-      "score": 94
-    },
-    {
-      "name": "SK하이닉스",
-      "code": "000660",
-      "industry": "반도체·AI",
+      "name": "삼성SDI",
+      "code": "006400",
+      "industry": "2차전지·소재",
       "grade": "S",
       "score": 93
-    },
-    {
-      "name": "알테오젠",
-      "code": "196170",
-      "industry": "바이오·제약",
-      "grade": "S",
-      "score": 93
-    },
-    {
-      "name": "HD현대중공업",
-      "code": "329180",
-      "industry": "조선·해양",
-      "grade": "S",
-      "score": 92
-    },
-    {
-      "name": "신세계",
-      "code": "004170",
-      "industry": "유통·운송·관광",
-      "grade": "S",
-      "score": 92
-    },
-    {
-      "name": "삼성생명",
-      "code": "032830",
-      "industry": "금융·밸류업",
-      "grade": "S",
-      "score": 91
     }
   ]
 }
