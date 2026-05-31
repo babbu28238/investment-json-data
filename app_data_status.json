@@ -1,106 +1,12 @@
 {
-  "status": "warning",
-  "version": "V101_DATA_STATUS_QUALITY_CHECK",
-  "generatedAt": "2026-05-29 18:19:28",
-  "baseDate": "20260529",
-  "candidateCount": 50,
-  "universeSource": "fallback_static_universe",
-  "errorCount": 0,
-  "qualityWarnings": [
-    "KRX 전체 유니버스 조회 실패로 fallback 유니버스를 사용했습니다."
-  ],
-  "industryCounts": {
-    "반도체·AI": 6,
-    "자동차·모빌리티": 7,
-    "조선·해양": 3,
-    "인터넷·게임·콘텐츠": 4,
-    "2차전지·소재": 6,
-    "유통·운송·관광": 3,
-    "철강·화학·소재": 3,
-    "금융·밸류업": 1,
-    "바이오·제약": 3,
-    "KOSPI 자동선별": 8,
-    "방산·우주항공": 1,
-    "건설·기계·인프라": 3,
-    "원전·전력·에너지": 1,
-    "로봇·자동화": 1
-  },
-  "gradeCounts": {
-    "S": 17,
-    "A": 15,
-    "B": 17,
-    "C": 1
-  },
-  "topCandidates": [
-    {
-      "name": "삼성전자",
-      "code": "005930",
-      "industry": "반도체·AI",
-      "grade": "S",
-      "score": 98
-    },
-    {
-      "name": "현대차",
-      "code": "005380",
-      "industry": "자동차·모빌리티",
-      "grade": "S",
-      "score": 98
-    },
-    {
-      "name": "기아",
-      "code": "000270",
-      "industry": "자동차·모빌리티",
-      "grade": "S",
-      "score": 98
-    },
-    {
-      "name": "HD현대중공업",
-      "code": "329180",
-      "industry": "조선·해양",
-      "grade": "S",
-      "score": 96
-    },
-    {
-      "name": "엔씨소프트",
-      "code": "036570",
-      "industry": "인터넷·게임·콘텐츠",
-      "grade": "S",
-      "score": 96
-    },
-    {
-      "name": "SK하이닉스",
-      "code": "000660",
-      "industry": "반도체·AI",
-      "grade": "S",
-      "score": 95
-    },
-    {
-      "name": "LG에너지솔루션",
-      "code": "373220",
-      "industry": "2차전지·소재",
-      "grade": "S",
-      "score": 95
-    },
-    {
-      "name": "대한항공",
-      "code": "003490",
-      "industry": "유통·운송·관광",
-      "grade": "S",
-      "score": 95
-    },
-    {
-      "name": "OCI홀딩스",
-      "code": "010060",
-      "industry": "철강·화학·소재",
-      "grade": "S",
-      "score": 95
-    },
-    {
-      "name": "삼성SDI",
-      "code": "006400",
-      "industry": "2차전지·소재",
-      "grade": "S",
-      "score": 93
-    }
-  ]
+  "version": "V222 PYTHON COLLECTOR FAST",
+  "generatedAt": "2026-05-31 15:00:30",
+  "candidateCount": 3,
+  "sGradeCount": 1,
+  "aGradeCount": 2,
+  "sourceInput": "stock_candidates_input.csv",
+  "output": "stock_candidates.json",
+  "status": "success",
+  "warnings": [],
+  "errors": []
 }
