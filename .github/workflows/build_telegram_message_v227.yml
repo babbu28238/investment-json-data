@@ -1,0 +1,45 @@
+name: Build Telegram Message V227
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-telegram-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          pwd
+          ls -la
+          echo "Scripts folder:"
+          ls -la scripts || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build telegram message
+        run: |
+          python scripts/build_telegram_message_v227.py
+
+      - name: Commit telegram message files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add telegram_message.txt telegram_message.json v227_telegram_summary.json || true
+
+          if git diff --cached --quiet; then
+            echo "No telegram message changes to commit."
+          else
+            git commit -m "V227 build telegram message"
+            git push
+          fi
