@@ -1,0 +1,55 @@
+name: Update Stock Candidates V224 Mapper
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 평일 한국시간 18:30 실행 = UTC 09:30
+    - cron: "30 9 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  update-stock-candidates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          echo "Repository root:"
+          pwd
+          echo "Files:"
+          ls -la
+          echo "Scripts folder:"
+          ls -la scripts || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run V224 real supply mapper
+        run: |
+          if [ -f "scripts/update_stock_candidates_v224_mapper.py" ]; then
+            python scripts/update_stock_candidates_v224_mapper.py
+          else
+            echo "ERROR: scripts/update_stock_candidates_v224_mapper.py not found."
+            exit 1
+          fi
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add stock_candidates.json app_data_status.json v224_generation_summary.json v224_collection_errors.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "V224 auto update stock candidates with real supply mapper"
+            git push
+          fi
