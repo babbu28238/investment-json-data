@@ -1,0 +1,41 @@
+name: Update Stock Candidates V222
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 평일 한국시간 18:30 실행 = UTC 09:30
+    - cron: "30 9 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  update-stock-candidates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run stock candidates builder
+        run: |
+          python scripts/update_stock_candidates_v222_fast.py
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add stock_candidates.json app_data_status.json v222_generation_summary.json v222_collection_errors.txt
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "V222 auto update stock candidates"
+            git push
+          fi
