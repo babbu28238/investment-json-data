@@ -1,0 +1,34 @@
+{
+  "version": "V225_DATA_QUALITY_CHECKER",
+  "generatedAt": "2026-05-31 22:06:56 UTC",
+  "status": "PASS",
+  "files": {
+    "candidate_csv": "stock_candidates_input.csv",
+    "report_csv": "report_hints.csv",
+    "supply_csv": "supply_flow_input.csv",
+    "app_json": "stock_candidates.json"
+  },
+  "counts": {
+    "candidateRows": 3,
+    "reportRows": 3,
+    "supplyRows": 3,
+    "appJsonItems": 3
+  },
+  "supplyColumnMatched": [
+    "Foreign_5D",
+    "Foreign_20D",
+    "Foreign_60D",
+    "Pension_5D",
+    "Pension_20D",
+    "Pension_60D",
+    "Trust_5D",
+    "Trust_20D",
+    "Trust_60D",
+    "Finance_5D",
+    "Finance_20D",
+    "Finance_60D"
+  ],
+  "issues": [],
+  "warnings": [],
+  "nextAction": "GitHub Actions 생성 workflow를 실행해도 됩니다."
+}
