@@ -1,0 +1,47 @@
+name: Validate Investment Data V225
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-investment-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          echo "Repository root:"
+          pwd
+          ls -la
+          echo "Scripts folder:"
+          ls -la scripts || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run data quality checker
+        run: |
+          python scripts/validate_investment_data_v225.py
+
+      - name: Commit validation report
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add v225_data_quality_report.json v225_data_quality_report.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No validation report changes to commit."
+          else
+            git commit -m "V225 data quality validation report"
+            git push
+          fi
