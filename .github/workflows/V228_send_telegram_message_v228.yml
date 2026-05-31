@@ -1,0 +1,49 @@
+name: Send Telegram Message V228
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  send-telegram-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          pwd
+          ls -la
+          echo "Scripts folder:"
+          ls -la scripts || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Send telegram message
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/send_telegram_message_v228.py
+
+      - name: Commit telegram send result
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add v228_telegram_send_result.json v228_telegram_send_result.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No telegram send result changes to commit."
+          else
+            git commit -m "V228 telegram send result"
+            git push
+          fi
