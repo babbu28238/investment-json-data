@@ -1,12 +1,106 @@
 {
-  "version": "V224_REAL_SUPPLY_MAPPER",
-  "updatedAt": "2026-05-31 22:19:59 UTC",
-  "candidateCount": 5,
-  "sGradeCount": 4,
-  "aGradeCount": 1,
-  "hasSupplyFile": true,
-  "hasReportFile": true,
-  "warnings": [],
-  "errors": [],
-  "message": "V224 실제 수급 CSV 자동 매핑 생성 완료"
+  "status": "warning",
+  "version": "V101_DATA_STATUS_QUALITY_CHECK",
+  "generatedAt": "2026-06-01 21:09:33",
+  "baseDate": "20260601",
+  "candidateCount": 50,
+  "universeSource": "fallback_static_universe",
+  "errorCount": 0,
+  "qualityWarnings": [
+    "KRX 전체 유니버스 조회 실패로 fallback 유니버스를 사용했습니다."
+  ],
+  "industryCounts": {
+    "2차전지·소재": 5,
+    "자동차·모빌리티": 7,
+    "반도체·AI": 6,
+    "KOSPI 자동선별": 8,
+    "철강·화학·소재": 3,
+    "인터넷·게임·콘텐츠": 4,
+    "유통·운송·관광": 3,
+    "금융·밸류업": 2,
+    "조선·해양": 3,
+    "바이오·제약": 5,
+    "로봇·자동화": 1,
+    "방산·우주항공": 1,
+    "원전·전력·에너지": 1,
+    "건설·기계·인프라": 1
+  },
+  "gradeCounts": {
+    "S": 11,
+    "A": 12,
+    "B": 19,
+    "C": 8
+  },
+  "topCandidates": [
+    {
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "industry": "2차전지·소재",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "현대차",
+      "code": "005380",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "기아",
+      "code": "000270",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "industry": "반도체·AI",
+      "grade": "S",
+      "score": 96
+    },
+    {
+      "name": "현대모비스",
+      "code": "012330",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 96
+    },
+    {
+      "name": "삼성물산",
+      "code": "028260",
+      "industry": "KOSPI 자동선별",
+      "grade": "S",
+      "score": 94
+    },
+    {
+      "name": "OCI홀딩스",
+      "code": "010060",
+      "industry": "철강·화학·소재",
+      "grade": "S",
+      "score": 94
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "industry": "반도체·AI",
+      "grade": "S",
+      "score": 93
+    },
+    {
+      "name": "SK텔레콤",
+      "code": "017670",
+      "industry": "KOSPI 자동선별",
+      "grade": "S",
+      "score": 92
+    },
+    {
+      "name": "엔씨소프트",
+      "code": "036570",
+      "industry": "인터넷·게임·콘텐츠",
+      "grade": "S",
+      "score": 91
+    }
+  ]
 }
