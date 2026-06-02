@@ -1,0 +1,45 @@
+name: Repair Extended Fields V249
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair-extended-fields:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          pwd
+          ls -la
+          echo "Scripts:"
+          ls -la scripts || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Repair extended fields
+        run: |
+          python scripts/repair_extended_fields_v249.py
+
+      - name: Commit repaired JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add stock_candidates.json app_data_status.json v249_extended_field_repair_summary.json v249_extended_field_repair_summary.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No V249 repair changes to commit."
+          else
+            git commit -m "V249 repair extended fields"
+            git push
+          fi
