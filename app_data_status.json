@@ -1,12 +1,105 @@
 {
-  "version": "V222 PYTHON COLLECTOR FAST",
-  "generatedAt": "2026-06-01 21:53:26",
-  "candidateCount": 5,
-  "sGradeCount": 0,
-  "aGradeCount": 4,
-  "sourceInput": "stock_candidates_input.csv",
-  "output": "stock_candidates.json",
-  "status": "success",
-  "warnings": [],
-  "errors": []
+  "status": "warning",
+  "version": "V101_DATA_STATUS_QUALITY_CHECK",
+  "generatedAt": "2026-06-02 19:58:08",
+  "baseDate": "20260602",
+  "candidateCount": 50,
+  "universeSource": "fallback_static_universe",
+  "errorCount": 0,
+  "qualityWarnings": [
+    "KRX 전체 유니버스 조회 실패로 fallback 유니버스를 사용했습니다."
+  ],
+  "industryCounts": {
+    "2차전지·소재": 5,
+    "자동차·모빌리티": 6,
+    "KOSPI 자동선별": 8,
+    "반도체·AI": 6,
+    "금융·밸류업": 4,
+    "유통·운송·관광": 3,
+    "바이오·제약": 3,
+    "인터넷·게임·콘텐츠": 5,
+    "로봇·자동화": 1,
+    "조선·해양": 3,
+    "건설·기계·인프라": 2,
+    "철강·화학·소재": 3,
+    "원전·전력·에너지": 1
+  },
+  "gradeCounts": {
+    "S": 10,
+    "A": 14,
+    "B": 15,
+    "C": 11
+  },
+  "topCandidates": [
+    {
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "industry": "2차전지·소재",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "현대차",
+      "code": "005380",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "기아",
+      "code": "000270",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 98
+    },
+    {
+      "name": "현대모비스",
+      "code": "012330",
+      "industry": "자동차·모빌리티",
+      "grade": "S",
+      "score": 96
+    },
+    {
+      "name": "삼성물산",
+      "code": "028260",
+      "industry": "KOSPI 자동선별",
+      "grade": "S",
+      "score": 94
+    },
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "industry": "반도체·AI",
+      "grade": "S",
+      "score": 93
+    },
+    {
+      "name": "KB금융",
+      "code": "105560",
+      "industry": "금융·밸류업",
+      "grade": "S",
+      "score": 92
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "industry": "반도체·AI",
+      "grade": "S",
+      "score": 90
+    },
+    {
+      "name": "신한지주",
+      "code": "055550",
+      "industry": "금융·밸류업",
+      "grade": "S",
+      "score": 90
+    },
+    {
+      "name": "롯데쇼핑",
+      "code": "023530",
+      "industry": "유통·운송·관광",
+      "grade": "S",
+      "score": 90
+    }
+  ]
 }
