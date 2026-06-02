@@ -1,0 +1,77 @@
+name: Force Repair Extended Fields V250
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  force-repair-extended-fields:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files before repair
+        run: |
+          pwd
+          ls -la
+          echo "Scripts:"
+          ls -la scripts || true
+          echo "stock_candidates preview:"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('stock_candidates.json')
+          if p.exists():
+              data = json.loads(p.read_text(encoding='utf-8'))
+              if isinstance(data, list):
+                  arr = data
+              else:
+                  arr = data.get('candidates') or data.get('items') or data.get('data') or data.get('results') or []
+              print('candidateCount:', len(arr))
+              if arr:
+                  print('first keys before:', sorted(arr[0].keys()) if isinstance(arr[0], dict) else type(arr[0]))
+          else:
+              print('stock_candidates.json not found')
+          PY
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Force repair extended fields
+        run: |
+          python scripts/force_repair_extended_fields_v250.py
+
+      - name: Show repository files after repair
+        run: |
+          echo "stock_candidates preview after:"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('stock_candidates.json').read_text(encoding='utf-8'))
+          arr = data if isinstance(data, list) else data.get('candidates') or data.get('items') or data.get('data') or data.get('results') or []
+          print('candidateCount:', len(arr))
+          if arr:
+              first = arr[0]
+              print('first keys after:', sorted(first.keys()))
+              print('preview:', {k:first.get(k) for k in ['name','code','score','grade','weeklyCloud','dailySignal','foreign5D','pension20D','reportSignal','newsSignal','riskMemo']})
+          PY
+
+      - name: Commit V250 repaired JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add stock_candidates.json app_data_status.json v250_raw_json_probe.json v250_raw_json_probe.txt v250_force_extended_field_repair_summary.json v250_force_extended_field_repair_summary.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No V250 repair changes to commit."
+          else
+            git commit -m "V250 force repair extended fields"
+            git push
+          fi
