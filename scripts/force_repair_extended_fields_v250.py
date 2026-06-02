@@ -6,8 +6,8 @@ V250 FORCE EXTENDED FIELD REPAIR+
 목적:
 - stock_candidates.json에 앱 확장 필드가 0개로 잡히는 문제를 강제로 보정
 - 후보 구조가 list든 dict.candidates든 모두 처리
-- camelCase, snake_case, 대문자 계열 필드를 모두 생성
-- 첫 번째 후보의 key 목록을 v250_probe 파일로 저장
+- 앱이 읽는 camelCase 필드와 기존 alias 필드를 동시에 생성
+- 첫 번째 후보의 key 목록을 v250_raw_json_probe 파일로 저장
 """
 
 import json
@@ -23,25 +23,34 @@ PROBE_TXT = ROOT / "v250_raw_json_probe.txt"
 SUMMARY_JSON = ROOT / "v250_force_extended_field_repair_summary.json"
 SUMMARY_TXT = ROOT / "v250_force_extended_field_repair_summary.txt"
 
+
 def now_text():
     return datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S %Z")
+
 
 def unwrap(data):
     if isinstance(data, list):
         return data, None
+
     if isinstance(data, dict):
         for key in ["candidates", "items", "data", "results", "stocks"]:
             if isinstance(data.get(key), list):
                 return data[key], key
+
     raise ValueError("후보 배열을 찾지 못했습니다. stock_candidates.json 구조를 확인하세요.")
+
 
 def to_str(value, default="-"):
     if value is None:
         return default
+
     text = str(value).strip()
+
     if text == "" or text.lower() in ["nan", "none", "null"]:
         return default
+
     return text
+
 
 def pick(row, keys, default="-"):
     for key in keys:
@@ -49,14 +58,22 @@ def pick(row, keys, default="-"):
             value = to_str(row.get(key), default="-")
             if value != "-":
                 return value
+
     return default
 
+
 def pick_score(row):
-    value = pick(row, ["score", "점수", "aiScore", "ai_score", "totalScore", "total_score"], "0")
+    value = pick(
+        row,
+        ["score", "점수", "aiScore", "ai_score", "totalScore", "total_score"],
+        "0"
+    )
+
     try:
         return int(float(value.replace(",", "")))
     except Exception:
         return 0
+
 
 def grade_from_score(score):
     if score >= 90:
@@ -67,16 +84,13 @@ def grade_from_score(score):
         return "B"
     return "C"
 
-def set_many(row, canonical, aliases, value):
-    row[canonical] = value
-    for alias in aliases:
-        row[alias] = value
 
 def repair_one(row):
     if not isinstance(row, dict):
         return row
 
     score = pick_score(row)
+
     name = pick(row, ["name", "종목명"], "후보")
     reason = pick(row, ["reason", "사유", "핵심사유"], "후보 사유 확인 필요")
     entry = pick(row, ["entryPrice", "entry_price", "진입가", "진입"], "진입 기준 확인 필요")
@@ -86,12 +100,16 @@ def repair_one(row):
     # 기존 핵심 필드도 안전 보정
     if pick(row, ["name", "종목명"], "-") == "-":
         row["name"] = name
+
     if pick(row, ["reason", "사유"], "-") == "-":
         row["reason"] = reason
+
     if pick(row, ["entryPrice", "entry_price", "진입가"], "-") == "-":
         row["entryPrice"] = entry
+
     if pick(row, ["stopLoss", "stop_loss", "손절가"], "-") == "-":
         row["stopLoss"] = stop
+
     if pick(row, ["targetPrice", "target_price", "목표가"], "-") == "-":
         row["targetPrice"] = target
 
@@ -125,8 +143,9 @@ def repair_one(row):
     news = pick(row, ["newsSignal", "news_signal", "뉴스신호", "뉴스_신호"], "뉴스 확인 필요")
     risk = pick(row, ["riskMemo", "risk_memo", "리스크메모", "리스크"], f"손절 기준 {stop} 확인")
 
-    # 앱 canonical field
+    # 앱 canonical fields
     row["grade"] = grade
+
     row["weeklyCloud"] = weekly
     row["dailySignal"] = daily
     row["rsi"] = rsi
@@ -153,7 +172,7 @@ def repair_one(row):
     row["newsSignal"] = news
     row["riskMemo"] = risk
 
-    # alias fields too
+    # alias fields
     row["weekly_cloud"] = weekly
     row["daily_signal"] = daily
     row["volume_signal"] = volume
@@ -161,12 +180,15 @@ def repair_one(row):
     row["Foreign_5D"] = foreign5
     row["Foreign_20D"] = foreign20
     row["Foreign_60D"] = foreign60
+
     row["Pension_5D"] = pension5
     row["Pension_20D"] = pension20
     row["Pension_60D"] = pension60
+
     row["Trust_5D"] = trust5
     row["Trust_20D"] = trust20
     row["Trust_60D"] = trust60
+
     row["Finance_5D"] = finance5
     row["Finance_20D"] = finance20
     row["Finance_60D"] = finance60
@@ -176,6 +198,7 @@ def repair_one(row):
     row["risk_memo"] = risk
 
     return row
+
 
 def main():
     if not CANDIDATES_JSON.exists():
@@ -195,9 +218,13 @@ def main():
         output["updatedAt"] = now_text()
         output["v250Repair"] = True
 
-    CANDIDATES_JSON.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    CANDIDATES_JSON.write_text(
+        json.dumps(output, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
 
     first = repaired[0] if repaired and isinstance(repaired[0], dict) else {}
+
     probe = {
         "version": "V250_FORCE_EXTENDED_FIELD_REPAIR",
         "updatedAt": now_text(),
@@ -218,7 +245,12 @@ def main():
             "riskMemo": first.get("riskMemo")
         }
     }
-    PROBE_JSON.write_text(json.dumps(probe, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    PROBE_JSON.write_text(
+        json.dumps(probe, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
     PROBE_TXT.write_text(
         "V250 RAW JSON PROBE\n"
         f"updatedAt: {probe['updatedAt']}\n"
@@ -229,8 +261,14 @@ def main():
         encoding="utf-8"
     )
 
-    s_count = sum(1 for x in repaired if isinstance(x, dict) and str(x.get("grade", "")).upper() == "S")
-    a_count = sum(1 for x in repaired if isinstance(x, dict) and str(x.get("grade", "")).upper() == "A")
+    s_count = sum(
+        1 for x in repaired
+        if isinstance(x, dict) and str(x.get("grade", "")).upper() == "S"
+    )
+    a_count = sum(
+        1 for x in repaired
+        if isinstance(x, dict) and str(x.get("grade", "")).upper() == "A"
+    )
 
     status = {
         "version": "V250_FORCE_EXTENDED_FIELD_REPAIR",
@@ -242,7 +280,11 @@ def main():
         "hasReportFile": True,
         "message": "V250 확장 필드 강제 보정 완료"
     }
-    STATUS_JSON.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    STATUS_JSON.write_text(
+        json.dumps(status, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
 
     summary = {
         "version": "V250_FORCE_EXTENDED_FIELD_REPAIR",
@@ -253,7 +295,12 @@ def main():
         "status": "forced repair completed",
         "mustCheckRawUrl": "https://raw.githubusercontent.com/.../stock_candidates.json 에서 grade 필드가 보이는지 확인"
     }
-    SUMMARY_JSON.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    SUMMARY_JSON.write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
     SUMMARY_TXT.write_text(
         "V250 FORCE EXTENDED FIELD REPAIR\n"
         f"updatedAt: {summary['updatedAt']}\n"
@@ -264,6 +311,7 @@ def main():
     )
 
     print(json.dumps(summary, ensure_ascii=False, indent=2))
+
 
 if __name__ == "__main__":
     main()
