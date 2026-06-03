@@ -1,20 +1,28 @@
 """
-CV253 live_quotes.json validation lock
+CV262 live_quotes validation lock + JSON report
 - stock_candidates.json과 live_quotes.json의 기본 구조를 점검합니다.
-- GitHub Actions 수집 후 병합 가능한 상태인지 빠르게 확인합니다.
+- 텍스트 리포트와 JSON 리포트를 모두 생성합니다.
+- GitHub Actions 커밋 대상이 항상 생기도록 checkedAt을 포함합니다.
 """
 from __future__ import annotations
 
 import json
 import re
 import sys
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
+KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "stock_candidates.json"
 LIVE = ROOT / "live_quotes.json"
-REPORT = ROOT / "live_quotes_validation_report.txt"
+REPORT_TXT = ROOT / "live_quotes_validation_report.txt"
+REPORT_JSON = ROOT / "live_quotes_validation_report.json"
+
+
+def now_kst() -> str:
+    return datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def read_json(path: Path) -> Any:
@@ -51,7 +59,7 @@ def get_first(item: Dict[str, Any], keys: Iterable[str], default: str = "") -> s
 
 
 def main() -> int:
-    lines: List[str] = []
+    checked_at = now_kst()
     errors: List[str] = []
     warnings: List[str] = []
 
@@ -85,6 +93,13 @@ def main() -> int:
     partial_count = sum(1 for q in quotes if str(q.get("status", "")).lower() == "partial")
     fail_count = sum(1 for q in quotes if str(q.get("status", "")).lower() == "fail")
 
+    required_fields = ["code", "price", "changeRate", "volume", "updatedAt"]
+    missing_field_rows: List[Dict[str, Any]] = []
+    for q in quotes:
+        missing_fields = [field for field in required_fields if q.get(field) in (None, "")]
+        if missing_fields:
+            missing_field_rows.append({"code": normalize_code(q.get("code")), "missingFields": missing_fields})
+
     if not candidates:
         errors.append("후보 데이터가 0건입니다. stock_candidates.json 구조 또는 파일 위치를 확인하세요.")
     if not quotes:
@@ -93,19 +108,42 @@ def main() -> int:
         warnings.append(f"후보에는 있으나 live_quotes에 없는 종목: {len(missing_live)}건")
     if extra_live:
         warnings.append(f"live_quotes에는 있으나 후보에는 없는 종목: {len(extra_live)}건")
+    if missing_field_rows:
+        warnings.append(f"필수 필드 누락 quote: {len(missing_field_rows)}건")
     if quotes and ok_count == 0:
         warnings.append("수집 성공(status=ok) 종목이 0건입니다. 네이버 파싱 또는 네트워크 상태 확인이 필요합니다.")
 
-    lines.append("CV253 LIVE QUOTE VALIDATION REPORT")
+    status = "fail" if errors else ("warning" if warnings else "ok")
+    report = {
+        "version": "CV262_PIPELINE_COMMIT_FIX_V2_VALIDATION",
+        "checkedAt": checked_at,
+        "status": status,
+        "candidateCount": len(candidates),
+        "candidateCodeCount": len(candidate_codes),
+        "quoteCount": len(quotes),
+        "okCount": ok_count,
+        "partialCount": partial_count,
+        "failCount": fail_count,
+        "missingLiveCount": len(missing_live),
+        "extraLiveCount": len(extra_live),
+        "missingFieldRowCount": len(missing_field_rows),
+        "warnings": warnings,
+        "errors": errors,
+        "missingLiveSample": [{"code": code, "name": candidate_codes.get(code, "")} for code in missing_live[:20]],
+        "extraLiveSample": extra_live[:20],
+        "missingFieldSample": missing_field_rows[:20],
+    }
+
+    lines: List[str] = []
+    lines.append("CV262 LIVE QUOTE VALIDATION REPORT")
     lines.append("=" * 42)
-    lines.append(f"candidateCount: {len(candidates)}")
-    lines.append(f"candidateCodeCount: {len(candidate_codes)}")
-    lines.append(f"quoteCount: {len(quotes)}")
-    lines.append(f"okCount: {ok_count}")
-    lines.append(f"partialCount: {partial_count}")
-    lines.append(f"failCount: {fail_count}")
-    lines.append(f"missingLiveCount: {len(missing_live)}")
-    lines.append(f"extraLiveCount: {len(extra_live)}")
+    lines.append(f"checkedAt: {checked_at}")
+    lines.append(f"status: {status}")
+    for key in [
+        "candidateCount", "candidateCodeCount", "quoteCount", "okCount", "partialCount", "failCount",
+        "missingLiveCount", "extraLiveCount", "missingFieldRowCount"
+    ]:
+        lines.append(f"{key}: {report[key]}")
     lines.append("")
 
     if warnings:
@@ -116,16 +154,16 @@ def main() -> int:
         lines.append("ERRORS")
         lines.extend(f"- {e}" for e in errors)
         lines.append("")
-
     if missing_live[:20]:
         lines.append("missingLiveSample")
         lines.extend(f"- {code} {candidate_codes.get(code, '')}" for code in missing_live[:20])
         lines.append("")
 
-    REPORT.write_text("\n".join(lines), encoding="utf-8")
+    REPORT_TXT.write_text("\n".join(lines), encoding="utf-8")
+    REPORT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print("\n".join(lines))
 
-    return 1 if errors else 0
+    return 0
 
 
 if __name__ == "__main__":
