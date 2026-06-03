@@ -1,0 +1,119 @@
+name: CV262 Pipeline Commit Fix
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 장중 09:05~15:35 근사 실행. GitHub Actions cron은 UTC 기준입니다.
+    - cron: "*/30 0-6 * * 1-5"
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  cv262-pipeline-commit-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml || true
+
+      - name: Preflight check
+        run: |
+          set -e
+          echo "[CV262 FIX] repository files"
+          ls -la
+          test -f stock_candidates.json || (echo "stock_candidates.json not found" && exit 1)
+          test -f scripts/update_live_quotes.py || (echo "scripts/update_live_quotes.py not found" && exit 1)
+          test -f scripts/validate_live_quotes.py || (echo "scripts/validate_live_quotes.py not found" && exit 1)
+
+      - name: Run existing candidate pipeline if present
+        run: |
+          set -e
+          run_if_exists () {
+            local file="$1"
+            local label="$2"
+            if [ -f "$file" ]; then
+              echo "[CV262 FIX] RUN: $label -> $file"
+              python "$file"
+            else
+              echo "[CV262 FIX] SKIP: $label -> $file not found"
+            fi
+          }
+          run_if_exists "scripts/update_stock_candidates_v224_mapper.py" "Update Stock Candidates V224 Mapper"
+          run_if_exists "scripts/merge_real_data_v252.py" "Merge Real Data V252"
+          run_if_exists "scripts/force_repair_extended_fields_v250.py" "Force Repair Extended Fields V250"
+          run_if_exists "scripts/validate_real_data_quality_v251.py" "Validate Real Data Quality V251"
+
+      - name: Update live quotes
+        run: |
+          set -e
+          python scripts/update_live_quotes.py
+          test -f live_quotes.json || (echo "live_quotes.json was not created" && exit 1)
+          echo "[CV262 FIX] live_quotes.json generated"
+
+      - name: Validate live quotes
+        run: |
+          set -e
+          python scripts/validate_live_quotes.py
+          test -f live_quotes_validation_report.txt || (echo "live_quotes_validation_report.txt was not created" && exit 1)
+          test -f live_quotes_validation_report.json || (echo "live_quotes_validation_report.json was not created" && exit 1)
+          echo "[CV262 FIX] validation reports generated"
+
+      - name: Write app pipeline status
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          kst = timezone(timedelta(hours=9))
+          root = Path('.')
+          status = {
+              "version": "CV262_PIPELINE_COMMIT_FIX",
+              "updatedAt": datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S"),
+              "stockCandidatesExists": (root / "stock_candidates.json").exists(),
+              "liveQuotesExists": (root / "live_quotes.json").exists(),
+              "validationReportJsonExists": (root / "live_quotes_validation_report.json").exists(),
+              "validationReportTxtExists": (root / "live_quotes_validation_report.txt").exists(),
+              "workflow": "CV262 Pipeline Commit Fix"
+          }
+          (root / "app_pipeline_status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
+          PY
+
+      - name: Commit generated app data files
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add stock_candidates.json || true
+          git add app_data_status.json || true
+          git add live_quotes.json || true
+          git add live_quotes_validation_report.txt || true
+          git add live_quotes_validation_report.json || true
+          git add app_pipeline_status.json || true
+
+          echo "[CV262 FIX] git status before commit"
+          git status --short
+
+          if git diff --cached --quiet; then
+            echo "[CV262 FIX] No generated file changes to commit. Pipeline still completed."
+          else
+            git commit -m "CV262 pipeline commit fix update"
+            git push
+          fi
