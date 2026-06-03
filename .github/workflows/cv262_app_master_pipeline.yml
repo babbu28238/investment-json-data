@@ -1,0 +1,73 @@
+name: CV262 App Master Pipeline One Shot
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 장중 09:05~15:35 근사 실행. GitHub Actions cron은 UTC 기준입니다.
+    - cron: "*/30 0-6 * * 1-5"
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  app-master-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml || true
+
+      - name: Check required app data files
+        run: |
+          set -e
+          test -f stock_candidates.json || (echo "stock_candidates.json not found" && exit 1)
+          test -f scripts/update_live_quotes.py || (echo "scripts/update_live_quotes.py not found" && exit 1)
+          test -f scripts/validate_live_quotes.py || (echo "scripts/validate_live_quotes.py not found" && exit 1)
+
+      - name: Run candidate data pipeline if scripts exist
+        run: |
+          set -e
+          run_if_exists () {
+            local file="$1"
+            local label="$2"
+            if [ -f "$file" ]; then
+              echo "[CV262] RUN: $label -> $file"
+              python "$file"
+            else
+              echo "[CV262] SKIP: $label -> $file not found"
+            fi
+          }
+          run_if_exists "scripts/update_stock_candidates_v224_mapper.py" "Update Stock Candidates V224 Mapper"
+          run_if_exists "scripts/merge_real_data_v252.py" "Merge Real Data V252"
+          run_if_exists "scripts/force_repair_extended_fields_v250.py" "Force Repair Extended Fields V250"
+          run_if_exists "scripts/validate_real_data_quality_v251.py" "Validate Real Data Quality V251"
+
+      - name: Update live quotes for app
+        run: python scripts/update_live_quotes.py
+
+      - name: Validate live quotes for app
+        run: python scripts/validate_live_quotes.py
+
+      - name: Commit app data outputs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "CV262 app master pipeline update"
+          file_pattern: |
+            stock_candidates.json
+            app_data_status.json
+            live_quotes.json
+            live_quotes_validation_report.txt
+            live_quotes_validation_report.json
