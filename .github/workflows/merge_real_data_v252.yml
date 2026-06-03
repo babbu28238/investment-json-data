@@ -1,0 +1,49 @@
+name: Merge Real Data V252
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-real-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show files before merge
+        run: |
+          pwd
+          ls -la
+          echo "CSV files:"
+          find . -maxdepth 3 -name "*.csv" -print
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Merge real data
+        run: |
+          python scripts/merge_real_data_v252.py
+
+      - name: Show merge summary
+        run: |
+          cat v252_real_data_merge_summary.txt || true
+
+      - name: Commit V252 merged data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add stock_candidates.json app_data_status.json v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No V252 merge changes to commit."
+          else
+            git commit -m "V252 merge real data"
+            git push
+          fi
