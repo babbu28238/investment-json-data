@@ -1,0 +1,38 @@
+name: Validate Real Data Quality V251
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-real-data-quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate real data quality
+        run: |
+          python scripts/validate_real_data_quality_v251.py
+
+      - name: Commit V251 quality report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add v251_real_data_quality_report.json v251_real_data_quality_report.txt || true
+
+          if git diff --cached --quiet; then
+            echo "No V251 quality report changes to commit."
+          else
+            git commit -m "V251 validate real data quality"
+            git push
+          fi
