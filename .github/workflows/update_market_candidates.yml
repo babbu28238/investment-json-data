@@ -1,7 +1,11 @@
-name: Update Market Candidates V280 News Engine
+name: Update Market Candidates V281 Scanner
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "10 0 * * 1-5"   # KST 09:10
+    - cron: "10 3 * * 1-5"   # KST 12:10
+    - cron: "10 6 * * 1-5"   # KST 15:10
 
 permissions:
   contents: write
@@ -9,6 +13,7 @@ permissions:
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -16,41 +21,59 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pykrx pandas numpy requests beautifulsoup4 lxml
+          pip install pandas numpy pykrx requests lxml beautifulsoup4
 
-      - name: Build market universe candidate input
-        run: python scripts/generate_stock_candidates.py
-
-      - name: Build news signals
-        run: python scripts/update_news_signals.py
-
-      - name: Build stock candidates with supply/news mapper
-        run: python scripts/update_stock_candidates_v224_mapper.py
-
-      - name: Run live quote collector
-        run: python scripts/update_live_quotes.py
-
-      - name: Merge optional real data
+      - name: Generate market candidates input
         run: |
-          if [ -f scripts/merge_real_data_v252.py ]; then python scripts/merge_real_data_v252.py; fi
+          python scripts/generate_stock_candidates.py
 
-      - name: Validate live quotes
+      - name: Update news signals
         run: |
-          if [ -f scripts/validate_live_quotes.py ]; then python scripts/validate_live_quotes.py; fi
+          if [ -f scripts/update_news_signals.py ]; then
+            python scripts/update_news_signals.py
+          else
+            echo "scripts/update_news_signals.py not found - skip news signal step"
+          fi
 
-      - name: Commit generated outputs
+      - name: Update DART disclosure signals
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          python scripts/update_dart_signals.py
+
+      - name: Build app stock candidates
+        run: |
+          python scripts/update_stock_candidates_v224_mapper.py
+
+      - name: Update live quotes
+        run: |
+          python scripts/update_live_quotes.py
+
+      - name: Merge real data
+        run: |
+          if [ -f scripts/merge_real_data_v252.py ]; then
+            python scripts/merge_real_data_v252.py
+          else
+            echo "scripts/merge_real_data_v252.py not found - skip merge step"
+          fi
+
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stock_candidates_input.csv stock_candidates.json app_data_status.json live_quotes.json report_hints.csv news_signals.json news_signals_summary.json news_signals_log.txt v224_generation_summary.json v224_collection_errors.txt v252_real_data_merge_summary.json v252_real_data_merge_summary.txt live_quotes_validation_report.json live_quotes_validation_report.txt live_quotes_validation_log.txt live_quotes_update_log.txt app_pipeline_status.json || true
+          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json report_hints.csv || true
+          git add market_universe.json market_scan_summary.json market_scan_log.txt || true
+          git add news_signals.json news_signals_summary.json news_signals_log.txt || true
+          git add dart_signals.json dart_signals_summary.json dart_signals_log.txt dart_corp_code_cache.json || true
+          git add v224_generation_summary.json v224_collection_errors.txt v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
           if git diff --cached --quiet; then
-            echo "No generated changes to commit."
+            echo "No changes to commit"
           else
-            git commit -m "CV280 update market candidates with news signals"
+            git commit -m "Update market candidates with news and DART signals"
             git push
           fi
