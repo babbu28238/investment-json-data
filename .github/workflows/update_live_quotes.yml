@@ -1,0 +1,40 @@
+name: Update Live Quotes
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 기준 장중 근사 실행: UTC 00:00~06:30 = KST 09:00~15:30
+    - cron: "*/30 0-6 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  update-live-quotes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Update live quotes JSON
+        run: |
+          python scripts/update_live_quotes.py
+
+      - name: Commit and push live_quotes.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add live_quotes.json
+          git diff --cached --quiet || git commit -m "Update live quotes"
+          git push
