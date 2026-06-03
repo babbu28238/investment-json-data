@@ -1,11 +1,11 @@
-name: Update Market Candidates V281 Scanner
+name: Update Market Candidates V282 Supply Engine
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "10 0 * * 1-5"   # KST 09:10
-    - cron: "10 3 * * 1-5"   # KST 12:10
-    - cron: "10 6 * * 1-5"   # KST 15:10
+    - cron: "40 2 * * 1-5"   # KST 11:40
+    - cron: "10 5 * * 1-5"   # KST 14:10
 
 permissions:
   contents: write
@@ -13,7 +13,6 @@ permissions:
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,54 +25,58 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy pykrx requests lxml beautifulsoup4
+          pip install pandas numpy pykrx requests beautifulsoup4 lxml
 
-      - name: Generate market candidates input
-        run: |
-          python scripts/generate_stock_candidates.py
+      - name: Run KRX market scanner candidate generator
+        run: python scripts/generate_stock_candidates.py
 
-      - name: Update news signals
+      - name: Run news signal engine
         run: |
           if [ -f scripts/update_news_signals.py ]; then
             python scripts/update_news_signals.py
           else
-            echo "scripts/update_news_signals.py not found - skip news signal step"
+            echo "scripts/update_news_signals.py not found. Skip news engine."
           fi
 
-      - name: Update DART disclosure signals
-        env:
-          DART_API_KEY: ${{ secrets.DART_API_KEY }}
-        run: |
-          python scripts/update_dart_signals.py
+      - name: Run supply flow engine
+        run: python scripts/update_supply_flow.py
 
-      - name: Build app stock candidates
-        run: |
-          python scripts/update_stock_candidates_v224_mapper.py
+      - name: Build app stock_candidates.json via V224 mapper
+        run: python scripts/update_stock_candidates_v224_mapper.py
 
-      - name: Update live quotes
+      - name: Run live quote collector
         run: |
-          python scripts/update_live_quotes.py
+          if [ -f scripts/update_live_quotes.py ]; then
+            python scripts/update_live_quotes.py
+          else
+            echo "scripts/update_live_quotes.py not found. Skip live quotes."
+          fi
 
-      - name: Merge real data
+      - name: Merge optional real data
         run: |
           if [ -f scripts/merge_real_data_v252.py ]; then
             python scripts/merge_real_data_v252.py
           else
-            echo "scripts/merge_real_data_v252.py not found - skip merge step"
+            echo "scripts/merge_real_data_v252.py not found. Skip merge."
           fi
 
-      - name: Commit generated files
+      - name: Validate live quotes
+        run: |
+          if [ -f scripts/validate_live_quotes.py ]; then
+            python scripts/validate_live_quotes.py || true
+          else
+            echo "scripts/validate_live_quotes.py not found. Skip validation."
+          fi
+
+      - name: Commit generated outputs
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json report_hints.csv || true
-          git add market_universe.json market_scan_summary.json market_scan_log.txt || true
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stock_candidates_input.csv stock_candidates.json app_data_status.json || true
+          git add live_quotes.json live_quotes_validation_report.json live_quotes_validation_report.txt || true
           git add news_signals.json news_signals_summary.json news_signals_log.txt || true
-          git add dart_signals.json dart_signals_summary.json dart_signals_log.txt dart_corp_code_cache.json || true
-          git add v224_generation_summary.json v224_collection_errors.txt v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update market candidates with news and DART signals"
-            git push
-          fi
+          git add supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt || true
+          git add report_hints.csv v224_generation_summary.json v224_collection_errors.txt || true
+          git add v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "V282 update market candidates with supply flow engine"
+          git push
