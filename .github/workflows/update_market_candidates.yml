@@ -1,4 +1,4 @@
-name: Update Market Candidates V282 Supply Engine
+name: Update Market Candidates V283 Report Engine
 
 on:
   workflow_dispatch:
@@ -38,8 +38,16 @@ jobs:
             echo "scripts/update_news_signals.py not found. Skip news engine."
           fi
 
+      - name: Run report signal engine
+        run: python scripts/update_report_signals.py
+
       - name: Run supply flow engine
-        run: python scripts/update_supply_flow.py
+        run: |
+          if [ -f scripts/update_supply_flow.py ]; then
+            python scripts/update_supply_flow.py
+          else
+            echo "scripts/update_supply_flow.py not found. Skip supply engine."
+          fi
 
       - name: Build app stock_candidates.json via V224 mapper
         run: python scripts/update_stock_candidates_v224_mapper.py
@@ -75,8 +83,9 @@ jobs:
           git add stock_candidates_input.csv stock_candidates.json app_data_status.json || true
           git add live_quotes.json live_quotes_validation_report.json live_quotes_validation_report.txt || true
           git add news_signals.json news_signals_summary.json news_signals_log.txt || true
+          git add report_signals.json report_signals_summary.json report_signals_log.txt || true
           git add supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt || true
           git add report_hints.csv v224_generation_summary.json v224_collection_errors.txt || true
           git add v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "V282 update market candidates with supply flow engine"
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "V283 update market candidates with report signal engine"
           git push
