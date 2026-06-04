@@ -1,18 +1,33 @@
-name: Update Market Candidates V285 Pipeline Validation Lock
+name: Update Market Candidates V286 Intraday Auto Refresh
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "10 0 * * 1-5"   # KST 09:10
-    - cron: "40 2 * * 1-5"   # KST 11:40
-    - cron: "10 5 * * 1-5"   # KST 14:10
+    # KST 기준 장중 자동 갱신
+    # UTC 00:10 = KST 09:10
+    # UTC 01:00 = KST 10:00
+    # UTC 02:00 = KST 11:00
+    # UTC 04:00 = KST 13:00
+    # UTC 05:00 = KST 14:00
+    # UTC 06:10 = KST 15:10
+    - cron: '10 0 * * 1-5'
+    - cron: '0 1 * * 1-5'
+    - cron: '0 2 * * 1-5'
+    - cron: '0 4 * * 1-5'
+    - cron: '0 5 * * 1-5'
+    - cron: '10 6 * * 1-5'
 
 permissions:
   contents: write
 
+env:
+  TZ: Asia/Seoul
+
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,30 +35,23 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas numpy pykrx requests beautifulsoup4 lxml
 
-      - name: Run KRX market scanner candidate generator
-        run: python scripts/generate_stock_candidates.py
+      - name: Run market universe scanner
+        run: |
+          python scripts/generate_stock_candidates.py
 
       - name: Run news signal engine
         run: |
           if [ -f scripts/update_news_signals.py ]; then
             python scripts/update_news_signals.py
           else
-            echo "scripts/update_news_signals.py not found. Skip news engine."
-          fi
-
-      - name: Run report signal engine
-        run: |
-          if [ -f scripts/update_report_signals.py ]; then
-            python scripts/update_report_signals.py
-          else
-            echo "scripts/update_report_signals.py not found. Skip report engine."
+            echo "skip: scripts/update_news_signals.py not found"
           fi
 
       - name: Run supply flow engine
@@ -51,66 +59,100 @@ jobs:
           if [ -f scripts/update_supply_flow.py ]; then
             python scripts/update_supply_flow.py
           else
-            echo "scripts/update_supply_flow.py not found. Skip supply engine."
+            echo "skip: scripts/update_supply_flow.py not found"
           fi
 
-      - name: Run DART signal engine if secret exists
-        env:
-          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+      - name: Run report signal engine
         run: |
-          if [ -f scripts/update_dart_signals.py ] && [ -n "$DART_API_KEY" ]; then
-            python scripts/update_dart_signals.py
+          if [ -f scripts/update_report_signals.py ]; then
+            python scripts/update_report_signals.py
           else
-            echo "DART engine skipped: script missing or DART_API_KEY not registered yet."
+            echo "skip: scripts/update_report_signals.py not found"
           fi
 
-      - name: Build app stock_candidates.json via V224 mapper
-        run: python scripts/update_stock_candidates_v224_mapper.py
+      - name: Run V224 mapper
+        run: |
+          python scripts/update_stock_candidates_v224_mapper.py
 
-      - name: Merge optional real data
+      - name: Merge real data
         run: |
           if [ -f scripts/merge_real_data_v252.py ]; then
             python scripts/merge_real_data_v252.py
           else
-            echo "scripts/merge_real_data_v252.py not found. Skip merge."
+            echo "skip: scripts/merge_real_data_v252.py not found"
           fi
 
-      - name: Run final recommendation score engine
-        run: python scripts/update_recommendation_scores.py
-
-      - name: Run live quote collector
+      - name: Run recommendation score engine
         run: |
-          if [ -f scripts/update_live_quotes.py ]; then
-            python scripts/update_live_quotes.py
+          if [ -f scripts/update_recommendation_scores.py ]; then
+            python scripts/update_recommendation_scores.py
           else
-            echo "scripts/update_live_quotes.py not found. Skip live quotes."
+            echo "skip: scripts/update_recommendation_scores.py not found"
           fi
 
-      - name: Validate live quotes
+      - name: Update live quotes
         run: |
-          if [ -f scripts/validate_live_quotes.py ]; then
-            python scripts/validate_live_quotes.py || true
+          python scripts/update_live_quotes.py
+
+      - name: Validate market pipeline
+        run: |
+          if [ -f scripts/validate_market_pipeline.py ]; then
+            python scripts/validate_market_pipeline.py
           else
-            echo "scripts/validate_live_quotes.py not found. Skip validation."
+            echo "skip: scripts/validate_market_pipeline.py not found"
           fi
 
-      - name: Validate full market pipeline
-        run: python scripts/validate_market_pipeline.py
+      - name: Write intraday pipeline status
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone, timedelta
+          KST = timezone(timedelta(hours=9))
+          status = {
+              "version": "V286_INTRADAY_AUTO_REFRESH_LOCK",
+              "updatedAt": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
+              "mode": "intraday_auto_refresh",
+              "message": "장중 자동 갱신 파이프라인 실행 완료",
+              "scheduleKST": ["09:10", "10:00", "11:00", "13:00", "14:00", "15:10"],
+          }
+          with open("intraday_pipeline_status.json", "w", encoding="utf-8") as f:
+              json.dump(status, f, ensure_ascii=False, indent=2)
+          PY
 
-      - name: Commit generated outputs
-        if: always()
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stock_candidates_input.csv stock_candidates.json app_data_status.json || true
-          git add live_quotes.json live_quotes_validation_report.json live_quotes_validation_report.txt || true
-          git add news_signals.json news_signals_summary.json news_signals_log.txt || true
-          git add report_signals.json report_signals_summary.json report_signals_log.txt || true
-          git add supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt || true
-          git add recommendation_summary.json recommendation_log.txt || true
-          git add report_hints.csv v224_generation_summary.json v224_collection_errors.txt || true
-          git add v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
-          git add dart_signals.json dart_signals_summary.json dart_signals_log.txt || true
-          git add market_pipeline_validation.json market_pipeline_validation.txt || true
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "V285 validate market pipeline"
-          git push
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add \
+            stock_candidates_input.csv \
+            stock_candidates.json \
+            live_quotes.json \
+            report_hints.csv \
+            app_data_status.json \
+            news_signals.json \
+            news_signals_summary.json \
+            news_signals_log.txt \
+            supply_flow_input.csv \
+            supply_flow_summary.json \
+            supply_flow_log.txt \
+            report_signals.json \
+            report_signals_summary.json \
+            report_signals_log.txt \
+            recommendation_summary.json \
+            recommendation_log.txt \
+            market_pipeline_validation.json \
+            market_pipeline_validation.txt \
+            intraday_pipeline_status.json \
+            v101_generation_summary.json \
+            v101_collection_errors.txt \
+            v224_generation_summary.json \
+            v224_collection_errors.txt \
+            v252_real_data_merge_summary.json \
+            v252_real_data_merge_summary.txt \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update market candidates intraday V286"
+            git push
+          fi
