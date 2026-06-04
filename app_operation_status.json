@@ -1,0 +1,75 @@
+{
+  "version": "V288_APP_OPERATION_STATUS_BRIDGE",
+  "updatedAt": "2026-06-04 10:26:28",
+  "status": "ok",
+  "message": "앱 운영 가능",
+  "candidateCount": 24,
+  "gradeCounts": {
+    "C": 1,
+    "D": 23
+  },
+  "quoteStats": {
+    "quoteCount": 24,
+    "okCount": 24,
+    "failCount": 0,
+    "partialCount": 0,
+    "source": "naver_finance",
+    "updatedAt": "2026-06-04 10:26:28"
+  },
+  "issues": [],
+  "warnings": [],
+  "files": {
+    "pipelineHealth": {
+      "exists": true,
+      "size": 5716,
+      "modifiedAt": "2026-06-04 10:26:28"
+    },
+    "appDataStatus": {
+      "exists": true,
+      "size": 3374,
+      "modifiedAt": "2026-06-04 10:25:49"
+    },
+    "recommendationSummary": {
+      "exists": true,
+      "size": 5989,
+      "modifiedAt": "2026-06-04 10:25:49"
+    },
+    "marketValidation": {
+      "exists": true,
+      "size": 2361,
+      "modifiedAt": "2026-06-04 10:26:28"
+    },
+    "liveQuotes": {
+      "exists": true,
+      "size": 6637,
+      "modifiedAt": "2026-06-04 10:26:28"
+    },
+    "stockCandidates": {
+      "exists": true,
+      "size": 58028,
+      "modifiedAt": "2026-06-04 10:25:49"
+    },
+    "newsSignals": {
+      "exists": true,
+      "size": 134740,
+      "modifiedAt": "2026-06-04 10:23:39"
+    },
+    "supplySummary": {
+      "exists": true,
+      "size": 2668,
+      "modifiedAt": "2026-06-04 10:24:17"
+    },
+    "reportSummary": {
+      "exists": true,
+      "size": 2206,
+      "modifiedAt": "2026-06-04 10:25:49"
+    }
+  },
+  "sourceVersions": {
+    "pipelineHealth": "V287_PIPELINE_HEALTH_MONITOR",
+    "appDataStatus": "V284_RECOMMENDATION_SCORE_ENGINE",
+    "recommendationSummary": "V284_RECOMMENDATION_SCORE_ENGINE",
+    "marketValidation": "V285_MARKET_PIPELINE_VALIDATION_LOCK",
+    "liveQuotes": "CV252_REALTIME_NAVER_COLLECTOR"
+  }
+}
