@@ -1,9 +1,9 @@
-name: Update Market Candidates V288 App Operation Status
+name: Update Market Candidates V289 App Data Bundle
 
 on:
   workflow_dispatch:
   schedule:
-    # KST 09:10, 10:00, 11:00, 13:00, 14:00, 15:10
+    # KST 09:10 / 10:00 / 11:00 / 13:00 / 14:00 / 15:10
     - cron: '10 0 * * 1-5'
     - cron: '0 1 * * 1-5'
     - cron: '0 2 * * 1-5'
@@ -17,6 +17,7 @@ permissions:
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -43,17 +44,17 @@ jobs:
       - name: Update report signals
         run: python scripts/update_report_signals.py
 
-      - name: Build mapped stock candidates
+      - name: Build stock candidates JSON
         run: python scripts/update_stock_candidates_v224_mapper.py
+
+      - name: Update live quotes
+        run: python scripts/update_live_quotes.py
 
       - name: Merge real data
         run: python scripts/merge_real_data_v252.py
 
       - name: Update recommendation scores
         run: python scripts/update_recommendation_scores.py
-
-      - name: Update live quotes
-        run: python scripts/update_live_quotes.py
 
       - name: Validate market pipeline
         run: python scripts/validate_market_pipeline.py
@@ -64,17 +65,22 @@ jobs:
       - name: Build app operation status
         run: python scripts/build_app_operation_status.py
 
-      - name: Commit updated data files
+      - name: Build app data bundle
+        run: python scripts/build_app_data_bundle.py
+
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json report_hints.csv supply_flow_input.csv || true
-          git add news_signals.json news_signals_summary.json news_signals_log.txt || true
-          git add supply_flow_summary.json supply_flow_log.txt || true
-          git add report_signals.json report_signals_summary.json report_signals_log.txt || true
-          git add recommendation_summary.json recommendation_log.txt || true
-          git add market_pipeline_validation.json market_pipeline_validation.txt || true
-          git add pipeline_health.json pipeline_health.txt intraday_pipeline_status.json || true
-          git add app_operation_status.json app_operation_status.txt || true
-          git commit -m "Update market scanner app operation status" || echo "No changes to commit"
+          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json report_hints.csv supply_flow_input.csv \
+                  news_signals.json news_signals_summary.json news_signals_log.txt \
+                  supply_flow_summary.json supply_flow_log.txt \
+                  report_signals.json report_signals_summary.json report_signals_log.txt \
+                  recommendation_summary.json recommendation_log.txt \
+                  market_pipeline_validation.json market_pipeline_validation.txt \
+                  pipeline_health.json pipeline_health.txt \
+                  app_operation_status.json app_operation_status.txt \
+                  app_data_bundle.json app_data_bundle.txt \
+                  intraday_pipeline_status.json || true
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Update V289 app data bundle"
           git push
