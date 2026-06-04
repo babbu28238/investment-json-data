@@ -1,4 +1,4 @@
-name: Update Market Candidates V284 Recommendation Engine
+name: Update Market Candidates V285 Pipeline Validation Lock
 
 on:
   workflow_dispatch:
@@ -54,6 +54,16 @@ jobs:
             echo "scripts/update_supply_flow.py not found. Skip supply engine."
           fi
 
+      - name: Run DART signal engine if secret exists
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          if [ -f scripts/update_dart_signals.py ] && [ -n "$DART_API_KEY" ]; then
+            python scripts/update_dart_signals.py
+          else
+            echo "DART engine skipped: script missing or DART_API_KEY not registered yet."
+          fi
+
       - name: Build app stock_candidates.json via V224 mapper
         run: python scripts/update_stock_candidates_v224_mapper.py
 
@@ -84,7 +94,11 @@ jobs:
             echo "scripts/validate_live_quotes.py not found. Skip validation."
           fi
 
+      - name: Validate full market pipeline
+        run: python scripts/validate_market_pipeline.py
+
       - name: Commit generated outputs
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -96,5 +110,7 @@ jobs:
           git add recommendation_summary.json recommendation_log.txt || true
           git add report_hints.csv v224_generation_summary.json v224_collection_errors.txt || true
           git add v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "V284 update final recommendation scores"
+          git add dart_signals.json dart_signals_summary.json dart_signals_log.txt || true
+          git add market_pipeline_validation.json market_pipeline_validation.txt || true
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "V285 validate market pipeline"
           git push
