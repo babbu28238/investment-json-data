@@ -1,15 +1,9 @@
-name: Update Market Candidates V286 Intraday Auto Refresh
+name: Update Market Candidates V287 Health Monitor
 
 on:
   workflow_dispatch:
   schedule:
-    # KST 기준 장중 자동 갱신
-    # UTC 00:10 = KST 09:10
-    # UTC 01:00 = KST 10:00
-    # UTC 02:00 = KST 11:00
-    # UTC 04:00 = KST 13:00
-    # UTC 05:00 = KST 14:00
-    # UTC 06:10 = KST 15:10
+    # KST 09:10, 10:00, 11:00, 13:00, 14:00, 15:10 on weekdays
     - cron: '10 0 * * 1-5'
     - cron: '0 1 * * 1-5'
     - cron: '0 2 * * 1-5'
@@ -20,14 +14,9 @@ on:
 permissions:
   contents: write
 
-env:
-  TZ: Asia/Seoul
-
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,119 +29,63 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy pykrx requests beautifulsoup4 lxml
+          pip install pandas numpy pykrx requests beautifulsoup4 lxml feedparser
 
-      - name: Run market universe scanner
-        run: |
-          python scripts/generate_stock_candidates.py
+      - name: Generate market candidates
+        run: python scripts/generate_stock_candidates.py
 
-      - name: Run news signal engine
-        run: |
-          if [ -f scripts/update_news_signals.py ]; then
-            python scripts/update_news_signals.py
-          else
-            echo "skip: scripts/update_news_signals.py not found"
-          fi
+      - name: Update news signals
+        run: python scripts/update_news_signals.py
 
-      - name: Run supply flow engine
-        run: |
-          if [ -f scripts/update_supply_flow.py ]; then
-            python scripts/update_supply_flow.py
-          else
-            echo "skip: scripts/update_supply_flow.py not found"
-          fi
+      - name: Update supply flow
+        run: python scripts/update_supply_flow.py
 
-      - name: Run report signal engine
-        run: |
-          if [ -f scripts/update_report_signals.py ]; then
-            python scripts/update_report_signals.py
-          else
-            echo "skip: scripts/update_report_signals.py not found"
-          fi
+      - name: Update report signals
+        run: python scripts/update_report_signals.py
 
-      - name: Run V224 mapper
-        run: |
-          python scripts/update_stock_candidates_v224_mapper.py
+      - name: Map candidates to app JSON
+        run: python scripts/update_stock_candidates_v224_mapper.py
 
       - name: Merge real data
-        run: |
-          if [ -f scripts/merge_real_data_v252.py ]; then
-            python scripts/merge_real_data_v252.py
-          else
-            echo "skip: scripts/merge_real_data_v252.py not found"
-          fi
+        run: python scripts/merge_real_data_v252.py
 
-      - name: Run recommendation score engine
-        run: |
-          if [ -f scripts/update_recommendation_scores.py ]; then
-            python scripts/update_recommendation_scores.py
-          else
-            echo "skip: scripts/update_recommendation_scores.py not found"
-          fi
+      - name: Update recommendation scores
+        run: python scripts/update_recommendation_scores.py
 
       - name: Update live quotes
-        run: |
-          python scripts/update_live_quotes.py
+        run: python scripts/update_live_quotes.py
 
       - name: Validate market pipeline
-        run: |
-          if [ -f scripts/validate_market_pipeline.py ]; then
-            python scripts/validate_market_pipeline.py
-          else
-            echo "skip: scripts/validate_market_pipeline.py not found"
-          fi
+        run: python scripts/validate_market_pipeline.py
 
-      - name: Write intraday pipeline status
+      - name: Build pipeline health report
+        if: always()
+        run: python scripts/build_pipeline_health.py
+
+      - name: Mark intraday pipeline status
+        if: always()
         run: |
           python - <<'PY'
           import json
           from datetime import datetime, timezone, timedelta
-          KST = timezone(timedelta(hours=9))
-          status = {
-              "version": "V286_INTRADAY_AUTO_REFRESH_LOCK",
-              "updatedAt": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
-              "mode": "intraday_auto_refresh",
-              "message": "장중 자동 갱신 파이프라인 실행 완료",
-              "scheduleKST": ["09:10", "10:00", "11:00", "13:00", "14:00", "15:10"],
+          kst = timezone(timedelta(hours=9))
+          payload = {
+            "version": "V287_INTRADAY_AUTO_REFRESH_LOCK",
+            "updatedAt": datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S KST"),
+            "status": "completed_with_health_report",
+            "message": "Market pipeline run finished. Check pipeline_health.json for details."
           }
-          with open("intraday_pipeline_status.json", "w", encoding="utf-8") as f:
-              json.dump(status, f, ensure_ascii=False, indent=2)
+          open("intraday_pipeline_status.json", "w", encoding="utf-8").write(json.dumps(payload, ensure_ascii=False, indent=2))
           PY
 
       - name: Commit generated files
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add \
-            stock_candidates_input.csv \
-            stock_candidates.json \
-            live_quotes.json \
-            report_hints.csv \
-            app_data_status.json \
-            news_signals.json \
-            news_signals_summary.json \
-            news_signals_log.txt \
-            supply_flow_input.csv \
-            supply_flow_summary.json \
-            supply_flow_log.txt \
-            report_signals.json \
-            report_signals_summary.json \
-            report_signals_log.txt \
-            recommendation_summary.json \
-            recommendation_log.txt \
-            market_pipeline_validation.json \
-            market_pipeline_validation.txt \
-            intraday_pipeline_status.json \
-            v101_generation_summary.json \
-            v101_collection_errors.txt \
-            v224_generation_summary.json \
-            v224_collection_errors.txt \
-            v252_real_data_merge_summary.json \
-            v252_real_data_merge_summary.txt \
-            2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update market candidates intraday V286"
-            git push
-          fi
+          git add stock_candidates_input.csv stock_candidates.json app_data_status.json live_quotes.json report_hints.csv supply_flow_input.csv || true
+          git add *_summary.json *_log.txt *_validation.json *_validation.txt || true
+          git add news_signals.json supply_flow_summary.json report_signals.json recommendation_summary.json || true
+          git add pipeline_health.json pipeline_health.txt intraday_pipeline_status.json || true
+          git commit -m "Update market candidates pipeline V287 health monitor" || echo "No changes to commit"
+          git push || echo "No changes to push"
