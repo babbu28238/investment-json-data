@@ -1,7 +1,7 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-04 09:55:51",
-  "startedAt": "2026-06-04 09:55:51",
+  "updatedAt": "2026-06-04 10:03:41",
+  "startedAt": "2026-06-04 10:03:41",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
@@ -17,8 +17,8 @@
   },
   "sectorCounts": {
     "반도체·AI": 4,
-    "2차전지·소재": 4,
     "자동차·모빌리티": 2,
+    "2차전지·소재": 4,
     "인터넷·게임·콘텐츠": 1,
     "금융·밸류업": 1,
     "원전·전력·에너지": 3,
@@ -53,6 +53,29 @@
     },
     {
       "rank": 2,
+      "name": "현대차",
+      "code": "005380",
+      "score": 58,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 66,
+        "supplyScore": 50,
+        "newsScore": 69,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 데이터 부족"
+      }
+    },
+    {
+      "rank": 3,
       "name": "LG에너지솔루션",
       "code": "373220",
       "score": 58,
@@ -75,39 +98,16 @@
       }
     },
     {
-      "rank": 3,
-      "name": "현대차",
-      "code": "005380",
-      "score": 57,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 66,
-        "supplyScore": 50,
-        "newsScore": 62,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 데이터 부족"
-      }
-    },
-    {
       "rank": 4,
       "name": "NAVER",
       "code": "035420",
-      "score": 56,
+      "score": 57,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 56,
+        "newsScore": 67,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -122,6 +122,29 @@
     },
     {
       "rank": 5,
+      "name": "삼성전자",
+      "code": "005930",
+      "score": 56,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 55,
+        "supplyScore": 50,
+        "newsScore": 85,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 데이터 부족"
+      }
+    },
+    {
+      "rank": 6,
       "name": "KB금융",
       "code": "105560",
       "score": 56,
@@ -144,16 +167,16 @@
       }
     },
     {
-      "rank": 6,
-      "name": "삼성전자",
-      "code": "005930",
+      "rank": 7,
+      "name": "POSCO홀딩스",
+      "code": "005490",
       "score": 55,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 55,
+        "technicalScore": 44,
         "supplyScore": 50,
-        "newsScore": 78,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -167,7 +190,7 @@
       }
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "LS ELECTRIC",
       "code": "010120",
       "score": 55,
@@ -190,7 +213,7 @@
       }
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "셀트리온",
       "code": "068270",
       "score": 55,
@@ -213,32 +236,9 @@
       }
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "이오테크닉스",
       "code": "039030",
-      "score": 53,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 39,
-        "supplyScore": 50,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 데이터 부족"
-      }
-    },
-    {
-      "rank": 10,
-      "name": "POSCO홀딩스",
-      "code": "005490",
       "score": 53,
       "grade": "D",
       "action": "제외검토",

@@ -1,0 +1,200 @@
+{
+  "version": "V287_PIPELINE_HEALTH_MONITOR",
+  "updatedAt": "2026-06-04 10:04:19 KST",
+  "status": "ok",
+  "candidateCount": 24,
+  "gradeCounts": {
+    "C": 1,
+    "D": 23
+  },
+  "liveQuote": {
+    "quoteCount": 24,
+    "okCount": 24,
+    "failCount": 0
+  },
+  "appDataStatus": "ok",
+  "marketPipelineValidationStatus": "warning",
+  "warnings": [],
+  "errors": [],
+  "topCandidates": [
+    {
+      "rank": 1,
+      "name": "SK하이닉스",
+      "code": "000660",
+      "score": 63,
+      "grade": "C",
+      "reason": "관찰 / 최종 63점(C) / 기술 66·수급 50·뉴스 100·리포트 50·유동성 45"
+    },
+    {
+      "rank": 2,
+      "name": "현대차",
+      "code": "005380",
+      "score": 58,
+      "grade": "D",
+      "reason": "제외검토 / 최종 58점(D) / 기술 66·수급 50·뉴스 69·리포트 50·유동성 45"
+    },
+    {
+      "rank": 3,
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "score": 58,
+      "grade": "D",
+      "reason": "제외검토 / 최종 58점(D) / 기술 54·수급 50·뉴스 100·리포트 50·유동성 45"
+    },
+    {
+      "rank": 4,
+      "name": "NAVER",
+      "code": "035420",
+      "score": 57,
+      "grade": "D",
+      "reason": "제외검토 / 최종 57점(D) / 기술 65·수급 50·뉴스 67·리포트 50·유동성 45"
+    },
+    {
+      "rank": 5,
+      "name": "삼성전자",
+      "code": "005930",
+      "score": 56,
+      "grade": "D",
+      "reason": "제외검토 / 최종 56점(D) / 기술 55·수급 50·뉴스 85·리포트 50·유동성 45"
+    },
+    {
+      "rank": 6,
+      "name": "KB금융",
+      "code": "105560",
+      "score": 56,
+      "grade": "D",
+      "reason": "제외검토 / 최종 56점(D) / 기술 65·수급 50·뉴스 57·리포트 50·유동성 45"
+    },
+    {
+      "rank": 7,
+      "name": "POSCO홀딩스",
+      "code": "005490",
+      "score": 55,
+      "grade": "D",
+      "reason": "제외검토 / 최종 55점(D) / 기술 44·수급 50·뉴스 100·리포트 50·유동성 45"
+    },
+    {
+      "rank": 8,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 55,
+      "grade": "D",
+      "reason": "제외검토 / 최종 55점(D) / 기술 43·수급 50·뉴스 100·리포트 50·유동성 45"
+    },
+    {
+      "rank": 9,
+      "name": "셀트리온",
+      "code": "068270",
+      "score": 55,
+      "grade": "D",
+      "reason": "제외검토 / 최종 55점(D) / 기술 44·수급 50·뉴스 100·리포트 50·유동성 45"
+    },
+    {
+      "rank": 10,
+      "name": "이오테크닉스",
+      "code": "039030",
+      "score": 53,
+      "grade": "D",
+      "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45"
+    }
+  ],
+  "files": {
+    "stock_candidates.json": {
+      "name": "stock_candidates.json",
+      "exists": true,
+      "sizeBytes": 58048,
+      "modifiedAt": "2026-06-04 10:03:41 KST"
+    },
+    "app_data_status.json": {
+      "name": "app_data_status.json",
+      "exists": true,
+      "sizeBytes": 3371,
+      "modifiedAt": "2026-06-04 10:03:41 KST"
+    },
+    "live_quotes.json": {
+      "name": "live_quotes.json",
+      "exists": true,
+      "sizeBytes": 6637,
+      "modifiedAt": "2026-06-04 10:04:19 KST"
+    },
+    "stock_candidates_input.csv": {
+      "name": "stock_candidates_input.csv",
+      "exists": true,
+      "sizeBytes": 12000,
+      "modifiedAt": "2026-06-04 10:01:05 KST"
+    },
+    "v101_generation_summary.json": {
+      "name": "v101_generation_summary.json",
+      "exists": true,
+      "sizeBytes": 1078,
+      "modifiedAt": "2026-06-04 10:00:30 KST"
+    },
+    "news_signals.json": {
+      "name": "news_signals.json",
+      "exists": true,
+      "sizeBytes": 134827,
+      "modifiedAt": "2026-06-04 10:01:24 KST"
+    },
+    "news_signals_summary.json": {
+      "name": "news_signals_summary.json",
+      "exists": true,
+      "sizeBytes": 2411,
+      "modifiedAt": "2026-06-04 10:01:24 KST"
+    },
+    "supply_flow_input.csv": {
+      "name": "supply_flow_input.csv",
+      "exists": true,
+      "sizeBytes": 1967,
+      "modifiedAt": "2026-06-04 10:02:07 KST"
+    },
+    "supply_flow_summary.json": {
+      "name": "supply_flow_summary.json",
+      "exists": true,
+      "sizeBytes": 2668,
+      "modifiedAt": "2026-06-04 10:02:07 KST"
+    },
+    "report_signals.json": {
+      "name": "report_signals.json",
+      "exists": true,
+      "sizeBytes": 17316,
+      "modifiedAt": "2026-06-04 10:03:41 KST"
+    },
+    "report_signals_summary.json": {
+      "name": "report_signals_summary.json",
+      "exists": true,
+      "sizeBytes": 2196,
+      "modifiedAt": "2026-06-04 10:03:41 KST"
+    },
+    "recommendation_summary.json": {
+      "name": "recommendation_summary.json",
+      "exists": true,
+      "sizeBytes": 5989,
+      "modifiedAt": "2026-06-04 10:03:41 KST"
+    },
+    "market_pipeline_validation.json": {
+      "name": "market_pipeline_validation.json",
+      "exists": true,
+      "sizeBytes": 2361,
+      "modifiedAt": "2026-06-04 10:04:19 KST"
+    },
+    "intraday_pipeline_status.json": {
+      "name": "intraday_pipeline_status.json",
+      "exists": true,
+      "sizeBytes": 291,
+      "modifiedAt": "2026-06-04 10:00:30 KST"
+    },
+    "live_quotes_validation_report.json": {
+      "name": "live_quotes_validation_report.json",
+      "exists": true,
+      "sizeBytes": 433,
+      "modifiedAt": "2026-06-04 10:00:30 KST"
+    },
+    "app_pipeline_status.json": {
+      "name": "app_pipeline_status.json",
+      "exists": true,
+      "sizeBytes": 424,
+      "modifiedAt": "2026-06-04 10:00:30 KST"
+    }
+  },
+  "nextAction": "앱 데이터 탭에서 저장 URL 새로고침 후 후보/현재가/뉴스·수급·리포트 반영 여부 확인"
+}
