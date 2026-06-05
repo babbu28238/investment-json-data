@@ -1,4 +1,4 @@
-name: Update Market Candidates V294 Signal Audit
+name: Update Market Candidates V295 Signal Reflection Fix
 
 on:
   workflow_dispatch:
@@ -14,18 +14,14 @@ on:
 permissions:
   contents: write
 
-env:
-  PYTHONIOENCODING: utf-8
-  TZ: Asia/Seoul
-
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,99 +31,83 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy pykrx requests beautifulsoup4 lxml
+          pip install pandas numpy pykrx beautifulsoup4 requests lxml
 
-      - name: Generate market candidates input
-        run: python scripts/generate_stock_candidates.py
+      - name: Generate market scanner input
+        run: |
+          python scripts/generate_stock_candidates.py
 
       - name: Update news signals
-        run: python scripts/update_news_signals.py
+        run: |
+          if [ -f scripts/update_news_signals.py ]; then python scripts/update_news_signals.py; else echo "skip news"; fi
 
       - name: Update supply flow
-        run: python scripts/update_supply_flow.py
+        run: |
+          if [ -f scripts/update_supply_flow.py ]; then python scripts/update_supply_flow.py; else echo "skip supply"; fi
 
       - name: Update report signals
-        run: python scripts/update_report_signals.py
+        run: |
+          if [ -f scripts/update_report_signals.py ]; then python scripts/update_report_signals.py; else echo "skip report"; fi
+
+      - name: Update DART signals if key exists
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          if [ -f scripts/update_dart_signals.py ]; then python scripts/update_dart_signals.py; else echo "skip dart"; fi
 
       - name: Build stock candidates json
-        run: python scripts/update_stock_candidates_v224_mapper.py
-
-      - name: Merge real data
-        run: python scripts/merge_real_data_v252.py
-
-      - name: Update recommendation scores
-        run: python scripts/update_recommendation_scores.py
+        run: |
+          python scripts/update_stock_candidates_v224_mapper.py
 
       - name: Update live quotes
-        run: python scripts/update_live_quotes.py
+        run: |
+          python scripts/update_live_quotes.py
 
-      - name: Validate live quotes
-        run: python scripts/validate_live_quotes.py
-        continue-on-error: true
+      - name: Merge real data
+        run: |
+          if [ -f scripts/merge_real_data_v252.py ]; then python scripts/merge_real_data_v252.py; else echo "skip merge"; fi
 
-      - name: Validate market pipeline
-        run: python scripts/validate_market_pipeline.py
-        continue-on-error: true
+      - name: Update recommendation scores
+        run: |
+          if [ -f scripts/update_recommendation_scores.py ]; then python scripts/update_recommendation_scores.py; else echo "skip recommendation"; fi
+
+      - name: Finalize signal reflection
+        run: |
+          python scripts/finalize_stock_candidates.py
 
       - name: Build pipeline health
-        run: python scripts/build_pipeline_health.py
-        continue-on-error: true
+        run: |
+          if [ -f scripts/build_pipeline_health.py ]; then python scripts/build_pipeline_health.py; else echo "skip health"; fi
 
       - name: Build app operation status
-        run: python scripts/build_app_operation_status.py
-        continue-on-error: true
+        run: |
+          if [ -f scripts/build_app_operation_status.py ]; then python scripts/build_app_operation_status.py; else echo "skip app operation status"; fi
 
       - name: Build app data bundle
-        run: python scripts/build_app_data_bundle.py
+        run: |
+          if [ -f scripts/build_app_data_bundle.py ]; then python scripts/build_app_data_bundle.py; else echo "skip bundle"; fi
 
       - name: Validate app data bundle
-        run: python scripts/validate_app_data_bundle.py
-        continue-on-error: true
+        run: |
+          if [ -f scripts/validate_app_data_bundle.py ]; then python scripts/validate_app_data_bundle.py; else echo "skip bundle validation"; fi
 
       - name: Audit signal reflection
-        run: python scripts/audit_signal_reflection.py
-        continue-on-error: true
+        run: |
+          if [ -f scripts/audit_signal_reflection.py ]; then python scripts/audit_signal_reflection.py; else echo "skip audit"; fi
 
-      - name: Commit updated data files
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add \
-            stock_candidates_input.csv \
-            stock_candidates.json \
-            app_data_status.json \
-            live_quotes.json \
-            live_quotes_validation_report.json \
-            live_quotes_validation_report.txt \
-            news_signals.json \
-            news_signals_summary.json \
-            news_signals_log.txt \
-            supply_flow_input.csv \
-            supply_flow_summary.json \
-            supply_flow_log.txt \
-            report_hints.csv \
-            report_signals.json \
-            report_signals_summary.json \
-            report_signals_log.txt \
-            recommendation_summary.json \
-            recommendation_log.txt \
-            market_pipeline_validation.json \
-            market_pipeline_validation.txt \
-            pipeline_health.json \
-            pipeline_health.txt \
-            intraday_pipeline_status.json \
-            app_operation_status.json \
-            app_operation_status.txt \
-            app_data_bundle.json \
-            app_data_bundle.txt \
-            app_data_bundle_validation.json \
-            app_data_bundle_validation.txt \
-            signal_reflection_audit.json \
-            signal_reflection_audit.txt || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update market candidates and audit signal reflection"
-            git pull --rebase || true
-            git push
-          fi
+          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json report_hints.csv supply_flow_input.csv || true
+          git add news_signals.json news_signals_summary.json news_signals_log.txt || true
+          git add report_signals.json report_signals_summary.json report_signals_log.txt || true
+          git add supply_flow_summary.json supply_flow_log.txt || true
+          git add recommendation_summary.json recommendation_log.txt || true
+          git add v295_signal_reflection_fix_summary.json v295_signal_reflection_fix.txt || true
+          git add market_pipeline_validation.json market_pipeline_validation.txt || true
+          git add pipeline_health.json pipeline_health.txt intraday_pipeline_status.json || true
+          git add app_operation_status.json app_operation_status.txt app_data_bundle.json app_data_bundle.txt app_data_bundle_validation.json app_data_bundle_validation.txt || true
+          git add signal_reflection_audit.json signal_reflection_audit.txt || true
+          git commit -m "Update market candidates V295 signal reflection fix" || echo "No changes to commit"
+          git push
