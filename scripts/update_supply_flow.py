@@ -1,34 +1,45 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-V297 SUPPLY FLOW COMPAT FIX
+V298 NAVER SUPPLY FLOW ENGINE
 
-목적:
-- V296에서 실패한 get_market_trading_value_by_ticker 의존성 제거
-- 현재 GitHub Actions pykrx 버전에서 더 보편적으로 사용 가능한
-  get_market_trading_value_by_date(start, end, code, detail=True/False) 기반으로 복구
-- 실패 시에도 CSV/요약/디버그 파일 생성
+Purpose
+- Replace pykrx investor-flow collection that returned empty in GitHub Actions.
+- Read Naver Finance investor table pages for each candidate.
+- Create supply_flow_input.csv compatible with update_stock_candidates_v224_mapper.py.
 
-출력:
+Input priority
+1) stock_candidates_input.csv
+2) stock_candidates.json
+
+Output
 - supply_flow_input.csv
 - supply_flow_summary.json
 - supply_flow_log.txt
 - supply_flow_debug.json
+
+Notes
+- Naver Finance investor pages can change. This script is defensive and writes diagnostics.
+- Naver table provides foreign/institution daily net volume; detailed actor split
+  (pension/trust/finance) is not publicly available on that page, so this version maps:
+  foreign = foreign net flow
+  finance = institution net flow proxy
+  pension/trust = 0 with explicit memo
 """
 
 from __future__ import annotations
 
 import csv
-import inspect
 import json
 import re
 import time
+from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
+from html import unescape
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
-
-import pandas as pd
-from pykrx import stock
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parents[1] if Path(__file__).parent.name == "scripts" else Path.cwd()
@@ -40,24 +51,18 @@ OUT_SUMMARY = ROOT / "supply_flow_summary.json"
 OUT_LOG = ROOT / "supply_flow_log.txt"
 OUT_DEBUG = ROOT / "supply_flow_debug.json"
 
-PERIODS = [5, 20, 60]
-SLEEP_SECONDS = 0.05
 MAX_CANDIDATES = 80
+PAGES_TO_FETCH = 8       # about 80 rows, enough for 60 trading days
+SLEEP_SECONDS = 0.15
 
-ACTOR_ALIASES = {
-    "foreign": ["외국인", "외국인합계", "외국인 합계", "foreign", "foreigner"],
-    "pension": ["연기금", "연기금등", "연기금 등", "pension"],
-    "trust": ["투신", "투자신탁", "trust"],
-    "finance": ["금융투자", "금투", "finance"],
-}
+USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+)
 
 
 def now_kst() -> str:
     return datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")
-
-
-def ymd(dt: datetime) -> str:
-    return dt.strftime("%Y%m%d")
 
 
 def normalize_code(value: Any) -> str:
@@ -72,6 +77,13 @@ def clean_text(value: Any, default: str = "") -> str:
     return s if s else default
 
 
+def first(row: Dict[str, Any], keys: Iterable[str], default: str = "") -> str:
+    for key in keys:
+        if key in row and clean_text(row.get(key), ""):
+            return clean_text(row.get(key), default)
+    return default
+
+
 def read_csv_rows(path: Path) -> List[Dict[str, Any]]:
     if not path.exists():
         return []
@@ -79,6 +91,8 @@ def read_csv_rows(path: Path) -> List[Dict[str, Any]]:
         try:
             with path.open("r", encoding=enc, newline="") as f:
                 return list(csv.DictReader(f))
+        except UnicodeDecodeError:
+            continue
         except Exception:
             continue
     return []
@@ -101,13 +115,6 @@ def read_json_candidates(path: Path) -> List[Dict[str, Any]]:
     return []
 
 
-def first(row: Dict[str, Any], keys: Iterable[str], default: str = "") -> str:
-    for key in keys:
-        if key in row and clean_text(row.get(key), ""):
-            return clean_text(row.get(key), default)
-    return default
-
-
 def load_candidates() -> List[Dict[str, str]]:
     rows = read_csv_rows(CANDIDATE_CSV)
     source = "stock_candidates_input.csv"
@@ -120,210 +127,213 @@ def load_candidates() -> List[Dict[str, str]]:
     for row in rows:
         code = normalize_code(first(row, ["code", "stockCode", "stock_code", "종목코드", "단축코드", "ticker", "symbol"]))
         name = first(row, ["name", "stockName", "stock_name", "종목명", "displayName"], code)
-        market = first(row, ["market", "시장"], "")
         if code and code not in seen:
             seen.add(code)
-            out.append({"code": code, "name": name or code, "market": market, "source": source})
+            out.append({"code": code, "name": name or code, "source": source})
     return out[:MAX_CANDIDATES]
 
 
-def recent_market_date(code: str = "005930", max_back_days: int = 20) -> str:
-    today = datetime.now(KST).replace(tzinfo=None)
-    for i in range(max_back_days + 1):
-        date = ymd(today - timedelta(days=i))
+def fetch_html(url: str, timeout: int = 12) -> str:
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=timeout) as res:
+        raw = res.read()
+    for enc in ["euc-kr", "cp949", "utf-8"]:
         try:
-            df = stock.get_market_ohlcv_by_date(date, date, code)
-            if df is not None and not df.empty:
-                return date
-        except Exception:
-            pass
-    return ymd(today)
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode("utf-8", errors="ignore")
 
 
-def trading_days_until(base_date: str, count: int) -> Tuple[str, str]:
-    end = datetime.strptime(base_date, "%Y%m%d")
-    start = end - timedelta(days=max(20, int(count * 2.3) + 14))
-    return ymd(start), base_date
+def strip_tags(fragment: str) -> str:
+    text = re.sub(r"<script.*?</script>", " ", fragment, flags=re.S | re.I)
+    text = re.sub(r"<style.*?</style>", " ", text, flags=re.S | re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = unescape(text).replace("\xa0", " ")
+    return re.sub(r"\s+", " ", text).strip()
 
 
-def normalize_col(name: Any) -> str:
-    s = str(name or "").lower()
-    s = re.sub(r"[\s_\-./()\[\]{}]+", "", s)
-    replacements = {
-        "외국인합계": "foreign", "외국인": "foreign", "foreign": "foreign", "foreigner": "foreign",
-        "연기금등": "pension", "연기금": "pension", "pension": "pension",
-        "투자신탁": "trust", "투신": "trust", "trust": "trust",
-        "금융투자": "finance", "금투": "finance", "finance": "finance",
-        "순매수": "net", "순매수거래대금": "net", "거래대금": "value",
-    }
-    for k, v in replacements.items():
-        s = s.replace(k, v)
-    return s
-
-
-def safe_number(value: Any) -> float:
+def parse_int(value: Any) -> int:
+    s = str(value or "").replace(",", "").replace("+", "").strip()
+    s = re.sub(r"[^0-9\-]", "", s)
+    if s in ["", "-"]:
+        return 0
     try:
-        if value is None or pd.isna(value):
-            return 0.0
-        return float(str(value).replace(",", "").replace("원", "").strip())
+        return int(s)
     except Exception:
-        return 0.0
+        return 0
 
 
-def find_actor_column(df: pd.DataFrame, actor: str) -> Any:
-    if df is None or df.empty:
-        return None
-    norm_map = {normalize_col(c): c for c in df.columns}
-    if actor in norm_map:
-        return norm_map[actor]
-    for norm, raw in norm_map.items():
-        if actor in norm:
-            return raw
-    aliases = ACTOR_ALIASES.get(actor, [])
-    for raw in df.columns:
-        raw_s = str(raw)
-        if any(alias in raw_s for alias in aliases):
-            return raw
-    return None
+@dataclass
+class InvestorRow:
+    date: str
+    close: int
+    foreign: int
+    institution: int
 
 
-def fetch_by_date(code: str, start: str, end: str) -> Tuple[pd.DataFrame | None, Dict[str, Any]]:
-    debug: Dict[str, Any] = {"method": "get_market_trading_value_by_date", "start": start, "end": end, "code": code}
-    attempts = []
-    # pykrx 버전별 지원 시그니처를 모두 시도한다.
-    attempts.append(("detail_true", lambda: stock.get_market_trading_value_by_date(start, end, code, detail=True)))
-    attempts.append(("detail_false", lambda: stock.get_market_trading_value_by_date(start, end, code, detail=False)))
-    attempts.append(("plain", lambda: stock.get_market_trading_value_by_date(start, end, code)))
+def parse_naver_frgn_rows(html: str) -> List[InvestorRow]:
+    # frgn.naver table rows usually include: date, close, change, change%, volume, institution, foreign, foreign_ratio
+    rows: List[InvestorRow] = []
+    tr_list = re.findall(r"<tr[^>]*>(.*?)</tr>", html, flags=re.S | re.I)
+    for tr in tr_list:
+        if not re.search(r"\d{2}\.\d{2}\.\d{2}", tr):
+            continue
+        cells = re.findall(r"<td[^>]*>(.*?)</td>", tr, flags=re.S | re.I)
+        values = [strip_tags(c) for c in cells]
+        values = [v for v in values if v != ""]
+        if len(values) < 7:
+            continue
 
-    last_error = ""
-    for label, fn in attempts:
+        date_match = re.search(r"\d{2}\.\d{2}\.\d{2}", values[0])
+        if not date_match:
+            continue
+
+        date = date_match.group(0)
+        close = parse_int(values[1])
+
+        # Robust heuristic: in Naver foreign/institution page, the final numeric columns are institution and foreign.
+        numeric_values = [parse_int(v) for v in values]
+        # Prefer expected positions when available: [date, close, change, change%, volume, institution, foreign, ratio]
+        institution = parse_int(values[5]) if len(values) > 5 else 0
+        foreign = parse_int(values[6]) if len(values) > 6 else 0
+
+        # If parsing went wrong, fallback to last meaningful signed integer columns.
+        if institution == 0 and foreign == 0:
+            signed = []
+            for v in values:
+                if re.search(r"[+\-]?[0-9,]+", v):
+                    signed.append(parse_int(v))
+            if len(signed) >= 3:
+                institution = signed[-3]
+                foreign = signed[-2]
+
+        rows.append(InvestorRow(date=date, close=close, foreign=foreign, institution=institution))
+    return rows
+
+
+def fetch_naver_investor_rows(code: str) -> Tuple[List[InvestorRow], List[Dict[str, Any]]]:
+    all_rows: List[InvestorRow] = []
+    debug: List[Dict[str, Any]] = []
+    seen_dates = set()
+
+    for page in range(1, PAGES_TO_FETCH + 1):
+        url = f"https://finance.naver.com/item/frgn.naver?code={code}&page={page}"
+        status = "ok"
+        rows: List[InvestorRow] = []
         try:
-            df = fn()
-            debug["attempt"] = label
-            if df is not None and not df.empty:
-                debug["status"] = "ok"
-                debug["rowCount"] = int(len(df))
-                debug["columns"] = [str(c) for c in df.columns]
-                return df, debug
-            last_error = "empty"
-        except Exception as e:
-            last_error = str(e)[:200]
-            debug[f"error_{label}"] = last_error
-    debug["status"] = last_error or "empty"
-    debug["rowCount"] = 0
-    debug["columns"] = []
-    return None, debug
+            html = fetch_html(url)
+            rows = parse_naver_frgn_rows(html)
+            if not rows:
+                status = "empty"
+        except (HTTPError, URLError, TimeoutError, Exception) as e:
+            status = str(e)[:180]
+
+        for r in rows:
+            if r.date not in seen_dates:
+                all_rows.append(r)
+                seen_dates.add(r.date)
+
+        debug.append({"page": page, "status": status, "rowCount": len(rows)})
+        if page >= 2 and not rows:
+            break
+        time.sleep(0.05)
+
+    return all_rows, debug
 
 
-def sum_actor(df: pd.DataFrame, actor: str, last_n: int) -> float:
-    col = find_actor_column(df, actor)
-    if col is None:
-        return 0.0
-    series = df[col].tail(last_n).apply(safe_number)
-    return float(series.sum())
+def sum_last(rows: List[InvestorRow], attr: str, n: int) -> int:
+    if not rows:
+        return 0
+    values = [getattr(r, attr, 0) for r in rows[:n]]
+    return int(sum(values))
 
 
-def format_amount(value: float) -> str:
-    # 백만원 단위. 0이어도 V224가 값으로 인식하도록 "0" 출력.
-    return str(int(round(value / 1_000_000)))
+def fmt(value: int) -> str:
+    return str(int(value))
 
 
-def build_supply_row(candidate: Dict[str, str], base_date: str) -> Tuple[Dict[str, str], Dict[str, Any]]:
+def build_supply_row(candidate: Dict[str, str]) -> Tuple[Dict[str, str], Dict[str, Any]]:
     code = candidate["code"]
     name = candidate["name"]
-    row: Dict[str, str] = {"code": code, "name": name}
-    detail: Dict[str, Any] = {"code": code, "name": name, "periodDebug": []}
+    rows, debug = fetch_naver_investor_rows(code)
 
-    non_zero = 0
-    any_ok = False
-    last_columns: List[str] = []
-    last_status = ""
+    foreign5 = sum_last(rows, "foreign", 5)
+    foreign20 = sum_last(rows, "foreign", 20)
+    foreign60 = sum_last(rows, "foreign", 60)
+    inst5 = sum_last(rows, "institution", 5)
+    inst20 = sum_last(rows, "institution", 20)
+    inst60 = sum_last(rows, "institution", 60)
 
-    for period in PERIODS:
-        start, end = trading_days_until(base_date, period)
-        df, dbg = fetch_by_date(code, start, end)
-        dbg["period"] = period
-        detail["periodDebug"].append(dbg)
-        last_status = str(dbg.get("status", ""))
-        last_columns = list(dbg.get("columns", []))
+    # Naver public table has institution aggregate, not pension/trust/finance split.
+    # Put aggregate institution into finance*D proxy so existing V224 scoring can use institutional flow.
+    row = {
+        "code": code,
+        "name": name,
+        "foreign5D": fmt(foreign5),
+        "foreign20D": fmt(foreign20),
+        "foreign60D": fmt(foreign60),
+        "pension5D": "0",
+        "pension20D": "0",
+        "pension60D": "0",
+        "trust5D": "0",
+        "trust20D": "0",
+        "trust60D": "0",
+        "finance5D": fmt(inst5),
+        "finance20D": fmt(inst20),
+        "finance60D": fmt(inst60),
+        "supplyMemo": "",
+    }
 
-        if df is not None and not df.empty:
-            any_ok = True
+    non_zero = sum(1 for k in ["foreign5D", "foreign20D", "foreign60D", "finance5D", "finance20D", "finance60D"] if parse_int(row[k]) != 0)
+    status = "ok" if rows and non_zero > 0 else ("zero" if rows else "fail")
 
-        for actor in ["foreign", "pension", "trust", "finance"]:
-            value = sum_actor(df, actor, period) if df is not None else 0.0
-            if abs(value) > 0:
-                non_zero += 1
-            row[f"{actor}{period}D"] = format_amount(value)
-        time.sleep(0.01)
-
-    def n(key: str) -> float:
-        try:
-            return float(str(row.get(key, "0")).replace(",", ""))
-        except Exception:
-            return 0.0
-
-    foreign20 = n("foreign20D")
-    pension20 = n("pension20D")
-    trust20 = n("trust20D")
-    finance20 = n("finance20D")
-    institutional20 = pension20 + trust20 + finance20
-    positive_count = sum(1 for x in [foreign20, pension20, trust20, finance20] if x > 0)
-
-    if not any_ok:
-        memo = f"수급 조회 실패: {last_status or 'empty'}"
-        status = "fail"
-    elif non_zero == 0:
-        memo = "수급 데이터 조회 성공, 순매수값 0 또는 컬럼 미매칭"
-        status = "zero"
-    elif positive_count >= 3:
-        memo = "외국인·기관 주요 주체 20일 수급 동반 개선"
-        status = "ok"
-    elif foreign20 > 0 and institutional20 > 0:
-        memo = "외국인 및 기관 수급 우위"
-        status = "ok"
-    elif foreign20 < 0 and institutional20 < 0:
-        memo = "외국인·기관 수급 동반 약화"
-        status = "ok"
+    if status == "ok":
+        if foreign20 > 0 and inst20 > 0:
+            memo = "외국인·기관 20일 동반 순매수"
+        elif foreign20 > 0 and inst20 <= 0:
+            memo = "외국인 순매수 우위 / 기관 혼조"
+        elif foreign20 <= 0 and inst20 > 0:
+            memo = "기관 순매수 우위 / 외국인 혼조"
+        elif foreign20 < 0 and inst20 < 0:
+            memo = "외국인·기관 20일 동반 순매도"
+        else:
+            memo = "수급 중립 또는 혼조"
+        memo += " (네이버 외국인·기관 집계 기반)"
+    elif rows:
+        memo = "수급 데이터는 조회됐으나 순매수 합계가 0"
     else:
-        memo = "수급 중립 또는 혼조"
-        status = "ok"
+        memo = "네이버 수급 조회 실패 또는 표 구조 변경"
 
     row["supplyMemo"] = memo
-    detail.update({
+
+    detail = {
+        "code": code,
+        "name": name,
         "status": status,
+        "rowCount": len(rows),
         "nonZeroFields": non_zero,
-        "columns": last_columns,
+        "foreign20D": row["foreign20D"],
+        "finance20D": row["finance20D"],
         "memo": memo,
-        "foreign20D": row.get("foreign20D"),
-        "pension20D": row.get("pension20D"),
-        "trust20D": row.get("trust20D"),
-        "finance20D": row.get("finance20D"),
-    })
+        "debug": debug[:5],
+        "sampleRows": [asdict(r) for r in rows[:3]],
+    }
     return row, detail
 
 
 def main() -> None:
     started = now_kst()
-    base_date = recent_market_date()
     candidates = load_candidates()
-
-    logs: List[str] = []
-    details: List[Dict[str, Any]] = []
     rows: List[Dict[str, str]] = []
-
-    logs.append(f"V297 SUPPLY FLOW COMPAT FIX startedAt={started} baseDate={base_date}")
-    logs.append(f"candidateCount={len(candidates)} maxCandidates={MAX_CANDIDATES}")
-    try:
-        logs.append(f"pykrx get_market_trading_value_by_date signature={inspect.signature(stock.get_market_trading_value_by_date)}")
-    except Exception as e:
-        logs.append(f"signature_check_failed={e}")
+    details: List[Dict[str, Any]] = []
+    logs = [f"V298 NAVER SUPPLY FLOW ENGINE startedAt={started}", f"candidateCount={len(candidates)}"]
 
     for idx, candidate in enumerate(candidates, start=1):
-        row, detail = build_supply_row(candidate, base_date)
+        row, detail = build_supply_row(candidate)
         rows.append(row)
         details.append(detail)
-        logs.append(f"[{idx}/{len(candidates)}] {candidate['code']} {candidate['name']} {detail.get('status')} nz={detail.get('nonZeroFields')} {row.get('supplyMemo')}")
+        logs.append(f"[{idx}/{len(candidates)}] {candidate['code']} {candidate['name']} {detail['status']} rows={detail['rowCount']} nonZero={detail['nonZeroFields']} {detail['memo']}")
         time.sleep(SLEEP_SECONDS)
 
     fieldnames = [
@@ -334,7 +344,6 @@ def main() -> None:
         "finance5D", "finance20D", "finance60D",
         "supplyMemo",
     ]
-
     with OUT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -342,36 +351,28 @@ def main() -> None:
             writer.writerow(row)
 
     ok_count = sum(1 for d in details if d.get("status") == "ok")
-    fail_count = sum(1 for d in details if d.get("status") == "fail")
     zero_count = sum(1 for d in details if d.get("status") == "zero")
-    non_zero_rows = sum(1 for d in details if int(d.get("nonZeroFields", 0) or 0) > 0)
+    fail_count = sum(1 for d in details if d.get("status") == "fail")
+    non_zero_rows = sum(1 for d in details if int(d.get("nonZeroFields", 0)) > 0)
 
     summary = {
-        "version": "V297_SUPPLY_FLOW_COMPAT_FIX",
+        "version": "V298_NAVER_SUPPLY_FLOW_ENGINE",
         "updatedAt": now_kst(),
         "startedAt": started,
-        "baseDate": base_date,
         "candidateCount": len(candidates),
         "outputRows": len(rows),
         "okCount": ok_count,
         "zeroCount": zero_count,
         "failCount": fail_count,
         "nonZeroRows": non_zero_rows,
+        "source": "naver_finance_frgn_page",
         "output": OUT_CSV.name,
         "detailsTop20": details[:20],
     }
 
-    debug = {
-        "version": "V297_SUPPLY_FLOW_COMPAT_FIX",
-        "updatedAt": summary["updatedAt"],
-        "details": details,
-        "logs": logs[-100:],
-    }
-
     OUT_SUMMARY.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    OUT_DEBUG.write_text(json.dumps(debug, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT_DEBUG.write_text(json.dumps(details, ensure_ascii=False, indent=2), encoding="utf-8")
     OUT_LOG.write_text("\n".join(logs), encoding="utf-8")
-
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
