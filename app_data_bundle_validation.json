@@ -1,0 +1,52 @@
+{
+  "version": "V290_APP_DATA_BUNDLE_VALIDATION_LOCK",
+  "updatedAt": "2026-06-05 12:58:04",
+  "status": "ok",
+  "candidateCount": 24,
+  "liveQuoteCount": 24,
+  "topCandidateCount": 10,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "bundle_status",
+      "passed": true,
+      "detail": "bundle status=ok"
+    },
+    {
+      "name": "candidate_count",
+      "passed": true,
+      "detail": "candidateCount=24"
+    },
+    {
+      "name": "candidate_payload",
+      "passed": true,
+      "detail": "payload.candidates rows=24"
+    },
+    {
+      "name": "live_quote_count",
+      "passed": true,
+      "detail": "liveQuoteCount=24, payload quotes=24"
+    },
+    {
+      "name": "top_candidates",
+      "passed": true,
+      "detail": "topCandidates=10"
+    },
+    {
+      "name": "app_status_payload",
+      "passed": true,
+      "detail": "payload.appDataStatus 확인"
+    },
+    {
+      "name": "pipeline_health_payload",
+      "passed": true,
+      "detail": "payload.pipelineHealth 확인"
+    },
+    {
+      "name": "recommendation_summary_payload",
+      "passed": true,
+      "detail": "payload.recommendationSummary 확인"
+    }
+  ]
+}

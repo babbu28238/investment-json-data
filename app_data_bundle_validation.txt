@@ -1,0 +1,15 @@
+V290 APP DATA BUNDLE VALIDATION LOCK
+updatedAt: 2026-06-05 12:58:04
+status: ok
+candidateCount: 24
+liveQuoteCount: 24
+
+Checks:
+- OK bundle_status: bundle status=ok
+- OK candidate_count: candidateCount=24
+- OK candidate_payload: payload.candidates rows=24
+- OK live_quote_count: liveQuoteCount=24, payload quotes=24
+- OK top_candidates: topCandidates=10
+- OK app_status_payload: payload.appDataStatus 확인
+- OK pipeline_health_payload: payload.pipelineHealth 확인
+- OK recommendation_summary_payload: payload.recommendationSummary 확인
