@@ -1,4 +1,4 @@
-name: Update Market Candidates V299
+name: Update Market Candidates V303
 
 on:
   workflow_dispatch:
@@ -85,6 +85,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add \
             stock_candidates_input.csv \
+            market_universe.json \
+            market_scan_results.json \
+            market_scanner_summary.json \
+            market_scanner_errors.txt \
             stock_candidates.json \
             live_quotes.json \
             news_signals.json news_signals_summary.json news_signals_log.txt \
@@ -102,6 +106,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update market candidates V299 live recommendation meta fix"
+            git commit -m "Update market candidates V303 market scanner outputs"
             git push
           fi
