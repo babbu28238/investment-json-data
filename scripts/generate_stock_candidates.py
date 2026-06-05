@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-CV279 MARKET UNIVERSE GENERATOR
+CV301 MARKET UNIVERSE GENERATOR
 
 역할:
 - KOSPI/KOSDAQ 전체 종목을 pykrx로 수집
@@ -153,29 +153,102 @@ def market_name_map(base_date: str) -> Dict[str, str]:
     return result
 
 
+def pick_column(df: pd.DataFrame, candidates: List[str]) -> Optional[str]:
+    """pykrx 버전별 컬럼명 차이를 흡수하기 위한 컬럼 탐색."""
+    if df is None or df.empty:
+        return None
+    normalized = {str(c).replace(" ", "").replace("_", "").lower(): c for c in df.columns}
+    for cand in candidates:
+        key = str(cand).replace(" ", "").replace("_", "").lower()
+        if key in normalized:
+            return normalized[key]
+    for c in df.columns:
+        ctext = str(c).replace(" ", "").replace("_", "").lower()
+        for cand in candidates:
+            key = str(cand).replace(" ", "").replace("_", "").lower()
+            if key and key in ctext:
+                return c
+    return None
+
+
+def make_market_frame_from_ohlcv(base_date: str, market: str) -> Tuple[Optional[pd.DataFrame], List[str]]:
+    """
+    V301 핵심 복구 로직.
+    기존 get_market_cap_by_ticker가 GitHub Actions pykrx 환경에서 컬럼 오류를 내므로,
+    시장 전체 OHLCV 테이블을 기본 유니버스로 사용하고 시가총액은 보조로만 붙인다.
+    """
+    errors: List[str] = []
+    try:
+        ohlcv = stock.get_market_ohlcv_by_ticker(base_date, market=market)
+    except Exception as e:
+        return None, [f"{market} ohlcv_by_ticker failed: {e}"]
+
+    if ohlcv is None or ohlcv.empty:
+        return None, [f"{market} ohlcv_by_ticker empty"]
+
+    df = ohlcv.copy()
+    df["code"] = [normalize_code(c) for c in df.index]
+    df["market"] = market
+
+    close_col = pick_column(df, ["종가", "close", "현재가"])
+    volume_col = pick_column(df, ["거래량", "volume"])
+    value_col = pick_column(df, ["거래대금", "거래대금(원)", "tradingvalue", "value"])
+
+    if close_col is None:
+        errors.append(f"{market} 종가 컬럼 탐색 실패 columns={list(df.columns)}")
+        df["종가"] = 0
+    else:
+        df["종가"] = df[close_col].apply(safe_float)
+
+    if volume_col is None:
+        errors.append(f"{market} 거래량 컬럼 탐색 실패 columns={list(df.columns)}")
+        df["거래량"] = 0
+    else:
+        df["거래량"] = df[volume_col].apply(safe_float)
+
+    if value_col is None:
+        # 일부 pykrx 버전에서는 거래대금이 없을 수 있어 종가*거래량으로 대체
+        errors.append(f"{market} 거래대금 컬럼 없음: 종가*거래량으로 대체")
+        df["거래대금"] = df["종가"] * df["거래량"]
+    else:
+        df["거래대금"] = df[value_col].apply(safe_float)
+
+    # 시가총액은 있으면 붙이고, 실패하면 0으로 둔다. 전체시장 스캔 자체를 막지 않는다.
+    df["시가총액"] = 0
+    try:
+        cap = stock.get_market_cap_by_ticker(base_date, market=market)
+        if cap is not None and not cap.empty:
+            cap_df = cap.copy()
+            cap_df["code"] = [normalize_code(c) for c in cap_df.index]
+            cap_col = pick_column(cap_df, ["시가총액", "marketcap", "market_cap"])
+            if cap_col is not None:
+                cap_map = dict(zip(cap_df["code"], cap_df[cap_col].apply(safe_float)))
+                df["시가총액"] = df["code"].map(cap_map).fillna(0)
+            else:
+                errors.append(f"{market} 시가총액 컬럼 탐색 실패 columns={list(cap_df.columns)}")
+    except Exception as e:
+        errors.append(f"{market} market_cap optional attach failed: {e}")
+
+    return df, errors
+
+
 def build_universe(base_date: str) -> Tuple[pd.DataFrame, str, List[str]]:
     errors: List[str] = []
     frames = []
     for market in ["KOSPI", "KOSDAQ"]:
-        try:
-            df = stock.get_market_cap_by_ticker(base_date, market=market)
-            if df is None or df.empty:
-                errors.append(f"{market} market cap empty")
-                continue
-            df = df.copy()
-            df["code"] = [normalize_code(c) for c in df.index]
-            df["market"] = market
-            frames.append(df)
-            print(f"[OK] {market} market cap rows={len(df)}")
-        except Exception as e:
-            errors.append(f"{market} market cap failed: {e}")
+        df, market_errors = make_market_frame_from_ohlcv(base_date, market)
+        errors.extend(market_errors)
+        if df is None or df.empty:
+            continue
+        frames.append(df)
+        print(f"[OK] {market} ohlcv universe rows={len(df)} columns={list(df.columns)}")
 
     if not frames:
         rows = []
         for idx, (code, name, market) in enumerate(FALLBACK_UNIVERSE, start=1):
             rows.append({
                 "code": code, "name": name, "market": market,
-                "종가": 0, "시가총액": 0,
+                "종가": 0, "시가총액": 0, "거래량": 0,
                 "거래대금": max(1, len(FALLBACK_UNIVERSE) - idx + 1) * 1_000_000_000,
             })
         return pd.DataFrame(rows), "fallback_static_universe", errors
@@ -184,20 +257,44 @@ def build_universe(base_date: str) -> Tuple[pd.DataFrame, str, List[str]]:
     names = market_name_map(base_date)
     universe["name"] = universe["code"].map(names).fillna(universe["code"])
 
-    for col in ["종가", "시가총액", "거래대금"]:
+    # 필수 컬럼 최종 보정. 실패하더라도 fallback으로 바로 가지 않고 진단 가능한 값을 채운다.
+    for col in ["종가", "시가총액", "거래량", "거래대금"]:
         if col not in universe.columns:
-            raise RuntimeError(f"KRX 필수 컬럼 누락: {col}")
+            errors.append(f"KRX 필수 컬럼 보정 생성: {col}")
+            universe[col] = 0
+        universe[col] = universe[col].apply(safe_float)
 
     before = len(universe)
-    universe = universe[
-        (universe["종가"].astype(float) >= MIN_PRICE) &
-        (universe["거래대금"].astype(float) >= MIN_TRADING_VALUE) &
-        (universe["시가총액"].astype(float) >= MIN_MARKET_CAP)
-    ].copy()
+
+    # 시가총액이 전부 0이면 pykrx cap 조회 실패로 보고 시총 필터는 비활성화한다.
+    use_market_cap_filter = safe_float(universe["시가총액"].max(), 0) > 0
+
+    mask = (
+        (universe["종가"] >= MIN_PRICE) &
+        (universe["거래대금"] >= MIN_TRADING_VALUE)
+    )
+    if use_market_cap_filter:
+        mask = mask & (universe["시가총액"] >= MIN_MARKET_CAP)
+    else:
+        errors.append("시가총액 전체 0: MIN_MARKET_CAP 필터 비활성화")
+
+    universe = universe[mask].copy()
     universe = universe[~universe["name"].apply(is_excluded_name)].copy()
     universe = universe.sort_values("거래대금", ascending=False).head(UNIVERSE_TOP_N_BY_TRADING_VALUE)
-    print(f"[OK] universe filter {before} -> {len(universe)}")
-    return universe.reset_index(drop=True), "krx_market_cap_universe", errors
+
+    if universe.empty:
+        errors.append(f"universe empty after filter before={before}")
+        rows = []
+        for idx, (code, name, market) in enumerate(FALLBACK_UNIVERSE, start=1):
+            rows.append({
+                "code": code, "name": name, "market": market,
+                "종가": 0, "시가총액": 0, "거래량": 0,
+                "거래대금": max(1, len(FALLBACK_UNIVERSE) - idx + 1) * 1_000_000_000,
+            })
+        return pd.DataFrame(rows), "fallback_empty_after_filter", errors
+
+    print(f"[OK] universe filter {before} -> {len(universe)} marketCapFilter={use_market_cap_filter}")
+    return universe.reset_index(drop=True), "krx_ohlcv_universe_v301", errors
 
 
 def get_ohlcv(code: str, end_date: str) -> Optional[pd.DataFrame]:
@@ -388,7 +485,7 @@ def analyze_stock(row: pd.Series, base_date: str, rank_by_value: int, source: st
         "rsiValue": round(rsi, 2),
         "volumeRatio20D": round(volume_ratio, 2),
         "high52wPosition": round(high_52w_position, 2),
-        "selectionSource": f"CV279_MARKET_SCANNER_{source}",
+        "selectionSource": f"CV301_MARKET_SCANNER_{source}",
         "dataStatus": {
             "baseScore": score,
             "supplyBoost": 0,
@@ -417,7 +514,7 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
 def main() -> None:
     started = now_kst()
     base_date = recent_market_date()
-    print(f"[START] CV279 market scanner base_date={base_date}")
+    print(f"[START] CV301 market scanner base_date={base_date}")
 
     universe, source, errors = build_universe(base_date)
     universe_rows = []
@@ -432,7 +529,7 @@ def main() -> None:
             "tradingValue": safe_int(r.get("거래대금", 0)),
         })
     OUT_UNIVERSE_JSON.write_text(json.dumps({
-        "version": "CV279_MARKET_UNIVERSE",
+        "version": "CV301_MARKET_UNIVERSE",
         "updatedAt": now_kst(),
         "baseDate": base_date,
         "source": source,
@@ -463,7 +560,7 @@ def main() -> None:
     write_csv(final_rows)
 
     OUT_SCAN_JSON.write_text(json.dumps({
-        "version": "CV279_MARKET_SCAN_RESULTS",
+        "version": "CV301_MARKET_SCAN_RESULTS",
         "updatedAt": now_kst(),
         "baseDate": base_date,
         "source": source,
@@ -480,7 +577,7 @@ def main() -> None:
         sector_counts[item.get("sector", "-")] = sector_counts.get(item.get("sector", "-"), 0) + 1
 
     OUT_SUMMARY_JSON.write_text(json.dumps({
-        "version": "CV279_MARKET_SCANNER",
+        "version": "CV301_MARKET_SCANNER",
         "status": "warning" if scan_errors else "ok",
         "startedAt": started,
         "updatedAt": now_kst(),
