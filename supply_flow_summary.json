@@ -1,416 +1,955 @@
 {
-  "version": "V296_SUPPLY_FLOW_ENGINE_REBUILD",
-  "updatedAt": "2026-06-05 22:42:56",
-  "startedAt": "2026-06-05 22:42:54",
+  "version": "V297_SUPPLY_FLOW_COMPAT_FIX",
+  "updatedAt": "2026-06-05 23:11:50",
+  "startedAt": "2026-06-05 23:11:37",
   "baseDate": "20260605",
   "candidateCount": 24,
   "outputRows": 24,
   "okCount": 0,
-  "zeroCount": 24,
+  "zeroCount": 0,
+  "failCount": 24,
   "nonZeroRows": 0,
   "output": "supply_flow_input.csv",
   "detailsTop20": [
     {
       "code": "005930",
       "name": "삼성전자",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "005930",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "005930",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "005930",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "005380",
       "name": "현대차",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "005380",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "005380",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "005380",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "105560",
       "name": "KB금융",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "105560",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "105560",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "105560",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "035420",
       "name": "NAVER",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "035420",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "035420",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "035420",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "000660",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "000660",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "000660",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "039030",
       "name": "이오테크닉스",
-      "market": "KOSDAQ",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "039030",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "039030",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "039030",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "373220",
       "name": "LG에너지솔루션",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "373220",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "373220",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "373220",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "000270",
       "name": "기아",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "000270",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "000270",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "000270",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "010120",
       "name": "LS ELECTRIC",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "010120",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "010120",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "010120",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "207940",
       "name": "삼성바이오로직스",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "207940",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "207940",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "207940",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "005490",
       "name": "POSCO홀딩스",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "005490",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "005490",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "005490",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "079550",
       "name": "LIG넥스원",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "079550",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "079550",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "079550",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "034020",
       "name": "두산에너빌리티",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "034020",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "034020",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "034020",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "267260",
       "name": "HD현대일렉트릭",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "267260",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "267260",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "267260",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "247540",
       "name": "에코프로비엠",
-      "market": "KOSDAQ",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "247540",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "247540",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "247540",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "277810",
       "name": "레인보우로보틱스",
-      "market": "KOSDAQ",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "277810",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "277810",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "277810",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "068270",
       "name": "셀트리온",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "068270",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "068270",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "068270",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "042660",
       "name": "한화오션",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "042660",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "042660",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "042660",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "012450",
       "name": "한화에어로스페이스",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "012450",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "012450",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "012450",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     },
     {
       "code": "272210",
       "name": "한화시스템",
-      "market": "KOSPI",
-      "status": "zero",
+      "periodDebug": [
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260511",
+          "end": "20260605",
+          "code": "272210",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 5
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260406",
+          "end": "20260605",
+          "code": "272210",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 20
+        },
+        {
+          "method": "get_market_trading_value_by_date",
+          "start": "20260104",
+          "end": "20260605",
+          "code": "272210",
+          "attempt": "plain",
+          "status": "empty",
+          "rowCount": 0,
+          "columns": [],
+          "period": 60
+        }
+      ],
+      "status": "fail",
       "nonZeroFields": 0,
-      "memo": "수급 데이터 없음 또는 조회값 0"
-    }
-  ],
-  "debugTop20": [
-    {
-      "market": "KOSPI",
-      "actor": "foreign",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "pension",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "trust",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "finance",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "foreign",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "pension",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "trust",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "finance",
-      "period": 5,
-      "start": "20260518",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "foreign",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "pension",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "trust",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "finance",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "foreign",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "pension",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "trust",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSDAQ",
-      "actor": "finance",
-      "period": 20,
-      "start": "20260413",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "foreign",
-      "period": 60,
-      "start": "20260111",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "pension",
-      "period": 60,
-      "start": "20260111",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "trust",
-      "period": 60,
-      "start": "20260111",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
-    },
-    {
-      "market": "KOSPI",
-      "actor": "finance",
-      "period": 60,
-      "start": "20260111",
-      "end": "20260605",
-      "status": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'",
-      "usedInvestor": "",
-      "netColumn": null,
-      "rowCount": 0,
-      "columns": []
+      "columns": [],
+      "memo": "수급 조회 실패: empty",
+      "foreign20D": "0",
+      "pension20D": "0",
+      "trust20D": "0",
+      "finance20D": "0"
     }
   ]
 }

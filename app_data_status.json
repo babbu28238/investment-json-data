@@ -1,6 +1,6 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-05 22:43:35",
+  "updatedAt": "2026-06-05 23:12:25",
   "candidateCount": 24,
   "message": "V284 최종 추천 점수 엔진 반영 완료",
   "supplyMatched": 24,
@@ -12,25 +12,25 @@
   "aGradeCount": 0,
   "recommendationSummary": {
     "actionCounts": {
-      "관찰": 3,
-      "제외검토": 21
+      "관찰": 2,
+      "제외검토": 22
     },
     "gradeCounts": {
-      "C": 3,
-      "D": 21
+      "C": 2,
+      "D": 22
     },
     "topCandidates": [
       {
         "rank": 1,
-        "name": "KB금융",
-        "code": "105560",
-        "score": 63,
+        "name": "현대차",
+        "code": "005380",
+        "score": 61,
         "grade": "C",
         "action": "관찰",
         "breakdown": {
-          "technicalScore": 70,
+          "technicalScore": 66,
           "supplyScore": 50,
-          "newsScore": 93,
+          "newsScore": 90,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -47,13 +47,13 @@
         "rank": 2,
         "name": "NAVER",
         "code": "035420",
-        "score": 62,
+        "score": 61,
         "grade": "C",
         "action": "관찰",
         "breakdown": {
-          "technicalScore": 69,
+          "technicalScore": 65,
           "supplyScore": 50,
-          "newsScore": 88,
+          "newsScore": 90,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -68,15 +68,15 @@
       },
       {
         "rank": 3,
-        "name": "현대차",
-        "code": "005380",
-        "score": 61,
-        "grade": "C",
-        "action": "관찰",
+        "name": "KB금융",
+        "code": "105560",
+        "score": 59,
+        "grade": "D",
+        "action": "제외검토",
         "breakdown": {
-          "technicalScore": 70,
+          "technicalScore": 65,
           "supplyScore": 50,
-          "newsScore": 83,
+          "newsScore": 79,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -93,11 +93,11 @@
         "rank": 4,
         "name": "LG에너지솔루션",
         "code": "373220",
-        "score": 59,
+        "score": 57,
         "grade": "D",
         "action": "제외검토",
         "breakdown": {
-          "technicalScore": 55,
+          "technicalScore": 51,
           "supplyScore": 50,
           "newsScore": 100,
           "reportScore": 50,
@@ -116,11 +116,11 @@
         "rank": 5,
         "name": "삼성전자",
         "code": "005930",
-        "score": 57,
+        "score": 56,
         "grade": "D",
         "action": "제외검토",
         "breakdown": {
-          "technicalScore": 70,
+          "technicalScore": 66,
           "supplyScore": 50,
           "newsScore": 53,
           "reportScore": 50,
