@@ -1,15 +1,9 @@
-name: Update Market Candidates V297 Scanner
+name: Update Market Candidates V298 Scanner
 
 on:
   workflow_dispatch:
   schedule:
-    # KST 09:10, 10:00, 11:00, 13:00, 14:00, 15:10
-    - cron: '10 0 * * 1-5'
-    - cron: '0 1 * * 1-5'
-    - cron: '0 2 * * 1-5'
-    - cron: '0 4 * * 1-5'
-    - cron: '0 5 * * 1-5'
-    - cron: '10 6 * * 1-5'
+    - cron: '10 0,1,2,4,5,6 * * 1-5'
 
 permissions:
   contents: write
@@ -29,99 +23,60 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy pykrx requests beautifulsoup4 lxml feedparser
+          pip install pandas numpy pykrx beautifulsoup4 lxml requests feedparser
 
       - name: Generate market candidates input
         run: python scripts/generate_stock_candidates.py
 
       - name: Update news signals
         run: python scripts/update_news_signals.py
-        continue-on-error: true
 
       - name: Update report signals
         run: python scripts/update_report_signals.py
-        continue-on-error: true
 
-      - name: Update supply flow V297 compat
+      - name: Update supply flow with Naver engine
         run: python scripts/update_supply_flow.py
-        continue-on-error: true
 
-      - name: Build stock candidates json
+      - name: Update stock candidates mapper
         run: python scripts/update_stock_candidates_v224_mapper.py
 
       - name: Update live quotes
         run: python scripts/update_live_quotes.py
-        continue-on-error: true
 
       - name: Merge real data
         run: python scripts/merge_real_data_v252.py
-        continue-on-error: true
 
       - name: Update recommendation scores
         run: python scripts/update_recommendation_scores.py
-        continue-on-error: true
-
-      - name: Finalize stock candidates
-        run: python scripts/finalize_stock_candidates.py
-        continue-on-error: true
 
       - name: Build pipeline health
         run: python scripts/build_pipeline_health.py
-        continue-on-error: true
 
       - name: Build app operation status
         run: python scripts/build_app_operation_status.py
-        continue-on-error: true
 
       - name: Build app data bundle
         run: python scripts/build_app_data_bundle.py
-        continue-on-error: true
 
       - name: Validate app data bundle
         run: python scripts/validate_app_data_bundle.py
-        continue-on-error: true
 
       - name: Audit signal reflection
         run: python scripts/audit_signal_reflection.py
-        continue-on-error: true
 
-      - name: Write intraday pipeline status
-        run: |
-          python - <<'PY'
-          import json
-          from datetime import datetime, timezone, timedelta
-          kst = timezone(timedelta(hours=9))
-          payload = {
-              "version": "V297_SUPPLY_FLOW_COMPAT_FIX",
-              "updatedAt": datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S"),
-              "status": "completed",
-              "message": "Market scanner pipeline completed with V297 supply compat fix"
-          }
-          open("intraday_pipeline_status.json", "w", encoding="utf-8").write(json.dumps(payload, ensure_ascii=False, indent=2))
-          PY
-
-      - name: Commit updated files
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add \
-            stock_candidates_input.csv \
-            stock_candidates.json \
-            live_quotes.json \
-            app_data_status.json \
-            news_signals.json news_signals_summary.json news_signals_log.txt \
-            report_signals.json report_signals_summary.json report_signals_log.txt \
-            supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt supply_flow_debug.json \
-            recommendation_summary.json recommendation_log.txt \
-            pipeline_health.json pipeline_health.txt \
-            app_operation_status.json app_operation_status.txt \
-            app_data_bundle.json app_data_bundle.txt \
-            app_data_bundle_validation.json app_data_bundle_validation.txt \
-            signal_reflection_audit.json signal_reflection_audit.txt \
-            intraday_pipeline_status.json \
-            v224_generation_summary.json v224_collection_errors.txt \
-            v252_real_data_merge_summary.json v252_real_data_merge_summary.txt \
-            v295_signal_reflection_fix.txt \
-            || true
-          git commit -m "Update market candidates V297 supply compat fix" || echo "No changes to commit"
+          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json || true
+          git add news_signals.json news_signals_summary.json news_signals_log.txt || true
+          git add report_signals.json report_signals_summary.json report_signals_log.txt report_hints.csv || true
+          git add supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt supply_flow_debug.json || true
+          git add recommendation_summary.json recommendation_log.txt || true
+          git add pipeline_health.json pipeline_health.txt intraday_pipeline_status.json || true
+          git add app_operation_status.json app_operation_status.txt app_data_bundle.json app_data_bundle.txt || true
+          git add app_data_bundle_validation.json app_data_bundle_validation.txt || true
+          git add signal_reflection_audit.json signal_reflection_audit.txt || true
+          git add v224_generation_summary.json v224_collection_errors.txt v252_real_data_merge_summary.json v252_real_data_merge_summary.txt || true
+          git diff --staged --quiet || git commit -m "Update market candidates with V298 naver supply engine"
           git push
