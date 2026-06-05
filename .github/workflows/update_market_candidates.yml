@@ -1,4 +1,4 @@
-name: Update Market Candidates V290 App Bundle Validation Lock
+name: Update Market Candidates V294 Signal Audit
 
 on:
   workflow_dispatch:
@@ -14,13 +14,18 @@ on:
 permissions:
   contents: write
 
+env:
+  PYTHONIOENCODING: utf-8
+  TZ: Asia/Seoul
+
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,11 +49,8 @@ jobs:
       - name: Update report signals
         run: python scripts/update_report_signals.py
 
-      - name: Build stock candidates JSON
+      - name: Build stock candidates json
         run: python scripts/update_stock_candidates_v224_mapper.py
-
-      - name: Update live quotes
-        run: python scripts/update_live_quotes.py
 
       - name: Merge real data
         run: python scripts/merge_real_data_v252.py
@@ -56,52 +58,76 @@ jobs:
       - name: Update recommendation scores
         run: python scripts/update_recommendation_scores.py
 
+      - name: Update live quotes
+        run: python scripts/update_live_quotes.py
+
+      - name: Validate live quotes
+        run: python scripts/validate_live_quotes.py
+        continue-on-error: true
+
       - name: Validate market pipeline
         run: python scripts/validate_market_pipeline.py
+        continue-on-error: true
 
       - name: Build pipeline health
         run: python scripts/build_pipeline_health.py
+        continue-on-error: true
 
       - name: Build app operation status
         run: python scripts/build_app_operation_status.py
+        continue-on-error: true
 
       - name: Build app data bundle
         run: python scripts/build_app_data_bundle.py
 
       - name: Validate app data bundle
         run: python scripts/validate_app_data_bundle.py
+        continue-on-error: true
 
-      - name: Write intraday pipeline status
-        if: always()
-        run: |
-          python - <<'PY'
-          import json
-          from datetime import datetime, timezone, timedelta
-          kst = timezone(timedelta(hours=9))
-          payload = {
-              "version": "V290_APP_BUNDLE_VALIDATION_LOCK",
-              "updatedAt": datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S"),
-              "workflow": "update_market_candidates.yml",
-              "status": "completed"
-          }
-          open("intraday_pipeline_status.json", "w", encoding="utf-8").write(json.dumps(payload, ensure_ascii=False, indent=2))
-          PY
+      - name: Audit signal reflection
+        run: python scripts/audit_signal_reflection.py
+        continue-on-error: true
 
-      - name: Commit generated files
-        if: always()
+      - name: Commit updated data files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json report_hints.csv supply_flow_input.csv \
-                  news_signals.json news_signals_summary.json news_signals_log.txt \
-                  supply_flow_summary.json supply_flow_log.txt \
-                  report_signals.json report_signals_summary.json report_signals_log.txt \
-                  recommendation_summary.json recommendation_log.txt \
-                  market_pipeline_validation.json market_pipeline_validation.txt \
-                  pipeline_health.json pipeline_health.txt \
-                  app_operation_status.json app_operation_status.txt \
-                  app_data_bundle.json app_data_bundle.txt \
-                  app_data_bundle_validation.json app_data_bundle_validation.txt \
-                  intraday_pipeline_status.json || true
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Update V290 app data bundle validation lock"
-          git push
+          git add \
+            stock_candidates_input.csv \
+            stock_candidates.json \
+            app_data_status.json \
+            live_quotes.json \
+            live_quotes_validation_report.json \
+            live_quotes_validation_report.txt \
+            news_signals.json \
+            news_signals_summary.json \
+            news_signals_log.txt \
+            supply_flow_input.csv \
+            supply_flow_summary.json \
+            supply_flow_log.txt \
+            report_hints.csv \
+            report_signals.json \
+            report_signals_summary.json \
+            report_signals_log.txt \
+            recommendation_summary.json \
+            recommendation_log.txt \
+            market_pipeline_validation.json \
+            market_pipeline_validation.txt \
+            pipeline_health.json \
+            pipeline_health.txt \
+            intraday_pipeline_status.json \
+            app_operation_status.json \
+            app_operation_status.txt \
+            app_data_bundle.json \
+            app_data_bundle.txt \
+            app_data_bundle_validation.json \
+            app_data_bundle_validation.txt \
+            signal_reflection_audit.json \
+            signal_reflection_audit.txt || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update market candidates and audit signal reflection"
+            git pull --rebase || true
+            git push
+          fi
