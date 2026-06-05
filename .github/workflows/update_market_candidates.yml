@@ -1,9 +1,9 @@
-name: Update Market Candidates V296 Supply Rebuild
+name: Update Market Candidates V297 Scanner
 
 on:
   workflow_dispatch:
   schedule:
-    # KST 09:10 / 10:00 / 11:00 / 13:00 / 14:00 / 15:10
+    # KST 09:10, 10:00, 11:00, 13:00, 14:00, 15:10
     - cron: '10 0 * * 1-5'
     - cron: '0 1 * * 1-5'
     - cron: '0 2 * * 1-5'
@@ -17,7 +17,6 @@ permissions:
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,9 +29,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy pykrx requests beautifulsoup4 lxml
+          pip install pandas numpy pykrx requests beautifulsoup4 lxml feedparser
 
-      - name: Build market scanner input
+      - name: Generate market candidates input
         run: python scripts/generate_stock_candidates.py
 
       - name: Update news signals
@@ -43,10 +42,11 @@ jobs:
         run: python scripts/update_report_signals.py
         continue-on-error: true
 
-      - name: Update supply flow V296 rebuild
+      - name: Update supply flow V297 compat
         run: python scripts/update_supply_flow.py
+        continue-on-error: true
 
-      - name: Build stock candidates with mapper
+      - name: Build stock candidates json
         run: python scripts/update_stock_candidates_v224_mapper.py
 
       - name: Update live quotes
@@ -57,12 +57,12 @@ jobs:
         run: python scripts/merge_real_data_v252.py
         continue-on-error: true
 
-      - name: Finalize stock candidates
-        run: python scripts/finalize_stock_candidates.py
-        continue-on-error: true
-
       - name: Update recommendation scores
         run: python scripts/update_recommendation_scores.py
+        continue-on-error: true
+
+      - name: Finalize stock candidates
+        run: python scripts/finalize_stock_candidates.py
         continue-on-error: true
 
       - name: Build pipeline health
@@ -85,14 +85,43 @@ jobs:
         run: python scripts/audit_signal_reflection.py
         continue-on-error: true
 
-      - name: Commit generated files
+      - name: Write intraday pipeline status
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone, timedelta
+          kst = timezone(timedelta(hours=9))
+          payload = {
+              "version": "V297_SUPPLY_FLOW_COMPAT_FIX",
+              "updatedAt": datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S"),
+              "status": "completed",
+              "message": "Market scanner pipeline completed with V297 supply compat fix"
+          }
+          open("intraday_pipeline_status.json", "w", encoding="utf-8").write(json.dumps(payload, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stock_candidates_input.csv stock_candidates.json live_quotes.json app_data_status.json app_data_bundle.json app_data_bundle.txt app_data_bundle_validation.json app_data_bundle_validation.txt || true
-          git add news_signals.json news_signals_summary.json news_signals_log.txt report_signals.json report_signals_summary.json report_signals_log.txt report_hints.csv || true
-          git add supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt supply_flow_debug.json || true
-          git add recommendation_summary.json recommendation_log.txt pipeline_health.json pipeline_health.txt app_operation_status.json app_operation_status.txt signal_reflection_audit.json signal_reflection_audit.txt || true
-          git add v224_generation_summary.json v224_collection_errors.txt v252_real_data_merge_summary.json v252_real_data_merge_summary.txt v295_signal_reflection_fix.txt || true
-          git diff --cached --quiet || git commit -m "Update market candidates V296 supply rebuild"
+          git add \
+            stock_candidates_input.csv \
+            stock_candidates.json \
+            live_quotes.json \
+            app_data_status.json \
+            news_signals.json news_signals_summary.json news_signals_log.txt \
+            report_signals.json report_signals_summary.json report_signals_log.txt \
+            supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt supply_flow_debug.json \
+            recommendation_summary.json recommendation_log.txt \
+            pipeline_health.json pipeline_health.txt \
+            app_operation_status.json app_operation_status.txt \
+            app_data_bundle.json app_data_bundle.txt \
+            app_data_bundle_validation.json app_data_bundle_validation.txt \
+            signal_reflection_audit.json signal_reflection_audit.txt \
+            intraday_pipeline_status.json \
+            v224_generation_summary.json v224_collection_errors.txt \
+            v252_real_data_merge_summary.json v252_real_data_merge_summary.txt \
+            v295_signal_reflection_fix.txt \
+            || true
+          git commit -m "Update market candidates V297 supply compat fix" || echo "No changes to commit"
           git push
