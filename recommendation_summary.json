@@ -1,7 +1,7 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-06 08:20:37",
-  "startedAt": "2026-06-06 08:20:37",
+  "updatedAt": "2026-06-06 08:53:10",
+  "startedAt": "2026-06-06 08:53:10",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
@@ -19,8 +19,8 @@
     "금융·밸류업": 1,
     "2차전지·소재": 4,
     "방산·우주항공": 4,
-    "반도체·AI": 4,
     "자동차·모빌리티": 2,
+    "반도체·AI": 4,
     "인터넷·게임·콘텐츠": 1,
     "원전·전력·에너지": 3,
     "바이오·제약": 3,
@@ -32,13 +32,13 @@
       "rank": 1,
       "name": "KB금융",
       "code": "105560",
-      "score": 69,
+      "score": 68,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
         "technicalScore": 69,
         "supplyScore": 74,
-        "newsScore": 93,
+        "newsScore": 88,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -78,13 +78,13 @@
       "rank": 3,
       "name": "LIG넥스원",
       "code": "079550",
-      "score": 61,
+      "score": 62,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
         "technicalScore": 43,
         "supplyScore": 79,
-        "newsScore": 97,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -122,6 +122,29 @@
     },
     {
       "rank": 5,
+      "name": "현대차",
+      "code": "005380",
+      "score": 57,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 64,
+        "supplyScore": 38,
+        "newsScore": 90,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "외국인·기관 수급 약화"
+      }
+    },
+    {
+      "rank": 6,
       "name": "이오테크닉스",
       "code": "039030",
       "score": 57,
@@ -141,29 +164,6 @@
           "liquidity": 10
         },
         "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 6,
-      "name": "현대차",
-      "code": "005380",
-      "score": 56,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 64,
-        "supplyScore": 38,
-        "newsScore": 83,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "외국인·기관 수급 약화"
       }
     },
     {
@@ -237,15 +237,15 @@
     },
     {
       "rank": 10,
-      "name": "삼성전자",
-      "code": "005930",
-      "score": 51,
+      "name": "알테오젠",
+      "code": "196170",
+      "score": 52,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 64,
-        "supplyScore": 38,
-        "newsScore": 46,
+        "technicalScore": 37,
+        "supplyScore": 60,
+        "newsScore": 81,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -255,7 +255,7 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "외국인·기관 수급 약화"
+        "supplyMemo": "수급 중립/혼조"
       }
     }
   ]
