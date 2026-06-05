@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-V282 SUPPLY FLOW ENGINE
+V296 SUPPLY FLOW ENGINE REBUILD
 
 목적:
-- stock_candidates_input.csv 또는 stock_candidates.json의 후보 종목을 기준으로
-  외국인/연기금/투신/금융투자 5D/20D/60D 수급 데이터를 자동 생성
+- V282의 종목별 투자자 수급 조회가 GitHub Actions에서 empty를 반환하는 문제를 우회
+- 종목별 조회 대신, pykrx의 '시장 전체 투자자별 순매수 테이블'을 기간/시장/투자자별로 수집한 뒤 후보 종목에 매핑
 - 기존 V224 mapper가 그대로 읽을 수 있는 supply_flow_input.csv 생성
-- 일부 종목/일자 수집 실패 시에도 전체 액션 실패를 막고 진단 파일 생성
 
 출력:
 - supply_flow_input.csv
 - supply_flow_summary.json
 - supply_flow_log.txt
+- supply_flow_debug.json
 
-주의:
-- pykrx의 투자자별 수급 컬럼명은 시점/시장/버전에 따라 달라질 수 있어
-  컬럼명을 유연하게 탐색한다.
+핵심 변경:
+- 기존: get_market_trading_value_by_date(start, end, code, detail=True)  # 종목별, empty 발생
+- 변경: get_market_trading_value_by_ticker(start, end, market=..., investor=...)  # 시장 전체, 코드 매핑
 """
 
 from __future__ import annotations
@@ -40,10 +40,18 @@ CANDIDATES_JSON = ROOT / "stock_candidates.json"
 OUT_CSV = ROOT / "supply_flow_input.csv"
 OUT_SUMMARY = ROOT / "supply_flow_summary.json"
 OUT_LOG = ROOT / "supply_flow_log.txt"
+OUT_DEBUG = ROOT / "supply_flow_debug.json"
 
 PERIODS = [5, 20, 60]
-SLEEP_SECONDS = 0.08
-MAX_CANDIDATES = 80  # 최종 후보/후보풀 전체가 너무 커도 수급 조회는 상위 80개까지만 우선 반영
+INVESTORS = {
+    "foreign": ["외국인", "외국인합계"],
+    "pension": ["연기금", "연기금등"],
+    "trust": ["투신", "투자신탁"],
+    "finance": ["금융투자"],
+}
+MARKETS = ["KOSPI", "KOSDAQ"]
+SLEEP_SECONDS = 0.05
+MAX_CANDIDATES = 120
 
 
 def now_kst() -> str:
@@ -90,7 +98,7 @@ def read_json_candidates(path: Path) -> List[Dict[str, Any]]:
     if isinstance(data, list):
         return [x for x in data if isinstance(x, dict)]
     if isinstance(data, dict):
-        for key in ["candidates", "items", "data", "results", "stocks", "rows"]:
+        for key in ["candidates", "items", "data", "results", "stocks", "rows", "stockCandidates"]:
             value = data.get(key)
             if isinstance(value, list):
                 return [x for x in value if isinstance(x, dict)]
@@ -116,9 +124,10 @@ def load_candidates() -> List[Dict[str, str]]:
     for row in rows:
         code = normalize_code(first(row, ["code", "stockCode", "stock_code", "종목코드", "단축코드", "ticker", "symbol"]))
         name = first(row, ["name", "stockName", "stock_name", "종목명", "displayName"], code)
+        market = first(row, ["market", "시장"], "")
         if code and code not in seen:
             seen.add(code)
-            out.append({"code": code, "name": name or code, "source": source})
+            out.append({"code": code, "name": name or code, "market": market, "source": source})
     return out[:MAX_CANDIDATES]
 
 
@@ -135,137 +144,156 @@ def recent_market_date(code: str = "005930", max_back_days: int = 20) -> str:
     return ymd(today)
 
 
-def trading_days_until(base_date: str, count: int) -> Tuple[str, str]:
+def trading_window(base_date: str, trading_days: int) -> Tuple[str, str]:
     end = datetime.strptime(base_date, "%Y%m%d")
-    # 달력일 여유를 넉넉히 둔다. 휴장/주말 포함.
-    start = end - timedelta(days=max(20, int(count * 2.2) + 10))
+    # 휴장일/주말 포함 여유분
+    start = end - timedelta(days=max(10, int(trading_days * 2.3) + 7))
     return ymd(start), base_date
 
 
-def normalize_col(name: Any) -> str:
-    s = str(name or "").lower()
-    s = re.sub(r"[\s_\-./()\[\]{}]+", "", s)
-    aliases = {
-        "외국인합계": "foreign",
-        "외국인": "foreign",
-        "foreign": "foreign",
-        "foreigner": "foreign",
-        "연기금등": "pension",
-        "연기금": "pension",
-        "pension": "pension",
-        "투신": "trust",
-        "투자신탁": "trust",
-        "trust": "trust",
-        "금융투자": "finance",
-        "금투": "finance",
-        "finance": "finance",
-    }
-    for k, v in aliases.items():
-        if k in s:
-            return v
-    return s
+def detect_market_map(base_date: str) -> Dict[str, str]:
+    mapping: Dict[str, str] = {}
+    for market in MARKETS:
+        try:
+            tickers = stock.get_market_ticker_list(base_date, market=market)
+            for code in tickers:
+                mapping[normalize_code(code)] = market
+        except Exception:
+            continue
+    return mapping
 
 
 def safe_number(value: Any) -> float:
     try:
         if value is None or pd.isna(value):
             return 0.0
-        return float(str(value).replace(",", ""))
+        return float(str(value).replace(",", "").replace("+", ""))
     except Exception:
         return 0.0
 
 
-def sum_actor(df: pd.DataFrame, actor: str, last_n: int) -> float:
+def pick_net_column(df: pd.DataFrame) -> Optional[str]:
     if df is None or df.empty:
-        return 0.0
-
-    col_map = {normalize_col(c): c for c in df.columns}
-    col = col_map.get(actor)
-    if col is None:
-        # 부분 매칭 백업
-        for norm, raw in col_map.items():
-            if actor in norm:
-                col = raw
-                break
-    if col is None:
-        return 0.0
-
-    series = df[col].tail(last_n).apply(safe_number)
-    return float(series.sum())
-
-
-def fetch_trading_value_by_investor(code: str, base_date: str) -> Tuple[Optional[pd.DataFrame], str]:
-    start, end = trading_days_until(base_date, 60)
-
-    attempts = []
-    # pykrx 버전별 시그니처 차이를 고려한다.
-    attempts.append(lambda: stock.get_market_trading_value_by_date(start, end, code, detail=True))
-    attempts.append(lambda: stock.get_market_trading_value_by_date(start, end, code))
-
-    last_error = ""
-    for fn in attempts:
+        return None
+    columns = [str(c) for c in df.columns]
+    priority = ["순매수", "순매수거래대금", "순매수금액", "순매수대금", "순매수거래량"]
+    for p in priority:
+        for c in columns:
+            if p == c or p in c:
+                return c
+    # pykrx가 컬럼 하나만 주는 경우도 있어 백업
+    numeric_cols = []
+    for c in columns:
         try:
-            df = fn()
-            if df is not None and not df.empty:
-                return df, "ok"
-        except Exception as e:
-            last_error = str(e)[:160]
-    return None, last_error or "empty"
+            pd.to_numeric(df[c].astype(str).str.replace(",", ""), errors="coerce")
+            numeric_cols.append(c)
+        except Exception:
+            pass
+    return numeric_cols[-1] if numeric_cols else None
+
+
+def fetch_market_investor_table(start: str, end: str, market: str, investor_aliases: List[str]) -> Tuple[Optional[pd.DataFrame], str, str]:
+    last_error = ""
+    for investor in investor_aliases:
+        attempts = [
+            lambda investor=investor: stock.get_market_trading_value_by_ticker(start, end, market=market, investor=investor),
+            lambda investor=investor: stock.get_market_trading_value_by_ticker(start, end, market, investor),
+        ]
+        for fn in attempts:
+            try:
+                df = fn()
+                if df is not None and not df.empty:
+                    df = df.copy()
+                    df.index = [normalize_code(x) for x in df.index]
+                    return df, "ok", investor
+            except Exception as e:
+                last_error = str(e)[:160]
+    return None, last_error or "empty", ""
+
+
+def build_supply_maps(base_date: str, logs: List[str]) -> Tuple[Dict[Tuple[str, str, int], Dict[str, float]], List[Dict[str, Any]]]:
+    maps: Dict[Tuple[str, str, int], Dict[str, float]] = {}
+    debug: List[Dict[str, Any]] = []
+
+    for period in PERIODS:
+        start, end = trading_window(base_date, period)
+        for market in MARKETS:
+            for actor, aliases in INVESTORS.items():
+                df, status, used_investor = fetch_market_investor_table(start, end, market, aliases)
+                net_col = pick_net_column(df) if df is not None else None
+                values: Dict[str, float] = {}
+                if df is not None and not df.empty and net_col:
+                    for code, row in df.iterrows():
+                        values[normalize_code(code)] = safe_number(row.get(net_col))
+                    status_text = f"ok rows={len(values)} col={net_col} investor={used_investor}"
+                else:
+                    status_text = f"fail status={status} investor={used_investor or aliases[0]}"
+
+                maps[(market, actor, period)] = values
+                logs.append(f"[{market} {actor} {period}D] {status_text}")
+                debug.append({
+                    "market": market,
+                    "actor": actor,
+                    "period": period,
+                    "start": start,
+                    "end": end,
+                    "status": status,
+                    "usedInvestor": used_investor,
+                    "netColumn": net_col,
+                    "rowCount": len(values),
+                    "columns": [str(c) for c in df.columns] if df is not None else [],
+                })
+                time.sleep(SLEEP_SECONDS)
+    return maps, debug
 
 
 def format_amount(value: float) -> str:
-    # 기존 mapper는 문자열/숫자 모두 처리 가능. 백만원 단위로 축약하면 가독성이 좋다.
+    # 원 단위 순매수 금액을 백만원 단위로 축약. 기존 mapper는 문자열 숫자를 처리함.
     million = int(round(value / 1_000_000))
     return str(million)
 
 
-def build_supply_row(candidate: Dict[str, str], base_date: str) -> Tuple[Dict[str, str], Dict[str, Any]]:
+def build_row(candidate: Dict[str, str], market_map: Dict[str, str], supply_maps: Dict[Tuple[str, str, int], Dict[str, float]]) -> Tuple[Dict[str, str], Dict[str, Any]]:
     code = candidate["code"]
     name = candidate["name"]
-    df, status = fetch_trading_value_by_investor(code, base_date)
+    market = candidate.get("market") or market_map.get(code, "")
+    if market not in MARKETS:
+        market = market_map.get(code, "KOSPI")
 
     row: Dict[str, str] = {"code": code, "name": name}
-    detail: Dict[str, Any] = {"code": code, "name": name, "status": status}
+    non_zero = 0
+    actor20: Dict[str, float] = {}
 
-    actors = {
-        "foreign": "foreign",
-        "pension": "pension",
-        "trust": "trust",
-        "finance": "finance",
-    }
+    for actor in INVESTORS.keys():
+        for period in PERIODS:
+            value = supply_maps.get((market, actor, period), {}).get(code, 0.0)
+            row[f"{actor}{period}D"] = format_amount(value)
+            if abs(value) > 0:
+                non_zero += 1
+            if period == 20:
+                actor20[actor] = value
 
-    if df is None or df.empty:
-        for actor in actors:
-            for p in PERIODS:
-                row[f"{actor}{p}D"] = "-"
-        row["supplyMemo"] = f"수급 조회 실패: {status}"
-        detail["message"] = status
-        return row, detail
+    positive20 = sum(1 for v in actor20.values() if v > 0)
+    total20 = sum(actor20.values())
 
-    for actor in actors:
-        for p in PERIODS:
-            value = sum_actor(df, actor, p)
-            row[f"{actor}{p}D"] = format_amount(value)
-
-    foreign20 = float(row.get("foreign20D", "0").replace(",", "")) if row.get("foreign20D", "-") != "-" else 0
-    pension20 = float(row.get("pension20D", "0").replace(",", "")) if row.get("pension20D", "-") != "-" else 0
-    trust20 = float(row.get("trust20D", "0").replace(",", "")) if row.get("trust20D", "-") != "-" else 0
-    finance20 = float(row.get("finance20D", "0").replace(",", "")) if row.get("finance20D", "-") != "-" else 0
-    positive_count = sum(1 for x in [foreign20, pension20, trust20, finance20] if x > 0)
-
-    if positive_count >= 3:
+    if non_zero == 0:
+        memo = "수급 데이터 없음 또는 조회값 0"
+        status = "zero"
+    elif positive20 >= 3:
         memo = "외국인·기관 주요 주체 20일 수급 동반 개선"
-    elif foreign20 > 0 and (pension20 + trust20 + finance20) > 0:
+        status = "ok"
+    elif actor20.get("foreign", 0) > 0 and total20 > 0:
         memo = "외국인 및 기관 수급 우위"
-    elif foreign20 < 0 and (pension20 + trust20 + finance20) < 0:
+        status = "ok"
+    elif actor20.get("foreign", 0) < 0 and total20 < 0:
         memo = "외국인·기관 수급 동반 약화"
+        status = "ok"
     else:
         memo = "수급 중립 또는 혼조"
+        status = "ok"
 
     row["supplyMemo"] = memo
-    detail["rows"] = len(df)
-    detail["columns"] = [str(c) for c in df.columns]
-    detail["memo"] = memo
+    detail = {"code": code, "name": name, "market": market, "status": status, "nonZeroFields": non_zero, "memo": memo}
     return row, detail
 
 
@@ -273,20 +301,22 @@ def main() -> None:
     started = now_kst()
     base_date = recent_market_date()
     candidates = load_candidates()
-
     logs: List[str] = []
-    details: List[Dict[str, Any]] = []
-    rows: List[Dict[str, str]] = []
-
-    logs.append(f"V282 SUPPLY FLOW ENGINE startedAt={started} baseDate={base_date}")
+    logs.append(f"V296 SUPPLY FLOW ENGINE REBUILD startedAt={started} baseDate={base_date}")
     logs.append(f"candidateCount={len(candidates)} maxCandidates={MAX_CANDIDATES}")
 
-    for idx, candidate in enumerate(candidates, start=1):
-        row, detail = build_supply_row(candidate, base_date)
+    market_map = detect_market_map(base_date)
+    logs.append(f"marketMapCount={len(market_map)}")
+
+    supply_maps, debug = build_supply_maps(base_date, logs)
+
+    rows: List[Dict[str, str]] = []
+    details: List[Dict[str, Any]] = []
+    for candidate in candidates:
+        row, detail = build_row(candidate, market_map, supply_maps)
         rows.append(row)
         details.append(detail)
-        logs.append(f"[{idx}/{len(candidates)}] {candidate['code']} {candidate['name']} {detail.get('status')} {row.get('supplyMemo')}")
-        time.sleep(SLEEP_SECONDS)
+        logs.append(f"{detail['code']} {detail['name']} {detail['market']} {detail['status']} nonZero={detail['nonZeroFields']} {detail['memo']}")
 
     fieldnames = [
         "code", "name",
@@ -296,30 +326,33 @@ def main() -> None:
         "finance5D", "finance20D", "finance60D",
         "supplyMemo",
     ]
-
     with OUT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
+        writer.writerows(rows)
 
     ok_count = sum(1 for d in details if d.get("status") == "ok")
+    zero_count = sum(1 for d in details if d.get("status") == "zero")
+    non_zero_rows = sum(1 for d in details if d.get("nonZeroFields", 0) > 0)
+
     summary = {
-        "version": "V282_SUPPLY_FLOW_ENGINE",
+        "version": "V296_SUPPLY_FLOW_ENGINE_REBUILD",
         "updatedAt": now_kst(),
         "startedAt": started,
         "baseDate": base_date,
         "candidateCount": len(candidates),
         "outputRows": len(rows),
         "okCount": ok_count,
-        "failCount": len(rows) - ok_count,
+        "zeroCount": zero_count,
+        "nonZeroRows": non_zero_rows,
         "output": OUT_CSV.name,
         "detailsTop20": details[:20],
+        "debugTop20": debug[:20],
     }
 
     OUT_SUMMARY.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT_DEBUG.write_text(json.dumps({"debug": debug, "details": details}, ensure_ascii=False, indent=2), encoding="utf-8")
     OUT_LOG.write_text("\n".join(logs), encoding="utf-8")
-
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
