@@ -1,27 +1,26 @@
-V297 SUPPLY FLOW COMPAT FIX startedAt=2026-06-05 23:11:37 baseDate=20260605
-candidateCount=24 maxCandidates=80
-pykrx get_market_trading_value_by_date signature=(fromdate: str, todate: str, ticker: str, etf: bool = False, etn: bool = False, elw: bool = False, on: str = '순매수', detail: bool = False, freq: str = 'd') -> pandas.core.frame.DataFrame
-[1/24] 005930 삼성전자 fail nz=0 수급 조회 실패: empty
-[2/24] 005380 현대차 fail nz=0 수급 조회 실패: empty
-[3/24] 105560 KB금융 fail nz=0 수급 조회 실패: empty
-[4/24] 035420 NAVER fail nz=0 수급 조회 실패: empty
-[5/24] 000660 SK하이닉스 fail nz=0 수급 조회 실패: empty
-[6/24] 039030 이오테크닉스 fail nz=0 수급 조회 실패: empty
-[7/24] 373220 LG에너지솔루션 fail nz=0 수급 조회 실패: empty
-[8/24] 000270 기아 fail nz=0 수급 조회 실패: empty
-[9/24] 010120 LS ELECTRIC fail nz=0 수급 조회 실패: empty
-[10/24] 207940 삼성바이오로직스 fail nz=0 수급 조회 실패: empty
-[11/24] 005490 POSCO홀딩스 fail nz=0 수급 조회 실패: empty
-[12/24] 079550 LIG넥스원 fail nz=0 수급 조회 실패: empty
-[13/24] 034020 두산에너빌리티 fail nz=0 수급 조회 실패: empty
-[14/24] 267260 HD현대일렉트릭 fail nz=0 수급 조회 실패: empty
-[15/24] 247540 에코프로비엠 fail nz=0 수급 조회 실패: empty
-[16/24] 277810 레인보우로보틱스 fail nz=0 수급 조회 실패: empty
-[17/24] 068270 셀트리온 fail nz=0 수급 조회 실패: empty
-[18/24] 042660 한화오션 fail nz=0 수급 조회 실패: empty
-[19/24] 012450 한화에어로스페이스 fail nz=0 수급 조회 실패: empty
-[20/24] 272210 한화시스템 fail nz=0 수급 조회 실패: empty
-[21/24] 047810 한국항공우주 fail nz=0 수급 조회 실패: empty
-[22/24] 086520 에코프로 fail nz=0 수급 조회 실패: empty
-[23/24] 196170 알테오젠 fail nz=0 수급 조회 실패: empty
-[24/24] 058470 리노공업 fail nz=0 수급 조회 실패: empty
+V298 NAVER SUPPLY FLOW ENGINE startedAt=2026-06-05 23:24:07
+candidateCount=24
+[1/24] 005930 삼성전자 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[2/24] 005380 현대차 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[3/24] 105560 KB금융 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)
+[4/24] 035420 NAVER ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[5/24] 000660 SK하이닉스 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[6/24] 039030 이오테크닉스 ok rows=160 nonZero=6 외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)
+[7/24] 373220 LG에너지솔루션 ok rows=160 nonZero=6 외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)
+[8/24] 000270 기아 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[9/24] 010120 LS ELECTRIC ok rows=160 nonZero=6 외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)
+[10/24] 207940 삼성바이오로직스 ok rows=160 nonZero=6 외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)
+[11/24] 005490 POSCO홀딩스 ok rows=160 nonZero=6 외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)
+[12/24] 079550 LIG넥스원 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)
+[13/24] 034020 두산에너빌리티 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)
+[14/24] 267260 HD현대일렉트릭 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)
+[15/24] 247540 에코프로비엠 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)
+[16/24] 277810 레인보우로보틱스 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)
+[17/24] 068270 셀트리온 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)
+[18/24] 042660 한화오션 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[19/24] 012450 한화에어로스페이스 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)
+[20/24] 272210 한화시스템 ok rows=160 nonZero=6 외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)
+[21/24] 047810 한국항공우주 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[22/24] 086520 에코프로 ok rows=160 nonZero=6 외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)
+[23/24] 196170 알테오젠 ok rows=160 nonZero=6 기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)
+[24/24] 058470 리노공업 ok rows=160 nonZero=6 외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)

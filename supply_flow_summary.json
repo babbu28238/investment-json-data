@@ -1,955 +1,1155 @@
 {
-  "version": "V297_SUPPLY_FLOW_COMPAT_FIX",
-  "updatedAt": "2026-06-05 23:11:50",
-  "startedAt": "2026-06-05 23:11:37",
-  "baseDate": "20260605",
+  "version": "V298_NAVER_SUPPLY_FLOW_ENGINE",
+  "updatedAt": "2026-06-05 23:28:50",
+  "startedAt": "2026-06-05 23:24:07",
   "candidateCount": 24,
   "outputRows": 24,
-  "okCount": 0,
+  "okCount": 24,
   "zeroCount": 0,
-  "failCount": 24,
-  "nonZeroRows": 0,
+  "failCount": 0,
+  "nonZeroRows": 24,
+  "source": "naver_finance_frgn_page",
   "output": "supply_flow_input.csv",
   "detailsTop20": [
     {
       "code": "005930",
       "name": "삼성전자",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-101237096",
+      "finance20D": "28380898",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "005930",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "005930",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "005930",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 329000,
+          "foreign": -4240844,
+          "institution": -1446498
+        },
+        {
+          "date": "26.06.04",
+          "close": 351500,
+          "foreign": -12414744,
+          "institution": 3253812
+        },
+        {
+          "date": "26.06.02",
+          "close": 360500,
+          "foreign": -11016912,
+          "institution": 3088203
+        }
+      ]
     },
     {
       "code": "005380",
       "name": "현대차",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-2883751",
+      "finance20D": "873498",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "005380",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "005380",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "005380",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 700000,
+          "foreign": -175156,
+          "institution": -56193
+        },
+        {
+          "date": "26.06.04",
+          "close": 700000,
+          "foreign": -155017,
+          "institution": -36816
+        },
+        {
+          "date": "26.06.02",
+          "close": 729000,
+          "foreign": -176236,
+          "institution": -155696
+        }
+      ]
     },
     {
       "code": "105560",
       "name": "KB금융",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "663705",
+      "finance20D": "70111",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "105560",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "105560",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "105560",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 171600,
+          "foreign": 129367,
+          "institution": -991
+        },
+        {
+          "date": "26.06.04",
+          "close": 164200,
+          "foreign": 312802,
+          "institution": 16997
+        },
+        {
+          "date": "26.06.02",
+          "close": 156600,
+          "foreign": 56539,
+          "institution": 41486
+        }
+      ]
     },
     {
       "code": "035420",
       "name": "NAVER",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-3867491",
+      "finance20D": "1836298",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "035420",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "035420",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "035420",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 255500,
+          "foreign": -147900,
+          "institution": 135906
+        },
+        {
+          "date": "26.06.04",
+          "close": 267500,
+          "foreign": -480144,
+          "institution": 119070
+        },
+        {
+          "date": "26.06.02",
+          "close": 280500,
+          "foreign": -1517727,
+          "institution": 115597
+        }
+      ]
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-14243799",
+      "finance20D": "2583181",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "000660",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "000660",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "000660",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 2070000,
+          "foreign": -606860,
+          "institution": -411774
+        },
+        {
+          "date": "26.06.04",
+          "close": 2298000,
+          "foreign": -316443,
+          "institution": 114049
+        },
+        {
+          "date": "26.06.02",
+          "close": 2360000,
+          "foreign": -416517,
+          "institution": 90158
+        }
+      ]
     },
     {
       "code": "039030",
       "name": "이오테크닉스",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "317773",
+      "finance20D": "-193471",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "039030",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "039030",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "039030",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 478000,
+          "foreign": -17748,
+          "institution": 26983
+        },
+        {
+          "date": "26.06.04",
+          "close": 496000,
+          "foreign": 35613,
+          "institution": -27545
+        },
+        {
+          "date": "26.06.02",
+          "close": 432000,
+          "foreign": 17950,
+          "institution": -24374
+        }
+      ]
     },
     {
       "code": "373220",
       "name": "LG에너지솔루션",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "470323",
+      "finance20D": "-91406",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "373220",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "373220",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "373220",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 414000,
+          "foreign": 22875,
+          "institution": 22639
+        },
+        {
+          "date": "26.06.04",
+          "close": 422000,
+          "foreign": -69474,
+          "institution": 18854
+        },
+        {
+          "date": "26.06.02",
+          "close": 442500,
+          "foreign": 88259,
+          "institution": 66473
+        }
+      ]
     },
     {
       "code": "000270",
       "name": "기아",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-444225",
+      "finance20D": "791021",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "000270",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "000270",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "000270",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 161100,
+          "foreign": 22554,
+          "institution": -10476
+        },
+        {
+          "date": "26.06.04",
+          "close": 164300,
+          "foreign": -123215,
+          "institution": 103380
+        },
+        {
+          "date": "26.06.02",
+          "close": 168800,
+          "foreign": 104995,
+          "institution": -23985
+        }
+      ]
     },
     {
       "code": "010120",
       "name": "LS ELECTRIC",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-1333892",
+      "finance20D": "-1109513",
+      "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "010120",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "010120",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "010120",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 227000,
+          "foreign": 76846,
+          "institution": -72479
+        },
+        {
+          "date": "26.06.04",
+          "close": 239500,
+          "foreign": -48579,
+          "institution": -4964
+        },
+        {
+          "date": "26.06.02",
+          "close": 241500,
+          "foreign": -135238,
+          "institution": -101979
+        }
+      ]
     },
     {
       "code": "207940",
       "name": "삼성바이오로직스",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "12426",
+      "finance20D": "-115161",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "207940",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "207940",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "207940",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 1340000,
+          "foreign": -8320,
+          "institution": 4147
+        },
+        {
+          "date": "26.06.04",
+          "close": 1350000,
+          "foreign": 4626,
+          "institution": -2175
+        },
+        {
+          "date": "26.06.02",
+          "close": 1367000,
+          "foreign": 8118,
+          "institution": -3990
+        }
+      ]
     },
     {
       "code": "005490",
       "name": "POSCO홀딩스",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "459575",
+      "finance20D": "-533109",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "005490",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "005490",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "005490",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 390000,
+          "foreign": 56398,
+          "institution": -42215
+        },
+        {
+          "date": "26.06.04",
+          "close": 402000,
+          "foreign": 52673,
+          "institution": -27342
+        },
+        {
+          "date": "26.06.02",
+          "close": 399000,
+          "foreign": 34718,
+          "institution": -67623
+        }
+      ]
     },
     {
       "code": "079550",
       "name": "LIG넥스원",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "41992",
+      "finance20D": "134131",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "079550",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "079550",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "079550",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 726000,
+          "foreign": 20582,
+          "institution": 2262
+        },
+        {
+          "date": "26.06.04",
+          "close": 733000,
+          "foreign": -26306,
+          "institution": 17115
+        },
+        {
+          "date": "26.06.02",
+          "close": 726000,
+          "foreign": 3998,
+          "institution": 43457
+        }
+      ]
     },
     {
       "code": "034020",
       "name": "두산에너빌리티",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-6140683",
+      "finance20D": "-3210103",
+      "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "034020",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "034020",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "034020",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 95600,
+          "foreign": -50603,
+          "institution": -161456
+        },
+        {
+          "date": "26.06.04",
+          "close": 99200,
+          "foreign": -662542,
+          "institution": -65176
+        },
+        {
+          "date": "26.06.02",
+          "close": 100000,
+          "foreign": -1257287,
+          "institution": -404088
+        }
+      ]
     },
     {
       "code": "267260",
       "name": "HD현대일렉트릭",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-298080",
+      "finance20D": "-69146",
+      "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "267260",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "267260",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "267260",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 956000,
+          "foreign": 80,
+          "institution": -6069
+        },
+        {
+          "date": "26.06.04",
+          "close": 999000,
+          "foreign": 15142,
+          "institution": -15109
+        },
+        {
+          "date": "26.06.02",
+          "close": 995000,
+          "foreign": -8832,
+          "institution": -25148
+        }
+      ]
     },
     {
       "code": "247540",
       "name": "에코프로비엠",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-101151",
+      "finance20D": "-356273",
+      "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "247540",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "247540",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "247540",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 180100,
+          "foreign": -225473,
+          "institution": -105388
+        },
+        {
+          "date": "26.06.04",
+          "close": 197400,
+          "foreign": -133104,
+          "institution": 32279
+        },
+        {
+          "date": "26.06.02",
+          "close": 198000,
+          "foreign": -41992,
+          "institution": 173
+        }
+      ]
     },
     {
       "code": "277810",
       "name": "레인보우로보틱스",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "36021",
+      "finance20D": "81825",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "277810",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "277810",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "277810",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 668000,
+          "foreign": -960,
+          "institution": -9082
+        },
+        {
+          "date": "26.06.04",
+          "close": 714000,
+          "foreign": -8487,
+          "institution": -8232
+        },
+        {
+          "date": "26.06.02",
+          "close": 763000,
+          "foreign": -70595,
+          "institution": 24479
+        }
+      ]
     },
     {
       "code": "068270",
       "name": "셀트리온",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "589181",
+      "finance20D": "54283",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "068270",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "068270",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "068270",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 171400,
+          "foreign": -93305,
+          "institution": -39531
+        },
+        {
+          "date": "26.06.04",
+          "close": 176500,
+          "foreign": -118758,
+          "institution": 15431
+        },
+        {
+          "date": "26.06.02",
+          "close": 187900,
+          "foreign": -2497,
+          "institution": 4220
+        }
+      ]
     },
     {
       "code": "042660",
       "name": "한화오션",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-1621226",
+      "finance20D": "184703",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "042660",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "042660",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "042660",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 112200,
+          "foreign": -121231,
+          "institution": -40106
+        },
+        {
+          "date": "26.06.04",
+          "close": 115100,
+          "foreign": -420191,
+          "institution": -31504
+        },
+        {
+          "date": "26.06.02",
+          "close": 116000,
+          "foreign": -638120,
+          "institution": -39605
+        }
+      ]
     },
     {
       "code": "012450",
       "name": "한화에어로스페이스",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-90281",
+      "finance20D": "-175149",
+      "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "012450",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "012450",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "012450",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 1049000,
+          "foreign": 3833,
+          "institution": 1036
+        },
+        {
+          "date": "26.06.04",
+          "close": 1068000,
+          "foreign": -12184,
+          "institution": 7293
+        },
+        {
+          "date": "26.06.02",
+          "close": 1070000,
+          "foreign": 11616,
+          "institution": -34180
+        }
+      ]
     },
     {
       "code": "272210",
       "name": "한화시스템",
-      "periodDebug": [
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "1057086",
+      "finance20D": "-207875",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260511",
-          "end": "20260605",
-          "code": "272210",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 5
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260406",
-          "end": "20260605",
-          "code": "272210",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 20
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "method": "get_market_trading_value_by_date",
-          "start": "20260104",
-          "end": "20260605",
-          "code": "272210",
-          "attempt": "plain",
-          "status": "empty",
-          "rowCount": 0,
-          "columns": [],
-          "period": 60
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
         }
       ],
-      "status": "fail",
-      "nonZeroFields": 0,
-      "columns": [],
-      "memo": "수급 조회 실패: empty",
-      "foreign20D": "0",
-      "pension20D": "0",
-      "trust20D": "0",
-      "finance20D": "0"
+      "sampleRows": [
+        {
+          "date": "26.06.05",
+          "close": 94600,
+          "foreign": 140775,
+          "institution": -43240
+        },
+        {
+          "date": "26.06.04",
+          "close": 96100,
+          "foreign": 72091,
+          "institution": -25818
+        },
+        {
+          "date": "26.06.02",
+          "close": 97400,
+          "foreign": 203945,
+          "institution": -132008
+        }
+      ]
     }
   ]
 }
