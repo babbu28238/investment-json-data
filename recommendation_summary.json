@@ -1,24 +1,24 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-05 20:56:13",
-  "startedAt": "2026-06-05 20:56:13",
+  "updatedAt": "2026-06-05 21:25:37",
+  "startedAt": "2026-06-05 21:25:37",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 2,
-    "D": 22
+    "C": 3,
+    "D": 21
   },
   "actionCounts": {
-    "관찰": 2,
-    "제외검토": 22
+    "관찰": 3,
+    "제외검토": 21
   },
   "sectorCounts": {
+    "금융·밸류업": 1,
     "자동차·모빌리티": 2,
     "인터넷·게임·콘텐츠": 1,
-    "금융·밸류업": 1,
     "반도체·AI": 4,
     "2차전지·소재": 4,
     "원전·전력·에너지": 3,
@@ -30,15 +30,15 @@
   "topCandidates": [
     {
       "rank": 1,
-      "name": "현대차",
-      "code": "005380",
-      "score": 60,
+      "name": "KB금융",
+      "code": "105560",
+      "score": 62,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 66,
+        "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 83,
+        "newsScore": 95,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -53,15 +53,15 @@
     },
     {
       "rank": 2,
-      "name": "NAVER",
-      "code": "035420",
-      "score": 60,
+      "name": "현대차",
+      "code": "005380",
+      "score": 61,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 65,
+        "technicalScore": 66,
         "supplyScore": 50,
-        "newsScore": 85,
+        "newsScore": 90,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -76,15 +76,15 @@
     },
     {
       "rank": 3,
-      "name": "KB금융",
-      "code": "105560",
-      "score": 59,
-      "grade": "D",
-      "action": "제외검토",
+      "name": "NAVER",
+      "code": "035420",
+      "score": 60,
+      "grade": "C",
+      "action": "관찰",
       "breakdown": {
         "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 81,
+        "newsScore": 88,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -145,15 +145,15 @@
     },
     {
       "rank": 6,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 55,
+      "name": "삼성전자",
+      "code": "005930",
+      "score": 56,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 43,
+        "technicalScore": 66,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 53,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -168,15 +168,15 @@
     },
     {
       "rank": 7,
-      "name": "삼성전자",
-      "code": "005930",
-      "score": 54,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 55,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 66,
+        "technicalScore": 43,
         "supplyScore": 50,
-        "newsScore": 46,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {

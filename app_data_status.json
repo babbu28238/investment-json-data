@@ -1,6 +1,6 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-05 20:56:13",
+  "updatedAt": "2026-06-05 21:25:37",
   "candidateCount": 24,
   "message": "V284 최종 추천 점수 엔진 반영 완료",
   "supplyMatched": 24,
@@ -12,25 +12,25 @@
   "aGradeCount": 0,
   "recommendationSummary": {
     "actionCounts": {
-      "관찰": 2,
-      "제외검토": 22
+      "관찰": 3,
+      "제외검토": 21
     },
     "gradeCounts": {
-      "C": 2,
-      "D": 22
+      "C": 3,
+      "D": 21
     },
     "topCandidates": [
       {
         "rank": 1,
-        "name": "현대차",
-        "code": "005380",
-        "score": 60,
+        "name": "KB금융",
+        "code": "105560",
+        "score": 62,
         "grade": "C",
         "action": "관찰",
         "breakdown": {
-          "technicalScore": 66,
+          "technicalScore": 65,
           "supplyScore": 50,
-          "newsScore": 83,
+          "newsScore": 95,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -45,15 +45,15 @@
       },
       {
         "rank": 2,
-        "name": "NAVER",
-        "code": "035420",
-        "score": 60,
+        "name": "현대차",
+        "code": "005380",
+        "score": 61,
         "grade": "C",
         "action": "관찰",
         "breakdown": {
-          "technicalScore": 65,
+          "technicalScore": 66,
           "supplyScore": 50,
-          "newsScore": 85,
+          "newsScore": 90,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -68,15 +68,15 @@
       },
       {
         "rank": 3,
-        "name": "KB금융",
-        "code": "105560",
-        "score": 59,
-        "grade": "D",
-        "action": "제외검토",
+        "name": "NAVER",
+        "code": "035420",
+        "score": 60,
+        "grade": "C",
+        "action": "관찰",
         "breakdown": {
           "technicalScore": 65,
           "supplyScore": 50,
-          "newsScore": 81,
+          "newsScore": 88,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
