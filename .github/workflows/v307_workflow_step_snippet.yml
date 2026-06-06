@@ -1,0 +1,29 @@
+      - name: V307 reflect scanner candidates into app payload
+        run: |
+          set -e
+          if [ -f scripts/reflect_candidates_v307_app_reflect.py ]; then
+            python scripts/reflect_candidates_v307_app_reflect.py
+          else
+            echo "[FAIL] scripts/reflect_candidates_v307_app_reflect.py not found"
+            exit 1
+          fi
+
+      - name: V307 validate reflected candidate count
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows = json.loads(Path('stock_candidates.json').read_text(encoding='utf-8'))
+          if not isinstance(rows, list):
+              raise SystemExit('[FAIL] stock_candidates.json is not a list')
+          print(f'[OK] stock_candidates.json candidates={len(rows)}')
+          if len(rows) < 50:
+              raise SystemExit(f'[FAIL] expected at least 50 candidates after V307 reflect, got {len(rows)}')
+          b = Path('app_data_bundle.json')
+          if b.exists():
+              bundle = json.loads(b.read_text(encoding='utf-8'))
+              print(f"[OK] app_data_bundle candidateCount={bundle.get('candidateCount')}")
+              if int(bundle.get('candidateCount', 0)) < 50:
+                  raise SystemExit(f"[FAIL] bundle candidateCount too small: {bundle.get('candidateCount')}")
+          PY
