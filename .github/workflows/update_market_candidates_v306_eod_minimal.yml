@@ -74,14 +74,133 @@ jobs:
           print('[OK] V306 summary validation passed')
           PY
 
-      - name: Commit V306 scanner outputs
+      - name: Build stock candidates with mapper
+        run: |
+          if [ -f scripts/update_stock_candidates_v224_mapper.py ]; then
+            python scripts/update_stock_candidates_v224_mapper.py
+          elif [ -f scripts/update_stock_candidates.py ]; then
+            python scripts/update_stock_candidates.py
+          else
+            echo "skip mapper"
+          fi
+
+      - name: Update live quotes
+        run: |
+          if [ -f scripts/update_live_quotes.py ]; then
+            python scripts/update_live_quotes.py
+          else
+            echo "skip live quotes"
+          fi
+
+      - name: Merge real data if present
+        run: |
+          if [ -f scripts/merge_real_data_v252.py ]; then
+            python scripts/merge_real_data_v252.py
+          else
+            echo "skip merge"
+          fi
+
+      - name: Update recommendation scores
+        run: |
+          if [ -f scripts/update_recommendation_scores.py ]; then
+            python scripts/update_recommendation_scores.py
+          else
+            echo "skip recommendation scores"
+          fi
+
+      - name: Finalize live and recommendation metadata
+        run: |
+          if [ -f scripts/finalize_live_and_recommendation_metadata.py ]; then
+            python scripts/finalize_live_and_recommendation_metadata.py
+          else
+            echo "skip finalize metadata"
+          fi
+
+      - name: Build app data bundle if present
+        run: |
+          if [ -f scripts/build_app_data_bundle.py ]; then
+            python scripts/build_app_data_bundle.py
+          else
+            echo "skip app data bundle"
+          fi
+
+      - name: V307 reflect candidates to app files
+        run: |
+          set -e
+          test -f scripts/reflect_candidates_v307_app_reflect.py
+          python scripts/reflect_candidates_v307_app_reflect.py
+
+      - name: V307 postflight - block 24 candidate regression
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report_path = Path("v307_app_reflect_report.json")
+          stock_path = Path("stock_candidates.json")
+          bundle_path = Path("app_data_bundle.json")
+
+          if not report_path.exists():
+              raise SystemExit("[FAIL] v307_app_reflect_report.json not found")
+          if not stock_path.exists():
+              raise SystemExit("[FAIL] stock_candidates.json not found")
+          if not bundle_path.exists():
+              raise SystemExit("[FAIL] app_data_bundle.json not found")
+
+          report = json.loads(report_path.read_text(encoding="utf-8"))
+          candidates_raw = json.loads(stock_path.read_text(encoding="utf-8"))
+
+          if isinstance(candidates_raw, dict):
+              stock_count = len(candidates_raw.get("candidates", []))
+          else:
+              stock_count = len(candidates_raw)
+
+          bundle_text = bundle_path.read_text(encoding="utf-8")
+          bundle_count_ok = ("candidateCount: 24" not in bundle_text)
+
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          print(f"[CHECK] stock_candidates count={stock_count}")
+          print(f"[CHECK] app_data_bundle not 24={bundle_count_ok}")
+
+          if stock_count < 50:
+              raise SystemExit(f"[FAIL] stock_candidates.json still too small: {stock_count}")
+
+          final_count = int(report.get("finalCandidateCount", 0))
+          if final_count < 50:
+              raise SystemExit(f"[FAIL] V307 finalCandidateCount too small: {final_count}")
+
+          if not bundle_count_ok:
+              raise SystemExit("[FAIL] app_data_bundle still says candidateCount: 24")
+
+          print("[OK] V307 app reflection passed")
+          PY
+
+      - name: Commit updated data files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add stock_candidates_input.csv market_universe.json market_scan_results.json market_scanner_summary.json market_scanner_errors.txt 2>/dev/null || true
+
+          git add \
+            stock_candidates_input.csv \
+            market_universe.json \
+            market_scan_results.json \
+            market_scanner_summary.json \
+            market_scanner_errors.txt \
+            stock_candidates.json \
+            live_quotes.json \
+            live_quotes_validation_report.json \
+            recommendation_meta.json \
+            app_data_bundle.json \
+            app_operation_status.json \
+            pipeline_health.json \
+            signal_reflection_audit.json \
+            v307_app_reflect_report.json \
+            2>/dev/null || true
+
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update market candidates V306 EOD MINIMAL"
+            git commit -m "Update market candidates V306 with V307 app reflection"
             git push
           fi
