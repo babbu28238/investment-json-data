@@ -1,0 +1,111 @@
+name: Update Market Candidates V304
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 09:10 / 10:00 / 11:00 / 13:00 / 14:00 / 15:10
+    - cron: '10 0 * * 1-5'
+    - cron: '0 1 * * 1-5'
+    - cron: '0 2 * * 1-5'
+    - cron: '0 4 * * 1-5'
+    - cron: '0 5 * * 1-5'
+    - cron: '10 6 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  update-market-candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy requests beautifulsoup4 lxml pykrx
+
+      - name: Generate market candidates input
+        run: python scripts/generate_stock_candidates.py
+
+      - name: Update news signals
+        run: python scripts/update_news_signals.py
+
+      - name: Update report signals
+        run: python scripts/update_report_signals.py
+
+      - name: Update supply flow
+        run: python scripts/update_supply_flow.py
+
+      - name: Build stock candidates with mapper
+        run: python scripts/update_stock_candidates_v224_mapper.py
+
+      - name: Update live quotes
+        run: python scripts/update_live_quotes.py
+
+      - name: Merge real data if present
+        run: |
+          if [ -f scripts/merge_real_data_v252.py ]; then python scripts/merge_real_data_v252.py; fi
+
+      - name: Update recommendation scores
+        run: python scripts/update_recommendation_scores.py
+
+      - name: Finalize live and recommendation metadata
+        run: python scripts/finalize_live_recommendation_meta.py
+
+      - name: Build pipeline health if present
+        run: |
+          if [ -f scripts/build_pipeline_health.py ]; then python scripts/build_pipeline_health.py; fi
+
+      - name: Build app operation status if present
+        run: |
+          if [ -f scripts/build_app_operation_status.py ]; then python scripts/build_app_operation_status.py; fi
+
+      - name: Build app data bundle if present
+        run: |
+          if [ -f scripts/build_app_data_bundle.py ]; then python scripts/build_app_data_bundle.py; fi
+
+      - name: Validate app data bundle if present
+        run: |
+          if [ -f scripts/validate_app_data_bundle.py ]; then python scripts/validate_app_data_bundle.py; fi
+
+      - name: Audit signal reflection if present
+        run: |
+          if [ -f scripts/audit_signal_reflection.py ]; then python scripts/audit_signal_reflection.py; fi
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add \
+            stock_candidates_input.csv \
+            market_universe.json \
+            market_scan_results.json \
+            market_scanner_summary.json \
+            market_scanner_errors.txt \
+            stock_candidates.json \
+            live_quotes.json \
+            news_signals.json news_signals_summary.json news_signals_log.txt \
+            report_signals.json report_signals_summary.json report_signals_log.txt \
+            report_hints.csv \
+            supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt supply_flow_debug.json \
+            recommendation_summary.json recommendation_log.txt \
+            app_data_status.json app_operation_status.json app_operation_status.txt \
+            app_data_bundle.json app_data_bundle.txt app_data_bundle_validation.json app_data_bundle_validation.txt \
+            pipeline_health.json pipeline_health.txt intraday_pipeline_status.json \
+            market_pipeline_validation.json market_pipeline_validation.txt \
+            signal_reflection_audit.json signal_reflection_audit.txt \
+            v299_live_recommendation_meta_fix.json v299_live_recommendation_meta_fix.txt \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update market candidates V304 naver universe scanner outputs"
+            git push
+          fi
