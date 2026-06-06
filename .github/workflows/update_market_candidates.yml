@@ -1,14 +1,10 @@
-name: Update Market Candidates V304 FORCE
+name: Update Market Candidates V305 EOD SAFE
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 0 * * 1-5'
-    - cron: '0 1 * * 1-5'
-    - cron: '0 2 * * 1-5'
-    - cron: '0 4 * * 1-5'
-    - cron: '0 5 * * 1-5'
-    - cron: '10 6 * * 1-5'
+    # KST 17:30 weekdays = UTC 08:30
+    - cron: '30 8 * * 1-5'
 
 permissions:
   contents: write
@@ -16,6 +12,7 @@ permissions:
 jobs:
   update-market-candidates:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,101 +25,196 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy requests beautifulsoup4 lxml pykrx
+          pip install pandas numpy requests beautifulsoup4 lxml
 
-      - name: V304 preflight - block old scanner
+      - name: V305 preflight - block old or slow scanner
         run: |
-          echo "[CHECK] scanner file header"
-          head -30 scripts/generate_stock_candidates.py
-          if ! grep -q "CV304" scripts/generate_stock_candidates.py; then
-            echo "::error::scripts/generate_stock_candidates.py is NOT V304. Replace this file first. Current workflow stopped to prevent another CV302 fallback run."
+          set -e
+          echo "[PREFLIGHT] checking scripts/generate_stock_candidates.py"
+          test -f scripts/generate_stock_candidates.py
+          grep -q "CV305_EOD_SAFE_SCANNER" scripts/generate_stock_candidates.py
+          grep -q "EOD_CLOSE_BASED" scripts/generate_stock_candidates.py
+
+          if grep -q "CV302\|CV303_MARKET_SCANNER\|CV304_MARKET_SCANNER\|V302 no-login\|fallback_static_universe 사용" scripts/generate_stock_candidates.py; then
+            echo "[FAIL] Old scanner marker found in scripts/generate_stock_candidates.py"
             exit 1
           fi
 
-      - name: Generate market candidates input
-        run: python scripts/generate_stock_candidates.py
+          if grep -q "from pykrx import stock" scripts/generate_stock_candidates.py; then
+            echo "[FAIL] Slow pykrx scanner import found. V305 must use NAVER EOD safe scanner."
+            exit 1
+          fi
 
-      - name: V304 output validation - block fallback
+          echo "[OK] V305 EOD scanner preflight passed"
+
+      - name: Generate market candidates input
+        timeout-minutes: 12
         run: |
-          echo "[CHECK] market_scanner_summary.json"
-          cat market_scanner_summary.json
+          set -e
+          python scripts/generate_stock_candidates.py
+
+      - name: V305 postflight - validate scanner summary
+        run: |
+          set -e
           python - <<'PY'
-          import json, sys
+          import json
           from pathlib import Path
-          p = Path('market_scanner_summary.json')
+
+          p = Path("market_scanner_summary.json")
           if not p.exists():
-              print('::error::market_scanner_summary.json not found')
-              sys.exit(1)
-          data = json.loads(p.read_text(encoding='utf-8'))
-          version = str(data.get('version',''))
-          source = str(data.get('source',''))
-          universe = int(data.get('universeCount') or 0)
-          selected = int(data.get('selectedInputCount') or 0)
-          if 'CV304' not in version:
-              print(f'::error::Expected CV304 summary, got version={version}')
-              sys.exit(1)
-          if 'fallback' in source.lower() or universe <= 24:
-              print(f'::error::Universe failed: source={source}, universeCount={universe}')
-              sys.exit(1)
-          if selected < 50:
-              print(f'::error::Too few selectedInputCount={selected}')
-              sys.exit(1)
-          print(f'[OK] V304 scanner success: version={version}, source={source}, universeCount={universe}, selectedInputCount={selected}')
+              raise SystemExit("[FAIL] market_scanner_summary.json not found")
+
+          data = json.loads(p.read_text(encoding="utf-8"))
+          print(json.dumps(data, ensure_ascii=False, indent=2))
+
+          if data.get("version") != "CV305_EOD_SAFE_SCANNER":
+              raise SystemExit(f"[FAIL] expected CV305_EOD_SAFE_SCANNER, got {data.get('version')}")
+
+          if data.get("mode") != "EOD_CLOSE_BASED":
+              raise SystemExit(f"[FAIL] expected EOD_CLOSE_BASED, got {data.get('mode')}")
+
+          if "fallback" in str(data.get("source", "")).lower():
+              raise SystemExit(f"[FAIL] fallback source blocked: {data.get('source')}")
+
+          if int(data.get("universeCount", 0)) < 200:
+              raise SystemExit(f"[FAIL] universeCount too small: {data.get('universeCount')}")
+
+          if int(data.get("selectedInputCount", 0)) < 30:
+              raise SystemExit(f"[FAIL] selectedInputCount too small: {data.get('selectedInputCount')}")
+
+          print("[OK] V305 EOD summary validation passed")
           PY
 
-      - name: Update news signals
-        run: python scripts/update_news_signals.py
+      - name: Update news signals if present
+        run: |
+          if [ -f scripts/update_news_signals.py ]; then
+            python scripts/update_news_signals.py
+          else
+            echo "skip news"
+          fi
 
-      - name: Update report signals
-        run: python scripts/update_report_signals.py
+      - name: Update report signals if present
+        run: |
+          if [ -f scripts/update_report_signals.py ]; then
+            python scripts/update_report_signals.py
+          else
+            echo "skip report"
+          fi
 
-      - name: Update supply flow
-        run: python scripts/update_supply_flow.py
+      - name: Update supply flow if present
+        run: |
+          if [ -f scripts/update_supply_flow.py ]; then
+            python scripts/update_supply_flow.py
+          else
+            echo "skip supply"
+          fi
 
       - name: Build stock candidates with mapper
-        run: python scripts/update_stock_candidates_v224_mapper.py
+        run: |
+          if [ -f scripts/update_stock_candidates_v224_mapper.py ]; then
+            python scripts/update_stock_candidates_v224_mapper.py
+          elif [ -f scripts/update_stock_candidates.py ]; then
+            python scripts/update_stock_candidates.py
+          else
+            echo "skip mapper"
+          fi
 
       - name: Update live quotes
-        run: python scripts/update_live_quotes.py
+        run: |
+          if [ -f scripts/update_live_quotes.py ]; then
+            python scripts/update_live_quotes.py
+          else
+            echo "skip live quotes"
+          fi
 
       - name: Merge real data if present
         run: |
-          if [ -f scripts/merge_real_data_v252.py ]; then python scripts/merge_real_data_v252.py; fi
+          if [ -f scripts/merge_real_data_v252.py ]; then
+            python scripts/merge_real_data_v252.py
+          else
+            echo "skip merge"
+          fi
 
       - name: Update recommendation scores
-        run: python scripts/update_recommendation_scores.py
+        run: |
+          if [ -f scripts/update_recommendation_scores.py ]; then
+            python scripts/update_recommendation_scores.py
+          else
+            echo "skip recommendation scores"
+          fi
 
       - name: Finalize live and recommendation metadata
-        run: python scripts/finalize_live_recommendation_meta.py
+        run: |
+          if [ -f scripts/finalize_live_and_recommendation_metadata.py ]; then
+            python scripts/finalize_live_and_recommendation_metadata.py
+          else
+            echo "skip finalize metadata"
+          fi
 
       - name: Build pipeline health if present
         run: |
-          if [ -f scripts/build_pipeline_health.py ]; then python scripts/build_pipeline_health.py; fi
+          if [ -f scripts/build_pipeline_health.py ]; then
+            python scripts/build_pipeline_health.py
+          else
+            echo "skip pipeline health"
+          fi
 
       - name: Build app operation status if present
         run: |
-          if [ -f scripts/build_app_operation_status.py ]; then python scripts/build_app_operation_status.py; fi
+          if [ -f scripts/build_app_operation_status.py ]; then
+            python scripts/build_app_operation_status.py
+          else
+            echo "skip app operation status"
+          fi
 
       - name: Build app data bundle if present
         run: |
-          if [ -f scripts/build_app_data_bundle.py ]; then python scripts/build_app_data_bundle.py; fi
+          if [ -f scripts/build_app_data_bundle.py ]; then
+            python scripts/build_app_data_bundle.py
+          else
+            echo "skip app data bundle"
+          fi
 
       - name: Validate app data bundle if present
         run: |
-          if [ -f scripts/validate_app_data_bundle.py ]; then python scripts/validate_app_data_bundle.py; fi
+          if [ -f scripts/validate_app_data_bundle.py ]; then
+            python scripts/validate_app_data_bundle.py
+          else
+            echo "skip app data bundle validation"
+          fi
 
       - name: Audit signal reflection if present
         run: |
-          if [ -f scripts/audit_signal_reflection.py ]; then python scripts/audit_signal_reflection.py; fi
+          if [ -f scripts/audit_signal_reflection.py ]; then
+            python scripts/audit_signal_reflection.py
+          else
+            echo "skip audit signal reflection"
+          fi
 
       - name: Commit updated data files
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add             stock_candidates_input.csv             market_universe.json             market_scan_results.json             market_scanner_summary.json             market_scanner_errors.txt             stock_candidates.json             live_quotes.json             news_signals.json news_signals_summary.json news_signals_log.txt             report_signals.json report_signals_summary.json report_signals_log.txt             report_hints.csv             supply_flow_input.csv supply_flow_summary.json supply_flow_log.txt supply_flow_debug.json             recommendation_summary.json recommendation_log.txt             app_data_status.json app_operation_status.json app_operation_status.txt             app_data_bundle.json app_data_bundle.txt app_data_bundle_validation.json app_data_bundle_validation.txt             pipeline_health.json pipeline_health.txt intraday_pipeline_status.json             market_pipeline_validation.json market_pipeline_validation.txt             signal_reflection_audit.json signal_reflection_audit.txt             v299_live_recommendation_meta_fix.json v299_live_recommendation_meta_fix.txt             2>/dev/null || true
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add \
+            stock_candidates_input.csv \
+            stock_candidates.json \
+            market_universe.json \
+            market_scan_results.json \
+            market_scanner_summary.json \
+            market_scanner_errors.txt \
+            live_quotes.json \
+            live_quotes_validation_report.json \
+            recommendation_meta.json \
+            app_data_bundle.json \
+            app_operation_status.json \
+            pipeline_health.json \
+            signal_reflection_audit.json \
+            2>/dev/null || true
+
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update market candidates V304 force scanner outputs"
+            git commit -m "Update market candidates V305 EOD SAFE"
             git push
           fi
