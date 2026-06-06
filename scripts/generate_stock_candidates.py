@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-CV302 NO-LOGIN MARKET UNIVERSE GENERATOR
+CV304 NAVER-FIRST MARKET UNIVERSE GENERATOR
 
 역할:
 - KOSPI/KOSDAQ 전체 종목을 pykrx로 수집
@@ -32,7 +32,13 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
-from pykrx import stock
+import requests
+from bs4 import BeautifulSoup
+
+try:
+    from pykrx import stock  # optional fallback only
+except Exception:
+    stock = None
 
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parents[1] if Path(__file__).parent.name == "scripts" else Path.cwd()
@@ -46,7 +52,15 @@ OUT_ERRORS_TXT = ROOT / "market_scanner_errors.txt"
 LOOKBACK_DAYS = 180
 UNIVERSE_TOP_N_BY_TRADING_VALUE = 1200
 FINAL_INPUT_TOP_N = 120
-SLEEP_SECONDS = 0.05
+SLEEP_SECONDS = 0.04
+
+NAVER_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
+NAVER_MARKET_SUM_URL = "https://finance.naver.com/sise/sise_market_sum.naver"
+NAVER_SISE_DAY_URL = "https://finance.naver.com/item/sise_day.naver"
+NAVER_MAX_MARKET_PAGES = 60
+NAVER_EMPTY_PAGE_LIMIT = 3
+NAVER_DAILY_PAGES = 12  # 12 pages ≒ 120 trading rows; pykrx 없이 기술점수 계산 가능
+REQUEST_TIMEOUT = 10
 
 MIN_PRICE = 3000
 MIN_TRADING_VALUE = 1_000_000_000
@@ -112,18 +126,23 @@ def safe_int(value: Any, default: int = 0) -> int:
 
 
 def recent_market_date(max_back_days: int = 20) -> str:
+    """
+    V304: pykrx가 없어도 동작해야 하므로 기준일은 우선 KST 오늘을 사용한다.
+    실제 네이버 일별시세의 마지막 거래일은 get_ohlcv()/latest_naver_daily_snapshot에서 보정된다.
+    pykrx가 정상인 환경에서는 삼성전자 OHLCV로 최근 거래일을 확인한다.
+    """
     today = datetime.now(KST).replace(tzinfo=None)
-    for i in range(max_back_days + 1):
-        d = today - timedelta(days=i)
-        date = ymd(d)
-        try:
-            df = stock.get_market_ohlcv_by_date(date, date, "005930")
-            if df is not None and not df.empty:
-                return date
-        except Exception:
-            pass
+    if stock is not None:
+        for i in range(max_back_days + 1):
+            d = today - timedelta(days=i)
+            date = ymd(d)
+            try:
+                df = stock.get_market_ohlcv_by_date(date, date, "005930")
+                if df is not None and not df.empty:
+                    return date
+            except Exception:
+                pass
     return ymd(today)
-
 
 def classify(name: str, market: str) -> Tuple[str, str, str]:
     n = str(name).upper()
@@ -142,7 +161,138 @@ def is_excluded_name(name: str) -> bool:
     return False
 
 
+def naver_get(url: str, params: Optional[Dict[str, Any]] = None) -> Optional[str]:
+    try:
+        r = requests.get(url, params=params, headers=NAVER_HEADERS, timeout=REQUEST_TIMEOUT)
+        if r.status_code == 200 and r.text:
+            return r.text
+    except Exception:
+        return None
+    return None
+
+
+def parse_int_kr(value: Any, default: int = 0) -> int:
+    try:
+        text = str(value).replace(",", "").replace("+", "").strip()
+        text = text.replace("−", "-").replace("-", "-")
+        if text in ["", "nan", "None", "N/A"]:
+            return default
+        return int(float(text))
+    except Exception:
+        return default
+
+
+def build_naver_market_universe() -> Tuple[pd.DataFrame, List[str]]:
+    """
+    V304 핵심 유니버스.
+    - pykrx/KRX 로그인/API에 의존하지 않는다.
+    - 네이버 시가총액 페이지의 KOSPI(sosok=0), KOSDAQ(sosok=1) 전체 페이지를 순회한다.
+    - 현재가*거래량을 근사 거래대금으로 계산해 시장 전체 후보군을 만든다.
+    """
+    errors: List[str] = []
+    rows: List[Dict[str, Any]] = []
+    seen = set()
+
+    for sosok, market in [(0, "KOSPI"), (1, "KOSDAQ")]:
+        empty_streak = 0
+        for page in range(1, NAVER_MAX_MARKET_PAGES + 1):
+            html = naver_get(NAVER_MARKET_SUM_URL, {"sosok": sosok, "page": page})
+            if not html:
+                errors.append(f"NAVER market_sum failed market={market} page={page}")
+                empty_streak += 1
+                if empty_streak >= NAVER_EMPTY_PAGE_LIMIT:
+                    break
+                continue
+
+            page_count = 0
+            soup = BeautifulSoup(html, "lxml")
+            code_by_name: Dict[str, str] = {}
+            for a in soup.select('a[href*="/item/main.naver?code="]'):
+                href = a.get("href", "")
+                code = href.split("code=")[-1].split("&")[0].strip()
+                name = a.get_text(strip=True)
+                if code and name:
+                    code_by_name[name] = normalize_code(code)
+
+            # 1차: pandas table 파싱. 네이버 컬럼명 변경에도 가장 안정적이다.
+            parsed_by_table = False
+            try:
+                dfs = pd.read_html(html, encoding="euc-kr")
+                table = next((df for df in dfs if "종목명" in df.columns), None)
+                if table is not None and not table.empty:
+                    table = table.dropna(subset=["종목명"]).copy()
+                    for _, rr in table.iterrows():
+                        name = str(rr.get("종목명", "")).strip()
+                        code = code_by_name.get(name, "")
+                        if not code or code in seen or not name or is_excluded_name(name):
+                            continue
+                        current_price = parse_int_kr(rr.get("현재가", 0), 0)
+                        volume = parse_int_kr(rr.get("거래량", 0), 0)
+                        market_cap_eok = parse_int_kr(rr.get("시가총액", 0), 0)
+                        market_cap = market_cap_eok * 100_000_000 if market_cap_eok else 0
+                        trading_value = current_price * volume if current_price and volume else 0
+                        rows.append({
+                            "code": code,
+                            "name": name,
+                            "market": market,
+                            "종가": current_price,
+                            "거래량": volume,
+                            "거래대금": trading_value,
+                            "시가총액": market_cap,
+                        })
+                        seen.add(code)
+                        page_count += 1
+                    parsed_by_table = True
+            except Exception as e:
+                errors.append(f"NAVER read_html parse failed market={market} page={page}: {e}")
+
+            # 2차 fallback: 행 직접 파싱. pandas 파싱 실패 시 최소한 코드/이름은 살린다.
+            if not parsed_by_table:
+                for tr in soup.select("table.type_2 tr"):
+                    a = tr.select_one('a[href*="/item/main.naver?code="]')
+                    if not a:
+                        continue
+                    href = a.get("href", "")
+                    code = normalize_code(href.split("code=")[-1].split("&")[0].strip())
+                    name = a.get_text(strip=True)
+                    if not code or code in seen or not name or is_excluded_name(name):
+                        continue
+                    number_cells = [td.get_text(" ", strip=True) for td in tr.select("td.number")]
+                    current_price = parse_int_kr(number_cells[0], 0) if len(number_cells) > 0 else 0
+                    market_cap_eok = parse_int_kr(number_cells[4], 0) if len(number_cells) > 4 else 0
+                    volume = parse_int_kr(number_cells[7], 0) if len(number_cells) > 7 else 0
+                    market_cap = market_cap_eok * 100_000_000 if market_cap_eok else 0
+                    trading_value = current_price * volume if current_price and volume else 0
+                    rows.append({
+                        "code": code,
+                        "name": name,
+                        "market": market,
+                        "종가": current_price,
+                        "거래량": volume,
+                        "거래대금": trading_value,
+                        "시가총액": market_cap,
+                    })
+                    seen.add(code)
+                    page_count += 1
+
+            print(f"[INFO] NAVER {market} page={page} count={page_count} total={len(rows)}")
+            if page_count == 0:
+                empty_streak += 1
+                if empty_streak >= NAVER_EMPTY_PAGE_LIMIT:
+                    break
+            else:
+                empty_streak = 0
+            time.sleep(0.05)
+
+    if not rows:
+        errors.append("V304 naver market universe empty")
+        return pd.DataFrame(), errors
+    return pd.DataFrame(rows), errors
+
+
 def market_name_map(base_date: str) -> Dict[str, str]:
+    if stock is None:
+        return {}
     result: Dict[str, str] = {}
     for market in ["KOSPI", "KOSDAQ"]:
         try:
@@ -153,91 +303,57 @@ def market_name_map(base_date: str) -> Dict[str, str]:
     return result
 
 
-def pick_column(df: pd.DataFrame, candidates: List[str]) -> Optional[str]:
-    """pykrx 버전별 컬럼명 차이를 흡수하기 위한 컬럼 탐색."""
-    if df is None or df.empty:
-        return None
-    normalized = {str(c).replace(" ", "").replace("_", "").lower(): c for c in df.columns}
-    for cand in candidates:
-        key = str(cand).replace(" ", "").replace("_", "").lower()
-        if key in normalized:
-            return normalized[key]
-    for c in df.columns:
-        ctext = str(c).replace(" ", "").replace("_", "").lower()
-        for cand in candidates:
-            key = str(cand).replace(" ", "").replace("_", "").lower()
-            if key and key in ctext:
-                return c
-    return None
-
-
 def latest_ohlcv_snapshot(code: str, base_date: str) -> Optional[Dict[str, Any]]:
-    """
-    V302 핵심: KRX_ID/KRX_PW 없이 종목별 OHLCV로 유니버스 생성.
-    get_market_ohlcv_by_ticker가 GitHub Actions에서 실패하므로,
-    종목별 get_market_ohlcv_by_date만 사용한다.
-    """
-    end = datetime.strptime(base_date, "%Y%m%d")
-    for back in [10, 20, 40]:
-        start = end - timedelta(days=back)
-        try:
-            df = stock.get_market_ohlcv_by_date(ymd(start), base_date, code)
-            if df is None or df.empty:
-                continue
-            last = df.dropna().iloc[-1]
-            close = safe_float(last.get("종가", 0))
-            volume = safe_float(last.get("거래량", 0))
-            value = safe_float(last.get("거래대금", 0))
-            if value <= 0 and close > 0 and volume > 0:
-                value = close * volume
-            if close > 0:
-                return {"종가": close, "거래량": volume, "거래대금": value}
-        except Exception:
-            continue
+    df = get_ohlcv(code, base_date, pages=1)
+    if df is not None and not df.empty:
+        last = df.dropna().iloc[-1]
+        close = safe_float(last.get("종가", 0))
+        volume = safe_float(last.get("거래량", 0))
+        value = close * volume if close > 0 and volume > 0 else 0
+        return {"종가": close, "거래량": volume, "거래대금": value}
     return None
 
 
 def build_universe(base_date: str) -> Tuple[pd.DataFrame, str, List[str]]:
-    """
-    V302 NO-LOGIN UNIVERSE.
-    - KRX_ID/KRX_PW를 요구하지 않는다.
-    - 시장 전체 ticker list를 가져온 뒤 종목별 OHLCV로 가격/거래대금 유니버스를 만든다.
-    - 시가총액은 0으로 두고 시총 필터는 비활성화한다.
-    """
     errors: List[str] = []
-    rows: List[Dict[str, Any]] = []
-    names = market_name_map(base_date)
 
-    for market in ["KOSPI", "KOSDAQ"]:
-        try:
-            tickers = [normalize_code(c) for c in stock.get_market_ticker_list(base_date, market=market)]
-        except Exception as e:
-            errors.append(f"{market} ticker list failed: {e}")
-            tickers = []
+    universe, naver_errors = build_naver_market_universe()
+    errors.extend(naver_errors)
+    source = "naver_market_sum_universe_v304"
 
-        print(f"[INFO] {market} tickerCount={len(tickers)}")
-        for idx, code in enumerate(tickers, start=1):
-            name = names.get(code) or stock.get_market_ticker_name(code) or code
-            if not name or is_excluded_name(name):
-                continue
-            snap = latest_ohlcv_snapshot(code, base_date)
-            if not snap:
-                continue
-            rows.append({
-                "code": code,
-                "name": name,
-                "market": market,
-                "종가": safe_float(snap.get("종가", 0)),
-                "거래량": safe_float(snap.get("거래량", 0)),
-                "거래대금": safe_float(snap.get("거래대금", 0)),
-                "시가총액": 0,
-            })
-            if idx % 200 == 0:
-                print(f"[INFO] {market} snapshot {idx}/{len(tickers)} collectedRows={len(rows)}")
-            time.sleep(0.003)
+    # 네이버 전체 유니버스 실패 시에만 pykrx를 보조로 사용한다.
+    if universe.empty and stock is not None:
+        py_rows: List[Dict[str, Any]] = []
+        names = market_name_map(base_date)
+        for market in ["KOSPI", "KOSDAQ"]:
+            try:
+                tickers = [normalize_code(c) for c in stock.get_market_ticker_list(base_date, market=market)]
+            except Exception as e:
+                errors.append(f"{market} ticker list failed: {e}")
+                tickers = []
+            print(f"[INFO] PYKRX fallback {market} tickerCount={len(tickers)}")
+            for idx, code in enumerate(tickers, start=1):
+                name = names.get(code) or stock.get_market_ticker_name(code) or code
+                if not name or is_excluded_name(name):
+                    continue
+                snap = latest_ohlcv_snapshot(code, base_date)
+                if not snap:
+                    continue
+                py_rows.append({
+                    "code": code, "name": name, "market": market,
+                    "종가": safe_float(snap.get("종가", 0)),
+                    "거래량": safe_float(snap.get("거래량", 0)),
+                    "거래대금": safe_float(snap.get("거래대금", 0)),
+                    "시가총액": 0,
+                })
+                if idx % 200 == 0:
+                    print(f"[INFO] PYKRX fallback snapshot {idx}/{len(tickers)} collectedRows={len(py_rows)}")
+                time.sleep(0.003)
+        universe = pd.DataFrame(py_rows)
+        source = "pykrx_fallback_ohlcv_universe_v304"
 
-    if not rows:
-        errors.append("V302 no-login universe empty: fallback_static_universe 사용")
+    if universe.empty:
+        errors.append("V304 all universe sources empty: fallback_static_universe 사용")
         fallback_rows = []
         for idx, (code, name, market) in enumerate(FALLBACK_UNIVERSE, start=1):
             fallback_rows.append({
@@ -247,7 +363,6 @@ def build_universe(base_date: str) -> Tuple[pd.DataFrame, str, List[str]]:
             })
         return pd.DataFrame(fallback_rows), "fallback_static_universe", errors
 
-    universe = pd.DataFrame(rows)
     before = len(universe)
     universe = universe[
         (universe["종가"].astype(float) >= MIN_PRICE) &
@@ -256,7 +371,7 @@ def build_universe(base_date: str) -> Tuple[pd.DataFrame, str, List[str]]:
     universe = universe.sort_values("거래대금", ascending=False).head(UNIVERSE_TOP_N_BY_TRADING_VALUE)
 
     if universe.empty:
-        errors.append(f"V302 universe empty after filter before={before}")
+        errors.append(f"V304 universe empty after filter before={before}")
         fallback_rows = []
         for idx, (code, name, market) in enumerate(FALLBACK_UNIVERSE, start=1):
             fallback_rows.append({
@@ -266,23 +381,60 @@ def build_universe(base_date: str) -> Tuple[pd.DataFrame, str, List[str]]:
             })
         return pd.DataFrame(fallback_rows), "fallback_empty_after_filter", errors
 
-    errors.append("V302: 시가총액 필터 비활성화, 종목별 OHLCV 기반 거래대금 유니버스 사용")
-    print(f"[OK] V302 no-login universe filter {before} -> {len(universe)}")
-    return universe.reset_index(drop=True), "krx_no_login_ohlcv_universe_v302", errors
+    errors.append(f"V304: NAVER-first universe 사용, raw={before}, filtered={len(universe)}, pykrx_optional={stock is not None}")
+    print(f"[OK] V304 universe filter {before} -> {len(universe)} source={source}")
+    return universe.reset_index(drop=True), source, errors
 
-
-def get_ohlcv(code: str, end_date: str) -> Optional[pd.DataFrame]:
-    end = datetime.strptime(end_date, "%Y%m%d")
-    for back in [LOOKBACK_DAYS, 240, 300]:
-        start = end - timedelta(days=back)
+def get_ohlcv(code: str, end_date: str, pages: int = NAVER_DAILY_PAGES) -> Optional[pd.DataFrame]:
+    """
+    V304: 네이버 일별시세를 우선 사용한다.
+    pykrx는 네이버 파싱 실패 시에만 보조로 호출한다.
+    반환 컬럼은 기존 분석 로직과 동일하게 시가/고가/저가/종가/거래량으로 맞춘다.
+    """
+    frames: List[pd.DataFrame] = []
+    for page in range(1, max(1, pages) + 1):
+        html = naver_get(NAVER_SISE_DAY_URL, {"code": normalize_code(code), "page": page})
+        if not html:
+            continue
         try:
-            df = stock.get_market_ohlcv_by_date(ymd(start), end_date, code)
-            if df is not None and not df.empty and len(df) >= 80:
-                return df
+            dfs = pd.read_html(html, encoding="euc-kr")
+            if not dfs:
+                continue
+            df = dfs[0].dropna(how="all")
+            if df.empty or "날짜" not in df.columns:
+                continue
+            frames.append(df)
         except Exception:
-            pass
-    return None
+            continue
+        time.sleep(0.02)
 
+    if frames:
+        df = pd.concat(frames, ignore_index=True)
+        df = df.dropna(subset=["날짜", "종가"]).copy()
+        rename_map = {"시가": "시가", "고가": "고가", "저가": "저가", "종가": "종가", "거래량": "거래량"}
+        keep = [c for c in ["날짜", "시가", "고가", "저가", "종가", "거래량"] if c in df.columns]
+        df = df[keep].copy()
+        for c in ["시가", "고가", "저가", "종가", "거래량"]:
+            if c in df.columns:
+                df[c] = df[c].apply(parse_int_kr).astype(float)
+        df["날짜"] = pd.to_datetime(df["날짜"], errors="coerce")
+        df = df.dropna(subset=["날짜"]).drop_duplicates(subset=["날짜"]).sort_values("날짜")
+        df = df.set_index("날짜")
+        if not df.empty and all(c in df.columns for c in ["시가", "고가", "저가", "종가", "거래량"]):
+            if len(df) >= 20 or pages <= 1:
+                return df
+
+    if stock is not None:
+        end = datetime.strptime(end_date, "%Y%m%d")
+        for back in [LOOKBACK_DAYS, 240, 300]:
+            start = end - timedelta(days=back)
+            try:
+                df = stock.get_market_ohlcv_by_date(ymd(start), end_date, code)
+                if df is not None and not df.empty and len(df) >= 20:
+                    return df
+            except Exception:
+                pass
+    return None
 
 def calc_rsi(close: pd.Series, period: int = 14) -> float:
     close = pd.Series(close).astype(float)
@@ -421,7 +573,7 @@ def analyze_stock(row: pd.Series, base_date: str, rank_by_value: int, source: st
     macd_text = "MACD 상승 우위" if macd > macd_signal else "MACD 확인 필요"
     volume_text = "거래량 증가" if volume_ratio >= 1.3 else "거래량 확인"
 
-    reason_parts = [f"KRX 전체시장 자동선별 TOP {rank_by_value}", industry]
+    reason_parts = [f"시장 전체 자동선별 TOP {rank_by_value}", industry]
     if current > ma20: reason_parts.append("20일선 상회")
     if weekly_cloud: reason_parts.append("주봉 구름대 우위")
     if volume_ratio >= 1.3: reason_parts.append("거래량 증가")
@@ -459,7 +611,7 @@ def analyze_stock(row: pd.Series, base_date: str, rank_by_value: int, source: st
         "rsiValue": round(rsi, 2),
         "volumeRatio20D": round(volume_ratio, 2),
         "high52wPosition": round(high_52w_position, 2),
-        "selectionSource": f"CV302_MARKET_SCANNER_{source}",
+        "selectionSource": f"CV304_MARKET_SCANNER_{source}",
         "dataStatus": {
             "baseScore": score,
             "supplyBoost": 0,
@@ -488,7 +640,7 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
 def main() -> None:
     started = now_kst()
     base_date = recent_market_date()
-    print(f"[START] CV302 market scanner base_date={base_date}")
+    print(f"[START] CV304 market scanner base_date={base_date}")
 
     universe, source, errors = build_universe(base_date)
     universe_rows = []
@@ -503,7 +655,7 @@ def main() -> None:
             "tradingValue": safe_int(r.get("거래대금", 0)),
         })
     OUT_UNIVERSE_JSON.write_text(json.dumps({
-        "version": "CV302_MARKET_UNIVERSE",
+        "version": "CV304_MARKET_UNIVERSE",
         "updatedAt": now_kst(),
         "baseDate": base_date,
         "source": source,
@@ -534,7 +686,7 @@ def main() -> None:
     write_csv(final_rows)
 
     OUT_SCAN_JSON.write_text(json.dumps({
-        "version": "CV302_MARKET_SCAN_RESULTS",
+        "version": "CV304_MARKET_SCAN_RESULTS",
         "updatedAt": now_kst(),
         "baseDate": base_date,
         "source": source,
@@ -551,7 +703,7 @@ def main() -> None:
         sector_counts[item.get("sector", "-")] = sector_counts.get(item.get("sector", "-"), 0) + 1
 
     OUT_SUMMARY_JSON.write_text(json.dumps({
-        "version": "CV302_MARKET_SCANNER",
+        "version": "CV304_MARKET_SCANNER",
         "status": "warning" if scan_errors else "ok",
         "startedAt": started,
         "updatedAt": now_kst(),
