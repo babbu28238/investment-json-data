@@ -1,0 +1,87 @@
+name: Update Market Candidates V306 EOD MINIMAL
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 17:40 weekdays = UTC 08:40
+    - cron: '40 8 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  update-market-candidates-v306:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas numpy lxml
+
+      - name: V306 preflight - verify minimal EOD scanner
+        run: |
+          set -e
+          echo "[PREFLIGHT] checking scripts/generate_stock_candidates_v306_minimal.py"
+          test -f scripts/generate_stock_candidates_v306_minimal.py
+          grep -q "CV306_EOD_MINIMAL_SCANNER" scripts/generate_stock_candidates_v306_minimal.py
+          grep -q "EOD_CLOSE_BASED" scripts/generate_stock_candidates_v306_minimal.py
+
+          if grep -q "from pykrx import stock\|get_market_ohlcv_by_date\|CV302\|CV303\|CV304\|CV305_EOD_SAFE" scripts/generate_stock_candidates_v306_minimal.py; then
+            echo "[FAIL] Old or slow scanner marker found."
+            exit 1
+          fi
+
+          echo "[OK] V306 minimal scanner preflight passed"
+
+      - name: Generate market candidates input
+        timeout-minutes: 8
+        run: |
+          set -e
+          python scripts/generate_stock_candidates_v306_minimal.py
+
+      - name: V306 postflight - validate scanner summary
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path('market_scanner_summary.json')
+          if not p.exists():
+              raise SystemExit('[FAIL] market_scanner_summary.json not found')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          print(json.dumps(data, ensure_ascii=False, indent=2))
+
+          if data.get('version') != 'CV306_EOD_MINIMAL_SCANNER':
+              raise SystemExit(f"[FAIL] expected CV306_EOD_MINIMAL_SCANNER, got {data.get('version')}")
+          if data.get('mode') != 'EOD_CLOSE_BASED':
+              raise SystemExit(f"[FAIL] expected EOD_CLOSE_BASED, got {data.get('mode')}")
+          if 'fallback' in str(data.get('source', '')).lower():
+              raise SystemExit(f"[FAIL] fallback source blocked: {data.get('source')}")
+          if int(data.get('universeCount', 0)) < 50:
+              raise SystemExit(f"[FAIL] universeCount too small: {data.get('universeCount')}")
+          if int(data.get('selectedInputCount', 0)) < 20:
+              raise SystemExit(f"[FAIL] selectedInputCount too small: {data.get('selectedInputCount')}")
+          print('[OK] V306 summary validation passed')
+          PY
+
+      - name: Commit V306 scanner outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add stock_candidates_input.csv market_universe.json market_scan_results.json market_scanner_summary.json market_scanner_errors.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update market candidates V306 EOD MINIMAL"
+            git push
+          fi
