@@ -1,0 +1,41 @@
+{
+  "version": "V370_NEWS_DATA_TEMPLATE",
+  "updatedAt": "YYYY-MM-DD HH:mm KST",
+  "description": "종목별 뉴스/공시/리스크 근거를 입력하는 템플릿입니다.",
+  "items": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "news": [
+        {
+          "headline": "뉴스 제목 예시",
+          "source": "출처",
+          "publishedAt": "YYYY-MM-DD HH:mm",
+          "category": "industry",
+          "sentiment": "neutral",
+          "newsScore": 50,
+          "summary": "뉴스 요약 입력",
+          "url": ""
+        }
+      ],
+      "disclosures": [
+        {
+          "title": "공시 제목 예시",
+          "type": "공시 유형",
+          "publishedAt": "YYYY-MM-DD HH:mm",
+          "riskFlag": false,
+          "riskReason": ""
+        }
+      ],
+      "newsTotalScore": 50,
+      "riskFlags": [],
+      "newsSummary": "뉴스/공시 데이터 입력 전 샘플입니다."
+    }
+  ],
+  "fieldGuide": {
+    "category": "earnings / contract / policy / industry / disclosure / risk / theme",
+    "sentiment": "positive / neutral / negative",
+    "newsScore": "0~100 점수. 70 이상 긍정, 50 중립, 40 이하 부정",
+    "riskFlag": "악재 또는 투자주의/경고/조회공시 리스크 여부"
+  }
+}

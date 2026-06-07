@@ -1,0 +1,35 @@
+{
+  "version": "V370_SUPPLY_DATA_TEMPLATE",
+  "updatedAt": "YYYY-MM-DD HH:mm KST",
+  "description": "종목별 외국인/기관/연기금/투신/금융투자 수급 데이터를 입력하는 템플릿입니다.",
+  "items": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "foreign_1d": 0,
+      "foreign_5d": 0,
+      "foreign_20d": 0,
+      "institution_1d": 0,
+      "institution_5d": 0,
+      "institution_20d": 0,
+      "pension_5d": 0,
+      "pension_20d": 0,
+      "trust_5d": 0,
+      "trust_20d": 0,
+      "finance_1d": 0,
+      "finance_5d": 0,
+      "supplyScore": 50,
+      "supplyTrend": "neutral",
+      "supplySummary": "수급 데이터 입력 전 샘플입니다."
+    }
+  ],
+  "fieldGuide": {
+    "foreign": "외국인 순매수. 단위는 사용 데이터 기준에 맞추되 동일 기준 유지",
+    "institution": "기관 합계 순매수",
+    "pension": "연기금 순매수",
+    "trust": "투신 순매수",
+    "finance": "금융투자 순매수",
+    "supplyScore": "0~100 점수. 70 이상 양호, 50 중립, 40 이하 약화",
+    "supplyTrend": "accumulation / improving / short_term / weakening / neutral"
+  }
+}

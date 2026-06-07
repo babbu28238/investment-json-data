@@ -1,0 +1,34 @@
+{
+  "version": "V370_EVIDENCE_DATA_TEMPLATE",
+  "updatedAt": "YYYY-MM-DD HH:mm KST",
+  "description": "수급과 뉴스 근거를 앱 추천 근거에 통합하기 위한 최종 입력 템플릿입니다.",
+  "items": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "supply": {
+        "supplyScore": 50,
+        "supplyTrend": "neutral",
+        "foreign_5d": 0,
+        "institution_5d": 0,
+        "pension_20d": 0,
+        "trust_20d": 0,
+        "finance_5d": 0,
+        "summary": "수급 요약"
+      },
+      "news": {
+        "newsTotalScore": 50,
+        "sentiment": "neutral",
+        "mainCategory": "industry",
+        "headline": "대표 뉴스 제목",
+        "summary": "뉴스 요약",
+        "riskFlags": []
+      },
+      "evidenceScore": 50,
+      "evidenceGrade": "neutral",
+      "evidenceSummary": "수급/뉴스 통합 근거 요약",
+      "closeBuyGuide": "매수는 종가 기준으로 지지/돌파 유지 확인",
+      "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+    }
+  ]
+}
