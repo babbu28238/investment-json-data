@@ -72,8 +72,9 @@ jobs:
           def get(row, *keys, default=""):
               lower = {str(k).strip().lower(): v for k, v in row.items()}
               for key in keys:
-                  if key.lower() in lower and clean(lower[key]) != "":
-                      return clean(lower[key])
+                  lk = key.lower()
+                  if lk in lower and clean(lower[lk]) != "":
+                      return clean(lower[lk])
               return default
 
           def to_int(v, default=50):
@@ -99,9 +100,10 @@ jobs:
                   change_rate = get(raw, "changeRate", "change_rate", "등락률", default="-")
 
                   action = "관찰" if score >= 60 else "보류"
+                  rank = len(rows) + 1
 
                   item = {
-                      "rank": len(rows) + 1,
+                      "rank": rank,
                       "name": name,
                       "code": code,
                       "market": market,
@@ -121,15 +123,11 @@ jobs:
                       "recommendationReason": f"V306 EOD 스캐너 기반 V309 강제 반영 후보 / 종가 기준 점수 {score}",
                       "recommendationMeta": {
                           "version": VERSION,
-                          "rank": len(rows) + 1,
+                          "rank": rank,
                           "score": score,
                           "grade": grade,
                           "action": action,
-                          "basis": [
-                              "v306_eod_scanner",
-                              "naver_market_sum",
-                              "forced_app_reflect"
-                          ],
+                          "basis": ["v306_eod_scanner", "naver_market_sum", "forced_app_reflect"],
                           "updatedAt": now
                       },
                       "dataStatus": {
@@ -149,13 +147,8 @@ jobs:
           if len(rows) < MIN_COUNT:
               raise SystemExit(f"[FAIL] candidate count too small: {len(rows)}")
 
-          # stock_candidates.json은 앱이 직접 읽는 파일이므로 배열 구조로 저장
-          stock_json.write_text(
-              json.dumps(rows, ensure_ascii=False, indent=2),
-              encoding="utf-8"
-          )
+          stock_json.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
-          # app_data_bundle.json도 JSON 구조로 저장
           bundle = {
               "version": "V309_APP_DATA_BUNDLE",
               "updatedAt": now,
@@ -176,31 +169,17 @@ jobs:
                   for x in rows[:20]
               ],
               "sources": {
-                  "candidates": {
-                      "exists": True,
-                      "path": "stock_candidates.json",
-                      "error": ""
-                  },
-                  "scannerInput": {
-                      "exists": True,
-                      "path": "stock_candidates_input.csv",
-                      "error": ""
-                  },
+                  "candidates": {"exists": True, "path": "stock_candidates.json", "error": ""},
+                  "scannerInput": {"exists": True, "path": "stock_candidates_input.csv", "error": ""},
                   "marketScannerSummary": {
                       "exists": Path("market_scanner_summary.json").exists(),
                       "path": "market_scanner_summary.json",
                       "error": ""
                   }
               },
-              "payload": {
-                  "candidates": rows
-              }
+              "payload": {"candidates": rows}
           }
-
-          bundle_json.write_text(
-              json.dumps(bundle, ensure_ascii=False, indent=2),
-              encoding="utf-8"
-          )
+          bundle_json.write_text(json.dumps(bundle, ensure_ascii=False, indent=2), encoding="utf-8")
 
           report = {
               "version": VERSION,
@@ -213,17 +192,8 @@ jobs:
               "appBundleCandidateCount": len(rows),
               "forcedCommit": True
           }
-
-          report_json.write_text(
-              json.dumps(report, ensure_ascii=False, indent=2),
-              encoding="utf-8"
-          )
-
-          # 기존 확인 루틴과 호환되도록 v307 파일명도 같이 생성
-          legacy_report_json.write_text(
-              json.dumps(report, ensure_ascii=False, indent=2),
-              encoding="utf-8"
-          )
+          report_json.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+          legacy_report_json.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
           print("[OK] V309 force app files complete")
           print(f"[OK] finalCandidateCount={len(rows)}")
