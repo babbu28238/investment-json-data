@@ -1,6 +1,6 @@
 {
   "version": "V371_EVIDENCE_MERGED_BUNDLE",
-  "updatedAt": "2026-06-07 19:09:42 KST",
+  "updatedAt": "2026-06-07 19:28:32 KST",
   "status": "ok",
   "candidateCount": 80,
   "liveQuoteCount": 80,
@@ -5013,17 +5013,33 @@
       "liveStatus": "ok",
       "hasLiveQuote": true,
       "evidence": {
-        "evidenceScore": 50,
-        "evidenceGrade": "not_available",
-        "evidenceSummary": "수급/뉴스 데이터 미반영",
-        "supply": {},
-        "news": {},
-        "closeBuyGuide": "매수는 종가 기준으로 기존 기술적 조건 확인",
-        "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+        "evidenceScore": 77,
+        "evidenceGrade": "positive",
+        "evidenceSummary": "수급 누적형 + 조선 업황 개선 뉴스 샘플. 종가 기준 확인 후보.",
+        "supply": {
+          "supplyScore": 78,
+          "supplyTrend": "accumulation",
+          "foreign_5d": 4800000000,
+          "institution_5d": 3900000000,
+          "pension_20d": 3300000000,
+          "trust_20d": 1400000000,
+          "finance_5d": 900000000,
+          "summary": "외국인·기관 5일/20일 동반 순매수 샘플"
+        },
+        "news": {
+          "newsTotalScore": 76,
+          "sentiment": "positive",
+          "mainCategory": "industry",
+          "headline": "조선 업황 개선 및 수주 기대감 샘플",
+          "summary": "조선 업황 개선 기대 샘플. 악재 공시 없음.",
+          "riskFlags": []
+        },
+        "closeBuyGuide": "종가 기준 5일선 지지 또는 전일 고점 회복 유지 시 매수 후보 검토",
+        "realtimeSellGuide": "전일 저점 또는 20일선 이탈, 조선 업황 악재 발생 시 실시간 대응"
       },
-      "evidenceScore": 50,
-      "evidenceGrade": "not_available",
-      "evidenceSummary": "수급/뉴스 데이터 미반영"
+      "evidenceScore": 77,
+      "evidenceGrade": "positive",
+      "evidenceSummary": "수급 누적형 + 조선 업황 개선 뉴스 샘플. 종가 기준 확인 후보."
     },
     {
       "rank": 2,
@@ -5084,17 +5100,33 @@
       "liveStatus": "ok",
       "hasLiveQuote": true,
       "evidence": {
-        "evidenceScore": 50,
-        "evidenceGrade": "not_available",
-        "evidenceSummary": "수급/뉴스 데이터 미반영",
-        "supply": {},
-        "news": {},
-        "closeBuyGuide": "매수는 종가 기준으로 기존 기술적 조건 확인",
-        "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+        "evidenceScore": 81,
+        "evidenceGrade": "positive",
+        "evidenceSummary": "수급 누적형 + 밸류업 뉴스 모멘텀 샘플. 우선 확인 후보.",
+        "supply": {
+          "supplyScore": 82,
+          "supplyTrend": "accumulation",
+          "foreign_5d": 3600000000,
+          "institution_5d": 4200000000,
+          "pension_20d": 4700000000,
+          "trust_20d": 2100000000,
+          "finance_5d": 120000000,
+          "summary": "외국인·기관·연기금 누적 매수 샘플"
+        },
+        "news": {
+          "newsTotalScore": 80,
+          "sentiment": "positive",
+          "mainCategory": "policy",
+          "headline": "금융주 밸류업 및 주주환원 기대 샘플",
+          "summary": "금융·밸류업 모멘텀 샘플. 악재 공시 없음.",
+          "riskFlags": []
+        },
+        "closeBuyGuide": "종가 기준 고점 돌파 유지 또는 눌림 지지 확인 시 매수 후보 검토",
+        "realtimeSellGuide": "금융주 정책 악재, 지수 급락, 전일 저점 이탈 시 실시간 대응"
       },
-      "evidenceScore": 50,
-      "evidenceGrade": "not_available",
-      "evidenceSummary": "수급/뉴스 데이터 미반영"
+      "evidenceScore": 81,
+      "evidenceGrade": "positive",
+      "evidenceSummary": "수급 누적형 + 밸류업 뉴스 모멘텀 샘플. 우선 확인 후보."
     },
     {
       "rank": 3,
@@ -5154,17 +5186,33 @@
       "liveStatus": "ok",
       "hasLiveQuote": true,
       "evidence": {
-        "evidenceScore": 50,
-        "evidenceGrade": "not_available",
-        "evidenceSummary": "수급/뉴스 데이터 미반영",
-        "supply": {},
-        "news": {},
-        "closeBuyGuide": "매수는 종가 기준으로 기존 기술적 조건 확인",
-        "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+        "evidenceScore": 64,
+        "evidenceGrade": "supportive",
+        "evidenceSummary": "수급 개선형 + 뉴스 중립권 샘플. 종가 확인 후 관찰.",
+        "supply": {
+          "supplyScore": 66,
+          "supplyTrend": "improving",
+          "foreign_5d": 1800000000,
+          "institution_5d": 600000000,
+          "pension_20d": 1600000000,
+          "trust_20d": 500000000,
+          "finance_5d": 1100000000,
+          "summary": "외국인 중기 수급 양호, 기관 단기 혼조 샘플"
+        },
+        "news": {
+          "newsTotalScore": 62,
+          "sentiment": "neutral",
+          "mainCategory": "industry",
+          "headline": "IT 부품 수요 회복 기대 샘플",
+          "summary": "IT 부품 수요 회복 기대 샘플. 중립권.",
+          "riskFlags": []
+        },
+        "closeBuyGuide": "종가 기준 저항 돌파 또는 20일선 지지 확인 전까지 관찰",
+        "realtimeSellGuide": "수급 재약화 또는 20일선 이탈 시 실시간 대응"
       },
-      "evidenceScore": 50,
-      "evidenceGrade": "not_available",
-      "evidenceSummary": "수급/뉴스 데이터 미반영"
+      "evidenceScore": 64,
+      "evidenceGrade": "supportive",
+      "evidenceSummary": "수급 개선형 + 뉴스 중립권 샘플. 종가 확인 후 관찰."
     },
     {
       "rank": 4,
@@ -5369,17 +5417,35 @@
       "liveStatus": "ok",
       "hasLiveQuote": true,
       "evidence": {
-        "evidenceScore": 50,
-        "evidenceGrade": "not_available",
-        "evidenceSummary": "수급/뉴스 데이터 미반영",
-        "supply": {},
-        "news": {},
-        "closeBuyGuide": "매수는 종가 기준으로 기존 기술적 조건 확인",
-        "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+        "evidenceScore": 64,
+        "evidenceGrade": "supportive",
+        "evidenceSummary": "뉴스는 긍정이나 수급은 단기성. 종가 기준 눌림 확인 필요.",
+        "supply": {
+          "supplyScore": 58,
+          "supplyTrend": "short_term",
+          "foreign_5d": -1900000000,
+          "institution_5d": 950000000,
+          "pension_20d": 1200000000,
+          "trust_20d": 900000000,
+          "finance_5d": 1550000000,
+          "summary": "기관은 양호하나 외국인 단기 매도와 금융투자 단기성 수급 샘플"
+        },
+        "news": {
+          "newsTotalScore": 70,
+          "sentiment": "positive",
+          "mainCategory": "industry",
+          "headline": "반도체 장비 모멘텀 지속 샘플",
+          "summary": "반도체 장비 모멘텀은 긍정이나 단기 변동성 리스크 샘플.",
+          "riskFlags": [
+            "단기 급등 후 변동성 확인 필요"
+          ]
+        },
+        "closeBuyGuide": "장중 추격 금지, 종가 기준 눌림 지지와 거래량 유지 확인 후 검토",
+        "realtimeSellGuide": "급등 후 거래량 붕괴, 외국인 매도 확대 시 실시간 대응"
       },
-      "evidenceScore": 50,
-      "evidenceGrade": "not_available",
-      "evidenceSummary": "수급/뉴스 데이터 미반영"
+      "evidenceScore": 64,
+      "evidenceGrade": "supportive",
+      "evidenceSummary": "뉴스는 긍정이나 수급은 단기성. 종가 기준 눌림 확인 필요."
     },
     {
       "rank": 7,
@@ -6014,17 +6080,36 @@
       "liveStatus": "ok",
       "hasLiveQuote": true,
       "evidence": {
-        "evidenceScore": 50,
-        "evidenceGrade": "not_available",
-        "evidenceSummary": "수급/뉴스 데이터 미반영",
-        "supply": {},
-        "news": {},
-        "closeBuyGuide": "매수는 종가 기준으로 기존 기술적 조건 확인",
-        "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+        "evidenceScore": 44,
+        "evidenceGrade": "risk",
+        "evidenceSummary": "기술 모멘텀은 있으나 수급 약화와 테마성 변동성 리스크 샘플.",
+        "supply": {
+          "supplyScore": 42,
+          "supplyTrend": "weakening",
+          "foreign_5d": -850000000,
+          "institution_5d": 240000000,
+          "pension_20d": 100000000,
+          "trust_20d": 250000000,
+          "finance_5d": 980000000,
+          "summary": "외국인 매도와 금융투자 단기성 수급 강한 리스크 샘플"
+        },
+        "news": {
+          "newsTotalScore": 45,
+          "sentiment": "neutral",
+          "mainCategory": "theme",
+          "headline": "로봇 테마 단기 급등 경계 샘플",
+          "summary": "로봇 테마는 유효하나 단기 변동성 리스크가 있는 샘플.",
+          "riskFlags": [
+            "테마성 급등",
+            "변동성 확대"
+          ]
+        },
+        "closeBuyGuide": "종가 기준 지지 확인 전까지 신규 매수 보류",
+        "realtimeSellGuide": "전일 저점 이탈, 거래량 붕괴, 급등분 반납 시 실시간 대응"
       },
-      "evidenceScore": 50,
-      "evidenceGrade": "not_available",
-      "evidenceSummary": "수급/뉴스 데이터 미반영"
+      "evidenceScore": 44,
+      "evidenceGrade": "risk",
+      "evidenceSummary": "기술 모멘텀은 있으나 수급 약화와 테마성 변동성 리스크 샘플."
     },
     {
       "rank": 16,
@@ -10675,10 +10760,10 @@
     }
   ],
   "evidenceMeta": {
-    "matchedCount": 0,
-    "missingCount": 80,
-    "positiveCount": 0,
-    "riskCount": 0,
+    "matchedCount": 5,
+    "missingCount": 75,
+    "positiveCount": 2,
+    "riskCount": 2,
     "strategy": {
       "buy": "close_price_based",
       "sell": "realtime_based"

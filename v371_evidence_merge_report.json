@@ -1,7 +1,7 @@
 {
   "version": "V371_EVIDENCE_MERGE_REPORT",
   "status": "ok",
-  "updatedAt": "2026-06-07 19:09:42 KST",
+  "updatedAt": "2026-06-07 19:28:32 KST",
   "inputFiles": {
     "stockCandidates": "stock_candidates.json",
     "appDataBundle": "app_data_bundle.json",
@@ -14,15 +14,15 @@
     "bundleWithEvidence": "app_data_bundle_with_evidence.json"
   },
   "candidateCount": 80,
-  "matchedEvidenceCount": 0,
-  "missingEvidenceCount": 80,
-  "positiveEvidenceCount": 0,
-  "riskEvidenceCount": 0,
+  "matchedEvidenceCount": 5,
+  "missingEvidenceCount": 75,
+  "positiveEvidenceCount": 2,
+  "riskEvidenceCount": 2,
   "checks": {
     "stockCandidatesPresent": true,
-    "evidenceDataPresent": false,
-    "supplyDataPresent": false,
-    "newsDataPresent": false,
+    "evidenceDataPresent": true,
+    "supplyDataPresent": true,
+    "newsDataPresent": true,
     "outputCreated": true,
     "strategyBuyCloseBased": true,
     "strategySellRealtimeBased": true
