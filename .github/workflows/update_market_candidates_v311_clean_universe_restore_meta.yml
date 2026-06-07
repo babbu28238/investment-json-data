@@ -1,0 +1,479 @@
+name: Update Market Candidates V311 CLEAN UNIVERSE RESTORE META
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-market-candidates-v311:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas numpy lxml
+
+      - name: V311 preflight - verify V306 scanner exists
+        run: |
+          set -e
+          test -f scripts/generate_stock_candidates_v306_minimal.py
+          grep -q "CV306_EOD_MINIMAL_SCANNER" scripts/generate_stock_candidates_v306_minimal.py
+          grep -q "EOD_CLOSE_BASED" scripts/generate_stock_candidates_v306_minimal.py
+          echo "[OK] V306 scanner exists"
+
+      - name: Generate market candidates input
+        timeout-minutes: 8
+        run: |
+          set -e
+          python scripts/generate_stock_candidates_v306_minimal.py
+          test -f stock_candidates_input.csv
+          test -f market_scanner_summary.json
+
+      - name: V311 clean universe and restore metadata
+        run: |
+          set -e
+          python - <<'PY'
+          import csv
+          import json
+          import re
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          from typing import Any, Dict, List, Iterable
+
+          VERSION = "V311_CLEAN_UNIVERSE_RESTORE_META"
+          BUNDLE_VERSION = "V311_APP_DATA_BUNDLE"
+          TARGET_COUNT = 80
+          MIN_COUNT = 50
+
+          KST = timezone(timedelta(hours=9))
+          now = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+          input_csv = Path("stock_candidates_input.csv")
+          stock_json = Path("stock_candidates.json")
+          bundle_json = Path("app_data_bundle.json")
+          report_json = Path("v311_clean_universe_report.json")
+
+          old_stock_text = stock_json.read_text(encoding="utf-8", errors="ignore") if stock_json.exists() else ""
+          old_bundle_text = bundle_json.read_text(encoding="utf-8", errors="ignore") if bundle_json.exists() else ""
+
+          def read_json(path: Path, default=None):
+              if not path.exists():
+                  return default
+              try:
+                  return json.loads(path.read_text(encoding="utf-8", errors="ignore"))
+              except Exception:
+                  return default
+
+          def clean(v: Any) -> str:
+              return "" if v is None else str(v).strip()
+
+          def lower_map(row: Dict[str, Any]) -> Dict[str, Any]:
+              return {str(k).strip().lower(): v for k, v in row.items()}
+
+          def get(row: Dict[str, Any], *keys: str, default="") -> str:
+              m = lower_map(row)
+              for key in keys:
+                  lk = key.lower()
+                  if lk in m and clean(m[lk]) != "":
+                      return clean(m[lk])
+              return default
+
+          def to_int(v: Any, default=50) -> int:
+              try:
+                  return int(float(str(v).replace(",", "").replace("%", "").strip()))
+              except Exception:
+                  return default
+
+          def to_float(v: Any, default=0.0) -> float:
+              try:
+                  return float(str(v).replace(",", "").replace("%", "").strip())
+              except Exception:
+                  return default
+
+          def normalize_code(code: Any) -> str:
+              s = clean(code)
+              m = re.search(r"(\d{6})", s)
+              return m.group(1) if m else s.zfill(6) if s.isdigit() else s
+
+          ETF_KEYWORDS = [
+              "KODEX", "TIGER", "ACE ", "ACE", "KBSTAR", "ARIRANG", "HANARO", "SOL ", "SOL", "KOSEF", "TIMEFOLIO",
+              "RISE", "PLUS", "TREX", "UNICORN", "마이티", "히어로즈",
+              "ETF", "ETN", "인버스", "레버리지", "선물", "액티브", "합성", "나스닥", "S&P", "S&P500",
+              "미국", "중국", "일본", "필라델피아", "TOP10", "TOP2", "CD금리", "금리", "채권", "국채", "달러",
+          ]
+          BAD_KEYWORDS = ["스팩", "SPAC", "기업인수목적", "리츠", "REIT", "우선주"]
+
+          def is_bad_name(name: str) -> bool:
+              n = clean(name).upper()
+              raw = clean(name)
+              if not n:
+                  return True
+              if any(k.upper() in n for k in ETF_KEYWORDS):
+                  return True
+              if any(k.upper() in n for k in BAD_KEYWORDS):
+                  return True
+              # 우선주 패턴: 삼성전자우, 현대차2우B 등
+              if re.search(r"(우|우B|[0-9]+우B)$", raw):
+                  return True
+              return False
+
+          THEME_BONUS = {
+              "반도체": 4, "AI": 4, "원전": 4, "전력": 4, "에너지": 4,
+              "방산": 4, "우주": 4, "조선": 3, "해양": 3,
+              "2차전지": 3, "소재": 2, "로봇": 3, "자동화": 2,
+              "금융": 2, "밸류업": 2, "바이오": 1, "제약": 1,
+          }
+
+          def infer_sector(name: str, market: str, raw_sector: str = "") -> str:
+              s = raw_sector if raw_sector and "종가선별" not in raw_sector else ""
+              if s:
+                  return s
+              rules = [
+                  ("반도체·AI", ["삼성전자", "하이닉스", "반도체", "한미반도체", "원익", "HPSP", "이오테크닉스", "리노공업", "테스"]),
+                  ("조선·해양", ["조선", "중공업", "한화오션", "HD현대중공업", "삼성중공업"]),
+                  ("방산·우주항공", ["한화에어로", "한화시스템", "LIG", "넥스원", "항공우주", "KAI"]),
+                  ("원전·전력·에너지", ["두산에너빌리티", "LS ELECTRIC", "대한전선", "전선", "일렉트릭", "전력"]),
+                  ("금융·밸류업", ["금융", "은행", "지주", "증권", "KB금융", "신한지주", "하나금융", "미래에셋"]),
+                  ("2차전지·소재", ["LG에너지솔루션", "에코프로", "POSCO", "포스코", "엘앤에프", "금양"]),
+                  ("자동차·모빌리티", ["현대차", "기아", "모비스", "오토에버"]),
+                  ("로봇·자동화", ["로봇", "로보", "두산로보", "레인보우"]),
+                  ("바이오·제약", ["셀트리온", "삼성바이오", "알테오젠", "한미약품", "약품", "바이오"]),
+              ]
+              for sec, keys in rules:
+                  if any(k.upper() in name.upper() for k in keys):
+                      return sec
+              return f"{market} 종가선별"
+
+          def collect_dicts(obj: Any) -> Iterable[Dict[str, Any]]:
+              if isinstance(obj, dict):
+                  yield obj
+                  for v in obj.values():
+                      yield from collect_dicts(v)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      yield from collect_dicts(v)
+
+          def add_candidate(raw: Dict[str, Any], source: str, out: Dict[str, Dict[str, Any]]):
+              code = normalize_code(get(raw, "code", "종목코드", "ticker", "symbol", "stockCode"))
+              name = get(raw, "name", "종목명", "stockName", "stock_name")
+              if not code or not name or not re.fullmatch(r"\d{6}", code):
+                  return
+              if is_bad_name(name):
+                  return
+              market = get(raw, "market", "시장", default="KOSPI") or "KOSPI"
+              raw_sector = get(raw, "sector", "industry", "업종", "theme", default="")
+              sector = infer_sector(name, market, raw_sector)
+              score = to_int(get(raw, "score", "totalScore", "qualityScore", "점수", default="50"), 50)
+              tech = to_int(get(raw, "technicalScore", "technical_score", default=str(score)), score)
+              change_rate = get(raw, "changeRate", "change_rate", "등락률", default="0")
+              # keep best source/score per code
+              prev = out.get(code)
+              candidate = {
+                  "name": name, "code": code, "market": market, "sector": sector, "industry": sector,
+                  "rawScannerScore": score, "technicalScore": tech, "changeRate": change_rate,
+                  "_source": source,
+              }
+              if prev is None or (tech + score) > (prev.get("technicalScore", 0) + prev.get("rawScannerScore", 0)):
+                  out[code] = candidate
+
+          # 기존 메타 보존용 로드
+          old_by_code: Dict[str, Dict[str, Any]] = {}
+          old_stock = read_json(stock_json, [])
+          old_items = old_stock.get("candidates", []) if isinstance(old_stock, dict) else old_stock if isinstance(old_stock, list) else []
+          for item in old_items:
+              if isinstance(item, dict):
+                  c = normalize_code(item.get("code", ""))
+                  if c:
+                      old_by_code[c] = item
+
+          live_by_code: Dict[str, Dict[str, Any]] = {}
+          live = read_json(Path("live_quotes.json"), {})
+          live_items = live.get("quotes", live.get("items", live.get("data", []))) if isinstance(live, dict) else live if isinstance(live, list) else []
+          if isinstance(live, dict):
+              for k, v in live.items():
+                  if isinstance(v, dict) and re.fullmatch(r"\d{6}", str(k)):
+                      live_by_code[str(k)] = v
+          if isinstance(live_items, list):
+              for item in live_items:
+                  if isinstance(item, dict):
+                      c = normalize_code(item.get("code") or item.get("ticker") or item.get("symbol") or item.get("종목코드") or "")
+                      if c:
+                          live_by_code[c] = item
+
+          pool: Dict[str, Dict[str, Any]] = {}
+          # 1) input csv
+          with input_csv.open("r", encoding="utf-8-sig", newline="") as f:
+              for row in csv.DictReader(f):
+                  add_candidate(row, "stock_candidates_input.csv", pool)
+
+          # 2) scanner jsons for backfill
+          for p in [Path("market_scan_results.json"), Path("market_universe.json")]:
+              obj = read_json(p, None)
+              if obj is None:
+                  continue
+              for d in collect_dicts(obj):
+                  add_candidate(d, str(p), pool)
+
+          if len(pool) < MIN_COUNT:
+              raise SystemExit(f"[FAIL] clean common-stock pool too small: {len(pool)}")
+
+          def quality_score(item: Dict[str, Any]):
+              raw = int(item.get("rawScannerScore", 50))
+              tech = int(item.get("technicalScore", raw))
+              cr = to_float(item.get("changeRate", 0), 0.0)
+              market = item.get("market", "")
+              sector = item.get("sector", "")
+              score = round(raw * 0.45 + tech * 0.45)
+              reasons = []
+              if -3.5 <= cr <= 3.5:
+                  score += 5; reasons.append("등락률 안정권")
+              elif 3.5 < cr <= 7.0:
+                  score -= 1; reasons.append("상승 모멘텀 있으나 추격 주의")
+              elif cr > 7.0:
+                  score -= 8; reasons.append("단기 급등 과열 감점")
+              elif -7.0 <= cr < -3.5:
+                  score -= 2; reasons.append("단기 약세 감점")
+              elif cr < -7.0:
+                  score -= 8; reasons.append("급락 리스크 감점")
+              if market.upper() == "KOSPI":
+                  score += 5; reasons.append("KOSPI 유동성 가점")
+              elif market.upper() == "KOSDAQ":
+                  score += 2; reasons.append("KOSDAQ 후보")
+              bonus = 0
+              for k, v in THEME_BONUS.items():
+                  if k.upper() in sector.upper():
+                      bonus = max(bonus, v)
+              if bonus:
+                  score += bonus; reasons.append(f"주도 테마 가점 +{bonus}")
+              score = max(0, min(100, int(score)))
+              if score >= 82:
+                  grade, action = "A", "우선관찰"
+              elif score >= 74:
+                  grade, action = "B", "우선관찰"
+              elif score >= 65:
+                  grade, action = "C", "관찰"
+              else:
+                  grade, action = "D", "보류"
+              return score, grade, action, reasons
+
+          ranked_base = sorted(pool.values(), key=lambda x: (int(x.get("technicalScore", 0)), int(x.get("rawScannerScore", 0))), reverse=True)
+          final: List[Dict[str, Any]] = []
+          for base in ranked_base:
+              if len(final) >= TARGET_COUNT:
+                  break
+              code = base["code"]
+              old = old_by_code.get(code, {})
+              live_item = live_by_code.get(code, {})
+              score, grade, action, reasons = quality_score(base)
+              item = dict(old) if isinstance(old, dict) else {}
+              item.update({
+                  "rank": len(final) + 1,
+                  "name": base["name"],
+                  "code": code,
+                  "market": base["market"],
+                  "sector": base["sector"],
+                  "industry": base["industry"],
+                  "score": score,
+                  "grade": grade,
+                  "rawScannerScore": base["rawScannerScore"],
+                  "technicalScore": base["technicalScore"],
+                  "changeRate": base["changeRate"],
+                  "qualityReasons": reasons,
+                  "reason": f"{action} / V311 정제점수 {score}점({grade}) / ETF·ETN·스팩·우선주 제외 / 원점수 {base['rawScannerScore']}·기술 {base['technicalScore']}·등락률 {base['changeRate']}",
+                  "strategy": "종가 기준 후보: 다음 거래일 시가·눌림·수급 확인 후 분할 접근",
+                  "entryPrice": "시가 과열 시 추격 금지, 5일선/전일 종가 부근 눌림 확인",
+                  "stopLoss": "전일 저점 또는 20일선 이탈",
+                  "targetPrice": "분할 익절",
+                  "recommendationAction": action,
+                  "recommendationGrade": grade,
+                  "recommendationScore": score,
+                  "recommendationReason": " / ".join(reasons) if reasons else "V311 정제 유니버스 기반 후보",
+                  "recommendationMeta": {
+                      "version": VERSION,
+                      "rank": len(final) + 1,
+                      "score": score,
+                      "grade": grade,
+                      "action": action,
+                      "basis": ["v306_eod_scanner", "clean_common_stock_universe", "quality_score", "metadata_restore"],
+                      "updatedAt": now,
+                  },
+                  "dataStatus": {
+                      "finalRecommendationScore": score,
+                      "recommendationAction": action,
+                      "technicalScore": base["technicalScore"],
+                      "rawScannerScore": base["rawScannerScore"],
+                      "hasSupplyData": bool(old.get("supplyMemo") or old.get("foreign5D") or old.get("dataStatus", {}).get("hasSupplyData")),
+                      "hasReportHint": bool(old.get("reportSignal") or old.get("dataStatus", {}).get("hasReportHint")),
+                      "hasNewsSignal": bool(old.get("newsSignal")),
+                      "recommendationUpdatedAt": now,
+                      "source": VERSION,
+                  },
+                  "hasRecommendationMeta": True,
+                  "updatedAt": now,
+              })
+              # preserve useful metadata
+              preserve_keys = [
+                  "foreign5D","foreign20D","foreign60D","pension5D","pension20D","pension60D","trust5D","trust20D","trust60D",
+                  "finance5D","finance20D","finance60D","newsSignal","reportSignal","riskMemo","supplyMemo","supplyReflectionStatus",
+                  "recommendationBreakdown","recommendationVersion"
+              ]
+              for k in preserve_keys:
+                  if old.get(k) not in (None, ""):
+                      item[k] = old[k]
+              # live quote restore from live_quotes.json or old stock
+              live_fields = {
+                  "livePrice": ["livePrice", "price", "currentPrice", "close", "현재가"],
+                  "liveChangeRate": ["liveChangeRate", "changeRate", "등락률"],
+                  "liveVolume": ["liveVolume", "volume", "거래량"],
+                  "liveUpdatedAt": ["liveUpdatedAt", "updatedAt"],
+              }
+              has_live = False
+              for out_key, keys in live_fields.items():
+                  val = ""
+                  for src in [live_item, old]:
+                      if isinstance(src, dict):
+                          for kk in keys:
+                              if src.get(kk) not in (None, ""):
+                                  val = clean(src.get(kk)); break
+                      if val:
+                          break
+                  if val:
+                      item[out_key] = val; has_live = True
+              if has_live:
+                  item["liveSource"] = item.get("liveSource") or "restored_live_quotes"
+                  item["liveStatus"] = item.get("liveStatus") or "ok"
+                  item["hasLiveQuote"] = True
+                  if item.get("livePrice"):
+                      item["currentPriceLive"] = item["livePrice"]
+                      item["realTimePrice"] = item["livePrice"]
+              else:
+                  item["hasLiveQuote"] = False
+              final.append(item)
+
+          if len(final) < MIN_COUNT:
+              raise SystemExit(f"[FAIL] final common-stock candidate count too small: {len(final)}")
+
+          # rerank after quality score
+          final = sorted(final, key=lambda x: (int(x.get("recommendationScore", 0)), int(x.get("technicalScore", 0))), reverse=True)
+          for i, item in enumerate(final, start=1):
+              item["rank"] = i
+              item["recommendationMeta"]["rank"] = i
+
+          stock_json.write_text(json.dumps(final, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          bundle = {
+              "version": BUNDLE_VERSION,
+              "updatedAt": now,
+              "status": "ok",
+              "candidateCount": len(final),
+              "liveQuoteCount": sum(1 for x in final if x.get("hasLiveQuote")),
+              "missingFiles": [],
+              "warnings": [],
+              "topCandidates": [
+                  {"rank": x["rank"], "name": x["name"], "code": x["code"], "score": x["score"], "grade": x["grade"], "reason": x["reason"]}
+                  for x in final[:20]
+              ],
+              "sources": {
+                  "candidates": {"exists": True, "path": "stock_candidates.json", "error": ""},
+                  "scannerInput": {"exists": input_csv.exists(), "path": "stock_candidates_input.csv", "error": ""},
+                  "marketScannerSummary": {"exists": Path("market_scanner_summary.json").exists(), "path": "market_scanner_summary.json", "error": ""},
+                  "liveQuotes": {"exists": Path("live_quotes.json").exists(), "path": "live_quotes.json", "error": ""},
+              },
+              "payload": {"candidates": final},
+          }
+          bundle_json.write_text(json.dumps(bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          report = {
+              "version": VERSION,
+              "status": "ok",
+              "updatedAt": now,
+              "inputPoolCountAfterFilter": len(pool),
+              "finalCandidateCount": len(final),
+              "appBundleCandidateCount": len(final),
+              "liveQuoteCount": bundle["liveQuoteCount"],
+              "filteredPolicy": "ETF/ETN/SPAC/REIT/preferred/common non-stock names removed",
+              "top5": [{"rank": x["rank"], "name": x["name"], "code": x["code"], "score": x["score"], "grade": x["grade"]} for x in final[:5]],
+              "forcedCommit": True,
+          }
+          report_json.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+
+      - name: V311 postflight - prove clean universe and count is valid
+        run: |
+          set -e
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          bad = ["KODEX", "TIGER", "ACE", "KBSTAR", "ARIRANG", "HANARO", "SOL", "KOSEF", "TIMEFOLIO", "ETF", "ETN", "스팩", "SPAC", "리츠", "인버스", "레버리지", "액티브", "합성"]
+          stock = json.loads(Path("stock_candidates.json").read_text(encoding="utf-8"))
+          bundle = json.loads(Path("app_data_bundle.json").read_text(encoding="utf-8"))
+          report = json.loads(Path("v311_clean_universe_report.json").read_text(encoding="utf-8"))
+          stock_count = len(stock) if isinstance(stock, list) else len(stock.get("candidates", []))
+          bundle_count = int(bundle.get("candidateCount", 0))
+          offenders = [x.get("name", "") for x in stock if any(k.upper() in x.get("name", "").upper() for k in bad)]
+          print(f"[CHECK] stock_count={stock_count}")
+          print(f"[CHECK] bundle_count={bundle_count}")
+          print(f"[CHECK] liveQuoteCount={bundle.get('liveQuoteCount')}")
+          print(f"[CHECK] offenders={offenders[:10]}")
+          if stock_count < 50:
+              raise SystemExit(f"[FAIL] stock count too small: {stock_count}")
+          if bundle_count != stock_count:
+              raise SystemExit(f"[FAIL] bundle count mismatch: {bundle_count} != {stock_count}")
+          if offenders:
+              raise SystemExit(f"[FAIL] non-common-stock names remain: {offenders[:10]}")
+          if report.get("status") != "ok":
+              raise SystemExit("[FAIL] report status not ok")
+          if bundle.get("version") != "V311_APP_DATA_BUNDLE":
+              raise SystemExit(f"[FAIL] wrong bundle version: {bundle.get('version')}")
+          print("[OK] V311 postflight passed")
+          PY
+
+          echo "[GIT STATUS]"
+          git status --short
+          echo "[GIT DIFF STAT]"
+          git diff --stat
+
+      - name: Commit updated data files
+        run: |
+          set -e
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add \
+            stock_candidates_input.csv \
+            market_universe.json \
+            market_scan_results.json \
+            market_scanner_summary.json \
+            market_scanner_errors.txt \
+            stock_candidates.json \
+            app_data_bundle.json \
+            v311_clean_universe_report.json \
+            2>/dev/null || true
+
+          echo "[GIT CACHED DIFF]"
+          git diff --cached --stat
+
+          if git diff --cached --quiet; then
+            echo "[FAIL] No changes staged. V311 expected updatedAt and clean universe changes."
+            exit 1
+          fi
+
+          git commit -m "V311 clean universe and restore app metadata"
+          git pull --rebase origin main
+          git push origin main
+          echo "[OK] pushed V311 clean universe files"
