@@ -1,0 +1,366 @@
+name: Update Market Candidates V360 WATCHLIST DEEP DIAGNOSIS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  v360-watchlist-deep-diagnosis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V360 build watchlist deep diagnosis
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone, timedelta
+
+          KST = timezone(timedelta(hours=9))
+          now = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+          watchlist_path = Path("watchlist_codes.json")
+          candidates_path = Path("stock_candidates.json")
+          lookup_compact_path = Path("stock_lookup_compact.json")
+          lookup_index_path = Path("stock_lookup_index.json")
+          bundle_path = Path("app_data_bundle.json")
+
+          output_path = Path("watchlist_deep_diagnosis.json")
+          report_path = Path("v360_watchlist_deep_diagnosis_report.json")
+
+          def read_json(path, default):
+              if not path.exists():
+                  return default
+              try:
+                  return json.loads(path.read_text(encoding="utf-8"))
+              except Exception as exc:
+                  raise SystemExit(f"[FAIL] JSON read error: {path} / {exc}")
+
+          if not watchlist_path.exists():
+              template = {
+                  "version": "V360_WATCHLIST_CODES_REQUIRED",
+                  "updatedAt": now,
+                  "codes": [],
+                  "message": "앱 관심 탭 V358에서 코드 목록을 복사해 codes 배열에 입력하세요."
+              }
+              watchlist_path.write_text(json.dumps(template, ensure_ascii=False, indent=2), encoding="utf-8")
+              report = {
+                  "version": "V360_WATCHLIST_DEEP_DIAGNOSIS",
+                  "status": "fail",
+                  "updatedAt": now,
+                  "reason": "watchlist_codes.json 파일이 없어 템플릿을 생성했습니다. codes 배열을 채운 뒤 다시 실행하세요.",
+                  "requiredFile": "watchlist_codes.json"
+              }
+              report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+              raise SystemExit("[FAIL] watchlist_codes.json missing. Template created.")
+
+          watchlist_data = read_json(watchlist_path, {})
+          raw_codes = watchlist_data.get("codes", [])
+          if not isinstance(raw_codes, list):
+              raise SystemExit("[FAIL] watchlist_codes.json의 codes는 배열이어야 합니다.")
+
+          def normalize_code(code):
+              code = str(code).strip()
+              if code.endswith(".0"):
+                  code = code[:-2]
+              if code.isdigit() and len(code) < 6:
+                  code = code.zfill(6)
+              return code
+
+          codes = []
+          seen = set()
+          for code in raw_codes:
+              normalized = normalize_code(code)
+              if not normalized:
+                  continue
+              if normalized not in seen:
+                  seen.add(normalized)
+                  codes.append(normalized)
+
+          candidates_raw = read_json(candidates_path, [])
+          if isinstance(candidates_raw, dict):
+              candidates = candidates_raw.get("candidates", [])
+          elif isinstance(candidates_raw, list):
+              candidates = candidates_raw
+          else:
+              candidates = []
+
+          lookup_raw = read_json(lookup_compact_path, {})
+          if not lookup_raw and lookup_index_path.exists():
+              lookup_raw = read_json(lookup_index_path, {})
+
+          lookup_items = []
+          if isinstance(lookup_raw, dict):
+              lookup_items = lookup_raw.get("stocks", []) or lookup_raw.get("items", []) or []
+          elif isinstance(lookup_raw, list):
+              lookup_items = lookup_raw
+
+          bundle_raw = read_json(bundle_path, {})
+          bundle_candidates = []
+          if isinstance(bundle_raw, dict):
+              bundle_candidates = bundle_raw.get("candidates", []) or []
+
+          def get_code(item):
+              return str(item.get("code") or item.get("stockCode") or item.get("symbol") or "").strip()
+
+          def get_name(item):
+              return str(item.get("name") or item.get("stockName") or item.get("companyName") or "-").strip()
+
+          candidate_by_code = {}
+          for item in candidates + bundle_candidates:
+              if isinstance(item, dict):
+                  c = normalize_code(get_code(item))
+                  if c and c not in candidate_by_code:
+                      candidate_by_code[c] = item
+
+          lookup_by_code = {}
+          for item in lookup_items:
+              if isinstance(item, dict):
+                  c = normalize_code(get_code(item))
+                  if c and c not in lookup_by_code:
+                      lookup_by_code[c] = item
+
+          def as_int(value, default=0):
+              try:
+                  if value is None:
+                      return default
+                  if isinstance(value, str):
+                      value = value.replace(",", "").replace("%", "").strip()
+                      if value == "" or value == "-":
+                          return default
+                  return int(float(value))
+              except Exception:
+                  return default
+
+          def as_float(value, default=0.0):
+              try:
+                  if value is None:
+                      return default
+                  if isinstance(value, str):
+                      value = value.replace(",", "").replace("%", "").strip()
+                      if value == "" or value == "-":
+                          return default
+                  return float(value)
+              except Exception:
+                  return default
+
+          def first_value(item, keys, default="-"):
+              for key in keys:
+                  value = item.get(key)
+                  if value is not None and value != "":
+                      return value
+              return default
+
+          def score_from(candidate, lookup):
+              score = first_value(candidate, ["score", "recommendationScore", "finalScore", "totalScore"], None)
+              if score is None or score == "-":
+                  score = first_value(lookup, ["recommendationScore", "scannerScoreHint", "score"], 50)
+              return max(0, min(100, as_int(score, 50)))
+
+          def grade_from_score(score):
+              if score >= 90:
+                  return "A+"
+              if score >= 85:
+                  return "A"
+              if score >= 75:
+                  return "B"
+              if score >= 65:
+                  return "C"
+              return "D"
+
+          def action_from_score(score, is_recommended):
+              if is_recommended:
+                  if score >= 85:
+                      return "눌림 후 분할"
+                  if score >= 70:
+                      return "돌파 관찰"
+                  if score >= 55:
+                      return "눌림 대기"
+                  return "보류"
+
+              if score >= 70:
+                  return "관심 추적"
+              return "추천 밖 추적"
+
+          def liquidity_score(lookup):
+              volume = as_int(first_value(lookup, ["volumeHint", "volume", "거래량"], 0), 0)
+              if volume >= 1_000_000:
+                  return 90
+              if volume >= 300_000:
+                  return 75
+              if volume >= 100_000:
+                  return 60
+              if volume > 0:
+                  return 45
+              return 35
+
+          def momentum_score(lookup):
+              rate = as_float(first_value(lookup, ["changeRateHint", "changeRate", "등락률"], 0), 0)
+              if 3 <= rate <= 8:
+                  return 85
+              if rate > 8:
+                  return 60
+              if rate >= 0:
+                  return 70
+              if abs(rate) <= 3:
+                  return 60
+              if abs(rate) <= 7:
+                  return 45
+              return 35
+
+          def size_score(lookup):
+              cap = as_int(first_value(lookup, ["marketCapHint", "marketCap", "시가총액"], 0), 0)
+              if cap >= 300_000:
+                  return 90
+              if cap >= 50_000:
+                  return 75
+              if cap >= 10_000:
+                  return 60
+              if cap > 0:
+                  return 45
+              return 35
+
+          diagnosis_items = []
+          missing_codes = []
+
+          for code in codes:
+              candidate = candidate_by_code.get(code, {})
+              lookup = lookup_by_code.get(code, {})
+              if not candidate and not lookup:
+                  missing_codes.append(code)
+                  diagnosis_items.append({
+                      "code": code,
+                      "name": "-",
+                      "status": "missing",
+                      "isRecommended": False,
+                      "score": 0,
+                      "grade": "N/A",
+                      "action": "데이터 없음",
+                      "message": "stock_candidates.json 및 stock_lookup_compact.json에서 찾을 수 없습니다."
+                  })
+                  continue
+
+              base = candidate if candidate else lookup
+              is_recommended = bool(candidate) or bool(lookup.get("isRecommended"))
+              score = score_from(candidate, lookup)
+              grade = first_value(candidate, ["grade", "recommendationGrade"], None)
+              if grade is None or grade == "-":
+                  grade = first_value(lookup, ["recommendationGrade"], grade_from_score(score))
+
+              market = first_value(base, ["market", "시장"], "-")
+              sector = first_value(base, ["sector", "업종"], "-")
+              name = get_name(base)
+
+              liq = liquidity_score(lookup)
+              mom = momentum_score(lookup)
+              siz = size_score(lookup)
+
+              risk_flags = []
+              if liq < 60:
+                  risk_flags.append("유동성 확인")
+              if mom < 50:
+                  risk_flags.append("단기 변동성 주의")
+              if not is_recommended:
+                  risk_flags.append("오늘 추천 후보 밖")
+              if score < 55:
+                  risk_flags.append("점수 낮음")
+
+              if not risk_flags:
+                  risk_flags.append("기본 조건 양호")
+
+              diagnosis_items.append({
+                  "code": code,
+                  "name": name,
+                  "status": "ok",
+                  "isRecommended": is_recommended,
+                  "rank": first_value(candidate, ["rank", "recommendedRank"], first_value(lookup, ["recommendedRank"], None)),
+                  "score": score,
+                  "grade": grade,
+                  "market": market,
+                  "sector": sector,
+                  "action": action_from_score(score, is_recommended),
+                  "liquidityScore": liq,
+                  "momentumScore": mom,
+                  "sizeScore": siz,
+                  "riskFlags": risk_flags,
+                  "entryGuide": "시가 갭상승 추격 금지, 눌림 지지 또는 전일 고점 회복 확인",
+                  "stopGuide": first_value(candidate, ["stopLoss", "stopGuide"], "전일 저점 또는 단기 이평선 이탈 시 재검토"),
+                  "reason": first_value(candidate, ["reason", "recommendationReason"], "관심종목 추적 대상"),
+                  "updatedAt": now
+              })
+
+          diagnosis_items.sort(key=lambda x: (x.get("status") != "ok", -as_int(x.get("score", 0)), x.get("name", "")))
+
+          output = {
+              "version": "V360_WATCHLIST_DEEP_DIAGNOSIS",
+              "updatedAt": now,
+              "source": "watchlist_codes.json",
+              "watchlistCount": len(codes),
+              "diagnosisCount": len(diagnosis_items),
+              "missingCount": len(missing_codes),
+              "items": diagnosis_items
+          }
+
+          recommended_count = sum(1 for x in diagnosis_items if x.get("isRecommended"))
+          non_recommended_count = sum(1 for x in diagnosis_items if x.get("status") == "ok" and not x.get("isRecommended"))
+          high_priority_count = sum(1 for x in diagnosis_items if as_int(x.get("score", 0)) >= 85)
+
+          report = {
+              "version": "V360_WATCHLIST_DEEP_DIAGNOSIS_REPORT",
+              "status": "ok" if codes else "empty",
+              "updatedAt": now,
+              "inputFile": "watchlist_codes.json",
+              "outputFile": "watchlist_deep_diagnosis.json",
+              "watchlistCount": len(codes),
+              "diagnosisCount": len(diagnosis_items),
+              "recommendedCount": recommended_count,
+              "nonRecommendedCount": non_recommended_count,
+              "highPriorityCount": high_priority_count,
+              "missingCodes": missing_codes,
+              "checks": {
+                  "watchlistCodesPresent": len(codes) > 0,
+                  "candidateFilePresent": candidates_path.exists(),
+                  "lookupFilePresent": lookup_compact_path.exists() or lookup_index_path.exists(),
+                  "outputCreated": True
+              }
+          }
+
+          output_path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+          report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+
+          if not codes:
+              raise SystemExit("[FAIL] watchlist_codes.json codes 배열이 비어 있습니다.")
+
+          print("[OK] V360 watchlist deep diagnosis created")
+          PY
+
+      - name: Commit V360 watchlist diagnosis files
+        run: |
+          set -e
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add watchlist_codes.json watchlist_deep_diagnosis.json v360_watchlist_deep_diagnosis_report.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update V360 watchlist deep diagnosis"
+            git pull --rebase origin main
+            git push origin main
+          fi
