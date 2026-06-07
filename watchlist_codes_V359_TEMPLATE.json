@@ -1,0 +1,21 @@
+{
+  "version": "V359_WATCHLIST_CODES_INPUT_TEMPLATE",
+  "updatedAt": "YYYY-MM-DD HH:mm KST",
+  "description": "앱 관심 탭의 V358 코드 목록 복사 결과를 아래 codes 배열에 붙여 넣어 사용합니다.",
+  "usage": [
+    "앱 > 관심 탭 > V358 관심종목 심층 업데이트 준비 > 코드 목록 복사",
+    "복사된 종목코드를 codes 배열에 넣기",
+    "이 파일명을 watchlist_codes.json으로 저장",
+    "GitHub 저장소 루트에 업로드"
+  ],
+  "codes": [
+    "005930",
+    "000660",
+    "042660"
+  ],
+  "notes": {
+    "format": "종목코드는 문자열 6자리로 입력합니다.",
+    "duplicateHandling": "중복 코드는 이후 단계에서 자동 제거할 예정입니다.",
+    "warning": "이 파일은 관심종목 심층 업데이트용 입력 파일이며 매수 추천 파일이 아닙니다."
+  }
+}
