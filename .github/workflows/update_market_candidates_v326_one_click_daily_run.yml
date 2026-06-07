@@ -1,0 +1,112 @@
+name: Update Market Candidates V326 ONE CLICK DAILY RUN
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 18:30 weekdays = UTC 09:30
+    - cron: '30 9 * * 1-5'
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  v326-one-click-daily-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: V326 run daily workflows sequentially
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BRANCH: main
+        run: |
+          set -e
+
+          run_and_wait() {
+            local workflow_file="$1"
+            local workflow_label="$2"
+
+            echo ""
+            echo "============================================================"
+            echo "[V326] Dispatching: ${workflow_label}"
+            echo "[V326] Workflow file: ${workflow_file}"
+            echo "============================================================"
+
+            gh workflow run "${workflow_file}" --repo "${GH_REPO}" --ref "${BRANCH}"
+
+            echo "[V326] Waiting for GitHub to register the run..."
+            sleep 12
+
+            local run_id=""
+            for i in $(seq 1 20); do
+              run_id=$(gh run list \
+                --repo "${GH_REPO}" \
+                --workflow "${workflow_file}" \
+                --branch "${BRANCH}" \
+                --event workflow_dispatch \
+                --limit 1 \
+                --json databaseId \
+                --jq '.[0].databaseId // empty')
+
+              if [ -n "${run_id}" ]; then
+                break
+              fi
+
+              echo "[V326] Run not visible yet. retry=${i}"
+              sleep 6
+            done
+
+            if [ -z "${run_id}" ]; then
+              echo "[V326][FAIL] Could not find dispatched run for ${workflow_file}"
+              exit 1
+            fi
+
+            echo "[V326] Tracking run_id=${run_id}"
+
+            for i in $(seq 1 120); do
+              local status
+              local conclusion
+
+              status=$(gh run view "${run_id}" \
+                --repo "${GH_REPO}" \
+                --json status \
+                --jq '.status')
+
+              conclusion=$(gh run view "${run_id}" \
+                --repo "${GH_REPO}" \
+                --json conclusion \
+                --jq '.conclusion // "null"')
+
+              echo "[V326] ${workflow_label} status=${status} conclusion=${conclusion} elapsed_check=${i}"
+
+              if [ "${status}" = "completed" ]; then
+                if [ "${conclusion}" = "success" ]; then
+                  echo "[V326][OK] ${workflow_label} completed successfully."
+                  return 0
+                else
+                  echo "[V326][FAIL] ${workflow_label} failed. conclusion=${conclusion}"
+                  gh run view "${run_id}" --repo "${GH_REPO}" --log-failed || true
+                  exit 1
+                fi
+              fi
+
+              sleep 15
+            done
+
+            echo "[V326][FAIL] Timeout waiting for ${workflow_label}"
+            exit 1
+          }
+
+          run_and_wait "update_market_candidates_v311_clean_universe_restore_meta.yml" "V311 CLEAN UNIVERSE RESTORE META"
+          run_and_wait "update_market_candidates_v312_all_stock_lookup_index.yml" "V312 ALL STOCK LOOKUP INDEX"
+          run_and_wait "update_market_candidates_v319_daily_pipeline_check.yml" "V319 DAILY PIPELINE CHECK"
+
+          echo ""
+          echo "============================================================"
+          echo "[V326][OK] Daily pipeline complete."
+          echo "Next app step: Data tab > Saved URL refresh > Bundle > Search index."
+          echo "============================================================"
