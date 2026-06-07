@@ -1,0 +1,304 @@
+name: Update Market Candidates V371 MERGE EVIDENCE DATA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  v371-merge-evidence-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V371 merge evidence data into candidates
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone, timedelta
+
+          KST = timezone(timedelta(hours=9))
+          now = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+          candidates_path = Path("stock_candidates.json")
+          bundle_path = Path("app_data_bundle.json")
+          evidence_path = Path("evidence_data.json")
+          supply_path = Path("supply_data.json")
+          news_path = Path("news_data.json")
+
+          output_candidates_path = Path("stock_candidates_with_evidence.json")
+          output_bundle_path = Path("app_data_bundle_with_evidence.json")
+          report_path = Path("v371_evidence_merge_report.json")
+
+          def read_json(path, default):
+              if not path.exists():
+                  return default
+              try:
+                  return json.loads(path.read_text(encoding="utf-8"))
+              except Exception as exc:
+                  raise SystemExit(f"[FAIL] JSON read error: {path} / {exc}")
+
+          def write_json(path, data):
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          def normalize_code(code):
+              code = str(code or "").strip()
+              if code.endswith(".0"):
+                  code = code[:-2]
+              if code.isdigit() and len(code) < 6:
+                  code = code.zfill(6)
+              return code
+
+          def get_code(item):
+              return normalize_code(item.get("code") or item.get("stockCode") or item.get("symbol") or "")
+
+          def as_int(value, default=0):
+              try:
+                  if value is None:
+                      return default
+                  if isinstance(value, str):
+                      value = value.replace(",", "").replace("%", "").strip()
+                      if value == "" or value == "-":
+                          return default
+                  return int(float(value))
+              except Exception:
+                  return default
+
+          def evidence_grade(score):
+              score = as_int(score, 50)
+              if score >= 80:
+                  return "positive"
+              if score >= 60:
+                  return "supportive"
+              if score >= 45:
+                  return "neutral"
+              return "risk"
+
+          candidates_raw = read_json(candidates_path, [])
+          bundle_raw = read_json(bundle_path, {})
+          evidence_raw = read_json(evidence_path, {})
+          supply_raw = read_json(supply_path, {})
+          news_raw = read_json(news_path, {})
+
+          if isinstance(candidates_raw, dict):
+              candidates = candidates_raw.get("candidates", [])
+              candidates_container_type = "dict"
+          elif isinstance(candidates_raw, list):
+              candidates = candidates_raw
+              candidates_container_type = "list"
+          else:
+              candidates = []
+              candidates_container_type = "unknown"
+
+          if not candidates:
+              raise SystemExit("[FAIL] stock_candidates.json 후보 데이터가 없습니다.")
+
+          evidence_items = evidence_raw.get("items", []) if isinstance(evidence_raw, dict) else []
+          supply_items = supply_raw.get("items", []) if isinstance(supply_raw, dict) else []
+          news_items = news_raw.get("items", []) if isinstance(news_raw, dict) else []
+
+          evidence_by_code = {get_code(item): item for item in evidence_items if isinstance(item, dict) and get_code(item)}
+          supply_by_code = {get_code(item): item for item in supply_items if isinstance(item, dict) and get_code(item)}
+          news_by_code = {get_code(item): item for item in news_items if isinstance(item, dict) and get_code(item)}
+
+          def build_evidence_from_supply_news(code):
+              supply = supply_by_code.get(code, {})
+              news = news_by_code.get(code, {})
+
+              if not supply and not news:
+                  return None
+
+              supply_score = as_int(supply.get("supplyScore"), 50) if supply else 50
+              news_score = as_int(news.get("newsTotalScore"), 50) if news else 50
+              risk_flags = []
+
+              if news:
+                  risk_flags.extend(news.get("riskFlags", []) or [])
+                  disclosures = news.get("disclosures", []) or []
+                  for d in disclosures:
+                      if isinstance(d, dict) and d.get("riskFlag"):
+                          reason = d.get("riskReason") or d.get("title") or "공시 리스크"
+                          risk_flags.append(str(reason))
+
+              if supply and supply_score < 45:
+                  risk_flags.append("수급 약화")
+              if news and news_score < 45:
+                  risk_flags.append("뉴스/공시 부정")
+
+              evidence_score = round((supply_score + news_score) / 2)
+              summary_parts = []
+              if supply:
+                  summary_parts.append(str(supply.get("supplySummary") or supply.get("summary") or "수급 데이터 반영"))
+              if news:
+                  summary_parts.append(str(news.get("newsSummary") or news.get("summary") or "뉴스 데이터 반영"))
+
+              return {
+                  "code": code,
+                  "name": supply.get("name") or news.get("name") or "-",
+                  "supply": {
+                      "supplyScore": supply_score,
+                      "supplyTrend": supply.get("supplyTrend", "neutral") if supply else "neutral",
+                      "foreign_5d": supply.get("foreign_5d", 0) if supply else 0,
+                      "institution_5d": supply.get("institution_5d", 0) if supply else 0,
+                      "pension_20d": supply.get("pension_20d", 0) if supply else 0,
+                      "trust_20d": supply.get("trust_20d", 0) if supply else 0,
+                      "finance_5d": supply.get("finance_5d", 0) if supply else 0,
+                      "summary": supply.get("supplySummary", "수급 데이터 없음") if supply else "수급 데이터 없음"
+                  },
+                  "news": {
+                      "newsTotalScore": news_score,
+                      "sentiment": "neutral",
+                      "mainCategory": "unknown",
+                      "headline": "",
+                      "summary": news.get("newsSummary", "뉴스 데이터 없음") if news else "뉴스 데이터 없음",
+                      "riskFlags": risk_flags
+                  },
+                  "evidenceScore": evidence_score,
+                  "evidenceGrade": evidence_grade(evidence_score),
+                  "evidenceSummary": " / ".join(summary_parts) if summary_parts else "수급/뉴스 보조 근거",
+                  "closeBuyGuide": "매수는 종가 기준으로 지지/돌파 유지 확인",
+                  "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+              }
+
+          merged = []
+          matched_count = 0
+          missing_count = 0
+          positive_count = 0
+          risk_count = 0
+
+          for item in candidates:
+              if not isinstance(item, dict):
+                  continue
+              code = get_code(item)
+              ev = evidence_by_code.get(code)
+              if not ev:
+                  ev = build_evidence_from_supply_news(code)
+
+              new_item = dict(item)
+              if ev:
+                  matched_count += 1
+                  evidence_score = as_int(ev.get("evidenceScore"), 50)
+                  if evidence_score >= 70:
+                      positive_count += 1
+                  if evidence_score < 45 or (ev.get("news", {}).get("riskFlags") if isinstance(ev.get("news"), dict) else []):
+                      risk_count += 1
+
+                  new_item["evidence"] = {
+                      "evidenceScore": evidence_score,
+                      "evidenceGrade": ev.get("evidenceGrade") or evidence_grade(evidence_score),
+                      "evidenceSummary": ev.get("evidenceSummary", "수급/뉴스 보조 근거"),
+                      "supply": ev.get("supply", {}),
+                      "news": ev.get("news", {}),
+                      "closeBuyGuide": ev.get("closeBuyGuide", "매수는 종가 기준으로 지지/돌파 유지 확인"),
+                      "realtimeSellGuide": ev.get("realtimeSellGuide", "매도는 손절선 이탈·악재 발생 시 실시간 대응")
+                  }
+                  new_item["evidenceScore"] = evidence_score
+                  new_item["evidenceGrade"] = ev.get("evidenceGrade") or evidence_grade(evidence_score)
+                  new_item["evidenceSummary"] = ev.get("evidenceSummary", "수급/뉴스 보조 근거")
+              else:
+                  missing_count += 1
+                  new_item["evidence"] = {
+                      "evidenceScore": 50,
+                      "evidenceGrade": "not_available",
+                      "evidenceSummary": "수급/뉴스 데이터 미반영",
+                      "supply": {},
+                      "news": {},
+                      "closeBuyGuide": "매수는 종가 기준으로 기존 기술적 조건 확인",
+                      "realtimeSellGuide": "매도는 손절선 이탈·악재 발생 시 실시간 대응"
+                  }
+                  new_item["evidenceScore"] = 50
+                  new_item["evidenceGrade"] = "not_available"
+                  new_item["evidenceSummary"] = "수급/뉴스 데이터 미반영"
+
+              merged.append(new_item)
+
+          if candidates_container_type == "dict":
+              out_candidates = dict(candidates_raw)
+              out_candidates["version"] = "V371_EVIDENCE_MERGED_CANDIDATES"
+              out_candidates["updatedAt"] = now
+              out_candidates["candidates"] = merged
+          else:
+              out_candidates = merged
+
+          write_json(output_candidates_path, out_candidates)
+
+          if isinstance(bundle_raw, dict):
+              out_bundle = dict(bundle_raw)
+              out_bundle["version"] = "V371_EVIDENCE_MERGED_BUNDLE"
+              out_bundle["updatedAt"] = now
+              out_bundle["candidates"] = merged
+              out_bundle["evidenceMeta"] = {
+                  "matchedCount": matched_count,
+                  "missingCount": missing_count,
+                  "positiveCount": positive_count,
+                  "riskCount": risk_count,
+                  "strategy": {
+                      "buy": "close_price_based",
+                      "sell": "realtime_based"
+                  }
+              }
+              write_json(output_bundle_path, out_bundle)
+
+          report = {
+              "version": "V371_EVIDENCE_MERGE_REPORT",
+              "status": "ok",
+              "updatedAt": now,
+              "inputFiles": {
+                  "stockCandidates": str(candidates_path),
+                  "appDataBundle": str(bundle_path),
+                  "evidenceData": str(evidence_path),
+                  "supplyData": str(supply_path),
+                  "newsData": str(news_path)
+              },
+              "outputFiles": {
+                  "candidatesWithEvidence": str(output_candidates_path),
+                  "bundleWithEvidence": str(output_bundle_path)
+              },
+              "candidateCount": len(merged),
+              "matchedEvidenceCount": matched_count,
+              "missingEvidenceCount": missing_count,
+              "positiveEvidenceCount": positive_count,
+              "riskEvidenceCount": risk_count,
+              "checks": {
+                  "stockCandidatesPresent": candidates_path.exists(),
+                  "evidenceDataPresent": evidence_path.exists(),
+                  "supplyDataPresent": supply_path.exists(),
+                  "newsDataPresent": news_path.exists(),
+                  "outputCreated": output_candidates_path.exists(),
+                  "strategyBuyCloseBased": True,
+                  "strategySellRealtimeBased": True
+              }
+          }
+
+          write_json(report_path, report)
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          print("[OK] V371 evidence merge completed")
+          PY
+
+      - name: Commit V371 evidence merge files
+        run: |
+          set -e
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add stock_candidates_with_evidence.json app_data_bundle_with_evidence.json v371_evidence_merge_report.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update V371 evidence merged candidates"
+            git pull --rebase origin main
+            git push origin main
+          fi
