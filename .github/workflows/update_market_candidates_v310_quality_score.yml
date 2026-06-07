@@ -1,0 +1,410 @@
+name: Update Market Candidates V310 QUALITY SCORE
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-market-candidates-v310:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas numpy lxml
+
+      - name: V310 preflight - verify V306 scanner exists
+        run: |
+          set -e
+          test -f scripts/generate_stock_candidates_v306_minimal.py
+          grep -q "CV306_EOD_MINIMAL_SCANNER" scripts/generate_stock_candidates_v306_minimal.py
+          grep -q "EOD_CLOSE_BASED" scripts/generate_stock_candidates_v306_minimal.py
+          echo "[OK] V306 scanner exists"
+
+      - name: Generate market candidates input
+        timeout-minutes: 8
+        run: |
+          set -e
+          python scripts/generate_stock_candidates_v306_minimal.py
+          test -f stock_candidates_input.csv
+          test -f market_scanner_summary.json
+
+      - name: V310 quality score and force app files
+        run: |
+          set -e
+          python - <<'PY'
+          import csv
+          import json
+          import math
+          import re
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+
+          VERSION = "V310_EOD_QUALITY_SCORE"
+          MIN_COUNT = 50
+          MAX_APP_COUNT = 80
+
+          KST = timezone(timedelta(hours=9))
+          now = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+          input_csv = Path("stock_candidates_input.csv")
+          stock_json = Path("stock_candidates.json")
+          bundle_json = Path("app_data_bundle.json")
+          report_json = Path("v310_quality_score_report.json")
+          legacy_report_json = Path("v307_app_reflect_report.json")
+          v309_report_json = Path("v309_force_commit_report.json")
+
+          if not input_csv.exists():
+              raise SystemExit("[FAIL] stock_candidates_input.csv not found")
+
+          def clean(v):
+              return "" if v is None else str(v).strip()
+
+          def get(row, *keys, default=""):
+              lower = {str(k).strip().lower(): v for k, v in row.items()}
+              for key in keys:
+                  lk = key.lower()
+                  if lk in lower and clean(lower[lk]) != "":
+                      return clean(lower[lk])
+              return default
+
+          def to_float(v, default=0.0):
+              try:
+                  s = str(v).replace(",", "").replace("%", "").strip()
+                  if s == "":
+                      return default
+                  return float(s)
+              except Exception:
+                  return default
+
+          def to_int(v, default=50):
+              try:
+                  return int(round(to_float(v, default)))
+              except Exception:
+                  return default
+
+          def parse_change_rate(v):
+              s = clean(v)
+              if s in ("", "-", "N/A", "nan"):
+                  return 0.0
+              return to_float(s, 0.0)
+
+          def grade_from_score(score):
+              if score >= 82:
+                  return "A"
+              if score >= 72:
+                  return "B"
+              if score >= 60:
+                  return "C"
+              if score >= 48:
+                  return "D"
+              return "E"
+
+          def action_from_score(score):
+              if score >= 72:
+                  return "우선관찰"
+              if score >= 60:
+                  return "관찰"
+              if score >= 48:
+                  return "보류"
+              return "제외검토"
+
+          def quality_score(raw):
+              base = to_int(get(raw, "score", "totalScore", "점수", default="50"), 50)
+              technical = to_int(get(raw, "technicalScore", "technical_score", default=str(base)), base)
+              change = parse_change_rate(get(raw, "changeRate", "change_rate", "등락률", default="0"))
+              market = get(raw, "market", "시장", default="KOSPI").upper()
+              name = get(raw, "name", "종목명", "stockName")
+              sector = get(raw, "sector", "industry", "업종", "theme", default="종가선별")
+
+              score = 50.0
+              reasons = []
+
+              # Scanner base score: keep but moderate.
+              score += max(-20, min(25, (base - 50) * 0.55))
+              score += max(-15, min(18, (technical - 50) * 0.30))
+
+              # Change-rate quality: avoid sharp collapse and excessive chase.
+              if -3.5 <= change <= 4.0:
+                  score += 8
+                  reasons.append("등락률 안정권")
+              elif 4.0 < change <= 8.0:
+                  score += 2
+                  reasons.append("상승 모멘텀 있으나 추격 주의")
+              elif 8.0 < change:
+                  score -= 12
+                  reasons.append("단기 과열 감점")
+              elif -7.0 <= change < -3.5:
+                  score -= 4
+                  reasons.append("단기 약세 감점")
+              else:
+                  score -= 12
+                  reasons.append("급락 변동성 감점")
+
+              # Market/liquidity proxy.
+              if market == "KOSPI":
+                  score += 3
+                  reasons.append("KOSPI 유동성 가점")
+              elif market == "KOSDAQ":
+                  score += 1
+                  reasons.append("KOSDAQ 후보")
+
+              # Theme quality boosts.
+              theme_boost = 0
+              theme_words = {
+                  "반도체": 4,
+                  "AI": 4,
+                  "방산": 4,
+                  "우주": 3,
+                  "전력": 4,
+                  "에너지": 3,
+                  "조선": 3,
+                  "금융": 2,
+                  "바이오": 1,
+                  "2차전지": 1,
+              }
+              target_text = f"{name} {sector}"
+              for word, boost in theme_words.items():
+                  if word.lower() in target_text.lower():
+                      theme_boost = max(theme_boost, boost)
+              if theme_boost:
+                  score += theme_boost
+                  reasons.append(f"주도 테마 가점 +{theme_boost}")
+
+              # Penalize likely non-common stocks / ETFs / SPAC / preferred names.
+              bad_patterns = ["ETF", "ETN", "스팩", "SPAC", "우선주", "우B", "우C", "인버스", "레버리지"]
+              if any(p.lower() in name.lower() for p in bad_patterns):
+                  score -= 30
+                  reasons.append("ETF/우선주/SPAC성 제외 감점")
+
+              score = int(max(0, min(100, round(score))))
+              grade = grade_from_score(score)
+              action = action_from_score(score)
+              return score, grade, action, reasons
+
+          rows = []
+          with input_csv.open("r", encoding="utf-8-sig", newline="") as f:
+              reader = csv.DictReader(f)
+              for raw in reader:
+                  code = get(raw, "code", "종목코드", "ticker", "symbol")
+                  name = get(raw, "name", "종목명", "stockName")
+                  if not code or not name:
+                      continue
+
+                  code = str(code).zfill(6)
+                  market = get(raw, "market", "시장", default="KOSPI")
+                  sector = get(raw, "sector", "industry", "업종", "theme", default="종가선별")
+                  change_rate = get(raw, "changeRate", "change_rate", "등락률", default="-")
+                  raw_score = to_int(get(raw, "score", "totalScore", "점수", default="50"), 50)
+                  technical = to_int(get(raw, "technicalScore", "technical_score", default=str(raw_score)), raw_score)
+                  q_score, q_grade, action, reasons = quality_score(raw)
+
+                  item = {
+                      "rank": 0,
+                      "name": name,
+                      "code": code,
+                      "market": market,
+                      "sector": sector,
+                      "industry": sector,
+                      "score": q_score,
+                      "grade": q_grade,
+                      "rawScannerScore": raw_score,
+                      "technicalScore": technical,
+                      "changeRate": change_rate,
+                      "qualityReasons": reasons,
+                      "reason": f"{action} / V310 품질점수 {q_score}점({q_grade}) / 원점수 {raw_score}·기술 {technical}·등락률 {change_rate}",
+                      "strategy": "종가 기준 후보: 다음 거래일 시가·눌림·수급 확인 후 분할 접근",
+                      "entryPrice": "시가 과열 시 추격 금지, 5일선/전일 종가 부근 눌림 확인",
+                      "stopLoss": "전일 저점 또는 20일선 이탈",
+                      "targetPrice": "분할 익절",
+                      "recommendationAction": action,
+                      "recommendationGrade": q_grade,
+                      "recommendationScore": q_score,
+                      "recommendationReason": " / ".join(reasons) if reasons else "V310 종가 기준 품질 점수 반영",
+                      "recommendationMeta": {
+                          "version": VERSION,
+                          "rank": 0,
+                          "score": q_score,
+                          "grade": q_grade,
+                          "action": action,
+                          "basis": [
+                              "v306_eod_scanner",
+                              "quality_score",
+                              "change_rate_filter",
+                              "theme_liquidity_proxy",
+                              "forced_app_reflect"
+                          ],
+                          "updatedAt": now
+                      },
+                      "dataStatus": {
+                          "finalRecommendationScore": q_score,
+                          "recommendationAction": action,
+                          "technicalScore": technical,
+                          "rawScannerScore": raw_score,
+                          "hasSupplyData": False,
+                          "hasReportHint": False,
+                          "recommendationUpdatedAt": now,
+                          "source": VERSION
+                      },
+                      "hasRecommendationMeta": True,
+                      "updatedAt": now
+                  }
+                  rows.append(item)
+
+          # Sort by quality score, then raw scanner score, then name.
+          rows.sort(key=lambda x: (x.get("score", 0), x.get("rawScannerScore", 0), x.get("name", "")), reverse=True)
+          rows = rows[:MAX_APP_COUNT]
+
+          if len(rows) < MIN_COUNT:
+              raise SystemExit(f"[FAIL] candidate count too small: {len(rows)}")
+
+          for i, item in enumerate(rows, start=1):
+              item["rank"] = i
+              item["recommendationMeta"]["rank"] = i
+
+          stock_json.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          bundle = {
+              "version": "V310_APP_DATA_BUNDLE",
+              "updatedAt": now,
+              "status": "ok",
+              "candidateCount": len(rows),
+              "liveQuoteCount": 0,
+              "missingFiles": [],
+              "warnings": [],
+              "topCandidates": [
+                  {
+                      "rank": x["rank"],
+                      "name": x["name"],
+                      "code": x["code"],
+                      "score": x["score"],
+                      "grade": x["grade"],
+                      "reason": x["reason"]
+                  }
+                  for x in rows[:20]
+              ],
+              "sources": {
+                  "candidates": {"exists": True, "path": "stock_candidates.json", "error": ""},
+                  "scannerInput": {"exists": True, "path": "stock_candidates_input.csv", "error": ""},
+                  "marketScannerSummary": {
+                      "exists": Path("market_scanner_summary.json").exists(),
+                      "path": "market_scanner_summary.json",
+                      "error": ""
+                  }
+              },
+              "payload": {"candidates": rows}
+          }
+          bundle_json.write_text(json.dumps(bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          report = {
+              "version": VERSION,
+              "status": "ok",
+              "updatedAt": now,
+              "inputPath": str(input_csv),
+              "stockCandidatesPath": str(stock_json),
+              "appBundlePath": str(bundle_json),
+              "finalCandidateCount": len(rows),
+              "appBundleCandidateCount": len(rows),
+              "top5": [{"rank": x["rank"], "name": x["name"], "code": x["code"], "score": x["score"], "grade": x["grade"]} for x in rows[:5]],
+              "forcedCommit": True
+          }
+          for p in [report_json, legacy_report_json, v309_report_json]:
+              p.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          print("[OK] V310 quality score complete")
+          print(f"[OK] finalCandidateCount={len(rows)}")
+          print(f"[OK] top5={report['top5']}")
+          PY
+
+      - name: V310 postflight - prove quality files changed and count is valid
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          stock_path = Path("stock_candidates.json")
+          bundle_path = Path("app_data_bundle.json")
+          report_path = Path("v310_quality_score_report.json")
+
+          for p in [stock_path, bundle_path, report_path]:
+              if not p.exists():
+                  raise SystemExit(f"[FAIL] missing file: {p}")
+
+          stock = json.loads(stock_path.read_text(encoding="utf-8"))
+          bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
+          report = json.loads(report_path.read_text(encoding="utf-8"))
+
+          stock_count = len(stock) if isinstance(stock, list) else len(stock.get("candidates", []))
+          bundle_count = int(bundle.get("candidateCount", 0))
+          report_count = int(report.get("finalCandidateCount", 0))
+
+          print(f"[CHECK] stock_candidates count={stock_count}")
+          print(f"[CHECK] app_data_bundle candidateCount={bundle_count}")
+          print(f"[CHECK] report finalCandidateCount={report_count}")
+          print(f"[CHECK] bundle version={bundle.get('version')}")
+
+          if stock_count < 50:
+              raise SystemExit(f"[FAIL] stock_candidates count too small: {stock_count}")
+          if bundle_count < 50:
+              raise SystemExit(f"[FAIL] app_data_bundle count too small: {bundle_count}")
+          if report_count < 50:
+              raise SystemExit(f"[FAIL] report count too small: {report_count}")
+          if bundle.get("version") != "V310_APP_DATA_BUNDLE":
+              raise SystemExit(f"[FAIL] wrong bundle version: {bundle.get('version')}")
+
+          print("[OK] V310 postflight passed")
+          PY
+
+          echo "[GIT STATUS]"
+          git status --short
+
+          echo "[GIT DIFF STAT]"
+          git diff --stat
+
+      - name: Commit updated data files
+        run: |
+          set -e
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add \
+            stock_candidates_input.csv \
+            market_universe.json \
+            market_scan_results.json \
+            market_scanner_summary.json \
+            market_scanner_errors.txt \
+            stock_candidates.json \
+            app_data_bundle.json \
+            v310_quality_score_report.json \
+            v309_force_commit_report.json \
+            v307_app_reflect_report.json \
+            2>/dev/null || true
+
+          echo "[GIT CACHED DIFF]"
+          git diff --cached --stat
+
+          if git diff --cached --quiet; then
+            echo "[FAIL] No changes staged. V310 expected forced updatedAt changes."
+            exit 1
+          fi
+
+          git commit -m "V310 quality score app candidates"
+          git pull --rebase origin main
+          git push origin main
+
+          echo "[OK] pushed V310 quality score app candidate files"
