@@ -1,0 +1,170 @@
+name: Update Market Candidates V319 DAILY PIPELINE CHECK
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 18:20 weekdays = UTC 09:20
+    # Run after V311/V312 daily jobs so we can confirm the app data is usable.
+    - cron: '20 9 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  v319-daily-pipeline-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: V319 validate daily app data files
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+
+          VERSION = "V319_DAILY_PIPELINE_CHECK"
+          KST = timezone(timedelta(hours=9))
+          now = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+          candidate_path = Path("stock_candidates.json")
+          bundle_path = Path("app_data_bundle.json")
+          lookup_index_path = Path("stock_lookup_index.json")
+          lookup_compact_path = Path("stock_lookup_compact.json")
+          report_path = Path("v319_daily_pipeline_report.json")
+
+          required_files = [
+              candidate_path,
+              bundle_path,
+              lookup_index_path,
+              lookup_compact_path,
+          ]
+
+          missing = [str(p) for p in required_files if not p.exists()]
+
+          def read_json(path):
+              if not path.exists():
+                  return None
+              return json.loads(path.read_text(encoding="utf-8"))
+
+          candidates = read_json(candidate_path)
+          bundle = read_json(bundle_path)
+          lookup_index = read_json(lookup_index_path)
+          lookup_compact = read_json(lookup_compact_path)
+
+          if isinstance(candidates, list):
+              candidate_count = len(candidates)
+          elif isinstance(candidates, dict):
+              candidate_count = len(candidates.get("candidates", []))
+          else:
+              candidate_count = 0
+
+          bundle_candidate_count = 0
+          bundle_version = None
+          if isinstance(bundle, dict):
+              bundle_version = bundle.get("version")
+              bundle_candidate_count = int(bundle.get("candidateCount") or 0)
+
+          lookup_stock_count = 0
+          lookup_recommended_count = 0
+          if isinstance(lookup_index, dict):
+              lookup_stock_count = int(lookup_index.get("stockCount") or len(lookup_index.get("stocks", [])) or 0)
+              lookup_recommended_count = int(lookup_index.get("recommendedCount") or 0)
+
+          compact_stock_count = 0
+          compact_recommended_count = 0
+          if isinstance(lookup_compact, dict):
+              compact_stock_count = int(lookup_compact.get("stockCount") or len(lookup_compact.get("stocks", [])) or 0)
+              compact_recommended_count = int(lookup_compact.get("recommendedCount") or 0)
+
+          candidate_versions = {}
+          sample_names = []
+          if isinstance(candidates, list):
+              for item in candidates[:10]:
+                  if isinstance(item, dict):
+                      sample_names.append(item.get("name"))
+                      meta = item.get("recommendationMeta") or {}
+                      v = meta.get("version") or item.get("source") or "unknown"
+                      candidate_versions[v] = candidate_versions.get(v, 0) + 1
+
+          checks = {
+              "requiredFilesPresent": len(missing) == 0,
+              "candidateCountAtLeast50": candidate_count >= 50,
+              "bundleCandidateCountAtLeast50": bundle_candidate_count >= 50,
+              "lookupStockCountAtLeast2000": lookup_stock_count >= 2000,
+              "compactStockCountAtLeast2000": compact_stock_count >= 2000,
+              "lookupRecommendedCountAtLeast50": lookup_recommended_count >= 50,
+          }
+
+          status = "ok" if all(checks.values()) else "fail"
+
+          report = {
+              "version": VERSION,
+              "status": status,
+              "updatedAt": now,
+              "missingFiles": missing,
+              "checks": checks,
+              "files": {
+                  "stock_candidates.json": {
+                      "exists": candidate_path.exists(),
+                      "candidateCount": candidate_count,
+                      "sampleNames": sample_names,
+                      "sampleVersions": candidate_versions,
+                  },
+                  "app_data_bundle.json": {
+                      "exists": bundle_path.exists(),
+                      "version": bundle_version,
+                      "candidateCount": bundle_candidate_count,
+                  },
+                  "stock_lookup_index.json": {
+                      "exists": lookup_index_path.exists(),
+                      "stockCount": lookup_stock_count,
+                      "recommendedCount": lookup_recommended_count,
+                  },
+                  "stock_lookup_compact.json": {
+                      "exists": lookup_compact_path.exists(),
+                      "stockCount": compact_stock_count,
+                      "recommendedCount": compact_recommended_count,
+                  },
+              },
+              "dailyUseGuide": {
+                  "appAction": "Open app > Data tab > Saved URL refresh",
+                  "expectedAppState": "recommendation candidates 50+ and search index 2000+ stocks",
+                  "ifAppStillOld": "Check Raw URL cache or reload app data bundle/search index",
+              },
+          }
+
+          report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+
+          if status != "ok":
+              raise SystemExit("[FAIL] V319 daily pipeline check failed")
+
+          print("[OK] V319 daily pipeline check passed")
+          PY
+
+      - name: Commit V319 daily pipeline report
+        run: |
+          set -e
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add v319_daily_pipeline_report.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update V319 daily pipeline report"
+            git pull --rebase origin main
+            git push origin main
+          fi
