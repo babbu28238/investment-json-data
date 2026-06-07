@@ -1,0 +1,498 @@
+name: Update Market Candidates V312 ALL STOCK LOOKUP INDEX
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 18:05 weekdays = UTC 09:05
+    - cron: '5 9 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  build-all-stock-lookup-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas numpy lxml html5lib
+
+      - name: V312 build all stock lookup index
+        timeout-minutes: 10
+        run: |
+          set -e
+          python - <<'PY'
+          import csv
+          import json
+          import re
+          import time
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          from typing import Any, Dict, List, Optional
+
+          import pandas as pd
+          import requests
+          from bs4 import BeautifulSoup
+
+          VERSION = "V312_ALL_STOCK_LOOKUP_INDEX"
+          KST = timezone(timedelta(hours=9))
+          now = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+          OUT_INDEX = Path("stock_lookup_index.json")
+          OUT_COMPACT = Path("stock_lookup_compact.json")
+          OUT_REPORT = Path("v312_all_stock_lookup_report.json")
+
+          CANDIDATE_PATH = Path("stock_candidates.json")
+          MARKET_UNIVERSE_PATH = Path("market_universe.json")
+          MARKET_SCAN_RESULTS_PATH = Path("market_scan_results.json")
+          SCANNER_INPUT_PATH = Path("stock_candidates_input.csv")
+
+          EXCLUDE_KEYWORDS = [
+              "KODEX", "TIGER", "ACE", "SOL", "KBSTAR", "HANARO", "ARIRANG", "KOSEF", "TIMEFOLIO", "RISE",
+              "ETF", "ETN", "인버스", "레버리지", "선물", "액티브", "합성", "채권", "국고채", "미국", "나스닥", "S&P", "CD금리",
+              "스팩", "SPAC", "기업인수목적", "리츠", "REIT", "우선주", "우", "2우B", "3우B", "1우", "우B"
+          ]
+
+          LEADING_THEME_RULES = [
+              ("반도체·AI", ["반도체", "하이닉스", "삼성전자", "한미반도체", "원익", "테스", "HPSP", "이오테크", "리노공업"]),
+              ("방산·우주항공", ["한화에어로", "한국항공우주", "LIG넥스원", "한화시스템", "쎄트렉", "AP위성"]),
+              ("조선·해양", ["HD현대중공업", "삼성중공업", "한화오션", "HD한국조선", "조선", "중공업"]),
+              ("원전·전력·에너지", ["두산에너빌리티", "LS ELECTRIC", "대한전선", "HD현대일렉트릭", "전선", "전력", "일렉트릭"]),
+              ("금융·밸류업", ["금융", "은행", "지주", "증권", "보험", "KB금융", "신한지주", "하나금융", "메리츠"]),
+              ("2차전지·소재", ["에코프로", "LG에너지솔루션", "포스코", "POSCO", "엘앤에프", "천보", "나노신소재"]),
+              ("바이오·제약", ["셀트리온", "삼성바이오", "알테오젠", "한미약품", "유한양행", "제약", "바이오"]),
+              ("자동차·모빌리티", ["현대차", "기아", "현대모비스", "HL만도", "오토에버"]),
+              ("로봇·자동화", ["로봇", "로보", "레인보우", "두산로보", "로보티즈", "로보스타"]),
+          ]
+
+          def clean_text(v: Any) -> str:
+              if v is None:
+                  return ""
+              return str(v).replace("\xa0", " ").strip()
+
+          def only_digits(s: Any) -> str:
+              return re.sub(r"\D", "", clean_text(s))
+
+          def norm_code(code: Any) -> str:
+              d = only_digits(code)
+              return d.zfill(6) if d else ""
+
+          def is_excluded_name(name: str) -> bool:
+              n = clean_text(name).upper()
+              raw = clean_text(name)
+              if not n:
+                  return True
+              for kw in EXCLUDE_KEYWORDS:
+                  if kw.upper() in n or kw in raw:
+                      return True
+              # 우선주 이름 패턴: 삼성전자우, 현대차2우B 등. 단, 보통주 이름 일부 오탐은 최소화.
+              if re.search(r"(\d?우B?|우선주)$", raw):
+                  return True
+              return False
+
+          def infer_sector(name: str, industry: str = "", market: str = "") -> str:
+              text = f"{name} {industry} {market}"
+              for sector, keys in LEADING_THEME_RULES:
+                  for k in keys:
+                      if k.lower() in text.lower():
+                          return sector
+              return f"{market} 일반종목" if market else "일반종목"
+
+          def to_int(v: Any, default: int = 0) -> int:
+              try:
+                  s = clean_text(v).replace(",", "").replace("%", "")
+                  if s in ("", "-", "nan", "None"):
+                      return default
+                  return int(float(s))
+              except Exception:
+                  return default
+
+          def to_float(v: Any, default: float = 0.0) -> float:
+              try:
+                  s = clean_text(v).replace(",", "").replace("%", "")
+                  if s in ("", "-", "nan", "None"):
+                      return default
+                  return float(s)
+              except Exception:
+                  return default
+
+          def read_json(path: Path) -> Any:
+              if not path.exists():
+                  return None
+              try:
+                  return json.loads(path.read_text(encoding="utf-8"))
+              except Exception:
+                  return None
+
+          def get_existing_recommendations() -> Dict[str, Dict[str, Any]]:
+              data = read_json(CANDIDATE_PATH)
+              if isinstance(data, dict):
+                  items = data.get("candidates") or data.get("payload", {}).get("candidates", [])
+              elif isinstance(data, list):
+                  items = data
+              else:
+                  items = []
+              out = {}
+              for item in items:
+                  if not isinstance(item, dict):
+                      continue
+                  code = norm_code(item.get("code"))
+                  if code:
+                      out[code] = item
+              return out
+
+          def put(rows: Dict[str, Dict[str, Any]], *, code: str, name: str, market: str = "", industry: str = "", source: str = "", extra: Optional[Dict[str, Any]] = None) -> None:
+              code = norm_code(code)
+              name = clean_text(name)
+              if not code or not name or is_excluded_name(name):
+                  return
+              market = clean_text(market) or "UNKNOWN"
+              industry = clean_text(industry)
+              base = rows.get(code, {})
+              item = {
+                  **base,
+                  "code": code,
+                  "name": name,
+                  "market": base.get("market") if base.get("market") not in ("", "UNKNOWN", None) else market,
+                  "industry": base.get("industry") or industry,
+                  "sector": base.get("sector") or infer_sector(name, industry, market),
+                  "lookupSource": base.get("lookupSource") or source,
+              }
+              if extra:
+                  for k, v in extra.items():
+                      if v not in (None, ""):
+                          item[k] = v
+              rows[code] = item
+
+          def load_from_krx() -> Dict[str, Dict[str, Any]]:
+              rows: Dict[str, Dict[str, Any]] = {}
+              url = "https://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13"
+              headers = {
+                  "User-Agent": "Mozilla/5.0",
+                  "Referer": "https://kind.krx.co.kr/",
+              }
+              try:
+                  r = requests.get(url, headers=headers, timeout=20)
+                  r.raise_for_status()
+                  # KRX frequently returns EUC-KR encoded HTML/XLS.
+                  r.encoding = "euc-kr"
+                  tables = pd.read_html(r.text)
+                  if not tables:
+                      raise RuntimeError("KRX table not found")
+                  df = tables[0]
+                  for _, row in df.iterrows():
+                      d = row.to_dict()
+                      name = d.get("회사명") or d.get("종목명") or d.get("Name")
+                      code = d.get("종목코드") or d.get("코드") or d.get("Code")
+                      industry = d.get("업종") or d.get("업종명") or ""
+                      market = d.get("시장구분") or d.get("시장") or "KRX"
+                      put(rows, code=code, name=name, market=market, industry=industry, source="krx_kind")
+              except Exception as e:
+                  print(f"[WARN] KRX load failed: {e}")
+              return rows
+
+          def load_from_naver(max_pages_each: int = 45) -> Dict[str, Dict[str, Any]]:
+              rows: Dict[str, Dict[str, Any]] = {}
+              headers = {"User-Agent": "Mozilla/5.0"}
+              for sosok, market in [(0, "KOSPI"), (1, "KOSDAQ")]:
+                  empty_pages = 0
+                  for page in range(1, max_pages_each + 1):
+                      url = f"https://finance.naver.com/sise/sise_market_sum.naver?sosok={sosok}&page={page}"
+                      try:
+                          r = requests.get(url, headers=headers, timeout=10)
+                          r.raise_for_status()
+                          r.encoding = "euc-kr"
+                          soup = BeautifulSoup(r.text, "html.parser")
+                          trs = soup.select("table.type_2 tr")
+                          found = 0
+                          for tr in trs:
+                              a = tr.select_one("a[href*='code=']")
+                              if not a:
+                                  continue
+                              href = a.get("href", "")
+                              m = re.search(r"code=(\d{6})", href)
+                              if not m:
+                                  continue
+                              code = m.group(1)
+                              name = a.get_text(strip=True)
+                              tds = [td.get_text(" ", strip=True) for td in tr.select("td")]
+                              current = tds[1] if len(tds) > 1 else ""
+                              change_rate = ""
+                              volume = ""
+                              market_cap = ""
+                              # Naver table column positions can vary; preserve best-effort values only.
+                              if len(tds) >= 12:
+                                  market_cap = tds[6]
+                                  volume = tds[9]
+                              extra = {
+                                  "currentPriceHint": current,
+                                  "changeRateHint": change_rate,
+                                  "volumeHint": volume,
+                                  "marketCapHint": market_cap,
+                              }
+                              put(rows, code=code, name=name, market=market, industry="", source="naver_market_sum", extra=extra)
+                              found += 1
+                          if found == 0:
+                              empty_pages += 1
+                          else:
+                              empty_pages = 0
+                          if empty_pages >= 2:
+                              break
+                          time.sleep(0.12)
+                      except Exception as e:
+                          print(f"[WARN] Naver load failed market={market} page={page}: {e}")
+                          empty_pages += 1
+                          if empty_pages >= 2:
+                              break
+              return rows
+
+          def merge_aux_files(rows: Dict[str, Dict[str, Any]]) -> None:
+              # market_universe.json / market_scan_results.json often carry sector/score.
+              for path, source in [(MARKET_UNIVERSE_PATH, "market_universe"), (MARKET_SCAN_RESULTS_PATH, "market_scan_results")]:
+                  data = read_json(path)
+                  if isinstance(data, dict):
+                      items = data.get("stocks") or data.get("universe") or data.get("results") or data.get("candidates") or []
+                  elif isinstance(data, list):
+                      items = data
+                  else:
+                      items = []
+                  for item in items:
+                      if not isinstance(item, dict):
+                          continue
+                      code = item.get("code") or item.get("종목코드") or item.get("ticker")
+                      name = item.get("name") or item.get("종목명") or item.get("stockName")
+                      market = item.get("market") or item.get("시장") or ""
+                      industry = item.get("industry") or item.get("sector") or item.get("업종") or ""
+                      put(rows, code=code, name=name, market=market, industry=industry, source=source, extra={
+                          "scannerScoreHint": item.get("score") or item.get("totalScore"),
+                          "changeRateHint": item.get("changeRate") or item.get("change_rate"),
+                      })
+
+              if SCANNER_INPUT_PATH.exists():
+                  try:
+                      with SCANNER_INPUT_PATH.open("r", encoding="utf-8-sig", newline="") as f:
+                          reader = csv.DictReader(f)
+                          for item in reader:
+                              put(rows,
+                                  code=item.get("code") or item.get("종목코드"),
+                                  name=item.get("name") or item.get("종목명"),
+                                  market=item.get("market") or item.get("시장") or "",
+                                  industry=item.get("sector") or item.get("industry") or item.get("업종") or "",
+                                  source="stock_candidates_input",
+                                  extra={
+                                      "scannerScoreHint": item.get("score") or item.get("totalScore"),
+                                      "changeRateHint": item.get("changeRate") or item.get("change_rate"),
+                                  })
+                  except Exception as e:
+                      print(f"[WARN] scanner input merge failed: {e}")
+
+          krx_rows = load_from_krx()
+          naver_rows = load_from_naver()
+          rows: Dict[str, Dict[str, Any]] = {}
+          rows.update(krx_rows)
+          for code, item in naver_rows.items():
+              if code in rows:
+                  merged = {**item, **rows[code]}
+                  # Prefer Naver's explicit KOSPI/KOSDAQ market if KRX market is generic.
+                  if rows[code].get("market") in ("KRX", "UNKNOWN", ""):
+                      merged["market"] = item.get("market")
+                  rows[code] = merged
+              else:
+                  rows[code] = item
+
+          merge_aux_files(rows)
+
+          recs = get_existing_recommendations()
+          stocks: List[Dict[str, Any]] = []
+          for code, item in rows.items():
+              rec = recs.get(code)
+              market = clean_text(item.get("market"))
+              name = clean_text(item.get("name"))
+              industry = clean_text(item.get("industry"))
+              sector = clean_text(item.get("sector")) or infer_sector(name, industry, market)
+              is_recommended = rec is not None
+              stock = {
+                  "code": code,
+                  "name": name,
+                  "market": market,
+                  "sector": sector,
+                  "industry": industry,
+                  "isRecommended": is_recommended,
+                  "recommendedRank": int(rec.get("rank", 0)) if rec else None,
+                  "recommendationScore": int(rec.get("recommendationScore", rec.get("score", 0))) if rec else None,
+                  "recommendationGrade": rec.get("recommendationGrade", rec.get("grade")) if rec else None,
+                  "recommendationAction": rec.get("recommendationAction") if rec else None,
+                  "searchText": f"{name} {code} {market} {sector} {industry}",
+                  "lookupSource": item.get("lookupSource"),
+                  "updatedAt": now,
+              }
+              # Preserve lightweight hints.
+              for k in ["currentPriceHint", "changeRateHint", "volumeHint", "marketCapHint", "scannerScoreHint"]:
+                  if item.get(k) not in (None, ""):
+                      stock[k] = item.get(k)
+              stocks.append(stock)
+
+          # Sort: recommended first by rank, then market/name for fast search determinism.
+          stocks.sort(key=lambda x: (
+              0 if x.get("isRecommended") else 1,
+              x.get("recommendedRank") or 999999,
+              x.get("market") or "",
+              x.get("name") or ""
+          ))
+
+          total = len(stocks)
+          if total < 500:
+              raise SystemExit(f"[FAIL] lookup stock count too small: {total}. KRX/Naver fetch likely failed.")
+
+          recommended_count = sum(1 for x in stocks if x.get("isRecommended"))
+          markets = {}
+          for x in stocks:
+              markets[x.get("market") or "UNKNOWN"] = markets.get(x.get("market") or "UNKNOWN", 0) + 1
+
+          payload = {
+              "version": VERSION,
+              "status": "ok",
+              "updatedAt": now,
+              "stockCount": total,
+              "recommendedCount": recommended_count,
+              "excludedRule": "ETF/ETN/SPAC/REIT/preferred-stock name filters applied",
+              "sources": {
+                  "krxKindCount": len(krx_rows),
+                  "naverMarketSumCount": len(naver_rows),
+                  "recommendationFile": str(CANDIDATE_PATH),
+              },
+              "markets": markets,
+              "stocks": stocks,
+          }
+
+          compact = {
+              "version": VERSION,
+              "status": "ok",
+              "updatedAt": now,
+              "stockCount": total,
+              "recommendedCount": recommended_count,
+              "stocks": [
+                  {
+                      "code": x["code"],
+                      "name": x["name"],
+                      "market": x["market"],
+                      "sector": x["sector"],
+                      "isRecommended": x["isRecommended"],
+                      "recommendedRank": x["recommendedRank"],
+                      "recommendationScore": x["recommendationScore"],
+                      "recommendationGrade": x["recommendationGrade"],
+                      "searchText": x["searchText"],
+                  }
+                  for x in stocks
+              ],
+          }
+
+          report = {
+              "version": VERSION,
+              "status": "ok",
+              "updatedAt": now,
+              "stockCount": total,
+              "recommendedCount": recommended_count,
+              "marketCounts": markets,
+              "krxKindCount": len(krx_rows),
+              "naverMarketSumCount": len(naver_rows),
+              "outputFiles": [str(OUT_INDEX), str(OUT_COMPACT), str(OUT_REPORT)],
+              "topRecommended": [
+                  {"rank": x.get("recommendedRank"), "name": x.get("name"), "code": x.get("code"), "score": x.get("recommendationScore")}
+                  for x in stocks if x.get("isRecommended")
+              ][:10],
+          }
+
+          OUT_INDEX.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+          OUT_COMPACT.write_text(json.dumps(compact, ensure_ascii=False, indent=2), encoding="utf-8")
+          OUT_REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          print(f"[OK] wrote {OUT_INDEX}")
+          print(f"[OK] wrote {OUT_COMPACT}")
+          print(f"[OK] wrote {OUT_REPORT}")
+          PY
+
+      - name: V312 postflight - validate lookup index
+        run: |
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report_path = Path("v312_all_stock_lookup_report.json")
+          index_path = Path("stock_lookup_index.json")
+          compact_path = Path("stock_lookup_compact.json")
+
+          for p in [report_path, index_path, compact_path]:
+              if not p.exists():
+                  raise SystemExit(f"[FAIL] missing {p}")
+
+          report = json.loads(report_path.read_text(encoding="utf-8"))
+          index = json.loads(index_path.read_text(encoding="utf-8"))
+          compact = json.loads(compact_path.read_text(encoding="utf-8"))
+
+          stock_count = int(index.get("stockCount", 0))
+          compact_count = int(compact.get("stockCount", 0))
+          rec_count = int(index.get("recommendedCount", 0))
+
+          print(f"[CHECK] stockCount={stock_count}")
+          print(f"[CHECK] compactCount={compact_count}")
+          print(f"[CHECK] recommendedCount={rec_count}")
+
+          if index.get("version") != "V312_ALL_STOCK_LOOKUP_INDEX":
+              raise SystemExit(f"[FAIL] wrong version: {index.get('version')}")
+          if stock_count < 500:
+              raise SystemExit(f"[FAIL] stock lookup too small: {stock_count}")
+          if compact_count != stock_count:
+              raise SystemExit(f"[FAIL] compact mismatch: {compact_count} vs {stock_count}")
+          if rec_count < 30:
+              raise SystemExit(f"[FAIL] recommended mapping too small: {rec_count}")
+
+          # Guard: ETFs should be mostly removed from lookup. A few edge cases can remain, but block obvious top-level leak.
+          banned = ["KODEX", "TIGER", "ETF", "ETN", "스팩", "리츠"]
+          leaks = []
+          for s in index.get("stocks", [])[:300]:
+              name = s.get("name", "")
+              if any(b in name for b in banned):
+                  leaks.append(name)
+          if len(leaks) > 3:
+              raise SystemExit(f"[FAIL] too many banned lookup leaks: {leaks[:10]}")
+
+          print("[OK] V312 lookup index validation passed")
+          PY
+
+      - name: Commit V312 lookup files
+        run: |
+          set -e
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add \
+            stock_lookup_index.json \
+            stock_lookup_compact.json \
+            v312_all_stock_lookup_report.json \
+            2>/dev/null || true
+
+          echo "[GIT CACHED DIFF]"
+          git diff --cached --stat
+
+          if git diff --cached --quiet; then
+            echo "[WARN] No lookup changes to commit"
+          else
+            git commit -m "V312 build all stock lookup index"
+            git pull --rebase origin main
+            git push origin main
+          fi
