@@ -1,0 +1,43 @@
+name: V930 HANSU AI Score Fusion
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 21 * * 1-5' # KST 06:10, 장 시작 전 점검용
+
+permissions:
+  contents: write
+
+jobs:
+  hansu-ai-score-fusion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run V930 HANSU AI score fusion
+        run: |
+          set -e
+          if [ -f scripts/generate_hansu_ai_score_fusion_v930.py ]; then
+            python scripts/generate_hansu_ai_score_fusion_v930.py
+          else
+            python generate_hansu_ai_score_fusion_v930.py
+          fi
+
+      - name: Commit V930 outputs
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hansu_ai_score_fusion.json stock_candidates_ai_scored.json hansu_ai_score_fusion_summary.json
+          if git diff --cached --quiet; then
+            echo "No V930 changes"
+          else
+            git commit -m "V930 HANSU AI score fusion update"
+            git push
+          fi
