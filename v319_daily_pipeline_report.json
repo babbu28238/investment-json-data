@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-06-09 03:38:00 KST",
+  "updatedAt": "2026-06-10 02:32:11 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -14,27 +14,27 @@
   "files": {
     "stock_candidates.json": {
       "exists": true,
-      "candidateCount": 80,
+      "candidateCount": 50,
       "sampleNames": [
+        "피에스케이",
+        "성호전자",
+        "신한지주",
+        "카카오뱅크",
         "제주반도체",
-        "SK텔레콤",
-        "한화에어로스페이스",
-        "효성중공업",
-        "대한전선",
-        "파두",
-        "HD현대중공업",
-        "SK하이닉스",
-        "삼성전자",
-        "두산에너빌리티"
+        "TIGER 반도체TOP10레버리지",
+        "로보스타",
+        "엘티씨",
+        "에이팩트",
+        "테크윙"
       ],
       "sampleVersions": {
-        "V311_CLEAN_UNIVERSE_RESTORE_META": 10
+        "V299_LIVE_RECOMMENDATION_META_FIX": 10
       }
     },
     "app_data_bundle.json": {
       "exists": true,
-      "version": "V311_APP_DATA_BUNDLE",
-      "candidateCount": 80
+      "version": "V289_APP_DATA_BUNDLE",
+      "candidateCount": 50
     },
     "stock_lookup_index.json": {
       "exists": true,
