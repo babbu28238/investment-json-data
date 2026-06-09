@@ -1,40 +1,41 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-09 02:05:04",
-  "startedAt": "2026-06-09 02:05:04",
+  "updatedAt": "2026-06-09 23:08:49",
+  "startedAt": "2026-06-09 23:08:49",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
   "reportSignalCount": 80,
   "supplyRowCount": 80,
   "gradeCounts": {
-    "B": 2,
-    "C": 28,
-    "D": 20
+    "B": 3,
+    "C": 38,
+    "D": 9
   },
   "actionCounts": {
-    "관찰상위": 2,
-    "관찰": 28,
-    "제외검토": 20
+    "관찰상위": 3,
+    "관찰": 38,
+    "제외검토": 9
   },
   "sectorCounts": {
+    "KOSDAQ 자동선별": 16,
+    "금융·밸류업": 5,
+    "인터넷·게임·콘텐츠": 2,
+    "KOSPI 자동선별": 23,
     "로봇·자동화": 1,
-    "KOSPI 자동선별": 32,
-    "금융·밸류업": 4,
-    "KOSDAQ 자동선별": 12,
-    "인터넷·게임·콘텐츠": 1
+    "반도체·AI": 3
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "로보스타",
-      "code": "090360",
-      "score": 71,
+      "name": "피에스케이",
+      "code": "319660",
+      "score": 73,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
         "technicalScore": 73,
-        "supplyScore": 73,
+        "supplyScore": 80,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -45,19 +46,19 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "수급 중립/혼조"
+        "supplyMemo": "외국인·기관 수급 우위"
       }
     },
     {
       "rank": 2,
-      "name": "더블유게임즈",
-      "code": "192080",
-      "score": 70,
+      "name": "성호전자",
+      "code": "043260",
+      "score": 72,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 66,
-        "supplyScore": 79,
+        "technicalScore": 71,
+        "supplyScore": 80,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -75,35 +76,12 @@
       "rank": 3,
       "name": "신한지주",
       "code": "055550",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
+      "score": 71,
+      "grade": "B",
+      "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 68,
+        "technicalScore": 73,
         "supplyScore": 74,
-        "newsScore": 99,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 4,
-      "name": "테스",
-      "code": "095610",
-      "score": 68,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 68,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -118,14 +96,37 @@
       }
     },
     {
-      "rank": 5,
-      "name": "브이엠",
-      "code": "089970",
-      "score": 68,
+      "rank": 4,
+      "name": "카카오뱅크",
+      "code": "323410",
+      "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 63,
+        "technicalScore": 73,
+        "supplyScore": 80,
+        "newsScore": 79,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "외국인·기관 수급 우위"
+      }
+    },
+    {
+      "rank": 5,
+      "name": "제주반도체",
+      "code": "080220",
+      "score": 69,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 66,
         "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
@@ -142,13 +143,59 @@
     },
     {
       "rank": 6,
-      "name": "TIGER 미국배당다우존스타겟커버드콜2호",
-      "code": "458760",
-      "score": 68,
+      "name": "TIGER 반도체TOP10레버리지",
+      "code": "488080",
+      "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 65,
+        "technicalScore": 64,
+        "supplyScore": 80,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "외국인·기관 수급 우위"
+      }
+    },
+    {
+      "rank": 7,
+      "name": "로보스타",
+      "code": "090360",
+      "score": 69,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 63,
+        "supplyScore": 80,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "외국인·기관 수급 우위"
+      }
+    },
+    {
+      "rank": 8,
+      "name": "엘티씨",
+      "code": "170920",
+      "score": 69,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 68,
         "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
@@ -164,60 +211,14 @@
       }
     },
     {
-      "rank": 7,
-      "name": "피에스케이",
-      "code": "319660",
-      "score": 67,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 65,
-        "supplyScore": 68,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 8,
-      "name": "한국타이어앤테크놀로지",
-      "code": "161390",
-      "score": 67,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 67,
-        "supplyScore": 66,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 9,
-      "name": "제주반도체",
-      "code": "080220",
-      "score": 67,
+      "name": "에이팩트",
+      "code": "200470",
+      "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 57,
+        "technicalScore": 63,
         "supplyScore": 80,
         "newsScore": 100,
         "reportScore": 50,
@@ -234,14 +235,14 @@
     },
     {
       "rank": 10,
-      "name": "TIGER 미국필라델피아반도체레버리지(합성)",
-      "code": "423920",
-      "score": 67,
+      "name": "테크윙",
+      "code": "089030",
+      "score": 68,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 62,
-        "supplyScore": 72,
+        "technicalScore": 70,
+        "supplyScore": 68,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
