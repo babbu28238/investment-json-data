@@ -1,0 +1,41 @@
+name: V940 HANSU Evidence Engine
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hansu-evidence-engine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run V940 HANSU evidence engine
+        run: |
+          set -e
+          if [ -f scripts/generate_hansu_evidence_engine_v940.py ]; then
+            python scripts/generate_hansu_evidence_engine_v940.py
+          else
+            python generate_hansu_evidence_engine_v940.py
+          fi
+
+      - name: Commit V940 outputs
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add hansu_evidence_v940.json hansu_evidence_v940_summary.json stock_candidates_ai_evidence.json
+          if git diff --cached --quiet; then
+            echo "No V940 output changes to commit"
+          else
+            git commit -m "V940 HANSU evidence engine update"
+            git push
+          fi
