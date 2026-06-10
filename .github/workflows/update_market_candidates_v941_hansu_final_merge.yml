@@ -1,0 +1,41 @@
+name: V941 HANSU Final Data Merge
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hansu-final-data-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run V941 HANSU final data merge
+        run: |
+          set -e
+          if [ -f scripts/generate_hansu_final_merge_v941.py ]; then
+            python scripts/generate_hansu_final_merge_v941.py
+          else
+            python generate_hansu_final_merge_v941.py
+          fi
+
+      - name: Commit V941 outputs
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add hansu_final_operation_v941.json hansu_final_operation_v941_summary.json stock_candidates_hansu_final.json
+          if git diff --cached --quiet; then
+            echo "No V941 output changes to commit"
+          else
+            git commit -m "V941 HANSU final data merge update"
+            git push
+          fi
