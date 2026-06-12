@@ -1,38 +1,39 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-12 02:06:39",
-  "startedAt": "2026-06-12 02:06:39",
+  "updatedAt": "2026-06-13 00:30:23",
+  "startedAt": "2026-06-13 00:30:23",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
   "reportSignalCount": 80,
   "supplyRowCount": 80,
   "gradeCounts": {
-    "B": 5,
-    "C": 42,
-    "D": 3
+    "B": 8,
+    "C": 41,
+    "D": 1
   },
   "actionCounts": {
-    "관찰상위": 5,
-    "관찰": 42,
-    "제외검토": 3
+    "관찰상위": 8,
+    "관찰": 41,
+    "제외검토": 1
   },
   "sectorCounts": {
-    "KOSPI 자동선별": 23,
-    "반도체·AI": 6,
-    "KOSDAQ 자동선별": 18,
-    "금융·밸류업": 3
+    "KOSDAQ 자동선별": 16,
+    "반도체·AI": 5,
+    "KOSPI 자동선별": 22,
+    "로봇·자동화": 1,
+    "금융·밸류업": 6
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "현대해상",
-      "code": "001450",
-      "score": 72,
+      "name": "HPSP",
+      "code": "403870",
+      "score": 73,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 70,
+        "technicalScore": 73,
         "supplyScore": 80,
         "newsScore": 100,
         "reportScore": 50,
@@ -49,6 +50,29 @@
     },
     {
       "rank": 2,
+      "name": "원익QnC",
+      "code": "074600",
+      "score": 72,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 71,
+        "supplyScore": 80,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "외국인·기관 수급 우위"
+      }
+    },
+    {
+      "rank": 3,
       "name": "테크윙",
       "code": "089030",
       "score": 71,
@@ -71,32 +95,9 @@
       }
     },
     {
-      "rank": 3,
-      "name": "HPSP",
-      "code": "403870",
-      "score": 71,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 74,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 4,
-      "name": "피에스케이",
-      "code": "319660",
+      "name": "삼화콘덴서",
+      "code": "001820",
       "score": 71,
       "grade": "B",
       "action": "관찰상위",
@@ -118,6 +119,29 @@
     },
     {
       "rank": 5,
+      "name": "하나마이크론",
+      "code": "067310",
+      "score": 71,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 72,
+        "supplyScore": 74,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 6,
       "name": "피에스케이홀딩스",
       "code": "031980",
       "score": 70,
@@ -140,38 +164,15 @@
       }
     },
     {
-      "rank": 6,
-      "name": "삼성화재",
-      "code": "000810",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 67,
-        "newsScore": 97,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 7,
-      "name": "유진테크",
-      "code": "084370",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
+      "name": "GST",
+      "code": "083450",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
       "breakdown": {
         "technicalScore": 71,
-        "supplyScore": 67,
+        "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -187,15 +188,15 @@
     },
     {
       "rank": 8,
-      "name": "삼화콘덴서",
-      "code": "001820",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
+      "name": "TIGER 반도체TOP10레버리지",
+      "code": "488080",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
       "breakdown": {
         "technicalScore": 66,
         "supplyScore": 80,
-        "newsScore": 90,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -210,14 +211,14 @@
     },
     {
       "rank": 9,
-      "name": "코미코",
-      "code": "183300",
+      "name": "고영",
+      "code": "098460",
       "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
         "technicalScore": 68,
-        "supplyScore": 73,
+        "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -233,15 +234,15 @@
     },
     {
       "rank": 10,
-      "name": "디앤디파마텍",
-      "code": "347850",
-      "score": 68,
+      "name": "KODEX 반도체",
+      "code": "091160",
+      "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 68,
-        "newsScore": 99,
+        "technicalScore": 68,
+        "supplyScore": 74,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
