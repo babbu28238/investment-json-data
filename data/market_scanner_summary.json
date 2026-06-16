@@ -1,6 +1,6 @@
 {
-  "version": "A233",
-  "generatedAt": "2026-06-16T11:26:52",
+  "version": "A234",
+  "generatedAt": "2026-06-16T11:35:55",
   "universeCount": 30,
   "candidateCount": 30,
   "rawCandidateCount": 30,
@@ -770,7 +770,7 @@
       "updatedAt": "2026-06-15T21:48:59"
     }
   ],
-  "status": "naver_supply_engine",
+  "status": "naver_readhtml_fix",
   "scoreModel": "force-real-candidates",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 29,
@@ -787,13 +787,13 @@
   "scoreFailedCount": 0,
   "priceCount": 29,
   "chartScoreCount": 27,
-  "supplyScoreCount": 0,
+  "supplyScoreCount": 28,
   "newsScoreCount": 0,
   "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-  "supplyOkCount": 0,
+  "supplyOkCount": 30,
   "supplyFailCount": 30,
   "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-  "ready": false,
+  "ready": true,
   "usedSupplyDates": [],
   "supplyErrorSample": [
     {
@@ -919,5 +919,5 @@
   ],
   "supplyHitCount": 0,
   "supplyDiagRows": 207,
-  "supplySource": "naver_finance_item_frgn"
+  "supplySource": "naver_finance_item_frgn_readhtml_stringio"
 }
