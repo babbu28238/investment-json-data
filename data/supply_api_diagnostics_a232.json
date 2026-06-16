@@ -1,0 +1,4122 @@
+{
+  "version": "A232",
+  "generatedAt": "2026-06-16T11:16:43",
+  "functionNames": [
+    "get_etf_trading_volume_and_value",
+    "get_market_net_purchases_of_equities",
+    "get_market_net_purchases_of_equities_by_ticker",
+    "get_market_trading_value_and_volume_by_ticker",
+    "get_market_trading_value_by_date",
+    "get_market_trading_value_by_investor",
+    "get_market_trading_volume_by_date",
+    "get_market_trading_volume_by_investor",
+    "get_shorting_investor_value_by_date",
+    "get_shorting_investor_volume_by_date"
+  ],
+  "diagnostics": [
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "277810",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "196170",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "000660",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "039030",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "058470",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "033780",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "005380",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "086790",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "000270",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "035420",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "105560",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "112040",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "272210",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "091990",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "055550",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "028260",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "034020",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "316140",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "042660",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "329180",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "247540",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "035720",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "047810",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "011200",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "086520",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "008770",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "068760",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "241560",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "005930",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "method": "by_date",
+      "code": "108490",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "277810",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "196170",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "000660",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "039030",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "058470",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "033780",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "005380",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "086790",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "000270",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "035420",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "105560",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "112040",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "272210",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "091990",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "055550",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "028260",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "034020",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "316140",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "042660",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "329180",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "247540",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "035720",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "047810",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "011200",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "086520",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "008770",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "068760",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "241560",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "005930",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 20,
+      "method": "by_date",
+      "code": "108490",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "외국인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "외국인합계",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기타외국인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기관합계",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "금융투자",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "보험",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "투신",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "사모",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "은행",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "기타금융",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "연기금",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "연기금 등",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "KOSPI",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "KOSDAQ",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "ticker",
+      "investor": "개인",
+      "market": "ALL",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "net_pos",
+          "error": "empty"
+        },
+        {
+          "call": "net_kw",
+          "error": "empty"
+        },
+        {
+          "call": "net_inv_market",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "277810",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "196170",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "000660",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "039030",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "058470",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "033780",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "005380",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "086790",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "000270",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "035420",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "105560",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "112040",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "272210",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "091990",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "055550",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "028260",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "034020",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "316140",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "042660",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "329180",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "247540",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "035720",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "047810",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "011200",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "086520",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "008770",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "068760",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "241560",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "005930",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    },
+    {
+      "period": 60,
+      "method": "by_date",
+      "code": "108490",
+      "call": "",
+      "rows": 0,
+      "error": [
+        {
+          "call": "by_date_detail",
+          "error": "empty"
+        },
+        {
+          "call": "by_date_plain",
+          "error": "empty"
+        }
+      ]
+    }
+  ]
+}
