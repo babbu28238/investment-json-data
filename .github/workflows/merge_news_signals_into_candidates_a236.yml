@@ -1,0 +1,32 @@
+name: Merge News Signals Into Candidates A236
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '55 11 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  merge-news-signals-a236:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Merge news signals into candidate JSON
+        run: |
+          python scripts/merge_news_signals_into_candidates_a236.py
+
+      - name: Commit news merged candidate JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/news_merge_summary_a236.json
+          git commit -m "Merge news signals into candidates A236" || echo "No changes"
+          git push
