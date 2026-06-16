@@ -1,0 +1,33 @@
+name: Update Naver Supply ReadHTML Fix A234
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 11 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  update-naver-supply-readhtml-fix-a234:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests lxml beautifulsoup4 html5lib
+      - name: Build Naver supply engine fixed
+        run: |
+          python scripts/build_naver_supply_engine_a234.py
+      - name: Commit Naver supply fixed JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/naver_supply_detail_a234.json data/full_pipeline_summary_a234.json
+          git commit -m "Fix Naver supply read_html A234" || echo "No changes"
+          git push
