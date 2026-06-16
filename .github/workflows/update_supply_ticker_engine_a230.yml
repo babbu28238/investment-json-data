@@ -1,0 +1,38 @@
+name: Update Supply Ticker Engine A230
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 19:35, after Korean market close
+    - cron: '35 10 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  update-supply-ticker-engine-a230:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy pykrx requests beautifulsoup4 lxml
+
+      - name: Build supply ticker engine
+        run: |
+          python scripts/build_supply_ticker_engine_a230.py
+
+      - name: Commit supply ticker JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/supply_ticker_detail_a230.json data/full_pipeline_summary_a230.json
+          git commit -m "Build supply ticker engine A230" || echo "No changes"
+          git push
