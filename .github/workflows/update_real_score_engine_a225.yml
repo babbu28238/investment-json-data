@@ -1,0 +1,38 @@
+name: Update Real Score Engine A225
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 18:50, after Korean market close
+    - cron: '50 9 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  update-real-score-engine-a225:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy pykrx
+
+      - name: Build real chart supply news scores
+        run: |
+          python scripts/build_real_score_engine_a225.py
+
+      - name: Commit real score JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/score_engine_detail_a225.json data/price_update_summary.json
+          git commit -m "Build real score engine A225" || echo "No changes"
+          git push
