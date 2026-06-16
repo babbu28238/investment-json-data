@@ -1,6 +1,6 @@
 {
-  "version": "A225",
-  "generatedAt": "2026-06-16T10:25:56",
+  "version": "A229",
+  "generatedAt": "2026-06-16T10:52:32",
   "universeCount": 30,
   "candidateCount": 30,
   "rawCandidateCount": 30,
@@ -770,7 +770,7 @@
       "updatedAt": "2026-06-15T21:48:59"
     }
   ],
-  "status": "real_score_engine",
+  "status": "full_pipeline_partial",
   "scoreModel": "force-real-candidates",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 29,
@@ -789,5 +789,9 @@
   "chartScoreCount": 27,
   "supplyScoreCount": 0,
   "newsScoreCount": 0,
-  "scoreFormula": "chart35+supply30+news20+fundamental10+risk10"
+  "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
+  "supplyOkCount": 0,
+  "supplyFailCount": 30,
+  "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+  "ready": false
 }
