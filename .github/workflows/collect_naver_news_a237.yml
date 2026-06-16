@@ -1,0 +1,33 @@
+name: Collect Naver News A237
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 12 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  collect-naver-news-a237:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+      - name: Collect and merge Naver news
+        run: |
+          python scripts/collect_naver_news_a237.py
+      - name: Commit news collected JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/naver_news_detail_a237.json data/news_data.json data/news_merge_summary_a237.json
+          git commit -m "Collect Naver news A237" || echo "No changes"
+          git push
