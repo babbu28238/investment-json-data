@@ -1,0 +1,32 @@
+name: Merge Naver Supply Into Candidates A235
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 11 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  merge-naver-supply-a235:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Merge Naver supply detail into candidate JSON
+        run: |
+          python scripts/merge_naver_supply_into_candidates_a235.py
+
+      - name: Commit merged candidate JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/supply_merge_summary_a235.json
+          git commit -m "Merge Naver supply into candidates A235" || echo "No changes"
+          git push
