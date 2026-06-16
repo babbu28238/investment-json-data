@@ -1,6 +1,6 @@
 {
-  "version": "A221",
-  "generatedAt": "2026-06-16T09:59:05",
+  "version": "A222",
+  "generatedAt": "2026-06-16T10:07:01",
   "universeCount": 30,
   "candidateCount": 30,
   "rawCandidateCount": 30,
@@ -770,16 +770,17 @@
       "updatedAt": "2026-06-15T21:48:59"
     }
   ],
-  "status": "ok",
+  "status": "partial",
   "scoreModel": "force-real-candidates",
   "output": "stock_candidates_ai_scored.json",
-  "priceUpdatedCount": 25,
+  "priceUpdatedCount": 29,
   "priceMissingCount": 5,
   "zeroBeforeCount": 30,
   "usedPriceDate": {
     "KOSPI": "",
     "KOSDAQ": ""
   },
-  "priceSource": "pykrx_or_fallback_price_map",
-  "zeroAfterCount": 0
+  "priceSource": "pykrx_by_date",
+  "zeroAfterCount": 1,
+  "priceFailedCount": 1
 }
