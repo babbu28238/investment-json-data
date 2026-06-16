@@ -1,0 +1,38 @@
+name: Update Full Analysis Pipeline A229
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 19:20, after Korean market close
+    - cron: '20 10 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  update-full-analysis-a229:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy pykrx requests beautifulsoup4 lxml
+
+      - name: Run full analysis pipeline
+        run: |
+          python scripts/run_full_analysis_pipeline_a229.py
+
+      - name: Commit full analysis JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/price_update_summary.json data/score_engine_detail_a225.json data/supply_engine_detail_a228.json data/full_pipeline_summary_a229.json
+          git commit -m "Run full analysis pipeline A229" || echo "No changes"
+          git push
