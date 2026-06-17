@@ -1,6 +1,6 @@
 {
   "version": "V930_HANSU_AI_SCORE_FUSION",
-  "updatedAt": "2026-06-17 01:02:58 KST",
+  "updatedAt": "2026-06-17 21:38:54 KST",
   "weights": {
     "chart": 30,
     "supply": 30,
@@ -14,27 +14,27 @@
       "name": "하나금융지주",
       "market": "KOSPI",
       "sector": "금융·밸류업",
-      "rank": 20,
-      "hansuFinalScore": 74,
+      "rank": 8,
+      "hansuFinalScore": 76,
       "hansuGrade": "B",
       "scoreBreakdown": {
-        "chart30": 24.6,
+        "chart30": 26.1,
         "supply30": 24.6,
         "news10": 8.0,
         "report10": 5.0,
         "macro20": 12.0,
         "raw": {
-          "chartScore": 82,
+          "chartScore": 87,
           "supplyScore": 82,
           "newsScore": 80,
           "reportScore": 50,
           "macroScore": 60
         }
       },
-      "closeBuyDecision": "관찰",
+      "closeBuyDecision": "우선관찰",
       "realtimeSellDecision": "관찰",
       "positiveFactors": [
-        "차트/기술 점수 양호(82점)",
+        "차트/기술 점수 양호(87점)",
         "금융·밸류업 테마 내 외국인·기관·연기금 누적 매수 샘플.",
         "금융·밸류업 모멘텀 샘플. 악재 공시 없음."
       ],
@@ -44,7 +44,7 @@
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "금융·밸류업 테마 내 외국인·기관·연기금 누적 매수 샘플.",
-      "livePrice": "129,300",
+      "livePrice": "132,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -61,17 +61,17 @@
       "name": "HD현대중공업",
       "market": "KOSPI",
       "sector": "조선·해양",
-      "rank": 37,
-      "hansuFinalScore": 69,
-      "hansuGrade": "C",
+      "rank": 23,
+      "hansuFinalScore": 72,
+      "hansuGrade": "B",
       "scoreBreakdown": {
-        "chart30": 21.3,
+        "chart30": 23.7,
         "supply30": 23.4,
         "news10": 7.6,
         "report10": 5.0,
         "macro20": 12.0,
         "raw": {
-          "chartScore": 71,
+          "chartScore": 79,
           "supplyScore": 78,
           "newsScore": 76,
           "reportScore": 50,
@@ -81,6 +81,7 @@
       "closeBuyDecision": "관찰",
       "realtimeSellDecision": "관찰",
       "positiveFactors": [
+        "차트/기술 점수 양호(79점)",
         "외국인·기관 5일/20일 동반 순매수 샘플. 누적형 수급으로 분류.",
         "조선 업황 개선 기대 샘플. 악재 공시 없음."
       ],
@@ -90,7 +91,7 @@
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "외국인·기관 5일/20일 동반 순매수 샘플. 누적형 수급으로 분류.",
-      "livePrice": "714,000",
+      "livePrice": "698,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -103,11 +104,56 @@
       "hansuRank": 2
     },
     {
+      "code": "009150",
+      "name": "삼성전기",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 9,
+      "hansuFinalScore": 69,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 26.4,
+        "supply30": 19.8,
+        "news10": 6.2,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 88,
+          "supplyScore": 66,
+          "newsScore": 62,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "관찰",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(88점)"
+      ],
+      "negativeFactors": [
+        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
+      ],
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
+      "reportSignal": "리포트 중립: 삼성전기 (-, -)",
+      "supplySummary": "외국인 20일 누적은 양호하나 기관 단기 혼조 샘플. 개선형 수급으로 분류.",
+      "livePrice": "2,048,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": true,
+        "hasReport": true,
+        "hasEvidence": true,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 3
+    },
+    {
       "code": "005930",
       "name": "삼성전자",
       "market": "KOSPI",
       "sector": "반도체·AI",
-      "rank": 2,
+      "rank": 1,
       "hansuFinalScore": 65,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -135,7 +181,7 @@
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
       "reportSignal": "리포트 중립: 삼성전자 (미래에셋증권, 26.06.15)",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "337,000",
+      "livePrice": "343,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -145,14 +191,14 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": true
       },
-      "hansuRank": 3
+      "hansuRank": 4
     },
     {
-      "code": "089030",
-      "name": "테크윙",
-      "market": "KOSDAQ",
+      "code": "000660",
+      "name": "SK하이닉스",
+      "market": "KOSPI",
       "sector": "반도체·AI",
-      "rank": 6,
+      "rank": 4,
       "hansuFinalScore": 65,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -175,12 +221,12 @@
         "차트/기술 점수 양호(92점)"
       ],
       "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
       ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
+      "reportSignal": "리포트 중립: SK하이닉스 (-, -)",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "67,900",
+      "livePrice": "2,382,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -188,59 +234,61 @@
         "hasReport": true,
         "hasEvidence": false,
         "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
+        "hasDeepDiagnosis": true
       },
-      "hansuRank": 4
+      "hansuRank": 5
     },
     {
-      "code": "009150",
-      "name": "삼성전기",
+      "code": "034020",
+      "name": "두산에너빌리티",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 40,
+      "sector": "원전·전력·에너지",
+      "rank": 5,
       "hansuFinalScore": 65,
       "hansuGrade": "C",
       "scoreBreakdown": {
-        "chart30": 21.6,
-        "supply30": 19.8,
-        "news10": 6.2,
+        "chart30": 27.6,
+        "supply30": 15.0,
+        "news10": 5.0,
         "report10": 5.0,
         "macro20": 12.0,
         "raw": {
-          "chartScore": 72,
-          "supplyScore": 66,
-          "newsScore": 62,
+          "chartScore": 92,
+          "supplyScore": 50,
+          "newsScore": 50,
           "reportScore": 50,
           "macroScore": 60
         }
       },
       "closeBuyDecision": "관찰",
       "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
+      "positiveFactors": [
+        "차트/기술 점수 양호(92점)"
       ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
-      "reportSignal": "리포트 중립: 삼성전기 (-, -)",
-      "supplySummary": "외국인 20일 누적은 양호하나 기관 단기 혼조 샘플. 개선형 수급으로 분류.",
-      "livePrice": "1,999,000",
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "103,300",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
-        "hasSupply": true,
-        "hasReport": true,
-        "hasEvidence": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 5
+      "hansuRank": 6
     },
     {
       "code": "240810",
       "name": "원익IPS",
       "market": "KOSDAQ",
       "sector": "반도체·AI",
-      "rank": 32,
+      "rank": 42,
       "hansuFinalScore": 64,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -258,7 +306,7 @@
         }
       },
       "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
+      "realtimeSellDecision": "실시간 리스크 점검",
       "positiveFactors": [
         "차트/기술 점수 양호(75점)",
         "반도체 장비 모멘텀은 긍정이나 단기 변동성 리스크 샘플."
@@ -269,7 +317,7 @@
       "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "기관은 양호하나 외국인 단기 매도와 금융투자 단기성 수급이 강한 샘플.",
-      "livePrice": "174,500",
+      "livePrice": "156,100",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -279,14 +327,14 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 6
+      "hansuRank": 7
     },
     {
-      "code": "012450",
-      "name": "한화에어로스페이스",
+      "code": "010120",
+      "name": "LS ELECTRIC",
       "market": "KOSPI",
-      "sector": "방산·우주항공",
-      "rank": 1,
+      "sector": "원전·전력·에너지",
+      "rank": 2,
       "hansuFinalScore": 63,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -311,60 +359,15 @@
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "종가 기준 변동성 확인",
+      "riskMemo": "급등 추격 주의",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "257,500",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 7
-    },
-    {
-      "code": "080220",
-      "name": "제주반도체",
-      "market": "KOSDAQ",
-      "sector": "반도체·AI",
-      "rank": 3,
-      "hansuFinalScore": 63,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 26.4,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 88,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(88점)"
-      ],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "104,800",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
         "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
@@ -372,11 +375,11 @@
       "hansuRank": 8
     },
     {
-      "code": "006800",
-      "name": "미래에셋증권",
+      "code": "001440",
+      "name": "대한전선",
       "market": "KOSPI",
-      "sector": "금융·밸류업",
-      "rank": 4,
+      "sector": "원전·전력·에너지",
+      "rank": 3,
       "hansuFinalScore": 63,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -404,69 +407,24 @@
       "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "40,700",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 9
     },
     {
-      "code": "035420",
-      "name": "NAVER",
+      "code": "105560",
+      "name": "KB금융",
       "market": "KOSPI",
-      "sector": "인터넷·게임·콘텐츠",
-      "rank": 5,
-      "hansuFinalScore": 63,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 26.4,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 88,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(88점)"
-      ],
-      "negativeFactors": [
-        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
-      ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
-      "reportSignal": "리포트 중립: NAVER (-, -)",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "248,000",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 10
-    },
-    {
-      "code": "000660",
-      "name": "SK하이닉스",
-      "market": "KOSPI",
-      "sector": "반도체·AI",
-      "rank": 8,
+      "sector": "금융·밸류업",
+      "rank": 6,
       "hansuFinalScore": 63,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -492,9 +450,9 @@
         "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
       ],
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
-      "reportSignal": "리포트 중립: SK하이닉스 (-, -)",
+      "reportSignal": "리포트 중립: KB금융 (하나증권, 26.06.12)",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "2,288,000",
+      "livePrice": "172,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -502,16 +460,16 @@
         "hasReport": true,
         "hasEvidence": false,
         "hasLiveQuote": true,
-        "hasDeepDiagnosis": true
+        "hasDeepDiagnosis": false
       },
-      "hansuRank": 11
+      "hansuRank": 10
     },
     {
-      "code": "267260",
-      "name": "HD현대일렉트릭",
+      "code": "006800",
+      "name": "미래에셋증권",
       "market": "KOSPI",
-      "sector": "원전·전력·에너지",
-      "rank": 9,
+      "sector": "금융·밸류업",
+      "rank": 7,
       "hansuFinalScore": 63,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -534,17 +492,62 @@
         "차트/기술 점수 양호(87점)"
       ],
       "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+        "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "1,194,000",
+      "livePrice": "51,300",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": true,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 11
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "market": "KOSPI",
+      "sector": "자동차·모빌리티",
+      "rank": 10,
+      "hansuFinalScore": 63,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 26.4,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 88,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(88점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "640,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
         "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
@@ -552,11 +555,101 @@
       "hansuRank": 12
     },
     {
-      "code": "402340",
-      "name": "SK스퀘어",
+      "code": "011070",
+      "name": "LG이노텍",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
-      "rank": 13,
+      "rank": 11,
+      "hansuFinalScore": 63,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 26.4,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 88,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(88점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "1,236,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 13
+    },
+    {
+      "code": "012330",
+      "name": "현대모비스",
+      "market": "KOSPI",
+      "sector": "자동차·모빌리티",
+      "rank": 12,
+      "hansuFinalScore": 63,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 26.4,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 88,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(88점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "660,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 14
+    },
+    {
+      "code": "036930",
+      "name": "주성엔지니어링",
+      "market": "KOSDAQ",
+      "sector": "KOSDAQ 종가선별",
+      "rank": 14,
       "hansuFinalScore": 63,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -581,10 +674,10 @@
       "negativeFactors": [
         "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "1,413,000",
+      "livePrice": "226,500",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -594,14 +687,104 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 13
+      "hansuRank": 15
+    },
+    {
+      "code": "298040",
+      "name": "효성중공업",
+      "market": "KOSPI",
+      "sector": "원전·전력·에너지",
+      "rank": 15,
+      "hansuFinalScore": 63,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 26.1,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 87,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(87점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "3,892,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 16
+    },
+    {
+      "code": "009540",
+      "name": "HD한국조선해양",
+      "market": "KOSPI",
+      "sector": "조선·해양",
+      "rank": 16,
+      "hansuFinalScore": 63,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 26.1,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 87,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(87점)"
+      ],
+      "negativeFactors": [
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 17
     },
     {
       "code": "006400",
       "name": "삼성SDI",
       "market": "KOSPI",
       "sector": "2차전지·소재",
-      "rank": 7,
+      "rank": 13,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -629,24 +812,114 @@
       "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "549,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 14
+      "hansuRank": 18
     },
     {
-      "code": "000270",
-      "name": "기아",
+      "code": "000720",
+      "name": "현대건설",
       "market": "KOSPI",
-      "sector": "자동차·모빌리티",
-      "rank": 10,
+      "sector": "KOSPI 종가선별",
+      "rank": 17,
+      "hansuFinalScore": 62,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.9,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 83,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(83점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "147,800",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 19
+    },
+    {
+      "code": "439960",
+      "name": "코스모로보틱스",
+      "market": "KOSDAQ",
+      "sector": "로봇·자동화",
+      "rank": 18,
+      "hansuFinalScore": 62,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.9,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 83,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(83점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "25,550",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 20
+    },
+    {
+      "code": "028260",
+      "name": "삼성물산",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 19,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -674,7 +947,7 @@
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "167,500",
+      "livePrice": "497,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -684,14 +957,59 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 15
+      "hansuRank": 21
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "market": "KOSPI",
+      "sector": "자동차·모빌리티",
+      "rank": 20,
+      "hansuFinalScore": 62,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.9,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 83,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(83점)"
+      ],
+      "negativeFactors": [
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "170,200",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 22
     },
     {
       "code": "353200",
       "name": "대덕전자",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
-      "rank": 11,
+      "rank": 21,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -719,322 +1037,7 @@
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
       "reportSignal": "리포트 중립: 대덕전자 (하나증권, 26.06.15)",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "167,700",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 16
-    },
-    {
-      "code": "001740",
-      "name": "SK네트웍스",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 12,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.9,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 83,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(83점)"
-      ],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "12,850",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 17
-    },
-    {
-      "code": "042700",
-      "name": "한미반도체",
-      "market": "KOSPI",
-      "sector": "반도체·AI",
-      "rank": 14,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 25.2,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 84,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(84점)"
-      ],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "347,000",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 18
-    },
-    {
-      "code": "010170",
-      "name": "대한광통신",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
-      "rank": 15,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.9,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 83,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(83점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 19
-    },
-    {
-      "code": "001440",
-      "name": "대한전선",
-      "market": "KOSPI",
-      "sector": "원전·전력·에너지",
-      "rank": 16,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 82,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(82점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 20
-    },
-    {
-      "code": "010140",
-      "name": "삼성중공업",
-      "market": "KOSPI",
-      "sector": "조선·해양",
-      "rank": 17,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 82,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(82점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 21
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "market": "KOSPI",
-      "sector": "금융·밸류업",
-      "rank": 18,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 82,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(82점)"
-      ],
-      "negativeFactors": [
-        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
-      "reportSignal": "리포트 중립: KB금융 (하나증권, 26.06.12)",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "169,600",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 22
-    },
-    {
-      "code": "055550",
-      "name": "신한지주",
-      "market": "KOSPI",
-      "sector": "금융·밸류업",
-      "rank": 19,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 82,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(82점)"
-      ],
-      "negativeFactors": [
-        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
-      "reportSignal": "리포트 중립: 신한지주 (하나증권, 26.06.15)",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "105,600",
+      "livePrice": "169,900",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -1047,53 +1050,8 @@
       "hansuRank": 23
     },
     {
-      "code": "005380",
-      "name": "현대차",
-      "market": "KOSPI",
-      "sector": "자동차·모빌리티",
-      "rank": 21,
-      "hansuFinalScore": 62,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 24.9,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 83,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(83점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "647,000",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 24
-    },
-    {
-      "code": "064400",
-      "name": "LG씨엔에스",
+      "code": "007660",
+      "name": "이수페타시스",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 22,
@@ -1124,23 +1082,68 @@
       "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "123,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 24
+    },
+    {
+      "code": "010170",
+      "name": "대한광통신",
+      "market": "KOSDAQ",
+      "sector": "KOSDAQ 종가선별",
+      "rank": 24,
+      "hansuFinalScore": 62,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.9,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 83,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(83점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "19,400",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 25
     },
     {
-      "code": "196170",
-      "name": "알테오젠",
+      "code": "032820",
+      "name": "우리기술",
       "market": "KOSDAQ",
-      "sector": "바이오·제약",
+      "sector": "KOSDAQ 종가선별",
       "rank": 25,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
@@ -1169,34 +1172,34 @@
       "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "15,560",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 26
     },
     {
-      "code": "178320",
-      "name": "서진시스템",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
-      "rank": 27,
+      "code": "064350",
+      "name": "현대로템",
+      "market": "KOSPI",
+      "sector": "방산·우주항공",
+      "rank": 26,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
       "scoreBreakdown": {
-        "chart30": 24.9,
+        "chart30": 24.6,
         "supply30": 15.0,
         "news10": 5.0,
         "report10": 5.0,
         "macro20": 12.0,
         "raw": {
-          "chartScore": 83,
+          "chartScore": 82,
           "supplyScore": 50,
           "newsScore": 50,
           "reportScore": 50,
@@ -1206,20 +1209,20 @@
       "closeBuyDecision": "보류",
       "realtimeSellDecision": "관찰",
       "positiveFactors": [
-        "차트/기술 점수 양호(83점)"
+        "차트/기술 점수 양호(82점)"
       ],
       "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+        "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "78,200",
+      "livePrice": "226,500",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": true,
+        "hasReport": false,
         "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
@@ -1227,11 +1230,56 @@
       "hansuRank": 27
     },
     {
-      "code": "034020",
-      "name": "두산에너빌리티",
+      "code": "272210",
+      "name": "한화시스템",
       "market": "KOSPI",
-      "sector": "원전·전력·에너지",
-      "rank": 28,
+      "sector": "방산·우주항공",
+      "rank": 27,
+      "hansuFinalScore": 62,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.6,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 82,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(82점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 28
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "market": "KOSPI",
+      "sector": "조선·해양",
+      "rank": 29,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -1259,24 +1307,24 @@
       "riskMemo": "급등 추격 주의",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "129,200",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": true
       },
-      "hansuRank": 28
+      "hansuRank": 29
     },
     {
-      "code": "066570",
-      "name": "LG전자",
+      "code": "402340",
+      "name": "SK스퀘어",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
-      "rank": 31,
+      "rank": 30,
       "hansuFinalScore": 62,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -1299,29 +1347,74 @@
         "차트/기술 점수 양호(83점)"
       ],
       "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
-      "riskMemo": "급등 추격 주의",
-      "reportSignal": "리포트 데이터 미확인",
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "1,501,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 29
+      "hansuRank": 30
     },
     {
-      "code": "036930",
-      "name": "주성엔지니어링",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
-      "rank": 23,
+      "code": "035420",
+      "name": "NAVER",
+      "market": "KOSPI",
+      "sector": "인터넷·게임·콘텐츠",
+      "rank": 28,
+      "hansuFinalScore": 61,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.0,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 80,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(80점)"
+      ],
+      "negativeFactors": [
+        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
+      ],
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
+      "reportSignal": "리포트 중립: NAVER (-, -)",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "242,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 31
+    },
+    {
+      "code": "042700",
+      "name": "한미반도체",
+      "market": "KOSPI",
+      "sector": "반도체·AI",
+      "rank": 31,
       "hansuFinalScore": 61,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -1346,10 +1439,10 @@
       "negativeFactors": [
         "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "225,000",
+      "livePrice": "328,500",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -1359,14 +1452,284 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 30
+      "hansuRank": 32
     },
     {
-      "code": "007660",
-      "name": "이수페타시스",
+      "code": "066570",
+      "name": "LG전자",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
-      "rank": 24,
+      "rank": 34,
+      "hansuFinalScore": 61,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 24.0,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 80,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(80점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "234,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 33
+    },
+    {
+      "code": "080220",
+      "name": "제주반도체",
+      "market": "KOSDAQ",
+      "sector": "반도체·AI",
+      "rank": 32,
+      "hansuFinalScore": 60,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 22.5,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 75,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(75점)"
+      ],
+      "negativeFactors": [
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "101,200",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 34
+    },
+    {
+      "code": "039490",
+      "name": "키움증권",
+      "market": "KOSPI",
+      "sector": "금융·밸류업",
+      "rank": 33,
+      "hansuFinalScore": 60,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 23.4,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 78,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(78점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 35
+    },
+    {
+      "code": "267260",
+      "name": "HD현대일렉트릭",
+      "market": "KOSPI",
+      "sector": "원전·전력·에너지",
+      "rank": 35,
+      "hansuFinalScore": 60,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 22.5,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 75,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(75점)"
+      ],
+      "negativeFactors": [
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "1,114,000",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 36
+    },
+    {
+      "code": "006360",
+      "name": "GS건설",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 36,
+      "hansuFinalScore": 60,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 23.4,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 78,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(78점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 37
+    },
+    {
+      "code": "028300",
+      "name": "HLB",
+      "market": "KOSDAQ",
+      "sector": "바이오·제약",
+      "rank": 37,
+      "hansuFinalScore": 60,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 23.4,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 78,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [
+        "차트/기술 점수 양호(78점)"
+      ],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 38
+    },
+    {
+      "code": "003550",
+      "name": "LG",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 38,
       "hansuFinalScore": 60,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -1391,11 +1754,11 @@
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "종가 기준 변동성 확인",
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
       "livePrice": "-",
-      "liveStatus": "ok",
+      "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
@@ -1404,149 +1767,14 @@
         "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 31
+      "hansuRank": 39
     },
     {
-      "code": "373220",
-      "name": "LG에너지솔루션",
+      "code": "012450",
+      "name": "한화에어로스페이스",
       "market": "KOSPI",
-      "sector": "2차전지·소재",
-      "rank": 26,
-      "hansuFinalScore": 60,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 23.4,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 78,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(78점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 32
-    },
-    {
-      "code": "012330",
-      "name": "현대모비스",
-      "market": "KOSPI",
-      "sector": "자동차·모빌리티",
-      "rank": 29,
-      "hansuFinalScore": 60,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 23.4,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 78,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(78점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 33
-    },
-    {
-      "code": "047040",
-      "name": "대우건설",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 30,
-      "hansuFinalScore": 60,
-      "hansuGrade": "C",
-      "scoreBreakdown": {
-        "chart30": 23.4,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 78,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [
-        "차트/기술 점수 양호(78점)"
-      ],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 34
-    },
-    {
-      "code": "010120",
-      "name": "LS ELECTRIC",
-      "market": "KOSPI",
-      "sector": "원전·전력·에너지",
-      "rank": 33,
+      "sector": "방산·우주항공",
+      "rank": 39,
       "hansuFinalScore": 60,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -1571,27 +1799,72 @@
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "급등 추격 주의",
+      "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "1,183,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 35
+      "hansuRank": 40
     },
     {
-      "code": "058470",
-      "name": "리노공업",
+      "code": "403870",
+      "name": "HPSP",
       "market": "KOSDAQ",
       "sector": "반도체·AI",
-      "rank": 34,
+      "rank": 41,
+      "hansuFinalScore": 60,
+      "hansuGrade": "C",
+      "scoreBreakdown": {
+        "chart30": 22.8,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 76,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "실시간 리스크 점검",
+      "positiveFactors": [
+        "차트/기술 점수 양호(76점)"
+      ],
+      "negativeFactors": [
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "66,300",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 41
+    },
+    {
+      "code": "089030",
+      "name": "테크윙",
+      "market": "KOSDAQ",
+      "sector": "반도체·AI",
+      "rank": 43,
       "hansuFinalScore": 60,
       "hansuGrade": "C",
       "scoreBreakdown": {
@@ -1609,60 +1882,17 @@
         }
       },
       "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
+      "realtimeSellDecision": "실시간 리스크 점검",
       "positiveFactors": [
         "차트/기술 점수 양호(75점)"
       ],
       "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 36
-    },
-    {
-      "code": "403870",
-      "name": "HPSP",
-      "market": "KOSDAQ",
-      "sector": "반도체·AI",
-      "rank": 39,
-      "hansuFinalScore": 59,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 72,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
         "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
       "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "83,500",
+      "livePrice": "59,900",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -1672,142 +1902,13 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 37
+      "hansuRank": 42
     },
     {
-      "code": "011070",
-      "name": "LG이노텍",
+      "code": "079550",
+      "name": "LIG디펜스앤에어로스페이스",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 41,
-      "hansuFinalScore": 59,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 72,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "급등 추격 주의",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "1,209,000",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 38
-    },
-    {
-      "code": "204320",
-      "name": "HL만도",
-      "market": "KOSPI",
-      "sector": "자동차·모빌리티",
-      "rank": 42,
-      "hansuFinalScore": 59,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 72,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "70,600",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 39
-    },
-    {
-      "code": "475150",
-      "name": "SK이터닉스",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 43,
-      "hansuFinalScore": 59,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 72,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "급등 추격 주의",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 40
-    },
-    {
-      "code": "018880",
-      "name": "한온시스템",
-      "market": "KOSPI",
-      "sector": "자동차·모빌리티",
+      "sector": "방산·우주항공",
       "rank": 44,
       "hansuFinalScore": 59,
       "hansuGrade": "D",
@@ -1829,55 +1930,12 @@
       "realtimeSellDecision": "관찰",
       "positiveFactors": [],
       "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "5,680",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 41
-    },
-    {
-      "code": "093370",
-      "name": "후성",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 45,
-      "hansuFinalScore": 59,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.6,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 72,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
       "riskMemo": "급등 추격 주의",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "22,400",
+      "livePrice": "1,002,000",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -1887,11 +1945,11 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 42
+      "hansuRank": 43
     },
     {
-      "code": "003490",
-      "name": "대한항공",
+      "code": "047040",
+      "name": "대우건설",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 46,
@@ -1915,12 +1973,98 @@
       "realtimeSellDecision": "관찰",
       "positiveFactors": [],
       "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "27,450",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 44
+    },
+    {
+      "code": "475150",
+      "name": "SK이터닉스",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 47,
+      "hansuFinalScore": 59,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 21.6,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 72,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "55,800",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 45
+    },
+    {
+      "code": "028050",
+      "name": "삼성E&A",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 48,
+      "hansuFinalScore": 59,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 21.6,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 72,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [],
+      "negativeFactors": [
         "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
       "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "30,000",
+      "livePrice": "56,700",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -1930,153 +2074,24 @@
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 43
-    },
-    {
-      "code": "298040",
-      "name": "효성중공업",
-      "market": "KOSPI",
-      "sector": "원전·전력·에너지",
-      "rank": 35,
-      "hansuFinalScore": 58,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.3,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 71,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "급등 추격 주의",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 44
-    },
-    {
-      "code": "015760",
-      "name": "한국전력",
-      "market": "KOSPI",
-      "sector": "원전·전력·에너지",
-      "rank": 36,
-      "hansuFinalScore": 58,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.3,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 71,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "급등 추격 주의",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 45
-    },
-    {
-      "code": "042660",
-      "name": "한화오션",
-      "market": "KOSPI",
-      "sector": "조선·해양",
-      "rank": 38,
-      "hansuFinalScore": 58,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.3,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 71,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "급등 추격 주의",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": true
-      },
       "hansuRank": 46
     },
     {
-      "code": "000720",
-      "name": "현대건설",
+      "code": "204320",
+      "name": "HL만도",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 47,
-      "hansuFinalScore": 58,
+      "sector": "자동차·모빌리티",
+      "rank": 49,
+      "hansuFinalScore": 59,
       "hansuGrade": "D",
       "scoreBreakdown": {
-        "chart30": 21.3,
+        "chart30": 21.6,
         "supply30": 15.0,
         "news10": 5.0,
         "report10": 5.0,
         "macro20": 12.0,
         "raw": {
-          "chartScore": 71,
+          "chartScore": 72,
           "supplyScore": 50,
           "newsScore": 50,
           "reportScore": 50,
@@ -2087,29 +2102,29 @@
       "realtimeSellDecision": "관찰",
       "positiveFactors": [],
       "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "76,900",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 47
     },
     {
-      "code": "000150",
-      "name": "두산",
+      "code": "017670",
+      "name": "SK텔레콤",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
-      "rank": 48,
+      "rank": 40,
       "hansuFinalScore": 58,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2127,15 +2142,15 @@
         }
       },
       "closeBuyDecision": "보류",
-      "realtimeSellDecision": "실시간 리스크 점검",
+      "realtimeSellDecision": "관찰",
       "positiveFactors": [],
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "종가 기준 변동성 확인",
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "1,709,000",
+      "livePrice": "100,100",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -2148,10 +2163,53 @@
       "hansuRank": 48
     },
     {
-      "code": "100790",
-      "name": "미래에셋벤처투자",
+      "code": "178320",
+      "name": "서진시스템",
       "market": "KOSDAQ",
-      "sector": "금융·밸류업",
+      "sector": "KOSDAQ 종가선별",
+      "rank": 45,
+      "hansuFinalScore": 58,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 21.3,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 71,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "74,300",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 49
+    },
+    {
+      "code": "093370",
+      "name": "후성",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
       "rank": 50,
       "hansuFinalScore": 58,
       "hansuGrade": "D",
@@ -2175,26 +2233,26 @@
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "종가 기준 변동성 확인",
+      "riskMemo": "급등 추격 주의",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "19,200",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 49
+      "hansuRank": 50
     },
     {
-      "code": "032820",
-      "name": "우리기술",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
+      "code": "018880",
+      "name": "한온시스템",
+      "market": "KOSPI",
+      "sector": "자동차·모빌리티",
       "rank": 51,
       "hansuFinalScore": 58,
       "hansuGrade": "D",
@@ -2216,72 +2274,29 @@
       "realtimeSellDecision": "실시간 리스크 점검",
       "positiveFactors": [],
       "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
+      "livePrice": "5,190",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 50
-    },
-    {
-      "code": "043260",
-      "name": "성호전자",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
-      "rank": 52,
-      "hansuFinalScore": 58,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 21.3,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 71,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "실시간 리스크 점검",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "종가 기준 변동성 확인",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 51
     },
     {
-      "code": "079550",
-      "name": "LIG디펜스앤에어로스페이스",
+      "code": "085620",
+      "name": "미래에셋생명",
       "market": "KOSPI",
-      "sector": "방산·우주항공",
-      "rank": 49,
+      "sector": "금융·밸류업",
+      "rank": 52,
       "hansuFinalScore": 57,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2304,11 +2319,11 @@
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "급등 추격 주의",
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
       "livePrice": "-",
-      "liveStatus": "ok",
+      "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
@@ -2320,180 +2335,8 @@
       "hansuRank": 52
     },
     {
-      "code": "028260",
-      "name": "삼성물산",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 55,
-      "hansuFinalScore": 57,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 20.1,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 67,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "495,000",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 53
-    },
-    {
-      "code": "032830",
-      "name": "삼성생명",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 56,
-      "hansuFinalScore": 57,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 20.1,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 67,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "423,000",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 54
-    },
-    {
-      "code": "028050",
-      "name": "삼성E&A",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 57,
-      "hansuFinalScore": 57,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 20.1,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 67,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "52,100",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 55
-    },
-    {
-      "code": "001820",
-      "name": "삼화콘덴서",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 58,
-      "hansuFinalScore": 57,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 20.1,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 67,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "보류",
-      "realtimeSellDecision": "관찰",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "140,600",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 56
-    },
-    {
-      "code": "034730",
-      "name": "SK",
+      "code": "375500",
+      "name": "DL이앤씨",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 59,
@@ -2517,28 +2360,28 @@
       "realtimeSellDecision": "관찰",
       "positiveFactors": [],
       "negativeFactors": [
-        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
+        "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
-      "reportSignal": "리포트 중립: SK하이닉스 (-, -)",
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "646,000",
-      "liveStatus": "ok",
+      "livePrice": "-",
+      "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": true,
+        "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": true,
+        "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 57
+      "hansuRank": 53
     },
     {
-      "code": "439960",
-      "name": "코스모로보틱스",
-      "market": "KOSDAQ",
-      "sector": "로봇·자동화",
+      "code": "010060",
+      "name": "OCI홀딩스",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
       "rank": 60,
       "hansuFinalScore": 57,
       "hansuGrade": "D",
@@ -2562,11 +2405,11 @@
       "negativeFactors": [
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "급등 추격 주의",
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
       "livePrice": "-",
-      "liveStatus": "ok",
+      "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
@@ -2575,14 +2418,187 @@
         "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
+      "hansuRank": 54
+    },
+    {
+      "code": "100090",
+      "name": "SK오션플랜트",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 61,
+      "hansuFinalScore": 57,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 20.1,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 67,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 55
+    },
+    {
+      "code": "009830",
+      "name": "한화솔루션",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 62,
+      "hansuFinalScore": 57,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 20.1,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 67,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "42,200",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 56
+    },
+    {
+      "code": "347850",
+      "name": "디앤디파마텍",
+      "market": "KOSDAQ",
+      "sector": "KOSDAQ 종가선별",
+      "rank": 77,
+      "hansuFinalScore": 57,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 20.1,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 67,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "보류",
+      "realtimeSellDecision": "관찰",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "91,600",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 57
+    },
+    {
+      "code": "015760",
+      "name": "한국전력",
+      "market": "KOSPI",
+      "sector": "원전·전력·에너지",
+      "rank": 53,
+      "hansuFinalScore": 52,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 15.0,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 50,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "제외/리스크",
+      "realtimeSellDecision": "실시간 리스크 점검",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "차트 약세 또는 변동성 확대(50점)",
+        "리포트는 중립 또는 확인 필요"
+      ],
+      "riskMemo": "급등 추격 주의",
+      "reportSignal": "리포트 데이터 미확인",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "39,800",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": false,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
       "hansuRank": 58
     },
     {
-      "code": "005490",
-      "name": "POSCO홀딩스",
+      "code": "047810",
+      "name": "한국항공우주",
       "market": "KOSPI",
-      "sector": "2차전지·소재",
-      "rank": 53,
+      "sector": "방산·우주항공",
+      "rank": 54,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2622,11 +2638,11 @@
       "hansuRank": 59
     },
     {
-      "code": "454910",
-      "name": "두산로보틱스",
+      "code": "373220",
+      "name": "LG에너지솔루션",
       "market": "KOSPI",
-      "sector": "로봇·자동화",
-      "rank": 54,
+      "sector": "2차전지·소재",
+      "rank": 55,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2650,27 +2666,27 @@
         "차트 약세 또는 변동성 확대(50점)",
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
+      "livePrice": "410,500",
+      "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 60
     },
     {
-      "code": "039030",
-      "name": "이오테크닉스",
-      "market": "KOSDAQ",
-      "sector": "반도체·AI",
-      "rank": 61,
+      "code": "010140",
+      "name": "삼성중공업",
+      "market": "KOSPI",
+      "sector": "조선·해양",
+      "rank": 56,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2692,17 +2708,17 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+        "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "531,000",
+      "livePrice": "28,100",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": true,
+        "hasReport": false,
         "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
@@ -2710,11 +2726,11 @@
       "hansuRank": 61
     },
     {
-      "code": "006260",
-      "name": "LS",
+      "code": "005490",
+      "name": "POSCO홀딩스",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 62,
+      "sector": "2차전지·소재",
+      "rank": 57,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2741,24 +2757,24 @@
       "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
+      "livePrice": "390,000",
+      "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 62
     },
     {
-      "code": "307950",
-      "name": "현대오토에버",
+      "code": "047050",
+      "name": "포스코인터내셔널",
       "market": "KOSPI",
-      "sector": "자동차·모빌리티",
-      "rank": 63,
+      "sector": "2차전지·소재",
+      "rank": 58,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2798,11 +2814,11 @@
       "hansuRank": 63
     },
     {
-      "code": "017670",
-      "name": "SK텔레콤",
+      "code": "055550",
+      "name": "신한지주",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 64,
+      "sector": "금융·밸류업",
+      "rank": 63,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2824,17 +2840,17 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트는 중립 또는 확인 필요"
+        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 데이터 미확인",
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
+      "reportSignal": "리포트 중립: 신한지주 (하나증권, 26.06.15)",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "105,400",
+      "livePrice": "106,700",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
@@ -2842,11 +2858,11 @@
       "hansuRank": 64
     },
     {
-      "code": "034220",
-      "name": "LG디스플레이",
+      "code": "016360",
+      "name": "삼성증권",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 65,
+      "sector": "금융·밸류업",
+      "rank": 64,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -2886,10 +2902,54 @@
       "hansuRank": 65
     },
     {
-      "code": "000990",
-      "name": "DB하이텍",
+      "code": "316140",
+      "name": "우리금융지주",
       "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
+      "sector": "금융·밸류업",
+      "rank": 65,
+      "hansuFinalScore": 52,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 15.0,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 50,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "제외/리스크",
+      "realtimeSellDecision": "실시간 리스크 점검",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "차트 약세 또는 변동성 확대(50점)",
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "-",
+      "liveStatus": "-",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": false,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 66
+    },
+    {
+      "code": "058470",
+      "name": "리노공업",
+      "market": "KOSDAQ",
+      "sector": "반도체·AI",
       "rank": 66,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
@@ -2914,54 +2974,10 @@
         "차트 약세 또는 변동성 확대(50점)",
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": false,
-        "hasEvidence": false,
-        "hasLiveQuote": false,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 66
-    },
-    {
-      "code": "064350",
-      "name": "현대로템",
-      "market": "KOSPI",
-      "sector": "KOSPI 종가선별",
-      "rank": 67,
-      "hansuFinalScore": 52,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 15.0,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 50,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "제외/리스크",
-      "realtimeSellDecision": "실시간 리스크 점검",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "차트 약세 또는 변동성 확대(50점)",
-        "리포트는 중립 또는 확인 필요"
-      ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 데이터 미확인",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "213,000",
+      "livePrice": "94,700",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -2974,11 +2990,11 @@
       "hansuRank": 67
     },
     {
-      "code": "086520",
-      "name": "에코프로",
-      "market": "KOSDAQ",
-      "sector": "2차전지·소재",
-      "rank": 68,
+      "code": "112610",
+      "name": "씨에스윈드",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 67,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -3018,11 +3034,11 @@
       "hansuRank": 68
     },
     {
-      "code": "247540",
-      "name": "에코프로비엠",
-      "market": "KOSDAQ",
-      "sector": "2차전지·소재",
-      "rank": 69,
+      "code": "000150",
+      "name": "두산",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 68,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
       "scoreBreakdown": {
@@ -3046,24 +3062,68 @@
         "차트 약세 또는 변동성 확대(50점)",
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
+      "livePrice": "1,699,000",
+      "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 69
     },
     {
-      "code": "062040",
-      "name": "산일전기",
+      "code": "001820",
+      "name": "삼화콘덴서",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
+      "rank": 69,
+      "hansuFinalScore": 52,
+      "hansuGrade": "D",
+      "scoreBreakdown": {
+        "chart30": 15.0,
+        "supply30": 15.0,
+        "news10": 5.0,
+        "report10": 5.0,
+        "macro20": 12.0,
+        "raw": {
+          "chartScore": 50,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "macroScore": 60
+        }
+      },
+      "closeBuyDecision": "제외/리스크",
+      "realtimeSellDecision": "실시간 리스크 점검",
+      "positiveFactors": [],
+      "negativeFactors": [
+        "차트 약세 또는 변동성 확대(50점)",
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+      ],
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "supplySummary": "수급 데이터 미확인",
+      "livePrice": "147,900",
+      "liveStatus": "ok",
+      "sourceFlags": {
+        "hasCandidate": true,
+        "hasSupply": false,
+        "hasReport": true,
+        "hasEvidence": false,
+        "hasLiveQuote": true,
+        "hasDeepDiagnosis": false
+      },
+      "hansuRank": 70
+    },
+    {
+      "code": "322000",
+      "name": "HD현대에너지솔루션",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 70,
@@ -3103,11 +3163,11 @@
         "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 70
+      "hansuRank": 71
     },
     {
-      "code": "051910",
-      "name": "LG화학",
+      "code": "278470",
+      "name": "에이피알",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 71,
@@ -3132,26 +3192,26 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트는 중립 또는 확인 필요"
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
       "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 데이터 미확인",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
       "livePrice": "-",
       "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
         "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 71
+      "hansuRank": 72
     },
     {
-      "code": "009830",
-      "name": "한화솔루션",
+      "code": "034730",
+      "name": "SK",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 72,
@@ -3176,26 +3236,26 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트는 중립 또는 확인 필요"
+        "리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 데이터 미확인",
+      "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 방향성 중립. 수급·뉴스·차트 조건 동시 확인",
+      "reportSignal": "리포트 중립: SK하이닉스 (-, -)",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
+      "livePrice": "673,000",
+      "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 72
+      "hansuRank": 73
     },
     {
-      "code": "018260",
-      "name": "삼성에스디에스",
+      "code": "032830",
+      "name": "삼성생명",
       "market": "KOSPI",
       "sector": "KOSPI 종가선별",
       "rank": 73,
@@ -3220,28 +3280,28 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트는 중립 또는 확인 필요"
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 데이터 미확인",
+      "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
+      "livePrice": "431,000",
+      "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 73
+      "hansuRank": 74
     },
     {
-      "code": "347700",
-      "name": "스피어",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
+      "code": "000810",
+      "name": "삼성화재",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
       "rank": 74,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
@@ -3264,28 +3324,28 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트는 중립 또는 확인 필요"
+        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
       ],
       "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 데이터 미확인",
+      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
       "livePrice": "-",
       "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": false,
+        "hasReport": true,
         "hasEvidence": false,
         "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 74
+      "hansuRank": 75
     },
     {
-      "code": "098460",
-      "name": "고영",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
+      "code": "064400",
+      "name": "LG씨엔에스",
+      "market": "KOSPI",
+      "sector": "KOSPI 종가선별",
       "rank": 75,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
@@ -3308,28 +3368,28 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+        "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "riskMemo": "종가 기준 변동성 확인",
+      "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "37,400",
+      "livePrice": "92,900",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": true,
+        "hasReport": false,
         "hasEvidence": false,
         "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
-      "hansuRank": 75
+      "hansuRank": 76
     },
     {
-      "code": "067310",
-      "name": "하나마이크론",
+      "code": "277810",
+      "name": "레인보우로보틱스",
       "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
+      "sector": "로봇·자동화",
       "rank": 76,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
@@ -3352,72 +3412,28 @@
       "positiveFactors": [],
       "negativeFactors": [
         "차트 약세 또는 변동성 확대(50점)",
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
+        "리포트는 중립 또는 확인 필요"
       ],
       "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+      "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "50,900",
-      "liveStatus": "ok",
+      "livePrice": "-",
+      "liveStatus": "-",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
-        "hasReport": true,
+        "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": true,
-        "hasDeepDiagnosis": false
-      },
-      "hansuRank": 76
-    },
-    {
-      "code": "319660",
-      "name": "피에스케이",
-      "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
-      "rank": 77,
-      "hansuFinalScore": 52,
-      "hansuGrade": "D",
-      "scoreBreakdown": {
-        "chart30": 15.0,
-        "supply30": 15.0,
-        "news10": 5.0,
-        "report10": 5.0,
-        "macro20": 12.0,
-        "raw": {
-          "chartScore": 50,
-          "supplyScore": 50,
-          "newsScore": 50,
-          "reportScore": 50,
-          "macroScore": 60
-        }
-      },
-      "closeBuyDecision": "제외/리스크",
-      "realtimeSellDecision": "실시간 리스크 점검",
-      "positiveFactors": [],
-      "negativeFactors": [
-        "차트 약세 또는 변동성 확대(50점)",
-        "리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토"
-      ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
-      "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-      "supplySummary": "수급 데이터 미확인",
-      "livePrice": "165,700",
-      "liveStatus": "ok",
-      "sourceFlags": {
-        "hasCandidate": true,
-        "hasSupply": false,
-        "hasReport": true,
-        "hasEvidence": false,
-        "hasLiveQuote": true,
+        "hasLiveQuote": false,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 77
     },
     {
-      "code": "347850",
-      "name": "디앤디파마텍",
+      "code": "196170",
+      "name": "알테오젠",
       "market": "KOSDAQ",
-      "sector": "KOSDAQ 종가선별",
+      "sector": "바이오·제약",
       "rank": 78,
       "hansuFinalScore": 52,
       "hansuGrade": "D",
@@ -3442,24 +3458,24 @@
         "차트 약세 또는 변동성 확대(50점)",
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "-",
-      "liveStatus": "-",
+      "livePrice": "352,500",
+      "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
         "hasSupply": false,
         "hasReport": false,
         "hasEvidence": false,
-        "hasLiveQuote": false,
+        "hasLiveQuote": true,
         "hasDeepDiagnosis": false
       },
       "hansuRank": 78
     },
     {
-      "code": "222800",
-      "name": "심텍",
+      "code": "067310",
+      "name": "하나마이크론",
       "market": "KOSDAQ",
       "sector": "KOSDAQ 종가선별",
       "rank": 79,
@@ -3489,7 +3505,7 @@
       "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
       "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "134,100",
+      "livePrice": "50,100",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
@@ -3502,8 +3518,8 @@
       "hansuRank": 79
     },
     {
-      "code": "330860",
-      "name": "네패스아크",
+      "code": "043260",
+      "name": "성호전자",
       "market": "KOSDAQ",
       "sector": "KOSDAQ 종가선별",
       "rank": 80,
@@ -3530,10 +3546,10 @@
         "차트 약세 또는 변동성 확대(50점)",
         "리포트는 중립 또는 확인 필요"
       ],
-      "riskMemo": "전일 저점·20일선 이탈·거래량 붕괴 시 실시간 대응",
+      "riskMemo": "종가 기준 변동성 확인",
       "reportSignal": "리포트 데이터 미확인",
       "supplySummary": "수급 데이터 미확인",
-      "livePrice": "57,700",
+      "livePrice": "40,600",
       "liveStatus": "ok",
       "sourceFlags": {
         "hasCandidate": true,
