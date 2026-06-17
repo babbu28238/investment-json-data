@@ -1,0 +1,28 @@
+name: Clean Target Price Bands A245
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '05 14 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  clean-target-price-bands-a245:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Clean target price bands
+        run: python scripts/clean_target_price_bands_a245.py
+      - name: Commit cleaned target prices
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/target_price_bands_a245.json data/target_price_clean_audit_a245.json
+          git commit -m "Clean target price bands A245" || echo "No changes"
+          git push
