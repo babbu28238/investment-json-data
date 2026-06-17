@@ -1,0 +1,28 @@
+name: Clean Target Fallback Fix A246
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 14 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  clean-target-fallback-fix-a246:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Clean target prices from A244 detail fallback
+        run: python scripts/clean_target_fallback_fix_a246.py
+      - name: Commit cleaned target fallback
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/target_price_bands_a246.json data/target_price_clean_audit_a246.json
+          git commit -m "Clean target fallback fix A246" || echo "No changes"
+          git push
