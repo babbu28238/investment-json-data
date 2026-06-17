@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-06-17 05:31:28 KST",
+  "updatedAt": "2026-06-18 03:05:35 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -14,27 +14,27 @@
   "files": {
     "stock_candidates.json": {
       "exists": true,
-      "candidateCount": 80,
+      "candidateCount": 50,
       "sampleNames": [
-        "삼성전자",
-        "LS ELECTRIC",
-        "대한전선",
-        "SK하이닉스",
-        "두산에너빌리티",
-        "KB금융",
-        "미래에셋증권",
+        "LIG디펜스앤에어로스페이스",
+        "HL만도",
+        "디앤디파마텍",
+        "후성",
+        "한화오션",
+        "SK",
         "하나금융지주",
-        "삼성전기",
-        "현대차"
+        "KODEX 반도체",
+        "TIGER 반도체TOP10레버리지",
+        "대한항공"
       ],
       "sampleVersions": {
-        "V311_CLEAN_UNIVERSE_RESTORE_META": 10
+        "V299_LIVE_RECOMMENDATION_META_FIX": 10
       }
     },
     "app_data_bundle.json": {
       "exists": true,
-      "version": "V311_APP_DATA_BUNDLE",
-      "candidateCount": 80
+      "version": "V289_APP_DATA_BUNDLE",
+      "candidateCount": 50
     },
     "stock_lookup_index.json": {
       "exists": true,
