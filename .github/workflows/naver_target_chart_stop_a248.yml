@@ -1,0 +1,28 @@
+name: Naver Target Chart Stop A248
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '50 14 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  naver-target-chart-stop-a248:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Add chart stop to Naver target prices
+        run: python scripts/naver_target_chart_stop_a248.py
+      - name: Commit target and chart stop
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/naver_target_chart_stop_a248.json
+          git commit -m "Add Naver target and chart stop A248" || echo "No changes"
+          git push
