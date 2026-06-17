@@ -1,0 +1,32 @@
+name: Collect Naver Consensus Target A247
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 14 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  collect-naver-consensus-target-a247:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+      - name: Collect Naver consensus target prices
+        run: python scripts/collect_naver_consensus_target_a247.py
+      - name: Commit Naver consensus target prices
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/naver_consensus_target_a247.json
+          git commit -m "Collect Naver consensus target A247" || echo "No changes"
+          git push
