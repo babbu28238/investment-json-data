@@ -1,0 +1,28 @@
+name: Build Target Price Bands A242
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 13 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  build-target-price-bands-a242:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build target price bands with source guard
+        run: python scripts/build_target_price_bands_a242.py
+      - name: Commit target price bands
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/target_price_bands_a242.json
+          git commit -m "Build target price bands A242" || echo "No changes"
+          git push
