@@ -1,0 +1,28 @@
+name: Build All Stock Lookup A250
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 15 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  build-all-stock-lookup-a250:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build lookup universe
+        run: python scripts/build_all_stock_lookup_a250.py
+      - name: Commit lookup universe
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/all_stock_lookup_a250.json data/market_scanner_summary.json
+          git commit -m "Build all stock lookup A250" || echo "No changes"
+          git push
