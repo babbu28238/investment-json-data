@@ -1,7 +1,7 @@
 {
   "version": "V298_NAVER_SUPPLY_FLOW_ENGINE",
-  "updatedAt": "2026-06-16 05:29:32",
-  "startedAt": "2026-06-16 05:16:39",
+  "updatedAt": "2026-06-18 01:44:17",
+  "startedAt": "2026-06-18 01:32:34",
   "candidateCount": 80,
   "outputRows": 80,
   "okCount": 80,
@@ -17,8 +17,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "-7819800",
-      "finance20D": "1777355",
+      "foreign20D": "-5441269",
+      "finance20D": "2587944",
       "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -49,22 +49,22 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 2521000,
+          "foreign": 74908,
+          "institution": 341331
+        },
+        {
+          "date": "26.06.16",
+          "close": 2382000,
+          "foreign": 351894,
+          "institution": 238957
+        },
+        {
           "date": "26.06.15",
           "close": 2288000,
           "foreign": 180233,
           "institution": 165238
-        },
-        {
-          "date": "26.06.12",
-          "close": 2150000,
-          "foreign": 573440,
-          "institution": -270178
-        },
-        {
-          "date": "26.06.11",
-          "close": 2101000,
-          "foreign": 260726,
-          "institution": -513455
         }
       ]
     },
@@ -74,8 +74,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "-65565915",
-      "finance20D": "16610181",
+      "foreign20D": "-54251612",
+      "finance20D": "17309945",
       "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -106,34 +106,34 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 346500,
+          "foreign": -2000080,
+          "institution": 1133803
+        },
+        {
+          "date": "26.06.16",
+          "close": 343000,
+          "foreign": -27451,
+          "institution": 839414
+        },
+        {
           "date": "26.06.15",
           "close": 337000,
           "foreign": -1828940,
           "institution": 531697
-        },
-        {
-          "date": "26.06.12",
-          "close": 322500,
-          "foreign": 2880306,
-          "institution": 3295009
-        },
-        {
-          "date": "26.06.11",
-          "close": 299000,
-          "foreign": 549645,
-          "institution": -5437840
         }
       ]
     },
     {
-      "code": "036930",
-      "name": "주성엔지니어링",
+      "code": "042660",
+      "name": "한화오션",
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "-1823076",
-      "finance20D": "-833207",
-      "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
+      "foreign20D": "658148",
+      "finance20D": "452297",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
           "page": 1,
@@ -163,22 +163,22 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 133100,
+          "foreign": 1530933,
+          "institution": 275336
+        },
+        {
+          "date": "26.06.16",
+          "close": 129200,
+          "foreign": 343803,
+          "institution": 66179
+        },
+        {
           "date": "26.06.15",
-          "close": 225000,
-          "foreign": 48509,
-          "institution": -585064
-        },
-        {
-          "date": "26.06.12",
-          "close": 231000,
-          "foreign": -463243,
-          "institution": -319394
-        },
-        {
-          "date": "26.06.11",
-          "close": 245500,
-          "foreign": 249830,
-          "institution": 754935
+          "close": 123400,
+          "foreign": 149925,
+          "institution": 120690
         }
       ]
     },
@@ -188,8 +188,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "491734",
-      "finance20D": "742796",
+      "foreign20D": "413133",
+      "finance20D": "553900",
       "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -220,22 +220,136 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 164000,
+          "foreign": -109977,
+          "institution": -49032
+        },
+        {
+          "date": "26.06.16",
+          "close": 172000,
+          "foreign": 123647,
+          "institution": -21412
+        },
+        {
           "date": "26.06.15",
           "close": 169600,
           "foreign": 171107,
           "institution": 82260
+        }
+      ]
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-351869",
+      "finance20D": "598154",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.12",
-          "close": 161200,
-          "foreign": 138099,
-          "institution": 229909
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.11",
-          "close": 151500,
-          "foreign": -47506,
-          "institution": 23399
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 707000,
+          "foreign": 26583,
+          "institution": -661
+        },
+        {
+          "date": "26.06.16",
+          "close": 698000,
+          "foreign": -6547,
+          "institution": 19810
+        },
+        {
+          "date": "26.06.15",
+          "close": 714000,
+          "foreign": -17873,
+          "institution": 57757
+        }
+      ]
+    },
+    {
+      "code": "032830",
+      "name": "삼성생명",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-113029",
+      "finance20D": "429295",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 447000,
+          "foreign": 31386,
+          "institution": -23781
+        },
+        {
+          "date": "26.06.16",
+          "close": 431000,
+          "foreign": 24030,
+          "institution": -10011
+        },
+        {
+          "date": "26.06.15",
+          "close": 423000,
+          "foreign": 34090,
+          "institution": -7779
         }
       ]
     },
@@ -245,8 +359,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "667078",
-      "finance20D": "1094478",
+      "foreign20D": "635373",
+      "finance20D": "1015779",
       "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -277,33 +391,33 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 103100,
+          "foreign": -142541,
+          "institution": 44604
+        },
+        {
+          "date": "26.06.16",
+          "close": 106700,
+          "foreign": -21206,
+          "institution": 51383
+        },
+        {
           "date": "26.06.15",
           "close": 105600,
           "foreign": 495227,
           "institution": -224677
-        },
-        {
-          "date": "26.06.12",
-          "close": 99600,
-          "foreign": 391020,
-          "institution": -183731
-        },
-        {
-          "date": "26.06.11",
-          "close": 96900,
-          "foreign": -70797,
-          "institution": 109032
         }
       ]
     },
     {
-      "code": "086790",
-      "name": "하나금융지주",
+      "code": "298040",
+      "name": "효성중공업",
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "-508338",
-      "finance20D": "1063210",
+      "foreign20D": "-44614",
+      "finance20D": "1497",
       "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -334,22 +448,79 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 3855000,
+          "foreign": 1213,
+          "institution": -717
+        },
+        {
+          "date": "26.06.16",
+          "close": 3892000,
+          "foreign": 1683,
+          "institution": 10032
+        },
+        {
           "date": "26.06.15",
-          "close": 129300,
-          "foreign": 146775,
-          "institution": 83544
+          "close": 3752000,
+          "foreign": -4698,
+          "institution": 10495
+        }
+      ]
+    },
+    {
+      "code": "122630",
+      "name": "KODEX 레버리지",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "559220",
+      "finance20D": "5832870",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.12",
-          "close": 121000,
-          "foreign": 9788,
-          "institution": 231616
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.11",
-          "close": 114800,
-          "foreign": 48741,
-          "institution": -107470
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 219385,
+          "foreign": -59932,
+          "institution": 660261
+        },
+        {
+          "date": "26.06.16",
+          "close": 211510,
+          "foreign": -35807,
+          "institution": 1036467
+        },
+        {
+          "date": "26.06.15",
+          "close": 203030,
+          "foreign": 270520,
+          "institution": 266844
         }
       ]
     },
@@ -359,8 +530,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "102368",
-      "finance20D": "-2338133",
+      "foreign20D": "65971",
+      "finance20D": "-155254",
       "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -391,22 +562,22 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 142055,
+          "foreign": 12289,
+          "institution": 361492
+        },
+        {
+          "date": "26.06.16",
+          "close": 139550,
+          "foreign": -52701,
+          "institution": 333833
+        },
+        {
           "date": "26.06.15",
           "close": 136290,
           "foreign": 234869,
           "institution": -335354
-        },
-        {
-          "date": "26.06.12",
-          "close": 129270,
-          "foreign": -85932,
-          "institution": 1352349
-        },
-        {
-          "date": "26.06.11",
-          "close": 123850,
-          "foreign": -42091,
-          "institution": 72767
         }
       ]
     },
@@ -416,8 +587,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "-544978",
-      "finance20D": "1342344",
+      "foreign20D": "-811930",
+      "finance20D": "1581650",
       "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -448,22 +619,22 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 1596000,
+          "foreign": -205001,
+          "institution": 163170
+        },
+        {
+          "date": "26.06.16",
+          "close": 1501000,
+          "foreign": -98844,
+          "institution": 168107
+        },
+        {
           "date": "26.06.15",
           "close": 1413000,
           "foreign": 132963,
           "institution": -226773
-        },
-        {
-          "date": "26.06.12",
-          "close": 1358000,
-          "foreign": -513309,
-          "institution": 716022
-        },
-        {
-          "date": "26.06.11",
-          "close": 1228000,
-          "foreign": -491623,
-          "institution": 501010
         }
       ]
     },
@@ -473,8 +644,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "1638752",
-      "finance20D": "-30707505",
+      "foreign20D": "1296163",
+      "finance20D": "-29553742",
       "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -505,22 +676,79 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 28265,
+          "foreign": 191119,
+          "institution": -1425809
+        },
+        {
+          "date": "26.06.16",
+          "close": 28355,
+          "foreign": -243607,
+          "institution": -745121
+        },
+        {
           "date": "26.06.15",
           "close": 28220,
           "foreign": 18614,
           "institution": -1643743
+        }
+      ]
+    },
+    {
+      "code": "009150",
+      "name": "삼성전기",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "577965",
+      "finance20D": "-915074",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.12",
-          "close": 27880,
-          "foreign": -122654,
-          "institution": -1772521
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.11",
-          "close": 27695,
-          "foreign": 380799,
-          "institution": -1557417
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 2032000,
+          "foreign": 81556,
+          "institution": -106053
+        },
+        {
+          "date": "26.06.16",
+          "close": 2048000,
+          "foreign": 284775,
+          "institution": -101710
+        },
+        {
+          "date": "26.06.15",
+          "close": 1999000,
+          "foreign": 492322,
+          "institution": -36809
         }
       ]
     },
@@ -530,8 +758,8 @@
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "317084",
-      "finance20D": "6717016",
+      "foreign20D": "123470",
+      "finance20D": "8431290",
       "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -561,547 +789,34 @@
         }
       ],
       "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 53120,
+          "foreign": 263810,
+          "institution": 679859
+        },
+        {
+          "date": "26.06.16",
+          "close": 52450,
+          "foreign": -364136,
+          "institution": 128841
+        },
         {
           "date": "26.06.15",
           "close": 53800,
           "foreign": -145806,
           "institution": -96727
-        },
-        {
-          "date": "26.06.12",
-          "close": 53000,
-          "foreign": 342863,
-          "institution": 1791217
-        },
-        {
-          "date": "26.06.11",
-          "close": 48560,
-          "foreign": 192375,
-          "institution": 53610
         }
       ]
     },
     {
-      "code": "204320",
-      "name": "HL만도",
+      "code": "036930",
+      "name": "주성엔지니어링",
       "status": "ok",
       "rowCount": 160,
       "nonZeroFields": 6,
-      "foreign20D": "1940942",
-      "finance20D": "588752",
-      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 70600,
-          "foreign": 556479,
-          "institution": 189698
-        },
-        {
-          "date": "26.06.12",
-          "close": 65000,
-          "foreign": 289058,
-          "institution": -7568
-        },
-        {
-          "date": "26.06.11",
-          "close": 50000,
-          "foreign": 82498,
-          "institution": -86968
-        }
-      ]
-    },
-    {
-      "code": "089030",
-      "name": "테크윙",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "1496453",
-      "finance20D": "316224",
-      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 67900,
-          "foreign": -275851,
-          "institution": 22200
-        },
-        {
-          "date": "26.06.12",
-          "close": 65300,
-          "foreign": 623028,
-          "institution": -40634
-        },
-        {
-          "date": "26.06.11",
-          "close": 61100,
-          "foreign": -179984,
-          "institution": 146731
-        }
-      ]
-    },
-    {
-      "code": "102110",
-      "name": "TIGER 200",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "5907",
-      "finance20D": "-391098",
-      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 136310,
-          "foreign": 76581,
-          "institution": -44303
-        },
-        {
-          "date": "26.06.12",
-          "close": 129575,
-          "foreign": 28650,
-          "institution": 291066
-        },
-        {
-          "date": "26.06.11",
-          "close": 123910,
-          "foreign": 57426,
-          "institution": 45227
-        }
-      ]
-    },
-    {
-      "code": "003490",
-      "name": "대한항공",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "6332729",
-      "finance20D": "3370309",
-      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 30000,
-          "foreign": 2494164,
-          "institution": 2307821
-        },
-        {
-          "date": "26.06.12",
-          "close": 26600,
-          "foreign": 1329496,
-          "institution": 879806
-        },
-        {
-          "date": "26.06.11",
-          "close": 24800,
-          "foreign": -242318,
-          "institution": -127740
-        }
-      ]
-    },
-    {
-      "code": "240810",
-      "name": "원익IPS",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "268969",
-      "finance20D": "367992",
-      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 174500,
-          "foreign": -224320,
-          "institution": 274393
-        },
-        {
-          "date": "26.06.12",
-          "close": 183300,
-          "foreign": -467464,
-          "institution": 751895
-        },
-        {
-          "date": "26.06.11",
-          "close": 141000,
-          "foreign": 110000,
-          "institution": 132328
-        }
-      ]
-    },
-    {
-      "code": "133690",
-      "name": "TIGER 미국나스닥100",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "419851",
-      "finance20D": "-2766883",
-      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 202295,
-          "foreign": 23275,
-          "institution": -152948
-        },
-        {
-          "date": "26.06.12",
-          "close": 197890,
-          "foreign": -27756,
-          "institution": -115139
-        },
-        {
-          "date": "26.06.11",
-          "close": 194530,
-          "foreign": 110309,
-          "institution": -195795
-        }
-      ]
-    },
-    {
-      "code": "098460",
-      "name": "고영",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "1577979",
-      "finance20D": "575291",
-      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 37400,
-          "foreign": -343623,
-          "institution": -23079
-        },
-        {
-          "date": "26.06.12",
-          "close": 39150,
-          "foreign": 894848,
-          "institution": 119596
-        },
-        {
-          "date": "26.06.11",
-          "close": 34200,
-          "foreign": -317189,
-          "institution": 397235
-        }
-      ]
-    },
-    {
-      "code": "035420",
-      "name": "NAVER",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "-3454735",
-      "finance20D": "3825905",
-      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 248000,
-          "foreign": -69257,
-          "institution": -19191
-        },
-        {
-          "date": "26.06.12",
-          "close": 247000,
-          "foreign": 654497,
-          "institution": 750508
-        },
-        {
-          "date": "26.06.11",
-          "close": 224000,
-          "foreign": -183804,
-          "institution": 114302
-        }
-      ]
-    },
-    {
-      "code": "018880",
-      "name": "한온시스템",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "28855087",
-      "finance20D": "3869442",
-      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
-      "debug": [
-        {
-          "page": 1,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 2,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 3,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 4,
-          "status": "ok",
-          "rowCount": 20
-        },
-        {
-          "page": 5,
-          "status": "ok",
-          "rowCount": 20
-        }
-      ],
-      "sampleRows": [
-        {
-          "date": "26.06.15",
-          "close": 5680,
-          "foreign": 14604858,
-          "institution": 416400
-        },
-        {
-          "date": "26.06.12",
-          "close": 4700,
-          "foreign": 3175405,
-          "institution": 1040844
-        },
-        {
-          "date": "26.06.11",
-          "close": 4230,
-          "foreign": -3916362,
-          "institution": 3232338
-        }
-      ]
-    },
-    {
-      "code": "042700",
-      "name": "한미반도체",
-      "status": "ok",
-      "rowCount": 160,
-      "nonZeroFields": 6,
-      "foreign20D": "-1073250",
-      "finance20D": "-589528",
+      "foreign20D": "-1513645",
+      "finance20D": "-989386",
       "memo": "외국인·기관 20일 동반 순매도 (네이버 외국인·기관 집계 기반)",
       "debug": [
         {
@@ -1132,22 +847,307 @@
       ],
       "sampleRows": [
         {
+          "date": "26.06.17",
+          "close": 220000,
+          "foreign": -94600,
+          "institution": -189448
+        },
+        {
+          "date": "26.06.16",
+          "close": 226500,
+          "foreign": -161202,
+          "institution": -229075
+        },
+        {
           "date": "26.06.15",
-          "close": 347000,
-          "foreign": 16165,
-          "institution": -155871
+          "close": 225000,
+          "foreign": 48509,
+          "institution": -585064
+        }
+      ]
+    },
+    {
+      "code": "240810",
+      "name": "원익IPS",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "191176",
+      "finance20D": "55890",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.12",
-          "close": 361000,
-          "foreign": -4033,
-          "institution": 1567960
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
         },
         {
-          "date": "26.06.11",
-          "close": 291000,
-          "foreign": 154005,
-          "institution": -50002
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 161700,
+          "foreign": -114557,
+          "institution": -94594
+        },
+        {
+          "date": "26.06.16",
+          "close": 156100,
+          "foreign": 67364,
+          "institution": -222986
+        },
+        {
+          "date": "26.06.15",
+          "close": 174500,
+          "foreign": -224320,
+          "institution": 274393
+        }
+      ]
+    },
+    {
+      "code": "133690",
+      "name": "TIGER 미국나스닥100",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "465119",
+      "finance20D": "-2883236",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 202170,
+          "foreign": 46366,
+          "institution": -183471
+        },
+        {
+          "date": "26.06.16",
+          "close": 204385,
+          "foreign": -37191,
+          "institution": -46882
+        },
+        {
+          "date": "26.06.15",
+          "close": 202295,
+          "foreign": 23275,
+          "institution": -152948
+        }
+      ]
+    },
+    {
+      "code": "102110",
+      "name": "TIGER 200",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "104508",
+      "finance20D": "-218294",
+      "memo": "외국인 순매수 우위 / 기관 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 141880,
+          "foreign": -13824,
+          "institution": 47525
+        },
+        {
+          "date": "26.06.16",
+          "close": 139520,
+          "foreign": 62231,
+          "institution": 47892
+        },
+        {
+          "date": "26.06.15",
+          "close": 136310,
+          "foreign": 76581,
+          "institution": -44303
+        }
+      ]
+    },
+    {
+      "code": "079550",
+      "name": "LIG디펜스앤에어로스페이스",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "407517",
+      "finance20D": "225472",
+      "memo": "외국인·기관 20일 동반 순매수 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 950000,
+          "foreign": -27069,
+          "institution": 17466
+        },
+        {
+          "date": "26.06.16",
+          "close": 1002000,
+          "foreign": 45530,
+          "institution": 74728
+        },
+        {
+          "date": "26.06.15",
+          "close": 845000,
+          "foreign": 37355,
+          "institution": 11465
+        }
+      ]
+    },
+    {
+      "code": "028050",
+      "name": "삼성E&A",
+      "status": "ok",
+      "rowCount": 160,
+      "nonZeroFields": 6,
+      "foreign20D": "-3171816",
+      "finance20D": "1545600",
+      "memo": "기관 순매수 우위 / 외국인 혼조 (네이버 외국인·기관 집계 기반)",
+      "debug": [
+        {
+          "page": 1,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 2,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 3,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 4,
+          "status": "ok",
+          "rowCount": 20
+        },
+        {
+          "page": 5,
+          "status": "ok",
+          "rowCount": 20
+        }
+      ],
+      "sampleRows": [
+        {
+          "date": "26.06.17",
+          "close": 52500,
+          "foreign": -629364,
+          "institution": -607640
+        },
+        {
+          "date": "26.06.16",
+          "close": 56700,
+          "foreign": -227821,
+          "institution": 727193
+        },
+        {
+          "date": "26.06.15",
+          "close": 52100,
+          "foreign": -972795,
+          "institution": 417945
         }
       ]
     }
