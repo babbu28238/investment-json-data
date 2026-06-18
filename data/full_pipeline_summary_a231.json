@@ -1,9 +1,9 @@
 {
   "version": "A231",
-  "generatedAt": "2026-06-17T19:31:19",
+  "generatedAt": "2026-06-18T19:37:36",
   "summary": {
     "version": "A231",
-    "generatedAt": "2026-06-17T19:31:19",
+    "generatedAt": "2026-06-18T19:37:36",
     "universeCount": 0,
     "candidateCount": 0,
     "errorCount": 0,
@@ -11,6 +11,10 @@
     "status": "supply_net_purchase",
     "scoreModel": "chart+supply+news+macro-risk+detail",
     "output": "stock_candidates_ai_scored.json",
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -20,13 +24,9 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
-    "priceUpdatedCount": 0,
-    "priceFailedCount": 0,
-    "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
-    "supplyHitCount": 0,
+    "usedSupplyDates": [],
     "supplyErrorSample": [
       {
         "period": 5,
@@ -148,7 +148,8 @@
         "investor": "금융투자",
         "error": "empty"
       }
-    ]
+    ],
+    "supplyHitCount": 0
   },
   "detailCount": 0,
   "errors": [
