@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-06-17T21:59:15",
+  "generatedAt": "2026-06-18T22:27:32",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-06-17T21:59:15",
+    "generatedAt": "2026-06-18T22:27:32",
     "universeCount": 0,
     "candidateCount": 25,
     "errorCount": 0,
@@ -11,6 +11,10 @@
     "status": "naver_consensus_target",
     "scoreModel": "chart+supply+news+macro-risk+detail",
     "output": "stock_candidates_ai_scored.json",
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -20,13 +24,9 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
-    "priceUpdatedCount": 0,
-    "priceFailedCount": 0,
-    "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
-    "supplyHitCount": 0,
+    "usedSupplyDates": [],
     "supplyErrorSample": [
       {
         "period": 5,
@@ -149,17 +149,50 @@
         "error": "empty"
       }
     ],
+    "supplyHitCount": 0,
     "supplySource": "naver_supply_detail_a234",
     "supplyMergedCount": 0,
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
     "targetPriceCandidateCount": 17,
+    "candidateSource": "stock_candidates_ai_scored.json",
+    "candidateSourcesTried": [
+      {
+        "path": "data/stock_candidates_ai_scored.json",
+        "count": 0
+      },
+      {
+        "path": "data/stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_universe.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
+      }
+    ],
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 0,
     "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 17,
-    "candidateSource": "stock_candidates_ai_scored.json",
     "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
   },
   "details": [
@@ -235,14 +268,14 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "targetPrice": 443750,
-      "upsidePercent": 49.2,
-      "realisticTargetPrice": 355000,
-      "observeTimingPrice": 310500,
-      "stopTimingPrice": 266000,
+      "targetPrice": 455833,
+      "upsidePercent": 53.2,
+      "realisticTargetPrice": 364500,
+      "observeTimingPrice": 319000,
+      "stopTimingPrice": 273500,
       "source": "https://m.stock.naver.com/domestic/stock/005930/total",
       "rawCandidates": [
-        443750
+        455833
       ],
       "ok": true,
       "statusCode": 200,
@@ -259,7 +292,7 @@
       "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/000660/total",
       "rawCandidates": [
-        2751667
+        2835000
       ],
       "ok": true,
       "statusCode": 200,

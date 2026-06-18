@@ -1,11 +1,11 @@
 {
-  "version": "A246",
-  "generatedAt": "2026-06-18T21:37:00",
+  "version": "A247",
+  "generatedAt": "2026-06-18T22:27:32",
   "universeCount": 0,
   "candidateCount": 25,
   "errorCount": 0,
   "top": [],
-  "status": "target_clean_fallback_fix",
+  "status": "naver_consensus_target",
   "scoreModel": "chart+supply+news+macro-risk+detail",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -152,8 +152,8 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 10,
-  "candidateSource": "",
+  "targetPriceCandidateCount": 17,
+  "candidateSource": "stock_candidates_ai_scored.json",
   "candidateSourcesTried": [
     {
       "path": "data/stock_candidates_ai_scored.json",
@@ -188,5 +188,7 @@
   "rawTargetRows": 0,
   "reliableTargetCandidateCount": 3,
   "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
-  "source": "target_price_bands_a244.details"
+  "source": "target_price_bands_a244.details",
+  "targetUpsideCandidateCount": 17,
+  "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
 }
