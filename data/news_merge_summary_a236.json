@@ -1,9 +1,9 @@
 {
   "version": "A236",
-  "generatedAt": "2026-06-17T19:52:02",
+  "generatedAt": "2026-06-18T20:42:01",
   "summary": {
     "version": "A236",
-    "generatedAt": "2026-06-17T19:52:02",
+    "generatedAt": "2026-06-18T20:42:01",
     "universeCount": 0,
     "candidateCount": 0,
     "errorCount": 0,
@@ -11,6 +11,10 @@
     "status": "news_merge_engine",
     "scoreModel": "chart+supply+news+macro-risk+detail",
     "output": "stock_candidates_ai_scored.json",
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -20,13 +24,9 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
-    "priceUpdatedCount": 0,
-    "priceFailedCount": 0,
-    "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
-    "supplyHitCount": 0,
+    "usedSupplyDates": [],
     "supplyErrorSample": [
       {
         "period": 5,
@@ -149,62 +149,12 @@
         "error": "empty"
       }
     ],
+    "supplyHitCount": 0,
     "supplySource": "naver_supply_detail_a234",
     "supplyMergedCount": 0,
-    "newsItemCount": 360,
+    "newsItemCount": 0,
     "newsMergedCount": 0
   },
   "details": [],
-  "newsSample": [
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "title": "반기결산 앞둔 은행권, PF 옥석 가리기 본격화… ‘자본비율’ 방어 ....",
-      "link": "https://finance.naver.com/item/news_read.naver?article_id=0003032118&office_id=029&code=105560&page=1&sm=title_entity_id.basic",
-      "summary": "반기결산 앞둔 은행권, PF 옥석 가리기 본격화… ‘자본비율’ 방어 ....",
-      "source": "naver_finance_stock_news",
-      "collectedAt": "2026-06-16T13:32:24",
-      "_sourceFile": "news_data.json"
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "title": "고환율에 웃은 하나銀… 파생상품 수익 3배 껑충",
-      "link": "https://finance.naver.com/item/news_read.naver?article_id=0005535753&office_id=014&code=105560&page=1&sm=title_entity_id.basic",
-      "summary": "고환율에 웃은 하나銀… 파생상품 수익 3배 껑충",
-      "source": "naver_finance_stock_news",
-      "collectedAt": "2026-06-16T13:32:24",
-      "_sourceFile": "news_data.json"
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "title": "[단독]카카오, 은행권과 ‘원화코인 동맹’ 시동",
-      "link": "https://finance.naver.com/item/news_read.naver?article_id=0004631774&office_id=011&code=105560&page=1&sm=title_entity_id.basic",
-      "summary": "[단독]카카오, 은행권과 ‘원화코인 동맹’ 시동",
-      "source": "naver_finance_stock_news",
-      "collectedAt": "2026-06-16T13:32:24",
-      "_sourceFile": "news_data.json"
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "title": "\"금리 오르고 환율도 안정\"…금융株 신고가",
-      "link": "https://finance.naver.com/item/news_read.naver?article_id=0005694704&office_id=009&code=105560&page=1&sm=title_entity_id.basic",
-      "summary": "\"금리 오르고 환율도 안정\"…금융株 신고가",
-      "source": "naver_finance_stock_news",
-      "collectedAt": "2026-06-16T13:32:24",
-      "_sourceFile": "news_data.json"
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "title": "신임 이동철 여신협회장 \"생산적 금융 발맞춰 경쟁력 강화\"",
-      "link": "https://finance.naver.com/item/news_read.naver?article_id=0001255608&office_id=215&code=105560&page=1&sm=title_entity_id.basic",
-      "summary": "신임 이동철 여신협회장 \"생산적 금융 발맞춰 경쟁력 강화\"",
-      "source": "naver_finance_stock_news",
-      "collectedAt": "2026-06-16T13:32:24",
-      "_sourceFile": "news_data.json"
-    }
-  ]
+  "newsSample": []
 }
