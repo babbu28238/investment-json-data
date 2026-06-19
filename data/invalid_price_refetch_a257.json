@@ -1,0 +1,387 @@
+{
+  "version": "A257",
+  "generatedAt": "2026-06-19T12:07:00",
+  "summary": {
+    "version": "A257",
+    "generatedAt": "2026-06-19T12:07:00",
+    "universeCount": 0,
+    "candidateCount": 51,
+    "errorCount": 0,
+    "top": [],
+    "status": "invalid_price_refetch",
+    "scoreModel": "chart+supply+news+macro-risk+detail",
+    "output": "stock_candidates_ai_scored.json",
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
+    "scoreUpdatedCount": 0,
+    "scoreFailedCount": 0,
+    "priceCount": 0,
+    "chartScoreCount": 0,
+    "supplyScoreCount": 0,
+    "newsScoreCount": 0,
+    "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
+    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+    "ready": false,
+    "usedSupplyDates": [],
+    "supplyErrorSample": [
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
+      }
+    ],
+    "supplyHitCount": 0,
+    "supplySource": "naver_supply_detail_a234",
+    "supplyMergedCount": 0,
+    "newsItemCount": 0,
+    "newsMergedCount": 0,
+    "newsCollectedCandidateCount": 0,
+    "targetPriceCandidateCount": 18,
+    "candidateSource": "stock_candidates_ai_scored.json",
+    "candidateSourcesTried": [
+      {
+        "path": "data/stock_candidates_ai_scored.json",
+        "count": 0
+      },
+      {
+        "path": "data/stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_universe.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
+      }
+    ],
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 0,
+    "reliableTargetCandidateCount": 3,
+    "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+    "source": "target_price_bands_a244.details",
+    "targetUpsideCandidateCount": 18,
+    "targetSource": "naver_consensus_target",
+    "chartStopCandidateCount": 25,
+    "stopGuide": "target_60_percent + chart_stop_price",
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 18,
+    "chartStopCount": 25,
+    "allStockLookupCount": 51,
+    "outputLookup": "all_stock_lookup_a251.json",
+    "searchLookupCount": 51,
+    "searchPriceConnectedCount": 51,
+    "searchTargetConnectedCount": 45,
+    "validPriceCount": 46,
+    "validTargetCount": 40,
+    "priceFixedCount": 5,
+    "targetFixedCount": 5,
+    "invalidPriceCandidateCount": 5,
+    "invalidStopCleanedCount": 5,
+    "normalCandidateCount": 46,
+    "manualReviewCount": 5,
+    "outputReview": "manual_price_review_a256.json",
+    "invalidRefetchAttemptCount": 5,
+    "invalidRefetchRecoveredCount": 5,
+    "invalidRefetchStillInvalidCount": 0
+  },
+  "details": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "oldStatus": "검증필요",
+      "refetchPrice": 115100,
+      "rawPrices": [
+        354000,
+        362500,
+        346500,
+        343000,
+        337000,
+        2764000,
+        1780000,
+        295000,
+        193100,
+        115100,
+        156000,
+        8500,
+        350500,
+        12000,
+        380000,
+        346000,
+        76480025,
+        27637075,
+        2069,
+        5826
+      ],
+      "source": "https://m.stock.naver.com/domestic/stock/005930/total",
+      "result": "accepted",
+      "targetPrice": 0,
+      "rawTargets": [],
+      "newStatus": "정상"
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "oldStatus": "검증필요",
+      "refetchPrice": 354000,
+      "rawPrices": [
+        2764000,
+        2685000,
+        2521000,
+        2382000,
+        2288000,
+        354000,
+        1780000,
+        295000,
+        193100,
+        115100,
+        156000,
+        79000,
+        2755000,
+        70000,
+        2770000,
+        2891000,
+        2688000,
+        12010554,
+        33499830,
+        1969
+      ],
+      "source": "https://m.stock.naver.com/domestic/stock/000660/total",
+      "result": "accepted",
+      "targetPrice": 0,
+      "rawTargets": [],
+      "newStatus": "정상"
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "oldStatus": "검증필요",
+      "refetchPrice": 154900,
+      "rawPrices": [
+        613000,
+        601000,
+        618000,
+        640000,
+        647000,
+        154900,
+        3020,
+        8970,
+        4460,
+        5530,
+        1330,
+        12000,
+        607000,
+        6000,
+        611000,
+        631000,
+        590000,
+        3815487,
+        2312904,
+        5165
+      ],
+      "source": "https://m.stock.naver.com/domestic/stock/005380/total",
+      "result": "accepted",
+      "targetPrice": 0,
+      "rawTargets": [],
+      "newStatus": "정상"
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "oldStatus": "검증필요",
+      "refetchPrice": 97900,
+      "rawPrices": [
+        287000,
+        300500,
+        308500,
+        314000,
+        332000,
+        97900,
+        590000,
+        101800,
+        136700,
+        65300,
+        32150,
+        13500,
+        292000,
+        8500,
+        306000,
+        309000,
+        279500,
+        427252,
+        123873,
+        2066
+      ],
+      "source": "https://m.stock.naver.com/domestic/stock/108490/total",
+      "result": "accepted",
+      "targetPrice": 0,
+      "rawTargets": [],
+      "newStatus": "정상"
+    },
+    {
+      "code": "298040",
+      "name": "효성중공업",
+      "oldStatus": "검증필요",
+      "refetchPrice": 1078000,
+      "rawPrices": [
+        3855000,
+        3693000,
+        3892000,
+        3752000,
+        1078000,
+        259000,
+        410000,
+        38250,
+        235500,
+        337500,
+        162000,
+        3844000,
+        151000,
+        3772000,
+        4044000,
+        3710000,
+        133643,
+        518654,
+        9461,
+        4865000
+      ],
+      "source": "https://m.stock.naver.com/domestic/stock/298040/total",
+      "result": "accepted",
+      "targetPrice": 0,
+      "rawTargets": [],
+      "newStatus": "정상"
+    }
+  ]
+}
