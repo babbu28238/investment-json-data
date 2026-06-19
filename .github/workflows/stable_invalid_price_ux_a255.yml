@@ -1,0 +1,28 @@
+name: Stable Invalid Price UX A255
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 16 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  stable-invalid-price-ux-a255:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build stable invalid price UX fields
+        run: python scripts/stable_invalid_price_ux_a255.py
+      - name: Commit stable invalid price UX
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/stable_invalid_price_ux_a255.json
+          git commit -m "Stable invalid price UX A255" || echo "No changes"
+          git push
