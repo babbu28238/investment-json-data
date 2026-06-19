@@ -1,0 +1,1135 @@
+{
+  "version": "A254",
+  "generatedAt": "2026-06-19T11:14:04",
+  "summary": {
+    "version": "A254",
+    "generatedAt": "2026-06-19T11:14:04",
+    "universeCount": 0,
+    "candidateCount": 51,
+    "errorCount": 0,
+    "top": [],
+    "status": "invalid_stop_cleanup",
+    "scoreModel": "chart+supply+news+macro-risk+detail",
+    "output": "stock_candidates_ai_scored.json",
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
+    "scoreUpdatedCount": 0,
+    "scoreFailedCount": 0,
+    "priceCount": 0,
+    "chartScoreCount": 0,
+    "supplyScoreCount": 0,
+    "newsScoreCount": 0,
+    "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
+    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+    "ready": false,
+    "usedSupplyDates": [],
+    "supplyErrorSample": [
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 5,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
+      }
+    ],
+    "supplyHitCount": 0,
+    "supplySource": "naver_supply_detail_a234",
+    "supplyMergedCount": 0,
+    "newsItemCount": 0,
+    "newsMergedCount": 0,
+    "newsCollectedCandidateCount": 0,
+    "targetPriceCandidateCount": 18,
+    "candidateSource": "stock_candidates_ai_scored.json",
+    "candidateSourcesTried": [
+      {
+        "path": "data/stock_candidates_ai_scored.json",
+        "count": 0
+      },
+      {
+        "path": "data/stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_universe.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
+      }
+    ],
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 0,
+    "reliableTargetCandidateCount": 3,
+    "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+    "source": "target_price_bands_a244.details",
+    "targetUpsideCandidateCount": 18,
+    "targetSource": "naver_consensus_target",
+    "chartStopCandidateCount": 25,
+    "stopGuide": "target_60_percent + chart_stop_price",
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 18,
+    "chartStopCount": 25,
+    "allStockLookupCount": 51,
+    "outputLookup": "all_stock_lookup_a251.json",
+    "searchLookupCount": 51,
+    "searchPriceConnectedCount": 51,
+    "searchTargetConnectedCount": 45,
+    "validPriceCount": 46,
+    "validTargetCount": 40,
+    "priceFixedCount": 5,
+    "targetFixedCount": 5,
+    "invalidPriceCandidateCount": 5,
+    "invalidStopCleanedCount": 5,
+    "normalCandidateCount": 46
+  },
+  "details": [
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "status": "정상",
+      "before": {
+        "currentPrice": 125100,
+        "targetPrice": 170316,
+        "chartStopPrice": 115000,
+        "stopTimingPrice": 102000
+      },
+      "after": {
+        "currentPrice": 125100,
+        "targetPrice": 170316,
+        "chartStopPrice": 115000,
+        "stopTimingPrice": 102000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "status": "정상",
+      "before": {
+        "currentPrice": 684000,
+        "targetPrice": 911048,
+        "chartStopPrice": 629500,
+        "stopTimingPrice": 546500
+      },
+      "after": {
+        "currentPrice": 684000,
+        "targetPrice": 911048,
+        "chartStopPrice": 629500,
+        "stopTimingPrice": 546500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "status": "정상",
+      "before": {
+        "currentPrice": 99600,
+        "targetPrice": 149563,
+        "chartStopPrice": 91600,
+        "stopTimingPrice": 89700
+      },
+      "after": {
+        "currentPrice": 99600,
+        "targetPrice": 149563,
+        "chartStopPrice": 91600,
+        "stopTimingPrice": 89700
+      },
+      "cleaned": false
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "status": "정상",
+      "before": {
+        "currentPrice": 96100,
+        "targetPrice": 148231,
+        "chartStopPrice": 88400,
+        "stopTimingPrice": 88900
+      },
+      "after": {
+        "currentPrice": 96100,
+        "targetPrice": 148231,
+        "chartStopPrice": 88400,
+        "stopTimingPrice": 88900
+      },
+      "cleaned": false
+    },
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "status": "검증필요",
+      "before": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 333500,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 0,
+        "stopTimingPrice": 0
+      },
+      "cleaned": true
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "status": "검증필요",
+      "before": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 2470000,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 0,
+        "stopTimingPrice": 0
+      },
+      "cleaned": true
+    },
+    {
+      "code": "047810",
+      "name": "한국항공우주",
+      "status": "정상",
+      "before": {
+        "currentPrice": 152000,
+        "targetPrice": 223188,
+        "chartStopPrice": 140000,
+        "stopTimingPrice": 134000
+      },
+      "after": {
+        "currentPrice": 152000,
+        "targetPrice": 223188,
+        "chartStopPrice": 140000,
+        "stopTimingPrice": 134000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "241560",
+      "name": "두산밥캣",
+      "status": "정상",
+      "before": {
+        "currentPrice": 65900,
+        "targetPrice": 91071,
+        "chartStopPrice": 60600,
+        "stopTimingPrice": 54600
+      },
+      "after": {
+        "currentPrice": 65900,
+        "targetPrice": 91071,
+        "chartStopPrice": 60600,
+        "stopTimingPrice": 54600
+      },
+      "cleaned": false
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "status": "검증필요",
+      "before": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 553000,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 0,
+        "stopTimingPrice": 0
+      },
+      "cleaned": true
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "status": "정상",
+      "before": {
+        "currentPrice": 158800,
+        "targetPrice": 228200,
+        "chartStopPrice": 146000,
+        "stopTimingPrice": 137000
+      },
+      "after": {
+        "currentPrice": 158800,
+        "targetPrice": 228200,
+        "chartStopPrice": 146000,
+        "stopTimingPrice": 137000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "status": "정상",
+      "before": {
+        "currentPrice": 163100,
+        "targetPrice": 204632,
+        "chartStopPrice": 150000,
+        "stopTimingPrice": 123000
+      },
+      "after": {
+        "currentPrice": 163100,
+        "targetPrice": 204632,
+        "chartStopPrice": 150000,
+        "stopTimingPrice": 123000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "055550",
+      "name": "신한지주",
+      "status": "정상",
+      "before": {
+        "currentPrice": 100800,
+        "targetPrice": 128611,
+        "chartStopPrice": 92700,
+        "stopTimingPrice": 77200
+      },
+      "after": {
+        "currentPrice": 100800,
+        "targetPrice": 128611,
+        "chartStopPrice": 92700,
+        "stopTimingPrice": 77200
+      },
+      "cleaned": false
+    },
+    {
+      "code": "086790",
+      "name": "하나금융지주",
+      "status": "정상",
+      "before": {
+        "currentPrice": 126100,
+        "targetPrice": 157211,
+        "chartStopPrice": 116000,
+        "stopTimingPrice": 94300
+      },
+      "after": {
+        "currentPrice": 126100,
+        "targetPrice": 157211,
+        "chartStopPrice": 116000,
+        "stopTimingPrice": 94300
+      },
+      "cleaned": false
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "status": "정상",
+      "before": {
+        "currentPrice": 235000,
+        "targetPrice": 329227,
+        "chartStopPrice": 216000,
+        "stopTimingPrice": 197500
+      },
+      "after": {
+        "currentPrice": 235000,
+        "targetPrice": 329227,
+        "chartStopPrice": 216000,
+        "stopTimingPrice": 197500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "316140",
+      "name": "우리금융지주",
+      "status": "정상",
+      "before": {
+        "currentPrice": 31550,
+        "targetPrice": 44200,
+        "chartStopPrice": 29000,
+        "stopTimingPrice": 26500
+      },
+      "after": {
+        "currentPrice": 31550,
+        "targetPrice": 44200,
+        "chartStopPrice": 29000,
+        "stopTimingPrice": 26500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "033780",
+      "name": "KT&G",
+      "status": "정상",
+      "before": {
+        "currentPrice": 180400,
+        "targetPrice": 217692,
+        "chartStopPrice": 166000,
+        "stopTimingPrice": 130500
+      },
+      "after": {
+        "currentPrice": 180400,
+        "targetPrice": 217692,
+        "chartStopPrice": 166000,
+        "stopTimingPrice": 130500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "035720",
+      "name": "카카오",
+      "status": "정상",
+      "before": {
+        "currentPrice": 39300,
+        "targetPrice": 72053,
+        "chartStopPrice": 36200,
+        "stopTimingPrice": 43200
+      },
+      "after": {
+        "currentPrice": 39300,
+        "targetPrice": 72053,
+        "chartStopPrice": 36200,
+        "stopTimingPrice": 43200
+      },
+      "cleaned": false
+    },
+    {
+      "code": "011200",
+      "name": "HMM",
+      "status": "정상",
+      "before": {
+        "currentPrice": 20450,
+        "targetPrice": 22300,
+        "chartStopPrice": 18800,
+        "stopTimingPrice": 13400
+      },
+      "after": {
+        "currentPrice": 20450,
+        "targetPrice": 22300,
+        "chartStopPrice": 18800,
+        "stopTimingPrice": 13400
+      },
+      "cleaned": false
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "status": "검증필요",
+      "before": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 276500,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 0,
+        "stopTimingPrice": 0
+      },
+      "cleaned": true
+    },
+    {
+      "code": "008770",
+      "name": "호텔신라",
+      "status": "정상",
+      "before": {
+        "currentPrice": 57600,
+        "targetPrice": 83909,
+        "chartStopPrice": 53000,
+        "stopTimingPrice": 50300
+      },
+      "after": {
+        "currentPrice": 57600,
+        "targetPrice": 83909,
+        "chartStopPrice": 53000,
+        "stopTimingPrice": 50300
+      },
+      "cleaned": false
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 615000,
+        "targetPrice": 915000,
+        "chartStopPrice": 566000,
+        "stopTimingPrice": 549000
+      },
+      "after": {
+        "currentPrice": 615000,
+        "targetPrice": 915000,
+        "chartStopPrice": 566000,
+        "stopTimingPrice": 549000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "247540",
+      "name": "에코프로비엠",
+      "status": "정상",
+      "before": {
+        "currentPrice": 172300,
+        "targetPrice": 252611,
+        "chartStopPrice": 158500,
+        "stopTimingPrice": 151500
+      },
+      "after": {
+        "currentPrice": 172300,
+        "targetPrice": 252611,
+        "chartStopPrice": 158500,
+        "stopTimingPrice": 151500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "status": "정상",
+      "before": {
+        "currentPrice": 369500,
+        "targetPrice": 566667,
+        "chartStopPrice": 340000,
+        "stopTimingPrice": 340000
+      },
+      "after": {
+        "currentPrice": 369500,
+        "targetPrice": 566667,
+        "chartStopPrice": 340000,
+        "stopTimingPrice": 340000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "086520",
+      "name": "에코프로",
+      "status": "정상",
+      "before": {
+        "currentPrice": 117500,
+        "targetPrice": 0,
+        "chartStopPrice": 108000,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 117500,
+        "targetPrice": 0,
+        "chartStopPrice": 108000,
+        "stopTimingPrice": 0
+      },
+      "cleaned": false
+    },
+    {
+      "code": "039030",
+      "name": "이오테크닉스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 508000,
+        "targetPrice": 549400,
+        "chartStopPrice": 467500,
+        "stopTimingPrice": 329500
+      },
+      "after": {
+        "currentPrice": 508000,
+        "targetPrice": 549400,
+        "chartStopPrice": 467500,
+        "stopTimingPrice": 329500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "090360",
+      "name": "로보스타",
+      "status": "정상",
+      "before": {
+        "currentPrice": 103700,
+        "targetPrice": 0,
+        "chartStopPrice": 95400,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 103700,
+        "targetPrice": 0,
+        "chartStopPrice": 95400,
+        "stopTimingPrice": 0
+      },
+      "cleaned": false
+    },
+    {
+      "code": "322510",
+      "name": "제이엘케이",
+      "status": "정상",
+      "before": {
+        "currentPrice": 5660,
+        "targetPrice": 0,
+        "chartStopPrice": 5210,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 5660,
+        "targetPrice": 0,
+        "chartStopPrice": 5210,
+        "stopTimingPrice": 0
+      },
+      "cleaned": false
+    },
+    {
+      "code": "456190",
+      "name": "큐라클",
+      "status": "정상",
+      "before": {
+        "currentPrice": 7420,
+        "targetPrice": 0,
+        "chartStopPrice": 6830,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 7420,
+        "targetPrice": 0,
+        "chartStopPrice": 6830,
+        "stopTimingPrice": 0
+      },
+      "cleaned": false
+    },
+    {
+      "code": "277880",
+      "name": "티로보틱스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 3970,
+        "targetPrice": 0,
+        "chartStopPrice": 3650,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 3970,
+        "targetPrice": 0,
+        "chartStopPrice": 3650,
+        "stopTimingPrice": 0
+      },
+      "cleaned": false
+    },
+    {
+      "code": "078930",
+      "name": "GS",
+      "status": "정상",
+      "before": {
+        "currentPrice": 71300,
+        "targetPrice": 97500,
+        "chartStopPrice": 65600,
+        "stopTimingPrice": 58500
+      },
+      "after": {
+        "currentPrice": 71300,
+        "targetPrice": 97500,
+        "chartStopPrice": 65600,
+        "stopTimingPrice": 58500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "009540",
+      "name": "HD한국조선해양",
+      "status": "정상",
+      "before": {
+        "currentPrice": 421000,
+        "targetPrice": 592857,
+        "chartStopPrice": 387500,
+        "stopTimingPrice": 355500
+      },
+      "after": {
+        "currentPrice": 421000,
+        "targetPrice": 592857,
+        "chartStopPrice": 387500,
+        "stopTimingPrice": 355500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "010620",
+      "name": "HD현대미포",
+      "status": "정상",
+      "before": {
+        "currentPrice": 9063,
+        "targetPrice": 0,
+        "chartStopPrice": 8340,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 9063,
+        "targetPrice": 0,
+        "chartStopPrice": 8340,
+        "stopTimingPrice": 0
+      },
+      "cleaned": false
+    },
+    {
+      "code": "267260",
+      "name": "HD현대일렉트릭",
+      "status": "정상",
+      "before": {
+        "currentPrice": 1087000,
+        "targetPrice": 1468571,
+        "chartStopPrice": 1000000,
+        "stopTimingPrice": 881000
+      },
+      "after": {
+        "currentPrice": 1087000,
+        "targetPrice": 1468571,
+        "chartStopPrice": 1000000,
+        "stopTimingPrice": 881000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "373220",
+      "name": "LG에너지솔루션",
+      "status": "정상",
+      "before": {
+        "currentPrice": 400000,
+        "targetPrice": 576565,
+        "chartStopPrice": 368000,
+        "stopTimingPrice": 346000
+      },
+      "after": {
+        "currentPrice": 400000,
+        "targetPrice": 576565,
+        "chartStopPrice": 368000,
+        "stopTimingPrice": 346000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "051910",
+      "name": "LG화학",
+      "status": "정상",
+      "before": {
+        "currentPrice": 342500,
+        "targetPrice": 470200,
+        "chartStopPrice": 315000,
+        "stopTimingPrice": 282000
+      },
+      "after": {
+        "currentPrice": 342500,
+        "targetPrice": 470200,
+        "chartStopPrice": 315000,
+        "stopTimingPrice": 282000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "010120",
+      "name": "LS ELECTRIC",
+      "status": "정상",
+      "before": {
+        "currentPrice": 242000,
+        "targetPrice": 260000,
+        "chartStopPrice": 222500,
+        "stopTimingPrice": 156000
+      },
+      "after": {
+        "currentPrice": 242000,
+        "targetPrice": 260000,
+        "chartStopPrice": 222500,
+        "stopTimingPrice": 156000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "005490",
+      "name": "POSCO홀딩스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 367000,
+        "targetPrice": 579235,
+        "chartStopPrice": 337500,
+        "stopTimingPrice": 347500
+      },
+      "after": {
+        "currentPrice": 367000,
+        "targetPrice": 579235,
+        "chartStopPrice": 337500,
+        "stopTimingPrice": 347500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "402340",
+      "name": "SK스퀘어",
+      "status": "정상",
+      "before": {
+        "currentPrice": 1700000,
+        "targetPrice": 1348571,
+        "chartStopPrice": 1564000,
+        "stopTimingPrice": 809000
+      },
+      "after": {
+        "currentPrice": 1700000,
+        "targetPrice": 1348571,
+        "chartStopPrice": 1564000,
+        "stopTimingPrice": 809000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "006800",
+      "name": "미래에셋증권",
+      "status": "정상",
+      "before": {
+        "currentPrice": 50700,
+        "targetPrice": 77750,
+        "chartStopPrice": 46600,
+        "stopTimingPrice": 46600
+      },
+      "after": {
+        "currentPrice": 50700,
+        "targetPrice": 77750,
+        "chartStopPrice": 46600,
+        "stopTimingPrice": 46600
+      },
+      "cleaned": false
+    },
+    {
+      "code": "006400",
+      "name": "삼성SDI",
+      "status": "정상",
+      "before": {
+        "currentPrice": 522000,
+        "targetPrice": 838304,
+        "chartStopPrice": 480000,
+        "stopTimingPrice": 503000
+      },
+      "after": {
+        "currentPrice": 522000,
+        "targetPrice": 838304,
+        "chartStopPrice": 480000,
+        "stopTimingPrice": 503000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "207940",
+      "name": "삼성바이오로직스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 1430000,
+        "targetPrice": 2083500,
+        "chartStopPrice": 1315500,
+        "stopTimingPrice": 1250000
+      },
+      "after": {
+        "currentPrice": 1430000,
+        "targetPrice": 2083500,
+        "chartStopPrice": 1315500,
+        "stopTimingPrice": 1250000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "010140",
+      "name": "삼성중공업",
+      "status": "정상",
+      "before": {
+        "currentPrice": 27700,
+        "targetPrice": 40050,
+        "chartStopPrice": 25500,
+        "stopTimingPrice": 24000
+      },
+      "after": {
+        "currentPrice": 27700,
+        "targetPrice": 40050,
+        "chartStopPrice": 25500,
+        "stopTimingPrice": 24000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "068270",
+      "name": "셀트리온",
+      "status": "정상",
+      "before": {
+        "currentPrice": 173600,
+        "targetPrice": 261776,
+        "chartStopPrice": 159500,
+        "stopTimingPrice": 157000
+      },
+      "after": {
+        "currentPrice": 173600,
+        "targetPrice": 261776,
+        "chartStopPrice": 159500,
+        "stopTimingPrice": 157000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "112610",
+      "name": "씨에스윈드",
+      "status": "정상",
+      "before": {
+        "currentPrice": 44600,
+        "targetPrice": 79889,
+        "chartStopPrice": 41000,
+        "stopTimingPrice": 47900
+      },
+      "after": {
+        "currentPrice": 44600,
+        "targetPrice": 79889,
+        "chartStopPrice": 41000,
+        "stopTimingPrice": 47900
+      },
+      "cleaned": false
+    },
+    {
+      "code": "003690",
+      "name": "코리안리",
+      "status": "정상",
+      "before": {
+        "currentPrice": 13750,
+        "targetPrice": 16333,
+        "chartStopPrice": 12600,
+        "stopTimingPrice": 9800
+      },
+      "after": {
+        "currentPrice": 13750,
+        "targetPrice": 16333,
+        "chartStopPrice": 12600,
+        "stopTimingPrice": 9800
+      },
+      "cleaned": false
+    },
+    {
+      "code": "259960",
+      "name": "크래프톤",
+      "status": "정상",
+      "before": {
+        "currentPrice": 238000,
+        "targetPrice": 382778,
+        "chartStopPrice": 219000,
+        "stopTimingPrice": 229500
+      },
+      "after": {
+        "currentPrice": 238000,
+        "targetPrice": 382778,
+        "chartStopPrice": 219000,
+        "stopTimingPrice": 229500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "352820",
+      "name": "하이브",
+      "status": "정상",
+      "before": {
+        "currentPrice": 228000,
+        "targetPrice": 382750,
+        "chartStopPrice": 210000,
+        "stopTimingPrice": 229500
+      },
+      "after": {
+        "currentPrice": 228000,
+        "targetPrice": 382750,
+        "chartStopPrice": 210000,
+        "stopTimingPrice": 229500
+      },
+      "cleaned": false
+    },
+    {
+      "code": "012450",
+      "name": "한화에어로스페이스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 1189000,
+        "targetPrice": 1831667,
+        "chartStopPrice": 1094000,
+        "stopTimingPrice": 1099000
+      },
+      "after": {
+        "currentPrice": 1189000,
+        "targetPrice": 1831667,
+        "chartStopPrice": 1094000,
+        "stopTimingPrice": 1099000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "064350",
+      "name": "현대로템",
+      "status": "정상",
+      "before": {
+        "currentPrice": 211500,
+        "targetPrice": 311944,
+        "chartStopPrice": 194500,
+        "stopTimingPrice": 187000
+      },
+      "after": {
+        "currentPrice": 211500,
+        "targetPrice": 311944,
+        "chartStopPrice": 194500,
+        "stopTimingPrice": 187000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "012330",
+      "name": "현대모비스",
+      "status": "정상",
+      "before": {
+        "currentPrice": 603000,
+        "targetPrice": 778000,
+        "chartStopPrice": 555000,
+        "stopTimingPrice": 467000
+      },
+      "after": {
+        "currentPrice": 603000,
+        "targetPrice": 778000,
+        "chartStopPrice": 555000,
+        "stopTimingPrice": 467000
+      },
+      "cleaned": false
+    },
+    {
+      "code": "298040",
+      "name": "효성중공업",
+      "status": "검증필요",
+      "before": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 3397500,
+        "stopTimingPrice": 0
+      },
+      "after": {
+        "currentPrice": 0,
+        "targetPrice": 0,
+        "chartStopPrice": 0,
+        "stopTimingPrice": 0
+      },
+      "cleaned": true
+    }
+  ]
+}
