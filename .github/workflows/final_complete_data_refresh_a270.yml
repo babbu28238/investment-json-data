@@ -1,0 +1,28 @@
+name: Final Complete Data Refresh A270
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 17 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  final-complete-data-refresh-a270:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Final complete data refresh
+        run: python scripts/final_complete_data_refresh_a270.py
+      - name: Commit final complete data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/final_complete_a270.json
+          git commit -m "Final complete data refresh A270" || echo "No changes"
+          git push
