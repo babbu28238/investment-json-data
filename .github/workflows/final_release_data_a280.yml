@@ -1,0 +1,28 @@
+name: Final Release Data A280
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 17 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  final-release-data-a280:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build final release summary
+        run: python scripts/final_release_data_a280.py
+      - name: Commit final release summary
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/market_scanner_summary.json data/final_release_a280.json
+          git commit -m "Final release data A280" || echo "No changes"
+          git push
