@@ -1,0 +1,28 @@
+name: Manual Price Review A256
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '50 16 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  manual-price-review-a256:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build manual price review list
+        run: python scripts/manual_price_review_a256.py
+      - name: Commit manual price review
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/market_scanner_summary.json data/manual_price_review_a256.json
+          git commit -m "Manual price review A256" || echo "No changes"
+          git push
