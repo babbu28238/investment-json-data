@@ -1,11 +1,11 @@
 {
-  "version": "A244",
-  "generatedAt": "2026-06-19T19:19:30",
+  "version": "A245",
+  "generatedAt": "2026-06-19T20:20:48",
   "universeCount": 0,
   "candidateCount": 25,
   "errorCount": 0,
   "top": [],
-  "status": "target_fallback_candidates",
+  "status": "target_clean_filter",
   "scoreModel": "chart+supply+news+macro-risk+detail",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -152,7 +152,7 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 24,
+  "targetPriceCandidateCount": 10,
   "candidateSource": "built_in_fallback_top25",
   "candidateSourcesTried": [
     {
@@ -185,5 +185,8 @@
     }
   ],
   "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-  "rawTargetRows": 103
+  "rawTargetRows": 103,
+  "reliableTargetCandidateCount": 2,
+  "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+  "source": "target_price_bands_a244"
 }
