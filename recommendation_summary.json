@@ -1,34 +1,34 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-19 00:21:36",
-  "startedAt": "2026-06-19 00:21:36",
+  "updatedAt": "2026-06-20 01:08:25",
+  "startedAt": "2026-06-20 01:08:25",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
   "reportSignalCount": 80,
   "supplyRowCount": 80,
   "gradeCounts": {
-    "B": 9,
-    "C": 41
+    "B": 7,
+    "C": 43
   },
   "actionCounts": {
-    "관찰상위": 9,
-    "관찰": 41
+    "관찰상위": 7,
+    "관찰": 43
   },
   "sectorCounts": {
+    "KOSPI 자동선별": 29,
     "자동차·모빌리티": 1,
-    "KOSPI 자동선별": 25,
     "금융·밸류업": 5,
-    "KOSDAQ 자동선별": 10,
-    "바이오·제약": 1,
-    "조선·해양": 3,
-    "반도체·AI": 5
+    "KOSDAQ 자동선별": 8,
+    "반도체·AI": 5,
+    "조선·해양": 1,
+    "원전·전력·에너지": 1
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "HL만도",
-      "code": "204320",
+      "name": "SK",
+      "code": "034730",
       "score": 73,
       "grade": "B",
       "action": "관찰상위",
@@ -50,13 +50,13 @@
     },
     {
       "rank": 2,
-      "name": "후성",
-      "code": "093370",
+      "name": "HL만도",
+      "code": "204320",
       "score": 72,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 71,
+        "technicalScore": 70,
         "supplyScore": 80,
         "newsScore": 100,
         "reportScore": 50,
@@ -73,15 +73,15 @@
     },
     {
       "rank": 3,
-      "name": "TIGER 반도체TOP10",
-      "code": "396500",
+      "name": "삼성생명",
+      "code": "032830",
       "score": 71,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
         "technicalScore": 73,
-        "supplyScore": 74,
-        "newsScore": 100,
+        "supplyScore": 80,
+        "newsScore": 92,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -91,34 +91,11 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "수급 중립/혼조"
+        "supplyMemo": "외국인·기관 수급 우위"
       }
     },
     {
       "rank": 4,
-      "name": "하나금융지주",
-      "code": "086790",
-      "score": 71,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 74,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 5,
       "name": "TIGER 반도체TOP10레버리지",
       "code": "488080",
       "score": 71,
@@ -141,15 +118,15 @@
       }
     },
     {
-      "rank": 6,
-      "name": "디앤디파마텍",
-      "code": "347850",
-      "score": 71,
+      "rank": 5,
+      "name": "TIGER 반도체TOP10",
+      "code": "396500",
+      "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
         "technicalScore": 73,
-        "supplyScore": 74,
+        "supplyScore": 68,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -164,16 +141,39 @@
       }
     },
     {
-      "rank": 7,
-      "name": "삼성생명",
-      "code": "032830",
+      "rank": 6,
+      "name": "대한항공",
+      "code": "003490",
       "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
         "technicalScore": 73,
+        "supplyScore": 80,
+        "newsScore": 83,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "외국인·기관 수급 우위"
+      }
+    },
+    {
+      "rank": 7,
+      "name": "테스",
+      "code": "095610",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 71,
         "supplyScore": 74,
-        "newsScore": 90,
+        "newsScore": 99,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -188,52 +188,6 @@
     },
     {
       "rank": 8,
-      "name": "LIG디펜스앤에어로스페이스",
-      "code": "079550",
-      "score": 70,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 65,
-        "supplyScore": 80,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "외국인·기관 수급 우위"
-      }
-    },
-    {
-      "rank": 9,
-      "name": "TIGER 레버리지",
-      "code": "123320",
-      "score": 70,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 73,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 10,
       "name": "KODEX 레버리지",
       "code": "122630",
       "score": 69,
@@ -253,6 +207,52 @@
           "liquidity": 10
         },
         "supplyMemo": "외국인·기관 수급 우위"
+      }
+    },
+    {
+      "rank": 9,
+      "name": "KODEX 반도체레버리지",
+      "code": "494310",
+      "score": 69,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 71,
+        "supplyScore": 68,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 10,
+      "name": "디앤디파마텍",
+      "code": "347850",
+      "score": 69,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 71,
+        "supplyScore": 68,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
       }
     }
   ]
