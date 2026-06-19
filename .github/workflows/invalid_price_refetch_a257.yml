@@ -1,0 +1,32 @@
+name: Invalid Price Refetch A257
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '05 17 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  invalid-price-refetch-a257:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+      - name: Refetch invalid prices
+        run: python scripts/invalid_price_refetch_a257.py
+      - name: Commit invalid price refetch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/invalid_price_refetch_a257.json
+          git commit -m "Refetch invalid prices A257" || echo "No changes"
+          git push
