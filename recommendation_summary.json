@@ -1,7 +1,7 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-20 01:08:25",
-  "startedAt": "2026-06-20 01:08:25",
+  "updatedAt": "2026-06-23 05:14:17",
+  "startedAt": "2026-06-23 05:14:17",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
@@ -9,26 +9,25 @@
   "supplyRowCount": 80,
   "gradeCounts": {
     "B": 7,
-    "C": 43
+    "C": 39,
+    "D": 4
   },
   "actionCounts": {
     "관찰상위": 7,
-    "관찰": 43
+    "관찰": 39,
+    "제외검토": 4
   },
   "sectorCounts": {
-    "KOSPI 자동선별": 29,
-    "자동차·모빌리티": 1,
-    "금융·밸류업": 5,
-    "KOSDAQ 자동선별": 8,
-    "반도체·AI": 5,
-    "조선·해양": 1,
-    "원전·전력·에너지": 1
+    "KOSPI 자동선별": 28,
+    "KOSDAQ 자동선별": 12,
+    "금융·밸류업": 3,
+    "반도체·AI": 7
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "SK",
-      "code": "034730",
+      "name": "TIGER 반도체TOP10레버리지",
+      "code": "488080",
       "score": 73,
       "grade": "B",
       "action": "관찰상위",
@@ -50,31 +49,8 @@
     },
     {
       "rank": 2,
-      "name": "HL만도",
-      "code": "204320",
-      "score": 72,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 80,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "외국인·기관 수급 우위"
-      }
-    },
-    {
-      "rank": 3,
-      "name": "삼성생명",
-      "code": "032830",
+      "name": "KODEX 레버리지",
+      "code": "122630",
       "score": 71,
       "grade": "B",
       "action": "관찰상위",
@@ -95,15 +71,38 @@
       }
     },
     {
-      "rank": 4,
-      "name": "TIGER 반도체TOP10레버리지",
-      "code": "488080",
+      "rank": 3,
+      "name": "SK",
+      "code": "034730",
       "score": 71,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 68,
-        "supplyScore": 80,
+        "technicalScore": 73,
+        "supplyScore": 74,
+        "newsScore": 99,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 4,
+      "name": "KODEX 반도체레버리지",
+      "code": "494310",
+      "score": 71,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 73,
+        "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -114,7 +113,7 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "외국인·기관 수급 우위"
+        "supplyMemo": "수급 중립/혼조"
       }
     },
     {
@@ -142,15 +141,15 @@
     },
     {
       "rank": 6,
-      "name": "대한항공",
-      "code": "003490",
+      "name": "후성",
+      "code": "093370",
       "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 80,
-        "newsScore": 83,
+        "technicalScore": 71,
+        "supplyScore": 74,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -160,20 +159,20 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "외국인·기관 수급 우위"
+        "supplyMemo": "수급 중립/혼조"
       }
     },
     {
       "rank": 7,
-      "name": "테스",
-      "code": "095610",
+      "name": "원익QnC",
+      "code": "074600",
       "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 71,
+        "technicalScore": 70,
         "supplyScore": 74,
-        "newsScore": 99,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -188,15 +187,15 @@
     },
     {
       "rank": 8,
-      "name": "KODEX 레버리지",
-      "code": "122630",
+      "name": "KODEX 반도체",
+      "code": "091160",
       "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 80,
-        "newsScore": 78,
+        "technicalScore": 71,
+        "supplyScore": 68,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -206,19 +205,19 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "외국인·기관 수급 우위"
+        "supplyMemo": "수급 중립/혼조"
       }
     },
     {
       "rank": 9,
-      "name": "KODEX 반도체레버리지",
-      "code": "494310",
+      "name": "TIGER 반도체",
+      "code": "091230",
       "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
         "technicalScore": 71,
-        "supplyScore": 68,
+        "supplyScore": 67,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -234,15 +233,15 @@
     },
     {
       "rank": 10,
-      "name": "디앤디파마텍",
-      "code": "347850",
-      "score": 69,
+      "name": "삼성생명",
+      "code": "032830",
+      "score": 68,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 71,
+        "technicalScore": 73,
         "supplyScore": 68,
-        "newsScore": 100,
+        "newsScore": 92,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
