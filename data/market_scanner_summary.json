@@ -1,11 +1,11 @@
 {
-  "version": "A253",
-  "generatedAt": "2026-06-22T22:26:16",
+  "version": "A254",
+  "generatedAt": "2026-06-22T22:27:55",
   "universeCount": 0,
   "candidateCount": 25,
   "errorCount": 0,
   "top": [],
-  "status": "price_sanity_filter",
+  "status": "invalid_stop_cleanup",
   "scoreModel": "chart+supply+news+macro-risk+detail",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -200,5 +200,8 @@
   "validPriceCount": 24,
   "validTargetCount": 17,
   "priceFixedCount": 1,
-  "targetFixedCount": 1
+  "targetFixedCount": 1,
+  "invalidPriceCandidateCount": 1,
+  "invalidStopCleanedCount": 1,
+  "normalCandidateCount": 24
 }

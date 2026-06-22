@@ -1,9 +1,9 @@
 {
   "version": "A254",
-  "generatedAt": "2026-06-19T20:55:21",
+  "generatedAt": "2026-06-22T22:27:55",
   "summary": {
     "version": "A254",
-    "generatedAt": "2026-06-19T20:55:21",
+    "generatedAt": "2026-06-22T22:27:55",
     "universeCount": 0,
     "candidateCount": 25,
     "errorCount": 0,
@@ -26,7 +26,7 @@
     "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
-    "supplyHitCount": 0,
+    "usedSupplyDates": [],
     "supplyErrorSample": [
       {
         "period": 5,
@@ -149,9 +149,8 @@
         "error": "empty"
       }
     ],
-    "supplyDiagRows": 117,
-    "supplySource": "naver_supply_detail_a234",
-    "supplyMergedCount": 0,
+    "supplyHitCount": 0,
+    "supplySource": "naver_finance_item_frgn",
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
@@ -188,7 +187,7 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 103,
+    "rawTargetRows": 98,
     "reliableTargetCandidateCount": 2,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
@@ -270,15 +269,15 @@
       "status": "정상",
       "before": {
         "currentPrice": 132671,
-        "targetPrice": 148231,
+        "targetPrice": 146571,
         "chartStopPrice": 122000,
-        "stopTimingPrice": 88900
+        "stopTimingPrice": 87900
       },
       "after": {
         "currentPrice": 132671,
-        "targetPrice": 148231,
+        "targetPrice": 146571,
         "chartStopPrice": 122000,
-        "stopTimingPrice": 88900
+        "stopTimingPrice": 87900
       },
       "cleaned": false
     },
@@ -504,15 +503,15 @@
       "status": "정상",
       "before": {
         "currentPrice": 110000,
-        "targetPrice": 217692,
+        "targetPrice": 220000,
         "chartStopPrice": 101000,
-        "stopTimingPrice": 130500
+        "stopTimingPrice": 132000
       },
       "after": {
         "currentPrice": 110000,
-        "targetPrice": 217692,
+        "targetPrice": 220000,
         "chartStopPrice": 101000,
-        "stopTimingPrice": 130500
+        "stopTimingPrice": 132000
       },
       "cleaned": false
     },
