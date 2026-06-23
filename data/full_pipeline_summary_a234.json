@@ -1,11 +1,11 @@
 {
   "version": "A234",
-  "generatedAt": "2026-06-22T21:27:25",
+  "generatedAt": "2026-06-23T18:27:59",
   "summary": {
     "version": "A234",
-    "generatedAt": "2026-06-22T21:27:25",
+    "generatedAt": "2026-06-23T18:27:59",
     "universeCount": 0,
-    "candidateCount": 0,
+    "candidateCount": 25,
     "errorCount": 0,
     "top": [],
     "status": "naver_readhtml_fix",
@@ -17,15 +17,15 @@
     "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
-    "priceCount": 0,
+    "priceCount": 25,
     "chartScoreCount": 0,
-    "supplyScoreCount": 0,
+    "supplyScoreCount": 23,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 0,
+    "supplyOkCount": 25,
     "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-    "ready": false,
+    "ready": true,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -150,8 +150,255 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplySource": "naver_finance_item_frgn_readhtml_stringio"
+    "supplySource": "naver_finance_item_frgn_readhtml_stringio",
+    "newsItemCount": 0,
+    "newsMergedCount": 0,
+    "newsCollectedCandidateCount": 0,
+    "targetPriceCandidateCount": 18,
+    "candidateSource": "stock_candidates_ai_scored.json",
+    "candidateSourcesTried": [
+      {
+        "path": "data/stock_candidates_ai_scored.json",
+        "count": 0
+      },
+      {
+        "path": "data/stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_universe.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
+      }
+    ],
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 98,
+    "reliableTargetCandidateCount": 2,
+    "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+    "source": "target_price_bands_a244.details",
+    "targetUpsideCandidateCount": 18,
+    "targetSource": "naver_consensus_target",
+    "chartStopCandidateCount": 25,
+    "stopGuide": "target_60_percent + chart_stop_price",
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 18,
+    "chartStopCount": 25,
+    "allStockLookupCount": 51,
+    "outputLookup": "all_stock_lookup_a251.json",
+    "validPriceCount": 24,
+    "validTargetCount": 17,
+    "priceFixedCount": 1,
+    "targetFixedCount": 1,
+    "invalidPriceCandidateCount": 0,
+    "invalidStopCleanedCount": 1,
+    "normalCandidateCount": 25,
+    "manualReviewCount": 1,
+    "outputReview": "manual_price_review_a256.json",
+    "invalidRefetchAttemptCount": 1,
+    "invalidRefetchRecoveredCount": 1,
+    "invalidRefetchStillInvalidCount": 0,
+    "priceConnectedCount": 25,
+    "targetConnectedCount": 17,
+    "stopGuideConnectedCount": 25,
+    "releaseName": "HSinvest Android A280 Final Release",
+    "supplyDiagRows": 192
   },
-  "detailCount": 0,
-  "sample": []
+  "detailCount": 25,
+  "sample": [
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "status": "ok",
+      "supplyScore": 6,
+      "reason": "외국인 5일 순매수 585,411주 / 기관 60일 누적 순매수",
+      "rows": 160,
+      "indicators": {
+        "foreign5": 585411,
+        "foreign20": -167880,
+        "foreign60": -1256285,
+        "institution5": -723368,
+        "institution20": -845173,
+        "institution60": 774167,
+        "pension20": 0,
+        "trust20": 0,
+        "finance20": 0,
+        "rows": 160,
+        "columns": [
+          "날짜 날짜",
+          "종가 종가",
+          "전일비 전일비",
+          "등락률 등락률",
+          "거래량 거래량",
+          "기관 순매매량",
+          "외국인 순매매량",
+          "외국인 보유주수",
+          "외국인 보유율"
+        ],
+        "source": "naver_frgn_readhtml_stringio",
+        "unit": "shares"
+      },
+      "errors": [],
+      "totalScore": 6,
+      "grade": "C"
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "status": "ok",
+      "supplyScore": 15,
+      "reason": "외국인 20일 순매수 296,096주 / 외국인 5일 순매수 456,328주 / 기관 60일 누적 순매수 / 외국인 단기 유입 가속",
+      "rows": 160,
+      "indicators": {
+        "foreign5": 456328,
+        "foreign20": 296096,
+        "foreign60": -1522204,
+        "institution5": -356159,
+        "institution20": -52904,
+        "institution60": 1026315,
+        "pension20": 0,
+        "trust20": 0,
+        "finance20": 0,
+        "rows": 160,
+        "columns": [
+          "날짜 날짜",
+          "종가 종가",
+          "전일비 전일비",
+          "등락률 등락률",
+          "거래량 거래량",
+          "기관 순매매량",
+          "외국인 순매매량",
+          "외국인 보유주수",
+          "외국인 보유율"
+        ],
+        "source": "naver_frgn_readhtml_stringio",
+        "unit": "shares"
+      },
+      "errors": [],
+      "totalScore": 15,
+      "grade": "C"
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "status": "ok",
+      "supplyScore": 2,
+      "reason": "외국인 60일 누적 순매수",
+      "rows": 160,
+      "indicators": {
+        "foreign5": -597890,
+        "foreign20": -4682637,
+        "foreign60": 508493,
+        "institution5": -739085,
+        "institution20": -1593606,
+        "institution60": -1503243,
+        "pension20": 0,
+        "trust20": 0,
+        "finance20": 0,
+        "rows": 160,
+        "columns": [
+          "날짜 날짜",
+          "종가 종가",
+          "전일비 전일비",
+          "등락률 등락률",
+          "거래량 거래량",
+          "기관 순매매량",
+          "외국인 순매매량",
+          "외국인 보유주수",
+          "외국인 보유율"
+        ],
+        "source": "naver_frgn_readhtml_stringio",
+        "unit": "shares"
+      },
+      "errors": [],
+      "totalScore": 2,
+      "grade": "C"
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "status": "ok",
+      "supplyScore": 14,
+      "reason": "외국인 20일 순매수 1,426,035주 / 외국인 5일 순매수 184,692주 / 외국인 60일 누적 순매수",
+      "rows": 160,
+      "indicators": {
+        "foreign5": 184692,
+        "foreign20": 1426035,
+        "foreign60": 1802458,
+        "institution5": -328630,
+        "institution20": -878661,
+        "institution60": -1935249,
+        "pension20": 0,
+        "trust20": 0,
+        "finance20": 0,
+        "rows": 160,
+        "columns": [
+          "날짜 날짜",
+          "종가 종가",
+          "전일비 전일비",
+          "등락률 등락률",
+          "거래량 거래량",
+          "기관 순매매량",
+          "외국인 순매매량",
+          "외국인 보유주수",
+          "외국인 보유율"
+        ],
+        "source": "naver_frgn_readhtml_stringio",
+        "unit": "shares"
+      },
+      "errors": [],
+      "totalScore": 14,
+      "grade": "C"
+    },
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "status": "ok",
+      "supplyScore": 10,
+      "reason": "기관 20일 순매수 6,708,135주 / 기관 60일 누적 순매수",
+      "rows": 160,
+      "indicators": {
+        "foreign5": -5562549,
+        "foreign20": -43070408,
+        "foreign60": -125666487,
+        "institution5": -2991459,
+        "institution20": 6708135,
+        "institution60": 29932545,
+        "pension20": 0,
+        "trust20": 0,
+        "finance20": 0,
+        "rows": 160,
+        "columns": [
+          "날짜 날짜",
+          "종가 종가",
+          "전일비 전일비",
+          "등락률 등락률",
+          "거래량 거래량",
+          "기관 순매매량",
+          "외국인 순매매량",
+          "외국인 보유주수",
+          "외국인 보유율"
+        ],
+        "source": "naver_frgn_readhtml_stringio",
+        "unit": "shares"
+      },
+      "errors": [],
+      "totalScore": 10,
+      "grade": "C"
+    }
+  ]
 }
