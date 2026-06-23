@@ -1,11 +1,11 @@
 {
-  "version": "A243",
-  "generatedAt": "2026-06-23T21:04:54",
+  "version": "A245",
+  "generatedAt": "2026-06-23T21:08:00",
   "universeCount": 0,
   "candidateCount": 25,
   "errorCount": 0,
   "top": [],
-  "status": "report_target_collector",
+  "status": "target_clean_filter",
   "scoreModel": "chart+supply+news+macro-risk+detail",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -151,7 +151,7 @@
   "newsItemCount": 70,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 23,
-  "targetPriceCandidateCount": 21,
+  "targetPriceCandidateCount": 10,
   "candidateSource": "data/stock_candidates_ai_scored.json",
   "candidateSourcesTried": [
     {
@@ -163,7 +163,7 @@
   "rawTargetRows": 76,
   "reliableTargetCandidateCount": 2,
   "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
-  "source": "target_price_bands_a244.details",
+  "source": "target_price_bands_a244",
   "targetUpsideCandidateCount": 18,
   "targetSource": "naver_consensus_target",
   "chartStopCandidateCount": 25,
