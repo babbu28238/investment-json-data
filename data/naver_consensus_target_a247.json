@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-06-22T22:16:48",
+  "generatedAt": "2026-06-23T21:13:58",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-06-22T22:16:48",
+    "generatedAt": "2026-06-23T21:13:58",
     "universeCount": 0,
     "candidateCount": 25,
     "errorCount": 0,
@@ -17,15 +17,15 @@
     "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
-    "priceCount": 0,
+    "priceCount": 25,
     "chartScoreCount": 0,
-    "supplyScoreCount": 0,
-    "newsScoreCount": 0,
+    "supplyScoreCount": 23,
+    "newsScoreCount": 23,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 0,
+    "supplyOkCount": 25,
     "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-    "ready": false,
+    "ready": true,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -150,49 +150,49 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplySource": "naver_finance_item_frgn",
-    "newsItemCount": 0,
+    "supplySource": "naver_finance_item_frgn_readhtml_stringio",
+    "newsItemCount": 70,
     "newsMergedCount": 0,
-    "newsCollectedCandidateCount": 0,
+    "newsCollectedCandidateCount": 23,
     "targetPriceCandidateCount": 17,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
         "path": "data/stock_candidates_ai_scored.json",
-        "count": 0
-      },
-      {
-        "path": "data/stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 25
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 98,
+    "rawTargetRows": 76,
     "reliableTargetCandidateCount": 2,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 17,
-    "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
+    "targetSource": "m.stock.naver.com/domestic/stock/{code}/total",
+    "chartStopCandidateCount": 25,
+    "stopGuide": "target_60_percent + chart_stop_price",
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 18,
+    "chartStopCount": 25,
+    "allStockLookupCount": 51,
+    "outputLookup": "all_stock_lookup_a251.json",
+    "validPriceCount": 24,
+    "validTargetCount": 17,
+    "priceFixedCount": 1,
+    "targetFixedCount": 1,
+    "invalidPriceCandidateCount": 0,
+    "invalidStopCleanedCount": 1,
+    "normalCandidateCount": 25,
+    "manualReviewCount": 1,
+    "outputReview": "manual_price_review_a256.json",
+    "invalidRefetchAttemptCount": 1,
+    "invalidRefetchRecoveredCount": 1,
+    "invalidRefetchStillInvalidCount": 0,
+    "priceConnectedCount": 25,
+    "targetConnectedCount": 17,
+    "stopGuideConnectedCount": 25,
+    "releaseName": "HSinvest Android A280 Final Release",
+    "supplyDiagRows": 192
   },
   "details": [
     {
@@ -223,7 +223,7 @@
       "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/329180/total",
       "rawCandidates": [
-        915810
+        920571
       ],
       "ok": true,
       "statusCode": 200,
@@ -267,14 +267,14 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "targetPrice": 457917,
-      "upsidePercent": 53.9,
-      "realisticTargetPrice": 366500,
-      "observeTimingPrice": 320500,
-      "stopTimingPrice": 275000,
+      "targetPrice": 461250,
+      "upsidePercent": 55.0,
+      "realisticTargetPrice": 369000,
+      "observeTimingPrice": 323000,
+      "stopTimingPrice": 277000,
       "source": "https://m.stock.naver.com/domestic/stock/005930/total",
       "rawCandidates": [
-        457917
+        461250
       ],
       "ok": true,
       "statusCode": 200,
@@ -291,7 +291,7 @@
       "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/000660/total",
       "rawCandidates": [
-        2835000
+        2977083
       ],
       "ok": true,
       "statusCode": 200,
