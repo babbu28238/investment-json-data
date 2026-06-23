@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-06-20 02:27:41 KST",
+  "updatedAt": "2026-06-24 02:25:21 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -14,37 +14,37 @@
   "files": {
     "stock_candidates.json": {
       "exists": true,
-      "candidateCount": 50,
+      "candidateCount": 80,
       "sampleNames": [
+        "신한지주",
+        "대원전선",
+        "KB금융",
+        "예스티",
         "SK",
-        "HL만도",
-        "삼성생명",
-        "TIGER 반도체TOP10레버리지",
-        "TIGER 반도체TOP10",
-        "대한항공",
-        "테스",
-        "KODEX 레버리지",
-        "KODEX 반도체레버리지",
-        "디앤디파마텍"
+        "두산에너빌리티",
+        "LS ELECTRIC",
+        "효성중공업",
+        "한화에어로스페이스",
+        "대한전선"
       ],
       "sampleVersions": {
-        "V299_LIVE_RECOMMENDATION_META_FIX": 10
+        "V311_CLEAN_UNIVERSE_RESTORE_META": 10
       }
     },
     "app_data_bundle.json": {
       "exists": true,
-      "version": "V289_APP_DATA_BUNDLE",
-      "candidateCount": 50
+      "version": "V311_APP_DATA_BUNDLE",
+      "candidateCount": 80
     },
     "stock_lookup_index.json": {
       "exists": true,
-      "stockCount": 2530,
-      "recommendedCount": 77
+      "stockCount": 2528,
+      "recommendedCount": 79
     },
     "stock_lookup_compact.json": {
       "exists": true,
-      "stockCount": 2530,
-      "recommendedCount": 77
+      "stockCount": 2528,
+      "recommendedCount": 79
     }
   },
   "dailyUseGuide": {
