@@ -1,0 +1,159 @@
+# scripts/macro_market_environment_a416.py
+# A416: 매크로 시장환경 평가 JSON 생성기
+# 실제 API 연결 전에는 규칙 기반 기본값을 생성한다.
+# 추후 FRED, 한국은행 ECOS, KRX, 관세청/무역협회, Investing/Yahoo 등 데이터 소스를 붙이면 score/factors를 자동 갱신하면 된다.
+
+import json
+from pathlib import Path
+from datetime import datetime
+
+DATA = Path("data")
+DATA.mkdir(exist_ok=True)
+
+OUT = DATA / "market_macro_environment.json"
+SUMMARY = DATA / "market_macro_environment_summary_a416.json"
+
+WEIGHTS = {
+    "금리": 0.15,
+    "환율": 0.12,
+    "유동성": 0.12,
+    "경기": 0.13,
+    "물가": 0.10,
+    "원자재": 0.08,
+    "수출입": 0.12,
+    "시장심리": 0.10,
+    "정책/중앙은행": 0.08,
+}
+
+def status(score):
+    if score >= 80: return "매우 긍정"
+    if score >= 60: return "긍정"
+    if score >= 40: return "중립"
+    if score >= 20: return "부정"
+    return "매우 부정"
+
+def market_view(score):
+    if score >= 80: return "공격적 매수 가능"
+    if score >= 60: return "선별 매수"
+    if score >= 40: return "중립 / 관망"
+    if score >= 20: return "방어적 운용"
+    return "리스크 관리 우선"
+
+def risk_level(score):
+    if score >= 80: return "낮음"
+    if score >= 60: return "보통"
+    if score >= 40: return "주의"
+    if score >= 20: return "높음"
+    return "매우 높음"
+
+items = [
+    {
+        "category": "금리",
+        "score": 60,
+        "representativeIndicators": ["미국 10년물 금리", "한국 국고채 3년", "기준금리", "실질금리"],
+        "positiveFactors": ["미국 10년물 금리가 하락하면 성장주 할인율 부담이 완화됩니다."],
+        "negativeFactors": ["장기금리가 재상승하면 반도체·바이오·플랫폼주 밸류에이션에 부담입니다."],
+        "marketImpact": "장기금리 하락은 반도체, 바이오, 플랫폼 등 성장주 밸류에이션에 긍정적입니다.",
+        "favoredSectors": ["반도체", "바이오", "플랫폼", "2차전지"],
+        "unfavorableSectors": ["은행", "보험"]
+    },
+    {
+        "category": "환율",
+        "score": 55,
+        "representativeIndicators": ["원/달러 환율", "달러인덱스", "엔/달러", "위안화"],
+        "positiveFactors": ["원/달러 환율 상승은 수출 비중이 높은 반도체·자동차·조선 업종에 매출 환산 효과를 줄 수 있습니다."],
+        "negativeFactors": ["환율 급등은 외국인 수급 이탈과 항공·여행·수입 원가 부담 업종에 부정적입니다."],
+        "marketImpact": "환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "favoredSectors": ["반도체", "자동차", "조선", "방산"],
+        "unfavorableSectors": ["항공", "여행", "수입 원가 부담 업종"]
+    },
+    {
+        "category": "유동성",
+        "score": 50,
+        "representativeIndicators": ["고객예탁금", "신용잔고", "외국인 순매수", "기관 순매수"],
+        "positiveFactors": ["예탁금 증가와 외국인 순매수 전환은 위험자산 선호를 높입니다."],
+        "negativeFactors": ["신용잔고 과열은 지수 급락 시 반대매매 위험을 키웁니다."],
+        "marketImpact": "유동성 개선은 코스닥, 성장주, 증권주에 긍정적입니다.",
+        "favoredSectors": ["증권", "코스닥", "성장주"],
+        "unfavorableSectors": ["저변동성주"]
+    },
+    {
+        "category": "경기",
+        "score": 55,
+        "representativeIndicators": ["PMI", "OECD 경기선행지수", "산업생산", "소비심리"],
+        "positiveFactors": ["경기선행지수 개선은 경기민감주 실적 기대를 높입니다."],
+        "negativeFactors": ["중국 경기 둔화는 소재·화학·철강 업종에 부담입니다."],
+        "marketImpact": "경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "favoredSectors": ["반도체", "자동차", "조선", "화학", "철강"],
+        "unfavorableSectors": ["통신", "음식료", "유틸리티"]
+    },
+    {
+        "category": "물가",
+        "score": 50,
+        "representativeIndicators": ["CPI", "PPI", "근원물가", "기대인플레이션"],
+        "positiveFactors": ["물가 둔화는 금리 인하 기대를 강화하고 성장주 할인율 부담을 낮춥니다."],
+        "negativeFactors": ["물가 재상승은 긴축 장기화 우려를 키우고 고PER주에 부담입니다."],
+        "marketImpact": "물가 안정은 성장주와 소비재에 긍정적입니다.",
+        "favoredSectors": ["성장주", "소비재"],
+        "unfavorableSectors": ["고PER주"]
+    },
+    {
+        "category": "원자재",
+        "score": 45,
+        "representativeIndicators": ["WTI", "브렌트유", "구리", "철광석", "천연가스"],
+        "positiveFactors": ["구리 가격 상승은 경기 회복 기대를 반영할 수 있습니다."],
+        "negativeFactors": ["유가 상승은 항공·운송·화학 업종의 비용 부담을 키웁니다."],
+        "marketImpact": "유가 상승은 정유·에너지 업종에는 긍정적이나 항공·운송 업종에는 비용 부담입니다.",
+        "favoredSectors": ["정유", "에너지", "자원개발"],
+        "unfavorableSectors": ["항공", "운송", "화학"]
+    },
+    {
+        "category": "수출입",
+        "score": 60,
+        "representativeIndicators": ["반도체 수출", "자동차 수출", "무역수지", "일평균 수출"],
+        "positiveFactors": ["반도체 수출 증가율 개선은 반도체 대형주와 장비주에 우호적입니다."],
+        "negativeFactors": ["중국 수요 둔화는 일부 소재·화학 업종에 부담입니다."],
+        "marketImpact": "수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다.",
+        "favoredSectors": ["반도체", "자동차", "조선", "IT부품"],
+        "unfavorableSectors": ["내수 방어주"]
+    },
+    {
+        "category": "시장심리",
+        "score": 50,
+        "representativeIndicators": ["VIX", "VKOSPI", "거래대금", "신용잔고"],
+        "positiveFactors": ["거래대금 증가와 변동성 하락은 위험자산 선호를 높입니다."],
+        "negativeFactors": ["변동성 급등과 거래대금 감소는 투자심리 위축 신호입니다."],
+        "marketImpact": "시장심리 개선은 코스닥, 성장주, 증권주에 유리합니다.",
+        "favoredSectors": ["코스닥", "성장주", "증권"],
+        "unfavorableSectors": ["방어주"]
+    },
+    {
+        "category": "정책/중앙은행",
+        "score": 60,
+        "representativeIndicators": ["FOMC", "한국은행", "산업정책", "재정정책"],
+        "positiveFactors": ["원전·방산·AI 산업 지원 정책은 해당 업종 수주 기대를 높입니다."],
+        "negativeFactors": ["플랫폼 규제 강화는 인터넷·플랫폼 업종 밸류에이션에 부담입니다."],
+        "marketImpact": "정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다.",
+        "favoredSectors": ["방산", "원전", "AI", "로봇", "반도체"],
+        "unfavorableSectors": ["플랫폼", "규제 민감 업종"]
+    }
+]
+
+for item in items:
+    item["status"] = status(item["score"])
+
+overall = int(sum(item["score"] * WEIGHTS[item["category"]] for item in items))
+
+macro = {
+    "updatedAt": datetime.now().isoformat(timespec="seconds"),
+    "overallMacroScore": overall,
+    "overallMarketView": market_view(overall),
+    "riskLevel": risk_level(overall),
+    "macroItems": items,
+    "summary": "반도체 수출 개선은 대형 반도체와 장비주에 우호적이나, 환율 상승은 외국인 수급에는 부담으로 작용할 수 있습니다. 유가 상승은 정유 업종에는 긍정적이나 항공·운송 업종에는 비용 부담입니다.",
+    "recommendationStrategy": "시장 전체에 대한 공격적 매수보다 반도체, 조선, 방산, 원전, AI 등 실적 또는 정책 근거가 있는 업종 중심의 선별 매수를 적용합니다."
+}
+
+OUT.write_text(json.dumps(macro, ensure_ascii=False, indent=2), encoding="utf-8")
+SUMMARY.write_text(json.dumps({"version": "A416", "overallMacroScore": overall, "overallMarketView": market_view(overall), "updatedAt": macro["updatedAt"]}, ensure_ascii=False, indent=2), encoding="utf-8")
+print(json.dumps(macro, ensure_ascii=False, indent=2))
