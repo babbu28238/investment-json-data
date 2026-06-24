@@ -1,0 +1,28 @@
+name: Macro Market Environment A416
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 0,3,6,8 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  macro-market-environment-a416:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build macro market environment
+        run: python scripts/macro_market_environment_a416.py
+      - name: Commit macro environment
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/market_macro_environment.json data/market_macro_environment_summary_a416.json
+          git commit -m "Macro market environment A416" || echo "No changes"
+          git push
