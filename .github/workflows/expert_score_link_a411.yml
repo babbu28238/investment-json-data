@@ -1,0 +1,28 @@
+name: Expert Score Link A411
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/20 0-8 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  expert-score-link-a411:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fill and link expert scores
+        run: python scripts/expert_score_link_a411.py
+      - name: Commit A411 expert linked data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/realtime_recommendations_a405.json data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/expert_score_link_a411.json
+          git commit -m "Expert score link A411" || echo "No changes"
+          git push
