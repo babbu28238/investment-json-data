@@ -1,0 +1,32 @@
+name: All Listed Universe A414
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 8 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  all-listed-universe-a414:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml pandas numpy pykrx
+      - name: Build all listed universe
+        run: python scripts/all_listed_universe_a414.py
+      - name: Commit all listed universe
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/realtime_recommendations_a405.json data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/all_listed_universe_a414.json data/all_listed_universe_debug_a414.json
+          git commit -m "All listed universe A414" || echo "No changes"
+          git push
