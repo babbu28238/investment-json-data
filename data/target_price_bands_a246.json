@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-06-23T21:08:57",
+  "generatedAt": "2026-06-24T20:23:28",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-06-23T21:08:57",
+    "generatedAt": "2026-06-24T20:23:28",
     "universeCount": 0,
     "candidateCount": 25,
     "errorCount": 0,
@@ -12,20 +12,26 @@
     "scoreModel": "chart+supply+news+macro-risk+detail",
     "output": "stock_candidates_ai_scored.json",
     "priceUpdatedCount": 0,
+    "priceMissingCount": 0,
+    "zeroBeforeCount": 0,
+    "usedPriceDate": {
+      "KOSPI": "",
+      "KOSDAQ": ""
+    },
+    "priceSource": "pykrx_by_date",
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
-    "priceCount": 25,
+    "priceCount": 0,
     "chartScoreCount": 0,
-    "supplyScoreCount": 23,
-    "newsScoreCount": 23,
+    "supplyScoreCount": 0,
+    "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 25,
+    "supplyOkCount": 0,
     "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-    "ready": true,
+    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -150,49 +156,48 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplySource": "naver_finance_item_frgn_readhtml_stringio",
-    "newsItemCount": 70,
+    "supplySource": "naver_supply_detail_a234",
+    "supplyMergedCount": 0,
+    "newsItemCount": 0,
     "newsMergedCount": 0,
-    "newsCollectedCandidateCount": 23,
-    "targetPriceCandidateCount": 10,
-    "candidateSource": "data/stock_candidates_ai_scored.json",
+    "newsCollectedCandidateCount": 0,
+    "targetPriceCandidateCount": 9,
+    "candidateSource": "built_in_fallback_top25",
     "candidateSourcesTried": [
       {
         "path": "data/stock_candidates_ai_scored.json",
-        "count": 25
+        "count": 0
+      },
+      {
+        "path": "data/stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_universe.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 76,
+    "rawTargetRows": 94,
     "reliableTargetCandidateCount": 2,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
-    "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 18,
-    "targetSource": "naver_consensus_target",
-    "chartStopCandidateCount": 25,
-    "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 25,
-    "targetBasedStopCount": 18,
-    "chartStopCount": 25,
-    "allStockLookupCount": 51,
-    "outputLookup": "all_stock_lookup_a251.json",
-    "validPriceCount": 24,
-    "validTargetCount": 17,
-    "priceFixedCount": 1,
-    "targetFixedCount": 1,
-    "invalidPriceCandidateCount": 0,
-    "invalidStopCleanedCount": 1,
-    "normalCandidateCount": 25,
-    "manualReviewCount": 1,
-    "outputReview": "manual_price_review_a256.json",
-    "invalidRefetchAttemptCount": 1,
-    "invalidRefetchRecoveredCount": 1,
-    "invalidRefetchStillInvalidCount": 0,
-    "priceConnectedCount": 25,
-    "targetConnectedCount": 17,
-    "stopGuideConnectedCount": 25,
-    "releaseName": "HSinvest Android A280 Final Release",
-    "supplyDiagRows": 192
+    "source": "target_price_bands_a244.details"
   },
   "details": [
     {
@@ -295,22 +300,22 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        1500,
-        3500,
-        7600
+        1550,
+        1625,
+        5000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1500,
+          "price": 1550,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 3500,
+          "price": 1625,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 7600,
+          "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -325,17 +330,12 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        1500,
-        7600
+        1625
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 7600,
+          "price": 1625,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -350,7 +350,7 @@
       "name": "한국항공우주",
       "currentPrice": 70000,
       "rawPrices": [
-        2600,
+        2026,
         7030,
         128000
       ],
@@ -359,8 +359,8 @@
       ],
       "rejected": [
         {
-          "price": 2600,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2026,
+          "reason": "연도 숫자 제거"
         },
         {
           "price": 7030,
@@ -444,21 +444,19 @@
       "name": "KB금융",
       "currentPrice": 172000,
       "rawPrices": [
-        105560,
         157000,
         220000
       ],
       "acceptedPrices": [
-        105560,
         157000,
         220000
       ],
       "rejected": [],
-      "median": 157000,
-      "realisticTargetPrice": 125500,
-      "observeTimingPrice": 110000,
-      "stopTimingPrice": 94200,
-      "targetCount": 3
+      "median": 188500,
+      "realisticTargetPrice": 151000,
+      "observeTimingPrice": 132000,
+      "stopTimingPrice": 113000,
+      "targetCount": 2
     },
     {
       "code": "055550",
@@ -500,7 +498,6 @@
       "rawPrices": [
         2026,
         5000,
-        5490,
         81000,
         105560,
         168000,
@@ -518,10 +515,6 @@
         },
         {
           "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5490,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -544,7 +537,6 @@
         2026,
         3000,
         4429,
-        5490,
         9000,
         9150,
         43000,
@@ -567,10 +559,6 @@
         },
         {
           "price": 4429,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5490,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -604,18 +592,14 @@
       "code": "035420",
       "name": "NAVER",
       "currentPrice": 220000,
-      "rawPrices": [
-        300000
-      ],
-      "acceptedPrices": [
-        300000
-      ],
+      "rawPrices": [],
+      "acceptedPrices": [],
       "rejected": [],
-      "median": 300000,
-      "realisticTargetPrice": 240000,
-      "observeTimingPrice": 210000,
-      "stopTimingPrice": 180000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "035720",
@@ -891,7 +875,6 @@
       "currentPrice": 300000,
       "rawPrices": [
         2026,
-        3000,
         3230,
         500000
       ],
@@ -902,10 +885,6 @@
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 3000,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 3230,
@@ -924,7 +903,8 @@
       "currentPrice": 180000,
       "rawPrices": [
         2000,
-        2025
+        2025,
+        2026
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -934,6 +914,10 @@
         },
         {
           "price": 2025,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2026,
           "reason": "연도 숫자 제거"
         }
       ],

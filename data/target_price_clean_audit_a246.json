@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-06-23T21:08:57",
+  "generatedAt": "2026-06-24T20:23:28",
   "details": [
     {
       "code": "042660",
@@ -102,22 +102,22 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        1500,
-        3500,
-        7600
+        1550,
+        1625,
+        5000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1500,
+          "price": 1550,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 3500,
+          "price": 1625,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 7600,
+          "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -132,17 +132,12 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        1500,
-        7600
+        1625
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 7600,
+          "price": 1625,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -157,7 +152,7 @@
       "name": "한국항공우주",
       "currentPrice": 70000,
       "rawPrices": [
-        2600,
+        2026,
         7030,
         128000
       ],
@@ -166,8 +161,8 @@
       ],
       "rejected": [
         {
-          "price": 2600,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2026,
+          "reason": "연도 숫자 제거"
         },
         {
           "price": 7030,
@@ -251,21 +246,19 @@
       "name": "KB금융",
       "currentPrice": 172000,
       "rawPrices": [
-        105560,
         157000,
         220000
       ],
       "acceptedPrices": [
-        105560,
         157000,
         220000
       ],
       "rejected": [],
-      "median": 157000,
-      "realisticTargetPrice": 125500,
-      "observeTimingPrice": 110000,
-      "stopTimingPrice": 94200,
-      "targetCount": 3
+      "median": 188500,
+      "realisticTargetPrice": 151000,
+      "observeTimingPrice": 132000,
+      "stopTimingPrice": 113000,
+      "targetCount": 2
     },
     {
       "code": "055550",
@@ -307,7 +300,6 @@
       "rawPrices": [
         2026,
         5000,
-        5490,
         81000,
         105560,
         168000,
@@ -325,10 +317,6 @@
         },
         {
           "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5490,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -351,7 +339,6 @@
         2026,
         3000,
         4429,
-        5490,
         9000,
         9150,
         43000,
@@ -374,10 +361,6 @@
         },
         {
           "price": 4429,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5490,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -411,18 +394,14 @@
       "code": "035420",
       "name": "NAVER",
       "currentPrice": 220000,
-      "rawPrices": [
-        300000
-      ],
-      "acceptedPrices": [
-        300000
-      ],
+      "rawPrices": [],
+      "acceptedPrices": [],
       "rejected": [],
-      "median": 300000,
-      "realisticTargetPrice": 240000,
-      "observeTimingPrice": 210000,
-      "stopTimingPrice": 180000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "035720",
@@ -698,7 +677,6 @@
       "currentPrice": 300000,
       "rawPrices": [
         2026,
-        3000,
         3230,
         500000
       ],
@@ -709,10 +687,6 @@
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 3000,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 3230,
@@ -731,7 +705,8 @@
       "currentPrice": 180000,
       "rawPrices": [
         2000,
-        2025
+        2025,
+        2026
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -741,6 +716,10 @@
         },
         {
           "price": 2025,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2026,
           "reason": "연도 숫자 제거"
         }
       ],
