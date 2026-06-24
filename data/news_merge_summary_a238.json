@@ -1,9 +1,9 @@
 {
   "version": "A238",
-  "generatedAt": "2026-06-22T21:35:36",
+  "generatedAt": "2026-06-24T18:24:12",
   "summary": {
     "version": "A238",
-    "generatedAt": "2026-06-22T21:35:36",
+    "generatedAt": "2026-06-24T18:24:12",
     "universeCount": 0,
     "candidateCount": 0,
     "errorCount": 0,
@@ -12,9 +12,15 @@
     "scoreModel": "chart+supply+news+macro-risk+detail",
     "output": "stock_candidates_ai_scored.json",
     "priceUpdatedCount": 0,
+    "priceMissingCount": 0,
+    "zeroBeforeCount": 0,
+    "usedPriceDate": {
+      "KOSPI": "",
+      "KOSDAQ": ""
+    },
+    "priceSource": "pykrx_by_date",
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -150,7 +156,8 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplySource": "naver_finance_item_frgn",
+    "supplySource": "naver_supply_detail_a234",
+    "supplyMergedCount": 0,
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0
