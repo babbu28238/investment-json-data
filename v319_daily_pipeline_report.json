@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-06-24 02:25:21 KST",
+  "updatedAt": "2026-06-25 02:16:45 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -14,27 +14,27 @@
   "files": {
     "stock_candidates.json": {
       "exists": true,
-      "candidateCount": 80,
+      "candidateCount": 50,
       "sampleNames": [
-        "신한지주",
-        "대원전선",
-        "KB금융",
-        "예스티",
+        "피에스케이",
+        "브이엠",
+        "후성",
+        "달바글로벌",
+        "알테오젠",
+        "티에스이",
+        "대한항공",
         "SK",
-        "두산에너빌리티",
-        "LS ELECTRIC",
-        "효성중공업",
-        "한화에어로스페이스",
-        "대한전선"
+        "원익IPS",
+        "하나마이크론"
       ],
       "sampleVersions": {
-        "V311_CLEAN_UNIVERSE_RESTORE_META": 10
+        "V299_LIVE_RECOMMENDATION_META_FIX": 10
       }
     },
     "app_data_bundle.json": {
       "exists": true,
-      "version": "V311_APP_DATA_BUNDLE",
-      "candidateCount": 80
+      "version": "V289_APP_DATA_BUNDLE",
+      "candidateCount": 50
     },
     "stock_lookup_index.json": {
       "exists": true,
