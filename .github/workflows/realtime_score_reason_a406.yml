@@ -1,0 +1,32 @@
+name: Realtime Score Reason A406
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 0-8 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  realtime-score-reason-a406:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas numpy
+      - name: Collect realtime data and score reasons
+        run: python scripts/realtime_score_reason_a406.py
+      - name: Commit realtime score reasons
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/realtime_recommendations_a405.json data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/realtime_score_reason_summary_a406.json
+          git commit -m "Realtime score reason A406" || echo "No changes"
+          git push
