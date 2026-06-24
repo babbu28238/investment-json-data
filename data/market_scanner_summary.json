@@ -1,11 +1,11 @@
 {
-  "version": "A222",
-  "generatedAt": "2026-06-24T17:22:29",
+  "version": "A225",
+  "generatedAt": "2026-06-24T17:24:06",
   "universeCount": 0,
   "candidateCount": 0,
   "errorCount": 0,
   "top": [],
-  "status": "ok",
+  "status": "real_score_engine",
   "scoreModel": "chart+supply+news+macro-risk+detail",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -17,5 +17,12 @@
   },
   "priceSource": "pykrx_by_date",
   "priceFailedCount": 0,
-  "zeroAfterCount": 0
+  "zeroAfterCount": 0,
+  "scoreUpdatedCount": 0,
+  "scoreFailedCount": 0,
+  "priceCount": 0,
+  "chartScoreCount": 0,
+  "supplyScoreCount": 0,
+  "newsScoreCount": 0,
+  "scoreFormula": "chart35+supply30+news20+fundamental10+risk10"
 }
