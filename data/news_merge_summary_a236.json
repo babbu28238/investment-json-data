@@ -1,31 +1,37 @@
 {
   "version": "A236",
-  "generatedAt": "2026-06-23T19:23:37",
+  "generatedAt": "2026-06-24T18:21:14",
   "summary": {
     "version": "A236",
-    "generatedAt": "2026-06-23T19:23:37",
+    "generatedAt": "2026-06-24T18:21:14",
     "universeCount": 0,
-    "candidateCount": 25,
+    "candidateCount": 0,
     "errorCount": 0,
     "top": [],
     "status": "news_merge_engine",
     "scoreModel": "chart+supply+news+macro-risk+detail",
     "output": "stock_candidates_ai_scored.json",
     "priceUpdatedCount": 0,
+    "priceMissingCount": 0,
+    "zeroBeforeCount": 0,
+    "usedPriceDate": {
+      "KOSPI": "",
+      "KOSDAQ": ""
+    },
+    "priceSource": "pykrx_by_date",
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
-    "priceCount": 25,
+    "priceCount": 0,
     "chartScoreCount": 0,
-    "supplyScoreCount": 23,
+    "supplyScoreCount": 0,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 25,
+    "supplyOkCount": 0,
     "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-    "ready": true,
+    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -150,475 +156,62 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplySource": "naver_finance_item_frgn_readhtml_stringio",
-    "newsItemCount": 0,
-    "newsMergedCount": 0,
-    "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 18,
-    "candidateSource": "stock_candidates_ai_scored.json",
-    "candidateSourcesTried": [
-      {
-        "path": "data/stock_candidates_ai_scored.json",
-        "count": 0
-      },
-      {
-        "path": "data/stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
-      }
-    ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 98,
-    "reliableTargetCandidateCount": 2,
-    "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
-    "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 18,
-    "targetSource": "naver_consensus_target",
-    "chartStopCandidateCount": 25,
-    "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 25,
-    "targetBasedStopCount": 18,
-    "chartStopCount": 25,
-    "allStockLookupCount": 51,
-    "outputLookup": "all_stock_lookup_a251.json",
-    "validPriceCount": 24,
-    "validTargetCount": 17,
-    "priceFixedCount": 1,
-    "targetFixedCount": 1,
-    "invalidPriceCandidateCount": 0,
-    "invalidStopCleanedCount": 1,
-    "normalCandidateCount": 25,
-    "manualReviewCount": 1,
-    "outputReview": "manual_price_review_a256.json",
-    "invalidRefetchAttemptCount": 1,
-    "invalidRefetchRecoveredCount": 1,
-    "invalidRefetchStillInvalidCount": 0,
-    "priceConnectedCount": 25,
-    "targetConnectedCount": 17,
-    "stopGuideConnectedCount": 25,
-    "releaseName": "HSinvest Android A280 Final Release",
-    "supplyDiagRows": 192
+    "supplySource": "naver_supply_detail_a234",
+    "supplyMergedCount": 0,
+    "newsItemCount": 70,
+    "newsMergedCount": 0
   },
-  "details": [
+  "details": [],
+  "newsSample": [
     {
       "code": "196170",
       "name": "알테오젠",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 30,
-      "grade": "C"
+      "title": "네이버뉴스",
+      "link": "https://n.news.naver.com/mnews/article/016/0002660487?sid=101",
+      "summary": "네이버뉴스",
+      "source": "naver_search_news",
+      "collectedAt": "2026-06-23T19:30:23",
+      "_sourceFile": "news_data.json"
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "title": "네이버뉴스",
+      "link": "https://n.news.naver.com/mnews/article/003/0014023247?sid=101",
+      "summary": "네이버뉴스",
+      "source": "naver_search_news",
+      "collectedAt": "2026-06-23T19:30:23",
+      "_sourceFile": "news_data.json"
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "title": "네이버뉴스",
+      "link": "https://n.news.naver.com/mnews/article/421/0009019295?sid=101",
+      "summary": "네이버뉴스",
+      "source": "naver_search_news",
+      "collectedAt": "2026-06-23T19:30:23",
+      "_sourceFile": "news_data.json"
     },
     {
       "code": "316140",
       "name": "우리금융지주",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 26,
-      "grade": "C"
+      "title": "네이버뉴스",
+      "link": "https://n.news.naver.com/mnews/article/243/0000099518?sid=101",
+      "summary": "네이버뉴스",
+      "source": "naver_search_news",
+      "collectedAt": "2026-06-23T19:30:25",
+      "_sourceFile": "news_data.json"
     },
     {
-      "code": "108490",
-      "name": "로보티즈",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 23,
-      "grade": "C"
-    },
-    {
-      "code": "008770",
-      "name": "호텔신라",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 16,
-      "grade": "C"
-    },
-    {
-      "code": "329180",
-      "name": "HD현대중공업",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 15,
-      "grade": "C"
-    },
-    {
-      "code": "047810",
-      "name": "한국항공우주",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 15,
-      "grade": "C"
-    },
-    {
-      "code": "241560",
-      "name": "두산밥캣",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 15,
-      "grade": "C"
-    },
-    {
-      "code": "055550",
-      "name": "신한지주",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 15,
-      "grade": "C"
-    },
-    {
-      "code": "272210",
-      "name": "한화시스템",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 14,
-      "grade": "C"
-    },
-    {
-      "code": "000660",
-      "name": "SK하이닉스",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 14,
-      "grade": "C"
-    },
-    {
-      "code": "086790",
-      "name": "하나금융지주",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 14,
-      "grade": "C"
-    },
-    {
-      "code": "035420",
-      "name": "NAVER",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 14,
-      "grade": "C"
-    },
-    {
-      "code": "033780",
-      "name": "KT&G",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 14,
-      "grade": "C"
-    },
-    {
-      "code": "039030",
-      "name": "이오테크닉스",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 14,
-      "grade": "C"
-    },
-    {
-      "code": "086520",
-      "name": "에코프로",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 13,
-      "grade": "C"
-    },
-    {
-      "code": "005930",
-      "name": "삼성전자",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 10,
-      "grade": "C"
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 10,
-      "grade": "C"
-    },
-    {
-      "code": "011200",
-      "name": "HMM",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 10,
-      "grade": "C"
-    },
-    {
-      "code": "000270",
-      "name": "기아",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 8,
-      "grade": "C"
-    },
-    {
-      "code": "042660",
-      "name": "한화오션",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 6,
-      "grade": "C"
-    },
-    {
-      "code": "277810",
-      "name": "레인보우로보틱스",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 4,
-      "grade": "C"
-    },
-    {
-      "code": "247540",
-      "name": "에코프로비엠",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 4,
-      "grade": "C"
-    },
-    {
-      "code": "034020",
-      "name": "두산에너빌리티",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 2,
-      "grade": "C"
-    },
-    {
-      "code": "005380",
-      "name": "현대차",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 0,
-      "grade": "C"
-    },
-    {
-      "code": "035720",
-      "name": "카카오",
-      "newsScore": 0,
-      "reason": "종목 매칭 뉴스 없음",
-      "indicators": {
-        "matchedCount": 0,
-        "positiveKeywordCount": 0,
-        "negativeKeywordCount": 0,
-        "titles": [],
-        "sources": []
-      },
-      "matchedCount": 0,
-      "score": 0,
-      "grade": "C"
+      "code": "316140",
+      "name": "우리금융지주",
+      "title": "네이버뉴스",
+      "link": "https://n.news.naver.com/mnews/article/016/0002660323?sid=101",
+      "summary": "네이버뉴스",
+      "source": "naver_search_news",
+      "collectedAt": "2026-06-23T19:30:25",
+      "_sourceFile": "news_data.json"
     }
-  ],
-  "newsSample": []
+  ]
 }
