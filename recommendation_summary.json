@@ -1,40 +1,41 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-24 01:18:06",
-  "startedAt": "2026-06-24 01:18:06",
+  "updatedAt": "2026-06-24 22:37:55",
+  "startedAt": "2026-06-24 22:37:55",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
   "reportSignalCount": 80,
   "supplyRowCount": 80,
   "gradeCounts": {
-    "B": 3,
-    "C": 28,
+    "B": 1,
+    "C": 30,
     "D": 19
   },
   "actionCounts": {
-    "관찰상위": 3,
-    "관찰": 28,
+    "관찰상위": 1,
+    "관찰": 30,
     "제외검토": 19
   },
   "sectorCounts": {
-    "금융·밸류업": 2,
-    "KOSDAQ 자동선별": 11,
+    "KOSDAQ 자동선별": 8,
     "KOSPI 자동선별": 35,
-    "반도체·AI": 2
+    "바이오·제약": 1,
+    "반도체·AI": 5,
+    "금융·밸류업": 1
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "삼성생명",
-      "code": "032830",
-      "score": 71,
+      "name": "피에스케이",
+      "code": "319660",
+      "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 78,
-        "supplyScore": 68,
-        "newsScore": 99,
+        "technicalScore": 71,
+        "supplyScore": 73,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -49,14 +50,14 @@
     },
     {
       "rank": 2,
-      "name": "기가비스",
-      "code": "420770",
-      "score": 70,
-      "grade": "B",
-      "action": "관찰상위",
+      "name": "브이엠",
+      "code": "089970",
+      "score": 68,
+      "grade": "C",
+      "action": "관찰",
       "breakdown": {
         "technicalScore": 70,
-        "supplyScore": 74,
+        "supplyScore": 68,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -72,15 +73,38 @@
     },
     {
       "rank": 3,
-      "name": "미래산업",
-      "code": "025560",
-      "score": 70,
-      "grade": "B",
-      "action": "관찰상위",
+      "name": "후성",
+      "code": "093370",
+      "score": 68,
+      "grade": "C",
+      "action": "관찰",
       "breakdown": {
-        "technicalScore": 67,
-        "supplyScore": 79,
-        "newsScore": 100,
+        "technicalScore": 65,
+        "supplyScore": 74,
+        "newsScore": 99,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 4,
+      "name": "달바글로벌",
+      "code": "483650",
+      "score": 68,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 69,
+        "supplyScore": 80,
+        "newsScore": 76,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -94,39 +118,16 @@
       }
     },
     {
-      "rank": 4,
-      "name": "원익IPS",
-      "code": "240810",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 72,
-        "supplyScore": 66,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 5,
-      "name": "TIGER 반도체",
-      "code": "091230",
-      "score": 69,
+      "name": "알테오젠",
+      "code": "196170",
+      "score": 67,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 71,
-        "supplyScore": 67,
-        "newsScore": 100,
+        "technicalScore": 70,
+        "supplyScore": 80,
+        "newsScore": 71,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -136,19 +137,19 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "수급 중립/혼조"
+        "supplyMemo": "외국인·기관 수급 우위"
       }
     },
     {
       "rank": 6,
-      "name": "하나마이크론",
-      "code": "067310",
-      "score": 68,
+      "name": "티에스이",
+      "code": "131290",
+      "score": 67,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 62,
+        "technicalScore": 64,
+        "supplyScore": 72,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -164,14 +165,14 @@
     },
     {
       "rank": 7,
-      "name": "제주반도체",
-      "code": "080220",
-      "score": 68,
+      "name": "대한항공",
+      "code": "003490",
+      "score": 67,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 71,
-        "supplyScore": 66,
+        "technicalScore": 58,
+        "supplyScore": 80,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -182,20 +183,20 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "수급 중립/혼조"
+        "supplyMemo": "외국인·기관 수급 우위"
       }
     },
     {
       "rank": 8,
-      "name": "디앤디파마텍",
-      "code": "347850",
-      "score": 68,
+      "name": "SK",
+      "code": "034730",
+      "score": 66,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 71,
-        "supplyScore": 68,
-        "newsScore": 97,
+        "technicalScore": 73,
+        "supplyScore": 74,
+        "newsScore": 69,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -210,14 +211,14 @@
     },
     {
       "rank": 9,
-      "name": "예스티",
-      "code": "122640",
-      "score": 68,
+      "name": "원익IPS",
+      "code": "240810",
+      "score": 66,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 68,
+        "technicalScore": 64,
+        "supplyScore": 67,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -233,15 +234,15 @@
     },
     {
       "rank": 10,
-      "name": "엘앤씨바이오",
-      "code": "290650",
-      "score": 68,
+      "name": "하나마이크론",
+      "code": "067310",
+      "score": 66,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 70,
+        "technicalScore": 64,
         "supplyScore": 68,
-        "newsScore": 95,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
