@@ -1,0 +1,2529 @@
+{
+  "summary": {
+    "version": "A418",
+    "generatedAt": "2026-06-25T03:45:54",
+    "status": "real_data_all_connector",
+    "universeSource": "existing_json",
+    "universeCount": 50,
+    "includedCount": 50,
+    "priceConnected": 50,
+    "newsConnected": 49,
+    "reportConnected": 50,
+    "chartConnected": 0,
+    "supplyConnected": 0,
+    "supplyPartial": 48,
+    "macroApplied": 6,
+    "naverMissing": 0,
+    "averageDataConnectionScore": 77.1,
+    "overallMacroScore": 54,
+    "overallMarketView": "중립 / 관망",
+    "output": "realtime_recommendations_a405.json"
+  },
+  "debug": [
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/196170/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/196170?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=196170",
+          "ok": true,
+          "chars": 128535
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=196170",
+          "ok": true,
+          "chars": 189956
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "207940",
+      "name": "삼성바이오로직스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/207940/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/207940?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=207940",
+          "ok": true,
+          "chars": 129779
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=207940",
+          "ok": true,
+          "chars": 191260
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "009540",
+      "name": "HD한국조선해양",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/009540/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/009540?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=009540",
+          "ok": true,
+          "chars": 128116
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=009540",
+          "ok": true,
+          "chars": 189397
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "006800",
+      "name": "미래에셋증권",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/006800/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/006800?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=006800",
+          "ok": true,
+          "chars": 128625
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=006800",
+          "ok": true,
+          "chars": 189646
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "086520",
+      "name": "에코프로",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/086520/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/086520?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=086520",
+          "ok": true,
+          "chars": 128191
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=086520",
+          "ok": true,
+          "chars": 190320
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "039030",
+      "name": "이오테크닉스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/039030/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/039030?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=039030",
+          "ok": true,
+          "chars": 128305
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=039030",
+          "ok": true,
+          "chars": 188902
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/272210/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/272210?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=272210",
+          "ok": true,
+          "chars": 128038
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=272210",
+          "ok": true,
+          "chars": 189211
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "005490",
+      "name": "POSCO홀딩스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/005490/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/005490?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=005490",
+          "ok": true,
+          "chars": 128312
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=005490",
+          "ok": true,
+          "chars": 189563
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "010120",
+      "name": "LS ELECTRIC",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/010120/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/010120?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=010120",
+          "ok": true,
+          "chars": 129071
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=010120",
+          "ok": true,
+          "chars": 190516
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "068270",
+      "name": "셀트리온",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/068270/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/068270?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=068270",
+          "ok": true,
+          "chars": 128978
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=068270",
+          "ok": true,
+          "chars": 190343
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/005930/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/005930?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=005930",
+          "ok": true,
+          "chars": 128633
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=005930",
+          "ok": true,
+          "chars": 190101
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/000660/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/000660?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=000660",
+          "ok": true,
+          "chars": 129481
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=000660",
+          "ok": true,
+          "chars": 190961
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "456190",
+      "name": "큐라클",
+      "statuses": [
+        "connected",
+        "missing",
+        "connected",
+        "failed",
+        "failed",
+        "connected"
+      ],
+      "dataConnectionScore": 56,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/456190/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/456190?pageSize=10&page=1",
+          "ok": true,
+          "count": 0
+        },
+        {
+          "url": "https://api.stock.naver.com/news/stock/456190?pageSize=10&page=1",
+          "ok": true,
+          "count": 0
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=456190",
+          "ok": true,
+          "chars": 107656
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=456190",
+          "ok": true,
+          "chars": 108906
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "090360",
+      "name": "로보스타",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/090360/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/090360?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=090360",
+          "ok": true,
+          "chars": 127899
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=090360",
+          "ok": true,
+          "chars": 189625
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/108490/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/108490?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=108490",
+          "ok": true,
+          "chars": 128796
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=108490",
+          "ok": true,
+          "chars": 190254
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/000270/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/000270?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=000270",
+          "ok": true,
+          "chars": 128909
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=000270",
+          "ok": true,
+          "chars": 190081
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "064350",
+      "name": "현대로템",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/064350/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/064350?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=064350",
+          "ok": true,
+          "chars": 128275
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=064350",
+          "ok": true,
+          "chars": 189158
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/329180/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/329180?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=329180",
+          "ok": true,
+          "chars": 128224
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=329180",
+          "ok": true,
+          "chars": 189451
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "035720",
+      "name": "카카오",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/035720/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/035720?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=035720",
+          "ok": true,
+          "chars": 127717
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=035720",
+          "ok": true,
+          "chars": 189198
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "267260",
+      "name": "HD현대일렉트릭",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/267260/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/267260?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=267260",
+          "ok": true,
+          "chars": 128295
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=267260",
+          "ok": true,
+          "chars": 189517
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "008770",
+      "name": "호텔신라",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/008770/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/008770?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=008770",
+          "ok": true,
+          "chars": 127404
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=008770",
+          "ok": true,
+          "chars": 189532
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "322510",
+      "name": "제이엘케이",
+      "statuses": [
+        "connected",
+        "connected",
+        "partial",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 71,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/322510/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/322510?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=322510",
+          "ok": true,
+          "chars": 114938
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=322510",
+          "ok": true,
+          "chars": 177055
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "012450",
+      "name": "한화에어로스페이스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/012450/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/012450?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=012450",
+          "ok": true,
+          "chars": 129302
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=012450",
+          "ok": true,
+          "chars": 190758
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/035420/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/035420?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=035420",
+          "ok": true,
+          "chars": 128226
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=035420",
+          "ok": true,
+          "chars": 189661
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "failed",
+        "connected"
+      ],
+      "dataConnectionScore": 68,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/034020/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/034020?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=034020",
+          "ok": true,
+          "chars": 128150
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=034020",
+          "ok": true,
+          "chars": 189739
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "259960",
+      "name": "크래프톤",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/259960/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/259960?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=259960",
+          "ok": true,
+          "chars": 128155
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=259960",
+          "ok": true,
+          "chars": 189616
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "352820",
+      "name": "하이브",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/352820/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/352820?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=352820",
+          "ok": true,
+          "chars": 128287
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=352820",
+          "ok": true,
+          "chars": 190372
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "298040",
+      "name": "효성중공업",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/298040/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/298040?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=298040",
+          "ok": true,
+          "chars": 129174
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=298040",
+          "ok": true,
+          "chars": 190437
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "247540",
+      "name": "에코프로비엠",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/247540/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/247540?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=247540",
+          "ok": true,
+          "chars": 128358
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=247540",
+          "ok": true,
+          "chars": 189973
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "011200",
+      "name": "HMM",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/011200/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/011200?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=011200",
+          "ok": true,
+          "chars": 127567
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=011200",
+          "ok": true,
+          "chars": 188897
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "112610",
+      "name": "씨에스윈드",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/112610/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/112610?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=112610",
+          "ok": true,
+          "chars": 127544
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=112610",
+          "ok": true,
+          "chars": 188435
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/105560/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/105560?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=105560",
+          "ok": true,
+          "chars": 128152
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=105560",
+          "ok": true,
+          "chars": 189749
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/005380/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/005380?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=005380",
+          "ok": true,
+          "chars": 128374
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=005380",
+          "ok": true,
+          "chars": 190017
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "051910",
+      "name": "LG화학",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/051910/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/051910?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=051910",
+          "ok": true,
+          "chars": 128281
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=051910",
+          "ok": true,
+          "chars": 190760
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/042660/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/042660?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=042660",
+          "ok": true,
+          "chars": 128229
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=042660",
+          "ok": true,
+          "chars": 189654
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "010140",
+      "name": "삼성중공업",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/010140/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/010140?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=010140",
+          "ok": true,
+          "chars": 127919
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=010140",
+          "ok": true,
+          "chars": 189283
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "006400",
+      "name": "삼성SDI",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/006400/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/006400?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=006400",
+          "ok": true,
+          "chars": 128049
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=006400",
+          "ok": true,
+          "chars": 190469
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "241560",
+      "name": "두산밥캣",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/241560/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/241560?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=241560",
+          "ok": true,
+          "chars": 127696
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=241560",
+          "ok": true,
+          "chars": 188586
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "033780",
+      "name": "KT&G",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/033780/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/033780?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=033780",
+          "ok": true,
+          "chars": 128105
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=033780",
+          "ok": true,
+          "chars": 183186
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/277810/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/277810?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=277810",
+          "ok": true,
+          "chars": 128070
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=277810",
+          "ok": true,
+          "chars": 190263
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "086790",
+      "name": "하나금융지주",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/086790/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/086790?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=086790",
+          "ok": true,
+          "chars": 128159
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=086790",
+          "ok": true,
+          "chars": 188958
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "055550",
+      "name": "신한지주",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/055550/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/055550?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=055550",
+          "ok": true,
+          "chars": 127723
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=055550",
+          "ok": true,
+          "chars": 189529
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "402340",
+      "name": "SK스퀘어",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/402340/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/402340?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=402340",
+          "ok": true,
+          "chars": 129145
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=402340",
+          "ok": true,
+          "chars": 190787
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "078930",
+      "name": "GS",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/078930/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/078930?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=078930",
+          "ok": true,
+          "chars": 127721
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=078930",
+          "ok": true,
+          "chars": 189463
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "012330",
+      "name": "현대모비스",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/012330/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/012330?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=012330",
+          "ok": true,
+          "chars": 128265
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=012330",
+          "ok": true,
+          "chars": 189155
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "316140",
+      "name": "우리금융지주",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/316140/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/316140?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=316140",
+          "ok": true,
+          "chars": 127707
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=316140",
+          "ok": true,
+          "chars": 188950
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "373220",
+      "name": "LG에너지솔루션",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/373220/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/373220?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=373220",
+          "ok": true,
+          "chars": 128255
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=373220",
+          "ok": true,
+          "chars": 190453
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "003690",
+      "name": "코리안리",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/003690/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/003690?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=003690",
+          "ok": true,
+          "chars": 127387
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=003690",
+          "ok": true,
+          "chars": 187967
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "277880",
+      "name": "티로보틱스",
+      "statuses": [
+        "connected",
+        "connected",
+        "partial",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 71,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/277880/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/277880?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=277880",
+          "ok": true,
+          "chars": 114994
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=277880",
+          "ok": true,
+          "chars": 175943
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "code": "047810",
+      "name": "한국항공우주",
+      "statuses": [
+        "connected",
+        "connected",
+        "connected",
+        "failed",
+        "partial",
+        "connected"
+      ],
+      "dataConnectionScore": 78,
+      "priceDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/stock/047810/basic",
+          "ok": true
+        }
+      ],
+      "newsDebug": [
+        {
+          "url": "https://m.stock.naver.com/api/news/stock/047810?pageSize=10&page=1",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "reportDebug": [
+        {
+          "url": "https://finance.naver.com/item/coinfo.naver?code=047810",
+          "ok": true,
+          "chars": 128128
+        },
+        {
+          "url": "https://finance.naver.com/item/main.naver?code=047810",
+          "ok": true,
+          "chars": 189306
+        }
+      ],
+      "supplyDebug": [
+        {
+          "method": "pykrx_value_detail_True",
+          "ok": true,
+          "rows": 0
+        },
+        {
+          "method": "pykrx_value_detail_False",
+          "ok": true,
+          "rows": 0
+        }
+      ]
+    }
+  ]
+}
