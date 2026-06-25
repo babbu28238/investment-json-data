@@ -1,12 +1,12 @@
 {
-  "version": "A243",
-  "generatedAt": "2026-06-25T20:52:41",
+  "version": "A245",
+  "generatedAt": "2026-06-25T21:02:28",
   "universeCount": 0,
   "allCandidateCount": 0,
   "candidateCount": 0,
   "errorCount": 0,
   "top": [],
-  "status": "report_target_collector",
+  "status": "target_clean_filter",
   "scoreModel": "non-empty-final-json",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -155,5 +155,8 @@
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
   "targetPriceCandidateCount": 0,
-  "rawTargetRows": 0
+  "rawTargetRows": 0,
+  "reliableTargetCandidateCount": 0,
+  "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+  "source": "target_price_bands_a244"
 }
