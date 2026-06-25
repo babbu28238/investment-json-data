@@ -33,7 +33,36 @@ jobs:
           fi
 
       - name: Run robust real data engine A423
-        run: python scripts/robust_real_data_engine_a423.py
+        run: |
+          if [ -f scripts/robust_real_data_engine_a423.py ]; then
+            python scripts/robust_real_data_engine_a423.py
+          elif [ -f scripts/robust_real_data_engine_a419.py ]; then
+            echo "A423 engine missing, using A419 engine as fallback"
+            python scripts/robust_real_data_engine_a419.py
+          else
+            echo "No robust real data engine script found"
+            python - <<'PY'
+            import json, pathlib, datetime
+            pathlib.Path("data").mkdir(exist_ok=True)
+            pathlib.Path("data/market_scanner_summary.json").write_text(json.dumps({
+              "version":"A423",
+              "generatedAt":datetime.datetime.now().isoformat(timespec="seconds"),
+              "status":"engine_script_missing",
+              "universeSource":"none",
+              "universeCount":0,
+              "includedCount":0,
+              "priceConnected":0,
+              "newsConnected":0,
+              "reportConnected":0,
+              "chartConnected":0,
+              "supplyConnected":0,
+              "supplyPartial":0,
+              "macroApplied":0,
+              "naverMissing":0,
+              "averageDataConnectionScore":0
+            }, ensure_ascii=False, indent=2), encoding="utf-8")
+            PY
+          fi
 
       - name: Write pipeline status A423
         run: python scripts/full_data_pipeline_status_a423.py
@@ -43,5 +72,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data/realtime_recommendations_a405.json data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/data_pipeline_status_a423.json data/data_connection_status_a423.json data/robust_real_data_debug_a423.json data/market_macro_environment.json data/market_macro_environment_summary_a416.json || true
-          git commit -m "Full data pipeline A423" || echo "No changes"
+          git commit -m "Full data pipeline A423 fix" || echo "No changes"
           git push
