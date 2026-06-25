@@ -1,7 +1,7 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-25 22:33:00",
-  "startedAt": "2026-06-25 22:33:00",
+  "updatedAt": "2026-06-26 01:06:32",
+  "startedAt": "2026-06-26 01:06:32",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
@@ -9,19 +9,19 @@
   "supplyRowCount": 80,
   "gradeCounts": {
     "B": 2,
-    "C": 36,
-    "D": 12
+    "C": 35,
+    "D": 13
   },
   "actionCounts": {
     "관찰상위": 2,
-    "관찰": 36,
-    "제외검토": 12
+    "관찰": 35,
+    "제외검토": 13
   },
   "sectorCounts": {
     "KOSPI 자동선별": 35,
     "KOSDAQ 자동선별": 9,
-    "바이오·제약": 1,
     "반도체·AI": 4,
+    "바이오·제약": 1,
     "금융·밸류업": 1
   },
   "topCandidates": [
@@ -211,15 +211,15 @@
     },
     {
       "rank": 9,
-      "name": "엘앤씨바이오",
-      "code": "290650",
-      "score": 68,
+      "name": "원익IPS",
+      "code": "240810",
+      "score": 67,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 68,
-        "supplyScore": 74,
-        "newsScore": 88,
+        "technicalScore": 72,
+        "supplyScore": 61,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -234,15 +234,15 @@
     },
     {
       "rank": 10,
-      "name": "알테오젠",
-      "code": "196170",
+      "name": "KODEX CD금리액티브(합성)",
+      "code": "459580",
       "score": 67,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 73,
-        "supplyScore": 80,
-        "newsScore": 64,
+        "technicalScore": 71,
+        "supplyScore": 64,
+        "newsScore": 92,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -252,7 +252,7 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "외국인·기관 수급 우위"
+        "supplyMemo": "수급 중립/혼조"
       }
     }
   ]

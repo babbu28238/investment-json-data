@@ -1,6 +1,6 @@
 {
   "version": "CV280_NEWS_SIGNAL_ENGINE",
-  "updatedAt": "2026-06-25 22:15:19",
+  "updatedAt": "2026-06-26 00:48:44",
   "source": "google_news_rss",
   "candidateCount": 80,
   "signals": [
@@ -9,14 +9,14 @@
       "name": "SK하이닉스",
       "market": "KOSPI",
       "sector": "반도체·AI",
-      "newsScore": 64,
+      "newsScore": 62,
       "newsLabel": "뉴스 중립",
-      "positiveCount": 2,
-      "negativeCount": 0,
-      "neutralCount": 6,
+      "positiveCount": 3,
+      "negativeCount": 1,
+      "neutralCount": 4,
       "headline": "김문수, 19년 전 산 하이닉스 주식 100배로…‘30주 보유’ 신고 - 한겨레",
-      "newsSignal": "뉴스 중립: 긍정 2 / 부정 0 / 중립 6 / 점수 64 / 대표뉴스: 김문수, 19년 전 산 하이닉스 주식 100배로…‘30주 보유’ 신고 - 한겨레",
-      "riskMemo": "뉴스 리스크 특이사항 제한적",
+      "newsSignal": "뉴스 중립: 긍정 3 / 부정 1 / 중립 4 / 점수 62 / 대표뉴스: 김문수, 19년 전 산 하이닉스 주식 100배로…‘30주 보유’ 신고 - 한겨레",
+      "riskMemo": "부정 키워드 확인 필요",
       "errors": [],
       "items": [
         {
@@ -33,15 +33,6 @@
           "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9lSmtMb1FaN2dqUG5LZnFDa0ZkZmxWNDdOXzF1eTI1RkRoSWpvd29fMVpZejlWcTB6ekprQTNvTmQzMHZnMElSeDBiOGdMZjhBWjhuQVhFaXY3aHZQLVZ1VFNGWlViYzl5RDNIdQ?oc=5",
           "published": "Thu, 25 Jun 2026 01:20:00 GMT",
           "source": "한경매거진&북",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
-          "title": "2만 원에 산 SK하이닉스 주식…김문수 ‘100배 수익설’ 화제 [잇슈#태그] - KBS 뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBtcFJTWjVtanJhQUtLek5yY3MxYjZVYkk3RS0xWDBZbmZ5YnNDSFl4bjM2bHVNdE45NzR4UTl3ODV6WTBoUmEzLUxwYV9tRFdKUEo0THE0QTV4VGlLWElHc2xIcnpaZw?oc=5",
-          "published": "Thu, 25 Jun 2026 02:45:00 GMT",
-          "source": "KBS 뉴스",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -76,13 +67,15 @@
           "score": 7
         },
         {
-          "title": "“팔 줄 몰라” SK하이닉스 100배 수익낸 주식 고수 정체는? 김문수 전 장관 - 문화일보",
-          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9iQkcta3hyMTdXMUtNaHl5V3lkUFRpeGRvMmQ1WTZuSjNDZmdEeW5iclhQbWwyUFptT2tSYWp0Q25ScE9TWEF0Y202emZPaXVv?oc=5",
-          "published": "Wed, 24 Jun 2026 15:13:10 GMT",
-          "source": "문화일보",
+          "title": "SK하이닉스 내달 미국 ADR 상장 추진···45조 유상증자 - 경향신문",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8xd0V2QV9JZmF6T2lTVTc3SUU2VDhuYTNsZjcxR3pPSlhlajhqN0FiN3FIUWlPSnJnUTBBUHFuUU85bXpxaWlYUVBVdzI0LXNRa2dKSk56X3l0d9IBX0FVX3lxTE9ZUDJpSDhhY2ZuY01hMzlTV0xKRVJHZjFtWFFXQ1lGTm1MN0puRTFCWXk2ZENZSUtxVXFYd3prc2FSdHE2X3J2UE1fUmstdU1zYTNKOVRqNks5elNQOXcw?oc=5",
+          "published": "Wed, 24 Jun 2026 08:18:00 GMT",
+          "source": "경향신문",
           "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
+          "negativeHits": [
+            "유상증자"
+          ],
+          "score": -9
         },
         {
           "title": "SK하이닉스, 45조 규모 미국 IPO 추진...7월10일 상장 목표 - AI타임스",
@@ -91,6 +84,17 @@
           "source": "AI타임스",
           "positiveHits": [
             "AI"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
+          "title": "SK하이닉스, 내달 10일 美 ADR 상장...45조 조달 - 조선일보",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOb1Bzbzlrbi1Jbzllc2FLWFJmVElSY1hJS21rbDhCaGFUcFNPd3o2SmlJUDloNlNTckhuWmhKeFNrNTJuczlMM0ExU1E1WVJFel8wZDVpSzA0aTc1bU1jdDJBdWliTFMwbkFLbmNSUzVIOXpmQjBWblMzYm92bWFhbU9Raw?oc=5",
+          "published": "Wed, 24 Jun 2026 08:07:00 GMT",
+          "source": "조선일보",
+          "positiveHits": [
+            "조선"
           ],
           "negativeHits": [],
           "score": 7
@@ -162,6 +166,15 @@
           "score": 0
         },
         {
+          "title": "하이닉스 이어 삼성전자도 ADR 상장?...증권가 \"재평가 강력 촉매\" - 비즈워치",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1pekVqck9WQlVzRTdBVFAwUW4tLUl3UlRfQU9ZSWVfNG5IZUdvYmhkNi1CV2lDZGNva0lKLUdlb052OTE2UGJrMWhpcEtCd2FETFdRWC1rMFozdFZLNmRIa3hxU1lDV3pjRHc?oc=5",
+          "published": "Wed, 24 Jun 2026 23:46:02 GMT",
+          "source": "비즈워치",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
           "title": "[포커스] 삼성전자 90조원 규모 자사주 매입, 주식시장에 미칠 영향 분석 - CEONEWS",
           "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8zeDRJdWxiWmxDVlNUZ3NybmpmVmxXR3FXMTF5WjdhMkVVYXRFQ0NCeGs5WnQwRFFKS2dlWHg5RzNkaEUxM0ZHUkpNczFMX2pIc0UtTXlfcGVKWXhuM3dn?oc=5",
           "published": "Thu, 25 Jun 2026 00:15:00 GMT",
@@ -173,24 +186,15 @@
           "score": 7
         },
         {
-          "title": "대신증권 \"삼성전자, '이익 개선' '주주환원' 고려하면 고점 아니야\" - 글로벌이코노믹",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbkJZckhLNFZwMWd0YXBkQWZqN19TQUJkWjRSaGRMTTlza2h4Yks3ZGIwM1FFRTJmMjhMbzAxd2JoUDVOM2t0azZCWTVQMzZlcGR1bk1UM25LMVhVQ0FJTllYelVVa1ZrSGdYcU8td05MZVN5bFFwdERTMDBFRlc2Ykd4TW0waFE?oc=5",
-          "published": "Wed, 24 Jun 2026 23:24:27 GMT",
-          "source": "글로벌이코노믹",
+          "title": "삼성전자, 90조 자사주 매입설 \"확정 된 바 없어\" - 디일렉",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HcmlGN1k4TUE0RGVZdFhRNWZjdEN0MjNwTC1iYThmdmJGVEJzWjJGd2xob04zczY3RWFPNWZUNF9nazJnV1duODc3ZHRaVVNLajI5SURFYk1BRVY2anRaZUpMRURZUQ?oc=5",
+          "published": "Wed, 24 Jun 2026 12:46:51 GMT",
+          "source": "디일렉",
           "positiveHits": [
-            "개선"
+            "자사주"
           ],
           "negativeHits": [],
           "score": 7
-        },
-        {
-          "title": "마이크론 매출 4.5배 ‘괴력’…삼성·SK하이닉스 실적 눈높이도 높아진다(분석) - 세종의소리",
-          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5oY2xCd3RVZjZ3NU1MUDJ0MHRDZHRQc1NPQVViaFNtVmtONnpiVjNPUGVSZV82V18ydmhkNWY1XzRhZmItbG5SSkQ4M1hUNnc0WDE0WS15Tk8teU1NakowZHZ2YTdhNG8?oc=5",
-          "published": "Wed, 24 Jun 2026 23:16:59 GMT",
-          "source": "세종의소리",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
         }
       ]
     },
@@ -204,11 +208,31 @@
       "positiveCount": 7,
       "negativeCount": 0,
       "neutralCount": 1,
-      "headline": "[특징주] SK, 하이닉스·스퀘어 상승에 급등하며 시총 10위(종합) - 연합뉴스",
-      "newsSignal": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: [특징주] SK, 하이닉스·스퀘어 상승에 급등하며 시총 10위(종합) - 연합뉴스",
+      "headline": "'삼전닉스' 올라탄 지주·계열사 열광…덩달아 주가 랠리 - 매일경제 마켓",
+      "newsSignal": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: '삼전닉스' 올라탄 지주·계열사 열광…덩달아 주가 랠리 - 매일경제 마켓",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
+        {
+          "title": "'삼전닉스' 올라탄 지주·계열사 열광…덩달아 주가 랠리 - 매일경제 마켓",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHZU5sQWZNWl9QdkVPMjF2Rk9WaktiYjhhbUh6RHpjSHNLSmt2Xy1Ba2lZSi1sRFFqeFltQUw5ME9YMXJ2OGhPeEstb1hRNTR5clE?oc=5",
+          "published": "Thu, 25 Jun 2026 08:50:09 GMT",
+          "source": "매일경제 마켓",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
+          "title": "\"SK스퀘어, 하이닉스 배당금으로 M&A 나설 전망…목표가↑\"-NH - 한국경제",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9rbTQxRUVDSERjWlQxWnRLZkdSOGVIM1hzb2FCT0FYQnI1OERFa2trUDNsRnV2NnJ2RFlTN3dBQ3hlcmFvRlY1eEVKNTllanJEUExhdl9jNkRjZ9IBVEFVX3lxTFB6Ti1jeUZkVFJhVGhFZWdzZlJ2bktWVFBacHNFd3VLdzdqcW9rX003ejhJWW81ZktaVmhXWG11UHZwdnVqNWpmZE5ldnNUVnRNN0ZJdQ?oc=5",
+          "published": "Sun, 21 Jun 2026 23:18:01 GMT",
+          "source": "한국경제",
+          "positiveHits": [
+            "배당"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
         {
           "title": "[특징주] SK, 하이닉스·스퀘어 상승에 급등하며 시총 10위(종합) - 연합뉴스",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YNWFJVHQwQWVWUmVNS2dCdUxoNkhvN3BvdW1IbGJicW5rX210NE9mVkEyQnl3MlJFcFNwWXdsTUdDOUtlXzZEZ1RKcVBzTGJFaG1VSmh0NkVPeW_SAWBBVV95cUxOV2thMWRaeGJLZ2hWaGtPZnBhUU9tUXdzYmtOZVBNcm5jVTI0Q21YMFRJMTYwV2NhbHlFRXN6Y3JmbVhPbDBjX3RzakIzX1I1c19ETDhPbXd4b2VSdHBta1Y?oc=5",
@@ -221,12 +245,12 @@
           "score": 7
         },
         {
-          "title": "\"SK스퀘어, 하이닉스 배당금으로 M&A 나설 전망…목표가↑\"-NH - 한국경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9rbTQxRUVDSERjWlQxWnRLZkdSOGVIM1hzb2FCT0FYQnI1OERFa2trUDNsRnV2NnJ2RFlTN3dBQ3hlcmFvRlY1eEVKNTllanJEUExhdl9jNkRjZ9IBVEFVX3lxTFB6Ti1jeUZkVFJhVGhFZWdzZlJ2bktWVFBacHNFd3VLdzdqcW9rX003ejhJWW81ZktaVmhXWG11UHZwdnVqNWpmZE5ldnNUVnRNN0ZJdQ?oc=5",
-          "published": "Sun, 21 Jun 2026 23:18:01 GMT",
-          "source": "한국경제",
+          "title": "SK 주가 장중 15%대 급등, SK하이닉스 SK스퀘어 주가 상승에 지분가치 부각 - 비즈니스포스트",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE96THZKak5Sb0ttQ09MaWJuNWo5WVFESE9xZ1ZHR2xrSXhKRm5fV3NRWU01M210NjNlamMxZU5sNHRjVWU2bHpuSXFISkp5NENybEVVS1d6TTFKX0piUDg0RjN6dXpxajRpT0NPd3JuMUg1UlE?oc=5",
+          "published": "Thu, 25 Jun 2026 01:42:54 GMT",
+          "source": "비즈니스포스트",
           "positiveHits": [
-            "배당"
+            "급등"
           ],
           "negativeHits": [],
           "score": 7
@@ -242,17 +266,6 @@
           ],
           "negativeHits": [],
           "score": 14
-        },
-        {
-          "title": "SK 주가 장중 15%대 급등, SK하이닉스 SK스퀘어 주가 상승에 지분가치 부각 - 비즈니스포스트",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE96THZKak5Sb0ttQ09MaWJuNWo5WVFESE9xZ1ZHR2xrSXhKRm5fV3NRWU01M210NjNlamMxZU5sNHRjVWU2bHpuSXFISkp5NENybEVVS1d6TTFKX0piUDg0RjN6dXpxajRpT0NPd3JuMUg1UlE?oc=5",
-          "published": "Thu, 25 Jun 2026 01:42:54 GMT",
-          "source": "비즈니스포스트",
-          "positiveHits": [
-            "급등"
-          ],
-          "negativeHits": [],
-          "score": 7
         },
         {
           "title": "NH투자 \"SK스퀘어, 주주환원 강화·적극적 M&A 전망…목표가↑\" - v.daum.net",
@@ -278,25 +291,17 @@
           "score": 14
         },
         {
-          "title": "SK스퀘어 목표가 110만→270만원으로 상향…“닉스 수혜 극대화” [코주부] - 서울경제",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA1Y0NBYVNfU0VCdWZfUUxfZFQ4djlrRm9OQTVjSV9pSkM1Z0hLRGktenJiV3RoczMwckw0TFcwbi0wS3pTX0NtbEFXTkpJMk9RaFHSAVNBVV95cUxNRnN2NDdySWp3Wnoyc2k1MmJab2tyVHlvaTFaTlo4ek0xaXAxbzZEUDZfYUZ6NkVybTdKV2s1ZGluaE1WdnNKODRMUUdNcEhUNF9iWQ?oc=5",
-          "published": "Sun, 21 Jun 2026 23:48:24 GMT",
-          "source": "서울경제",
+          "title": "SK스퀘어: SK하이닉스 지분 가치에 AI 투자 체질 개선까지 - 데일리바이트(DAILY BYTE)",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9WaHRrbzhHaVlFaFg3NDE5UmJqSGh1MXNMRjlYX3g2aGdIT3R0cmRxX3ZiUXBWUzlRdkcteVMzRjIyOGlfUjdQUGh1S3JJTDN3QzdYUXNCNlNvSUdWb0N5OEUzUThFQnlBekV1WkhLaGdKTG5xcWV5dzBtdw?oc=5",
+          "published": "Thu, 25 Jun 2026 09:03:11 GMT",
+          "source": "데일리바이트(DAILY BYTE)",
           "positiveHits": [
-            "상향",
-            "수혜"
+            "개선",
+            "투자",
+            "AI"
           ],
           "negativeHits": [],
-          "score": 14
-        },
-        {
-          "title": "[Hot 종목 체크] SK스퀘어, SK하이닉스보다 빠른 상승세로 '주목'…주가 향방은? - 데일리인베스트",
-          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1CNng2OWhxa3NSRWxIVEVNOUFjWUhvZXJVY3E2S3ZiZlhVNVNJRzZMWktaYVFvWjM2MENVSTZGOGJKbnhtQWlrNy01TF9hV3AyU1lxVXFfRW5DWjExZ3ZfZzRXYTBlUUV6Smdr0gFvQVVfeXFMT2RFYXhHV2swblB4N1pHUFBiN0JzZE9acnlaNEwxR3pFdVAzQkRfa0ZObF92S1c0dzVuaXlDYlJyM2Ffd0hTaWhNckRpT0NoM3AyUWcwQXNRVVotYUtDQzQ1bGZCZ1ZLdU1DUUlPZjVZ?oc=5",
-          "published": "Wed, 24 Jun 2026 03:17:20 GMT",
-          "source": "데일리인베스트",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
+          "score": 21
         }
       ]
     },
@@ -546,6 +551,15 @@
           "score": 0
         },
         {
+          "title": "정준호표 거버넌스 결실…SK증권, ESG 최상위 안착 - 경제타임스",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE14TzJ5ZVplVWNlYnY3MzdPSTJvUkU1azcwY2Z4MjBLZjhCUDdubUtFa3dCVlFaTkt5LWlQZ0g3SGI4VkJUS2ZldWNVVnZFLUVUSkFJ?oc=5",
+          "published": "Thu, 25 Jun 2026 07:56:38 GMT",
+          "source": "경제타임스",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
           "title": "SK증권, ESG 평가 '최고등급' 영예 거머쥐어…지속가능경영 경쟁력 부각 - 인더스트리뉴스",
           "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4zVU83Z3hoUmpycGVmeTRHZ2hvN3dzWk16VnlFRE1SNk4xdlNrUGczTzN1X1FHMmZKWFNSdldBWDhTUEtiVUx4czVYXzFfSXdSY3lLMm5iNnFwUFo1bjRNcWNJMTI0UW5SeHVxZlVDQThDUQ?oc=5",
           "published": "Thu, 25 Jun 2026 05:44:36 GMT",
@@ -555,10 +569,10 @@
           "score": 0
         },
         {
-          "title": "정준호표 거버넌스 결실…SK증권, ESG 최상위 안착 - 경제타임스",
-          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE14TzJ5ZVplVWNlYnY3MzdPSTJvUkU1azcwY2Z4MjBLZjhCUDdubUtFa3dCVlFaTkt5LWlQZ0g3SGI4VkJUS2ZldWNVVnZFLUVUSkFJ?oc=5",
-          "published": "Thu, 25 Jun 2026 07:56:38 GMT",
-          "source": "경제타임스",
+          "title": "변동성 장세 엇갈린 행보…BUY 삼성 SELL SK [주식 초고수는 지금] - 매일경제",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB1Z1NjQjB4dUpxUEVtNG5UcnlQMkNxMVhEbWlxU2JIRWVSdTVRT0gyQ0NVZ1l4U3VGU01XdHlSc0VfWlR2UEhtd1RfT1ZibDQ2ZkE?oc=5",
+          "published": "Thu, 25 Jun 2026 01:49:33 GMT",
+          "source": "매일경제",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -573,24 +587,6 @@
           "score": 0
         },
         {
-          "title": "SK증권, 에데나코리아와 맞손…디지털자산 금융사업 업무협약 체결 - 매일경제",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8zTXZtMXduTEdfWjdsUTh0QWl0Um9YQ1E2RHctTHBacF9XU3ZERDgxOUdDemlUem9uTW8zbnhHdGFqc2NxeGRIcU5UblMtY2FWYkE?oc=5",
-          "published": "Thu, 25 Jun 2026 06:11:25 GMT",
-          "source": "매일경제",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
-          "title": "SK증권, 에데나코리아와 디지털자산 금융사업 협력 - 이데일리",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQm51TDUyenRONDVVdTBxMlExNS1wWmlkVldkeVhQc29USkVkajhlMWd4MHFYdzJ2RGx1WjZ2OHQ3eDE1M2pxbXdib0NrVnBaVG42Y1duSmQwLWhCdVp1Q09fMnJqbVJneXJOZlhTSTd0N0V5TUNIOUxyX0ZvdkNXTQ?oc=5",
-          "published": "Thu, 25 Jun 2026 05:24:37 GMT",
-          "source": "이데일리",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
           "title": "2만 원에 산 SK하이닉스 주식…김문수 ‘100배 수익설’ 화제 [잇슈#태그] - KBS 뉴스",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBtcFJTWjVtanJhQUtLek5yY3MxYjZVYkk3RS0xWDBZbmZ5YnNDSFl4bjM2bHVNdE45NzR4UTl3ODV6WTBoUmEzLUxwYV9tRFdKUEo0THE0QTV4VGlLWElHc2xIcnpaZw?oc=5",
           "published": "Thu, 25 Jun 2026 02:45:00 GMT",
@@ -600,10 +596,19 @@
           "score": 0
         },
         {
-          "title": "SK증권, 서스틴베스트 ESG평가서 최고등급 획득 - 머니투데이 - 머니투데이",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZRXhnSVZGcTZ5aExveUtvYWxKRzNKV3VmelE2NUJZVnJYdVRsdmdtNTRBMTltMjdpcEN5eWUxeUNsalNsNTNFaG9ldHFmcHNXV0RNMlA3X1J2STZ1MUNwVWVQT0J1Si1GeWdhZVpn0gFuQVVfeXFMTllFeGdJVkZxNnloTG95S29hbEpHM0pXdWZ6UTY1QllWclh1VGx2Z201NEExOW0yN2lwQ3l5ZTF5Q2xqU2w1M0Vob2V0cWZwc1dXRE0yUDdfUnZJNnUxQ3BVZVBPQnVKLUZ5Z2FlWmc?oc=5",
-          "published": "Thu, 25 Jun 2026 04:19:15 GMT",
-          "source": "머니투데이",
+          "title": "SK증권, 에데나코리아와 디지털자산 금융사업 협력 위한 업무협약 체결 - 라이센스뉴스",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00T1dUQzNQMkk0OWkzU1NIQmU1WldGRlJtYXRWczZaUkJaMGlXd0d5LXZCYTF2Z0xIZXh6bkN1T3ZVYmpSU2MzVDJJN1pGdkxvTldTRmNxdVpheXdkOFJqY2puZE9qUzZJcE5r?oc=5",
+          "published": "Thu, 25 Jun 2026 07:46:25 GMT",
+          "source": "라이센스뉴스",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
+          "title": "SK증권, 디지털자산 사업 속도…에데나코리아와 RWA 토큰화 맞손 - 리드경제",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lNmVwVzhiM296bkl4M2RROEx5UkxrODZ4d1dEUkdlY0JIendsQjNFYkdNeEllalJiYmRQbURFRy1fSXVGcXY2MkM4NVFOdU00cnNiS3ZmdlI1Zk14NWI1NUlrU1JoV3JURWpqSmlfdw?oc=5",
+          "published": "Thu, 25 Jun 2026 08:08:29 GMT",
+          "source": "리드경제",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -706,14 +711,23 @@
       "sector": "KOSPI 자동선별",
       "newsScore": 100,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 7,
+      "positiveCount": 6,
       "negativeCount": 0,
-      "neutralCount": 1,
-      "headline": "[특징주] “제2의 SK스퀘어” 평가에…삼성물산 11% 급등 - 조선비즈 - Chosunbiz",
-      "newsSignal": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: [특징주] “제2의 SK스퀘어” 평가에…삼성물산 11% 급등 - 조선비즈 - Chosunbiz",
+      "neutralCount": 2,
+      "headline": "'삼전닉스' 올라탄 지주·계열사 열광…덩달아 주가 랠리 - 매일경제 마켓",
+      "newsSignal": "뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: '삼전닉스' 올라탄 지주·계열사 열광…덩달아 주가 랠리 - 매일경제 마켓",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
+        {
+          "title": "'삼전닉스' 올라탄 지주·계열사 열광…덩달아 주가 랠리 - 매일경제 마켓",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHZU5sQWZNWl9QdkVPMjF2Rk9WaktiYjhhbUh6RHpjSHNLSmt2Xy1Ba2lZSi1sRFFqeFltQUw5ME9YMXJ2OGhPeEstb1hRNTR5clE?oc=5",
+          "published": "Thu, 25 Jun 2026 08:50:09 GMT",
+          "source": "매일경제 마켓",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
         {
           "title": "[특징주] “제2의 SK스퀘어” 평가에…삼성물산 11% 급등 - 조선비즈 - Chosunbiz",
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG11Tm9udnFLbFJqVFRQZk0xV1BOT2gyMHlaVkNYbEdwNGhad19yWUR3aHlwS1NaY2pWb0I5TlFqTEp2a3pqOUVnemVzalVtay1WZTl1c1ZFc3N2VlVYalhWVkYyaUNFVmxxUEtkMmZtU0FnSklqOFRaV3l5MHRWdWhrRFctLXJz0gGcAUFVX3lxTE5EVHlOTUFqd3RTNzNwbDdQRjd3bHNNeUFkTHpfbU9tQm1rSHhLNVdLNmo3aklhaEUybjNWTndtWkNlZUFpa1F4azQ2TWZzcFFXZ2JoSGl4eXVkOFAxNXNTc0lNczJSenVCX1hHQkV6MTZSRkZyRjZnM1dmUmMyT1RQZXFOZDhjdEhTdFFCVExPZTJYZTBaV1dRS1BOMA?oc=5",
@@ -727,17 +741,6 @@
           "score": 14
         },
         {
-          "title": "'삼성전자' 상승에 보유 지분가치 68조 늘었다…삼성물산 5%대 반등 - 한국경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LLXBxeHhSc2pDQ3RHeTJnZGtSdndZSWVKd2VDRDBIMl9ST2RTZmM2Rmg4T0xiNnRuTzVlSnZ1ckdIZEVWSDJ3MU53QnlOOHM3aURLSk82TmxQQdIBVEFVX3lxTE16cjVPbnI5U2lMbGtVM2s2QWtIUjBWelFPdjN3N1lkZVdRdi1lQkJCMmo4Q0FKdzY4b2RTYWNpZllRMEEzQ20xQkNYdmlMZWh2U0ZCNg?oc=5",
-          "published": "Wed, 24 Jun 2026 22:34:33 GMT",
-          "source": "한국경제",
-          "positiveHits": [
-            "반등"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
           "title": "[특징주] 삼성물산, 10%대 반등해 50만원선 회복…목표가 68만원도 - 에너지경제신문",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tdWV0RDlrN0lCTlo1NndnTU0xM3pYUTlYeUlOelE5cW9jQVJ0UE9DRndsRHd3R2pTZFdLcFJTdlh6Vk42TGpmLTBxNVR0Z19XejlPa0NQRDl2RWM?oc=5",
           "published": "Wed, 24 Jun 2026 00:42:21 GMT",
@@ -747,15 +750,6 @@
           ],
           "negativeHits": [],
           "score": 7
-        },
-        {
-          "title": "KCC 장중 15% 점프…삼성물산 랠리에 웃는 '10% 주주' - 머니투데이 - 머니투데이",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1qN21RLUVnRlBhb0JYTGhobW9jUzFXSWNsSlBSN2xKR1JoNlgtbENFemNLUUVXaGYySzdEeDJRY2pqNU14MDd6R0N0ZFlZLXJ5YXBMa2ZISHBaVVNjWWNySTFkMDJjdmIyVWdJT09n0gFuQVVfeXFMTWo3bVEtRWdGUGFvQlhMaGhtb2NTMVdJY2xKUFI3bEpHUmg2WC1sQ0V6Y0tRRVdoZjJLN0R4MlFjamo1TXgwN3pHQ3RkWVktcnlhcExrZkhIcFpVU2NZY3JJMWQwMmN2YjJVZ0lPT2c?oc=5",
-          "published": "Thu, 25 Jun 2026 01:06:54 GMT",
-          "source": "머니투데이",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
         },
         {
           "title": "삼성물산의 괄목상대…삼전 배당·원전 기대감 - 연합인포맥스",
@@ -769,6 +763,26 @@
           ],
           "negativeHits": [],
           "score": 21
+        },
+        {
+          "title": "KCC 장중 15% 점프…삼성물산 랠리에 웃는 '10% 주주' - 머니투데이 - 머니투데이",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1qN21RLUVnRlBhb0JYTGhobW9jUzFXSWNsSlBSN2xKR1JoNlgtbENFemNLUUVXaGYySzdEeDJRY2pqNU14MDd6R0N0ZFlZLXJ5YXBMa2ZISHBaVVNjWWNySTFkMDJjdmIyVWdJT09n0gFuQVVfeXFMTWo3bVEtRWdGUGFvQlhMaGhtb2NTMVdJY2xKUFI3bEpHUmg2WC1sQ0V6Y0tRRVdoZjJLN0R4MlFjamo1TXgwN3pHQ3RkWVktcnlhcExrZkhIcFpVU2NZY3JJMWQwMmN2YjJVZ0lPT2c?oc=5",
+          "published": "Thu, 25 Jun 2026 01:06:54 GMT",
+          "source": "머니투데이",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
+          "title": "'삼성전자' 상승에 보유 지분가치 68조 늘었다…삼성물산 5%대 반등 - 한국경제",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LLXBxeHhSc2pDQ3RHeTJnZGtSdndZSWVKd2VDRDBIMl9ST2RTZmM2Rmg4T0xiNnRuTzVlSnZ1ckdIZEVWSDJ3MU53QnlOOHM3aURLSk82TmxQQdIBVEFVX3lxTE16cjVPbnI5U2lMbGtVM2s2QWtIUjBWelFPdjN3N1lkZVdRdi1lQkJCMmo4Q0FKdzY4b2RTYWNpZllRMEEzQ20xQkNYdmlMZWh2U0ZCNg?oc=5",
+          "published": "Wed, 24 Jun 2026 22:34:33 GMT",
+          "source": "한국경제",
+          "positiveHits": [
+            "반등"
+          ],
+          "negativeHits": [],
+          "score": 7
         },
         {
           "title": "[특징주] \"삼성전자 땡큐\".. 삼성물산과 삼성생명도 동반 '급등' - 글로벌이코노믹",
@@ -791,18 +805,6 @@
           ],
           "negativeHits": [],
           "score": 7
-        },
-        {
-          "title": "삼성전자 급등…삼성물산 목표가 68만원 '파격 상향' - 경제타임스",
-          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5oUmNvdzltSjE1WTg3NWpHNVE3WGJuUkJlVzRXeTBRdmVSdlZYM2t1UUtTZFQzU051VEs0VThKRF8taFlxVElNM3E2cUI3c1lEYmNJ?oc=5",
-          "published": "Tue, 23 Jun 2026 01:29:59 GMT",
-          "source": "경제타임스",
-          "positiveHits": [
-            "상향",
-            "급등"
-          ],
-          "negativeHits": [],
-          "score": 14
         }
       ]
     },
@@ -952,6 +954,15 @@
           "score": 0
         },
         {
+          "title": "삼성생명 전현직 설계사들, 보험사기 '덜미'…업무정지 제재 - 뉴스워치",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OQWJyODM2Y3BCWDc1azM0MWNwdDIyM3gxOEloSDl1UGVjYjk4SVQtOXdwc0VIRzlyV181X2ZBdFdSYmpwLS1jTGNfRkdqQWF4X3JxbFQzNHA3U1BVRE0ycE5tNE9lQ1JO?oc=5",
+          "published": "Thu, 25 Jun 2026 08:01:19 GMT",
+          "source": "뉴스워치",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
           "title": "[특징주] \"삼성전자 땡큐\".. 삼성물산과 삼성생명도 동반 '급등' - 글로벌이코노믹",
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQWx5d3lidmVhNEI4VURfTlZzZEh0QlhSMng4TmI4UlN5VXpZOUk1cFUtYjh1SmUwQ3hZYmpsRV9SMHBfRmJYUzQzbldrbDdFanoyNTRWQTBSWG1tVlozYW1OSUFHRUtla3huUFU2cjA5czhYR0NoVU9QNjAwNzlNRWxkTE9neVdJ?oc=5",
           "published": "Thu, 25 Jun 2026 01:29:27 GMT",
@@ -967,15 +978,6 @@
           "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5FVWZYZktFem5GY0d2M1JBUEVjY3BEQjlzNFN0RDVLd2VPc2RMdklTNFhGWGdkWVNuWUZvdk5xRTN2ZWJPNkQwa0lZcGxHS2diSkhfNy0xMy1XUdIBVEFVX3lxTFByTkdQNG4xQXNyME1PUTVNcXR3bXJSVm55YXZkcTU2dlhzQnNMQUMyWlNWQmtJR0YyUFprSGpkMVIzYVl4d1FCeUlLc29jdS1EemI2Nw?oc=5",
           "published": "Thu, 25 Jun 2026 00:48:10 GMT",
           "source": "한국경제",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
-          "title": "삼성생명 전현직 설계사들, 보험사기 '덜미'…업무정지 제재 - 뉴스워치",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OQWJyODM2Y3BCWDc1azM0MWNwdDIyM3gxOEloSDl1UGVjYjk4SVQtOXdwc0VIRzlyV181X2ZBdFdSYmpwLS1jTGNfRkdqQWF4X3JxbFQzNHA3U1BVRE0ycE5tNE9lQ1JO?oc=5",
-          "published": "Thu, 25 Jun 2026 08:01:19 GMT",
-          "source": "뉴스워치",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -1040,6 +1042,15 @@
           "score": 21
         },
         {
+          "title": "하늘길을 독점하는 메가 캐리어, 세계 10위권 항공 제국으로 - 대한항공 - 네이버 프리미엄콘텐츠",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQXFuVWxWa2NDYjByX3JDQnB5RTltd3lNaDh0dDRfWjR4OS0zbWgzNktITUVMUndCa1h3Tk9MclpGWFdvU0Y1VXBVc0N3Z2RrajdPZTNMSFktTmxyMDRGRmpxVVJyWDM3czVfV3JJbS1lVDZwZXA4cnFIRWx3T28yZ0FpR05rdw?oc=5",
+          "published": "Wed, 24 Jun 2026 23:50:00 GMT",
+          "source": "네이버 프리미엄콘텐츠",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
           "title": "항공주, 국제유가 하락에 강세···대한항공 7%↑ - 현대경제신문",
           "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5qQkFXUGs1a0dEaEZIM0VKdmRJOUlBOHllQVJEZkdSQ3hUdE54dU1GdUVkbDljSXdFSlMxNmJTTHlHMjRfN09EUGpNMzJwdC1lUTU4YW5sVVpRQkJFVjVFLXJ5bmlrOWvSAWtBVV95cUxQejFuZGJtXzQxcm11MW82NFJ4Yk0tWXhDVU1EeTVtQkx2Q2UtMC1GV1F0TkV0V1hXTHJCY21lU2hEODZvcl9ycW9ySFpzamJBc0pzYnJoc2dyNE10Ynlyb3BhUXZyRlE1NElxOA?oc=5",
           "published": "Thu, 25 Jun 2026 02:58:27 GMT",
@@ -1076,24 +1087,16 @@
           "score": 7
         },
         {
-          "title": "항공주 강세...대한항공ㆍ아시아나항공 6% 상승 - 이코노뉴스",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wd2cwRzlacFpoLUtjZEN5TkJDVWFYdnBZUUNVWG10RU1qaElxam15eFhmOWtkUlpqZkRmalJKRzlfU2tOclpUeGZ2YllUZjM5aFBlVVFNWUU2LWFUN0dwSUp0WGgwUGoyZHNHY3hGMA?oc=5",
-          "published": "Thu, 25 Jun 2026 03:58:53 GMT",
-          "source": "이코노뉴스",
+          "title": "대한항공, 아시아나 합병에 시너지 효과...투자의견 양호 - 동양뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hSmVNeEJDQ1oyWHI2M1M5WUFCdFBCZFh2T0QxQ0Z5azdoTkdBdUdLYTl0MmtLQXZvR0JQdnJxUjNaR0FQZGpUUS11RDM3ZVNRMFJ3ZkRkc3BsdzVqUmJZTw?oc=5",
+          "published": "Mon, 22 Jun 2026 23:39:19 GMT",
+          "source": "동양뉴스",
           "positiveHits": [
-            "강세"
+            "투자",
+            "합병"
           ],
           "negativeHits": [],
-          "score": 7
-        },
-        {
-          "title": "대한항공 스카이패스, '2026 국가서비스대상' 4년 연속 수상 - 한국경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1mMl9Jei1Bd2Z2WHJ5VXh4dGVTRUxNMThxdVA1YmJFRVBLY1lSRE1uMGg1RnFhclFVTFN2Wk91WXgxMW45Yk9hY3RWVzlEWE5ueHlEUkxOcHo3d9IBVEFVX3lxTE1HMzhRZ1d4c25xempDdmpQaG5COElUUlZBS3hWMWt4amVJc0tOQThYR0d6WUlQUUtKNElHUXdvNlR1QmxkQzlBRWRRZ281SHRXcFVzQw?oc=5",
-          "published": "Thu, 25 Jun 2026 00:55:46 GMT",
-          "source": "한국경제",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
+          "score": 14
         },
         {
           "title": "'메가 캐리어' 출범 앞둔 대한항공, 3분기 실적 상승 '예고' - 한국NGO신문",
@@ -1191,23 +1194,23 @@
           "score": 14
         },
         {
+          "title": "[종목 포커스] 원익IPS, 하반기 디램·낸드·파운드리 동시 수혜…업사이클 재개? - 데일리인베스트",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1KZmZGd3YyTUp6UlFwM0tmTUNLSFZEeXRxc25kX0d5S3NGYnhWbVVZVFBpUWdXZFFPaU5fcllPaFBiMnNGbHFod0ZaTC15TEZ5cThJdXhEV2FiSVppWURpaXJnemxGYlltUXdV0gFvQVVfeXFMTWk5RTFPbjBoVnUwa1FUUnhXNUVocWpCRlB3M3E1RUt4OHJEY2hVa09pdFNOeGNkeldZM0hvWXJmRHUtdHNXdmhKQ3BZZ3QtalAtdnMwMkdwVktyQU5aT0NMZDRnREYzSXNEeVFMZG9n?oc=5",
+          "published": "Tue, 12 May 2026 07:00:00 GMT",
+          "source": "데일리인베스트",
+          "positiveHits": [
+            "수혜"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "AI 소부장株 들썩…HPSP·원익IPS 나란히 상한가 [이런국장 저런주식] - 서울경제",
           "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9LVXRVTkpPYW85eWdWdnpRZE1zV2t3SUxCNlpwbW9CZzh4YldtY2NvQ3N0eFRlYzlXSkpEWnRQZE1BQlNKb2dhcGNCSHF1YW9XZ0HSAVNBVV95cUxNODgxNkN0c0hxSTBIdHFZRDVmalNmbVdQeTVBbjNIQU90bDc0Ym1wM2V4VU9vQk9nWU8tSG1nMzVlRDF2VlNoRVhrbTRYbndWUlRKaw?oc=5",
           "published": "Fri, 12 Jun 2026 07:00:00 GMT",
           "source": "서울경제",
           "positiveHits": [
             "AI"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
-          "title": "원익IPS, 반도체 훈풍에 곳간 두둑…M&A 다시 시동거나 - ibtomato.com",
-          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBlVE83QUc4ZFp5TWhjWjBvSGllbzFYZS14d1d2WWhsdkFPdVFKZllfeXFHQWVZcUJRNUtIcVFmT3pmcVhQZy1kbFJDLXZtc0tiRzVQdS1CY0dKS1dtRnozZ1BiUGpKX0FEZFE?oc=5",
-          "published": "Tue, 14 Apr 2026 07:00:00 GMT",
-          "source": "ibtomato.com",
-          "positiveHits": [
-            "반도체"
           ],
           "negativeHits": [],
           "score": 7
@@ -1219,16 +1222,25 @@
       "name": "삼성전기",
       "market": "KOSPI",
       "sector": "KOSPI 자동선별",
-      "newsScore": 90,
+      "newsScore": 78,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 4,
+      "positiveCount": 3,
       "negativeCount": 0,
-      "neutralCount": 4,
-      "headline": "삼성전기, 목표가 300만 원도 나왔다 - 문화일보",
-      "newsSignal": "뉴스 긍정: 긍정 4 / 부정 0 / 중립 4 / 점수 90 / 대표뉴스: 삼성전기, 목표가 300만 원도 나왔다 - 문화일보",
+      "neutralCount": 5,
+      "headline": "美개미, 삼전닉스 ETF 쓸어담자…삼성전기 담은 ETF 美출격 준비 - 매일경제 마켓",
+      "newsSignal": "뉴스 긍정: 긍정 3 / 부정 0 / 중립 5 / 점수 78 / 대표뉴스: 美개미, 삼전닉스 ETF 쓸어담자…삼성전기 담은 ETF 美출격 준비 - 매일경제 마켓",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
+        {
+          "title": "美개미, 삼전닉스 ETF 쓸어담자…삼성전기 담은 ETF 美출격 준비 - 매일경제 마켓",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1feDRlRGF5UzJUZnZjOW05Q1g2MWpOME14Q3ExLVprV0VJZUk4WTZ3X3ZCbV9RcVpOVkV4M0dLR2I4VktIeFFTWUlxUXE1dUtpVnc?oc=5",
+          "published": "Thu, 25 Jun 2026 08:48:42 GMT",
+          "source": "매일경제 마켓",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
         {
           "title": "삼성전기, 목표가 300만 원도 나왔다 - 문화일보",
           "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBISEhhSXNmOWxzWnA2dGhDd3FidVZmSHBTc29xajBFQl9wRExNaC1RUVVpQkJDMzNMZ0VsSTZJY2cwdUo4OGwzM1ByZEFMeVBp?oc=5",
@@ -1268,17 +1280,6 @@
           "score": 0
         },
         {
-          "title": "삼전닉스 몰빵에서 전력·엔터·배터리로 분산투자 전환[주식 초고수는 지금] - 매일경제",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE94SmtYem94aFhvVERCSmlCUWZTQkNHV2ZNSVFpcEZQZDBONWFOa2FMLXZlRXdwb1hTUmRYb19DSVE3Q2tleWc1Nnl5WGdLRzd0eXc?oc=5",
-          "published": "Thu, 25 Jun 2026 06:32:46 GMT",
-          "source": "매일경제",
-          "positiveHits": [
-            "투자"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
           "title": "올해만 주가 735% 폭등한 삼성전기…증권가는 \"여전히 싸다\" - 매일신문",
           "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FaGtYS2ktM2UtWjlKMXNrcUtpRTVSeTcySkN4TDN6QUYtVl9rdUpESmhsS2kwQzVhVVJISG9Zd2tsTFlSVVVfLXRzYll4UTFtX09KVjE3TE4yTzRyLXMydFVn?oc=5",
           "published": "Mon, 22 Jun 2026 01:28:45 GMT",
@@ -1288,28 +1289,24 @@
           "score": 0
         },
         {
-          "title": "[기업家] 삼성전기 ①ㅣ 실적·수주·투자 ‘삼박자 성장’…AI·전장 수요 - CBC뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PQjA2VHhKaURCZ3Z5TXlMNkJId3Qyb0tNbVlXSnM0dE1XamV6eUkwRmJFWHNxZTRwNEVHUHgycUxqRi1UODVvMjdJUnRLSTBpQmdremdJLVBGdllCcDh1REdlSQ?oc=5",
-          "published": "Thu, 25 Jun 2026 02:48:17 GMT",
-          "source": "CBC뉴스",
+          "title": "메리츠증권 \"삼성전기, AI발 수요 2028년까지도 확대…목표가↑\" - 연합뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85STY5SHh0dFo1d0dwVXAwZVFuQWpJQklvV2EzdzljVHUzQ0o5eW41bkNEdU5rZGlJbDFfUlc4bWxEcXFWTEp0ZDY2Ykg0eUcwaktVaTVyRWxVYm_SAWBBVV95cUxQSTRhdUIyQWJtTVdSaVNvYlJCZFBCekFWc1BFR1NhZTUzUFpqSDlJdGYxVkR1NXNMM3pGLUpJOFBmUVVfNkRPbEpzLWxHdndXcGNpUVptWlJJTkpyUXNfNGM?oc=5",
+          "published": "Sun, 21 Jun 2026 23:42:45 GMT",
+          "source": "연합뉴스",
           "positiveHits": [
-            "수주",
-            "성장",
-            "투자",
+            "확대",
             "AI"
           ],
-          "negativeHits": [
-            "CB"
-          ],
-          "score": 19
+          "negativeHits": [],
+          "score": 14
         },
         {
-          "title": "\"삼성전기, 내년 영업익 110% 성장 전망…목표가↑\"[클릭 e종목] - 아시아경제",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9FdmtXa3Z2TGZDOEx2OEJqOFBNYVFxdEExc1VPNzhZVUtBcnVKa0dpZFVTbG92NUN2Qld4WHVmZ1ZFWDBBTE9nM1FYZ1lENGVqTTh0eXlkX2VIa0JlY2diZg?oc=5",
-          "published": "Mon, 22 Jun 2026 21:08:00 GMT",
-          "source": "아시아경제",
+          "title": "삼전닉스 몰빵에서 전력·엔터·배터리로 분산투자 전환[주식 초고수는 지금] - 매일경제",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE94SmtYem94aFhvVERCSmlCUWZTQkNHV2ZNSVFpcEZQZDBONWFOa2FMLXZlRXdwb1hTUmRYb19DSVE3Q2tleWc1Nnl5WGdLRzd0eXc?oc=5",
+          "published": "Thu, 25 Jun 2026 06:32:46 GMT",
+          "source": "매일경제",
           "positiveHits": [
-            "성장"
+            "투자"
           ],
           "negativeHits": [],
           "score": 7
@@ -1401,7 +1398,7 @@
         },
         {
           "title": "ETF도 결국 '삼전·닉스'... TOP2 ETF로 쏠림 심화 - 매일일보",
-          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE90U0tLV3h0SDRHNkd1XzJ3SnlyZzFIRkdMVGJIVTNpQmNzcXp1THZKeGc0ZG4zRlk5VjdvRTNrZzFJT3NEMTlXd2pTQ25WeEswdGJKMkh0T1FKR2tXQzVlQXVuVmk?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE81YmxfbGdySS16TnRocGtpZTQ1VlBpZDg4RFNKN2drcjM2WWR2T2NBb2h4bG9wcTdURWZ0VF9xMHF3V1pJbDlzSjlDSklTelp6TUItTEw0R1hqMkZYYnYweFZOQQ?oc=5",
           "published": "Tue, 23 Jun 2026 05:32:07 GMT",
           "source": "매일일보",
           "positiveHits": [],
@@ -1647,11 +1644,11 @@
       "sector": "KOSPI 자동선별",
       "newsScore": 100,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 8,
+      "positiveCount": 7,
       "negativeCount": 0,
-      "neutralCount": 0,
+      "neutralCount": 1,
       "headline": "미래에셋자산운용, 'TIGER 200 IT' 순자산 3조원 돌파 - 뉴스핌",
-      "newsSignal": "뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 미래에셋자산운용, 'TIGER 200 IT' 순자산 3조원 돌파 - 뉴스핌",
+      "newsSignal": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: 미래에셋자산운용, 'TIGER 200 IT' 순자산 3조원 돌파 - 뉴스핌",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
@@ -1678,15 +1675,13 @@
           "score": 7
         },
         {
-          "title": "미래에셋 'TIGER 200 IT ETF' 순자산 3조 돌파…연초 이후 수익률 230% - ebn.co.kr",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1DcldQdTFLOEhMTXRGeGhIc3Jrbm5lMHVXdmc2T2haZmNNQS15emQyZDV6TzJGdmgxTElMdFRBb1VXLWtYcjFwd2xmemUwSWFyN3lpbWdsaTg3dHc0MzJkNEQtTUh2YzNw?oc=5",
-          "published": "Wed, 17 Jun 2026 07:53:52 GMT",
+          "title": "이비엔(EBN)뉴스센터 - ebn.co.kr",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5YRGtpMDQ5RjZZNnZvWmZvQkQ5OEJwNVdfemlCalZuTG9uMVI0VTJKUkx4bVMxVktxdDNlVkZFdE1HQlNuV2Frc2kwS3ZMaHhwRU50QkJadG9tYzhPUEFPbGlZRG1WeW9BUlZiQXdQeV9zZzNvN0E?oc=5",
+          "published": "Wed, 17 Jun 2026 07:53:00 GMT",
           "source": "ebn.co.kr",
-          "positiveHits": [
-            "돌파"
-          ],
+          "positiveHits": [],
           "negativeHits": [],
-          "score": 7
+          "score": 0
         },
         {
           "title": "미래에셋자산운용, 'TIGER 200 IT ETF' 순자산 3조 돌파…AI 인프라 투자 수요 확대 - ER 이코노믹리뷰",
@@ -1738,7 +1733,7 @@
         {
           "title": "\"반도체 넘어 AI 인프라로\"…TIGER 200 IT ETF, 순자산 3조원 돌파 - 파이낸셜뉴스",
           "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41bUY5MEZReU5jMUNTV0dUTVVGa2hkNGRHdXFUNXp2eW9oTmRLckRfUk5ZTkQzTFVPV3RKQnZNRUdJVzhTRktGRDJERHV5akpQbmNCYXUyU2tSUQ?oc=5",
-          "published": "Wed, 17 Jun 2026 00:41:17 GMT",
+          "published": "Wed, 17 Jun 2026 07:00:00 GMT",
           "source": "파이낸셜뉴스",
           "positiveHits": [
             "돌파",
@@ -1855,13 +1850,13 @@
       "name": "TIGER 미국나스닥100",
       "market": "KOSPI",
       "sector": "KOSPI 자동선별",
-      "newsScore": 99,
+      "newsScore": 100,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 7,
+      "positiveCount": 8,
       "negativeCount": 0,
-      "neutralCount": 1,
+      "neutralCount": 0,
       "headline": "미래에셋운용, ‘TIGER 미국나스닥100 ETF’ 순자산 10조 돌파…국내 최초 기록 - 인더스트리뉴스",
-      "newsSignal": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 99 / 대표뉴스: 미래에셋운용, ‘TIGER 미국나스닥100 ETF’ 순자산 10조 돌파…국내 최초 기록 - 인더스트리뉴스",
+      "newsSignal": "뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 미래에셋운용, ‘TIGER 미국나스닥100 ETF’ 순자산 10조 돌파…국내 최초 기록 - 인더스트리뉴스",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
@@ -1870,17 +1865,6 @@
           "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE93eWJiOW1UWlRJX3lGcE5fOVhuRDMtMW1WTTBlcWcxbFhNaVNhVGhUNklBVVR2UHBfTUgxbHlEYTlGYmpYdFBXdXRDVzNTdFA3ZW1rVEJjUGZZb1FYalJiZEhnSDBLVlhmYXZVSC0yQWZfQQ?oc=5",
           "published": "Thu, 21 May 2026 07:00:00 GMT",
           "source": "인더스트리뉴스",
-          "positiveHits": [
-            "돌파"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
-          "title": "미래에셋운용, 'TIGER 미국나스닥100' 순자산 10조원 돌파 - 아시아경제",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1tM2RNUFVsT2RSSVlObjFvbUZQeXBUV0xBQ0FfWUNBVTAxVUJ5YXN0MjhEM0N6SXJTdVd2ZFJHMUdUc3pOWUlQUl8ydlFFUEdiRjlkQ09XcVRYQUxxclliTA?oc=5",
-          "published": "Thu, 21 May 2026 07:00:00 GMT",
-          "source": "아시아경제",
           "positiveHits": [
             "돌파"
           ],
@@ -1899,10 +1883,10 @@
           "score": 7
         },
         {
-          "title": "미래에셋 'TIGER 미국나스닥100' 순자산 10조원 돌파 - 뉴스핌",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5Ra0ZBXy1sX3pSWGM3SVk2ZVVkajZYS0owdUs0Q2ZGV3B2bWZJT2pybnJaWk9MWXpsdlIya1lIQy0wbnFGSDA3bUNoTHRxLXZja3NHUTJ3UU5CdThH?oc=5",
+          "title": "미래에셋운용, 'TIGER 미국나스닥100' 순자산 10조원 돌파 - 아시아경제",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1tM2RNUFVsT2RSSVlObjFvbUZQeXBUV0xBQ0FfWUNBVTAxVUJ5YXN0MjhEM0N6SXJTdVd2ZFJHMUdUc3pOWUlQUl8ydlFFUEdiRjlkQ09XcVRYQUxxclliTA?oc=5",
           "published": "Thu, 21 May 2026 07:00:00 GMT",
-          "source": "뉴스핌",
+          "source": "아시아경제",
           "positiveHits": [
             "돌파"
           ],
@@ -1921,6 +1905,17 @@
           "score": 7
         },
         {
+          "title": "미래에셋 'TIGER 미국나스닥100' 순자산 10조원 돌파 - 뉴스핌",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5Ra0ZBXy1sX3pSWGM3SVk2ZVVkajZYS0owdUs0Q2ZGV3B2bWZJT2pybnJaWk9MWXpsdlIya1lIQy0wbnFGSDA3bUNoTHRxLXZja3NHUTJ3UU5CdThH?oc=5",
+          "published": "Thu, 21 May 2026 07:00:00 GMT",
+          "source": "뉴스핌",
+          "positiveHits": [
+            "돌파"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "미래에셋 '미국나스닥100' ETF 순자산 10조… 1년 만에 두 배 성장 - v.daum.net",
           "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9CanJWcjdZMjNoM2ltaFpZeWpMLWdHbmJJMzQ2ZURZVjNlZFdEVXZObTJHOXNUdFZGRjFVbHpESFNDWHd5a2c?oc=5",
           "published": "Thu, 21 May 2026 07:00:00 GMT",
@@ -1932,19 +1927,21 @@
           "score": 7
         },
         {
-          "title": "미래에셋자산운용, ‘TIGER 미국나스닥100’ 순자산 10조 달성 - 주간한국",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85TUFCbzF6Nnp0QkR2Yk1VdHFzQXFCODNGcjFMMDVITUFHTHJ4Mkd5N2tCYWFUTzEzVk5xdTAxUU9NR1I1Y0otR2daRjUtSVZFZFZ2MlFNWDJLQ0tnZmt1QndST2ViZVhkYWVWQk1DbHnSAXRBVV95cUxQNWZGNUhJN19Mc0VkOUZhR1FZSjNPZ3RsV1hMcTVKLS1YZzh3cFYwdW9EQ25nLTFLYVJiLTBBWVVQbGMtSzhNamstZEp4X21aTkNOaVctSTAxeWNCOUw1OEtpblZPdzZ5Y29rR0lnMkRCTDVwbw?oc=5",
+          "title": "미래에셋 'TIGER 미국나스닥100' 순자산 10조 돌파 - 뉴시스",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1HOXJJQ0J6a01HSzAzQlhkeXh3cnFmQzU5OUpkV0hXaEVONlYyRWNGdnRpdFczX0FLeDBSb21HY3drcHNfNlRqZndqT2JwcXRwMXpKYzdWLXBReDN1QWZzadIBeEFVX3lxTE4xOVB1Ym9CNHU4bFJ0aER3NkxMcWlsMTBDZDNHUlhNWEY5M0NjQVlkTDVTWkhqczhUa092LUkwTEotTnFuaDBBczdJWlJNN1Vxc0tkbzdYV3Fqdi11Wl82SndzcjUwdWNrc0g0VzVaRlZwOXM0YU5qLQ?oc=5",
           "published": "Thu, 21 May 2026 07:00:00 GMT",
-          "source": "주간한국",
-          "positiveHits": [],
+          "source": "뉴시스",
+          "positiveHits": [
+            "돌파"
+          ],
           "negativeHits": [],
-          "score": 0
+          "score": 7
         },
         {
-          "title": "미래에셋 TIGER 미국나스닥100 ETF, 국내 최초 10조 돌파 - 한경매거진&북",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE55NzZsRFpvWTE0R3FNbHQ0RE5NRmhMZmZ3V3MybWUxdVB0Q1FyWXhTS19vRUVYYWxaOXVkeDFFUmtVdWhFRUk3UWx1U0F6SWkwa01mU2VIa2hBWGJQRkNrM0RGVTZjc2VT?oc=5",
+          "title": "미래에셋자산운용, 'TIGER 미국나스닥100' 순자산 국내 최초 10조원 돌파 - 뉴스웰",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zMjhGVW1yc01jTHhPUXVHb081YlpDZXY2UGRyZkt5TmVfVmRPRE1NLWs5akJsdGxLWE5LSk1hNkpTUDB4RU9JMklvbTRpTk5xSU5OaGN3OWM0UWFubU5oejc1WTFFbHM3NkFHOA?oc=5",
           "published": "Thu, 21 May 2026 07:00:00 GMT",
-          "source": "한경매거진&북",
+          "source": "뉴스웰",
           "positiveHits": [
             "돌파"
           ],
@@ -2072,13 +2069,13 @@
       "name": "알테오젠",
       "market": "KOSDAQ",
       "sector": "바이오·제약",
-      "newsScore": 64,
+      "newsScore": 50,
       "newsLabel": "뉴스 중립",
-      "positiveCount": 1,
+      "positiveCount": 0,
       "negativeCount": 0,
-      "neutralCount": 7,
+      "neutralCount": 8,
       "headline": "[여의도 클라쓰] '대한광통신, HD현대중공업, 알테오젠' 클라쓰 올릴 종목은? - 머니투데이 - 머니투데이",
-      "newsSignal": "뉴스 중립: 긍정 1 / 부정 0 / 중립 7 / 점수 64 / 대표뉴스: [여의도 클라쓰] '대한광통신, HD현대중공업, 알테오젠' 클라쓰 올릴 종목은? - 머니투데이 - 머니투데이",
+      "newsSignal": "뉴스 중립: 긍정 0 / 부정 0 / 중립 8 / 점수 50 / 대표뉴스: [여의도 클라쓰] '대한광통신, HD현대중공업, 알테오젠' 클라쓰 올릴 종목은? - 머니투데이 - 머니투데이",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
@@ -2092,19 +2089,19 @@
           "score": 0
         },
         {
-          "title": "[코스닥 기관] 알테오젠·리가켐바이오 담고 에코프로비엠 던졌다 - 핀포인트뉴스",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1JWWNabnFsWUN5VzVfQUtkLTdkV3R2dWllZDNBdFVxVWNjVHVpTXVSQjhuUDc3SkF1bVRtemhPUm9kbE5yalNidWFMbk12cjRjR0xPTkpvWndWLWIzTmRfbnFOaGFHRjR0THgwQ3pmTC1rWDDSAXdBVV95cUxPNXNULTdjZ213cTUwY2FuU3UzOHFMdF9vdUl0ZVlkakYyWUE3ckMtN1FhTDljWXZFWnBfS292WDdLRTRRMldwRk5JZUppem43dVB2cUVkV3ZoS1l6Mm12R3MxeU43TmhMUEtGbGtuZ3ByLWI2Y05ZYw?oc=5",
-          "published": "Thu, 25 Jun 2026 07:01:15 GMT",
-          "source": "핀포인트뉴스",
+          "title": "알테오젠 순이익(713억)의 45%는 ‘장부상 이익’ - 주간한국",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE45b3c3UWFmVTMwQTR0bzZJazIwQnpHWjBvUWxRcEpZaTc0YzhVOG5ER05sRVI2OG1TTTBQeENvNkpUMGtXX2RteC1JdVBDcHJIS2dvU21OeS1sOEJQSXNtQW1BQzdKWnZhZ0dMUmNCYjTSAXRBVV95cUxONU9KY2Z3X0xEekQxT2xvUFJGZTVVaUVZWG01Q293SGtWaHptdmFqY2VRY0V0N2tMeUh0ZVlWeVdtNE9tWUU0aE5hdGNNd2JSaVdQdHVvN25DeTVDQ19jbVRvTGlaNWRWWVU0d2daTlF1b3piYQ?oc=5",
+          "published": "Wed, 24 Jun 2026 04:00:00 GMT",
+          "source": "주간한국",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
         },
         {
-          "title": "알테오젠 순이익(713억)의 45%는 ‘장부상 이익’ - 주간한국",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE45b3c3UWFmVTMwQTR0bzZJazIwQnpHWjBvUWxRcEpZaTc0YzhVOG5ER05sRVI2OG1TTTBQeENvNkpUMGtXX2RteC1JdVBDcHJIS2dvU21OeS1sOEJQSXNtQW1BQzdKWnZhZ0dMUmNCYjTSAXRBVV95cUxONU9KY2Z3X0xEekQxT2xvUFJGZTVVaUVZWG01Q293SGtWaHptdmFqY2VRY0V0N2tMeUh0ZVlWeVdtNE9tWUU0aE5hdGNNd2JSaVdQdHVvN25DeTVDQ19jbVRvTGlaNWRWWVU0d2daTlF1b3piYQ?oc=5",
-          "published": "Wed, 24 Jun 2026 04:00:00 GMT",
-          "source": "주간한국",
+          "title": "[코스닥 기관] 알테오젠·리가켐바이오 담고 에코프로비엠 던졌다 - 핀포인트뉴스",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1JWWNabnFsWUN5VzVfQUtkLTdkV3R2dWllZDNBdFVxVWNjVHVpTXVSQjhuUDc3SkF1bVRtemhPUm9kbE5yalNidWFMbk12cjRjR0xPTkpvWndWLWIzTmRfbnFOaGFHRjR0THgwQ3pmTC1rWDDSAXdBVV95cUxPNXNULTdjZ213cTUwY2FuU3UzOHFMdF9vdUl0ZVlkakYyWUE3ckMtN1FhTDljWXZFWnBfS292WDdLRTRRMldwRk5JZUppem43dVB2cUVkV3ZoS1l6Mm12R3MxeU43TmhMUEtGbGtuZ3ByLWI2Y05ZYw?oc=5",
+          "published": "Thu, 25 Jun 2026 07:01:15 GMT",
+          "source": "핀포인트뉴스",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -2137,22 +2134,19 @@
           "score": 0
         },
         {
-          "title": "[바이오USA]전태연 알테오젠 대표 \"올해 역대 최대 기술수출 기대\" - 아시아경제",
-          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1ULVdYQmNYcERKNGtuWGRvOFFnbF83SVVMWGdiVDFXVFV3SVVOakVsRmstcDQtZkw5MFJhcHNObEpFYUdUTHFLRGY2dDhhNlc0NHZqZzdDY05uQ1QwX0NHUzFR?oc=5",
-          "published": "Wed, 24 Jun 2026 21:32:47 GMT",
-          "source": "아시아경제",
-          "positiveHits": [
-            "기대",
-            "수출"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
           "title": "전문가 \"알테오젠, 이전상장 실익 크지 않다…과거 사례 보면 결국 실적 수렴\" - v.daum.net",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1EYjR5b0RhM0hLYTVZQkhzNFhXOVc1TW0yNnVic2EwWEdWOHZoZERLNFAxbnNiQ1hyYWgtTE9GNV9JV1pyYlZKUkx1ZEd4VVk?oc=5",
           "published": "Fri, 19 Jun 2026 06:01:06 GMT",
           "source": "v.daum.net",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
+          "title": "코스피 이전 속도조절?…알테오젠의 복잡해진 이전상장 셈법 - 마켓잉크",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBTSGw1TVRUUUp2b1d2MnoyVWhpRlkxMFhiTmpHOWgxQXFtLXIwRFdKZFl1dDJqZXBHMXIyYmcwcTNaenB0bVA4TnNQcHAxYWI0bi1KOU94a2Vqck8yRkZ1YVlESVlZak9rVGZ4cUZn?oc=5",
+          "published": "Sun, 21 Jun 2026 21:01:02 GMT",
+          "source": "마켓잉크",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -2443,18 +2437,6 @@
           "score": 7
         },
         {
-          "title": "\"미국 AI 반도체 기업만 선별\"…미래에셋운용 ETF 내주 상장 - 연합뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGd20zd1pLM1JZSnlETFpBUDBLQ2RtVDZrdkpHc1E2NDdKcnRZMTF6clFSUXpKckFpY1VFT1piVzl3WllwaWl5STlkQTIxZ1djQ05UeEZubjdBWXfSAWBBVV95cUxOa2p4XzJEdEJ6d0FlcTN1enZpWkNBLXI1UjNZNEZqRVFpZXlSbU5DTVJBUDNWeGNyNDdqMExnaEZNVmxKaU93SVhTZ2ZJLUFHXzF2Tzlwc1RvTWpnTlBlWFM?oc=5",
-          "published": "Fri, 22 Nov 2024 08:00:00 GMT",
-          "source": "연합뉴스",
-          "positiveHits": [
-            "AI",
-            "반도체"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
           "title": "국내 최대 반도체 ETF ‘TIGER 미국필라델피아반도체나스닥’ 순자산 2조원 넘었다 - 매일경제 마켓",
           "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9HR3pKazVFTHhSWU1DU0l6ZUlpNWZpd285cjItVGVUMW1zTmdDT0FuRXNHY0YydnhsVldkakRUakNTNER1SFRfek5sMHA4VVhH?oc=5",
           "published": "Thu, 14 Mar 2024 07:00:00 GMT",
@@ -2464,6 +2446,18 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "미래에셋 'TIGER 필라델피아반도체나스닥 ETF' 순자산 2조 돌파 - 연합뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5yTVBpQlNISWplZ3JiSDl1U0tIZ3duWmpQdGRldDF0Tmp4eXhmbDBTYng2d1RJamhaSnpmZ3NKUlZkU05vZ3d4QURmOEI3MFdSS0h3Tl9WMktVLUXSAWBBVV95cUxNRDZRSF9SU0RNeVBWTnQ5WkRoLWZXRkN6OVdhbGh2aDVGWndhSUFELVhhRmFkR0hsdlV4MzhoX3lOM3paLXp2SEhucThNVnk4eEJpRkJZV21wOHh5VWR0LV8?oc=5",
+          "published": "Thu, 14 Mar 2024 07:00:00 GMT",
+          "source": "연합뉴스",
+          "positiveHits": [
+            "돌파",
+            "반도체"
+          ],
+          "negativeHits": [],
+          "score": 14
         }
       ]
     },
@@ -2606,6 +2600,18 @@
           "score": 0
         },
         {
+          "title": "TIGER 200IT레버리지, +6.03% 상승폭 확대 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMGRzeFdTMVFzcnphd3FDMkVBamZ3OG50R2x0Z1hrVmJZMFh5bXpzQ2pFdU50dnA2NExxaWlTWmJsNDZTT2lBOGdZVnloNVpLWFNjYTZfaW9zeHVub0t5WXowMmkyTDAwRXNkVUlGeGxOU3czdHdwZl9JSmlUVmZibnphb9IBlwFBVV95cUxNajFBYWNwQlhuUk9FNVB1NXNXMmE0SURMVkp4QmdHbnJ4Y192Y1p5Q0x3TktDREpqY2xRN2pOYXp5LTNORWEwTndhdi0xVmVTSG5iUzJEVV8yb0F0SFRPU2IzdU9GNnNpdlB1d1ROR0hEN2ZwQWZfWWN0UkdhTlhUSTB5SW5fZm4xZUxIMFNCY3RqeUNHOE5n?oc=5",
+          "published": "Mon, 01 Jun 2026 07:00:00 GMT",
+          "source": "Chosunbiz",
+          "positiveHits": [
+            "확대",
+            "조선"
+          ],
+          "negativeHits": [],
+          "score": 14
+        },
+        {
           "title": "반도체 레버리지ETF 올해 300% 이상 수익률…SK하닉 비중이 '키' - 연합뉴스",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Cam5yQmg1TzJIUEkyOHFvTjVWYWhucVZ0eWxVOXhCNUFETjVXbnpDX3hZZ2NnYjFZOG9Zb2VqOHNxOTcxVXVYTWk5bXFBaV9nNEJyUkxmUmJwUknSAWBBVV95cUxNSFQ4MkM5a0VrV0VQVE44akd2WEh6anNxaGRyUEY4dk5pZjRESUxtS2JUcW1sQlJxOV9GMk5CczIxSUhaeThDb1U2dmZCWTlmdFhST01PQlpiUUZtSzhueGc?oc=5",
           "published": "Thu, 07 May 2026 07:00:00 GMT",
@@ -2624,18 +2630,6 @@
           "positiveHits": [
             "AI",
             "반도체"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
-          "title": "TIGER 200IT레버리지, +8.56% 상승폭 확대 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOd0ljYUNxaFBTV2pEWV9Tb2xGSEFjNGdjNzNUSzBudzFJWi1WeER6eTJHdWE3NThoazdTUDNPTW43WGppRm5BTFJfX3N1bnJsT3Bka3hubmZoSWdabnhPX2FicUJkcFlma2xyampMTkdTUi1zeFhCeU1scGpwUzZpRlBMb9IBlwFBVV95cUxNNFJjSGFQYmxxeWxqejRKTU5ZZlpQbGdUNHNpRXVfV0JKVnlfNzRQMEpTUWtlZXZCNlc0QlRSYl9tNml1cmo0MVFuZlBON25UOGtNMDRuT1FpOEkzWkszemQ1eWhiXzlOb1NhYUFFU3pHSWkxVHpfTVNGd2VMemRZWmRlVEFFR0lPRUcwcTRFb20xWFhUSDcw?oc=5",
-          "published": "Thu, 30 Apr 2026 07:00:00 GMT",
-          "source": "Chosunbiz",
-          "positiveHits": [
-            "확대",
-            "조선"
           ],
           "negativeHits": [],
           "score": 14
@@ -2832,10 +2826,10 @@
           "score": 7
         },
         {
-          "title": "'TIGER 배당커버드콜액티브' ETF, 하반기 특별배당 실시 - 머니투데이 - 머니투데이",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE82SWNqT2k4UzIyT3U0dXk5a2QwUnRKbkxFWW11YndQVTBPcF9uME5BbWJuOHVBSUlMMk9mdnRaNnEzTzRxU0pBRjhWTnFvVW1sc3hiTzFPOUw3bmgzQ202eFlSZkwwMWtr0gFuQVVfeXFMUHFCNHRRbXdSLUFtUWJFRnliSGowMDR5blF3Q0hNdXROdDVORVBYUi0tSW1WN285UVVlazNianJaYkNvM2lscVJmc2pnMlRkZlhfdC1QV3RMaXVVdmVGcVItSEJqcjlCQW1Kc2hMaFE?oc=5",
+          "title": "'TIGER 배당커버드콜액티브' ETF, 하반기 특별배당 실시 - 아시아경제",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VNkpHSjZQUjE2S2FwWGNibUlwLUFiYXNmVElReUN2WW1vOHRld1pmZ3NacWtsaFNpRWltXzJYRWxZS3k5QjE4VjBacWpkV1NKMXh3cFNQaUZpVFlRZF9mdw?oc=5",
           "published": "Tue, 16 Jun 2026 07:00:00 GMT",
-          "source": "머니투데이",
+          "source": "아시아경제",
           "positiveHits": [
             "배당"
           ],
@@ -2843,10 +2837,10 @@
           "score": 7
         },
         {
-          "title": "'TIGER 배당커버드콜액티브' ETF, 하반기 특별배당 실시 - 아시아경제",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VNkpHSjZQUjE2S2FwWGNibUlwLUFiYXNmVElReUN2WW1vOHRld1pmZ3NacWtsaFNpRWltXzJYRWxZS3k5QjE4VjBacWpkV1NKMXh3cFNQaUZpVFlRZF9mdw?oc=5",
-          "published": "Tue, 16 Jun 2026 07:04:32 GMT",
-          "source": "아시아경제",
+          "title": "'TIGER 배당커버드콜액티브' ETF, 하반기 특별배당 실시 - 머니투데이 - 머니투데이",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE82SWNqT2k4UzIyT3U0dXk5a2QwUnRKbkxFWW11YndQVTBPcF9uME5BbWJuOHVBSUlMMk9mdnRaNnEzTzRxU0pBRjhWTnFvVW1sc3hiTzFPOUw3bmgzQ202eFlSZkwwMWtr0gFuQVVfeXFMUHFCNHRRbXdSLUFtUWJFRnliSGowMDR5blF3Q0hNdXROdDVORVBYUi0tSW1WN285UVVlazNianJaYkNvM2lscVJmc2pnMlRkZlhfdC1QV3RMaXVVdmVGcVItSEJqcjlCQW1Kc2hMaFE?oc=5",
+          "published": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source": "머니투데이",
           "positiveHits": [
             "배당"
           ],
@@ -2952,6 +2946,17 @@
           "score": 7
         },
         {
+          "title": "'TIGER 반도체TOP10커버드콜액티브' 6월 분배금 지급…주당 215원 - 마켓인",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBVTmZrQld5TENoLVVaVDlodVZBd1ZWY1IzYnVSa2p2b0huaFpCay1zYkxDUmE3bkVzRFd0SUJEdkJnMFZES0dwcG5QNzVPZEstQWlaRTVxdTkwUVBHQkhkWXotNGxYRWJCSFFWWHMwOEhZUWc?oc=5",
+          "published": "Thu, 11 Jun 2026 07:00:00 GMT",
+          "source": "마켓인",
+          "positiveHits": [
+            "반도체"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "미래에셋, 'TIGER 반도체TOP10커버드콜액티브' 6월 분배금 주당 215원 지급 - 인포스탁데일리",
           "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB4QnFncVZBUEhOMWhvcXlaclNPNkdJdVVsQVFTbW5yUkhBSVN3VGYzZjNFQzIyNWtjaE9ST2ozQUFDZWk3ZTJoVWE1eWI1d0dZOC1EVldrRFpEMTlxZkNsV1Myai1UcGNiZm1udVZpWlgySTVVSkE?oc=5",
           "published": "Thu, 11 Jun 2026 01:45:10 GMT",
@@ -2974,17 +2979,6 @@
           "score": 7
         },
         {
-          "title": "'TIGER 반도체TOP10커버드콜액티브' 6월 분배금 지급…주당 215원 - 마켓인",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBVTmZrQld5TENoLVVaVDlodVZBd1ZWY1IzYnVSa2p2b0huaFpCay1zYkxDUmE3bkVzRFd0SUJEdkJnMFZES0dwcG5QNzVPZEstQWlaRTVxdTkwUVBHQkhkWXotNGxYRWJCSFFWWHMwOEhZUWc?oc=5",
-          "published": "Thu, 11 Jun 2026 07:00:00 GMT",
-          "source": "마켓인",
-          "positiveHits": [
-            "반도체"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
           "title": "반도체 훈풍에 ···TIGER 반도체TOP10 ETF, 개인자금 2.2조 몰려 - 서울파이낸스",
           "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE41bkNpQWtPaVItQ0d6UHBMNWtfNW1wanYxWXVkVGxKbWRiSTNpSmJyWEN0elR5dGszeGxteXVPOVRpUnllMFBMSVVZb0N1QThRVG84Q3M0Z3BCTEg1RWludVpzNVJnenFuakE?oc=5",
           "published": "Fri, 29 May 2026 07:00:00 GMT",
@@ -2996,10 +2990,10 @@
           "score": 7
         },
         {
-          "title": "미래에셋자산운용, 단일종목 레버리지 ETF로 주목...“반도체는 역시 TIGER” - 우먼타임스",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ud29VYXpSMWZtX3ZEQy0xcmNGVW54aktScnprZFdDaUlfSHhuWWRoeGw0c3pCS1ZLdjFYckc1TTJLSm5fSmdYYktJeTNMelVRNE05OXRfcmNLRV81RVJhTlIybHM1eTlETEtsWFF4MnrSAXRBVV95cUxPaUM0WHJpOWxzZ1JLNTlRR1dIVElHWjdmZlVaOWxieHBLb0hQWk1jOFNKS0p0cXl1NDZBTlNXOHNUUHZHUFhTQmVENWtDUTZhbDc3REd5YUVHRjBNUklzQVhvS0s5Ml9Cc0g4M2pSMTFaX3ItXw?oc=5",
-          "published": "Thu, 04 Jun 2026 07:00:00 GMT",
-          "source": "우먼타임스",
+          "title": "미래에셋, '첫 개별주식 옵션 활용' 반도체커버드콜ETF 출시 - 연합뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0zTkYySnhhaTRsNklsUGpCVHZkOU1oa3VaM2VDMlV2U2cyZzhGd2RFejE1dWpjSzdWQ1FQcVFILTNVbG9sa2JWV2FtSEhMRnFHT3NVMnRNc3JhZlnSAWBBVV95cUxNQThDQTlOVXBUdGtaZDVMc0FzSUtPTTdIUHJ2RjlfcVEwdTVFbTVPRnByMXNzREdfczRlUVNSeFNrQTl0NGhIdGpYdjR1b0hjd1lTSGswRC1yMVdPQWF0NWs?oc=5",
+          "published": "Mon, 20 Apr 2026 07:00:00 GMT",
+          "source": "연합뉴스",
           "positiveHits": [
             "반도체"
           ],
@@ -3078,6 +3072,17 @@
           "score": 0
         },
         {
+          "title": "삼성자산운용 'KODEX ETF' 순자산 120조 돌파 - 중소기업신문",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9KLWN5bXJlUUVhQl80Sjllb1ZkMFA5eDYzanM5bHhVT090bDNPUzliS2tyZVQtazlNTHJQSTVFLVRKaV9XdENrS0RSTWZWVlVHTkx5RUNyeGd6OTNlS0NER2lqb1RtMWFmVjNqZmFR?oc=5",
+          "published": "Mon, 12 Jan 2026 08:00:00 GMT",
+          "source": "중소기업신문",
+          "positiveHits": [
+            "돌파"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "아무리 그래도 너무 싸…삼성전자 비중 높은 ETF로 모이는 자금 - 머니투데이 - 머니투데이",
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9QbkphbThGQVhlNlRFZlNPQ19IWG5EWlFhNHE5QkZtVzdaMDcyZlVtemkzVVpsRUxlTGNDTzBnNm5oYzJEOUprOEhjVWt3YTJlT1VKbDFmeXBlSHNGdHQ3TUh3bXBvS0Jo0gFuQVVfeXFMT0lNSHNGVmJzMXFFYkNYYnlibmVwY1ZKWVNyZWRxTG9hV0xHQ25mYi1GaVZpLXNOLVZUdkpRR1UtMUJRNjRzOWhJNTNrLVhvXzJGcGFwQjR2V24yclhuUEluYUN5ZV85X0Jzbl9FblE?oc=5",
           "published": "Thu, 26 Jun 2025 07:00:00 GMT",
@@ -3085,17 +3090,6 @@
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
-        },
-        {
-          "title": "세금 나중에 내는 'TR ETF'에 외국인투자자 몰려 - intn.co.kr",
-          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLLXdDbFNoajM5cXRwT21IWGc4a2JoNEtqSDVrSXhpLXoteUMyTVJhUjh5YmFVZnJoenNYYmZfWjJhLTAxa2dRNmM0S1hCUUMzcldTSG1ZVi00emxmNks4dXJDLTY1eEpPTGc?oc=5",
-          "published": "Mon, 18 Mar 2019 07:00:00 GMT",
-          "source": "intn.co.kr",
-          "positiveHits": [
-            "투자"
-          ],
-          "negativeHits": [],
-          "score": 7
         }
       ]
     },
@@ -3142,6 +3136,17 @@
           "score": 0
         },
         {
+          "title": "개미 'TIGER 미국S&P500' 뭉칫돈…'에너지 불안 수혜 ETF' 수익률↑ - 팝콘뉴스",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5tbTE2YzVkQnl1NmdIVE45dll1SjZOX2NmUEVHaTNHckEtOG9tSDh1NXU4VUNRVVdPZVlGbnNWWUZqdFJxZXk1M1A1VkxUSUg2WFYyM0RndmhfUGZhZVRkcGlieXlyNzVYV3hyem1B0gFyQVVfeXFMT2MtSzFzNV9EVkdjczFscDNWa0cyLU1XckdQZ1JCeU15UlpTeTRuMzExMnJSVHVpMW5xVVBuZXJIaC1pS202RU5QV2dCZGY5RE9ZYnFRRjFWUmhlNnJpTVZaczNnbkdjMFVKNU1xTmhPUmx3?oc=5",
+          "published": "Mon, 23 Mar 2026 07:00:00 GMT",
+          "source": "팝콘뉴스",
+          "positiveHits": [
+            "수혜"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "미래에셋, ‘TIGER 미국S&P500 ETF’ 개인 누적 순매수 5조 돌파 - 마켓인",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBFeElTdjBkWTBOQmQzdGdMWXZEVnVHMzdwcG9HcU1STVFNaWNGc0Q4dHdrdlNSWVlIOVR4M01TZ0thMndFa0tjNEF5TkYyQlliS1Z3b3B2SHhjcUloNm03aHp6dUIwcE96Ym41UHM2RUlocU0?oc=5",
           "published": "Wed, 22 Oct 2025 07:00:00 GMT",
@@ -3152,17 +3157,6 @@
           ],
           "negativeHits": [],
           "score": 14
-        },
-        {
-          "title": "개미 'TIGER 미국S&P500' 뭉칫돈…'에너지 불안 수혜 ETF' 수익률↑ - 팝콘뉴스",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5tbTE2YzVkQnl1NmdIVE45dll1SjZOX2NmUEVHaTNHckEtOG9tSDh1NXU4VUNRVVdPZVlGbnNWWUZqdFJxZXk1M1A1VkxUSUg2WFYyM0RndmhfUGZhZVRkcGlieXlyNzVYV3hyem1B0gFyQVVfeXFMT2MtSzFzNV9EVkdjczFscDNWa0cyLU1XckdQZ1JCeU15UlpTeTRuMzExMnJSVHVpMW5xVVBuZXJIaC1pS202RU5QV2dCZGY5RE9ZYnFRRjFWUmhlNnJpTVZaczNnbkdjMFVKNU1xTmhPUmx3?oc=5",
-          "published": "Mon, 23 Mar 2026 07:00:00 GMT",
-          "source": "팝콘뉴스",
-          "positiveHits": [
-            "수혜"
-          ],
-          "negativeHits": [],
-          "score": 7
         },
         {
           "title": "미장 장투 열풍은 계속…2년째 TIGER 미국S&P500 개인 순매수 1위 - 연합인포맥스",
@@ -3200,13 +3194,13 @@
       "name": "RISE ESG사회책임투자",
       "market": "KOSPI",
       "sector": "KOSPI 자동선별",
-      "newsScore": 78,
+      "newsScore": 92,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 4,
+      "positiveCount": 5,
       "negativeCount": 0,
       "neutralCount": 3,
       "headline": "[증권가도 ESG] KB RISE ESG사회책임투자...착한 투자가 수익이 되다 - 매일일보",
-      "newsSignal": "뉴스 긍정: 긍정 4 / 부정 0 / 중립 3 / 점수 78 / 대표뉴스: [증권가도 ESG] KB RISE ESG사회책임투자...착한 투자가 수익이 되다 - 매일일보",
+      "newsSignal": "뉴스 긍정: 긍정 5 / 부정 0 / 중립 3 / 점수 92 / 대표뉴스: [증권가도 ESG] KB RISE ESG사회책임투자...착한 투자가 수익이 되다 - 매일일보",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
@@ -3260,6 +3254,18 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "ETF도 ‘삼전·닉스’ 쏠림 심화…반도체 투톱 비중 60% 넘는 상품 50개 돌파 - 이로운경제TV",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE54MjJOSU9sTzktSVFBTVJueUN1MGFtOEZfaWduTnNtY0lhTjRpMF9lTnViYzZPTXJIYzdISHF6T2hDZVotTHFORGNEcUZ4d3l5aFdvMzM1VFNTU2tiVVFMdVNEZG96N1U?oc=5",
+          "published": "Wed, 24 Jun 2026 09:26:53 GMT",
+          "source": "이로운경제TV",
+          "positiveHits": [
+            "돌파",
+            "반도체"
+          ],
+          "negativeHits": [],
+          "score": 14
         },
         {
           "title": "\"고공질주 삼전-SK하이닉스\" 60%이상 담은 ETF는? - 파이낸셜뉴스",
@@ -3596,13 +3602,13 @@
       "name": "달바글로벌",
       "market": "KOSPI",
       "sector": "KOSPI 자동선별",
-      "newsScore": 62,
+      "newsScore": 69,
       "newsLabel": "뉴스 중립",
-      "positiveCount": 3,
+      "positiveCount": 4,
       "negativeCount": 1,
-      "neutralCount": 4,
+      "neutralCount": 3,
       "headline": "[리포트 브리핑]달바글로벌, '실속을 챙기며 성장하는 브랜드사' 목표가 270,000원 - 삼성증권 - 뉴스핌",
-      "newsSignal": "뉴스 중립: 긍정 3 / 부정 1 / 중립 4 / 점수 62 / 대표뉴스: [리포트 브리핑]달바글로벌, '실속을 챙기며 성장하는 브랜드사' 목표가 270,000원 - 삼성증권 - 뉴스핌",
+      "newsSignal": "뉴스 중립: 긍정 4 / 부정 1 / 중립 3 / 점수 69 / 대표뉴스: [리포트 브리핑]달바글로벌, '실속을 챙기며 성장하는 브랜드사' 목표가 270,000원 - 삼성증권 - 뉴스핌",
       "riskMemo": "부정 키워드 확인 필요",
       "errors": [],
       "items": [
@@ -3624,6 +3630,17 @@
           "source": "네이버 프리미엄콘텐츠",
           "positiveHits": [
             "AI"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
+          "title": "달바글로벌, 1Q 영업이익 451억원…해외 성장에 매출 50%↑ - 쿠키뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9tNFVGWlBFVXlmaUV6Tzg0STFPZkp5WWNJcFgzYmsta3hrZ1ItUS1fcHZtUXgwTXBWb1VOQVVlNnlkdGpFNlhVSUxXNlBiNTdoS1ZwNDFnVjZvOF9CYjdJYjBBTQ?oc=5",
+          "published": "Thu, 25 Jun 2026 06:37:31 GMT",
+          "source": "쿠키뉴스",
+          "positiveHits": [
+            "성장"
           ],
           "negativeHits": [],
           "score": 7
@@ -3673,15 +3690,6 @@
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9UMUlGWnNOdWZZaUQ2dTB5NXFNM25lYXhDSWxRZFpUWjNTT0FmcS1NT3FIelB4dUhFME02YVJiRWRGMW1zUGpmYUhJTXdJSU90MHVRdDZ2STFQb3NFTGVmRmE3LU84dDI2bkdiR19aaU05MEE?oc=5",
           "published": "Tue, 14 Apr 2026 07:00:00 GMT",
           "source": "마켓인",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
-          "title": "해외 투심까지 잡은 달바글로벌, 주가 신고점 '육박' - 딜사이트",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBVT0FpWmZwWVQwajVzeUdIbjdVdnZGZFYtbnRhcTFaNFNma2hTTGR3OUdQME5veVRBeVMweVBWdVNiUnA5cTU3NUhaakhsX00?oc=5",
-          "published": "Thu, 07 May 2026 07:00:00 GMT",
-          "source": "딜사이트",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -3877,18 +3885,6 @@
           "score": 7
         },
         {
-          "title": "에이치브이엠, 해외 우주항공 금속 유통사와 77억원 규모 공급 계약 체결 - 디지털투데이",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BaVBzQ3ljeVhJLUFUenBaN1Y5Qm51UElRLWZEOGl1eUladDgtM1VEdGMzQ0NqTzc5ZmhyTzZ0Rzg4V251RXY4MkxmQ2tXTEp6bTJpSURiVnUtX200YnFHVjU3Q29lMHdxdTJuWFdDZHJnT1E?oc=5",
-          "published": "Thu, 25 Jun 2026 05:02:02 GMT",
-          "source": "디지털투데이",
-          "positiveHits": [
-            "계약",
-            "공급"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
           "title": "다올證 “브이엠, 반도체 장비주 중 저평가…목표가 14만원” - 조선비즈 - Chosunbiz",
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY3AxcXJoZE1qNHRmVWthaGJsdzRmWHJPQmZucG5jMTdQYi1HeF9jRVJjSUJ0SW96VDAxS0lzSVM5UFJ5V196by1yS3VfZ2F5NVlaSnZta3ZSbUFZUTgwbDBRRGxKand3cVB5ekppU0pvYUZDMmFtN3RTX3EzYk03SGZuUkpMUzJ00gGcAUFVX3lxTE45MkhCSzJPTEJ6TG1sNUtLcWtLZ2s1MjJ2ZUpJSmN0d1JCcmtxZ0F1U19OYlpmU3FUNjNJVVAwMXJhRXB5NFVkTmJiTjRKYTY0OFoxUUY1aFk1SzVxeF90M1htOS1VdGRkNWNFOWR2SWZ4Q3hoTnA3YUtwOWZOUE1jQ3dfanhYVXBnZHFyNER6SVZHWnZIa0xENFZLQQ?oc=5",
           "published": "Fri, 12 Jun 2026 07:00:00 GMT",
@@ -3896,6 +3892,18 @@
           "positiveHits": [
             "반도체",
             "조선"
+          ],
+          "negativeHits": [],
+          "score": 14
+        },
+        {
+          "title": "에이치브이엠, 해외 우주항공 금속 유통사와 77억원 규모 공급 계약 체결 - 디지털투데이",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BaVBzQ3ljeVhJLUFUenBaN1Y5Qm51UElRLWZEOGl1eUladDgtM1VEdGMzQ0NqTzc5ZmhyTzZ0Rzg4V251RXY4MkxmQ2tXTEp6bTJpSURiVnUtX200YnFHVjU3Q29lMHdxdTJuWFdDZHJnT1E?oc=5",
+          "published": "Thu, 25 Jun 2026 05:02:02 GMT",
+          "source": "디지털투데이",
+          "positiveHits": [
+            "계약",
+            "공급"
           ],
           "negativeHits": [],
           "score": 14
@@ -4116,13 +4124,13 @@
       "name": "KODEX 코스피100",
       "market": "KOSPI",
       "sector": "KOSPI 자동선별",
-      "newsScore": 62,
+      "newsScore": 69,
       "newsLabel": "뉴스 중립",
-      "positiveCount": 2,
+      "positiveCount": 3,
       "negativeCount": 1,
       "neutralCount": 3,
       "headline": "치솟는 코스피 추종 수익률 1위 ETF는? - 스트레이트뉴스",
-      "newsSignal": "뉴스 중립: 긍정 2 / 부정 1 / 중립 3 / 점수 62 / 대표뉴스: 치솟는 코스피 추종 수익률 1위 ETF는? - 스트레이트뉴스",
+      "newsSignal": "뉴스 중립: 긍정 3 / 부정 1 / 중립 3 / 점수 69 / 대표뉴스: 치솟는 코스피 추종 수익률 1위 ETF는? - 스트레이트뉴스",
       "riskMemo": "부정 키워드 확인 필요",
       "errors": [],
       "items": [
@@ -4168,12 +4176,12 @@
           "score": 0
         },
         {
-          "title": "올해 유망 ETF는?…투자자·판매자 모두 ‘이것’ 꼽았다 - 마켓인",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9jNmZVM3lrUzYzQlBjTEFfTkxrVGpKT095dl9meE4zQ09Za1FLSTF4cF9oOVN0SHAtdUxIbTJMem1oQk5USFNjdkxETTZncGpVaXFPUWF4RFBJOXdCODFGeFQ3UFVSelVVcG05ZVBCRHJqUmc?oc=5",
-          "published": "Tue, 03 Feb 2026 08:00:00 GMT",
-          "source": "마켓인",
+          "title": "\"반등 기다리다 8억 날렸다\"…곱버스 개미, 눈물의 손절 - 데일리머니",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFA1RVhrSkxFUzhpVzVVbFJNY3RVZjI2RkdHaXhoS0FVWGJqdGdrZUZnQWJSU0l5VzJVRXlkWXNxSUZaSDNaZ3NLTXFkWm9oVU42Wk9YbEVLRVp4V3BQbHB3cGZKZ05OeUhBMW9kTXlOMEc1QQ?oc=5",
+          "published": "Sat, 10 Jan 2026 08:00:00 GMT",
+          "source": "데일리머니",
           "positiveHits": [
-            "투자"
+            "반등"
           ],
           "negativeHits": [],
           "score": 7
@@ -4186,6 +4194,17 @@
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
+        },
+        {
+          "title": "삼성자산, “2026년 대세는 로봇 ETF” - 스트레이트뉴스",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB0VWhma1d5SzgxLWhGd1dtTHdqR1VFcm5hdkJlR1BPbzJ4NmJYdnZIOElFclgxanhyMS02TTVZSzRITjllYnBsNkdFMFFIeUk2Q2t5alQtWDZMRkFTN25lT3Q5UHBEUU91UjlwNEZhb0FZQjTSAXdBVV95cUxOT2xQX0pjdGxOc1R4UmRYQms4ZFM5RHlfR0VjNUFEUUVZSWFtUHg1ZGtxSDdDaEZEcF8wM2lhazlDZDg5Rm1fRVBDRmZSOGRjT0hwb2FDOE1JQVEyRkVRbW1ueGJyeGxlc29ELUd0dFNMWFR0WXRNOA?oc=5",
+          "published": "Tue, 03 Feb 2026 08:00:00 GMT",
+          "source": "스트레이트뉴스",
+          "positiveHits": [
+            "로봇"
+          ],
+          "negativeHits": [],
+          "score": 7
         }
       ]
     },
@@ -4534,15 +4553,6 @@
           "score": 0
         },
         {
-          "title": "미래운용, 'TIGER 코리아TOP10 ETF' 올해 수익률 45%...'대형주 쏠림 장세' - 글로벌이코노믹",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNUpDaC1USmI1YjJrSjhBNTJqandTRWUtckVYdlBYa3FINVdrc3llemFnVzNPMGd1WXh6MS1oajh0V2FjQUhNaTQ3YkdkRk5aUFFqa1l4QnZ3YWJEaTNKcy02SkxaRkdQZ2FCZF91Yml6VVIxNkxEY2RPb0c5dUVqdmtxMWs2UjU5?oc=5",
-          "published": "Fri, 06 Mar 2026 08:00:00 GMT",
-          "source": "글로벌이코노믹",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
           "title": "변동성 장세 속 우량주 관심 확대… 미래에셋 ‘TIGER 코리아TOP10’ 연초 이후 45.01% 수익률 - 조세플러스",
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ienN4RHlrdGxxTHRVa3FMXy0xY0RsVnlzN05Ld3Y3djRWNXhId2NIZENHSk9kbUprSnE4akZ1bmt4WjJWRG52NjA0MkF4Y2hITnJZTzlNR0ZrMTYtc3VvVE9aSXIxWkZpQWZqV2N3VQ?oc=5",
           "published": "Fri, 06 Mar 2026 08:00:00 GMT",
@@ -4552,6 +4562,15 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "미래운용, 'TIGER 코리아TOP10 ETF' 올해 수익률 45%...'대형주 쏠림 장세' - 글로벌이코노믹",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNUpDaC1USmI1YjJrSjhBNTJqandTRWUtckVYdlBYa3FINVdrc3llemFnVzNPMGd1WXh6MS1oajh0V2FjQUhNaTQ3YkdkRk5aUFFqa1l4QnZ3YWJEaTNKcy02SkxaRkdQZ2FCZF91Yml6VVIxNkxEY2RPb0c5dUVqdmtxMWs2UjU5?oc=5",
+          "published": "Fri, 06 Mar 2026 08:00:00 GMT",
+          "source": "글로벌이코노믹",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
         },
         {
           "title": "변동성 속 우량주 주목…TIGER 코리아TOP10 올들어 수익률 45% - 머니투데이 - 머니투데이",
@@ -4709,17 +4728,6 @@
           "score": 7
         },
         {
-          "title": "미래에셋자산운용, 단일종목 레버리지 ETF로 주목...“반도체는 역시 TIGER” - 우먼타임스",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ud29VYXpSMWZtX3ZEQy0xcmNGVW54aktScnprZFdDaUlfSHhuWWRoeGw0c3pCS1ZLdjFYckc1TTJLSm5fSmdYYktJeTNMelVRNE05OXRfcmNLRV81RVJhTlIybHM1eTlETEtsWFF4MnrSAXRBVV95cUxPaUM0WHJpOWxzZ1JLNTlRR1dIVElHWjdmZlVaOWxieHBLb0hQWk1jOFNKS0p0cXl1NDZBTlNXOHNUUHZHUFhTQmVENWtDUTZhbDc3REd5YUVHRjBNUklzQVhvS0s5Ml9Cc0g4M2pSMTFaX3ItXw?oc=5",
-          "published": "Thu, 04 Jun 2026 07:00:00 GMT",
-          "source": "우먼타임스",
-          "positiveHits": [
-            "반도체"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
           "title": "같은 반도체 ETF, 수익률 '극과 극'…삼전 뛰는데 역주행 레버리지도(종합) - 연합인포맥스",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE42c04xNTIzdEtmWUkzT1ZwbFVWMmtQZXZkV3VFZHZrYWx6MzY3RXl4WDRJNkllMUZOOGQtNTlfUjg2NVRPd21welZWeTh1Mkd0enhaZV9HSU1MTWg0Q2tGLXVHRTBieVVyU04waFRRQlo?oc=5",
           "published": "Fri, 29 May 2026 07:00:00 GMT",
@@ -4764,6 +4772,17 @@
           "score": 7
         },
         {
+          "title": "미래에셋자산운용, 단일종목 레버리지 ETF로 주목...“반도체는 역시 TIGER” - 우먼타임스",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ud29VYXpSMWZtX3ZEQy0xcmNGVW54aktScnprZFdDaUlfSHhuWWRoeGw0c3pCS1ZLdjFYckc1TTJLSm5fSmdYYktJeTNMelVRNE05OXRfcmNLRV81RVJhTlIybHM1eTlETEtsWFF4MnrSAXRBVV95cUxPaUM0WHJpOWxzZ1JLNTlRR1dIVElHWjdmZlVaOWxieHBLb0hQWk1jOFNKS0p0cXl1NDZBTlNXOHNUUHZHUFhTQmVENWtDUTZhbDc3REd5YUVHRjBNUklzQVhvS0s5Ml9Cc0g4M2pSMTFaX3ItXw?oc=5",
+          "published": "Thu, 04 Jun 2026 07:00:00 GMT",
+          "source": "우먼타임스",
+          "positiveHits": [
+            "반도체"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "'TIGER 반도체TOP10레버리지', 개인 순매수 4241억 집계 - 뉴스핌",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5GRVdfRUg0RFg3cU91cFRQTjhYZ2hhQjRIOEh0azNSMlRnVDZlQy16QWVYMEJ5VGxFdnpCbE11aEx5VjlmcjhsbzYtSmU4WHZLTVFjbzlqb2JUTVgy?oc=5",
           "published": "Thu, 14 May 2026 07:00:00 GMT",
@@ -4776,17 +4795,16 @@
           "score": 14
         },
         {
-          "title": "미래에셋 'TIGER 반도체TOP10레버리지', 올해 개인 순매수 4000억원 돌파 - 아시아경제",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PWmw5YmhvWGllVDJkNms0QWtQOVd3MEdJTXcxQTJaT1FidS1RVmozSDFSRXRzZl9zeGR1TktsVW1DU0dIbFYycnM4SDJ1LW52dGI2aE5NWEpqRk9iUHRsRA?oc=5",
+          "title": "\"TIGER반도체TOP10레버리지 ETF 연초 이후 개인 순매수 4000억\" - 중소기업신문",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jeldoRkVhYmpaUlhGUGM0V0diNk9YUkxQWHhiRDV5ZVdFN3dMckVJNWlOMVNnZXpJOHFTVzdaQThSQXZuUHd4MkdrVzM0RFBjeWpKUWRWZ3kzd2RzcHFWYlE2M3ozS054ZEJDS1FB?oc=5",
           "published": "Thu, 14 May 2026 07:00:00 GMT",
-          "source": "아시아경제",
+          "source": "중소기업신문",
           "positiveHits": [
-            "돌파",
             "매수",
             "반도체"
           ],
           "negativeHits": [],
-          "score": 21
+          "score": 14
         }
       ]
     },
@@ -4857,17 +4875,6 @@
           "score": 0
         },
         {
-          "title": "\"연금 계좌에 주식 더\" 개미 11.1조 쇼핑…리스크 낮추고 수익 '쏠쏠' - 머니투데이 - 머니투데이",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CSHhaYjNVd1VGTTNFaUhTWG8ybjJIOF9sV09fU1h2d1R1QWxHdEliaXREd2MtV2NDb2ZULWVoalp1OU1rSjVLNm9zU1hhUzRQd3FrM0lxZE1rWUtBekQ2SmxWTTY5WGZX0gFuQVVfeXFMTjU0ZmlvZVNicV9BUFI5M3pwV0VUc05lWThSSWlKLXkzNmJzNWJKSFQ3LUc3cGtyWjB0S05uQXZQX1M2T3lLOVc0VDlWUmwyUmVCOXAySG55SFRVdTQ2QkpPcTFvakZSM2xOYnU1eHc?oc=5",
-          "published": "Fri, 19 Jun 2026 23:00:00 GMT",
-          "source": "머니투데이",
-          "positiveHits": [],
-          "negativeHits": [
-            "리스크"
-          ],
-          "score": -9
-        },
-        {
           "title": "삼성운용, ‘KODEX 삼성전자채권혼합’ ETF 순자산 1조원 돌파 - 브릿지경제",
           "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWR2FHUkFQSzNnTG1rYTduUUY5UXJFdUZsTW9vVkF4amtxZ1lrRWZmT2JMM09EYTkxaHBSWmtxR0tSRThZbHlvekVGT09ma092Rms0THh1UEpuQQ?oc=5",
           "published": "Wed, 18 Mar 2026 07:00:00 GMT",
@@ -4877,6 +4884,17 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "\"연금 계좌에 주식 더\" 개미 11.1조 쇼핑…리스크 낮추고 수익 '쏠쏠' - 머니투데이 - 머니투데이",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CSHhaYjNVd1VGTTNFaUhTWG8ybjJIOF9sV09fU1h2d1R1QWxHdEliaXREd2MtV2NDb2ZULWVoalp1OU1rSjVLNm9zU1hhUzRQd3FrM0lxZE1rWUtBekQ2SmxWTTY5WGZX0gFuQVVfeXFMTjU0ZmlvZVNicV9BUFI5M3pwV0VUc05lWThSSWlKLXkzNmJzNWJKSFQ3LUc3cGtyWjB0S05uQXZQX1M2T3lLOVc0VDlWUmwyUmVCOXAySG55SFRVdTQ2QkpPcTFvakZSM2xOYnU1eHc?oc=5",
+          "published": "Fri, 19 Jun 2026 23:00:00 GMT",
+          "source": "머니투데이",
+          "positiveHits": [],
+          "negativeHits": [
+            "리스크"
+          ],
+          "score": -9
         },
         {
           "title": "채권혼합형 ETF 순자산 한달새 29%↑···‘삼성·KB운용’ 순위 상승 - 시사저널e",
@@ -5044,19 +5062,6 @@
           "score": 0
         },
         {
-          "title": "'금호건설' 52주 신고가 경신, 공공분양 증가의 수혜 지속 예상 - 현대차증권, BUY - 네이트",
-          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OTHI3WmJJTU1keUxWOUhOUmJVdjM4ME5CMG5QcGVqbm5Md0RCU1pfMGZ3cDBvWVFGam85Y3RfVEFpRGZFY2FHSU9xcmFJdzhqbVRJ?oc=5",
-          "published": "Thu, 25 Jun 2026 00:41:00 GMT",
-          "source": "네이트",
-          "positiveHits": [
-            "증가",
-            "신고가",
-            "수혜"
-          ],
-          "negativeHits": [],
-          "score": 21
-        },
-        {
           "title": "적자 늪 탈출한 금호건설···‘공공+인프라’로 반등 - 시사저널e",
           "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5xRlhMQk1OUmFZdFB4cW9NY2Y5VVZRZ2VVdEN3dkJ2R0tvdkcxVTdRRXdJVVhKamw1RGVEQnBxSllRaXJFbUxnLTItWU9TcmhGWlZQTVotS054Mlp1N0JhdVhReG5kMzBwUU5FbmwxV0VCQdIBdkFVX3lxTE5NOUt0U0NJMVhqSHB3YzdXS1JLTFkzWkZiTHJRZUFTRmF6Nk9HeGg1Ym85RWpPZHo1QWo2T1ZyUlozRXdDSTk1eTVjN0tCa3oyMl9tMUktOFV1M3N4MUo0dzc1S0tXbzg4RDFMMjhsNW9wSVhVckE?oc=5",
           "published": "Wed, 06 May 2026 07:00:00 GMT",
@@ -5068,6 +5073,19 @@
             "적자"
           ],
           "score": -2
+        },
+        {
+          "title": "'금호건설' 52주 신고가 경신, 공공분양 증가의 수혜 지속 예상 - 현대차증권, BUY - 네이트",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OTHI3WmJJTU1keUxWOUhOUmJVdjM4ME5CMG5QcGVqbm5Md0RCU1pfMGZ3cDBvWVFGam85Y3RfVEFpRGZFY2FHSU9xcmFJdzhqbVRJ?oc=5",
+          "published": "Thu, 25 Jun 2026 00:41:00 GMT",
+          "source": "네이트",
+          "positiveHits": [
+            "증가",
+            "신고가",
+            "수혜"
+          ],
+          "negativeHits": [],
+          "score": 21
         },
         {
           "title": "현대차證 “금호건설, 공공주택 확대 국면에서 실적 수혜 가능” - 조선비즈 - Chosunbiz",
@@ -5109,13 +5127,13 @@
       "name": "테스",
       "market": "KOSDAQ",
       "sector": "KOSDAQ 자동선별",
-      "newsScore": 71,
+      "newsScore": 85,
       "newsLabel": "뉴스 긍정",
       "positiveCount": 2,
       "negativeCount": 0,
       "neutralCount": 6,
       "headline": "[리포트 브리핑]테스, '장비 포트폴리오 확장과 영업이익률 상승 기조 본격화' 목표가 234,000원 - 현대차증권 - 뉴스핌",
-      "newsSignal": "뉴스 긍정: 긍정 2 / 부정 0 / 중립 6 / 점수 71 / 대표뉴스: [리포트 브리핑]테스, '장비 포트폴리오 확장과 영업이익률 상승 기조 본격화' 목표가 234,000원 - 현대차증권 - 뉴스핌",
+      "newsSignal": "뉴스 긍정: 긍정 2 / 부정 0 / 중립 6 / 점수 85 / 대표뉴스: [리포트 브리핑]테스, '장비 포트폴리오 확장과 영업이익률 상승 기조 본격화' 목표가 234,000원 - 현대차증권 - 뉴스핌",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
@@ -5186,15 +5204,17 @@
           "score": 0
         },
         {
-          "title": "테스, SK하이닉스 210억원 계약 체결…전년 매출 대비 6.04% - 데일리인베스트",
-          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5DMkxfeEltNzZGRnZ4ZnZYXzB1WmFsYld4VjQ4V1JUR1FYRk53WmNTY1pRVkpEX2pGRTNoRGU2Uk1TM0s4QmJiTzFNeE84cFlNSlFuaWlWa2pHUFA2S3A1bGlaTWR6NDhQYThj0gFvQVVfeXFMTWJDOHBwZW1IdTlBT0M0SXlBRnNKRlY2SHJCclRJa3dCdFNrMFo5V3ZLN0VGZE1fS3lXU1NwNHcxTkdfTWFjZ09LV2pBZGZ6cUpHcWFldGVOZzdWQ1RpYUR0QW9tdjlaRUJ5cVN2QVBz?oc=5",
-          "published": "Fri, 05 Jun 2026 07:00:00 GMT",
-          "source": "데일리인베스트",
+          "title": "테스, 증권사 목표가 상향에 강세…13.46% - 매일경제 마켓",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1XRW0wdV9MbU5FcVVEN3o0b2RjYXUzSzBOMDVvSElqam5BNE9iMkpCZmVJR1U4ZFFmUFR5ZmQzTzBLOC1UMGVsXzc0NnV6TjNZdGc?oc=5",
+          "published": "Mon, 11 May 2026 07:00:00 GMT",
+          "source": "매일경제 마켓",
           "positiveHits": [
-            "계약"
+            "상향",
+            "목표가 상향",
+            "강세"
           ],
           "negativeHits": [],
-          "score": 7
+          "score": 21
         }
       ]
     },
@@ -5418,10 +5438,10 @@
           "score": 7
         },
         {
-          "title": "ACE 글로벌반도체TOP4 Plus ETF, 상장 후 첫 10만원 돌파…누적 수익률 918% - 브릿지경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1jVFkwWWhyUlNMQkhYdEhjY3NETWtrbGFsR2JZQllCSGlTbUFpVm8wRWo1ZWdFREFrLUVDUUNGRVdnOEVIWExCaFFHRGZZZnVUVGVTeHcxRFppQQ?oc=5",
-          "published": "Fri, 19 Jun 2026 02:39:00 GMT",
-          "source": "브릿지경제",
+          "title": "ACE 글로벌반도체TOP4 Plus ETF, 상장 후 첫 10만원 돌파 - 마켓인",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4yQW1EUnc4dmwtVmlWMEJMaWYwRndwZ2ZSQUViRU1NR2plb3VEMkdoUDF2NzJacDNBTG1hdjJIUl9rZkRCNzVYNWh3aGdTSU83SkhiMW1tSDB1Y2p3REJlWTZFYVJQWXRFX0RudzRJbk1IOWM?oc=5",
+          "published": "Thu, 18 Jun 2026 23:36:31 GMT",
+          "source": "마켓인",
           "positiveHits": [
             "돌파",
             "반도체"
@@ -5430,10 +5450,10 @@
           "score": 14
         },
         {
-          "title": "ACE 글로벌반도체TOP4Plus ETF, 상장 후 첫 10만원 돌파 - 연합뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE51eFQtcXIyUWg1TF9nTmlTa0NrLU9fRWxOVlVQdEZzYXoyMV9QdlZMbVZBOUtEN0V5LUdGaFZ6eE5IMmwtRkk1c0t2T3V2WjR4VnNYeUFEcTNKYWvSAWBBVV95cUxOeE5Xb0xpd0VscWNtcnR6UTNqWTZ1dHh1M2tSX3FDQmpJLTlmODNUcjFvYW1zbVpKVTlEcDdHRnEyVHUwUVE3VjlMTEtrOXFLeWptUk5pWmozNkwtalktZzM?oc=5",
-          "published": "Thu, 18 Jun 2026 23:58:44 GMT",
-          "source": "연합뉴스",
+          "title": "ACE 글로벌반도체TOP4 Plus ETF, 상장 후 첫 10만원 돌파…누적 수익률 918% - 브릿지경제",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1jVFkwWWhyUlNMQkhYdEhjY3NETWtrbGFsR2JZQllCSGlTbUFpVm8wRWo1ZWdFREFrLUVDUUNGRVdnOEVIWExCaFFHRGZZZnVUVGVTeHcxRFppQQ?oc=5",
+          "published": "Fri, 19 Jun 2026 02:39:00 GMT",
+          "source": "브릿지경제",
           "positiveHits": [
             "돌파",
             "반도체"
@@ -5468,7 +5488,7 @@
         {
           "title": "한투운용, 글로벌반도체 ETF 누적 수익률 900%↑ - v.daum.net",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05ZmU1WDdVMjA1UFI2MmFYNGZIOWxiNEc1bUFGRHh4azNmSVdEamNUNmlIajc2eUJlWjlCRVU2NlFrMndNbDlOYVR0bUp4ZWM?oc=5",
-          "published": "Fri, 19 Jun 2026 01:05:03 GMT",
+          "published": "Fri, 19 Jun 2026 01:05:00 GMT",
           "source": "v.daum.net",
           "positiveHits": [
             "반도체"
@@ -5489,10 +5509,10 @@
           "score": 14
         },
         {
-          "title": "ACE 글로벌반도체TOP4 Plus ETF, 상장 후 첫 10만원 돌파 - 이데일리",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPM2JJVFN5YTNMNXlqWGxzLWNVZXNGcUNvLXkzVFlJWms4WnViT0JjRVB2R2U1Y21GbjFxbFgxX1ZHOGNIRGRQdUtkemJpXzNvNnlUelozcUhTbE5ob01hMXZlUS10SVFUdldQRnk2UExLODRFUktzYlU3VEdZMG1hQw?oc=5",
-          "published": "Thu, 18 Jun 2026 23:36:31 GMT",
-          "source": "이데일리",
+          "title": "ACE 글로벌반도체TOP4 Plus ETF, 상장 후 최초 10만원 돌파…\"국내 반도체 ETF 중 최단기간 성과\" - ER 이코노믹리뷰",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96TUN0c2pMR09mX3N2TUN2ZXhTdVVha2MwQWdadG5kSnZ5T1hjbHQxS3VSOHJkLVEzYklicnQyRGhiNlhQT3lqX1NLdmNjSFU5RXNuLTZHUXJBYUcwWTVLQlllZHlfdGxScjB1OQ?oc=5",
+          "published": "Fri, 19 Jun 2026 07:33:41 GMT",
+          "source": "ER 이코노믹리뷰",
           "positiveHits": [
             "돌파",
             "반도체"
@@ -5554,6 +5574,18 @@
           "score": 14
         },
         {
+          "title": "타임폴리오자산운용, '글로벌AI인공지능액티브' 연초 이후 수익률 100% 돌파 - 뉴스핌",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tdXQ5dzBpM01wU09ReXhVWmxnQlVXT29wMlROS19qZE1PWWIzWm1FNlgxN0dmVXpmTUQtekVua29EUVZHWXZuemNyU2RZek5rM2UwREdkQjVfYUg3?oc=5",
+          "published": "Wed, 17 Jun 2026 01:14:00 GMT",
+          "source": "뉴스핌",
+          "positiveHits": [
+            "돌파",
+            "AI"
+          ],
+          "negativeHits": [],
+          "score": 14
+        },
+        {
           "title": "'TIME 글로벌AI인공지능액티브 ETF', 연초대비 수익률 100% 잭팟 - v.daum.net",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5NOElvVV9xSGx0X005Ti0xSVdiQ2s3SmEwTk5SclpEZVhoVWl3NkZRYWViNFUxZkZDNzZna2lYb0R0VFZ3RTZJVDN2eFBPY1k?oc=5",
           "published": "Wed, 17 Jun 2026 00:36:35 GMT",
@@ -5577,18 +5609,6 @@
           "score": 14
         },
         {
-          "title": "타임폴리오자산운용, '글로벌AI인공지능액티브' 연초 이후 수익률 100% 돌파 - 뉴스핌",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tdXQ5dzBpM01wU09ReXhVWmxnQlVXT29wMlROS19qZE1PWWIzWm1FNlgxN0dmVXpmTUQtekVua29EUVZHWXZuemNyU2RZek5rM2UwREdkQjVfYUg3?oc=5",
-          "published": "Wed, 17 Jun 2026 01:14:00 GMT",
-          "source": "뉴스핌",
-          "positiveHits": [
-            "돌파",
-            "AI"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
           "title": "타임폴리오 ′TIME 글로벌AI인공지능액티브 ETF′, 수익률 100% 돌파 - 메가경제",
           "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8tQktNYWRBMUJ4R1V5Q3Vsa05SdzJUMjI2bGgzSmdhOVpvNUxqMURIYXFlclBqQnhZMmo1SDNYek5GaTB6ZFV1cHBqN2FWZGJRZHhvbU1pRWZHMm9LM0FHM0VBZzFicjVKQnk0RXQ0bkMzWnhm0gFyQVVfeXFMT0hyNkF2ZXhzZHJOQmpXSExieG1Jdmotci1fY29sVWQ4ZklMbXJZa2V5bGlEOWhBOXRQbWVXOU5rMWpwM2FMSkRLVGQtajc0c1dZcFlqY19QMlRlNGVVMXE1Qy1IR2JZQUVVNnJGaC1lZDZn?oc=5",
           "published": "Wed, 17 Jun 2026 01:19:58 GMT",
@@ -5601,16 +5621,15 @@
           "score": 14
         },
         {
-          "title": "타임폴리오 ‘TIME 글로벌AI인공지능액티브’ ETF, 연초 이후 수익률 100% 돌파 - 서울경제",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBBd2dBeWc3bmN1RzZNVWQzUVdXZEt2alFUdFNHbFRNMjcwUk5xakhHSVdiMW82VkNhOVI5a3RTdm13cmJXeG5yd3BEdENtYTBVWmfSAVNBVV95cUxPRUg5VjloRXBoOUtCNVBlcHk5N2NMMW5qbWhuaEgwZUZadkZYUGN1RzVkVkIwYzF3YlgwNmFuYVgyMnhIMWR0ZnBvalBfTlNock1VOA?oc=5",
-          "published": "Wed, 17 Jun 2026 01:44:24 GMT",
-          "source": "서울경제",
+          "title": "\"액티브 명가 이름값\"타임폴리오운용, 'TIME 액티브 ETF' 순자산 10조 돌파 - 파이낸셜뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5rd0I4dnBnbnRnRXdlZGNXRFhUZ2REaU9MUnJSM3NDaG95OERLUjJwQVBpbzNnYXI3X2gySXlVYzBoakN6OGtKblFXRnB1S1pwRlRVSG9zTDBJUQ?oc=5",
+          "published": "Tue, 23 Jun 2026 00:47:27 GMT",
+          "source": "파이낸셜뉴스",
           "positiveHits": [
-            "돌파",
-            "AI"
+            "돌파"
           ],
           "negativeHits": [],
-          "score": 14
+          "score": 7
         }
       ]
     },
@@ -5759,15 +5778,6 @@
           "score": 7
         },
         {
-          "title": "신현송이 담은 '코리아밸류업'..12개 ETF 현재 상황은 - 스마트투데이",
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5tcFJIX2UyXzhUcXhNNWtpVHNraDlZbXRldmU0VkZjR3pjYnRiVnY0a2lfZFFyM2NkNi1TU2tLQ1ZfR19HdVA4ek54VEtmUGpaS05MNjVfWElRVUtNeEZv?oc=5",
-          "published": "Sun, 05 Apr 2026 07:00:00 GMT",
-          "source": "스마트투데이",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
           "title": "KB운용 ‘RISE 코리아밸류업 ETF,’ 순자산 8000억 돌파 - 마켓인",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IeUhXTDBsbkNHVERWd2Y0TjgzajBMZlF5OEpRcTg1T0pVQlNhTEJTNnF3emtRT2EydDl3ZjUwaGVfQ2VOWDJWenJfQzFLNXJONFR2N3Zma2YzT2Vwd2xQUjZ5bE9IcDdkSU9ndEdWSmxNUmc?oc=5",
           "published": "Wed, 18 Mar 2026 07:00:00 GMT",
@@ -5777,6 +5787,15 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "신현송이 담은 '코리아밸류업'..12개 ETF 현재 상황은 - 스마트투데이",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5tcFJIX2UyXzhUcXhNNWtpVHNraDlZbXRldmU0VkZjR3pjYnRiVnY0a2lfZFFyM2NkNi1TU2tLQ1ZfR19HdVA4ek54VEtmUGpaS05MNjVfWElRVUtNeEZv?oc=5",
+          "published": "Sun, 05 Apr 2026 07:00:00 GMT",
+          "source": "스마트투데이",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
         },
         {
           "title": "3000시대 연 코리아밸류업지수…올해 밸류업 공시 전년 대비 12배 폭증 - 서울경제",
@@ -5856,6 +5875,17 @@
           "score": 7
         },
         {
+          "title": "삼성운용 'KODEX 미국반도체' ETF 연초 이후 수익률 美 반도체 1위 - 현대경제신문",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5UODQ1cDVheVhZUFRna2ZKNTdmcU5nMkc4TktKRFJHMmx6TjV2VExveFJpYnNCVmF3UnhPVDQ5OE5iTmg0RmdZZ3dZdkI4Smd2VFBJV1h0bjY4dEt2R29iTktiNHhRdkHSAWtBVV95cUxPbnlOZnFoMV9mOTY5OHFxRUZ5Y2FVajFVUVpSOUdHSTR4LXJzbnpjTEFSeXg5OHNyODNnMUFzcXo2b3hub0Z5aFBfLVVlcVlRVWtKTERUT0pfazNzWjR0Nk91QjVBcE5YQWJZQQ?oc=5",
+          "published": "Thu, 18 Dec 2025 08:00:00 GMT",
+          "source": "현대경제신문",
+          "positiveHits": [
+            "반도체"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
           "title": "삼성운용 KODEX 미국반도체, 연초 이후 수익률 41.8% 기록 - meconomynews.com",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5kaEIzQ3ZrZ1RJOGozT3NLTEpRT2NOY21mTExqRDZvSUwwWnM5djB2d2Z1QVc0Z2JFMXZubFRHMUt0c1FQS2Y0eDJZY2FiWDQzc3JKUld5eHdXRnBrYWFJbklKTDU2TUxLdGVPaVlEYmo?oc=5",
           "published": "Thu, 18 Dec 2025 08:00:00 GMT",
@@ -5895,17 +5925,6 @@
           "source": "연합뉴스",
           "positiveHits": [
             "반도체"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
-          "title": "삼성운용, IRP 투자자 위한 ETF 3종 추천 - 오늘경제",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ud1BNYWNLR1NfMTE5Wmd2VzRqNEdCYmtjMXExOHNHTGZLYm8tOFpwVFJQSElMMzhRTjFNczZqeFNSLW9PZjd2aUZuTHo4OUItR3pFaVE1MUpJeVNxVnRFVS1PR3p4UWJWQ3NhdVNjQ29NWnc?oc=5",
-          "published": "Mon, 15 Dec 2025 08:00:00 GMT",
-          "source": "오늘경제",
-          "positiveHits": [
-            "투자"
           ],
           "negativeHits": [],
           "score": 7
@@ -5975,15 +5994,6 @@
           "score": 0
         },
         {
-          "title": "한화운용, 코스피200 상승 참여·월분배금 노린 ‘PLUS 200커버드콜액티브 ETF’ 상장 - 브릿지경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB5eFE3THdZd2FBWnFKenQ2bU1XQ0RKUlNwYkxkQkFVU0oyQ1FkWU9nLXJ1TjF5X1QyZmhHUDN3NHlzUmI2LXFCUC1zRThiTG9Ld0wtZWtHdDUyQQ?oc=5",
-          "published": "Tue, 23 Jun 2026 01:23:00 GMT",
-          "source": "브릿지경제",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
           "title": "한화자산운용, 'PLUS 200커버드콜액티브' 상장 - 포인트데일리",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE04X2ZLZlRfT1ZzdGxoeHFCd3NzVmltUGNlempVdkxzZS1YQjBYUzZ1c3E2SVc2aTRUeGFGcDc3Q2NTWDlhTG05cWRkZkx4bERoZDE3LWgxQkt3X0xOV0l4dDhQWDRxbjBiRDFzcnFZdELSAXRBVV95cUxQclNRRjlORUxLd0ItNng3TTZMRGdpekhnSURaSUxhTEt0ZzRjTDdzMERva0hhZDZ3OGhIbzIxdGgxNDVrbE5MMTJzaUs3Y1dOcThkYURPd2FqNjVDWjVsRXVrTzFWTXFfeVB2RU9LOG9wQmYxZA?oc=5",
           "published": "Tue, 23 Jun 2026 00:40:36 GMT",
@@ -6003,6 +6013,15 @@
           ],
           "negativeHits": [],
           "score": 14
+        },
+        {
+          "title": "[ETF] PLUS 200커버드콜액티브·IBK코스피액티브 23일 상장 - TopStarNews",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9LcjJTcUdqTktKTlVzbG8ydi1UVDN3eUo4QU1rUFlSeUstaFF0ZU55bU1DbGFUQVZoYjhsbFFldmJ3bGRJZDdLWmtKMGxYdzlXckREbks0MEpIR29kbHY4dVJkaGEzTkpnSXBUTVMtcW0xQQ?oc=5",
+          "published": "Mon, 22 Jun 2026 04:54:18 GMT",
+          "source": "TopStarNews",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
         }
       ]
     },
@@ -6084,15 +6103,6 @@
           "score": 7
         },
         {
-          "title": "UNICORN SK하이닉스밸류체인액티브를 찾게 된 이유 - 브런치",
-          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rb09FVkRuTXlZbm1oQWVlOV9HVjBPbU9hX1A2RHZwM3VxX0J6eGRjMjRMaGg1LXAySlJ1TmxvdzZYTHFwN2ZOblZkNXFMXzVQanlN?oc=5",
-          "published": "Sat, 20 Jun 2026 04:42:35 GMT",
-          "source": "브런치",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
           "title": "\"하이닉스 급등\" 1년 전 예견하더니 또…'파격 전망' [인터뷰+] - 한국경제",
           "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5qZkJndWUwNkp2QnZMZzZ6WDRBb1g5Y3BfTFM1STlXVWludGZERXV1NVd0TVJIQVRoYTQwbXhkYWYyU0dPM09DS2RQZ1ZTa2xtUWxDUmwzV090d9IBVEFVX3lxTE1MWmZVRVVFYWhSQzFQa3lwVkVrbHlkT0taNV9EUmhjX3BybThtVjJiLU83UW5IVm1Xb3pXaDc4a3VFZTl0SzZabmRJQmdPMWhiNTJkag?oc=5",
           "published": "Tue, 18 Nov 2025 08:00:00 GMT",
@@ -6102,6 +6112,15 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "UNICORN SK하이닉스밸류체인액티브를 찾게 된 이유 - 브런치",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rb09FVkRuTXlZbm1oQWVlOV9HVjBPbU9hX1A2RHZwM3VxX0J6eGRjMjRMaGg1LXAySlJ1TmxvdzZYTHFwN2ZOblZkNXFMXzVQanlN?oc=5",
+          "published": "Sat, 20 Jun 2026 04:42:35 GMT",
+          "source": "브런치",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
         }
       ]
     },
@@ -6336,6 +6355,15 @@
           "score": 0
         },
         {
+          "title": "하나증권, 현대백화점 목동점에 프리미엄 자산관리 서비스 센터 ‘더 H1 W’ 오픈 - 이슈투데이",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE11Qmx5MVIxcjVINVdEeWpIZjBJeGdYdGFCSGxjZlFULVVSM0ZmSGxlbmZtdGZmR3U4QkJUbWdwMGhiOWZKV21Gc3VuUmVESUM4ZEp3VDdFWGJib0dydUZQT2xXRUduUQ?oc=5",
+          "published": "Thu, 25 Jun 2026 13:41:40 GMT",
+          "source": "이슈투데이",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
           "title": "하나증권, 현대백화점 목동점에 프리미엄 금융센터 오픈 - 데이터뉴스",
           "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1YNmNIMFFhTW5nbVNBb3pja2JxbWVSRnNkMU91bWoxejlHY0xqRlB3bEo3bUtXVHBtSnJTZ2hHMDU0QVR2dUg1T2I1eWlOVVJiZ0lSVDNQdnhwZl9HU09F?oc=5",
           "published": "Thu, 25 Jun 2026 00:26:37 GMT",
@@ -6367,15 +6395,6 @@
           "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1EMDB5ZzNOSUI2TlFnVmJrZU1Hd01rS1VqcnVBLVQtVUhVRXFRVHh4dUJubFNJMDJKYWdYeEFCTjFKWTJseEdFTnJNSkh3TW13YnhvMTdzV2d1LU5laFlsbjQ5bnpudEs5QkHSAW5BVV95cUxNMHhMOVlpSFhzRDdvMnRKUk1CNUdZUHFEbzQ2Z3VaTXgtU1pMMk5Cbk5aaFFXdUNtdlNsQ1dYMGVtZTY5Tm9lWXdHbndKQUoybmRnNzJJeUZPNXNzSUE5Ymd3Wk14U0FrdlItdk1lQQ?oc=5",
           "published": "Thu, 25 Jun 2026 01:05:20 GMT",
           "source": "뉴시안",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
-          "title": "하나증권, 현대백화점 목동점에 프리미엄 자산관리센터 개설 - 금융경제신문",
-          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE44akpyTEVKemo4dFBuc3pGYjQxSF9xMU44VlpsZ3daZ1RSMWJGbklfMGlQX2kwRjl5UWN2dTlDY3NLdlBwUG5GMHJPVzFyWlNJMWROOWx1Vm9INHhGWnFWSzA3eWJ0ZmQwUHlXS9IBb0FVX3lxTE5YSnpKYlVidlh2MFV4cnU4VUx1SmV4a3V6cGNXX0JheW1NWHdvWVhqd0g3eXZKWmN1eG50WFVNWDNTWjllZUtsTzVXMDlEdjhkMXpUWXNwS3Awdjh3ZFB4Mk9aaTh6RjEyRWdVcFlqYw?oc=5",
-          "published": "Thu, 25 Jun 2026 04:50:00 GMT",
-          "source": "금융경제신문",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -6712,17 +6731,6 @@
           "score": 21
         },
         {
-          "title": "'기가비스' 52주 신고가 경신, 사이클의 규모가 다르다 - 메리츠증권, BUY - 네이트",
-          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5tT2tyMVdwWU5GeGlpOEltMm95d25RTDZWdjhzQWx0Wjlac1MtN0lvRnhZTUJPVFJJajhKaFg2cERMcS03WDFyX0plbUhpV1NzNFhZ?oc=5",
-          "published": "Thu, 25 Jun 2026 06:37:00 GMT",
-          "source": "네이트",
-          "positiveHits": [
-            "신고가"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
           "title": "기가비스, 증권사 목표가 상향에 강세…8.2% - 매일경제 마켓",
           "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0yX0lVa2FhQjk4VmtTTXFpenRxenRZWnA5Q3F1YVVHV1dkWXhmbjN0MHJvZWhOcDA5RzNKeld0dVRQNm8tbTAtTGlQeWZ0TzlseFE?oc=5",
           "published": "Mon, 22 Jun 2026 00:03:11 GMT",
@@ -6742,6 +6750,17 @@
           "source": "Investing.com 한국어",
           "positiveHits": [
             "AI"
+          ],
+          "negativeHits": [],
+          "score": 7
+        },
+        {
+          "title": "'기가비스' 52주 신고가 경신, 사이클의 규모가 다르다 - 메리츠증권, BUY - 네이트",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5tT2tyMVdwWU5GeGlpOEltMm95d25RTDZWdjhzQWx0Wjlac1MtN0lvRnhZTUJPVFJJajhKaFg2cERMcS03WDFyX0plbUhpV1NzNFhZ?oc=5",
+          "published": "Thu, 25 Jun 2026 06:37:00 GMT",
+          "source": "네이트",
+          "positiveHits": [
+            "신고가"
           ],
           "negativeHits": [],
           "score": 7
@@ -6881,15 +6900,6 @@
           "score": 0
         },
         {
-          "title": "심텍, 보통주 5만8692주 자기주식 취득 완료 - 디지털투데이",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE10aEUxUy1KRzFSZU5ienFtdlhPWkp1R0Y4czg4VWRXc2RHSHY4ZlhmbDhBT3NOa3lYbjFqelVpSkFNbmZjTzZDNF9tVUxTVzZWakpwQXdZc0ZhcVNra0VnUFo1SkRwak5qWktsSjNhaXMyNXM?oc=5",
-          "published": "Thu, 25 Jun 2026 07:50:03 GMT",
-          "source": "디지털투데이",
-          "positiveHits": [],
-          "negativeHits": [],
-          "score": 0
-        },
-        {
           "title": "펨트론·심텍 등 소캠 관련주 상승...마이크론 실적발표 수혜 - gukjenews.com",
           "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5VUUVrVFdNZjNKS1NEQzBnZTRFZE1FZ1FBSVVvVGdzaGFvZnBUazBZOXVJSDFrd3owZXczbHlkSWVvYWp3WW44TThIUGo0czZwR2p2RHhRMnBKQ01oc0VhSWhMS2lGX2gzbDYxN2NR?oc=5",
           "published": "Thu, 25 Jun 2026 00:31:14 GMT",
@@ -6899,6 +6909,15 @@
           ],
           "negativeHits": [],
           "score": 7
+        },
+        {
+          "title": "심텍, 보통주 5만8692주 자기주식 취득 완료 - 디지털투데이",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE10aEUxUy1KRzFSZU5ienFtdlhPWkp1R0Y4czg4VWRXc2RHSHY4ZlhmbDhBT3NOa3lYbjFqelVpSkFNbmZjTzZDNF9tVUxTVzZWakpwQXdZc0ZhcVNra0VnUFo1SkRwak5qWktsSjNhaXMyNXM?oc=5",
+          "published": "Thu, 25 Jun 2026 07:50:03 GMT",
+          "source": "디지털투데이",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
         }
       ]
     },
@@ -7016,11 +7035,11 @@
       "sector": "KOSPI 자동선별",
       "newsScore": 100,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 5,
+      "positiveCount": 4,
       "negativeCount": 0,
-      "neutralCount": 3,
+      "neutralCount": 4,
       "headline": "[특징주] 신세계, 외국인 명품 소비 기대에 8%대 급등…증권가 목표가 줄상향 - ebn.co.kr",
-      "newsSignal": "뉴스 긍정: 긍정 5 / 부정 0 / 중립 3 / 점수 100 / 대표뉴스: [특징주] 신세계, 외국인 명품 소비 기대에 8%대 급등…증권가 목표가 줄상향 - ebn.co.kr",
+      "newsSignal": "뉴스 긍정: 긍정 4 / 부정 0 / 중립 4 / 점수 100 / 대표뉴스: [특징주] 신세계, 외국인 명품 소비 기대에 8%대 급등…증권가 목표가 줄상향 - ebn.co.kr",
       "riskMemo": "뉴스 리스크 특이사항 제한적",
       "errors": [],
       "items": [
@@ -7056,18 +7075,6 @@
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
-        },
-        {
-          "title": "[2025년 6월]신세계 I&C, 스타필드청라와 528억원 규모 스타필드청라 정보통신공사 계약 - 데이터투자",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBmWWkxU3lTMkpIR3Byc29yV0Y0aHdXcXpGbWxibUtTeW1TNm1GcmtpT0tKQWs5TDIyU2lJZmJkQ3pxeFhPWllUZEpRVjY0U3UyWHhROHRvTmRIWElUWkRSMHg0Z3d4c3ZjMXF1amd2TjR6SUU?oc=5",
-          "published": "Thu, 25 Jun 2026 08:59:40 GMT",
-          "source": "데이터투자",
-          "positiveHits": [
-            "계약",
-            "투자"
-          ],
-          "negativeHits": [],
-          "score": 14
         },
         {
           "title": "\"55만전자 간다\" 美 ADR 상장 가능성에 주가 재평가…신세계, 외국인 명품 싹쓸이가 성장 동력 [株토피아] - 파이낸셜뉴스",
@@ -7108,6 +7115,15 @@
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBxbjA2Z0Q5RS1kR0QzZmlMeEJLaGQ1WnZrRUdPY1JtdkhPMXNTTHJDNjVMclU3LVpUYUNURk4tbldBbG8ydXROS3F6WWgyQlE?oc=5",
           "published": "Mon, 22 Jun 2026 09:50:42 GMT",
           "source": "딜사이트",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
+        },
+        {
+          "title": "[리포트 브리핑]신세계, '리뉴얼이 끝나고 외국인과 명품의 레버리지가 시작됐다' 목표가 850,000원 - 메리츠증권 - 뉴스핌",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9COFhRMFoyT3dFV1JIakpmRm94ODdoUUJRR2JLdTFFcEprdWhuZ1FkSWQ1VHg5d2N1UE9PSXFISWEtTDdTMDRaWFY5TWUtUlk1dHNOdV84Y2Q2NE84?oc=5",
+          "published": "Tue, 23 Jun 2026 23:31:00 GMT",
+          "source": "뉴스핌",
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
@@ -7181,21 +7197,6 @@
           "score": 28
         },
         {
-          "title": "한울반도체 4거래일 연속 급등…AI·전장 시장 성장에 MLCC 수혜 기대 - 남도일보",
-          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA3cDVYVFVhYnRxOUN0WjZoVk9hc0RQa3dldEVpUDc2VVREbU1EWl8tdl9PX2dNQ251MWduRzVodWVlcTdiMkUyWUZGQWI0MTlOU21MZ0pzNnlVdzVtRUQyeERFZHg5cHRScFVwa9IBcEFVX3lxTE4xeHV2SlI5NVlIRmtTWVdkcTFKNThEWnhxck9mcGV3OUR4ZTQ1YnFoNEl6Wm5Pcm9adkVxcktESXpOZXpiVUwzTlJfa0diU0FhT2tqMUphdW5laV9lUHdHdi13OXdrdzdPamp2R3dkUXg?oc=5",
-          "published": "Tue, 23 Jun 2026 03:12:00 GMT",
-          "source": "남도일보",
-          "positiveHits": [
-            "성장",
-            "급등",
-            "기대",
-            "수혜",
-            "AI"
-          ],
-          "negativeHits": [],
-          "score": 42
-        },
-        {
           "title": "한울반도체, 산업부 AI 팩토리 기업 선정 - 뉴스핌",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5vNldHRTRZMk05cWNHcHo5WTVBMWIyQ0pLOG5vLUpSbEpMUF9aTnZmRElDR0FkcUVxWmdHcVRYQmJGNFA1NGFpWTlkSktKWDMxSHY3TGlNTUJXSWct?oc=5",
           "published": "Tue, 23 Jun 2026 00:44:00 GMT",
@@ -7206,6 +7207,21 @@
           ],
           "negativeHits": [],
           "score": 14
+        },
+        {
+          "title": "[Company Analysis] [한울반도체] AI 서버·전장용 MLCC 수혜 기대 '한울반도체' … 무라타 협력으로 성장동력 확보 나서 - 경남대학교 대표",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1UUm9ONGU3QnZQQ2hIUHBTVkJxLVJsdFFvOUsyekkxWGdXYXNqbk9zN0RwV0hxVlQ3RnJ5T0pTblNFTWlveXFWWDdJQ0ZlcnFndm16ZG5CV2dkcEZ6Y1RJQ2d4aFNac1BPa3c1S2E1OA?oc=5",
+          "published": "Tue, 23 Jun 2026 21:15:00 GMT",
+          "source": "경남대학교 대표",
+          "positiveHits": [
+            "성장",
+            "기대",
+            "수혜",
+            "AI",
+            "반도체"
+          ],
+          "negativeHits": [],
+          "score": 35
         },
         {
           "title": "MLCC AI 검사장비 고도화로 공급 확대 추진!AI가 분석해주는 한울반도체(320000) 상승확률은? - 네이버 프리미엄콘텐츠",
@@ -7222,16 +7238,15 @@
           "score": 28
         },
         {
-          "title": "한울반도체, 산업통상자원부 'AI 팩토리기업' 선정 - 파이낸셜뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE51YlJBUzFGV3hNZlQ0QVdzbHdDMXBDODlqUlNlYzY5Ui05WkJpT05RSUlIbzdmWmdVMXhmWm11b08zdFFXRUlaVHMzVDlZejk4emdkLUV1Q3ltUQ?oc=5",
-          "published": "Mon, 22 Jun 2026 23:57:14 GMT",
-          "source": "파이낸셜뉴스",
+          "title": "한울반도체, 세계 MLCC 1위 日무라타와 장비 공동 개발 - 디일렉",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9KS0hsUHNsMHVwLUYzdmFEUVloMUFzYTNjakVURXozTVozSHdlUGFKZHRzdVV3dWhpWVA5RDJObVFzb0VoWDF4R0lJdVBkX3ZvemhwcWFIcTVlWnhmbHBwcnZndldJQQ?oc=5",
+          "published": "Thu, 18 Jun 2026 07:00:00 GMT",
+          "source": "디일렉",
           "positiveHits": [
-            "AI",
             "반도체"
           ],
           "negativeHits": [],
-          "score": 14
+          "score": 7
         }
       ]
     },
@@ -7240,13 +7255,13 @@
       "name": "엘앤씨바이오",
       "market": "KOSDAQ",
       "sector": "KOSDAQ 자동선별",
-      "newsScore": 88,
+      "newsScore": 81,
       "newsLabel": "뉴스 긍정",
-      "positiveCount": 4,
+      "positiveCount": 3,
       "negativeCount": 2,
-      "neutralCount": 2,
+      "neutralCount": 3,
       "headline": "폐지방 시장 열리니...엘앤씨바이오 매출·영업익 추정치 ‘쑥’ - 한국경제",
-      "newsSignal": "뉴스 긍정: 긍정 4 / 부정 2 / 중립 2 / 점수 88 / 대표뉴스: 폐지방 시장 열리니...엘앤씨바이오 매출·영업익 추정치 ‘쑥’ - 한국경제",
+      "newsSignal": "뉴스 긍정: 긍정 3 / 부정 2 / 중립 3 / 점수 81 / 대표뉴스: 폐지방 시장 열리니...엘앤씨바이오 매출·영업익 추정치 ‘쑥’ - 한국경제",
       "riskMemo": "부정 키워드 확인 필요",
       "errors": [],
       "items": [
@@ -7317,17 +7332,6 @@
           "score": 28
         },
         {
-          "title": "엘앤씨바이오, '리투오' 고성장에 글로벌 빅마켓 진출까지 '겹호재'…\"미용 의료 섹터 최선호주\" - 프라임경제",
-          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1VaGtfMEFldGxEZi0tVVM3MkxPSi10bTB5SXJfT3JmRHAxcVZxSjVZT2lWT3lkUXp5UWxUcXVyM0hsdEFnam92QjVpaE9Cb3R2Ym9fUVdFX01lZzFDMFhYOENFWjFhNUVmUnQ1enE4WnZHZw?oc=5",
-          "published": "Mon, 22 Jun 2026 23:49:36 GMT",
-          "source": "프라임경제",
-          "positiveHits": [
-            "성장"
-          ],
-          "negativeHits": [],
-          "score": 7
-        },
-        {
           "title": "코스닥 제약업종 톱50 외국인 주식 보유액 전년비 5천억 감소 - 의학신문",
           "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE85dl9GNnlxRDNBVTBYRkJSZTlNU09QbDVEY1dZX1NUcmlnNTRiUVhVTEdycERLSnBnNDdGeXBKMmNMSWg1VHh6bk54MF96dDZ6bnBmbDJ4SXFhOVhmSmI1X2FSS2FqN1EtMzhF?oc=5",
           "published": "Tue, 23 Jun 2026 03:00:00 GMT",
@@ -7337,6 +7341,15 @@
             "감소"
           ],
           "score": -9
+        },
+        {
+          "title": "“‘1등 스킨부스터’ 리투오 업은 엘앤씨바이오, 국내 수요 소화·미국 진출 두 마리 토끼 잡는다” - 뉴스퀘스트",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90aGpiQTFuOXlYdFd4WmpjS1N3Rlg0T3JaUjVVc01lblE5eW04RGdwdUtieUZhS21OcXdPNVIwRUhqbk54bWdMTzB4SG1BSV8zbWJTaE95Q1Azal9TbXFpUDczQUdkbE0tWUlJV2JWUdIBc0FVX3lxTE5sNkhjcWZqN1UwazFSVkNGUFp0YW1yZWVJS0FveVBkcUthSEg5bnZ4TGtWYXR4bmVpQWdRNjVYSERRa3I5c1hrMklUYkJYcUJPUHFnYkNSY3drQjhQMGtWbm5QSk1TNm80RnlPV0taTmVHV00?oc=5",
+          "published": "Tue, 23 Jun 2026 04:29:22 GMT",
+          "source": "뉴스퀘스트",
+          "positiveHits": [],
+          "negativeHits": [],
+          "score": 0
         }
       ]
     },
@@ -7665,13 +7678,13 @@
       "name": "KIWOOM 200",
       "market": "KOSPI",
       "sector": "KOSPI 자동선별",
-      "newsScore": 81,
-      "newsLabel": "뉴스 긍정",
-      "positiveCount": 4,
-      "negativeCount": 2,
+      "newsScore": 65,
+      "newsLabel": "뉴스 중립",
+      "positiveCount": 3,
+      "negativeCount": 3,
       "neutralCount": 2,
       "headline": "KIWOOM 200선물인버스2X, +17.44% 상승폭 확대 - 조선비즈 - Chosunbiz",
-      "newsSignal": "뉴스 긍정: 긍정 4 / 부정 2 / 중립 2 / 점수 81 / 대표뉴스: KIWOOM 200선물인버스2X, +17.44% 상승폭 확대 - 조선비즈 - Chosunbiz",
+      "newsSignal": "뉴스 중립: 긍정 3 / 부정 3 / 중립 2 / 점수 65 / 대표뉴스: KIWOOM 200선물인버스2X, +17.44% 상승폭 확대 - 조선비즈 - Chosunbiz",
       "riskMemo": "부정 키워드 확인 필요",
       "errors": [],
       "items": [
@@ -7697,18 +7710,6 @@
           "score": 0
         },
         {
-          "title": "KIWOOM 200선물인버스2X, -5.00% 상승폭 확대 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcUFPLU42dW5pZDJiaWlhN18zVlpaa0NpRWlZS3VYR1hKaEFmQWpPYmNyNTJFWG5kOTNmWi1KM0VCU3BNTzE0NVVqT1lBX0RtR2xNV1Y5cFlBM3R5a005WHJ3dnFaLWE0dzRXN1RCTEo1RGFSNVhZeUUzSW4tQk9mX0xwRdIBlwFBVV95cUxNT20tTURRX0pmN05TVm5aMEJUSVFJbTFXaFh2LWFTUWNiZG90bVlwLVhMckQ5TktaVzMwaDJUc2dtWkR4YTVMMDhjaXQtUVMwN0ZOdklTUV9WSnFveGtWRTlyRFVmT29ma0dCZXE0a3lPdENoLXVLZDczUUZxaUlLNnVwRHpZYlNoX29VLVBfYmpNNXRxTTdj?oc=5",
-          "published": "Tue, 09 Jun 2026 07:00:00 GMT",
-          "source": "Chosunbiz",
-          "positiveHits": [
-            "확대",
-            "조선"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
           "title": "키움운용, KIWOOM ETF 순자산 6조 돌파 - 뉴스핌",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1uZzlDVS1NaFc1ZFFwNE9uR3ZFVnpSUXVNVkQ3bm1YWTk1LUMzSWZBci0wbEx5T2tfYm1xT0tPZGRrR3VheVBQbmpKM2x1NFdKZEd3c0k1cGJUUnlS?oc=5",
           "published": "Fri, 27 Feb 2026 08:00:00 GMT",
@@ -7731,18 +7732,6 @@
           "score": -9
         },
         {
-          "title": "﻿키움투자자산운용, 'KIWOOM ETF' 순자산 6조원 돌파 - 데일리한국",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9faXBHb011cHhONXlURVZOX1ZhODlER0NpN3NkTlZDbDFqcEt5dHdVVEYzWE4yYVFGMVUxblAwV25JUW1KZVZ0NHNXVmVrUlNZNW1RZzE3Mk1XcG05TGZOVTZZaHhRNzRtQkpZWXluUdIBc0FVX3lxTE9ITHNPX0d1TS14QWc5dWk2Nmt5TExCaENJSzVZU1FqdkFmUlp1bEVwSEE4NXN5VFdqbW1DMWJ6V29mTGhCNkQ0SmlaNkNMWGpISGprZVNBME5maGlBZUJCWktTNTBTMi1raE4yMjJ5T1M4ZW8?oc=5",
-          "published": "Fri, 27 Feb 2026 08:00:00 GMT",
-          "source": "데일리한국",
-          "positiveHits": [
-            "돌파",
-            "투자"
-          ],
-          "negativeHits": [],
-          "score": 14
-        },
-        {
           "title": "[ETF 열전] 코스피 흔들리자 인버스 쏠림…외국인 이탈·실적 부담 '삼중 압박' - 뉴스웍스",
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE41UHBzWkIxZWpjdVJSejJhVHdoYVVfdDRqeWpGRXdVeElNUkp0X1NtSE1qdlZ1aWpPcFhwT2lINnlHX3RzR3d5RlhvMjVzUmVOanNWZVNyaEVGYU1CcHROcEZSUmgzb1k3d0FMRVNaY9IBc0FVX3lxTE94Z1VwdjFOV2JzcjlHTC1HVlVET2JmQ2RhX0J4X01jbl9pREFWXy1nT0RhMHc1WnBTeExNek94MDE4Ymk3VENwZjBReE1lQ1Z1eHhNaFJ1aWJuX0Fqc1MwTjNHR2hCaHBEZ3MyLVlqcUt4em8?oc=5",
           "published": "Mon, 30 Mar 2026 07:00:00 GMT",
@@ -7761,6 +7750,31 @@
           "positiveHits": [],
           "negativeHits": [],
           "score": 0
+        },
+        {
+          "title": "﻿키움투자자산운용, 'KIWOOM ETF' 순자산 6조원 돌파 - 한국아이닷컴",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5kcjB5Z1dXZUFTX2FKbDJGM1JaVndsVDFlTUVhcDdhMUM4TTRubXBNakRDWUk5SnR5c1JKX3J4eU9wcG44bzJIck0zc0IwaURhTGRWbUpWV1lvQXVEdlZiaUU1YjdIaUFyRElJ0gFvQVVfeXFMTmMxS3hUb1NQUlFGTGl0U2JpeUNOZFZieUlRRkpiQkV5blRxemlxaklKSWFWRHF0ZWVUZGt3RUN3OUlqT0dfWU1JVzBwUzN2bzgyd3NBblFLdDdiVmdqdnNPZ0hTN3luRXpDNnNyS09F?oc=5",
+          "published": "Fri, 27 Feb 2026 08:00:00 GMT",
+          "source": "한국아이닷컴",
+          "positiveHits": [
+            "돌파",
+            "투자"
+          ],
+          "negativeHits": [],
+          "score": 14
+        },
+        {
+          "title": "코스피 상승질주에 ‘인버스 ETF’ 투자자 울상···10∼30% 손실 - 동양뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UTExRMXNSWDlweDlMbjRsdU5ad3ltbXBEQ1E4S29EalVuNWtCWElQTWI0TEI0Yk0xd1AxNjM3N21ySFZHOFdXNzI0ZkFxeWVQNjhlVkJXUmtpbGotWmRsaQ?oc=5",
+          "published": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "source": "동양뉴스",
+          "positiveHits": [
+            "투자"
+          ],
+          "negativeHits": [
+            "손실"
+          ],
+          "score": -2
         }
       ]
     },
@@ -7802,10 +7816,10 @@
           "score": 7
         },
         {
-          "title": "우리자산운용, 'WON 반도체밸류체인액티브 ETF' 수익률 173%...반도체 액티브 ETF 1위 - 더밸류뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1FNlNudVNUOFNKcF9abUdPVVd0XzVwSmExUHpYQk91Zjk4clA0eEZ1MmFJSTVOTXBYdy1sbnM4WjNMZUtabkVyR2IwZkRPbUVNTUtoeQ?oc=5",
-          "published": "Thu, 19 Feb 2026 08:00:00 GMT",
-          "source": "더밸류뉴스",
+          "title": "우리자산운용, 반도체밸류체인액티브 ETF 최근 1년 수익률 1위 기록 - 뉴스핌",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE04NjZuN2pVWTZsN3dKVkVraVZLMk1JbTNWSDcwcXBac0JYY1lteUdFaXlJV2l2WTg0TVhVYkp4SFhXMGJnVElvVE5wSnFaQ2tLNE1mZEttbmFMRk1Q?oc=5",
+          "published": "Thu, 21 May 2026 07:00:00 GMT",
+          "source": "뉴스핌",
           "positiveHits": [
             "반도체"
           ],
@@ -7813,10 +7827,10 @@
           "score": 7
         },
         {
-          "title": "우리자산운용, 반도체밸류체인액티브 ETF 최근 1년 수익률 1위 기록 - 뉴스핌",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE04NjZuN2pVWTZsN3dKVkVraVZLMk1JbTNWSDcwcXBac0JYY1lteUdFaXlJV2l2WTg0TVhVYkp4SFhXMGJnVElvVE5wSnFaQ2tLNE1mZEttbmFMRk1Q?oc=5",
-          "published": "Thu, 21 May 2026 07:00:00 GMT",
-          "source": "뉴스핌",
+          "title": "우리자산운용, 'WON 반도체밸류체인액티브 ETF' 수익률 173%...반도체 액티브 ETF 1위 - 더밸류뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1FNlNudVNUOFNKcF9abUdPVVd0XzVwSmExUHpYQk91Zjk4clA0eEZ1MmFJSTVOTXBYdy1sbnM4WjNMZUtabkVyR2IwZkRPbUVNTUtoeQ?oc=5",
+          "published": "Thu, 19 Feb 2026 08:00:00 GMT",
+          "source": "더밸류뉴스",
           "positiveHits": [
             "반도체"
           ],
@@ -8122,10 +8136,10 @@
           "score": 7
         },
         {
-          "title": "TIME Korea플러스배당액티브 ETF, 6월 특별배당 실시 - 월요신문",
-          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XTmFTdmh1amkza21oM01xWlJmT2xfN04yZk5KXzdBOUI4a19KaU1yY3FmUjQ3NlQ2UnZvR19GS1FiLThBdG5MQWp5RHpqTkZzallUdjY0S01qYm5KbWhfOW91WVlObC1YdWc?oc=5",
-          "published": "Wed, 24 Jun 2026 23:59:03 GMT",
-          "source": "월요신문",
+          "title": "타임폴리오운용, 'TIME Korea플러스배당액티브 ETF' 6월 특별배당 지급 - 메트로신문",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE12c0VJaWc4UlkxdGVTLWQ4c19sT3h2ak0wdzI5Zm9rajZUcWtlbjFaNjFBeS1NQUFUeWhmTFV1TXpNY1ZzWUhCMDB2UllfTEloMFNQbml0elhva3puVWtYdw?oc=5",
+          "published": "Thu, 25 Jun 2026 00:19:23 GMT",
+          "source": "메트로신문",
           "positiveHits": [
             "배당"
           ],
@@ -8133,10 +8147,10 @@
           "score": 7
         },
         {
-          "title": "타임폴리오운용, 'TIME Korea플러스배당액티브 ETF' 6월 특별배당 지급 - 메트로신문",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE12c0VJaWc4UlkxdGVTLWQ4c19sT3h2ak0wdzI5Zm9rajZUcWtlbjFaNjFBeS1NQUFUeWhmTFV1TXpNY1ZzWUhCMDB2UllfTEloMFNQbml0elhva3puVWtYdw?oc=5",
-          "published": "Thu, 25 Jun 2026 00:19:23 GMT",
-          "source": "메트로신문",
+          "title": "TIME Korea플러스배당액티브 ETF, 6월 특별배당 실시 - 월요신문",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XTmFTdmh1amkza21oM01xWlJmT2xfN04yZk5KXzdBOUI4a19KaU1yY3FmUjQ3NlQ2UnZvR19GS1FiLThBdG5MQWp5RHpqTkZzallUdjY0S01qYm5KbWhfOW91WVlObC1YdWc?oc=5",
+          "published": "Wed, 24 Jun 2026 23:59:03 GMT",
+          "source": "월요신문",
           "positiveHits": [
             "배당"
           ],
