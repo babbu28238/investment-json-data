@@ -1,12 +1,12 @@
 {
-  "version": "A247",
-  "generatedAt": "2026-06-25T21:08:21",
+  "version": "A248",
+  "generatedAt": "2026-06-25T21:13:38",
   "universeCount": 0,
   "allCandidateCount": 0,
   "candidateCount": 25,
   "errorCount": 0,
   "top": [],
-  "status": "naver_consensus_target",
+  "status": "naver_target_chart_stop",
   "scoreModel": "non-empty-final-json",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -154,12 +154,14 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 17,
+  "targetPriceCandidateCount": 18,
   "rawTargetRows": 0,
   "reliableTargetCandidateCount": 2,
   "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
   "source": "target_price_bands_a244.details",
-  "targetUpsideCandidateCount": 17,
+  "targetUpsideCandidateCount": 18,
   "candidateSource": "stock_candidates_ai_scored.json",
-  "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
+  "targetSource": "naver_consensus_target",
+  "chartStopCandidateCount": 25,
+  "stopGuide": "target_60_percent + chart_stop_price"
 }
