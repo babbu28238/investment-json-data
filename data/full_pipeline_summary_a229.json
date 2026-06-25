@@ -1,13 +1,13 @@
 {
   "version": "A229",
-  "generatedAt": "2026-06-24T17:29:53",
+  "generatedAt": "2026-06-25T17:33:55",
   "steps": [
     {
       "name": "A222_PRICE",
       "script": "scripts/overwrite_candidate_real_close_a222.py",
       "status": "ok",
       "returnCode": 0,
-      "stdout": "KRX 로그인 실패: KRX_ID 또는 KRX_PW 환경 변수가 설정되지 않았습니다.\n{'version': 'A222', 'generatedAt': '2026-06-24T17:29:55', 'universeCount': 0, 'candidateCount': 0, 'errorCount': 0, 'top': [], 'status': 'ok', 'scoreModel': 'chart+supply+news+macro-risk+detail', 'output': 'stock_candidates_ai_scored.json', 'priceUpdatedCount': 0, 'priceMissingCount': 0, 'zeroBeforeCount': 0, 'usedPriceDate': {'KOSPI': '', 'KOSDAQ': ''}, 'priceSource': 'pykrx_by_date', 'priceFailedCount': 0, 'zeroAfterCount': 0, 'scoreUpdatedCount': 0, 'scoreFailedCount': 0, 'priceCount': 0, 'chartScoreCount': 0, 'supplyScoreCount': 0, 'newsScoreCount': 0, 'scoreFormula': 'chart35+supply30+news20+fundamental10+risk10', 'supplyOkCount': 0, 'supplyFailCount': 0}\nHanwhaOcean: None\n",
+      "stdout": "KRX 로그인 실패: KRX_ID 또는 KRX_PW 환경 변수가 설정되지 않았습니다.\n{'version': 'A222', 'generatedAt': '2026-06-25T17:33:57', 'universeCount': 0, 'allCandidateCount': 0, 'candidateCount': 0, 'errorCount': 0, 'top': [], 'status': 'ok', 'scoreModel': 'non-empty-final-json', 'output': 'stock_candidates_ai_scored.json', 'priceUpdatedCount': 0, 'priceFailedCount': 0, 'zeroAfterCount': 0, 'priceSource': 'pykrx_by_date', 'scoreUpdatedCount': 0, 'scoreFailedCount': 0, 'priceCount': 0, 'chartScoreCount': 0, 'supplyScoreCount': 0, 'newsScoreCount': 0, 'scoreFormula': 'chart35+supply30+news20+fundamental10+risk10'}\nHanwhaOcean: None\n",
       "stderr": ""
     },
     {
@@ -15,7 +15,7 @@
       "script": "scripts/build_real_score_engine_a225.py",
       "status": "ok",
       "returnCode": 0,
-      "stdout": "KRX 로그인 실패: KRX_ID 또는 KRX_PW 환경 변수가 설정되지 않았습니다.\n{'version': 'A225', 'generatedAt': '2026-06-24T17:29:55', 'universeCount': 0, 'candidateCount': 0, 'errorCount': 0, 'top': [], 'status': 'real_score_engine', 'scoreModel': 'chart+supply+news+macro-risk+detail', 'output': 'stock_candidates_ai_scored.json', 'priceUpdatedCount': 0, 'priceMissingCount': 0, 'zeroBeforeCount': 0, 'usedPriceDate': {'KOSPI': '', 'KOSDAQ': ''}, 'priceSource': 'pykrx_by_date', 'priceFailedCount': 0, 'zeroAfterCount': 0, 'scoreUpdatedCount': 0, 'scoreFailedCount': 0, 'priceCount': 0, 'chartScoreCount': 0, 'supplyScoreCount': 0, 'newsScoreCount': 0, 'scoreFormula': 'chart35+supply30+news20+fundamental10+risk10', 'supplyOkCount': 0, 'supplyFailCount': 0}\n",
+      "stdout": "KRX 로그인 실패: KRX_ID 또는 KRX_PW 환경 변수가 설정되지 않았습니다.\n{'version': 'A225', 'generatedAt': '2026-06-25T17:33:57', 'universeCount': 0, 'allCandidateCount': 0, 'candidateCount': 0, 'errorCount': 0, 'top': [], 'status': 'real_score_engine', 'scoreModel': 'non-empty-final-json', 'output': 'stock_candidates_ai_scored.json', 'priceUpdatedCount': 0, 'priceFailedCount': 0, 'zeroAfterCount': 0, 'priceSource': 'pykrx_by_date', 'scoreUpdatedCount': 0, 'scoreFailedCount': 0, 'priceCount': 0, 'chartScoreCount': 0, 'supplyScoreCount': 0, 'newsScoreCount': 0, 'scoreFormula': 'chart35+supply30+news20+fundamental10+risk10'}\n",
       "stderr": ""
     },
     {
@@ -23,7 +23,7 @@
       "script": "scripts/build_supply_engine_a228.py",
       "status": "ok",
       "returnCode": 0,
-      "stdout": "KRX 로그인 실패: KRX_ID 또는 KRX_PW 환경 변수가 설정되지 않았습니다.\n{'version': 'A228', 'generatedAt': '2026-06-24T17:29:56', 'universeCount': 0, 'candidateCount': 0, 'errorCount': 0, 'top': [], 'status': 'supply_engine', 'scoreModel': 'chart+supply+news+macro-risk+detail', 'output': 'stock_candidates_ai_scored.json', 'priceUpdatedCount': 0, 'priceMissingCount': 0, 'zeroBeforeCount': 0, 'usedPriceDate': {'KOSPI': '', 'KOSDAQ': ''}, 'priceSource': 'pykrx_by_date', 'priceFailedCount': 0, 'zeroAfterCount': 0, 'scoreUpdatedCount': 0, 'scoreFailedCount': 0, 'priceCount': 0, 'chartScoreCount': 0, 'supplyScoreCount': 0, 'newsScoreCount': 0, 'scoreFormula': 'chart35+supply30+news20+fundamental10+risk10', 'supplyOkCount': 0, 'supplyFailCount': 0}\n",
+      "stdout": "KRX 로그인 실패: KRX_ID 또는 KRX_PW 환경 변수가 설정되지 않았습니다.\n{'version': 'A228', 'generatedAt': '2026-06-25T17:33:58', 'universeCount': 0, 'allCandidateCount': 0, 'candidateCount': 0, 'errorCount': 0, 'top': [], 'status': 'supply_engine', 'scoreModel': 'non-empty-final-json', 'output': 'stock_candidates_ai_scored.json', 'priceUpdatedCount': 0, 'priceFailedCount': 0, 'zeroAfterCount': 0, 'priceSource': 'pykrx_by_date', 'scoreUpdatedCount': 0, 'scoreFailedCount': 0, 'priceCount': 0, 'chartScoreCount': 0, 'supplyScoreCount': 0, 'newsScoreCount': 0, 'scoreFormula': 'chart35+supply30+news20+fundamental10+risk10', 'supplyOkCount': 0, 'supplyFailCount': 0}\n",
       "stderr": ""
     }
   ],
@@ -37,24 +37,19 @@
   },
   "summary": {
     "version": "A229",
-    "generatedAt": "2026-06-24T17:29:53",
+    "generatedAt": "2026-06-25T17:33:55",
     "universeCount": 0,
+    "allCandidateCount": 0,
     "candidateCount": 0,
     "errorCount": 0,
     "top": [],
     "status": "full_pipeline_partial",
-    "scoreModel": "chart+supply+news+macro-risk+detail",
+    "scoreModel": "non-empty-final-json",
     "output": "stock_candidates_ai_scored.json",
     "priceUpdatedCount": 0,
-    "priceMissingCount": 0,
-    "zeroBeforeCount": 0,
-    "usedPriceDate": {
-      "KOSPI": "",
-      "KOSDAQ": ""
-    },
-    "priceSource": "pykrx_by_date",
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
