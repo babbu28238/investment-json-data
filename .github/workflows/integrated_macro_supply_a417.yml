@@ -1,0 +1,32 @@
+name: Integrated Macro Supply A417
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '50 8 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  integrated-macro-supply-a417:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy pykrx
+      - name: Integrate macro and supply
+        run: python scripts/integrated_macro_supply_a417.py
+      - name: Commit integrated macro supply data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/realtime_recommendations_a405.json data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/integrated_macro_supply_a417.json data/integrated_macro_supply_debug_a417.json
+          git commit -m "Integrated macro supply A417" || echo "No changes"
+          git push
