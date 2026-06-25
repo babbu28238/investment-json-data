@@ -1,0 +1,40 @@
+name: Deploy Readiness Gate A421
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-readiness-gate-a421:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deploy readiness
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          summary_path = pathlib.Path('data/market_scanner_summary.json')
+          if not summary_path.exists():
+              print('FAIL: data/market_scanner_summary.json 없음')
+              sys.exit(1)
+          s=json.loads(summary_path.read_text(encoding='utf-8'))
+          print(json.dumps(s, ensure_ascii=False, indent=2))
+          ok=True
+          if not str(s.get('universeSource','')).startswith('pykrx:'):
+              print('FAIL: universeSource가 pykrx가 아님')
+              ok=False
+          if int(s.get('universeCount',0)) < 1000:
+              print('FAIL: universeCount가 너무 작음')
+              ok=False
+          if int(s.get('chartConnected',0)) <= 0:
+              print('FAIL: chartConnected가 0')
+              ok=False
+          if int(s.get('supplyConnected',0)) <= 0 and int(s.get('supplyPartial',0)) <= 0:
+              print('FAIL: 수급 연결/부분수집 모두 0')
+              ok=False
+          if not ok:
+              sys.exit(1)
+          print('PASS: A421 deploy readiness gate passed')
+          PY
