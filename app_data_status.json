@@ -1,12 +1,142 @@
 {
-  "version": "V222 PYTHON COLLECTOR FAST",
-  "generatedAt": "2026-06-24 17:20:49",
-  "candidateCount": 80,
-  "sGradeCount": 1,
-  "aGradeCount": 60,
-  "sourceInput": "stock_candidates_input.csv",
-  "output": "stock_candidates.json",
-  "status": "success",
-  "warnings": [],
-  "errors": []
+  "version": "V284_RECOMMENDATION_SCORE_ENGINE",
+  "updatedAt": "2026-06-25 22:33:00",
+  "candidateCount": 50,
+  "message": "V284 최종 추천 점수 엔진 반영 완료",
+  "supplyMatched": 80,
+  "reportMatched": 80,
+  "chartMatched": 0,
+  "fieldsUpdated": 1280,
+  "status": "ok",
+  "sGradeCount": 0,
+  "aGradeCount": 0,
+  "recommendationSummary": {
+    "actionCounts": {
+      "관찰상위": 2,
+      "관찰": 36,
+      "제외검토": 12
+    },
+    "gradeCounts": {
+      "B": 2,
+      "C": 36,
+      "D": 12
+    },
+    "topCandidates": [
+      {
+        "rank": 1,
+        "name": "대한항공",
+        "code": "003490",
+        "score": 73,
+        "grade": "B",
+        "action": "관찰상위",
+        "breakdown": {
+          "technicalScore": 73,
+          "supplyScore": 80,
+          "newsScore": 100,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "외국인·기관 수급 우위"
+        }
+      },
+      {
+        "rank": 2,
+        "name": "TIGER 반도체TOP10레버리지",
+        "code": "488080",
+        "score": 70,
+        "grade": "B",
+        "action": "관찰상위",
+        "breakdown": {
+          "technicalScore": 66,
+          "supplyScore": 80,
+          "newsScore": 100,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "외국인·기관 수급 우위"
+        }
+      },
+      {
+        "rank": 3,
+        "name": "TIGER 반도체",
+        "code": "091230",
+        "score": 69,
+        "grade": "C",
+        "action": "관찰",
+        "breakdown": {
+          "technicalScore": 68,
+          "supplyScore": 73,
+          "newsScore": 100,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        }
+      },
+      {
+        "rank": 4,
+        "name": "파마리서치",
+        "code": "214450",
+        "score": 69,
+        "grade": "C",
+        "action": "관찰",
+        "breakdown": {
+          "technicalScore": 69,
+          "supplyScore": 73,
+          "newsScore": 100,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        }
+      },
+      {
+        "rank": 5,
+        "name": "KODEX 레버리지",
+        "code": "122630",
+        "score": 68,
+        "grade": "C",
+        "action": "관찰",
+        "breakdown": {
+          "technicalScore": 66,
+          "supplyScore": 80,
+          "newsScore": 85,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "외국인·기관 수급 우위"
+        }
+      }
+    ]
+  }
 }
