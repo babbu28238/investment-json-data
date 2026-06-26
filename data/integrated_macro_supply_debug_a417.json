@@ -1,9 +1,9 @@
 {
   "summary": {
     "version": "A417",
-    "generatedAt": "2026-06-25T17:00:49",
+    "generatedAt": "2026-06-26T11:32:37",
     "status": "integrated_macro_supply",
-    "universeSource": "fallback_minimal",
+    "universeSource": "fallback_existing_json",
     "universeCount": 5,
     "naverIncludedCount": 5,
     "naverMissingExcludedCount": 0,
@@ -14,6 +14,7 @@
     "output": "realtime_recommendations_a405.json",
     "candidateCount": 5,
     "krxSupplyCollectedCount": 0,
+    "krxSupplyFailedCount": 5,
     "partialSupplyCollectedCount": 5,
     "supplyFailedCount": 0,
     "macroAppliedCount": 0,
@@ -22,11 +23,89 @@
   },
   "items": [
     {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "supplyStatus": "부분수집",
+      "supplyScore": 32,
+      "foreignNetBuy": -677920,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 0,
+      "macroReasons": [],
+      "source": "naver_broker_foreign_estimate",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
       "code": "272210",
       "name": "한화시스템",
       "supplyStatus": "부분수집",
       "supplyScore": 68,
-      "foreignNetBuy": 103254,
+      "foreignNetBuy": 173122,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 0,
+      "macroReasons": [],
+      "source": "naver_broker_foreign_estimate",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "supplyStatus": "부분수집",
+      "supplyScore": 32,
+      "foreignNetBuy": -115690,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 0,
+      "macroReasons": [],
+      "source": "naver_broker_foreign_estimate",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "supplyStatus": "부분수집",
+      "supplyScore": 68,
+      "foreignNetBuy": 35647,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
       "macroAdjustmentScore": 0,
@@ -52,85 +131,7 @@
       "name": "삼성전자",
       "supplyStatus": "부분수집",
       "supplyScore": 32,
-      "foreignNetBuy": -4745377,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "macroAdjustmentScore": 0,
-      "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
-      "krxDebug": [
-        {
-          "method": "value_detail_True",
-          "ok": true,
-          "rows": 0,
-          "cols": []
-        },
-        {
-          "method": "value_detail_False",
-          "ok": true,
-          "rows": 0,
-          "cols": []
-        }
-      ]
-    },
-    {
-      "code": "042660",
-      "name": "한화오션",
-      "supplyStatus": "부분수집",
-      "supplyScore": 68,
-      "foreignNetBuy": 126328,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "macroAdjustmentScore": 0,
-      "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
-      "krxDebug": [
-        {
-          "method": "value_detail_True",
-          "ok": true,
-          "rows": 0,
-          "cols": []
-        },
-        {
-          "method": "value_detail_False",
-          "ok": true,
-          "rows": 0,
-          "cols": []
-        }
-      ]
-    },
-    {
-      "code": "034020",
-      "name": "두산에너빌리티",
-      "supplyStatus": "부분수집",
-      "supplyScore": 32,
-      "foreignNetBuy": -330892,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "macroAdjustmentScore": 0,
-      "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
-      "krxDebug": [
-        {
-          "method": "value_detail_True",
-          "ok": true,
-          "rows": 0,
-          "cols": []
-        },
-        {
-          "method": "value_detail_False",
-          "ok": true,
-          "rows": 0,
-          "cols": []
-        }
-      ]
-    },
-    {
-      "code": "000660",
-      "name": "SK하이닉스",
-      "supplyStatus": "부분수집",
-      "supplyScore": 32,
-      "foreignNetBuy": -297061,
+      "foreignNetBuy": -7877687,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
       "macroAdjustmentScore": 0,
