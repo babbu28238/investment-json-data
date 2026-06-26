@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-06-25T21:03:04",
+  "generatedAt": "2026-06-26T16:28:03",
   "details": [
     {
       "code": "042660",
@@ -102,18 +102,21 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        1550,
-        1625,
-        5000
+        1400,
+        2000,
+        5000,
+        550000
       ],
-      "acceptedPrices": [],
+      "acceptedPrices": [
+        550000
+      ],
       "rejected": [
         {
-          "price": 1550,
+          "price": 1400,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 1625,
+          "price": 2000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -121,23 +124,38 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
+      "median": 550000,
+      "realisticTargetPrice": 440000,
+      "observeTimingPrice": 385000,
+      "stopTimingPrice": 330000,
+      "targetCount": 1
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        1625
+        1400,
+        2000,
+        5000,
+        8000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1625,
+          "price": 1400,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 2000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 8000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -394,14 +412,18 @@
       "code": "035420",
       "name": "NAVER",
       "currentPrice": 220000,
-      "rawPrices": [],
-      "acceptedPrices": [],
+      "rawPrices": [
+        400000
+      ],
+      "acceptedPrices": [
+        400000
+      ],
       "rejected": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
+      "median": 400000,
+      "realisticTargetPrice": 320000,
+      "observeTimingPrice": 280000,
+      "stopTimingPrice": 240000,
+      "targetCount": 1
     },
     {
       "code": "035720",
@@ -591,12 +613,17 @@
       "name": "레인보우로보틱스",
       "currentPrice": 170000,
       "rawPrices": [
-        7000
+        7000,
+        8000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 7000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 8000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -616,6 +643,7 @@
         3230,
         6000,
         6500,
+        8000,
         8300
       ],
       "acceptedPrices": [],
@@ -641,6 +669,10 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 8000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 8300,
           "reason": "1만원 미만 잡음 제거"
         }
@@ -656,12 +688,17 @@
       "name": "에코프로",
       "currentPrice": 70000,
       "rawPrices": [
-        3230
+        3230,
+        8000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 3230,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 8000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -678,6 +715,7 @@
       "rawPrices": [
         2026,
         3230,
+        8000,
         500000
       ],
       "acceptedPrices": [
@@ -690,6 +728,10 @@
         },
         {
           "price": 3230,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 8000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
