@@ -1,17 +1,79 @@
 {
   "version": "A243",
-  "generatedAt": "2026-06-25T20:52:41",
+  "generatedAt": "2026-06-26T15:39:26",
   "summary": {
     "version": "A243",
-    "generatedAt": "2026-06-25T20:52:41",
-    "universeCount": 0,
-    "allCandidateCount": 0,
-    "candidateCount": 0,
-    "errorCount": 0,
-    "top": [],
+    "generatedAt": "2026-06-26T15:39:26",
     "status": "report_target_collector",
-    "scoreModel": "non-empty-final-json",
+    "universeSource": "existing_json",
+    "universeCount": 0,
+    "includedCount": 0,
+    "priceConnected": 0,
+    "newsConnected": 0,
+    "reportConnected": 0,
+    "chartConnected": 0,
+    "supplyConnected": 0,
+    "supplyPartial": 0,
+    "macroApplied": 0,
+    "naverMissing": 0,
+    "averageDataConnectionScore": 0,
+    "overallMacroScore": 54,
+    "overallMarketView": "중립 / 관망",
     "output": "stock_candidates_ai_scored.json",
+    "universeDebug": {
+      "pykrx": {
+        "error": "index -1 is out of bounds for axis 0 with size 0"
+      },
+      "naver": {
+        "debug": [
+          {
+            "market": "KOSPI",
+            "page": 1,
+            "found": 0
+          },
+          {
+            "market": "KOSPI",
+            "page": 2,
+            "found": 0
+          },
+          {
+            "market": "KOSPI",
+            "page": 3,
+            "found": 0
+          },
+          {
+            "market": "KOSPI",
+            "page": 4,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 1,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 2,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 3,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 4,
+            "found": 0
+          }
+        ],
+        "count": 0
+      },
+      "existing": {
+        "count": 0
+      }
+    },
+    "candidateCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -158,6 +220,38 @@
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
     "targetPriceCandidateCount": 0,
+    "candidateSource": "",
+    "candidateSourcesTried": [
+      {
+        "path": "data/stock_candidates_ai_scored.json",
+        "count": 0
+      },
+      {
+        "path": "data/stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/market_universe.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
+      }
+    ],
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
     "rawTargetRows": 0
   },
   "details": []
