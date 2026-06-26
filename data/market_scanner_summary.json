@@ -1,7 +1,7 @@
 {
-  "version": "A229",
-  "generatedAt": "2026-06-26T12:28:38",
-  "status": "full_pipeline_partial",
+  "version": "A230",
+  "generatedAt": "2026-06-26T12:32:04",
+  "status": "supply_ticker_engine",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -85,5 +85,68 @@
   "supplyOkCount": 0,
   "supplyFailCount": 0,
   "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-  "ready": false
+  "ready": false,
+  "usedSupplyDates": [],
+  "supplyErrorSample": [
+    {
+      "date": "20260626",
+      "market": "KOSPI",
+      "investor": "외국인",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSDAQ",
+      "investor": "외국인",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSPI",
+      "investor": "기관합계",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSDAQ",
+      "investor": "기관합계",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSPI",
+      "investor": "연기금",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSDAQ",
+      "investor": "연기금",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSPI",
+      "investor": "투신",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSDAQ",
+      "investor": "투신",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSPI",
+      "investor": "금융투자",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    },
+    {
+      "date": "20260626",
+      "market": "KOSDAQ",
+      "investor": "금융투자",
+      "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+    }
+  ]
 }
