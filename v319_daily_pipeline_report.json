@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-06-26 02:24:23 KST",
+  "updatedAt": "2026-06-26 20:50:39 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -14,21 +14,21 @@
   "files": {
     "stock_candidates.json": {
       "exists": true,
-      "candidateCount": 50,
+      "candidateCount": 80,
       "sampleNames": [
-        "대한항공",
-        "TIGER 반도체TOP10레버리지",
-        "TIGER 반도체",
-        "파마리서치",
-        "KODEX 레버리지",
-        "피에스케이",
-        "브이엠",
-        "후성",
+        "알테오젠",
+        "삼성전기",
+        "KODEX CD금리액티브(합성)",
+        "삼성생명",
         "원익IPS",
-        "KODEX CD금리액티브(합성)"
+        "현대차",
+        "LG이노텍",
+        "한미반도체",
+        "미래에셋증권",
+        "KB금융"
       ],
       "sampleVersions": {
-        "V299_LIVE_RECOMMENDATION_META_FIX": 10
+        "unknown": 10
       }
     },
     "app_data_bundle.json": {
@@ -39,12 +39,12 @@
     "stock_lookup_index.json": {
       "exists": true,
       "stockCount": 2528,
-      "recommendedCount": 79
+      "recommendedCount": 50
     },
     "stock_lookup_compact.json": {
       "exists": true,
       "stockCount": 2528,
-      "recommendedCount": 79
+      "recommendedCount": 50
     }
   },
   "dailyUseGuide": {
