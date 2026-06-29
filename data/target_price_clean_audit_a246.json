@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-06-26T16:28:03",
+  "generatedAt": "2026-06-29T17:12:23",
   "details": [
     {
       "code": "042660",
@@ -102,63 +102,33 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        1400,
-        2000,
         5000,
-        550000
+        9500
       ],
-      "acceptedPrices": [
-        550000
-      ],
+      "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 1400,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2000,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 9500,
+          "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 550000,
-      "realisticTargetPrice": 440000,
-      "observeTimingPrice": 385000,
-      "stopTimingPrice": 330000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [
-        1400,
-        2000,
-        5000,
-        8000
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 1400,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 8000,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -413,12 +383,18 @@
       "name": "NAVER",
       "currentPrice": 220000,
       "rawPrices": [
+        2026,
         400000
       ],
       "acceptedPrices": [
         400000
       ],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        }
+      ],
       "median": 400000,
       "realisticTargetPrice": 320000,
       "observeTimingPrice": 280000,
@@ -432,7 +408,6 @@
       "rawPrices": [
         2025,
         2026,
-        2500,
         5000
       ],
       "acceptedPrices": [],
@@ -444,10 +419,6 @@
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 2500,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 5000,
