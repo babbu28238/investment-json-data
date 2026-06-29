@@ -1,7 +1,7 @@
 {
-  "version": "A243",
-  "generatedAt": "2026-06-29T16:45:15",
-  "status": "report_target_collector",
+  "version": "A244",
+  "generatedAt": "2026-06-29T16:47:00",
+  "status": "target_fallback_candidates",
   "universeSource": "none",
   "universeCount": 0,
   "includedCount": 0,
@@ -18,7 +18,7 @@
   "overallMarketView": "중립 / 관망",
   "output": "stock_candidates_ai_scored.json",
   "universeDebug": {},
-  "candidateCount": 0,
+  "candidateCount": 25,
   "priceUpdatedCount": 0,
   "priceFailedCount": 0,
   "zeroAfterCount": 0,
@@ -164,8 +164,8 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 0,
-  "candidateSource": "",
+  "targetPriceCandidateCount": 23,
+  "candidateSource": "built_in_fallback_top25",
   "candidateSourcesTried": [
     {
       "path": "data/stock_candidates_ai_scored.json",
@@ -197,5 +197,5 @@
     }
   ],
   "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-  "rawTargetRows": 0
+  "rawTargetRows": 98
 }
