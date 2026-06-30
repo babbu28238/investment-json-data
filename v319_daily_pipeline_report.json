@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-06-29 22:15:51 KST",
+  "updatedAt": "2026-06-30 20:51:22 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -15,8 +15,21 @@
     "stock_candidates.json": {
       "exists": true,
       "candidateCount": 80,
-      "sampleNames": [],
-      "sampleVersions": {}
+      "sampleNames": [
+        "KODEX 레버리지",
+        "삼성전기",
+        "KODEX CD금리액티브(합성)",
+        "현대차",
+        "LG전자",
+        "HPSP",
+        "원익IPS",
+        "한미반도체",
+        "한화에어로스페이스",
+        "KB금융"
+      ],
+      "sampleVersions": {
+        "unknown": 10
+      }
     },
     "app_data_bundle.json": {
       "exists": true,
@@ -26,12 +39,12 @@
     "stock_lookup_index.json": {
       "exists": true,
       "stockCount": 2530,
-      "recommendedCount": 50
+      "recommendedCount": 55
     },
     "stock_lookup_compact.json": {
       "exists": true,
       "stockCount": 2530,
-      "recommendedCount": 50
+      "recommendedCount": 55
     }
   },
   "dailyUseGuide": {
