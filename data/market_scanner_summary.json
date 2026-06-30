@@ -1,7 +1,7 @@
 {
-  "version": "A246",
-  "generatedAt": "2026-06-30T16:31:36",
-  "status": "target_clean_fallback_fix",
+  "version": "A248",
+  "generatedAt": "2026-06-30T16:54:44",
+  "status": "naver_target_chart_stop",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -252,5 +252,9 @@
   "rawTargetRows": 97,
   "reliableTargetCandidateCount": 1,
   "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
-  "source": "target_price_bands_a244.details"
+  "source": "target_price_bands_a244.details",
+  "targetUpsideCandidateCount": 8,
+  "chartStopCandidateCount": 25,
+  "targetSource": "naver_consensus_target",
+  "stopGuide": "target_60_percent + chart_stop_price"
 }
