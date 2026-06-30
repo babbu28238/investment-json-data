@@ -1,11 +1,11 @@
 {
   "version": "A241",
-  "generatedAt": "2026-06-29T16:41:14",
+  "generatedAt": "2026-06-30T15:40:37",
   "summary": {
     "version": "A241",
-    "generatedAt": "2026-06-29T16:41:14",
+    "generatedAt": "2026-06-30T15:40:37",
     "status": "target_price_bands",
-    "universeSource": "none",
+    "universeSource": "existing_json",
     "universeCount": 0,
     "includedCount": 0,
     "priceConnected": 0,
@@ -20,7 +20,59 @@
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망",
     "output": "stock_candidates_ai_scored.json",
-    "universeDebug": {},
+    "universeDebug": {
+      "pykrx": {
+        "error": "index -1 is out of bounds for axis 0 with size 0"
+      },
+      "naver": {
+        "debug": [
+          {
+            "market": "KOSPI",
+            "page": 1,
+            "found": 0
+          },
+          {
+            "market": "KOSPI",
+            "page": 2,
+            "found": 0
+          },
+          {
+            "market": "KOSPI",
+            "page": 3,
+            "found": 0
+          },
+          {
+            "market": "KOSPI",
+            "page": 4,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 1,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 2,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 3,
+            "found": 0
+          },
+          {
+            "market": "KOSDAQ",
+            "page": 4,
+            "found": 0
+          }
+        ],
+        "count": 0
+      },
+      "existing": {
+        "count": 0
+      }
+    },
     "candidateCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
