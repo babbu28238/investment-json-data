@@ -1,0 +1,44 @@
+name: Final Data Refresh A426
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 9 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  final-data-refresh-a426:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml pandas numpy pykrx
+      - name: Build stock universe
+        run: |
+          if [ -f scripts/stock_universe_a424.py ]; then python scripts/stock_universe_a424.py; fi
+      - name: Run macro environment
+        run: |
+          if [ -f scripts/macro_market_environment_a416.py ]; then python scripts/macro_market_environment_a416.py; fi
+      - name: Run robust real data engine
+        run: |
+          if [ -f scripts/robust_real_data_engine_a423.py ]; then python scripts/robust_real_data_engine_a423.py; fi
+      - name: Repair supply and macro
+        run: python scripts/supply_macro_repair_a426.py
+      - name: Write pipeline status
+        run: |
+          if [ -f scripts/full_data_pipeline_status_a423.py ]; then python scripts/full_data_pipeline_status_a423.py; fi
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/stock_universe_a424.json data/realtime_recommendations_a405.json data/stock_candidates_ai_scored.json data/market_scanner_summary.json data/data_pipeline_status_a423.json data/supply_macro_repair_summary_a426.json data/market_macro_environment.json || true
+          git commit -m "Final data refresh A426" || echo "No changes"
+          git push
