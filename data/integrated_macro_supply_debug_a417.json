@@ -1,38 +1,99 @@
 {
   "summary": {
     "version": "A417",
-    "generatedAt": "2026-06-26T11:32:37",
+    "generatedAt": "2026-06-30T11:33:03",
     "status": "integrated_macro_supply",
-    "universeSource": "fallback_existing_json",
-    "universeCount": 5,
-    "naverIncludedCount": 5,
-    "naverMissingExcludedCount": 0,
-    "targetCollectedCount": 5,
-    "supplyCollectedCount": 0,
-    "newsAvailableCount": 5,
-    "reportAvailableCount": 5,
+    "candidateCount": 20,
+    "priceConnectedCount": 20,
+    "newsSummaryCount": 20,
+    "reportSummaryCount": 20,
+    "chartSummaryCount": 20,
+    "invalidPriceCandidateCount": 0,
     "output": "realtime_recommendations_a405.json",
-    "candidateCount": 5,
     "krxSupplyCollectedCount": 0,
-    "krxSupplyFailedCount": 5,
-    "partialSupplyCollectedCount": 5,
-    "supplyFailedCount": 0,
-    "macroAppliedCount": 0,
+    "krxSupplyFailedCount": 20,
+    "partialSupplyCollectedCount": 0,
+    "supplyFailedCount": 20,
+    "macroAppliedCount": 17,
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망"
   },
   "items": [
     {
+      "code": "047810",
+      "name": "한국항공우주",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 3,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "원자재: 유가 상승은 정유·에너지 업종에는 긍정적이나 항공·운송 업종에는 비용 부담입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "068270",
+      "name": "셀트리온",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 5,
+      "macroReasons": [
+        "금리: 장기금리 하락은 반도체, 바이오, 플랫폼 등 성장주 밸류에이션에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
       "code": "000660",
       "name": "SK하이닉스",
-      "supplyStatus": "부분수집",
-      "supplyScore": 32,
-      "foreignNetBuy": -677920,
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
-      "macroAdjustmentScore": 0,
-      "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
+      "macroAdjustmentScore": 15,
+      "macroReasons": [
+        "금리: 장기금리 하락은 반도체, 바이오, 플랫폼 등 성장주 밸류에이션에 긍정적입니다.",
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
       "krxDebug": [
         {
           "method": "value_detail_True",
@@ -49,16 +110,16 @@
       ]
     },
     {
-      "code": "272210",
-      "name": "한화시스템",
-      "supplyStatus": "부분수집",
-      "supplyScore": 68,
-      "foreignNetBuy": 173122,
+      "code": "105560",
+      "name": "KB금융",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
       "macroAdjustmentScore": 0,
       "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
+      "source": "pykrx",
       "krxDebug": [
         {
           "method": "value_detail_True",
@@ -75,16 +136,18 @@
       ]
     },
     {
-      "code": "042660",
-      "name": "한화오션",
-      "supplyStatus": "부분수집",
-      "supplyScore": 32,
-      "foreignNetBuy": -115690,
+      "code": "196170",
+      "name": "알테오젠",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
-      "macroAdjustmentScore": 0,
-      "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
+      "macroAdjustmentScore": 5,
+      "macroReasons": [
+        "금리: 장기금리 하락은 반도체, 바이오, 플랫폼 등 성장주 밸류에이션에 긍정적입니다."
+      ],
+      "source": "pykrx",
       "krxDebug": [
         {
           "method": "value_detail_True",
@@ -101,16 +164,20 @@
       ]
     },
     {
-      "code": "034020",
-      "name": "두산에너빌리티",
-      "supplyStatus": "부분수집",
-      "supplyScore": 68,
-      "foreignNetBuy": 35647,
+      "code": "329180",
+      "name": "HD현대중공업",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
-      "macroAdjustmentScore": 0,
-      "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
+      "macroAdjustmentScore": 9,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다."
+      ],
+      "source": "pykrx",
       "krxDebug": [
         {
           "method": "value_detail_True",
@@ -129,14 +196,394 @@
     {
       "code": "005930",
       "name": "삼성전자",
-      "supplyStatus": "부분수집",
-      "supplyScore": 32,
-      "foreignNetBuy": -7877687,
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 15,
+      "macroReasons": [
+        "금리: 장기금리 하락은 반도체, 바이오, 플랫폼 등 성장주 밸류에이션에 긍정적입니다.",
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 9,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 5,
+      "macroReasons": [
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
       "institutionNetBuy": 0,
       "pensionNetBuy": 0,
       "macroAdjustmentScore": 0,
       "macroReasons": [],
-      "source": "naver_broker_foreign_estimate",
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 9,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 5,
+      "macroReasons": [
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "247540",
+      "name": "에코프로비엠",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 5,
+      "macroReasons": [
+        "금리: 장기금리 하락은 반도체, 바이오, 플랫폼 등 성장주 밸류에이션에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "064350",
+      "name": "현대로템",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 7,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 14,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 7,
+      "macroReasons": [
+        "원자재: 유가 상승은 정유·에너지 업종에는 긍정적이나 항공·운송 업종에는 비용 부담입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 7,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "035720",
+      "name": "카카오",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 0,
+      "macroReasons": [],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "010140",
+      "name": "삼성중공업",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 9,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "경기: 경기 회복은 반도체, 자동차, 조선, 화학, 철강에 유리합니다.",
+        "수출입: 수출 개선은 한국 증시 이익 전망에 직접적으로 긍정적입니다."
+      ],
+      "source": "pykrx",
+      "krxDebug": [
+        {
+          "method": "value_detail_True",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        },
+        {
+          "method": "value_detail_False",
+          "ok": true,
+          "rows": 0,
+          "cols": []
+        }
+      ]
+    },
+    {
+      "code": "012450",
+      "name": "한화에어로스페이스",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "macroAdjustmentScore": 3,
+      "macroReasons": [
+        "환율: 환율 상승은 수출주에는 긍정적이나 외국인 수급에는 부담입니다.",
+        "원자재: 유가 상승은 정유·에너지 업종에는 긍정적이나 항공·운송 업종에는 비용 부담입니다.",
+        "정책/중앙은행: 정책 지원은 방산, 원전, AI, 로봇, 반도체 업종에 긍정적입니다."
+      ],
+      "source": "pykrx",
       "krxDebug": [
         {
           "method": "value_detail_True",
