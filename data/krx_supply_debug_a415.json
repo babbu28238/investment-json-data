@@ -1,49 +1,22 @@
 {
   "summary": {
     "version": "A415",
-    "generatedAt": "2026-06-30T11:31:52",
+    "generatedAt": "2026-07-02T11:17:08",
     "status": "krx_supply_engine",
-    "candidateCount": 20,
-    "priceConnectedCount": 20,
-    "newsSummaryCount": 20,
-    "reportSummaryCount": 20,
-    "chartSummaryCount": 20,
-    "invalidPriceCandidateCount": 0,
+    "universeSource": "fallback_existing_json",
+    "universeCount": 20,
+    "naverIncludedCount": 20,
+    "naverMissingExcludedCount": 0,
+    "targetCollectedCount": 0,
+    "supplyCollectedCount": 0,
+    "newsAvailableCount": 20,
+    "reportAvailableCount": 20,
     "output": "realtime_recommendations_a405.json",
+    "candidateCount": 20,
     "krxSupplyCollectedCount": 0,
     "krxSupplyFailedCount": 20
   },
   "items": [
-    {
-      "code": "047810",
-      "name": "한국항공우주",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
     {
       "code": "068270",
       "name": "셀트리온",
@@ -75,8 +48,8 @@
       ]
     },
     {
-      "code": "000660",
-      "name": "SK하이닉스",
+      "code": "047810",
+      "name": "한국항공우주",
       "supplyStatus": "수집실패",
       "supplyScore": 50,
       "foreignNetBuy": 0,
@@ -135,98 +108,68 @@
       ]
     },
     {
+      "code": "064350",
+      "name": "현대로템",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "012450",
+      "name": "한화에어로스페이스",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
       "code": "196170",
       "name": "알테오젠",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "329180",
-      "name": "HD현대중공업",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "005930",
-      "name": "삼성전자",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "005380",
-      "name": "현대차",
       "supplyStatus": "수집실패",
       "supplyScore": 50,
       "foreignNetBuy": 0,
@@ -285,188 +228,98 @@
       ]
     },
     {
+      "code": "005930",
+      "name": "삼성전자",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
       "code": "035420",
       "name": "NAVER",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "000270",
-      "name": "기아",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "277810",
-      "name": "레인보우로보틱스",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "247540",
-      "name": "에코프로비엠",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "064350",
-      "name": "현대로템",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "042660",
-      "name": "한화오션",
-      "supplyStatus": "수집실패",
-      "supplyScore": 50,
-      "foreignNetBuy": 0,
-      "institutionNetBuy": 0,
-      "pensionNetBuy": 0,
-      "supplySource": "pykrx",
-      "debug": [
-        {
-          "method": "get_market_trading_value_by_date_detail_True",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_value_by_date_detail_False",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        },
-        {
-          "method": "get_market_trading_volume_by_date",
-          "ok": true,
-          "rows": 0,
-          "columns": []
-        }
-      ]
-    },
-    {
-      "code": "034020",
-      "name": "두산에너빌리티",
       "supplyStatus": "수집실패",
       "supplyScore": 50,
       "foreignNetBuy": 0,
@@ -525,8 +378,128 @@
       ]
     },
     {
-      "code": "035720",
-      "name": "카카오",
+      "code": "247540",
+      "name": "에코프로비엠",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "000270",
+      "name": "기아",
       "supplyStatus": "수집실패",
       "supplyScore": 50,
       "foreignNetBuy": 0,
@@ -585,8 +558,38 @@
       ]
     },
     {
-      "code": "012450",
-      "name": "한화에어로스페이스",
+      "code": "042660",
+      "name": "한화오션",
+      "supplyStatus": "수집실패",
+      "supplyScore": 50,
+      "foreignNetBuy": 0,
+      "institutionNetBuy": 0,
+      "pensionNetBuy": 0,
+      "supplySource": "pykrx",
+      "debug": [
+        {
+          "method": "get_market_trading_value_by_date_detail_True",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_value_by_date_detail_False",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        },
+        {
+          "method": "get_market_trading_volume_by_date",
+          "ok": true,
+          "rows": 0,
+          "columns": []
+        }
+      ]
+    },
+    {
+      "code": "035720",
+      "name": "카카오",
       "supplyStatus": "수집실패",
       "supplyScore": 50,
       "foreignNetBuy": 0,
