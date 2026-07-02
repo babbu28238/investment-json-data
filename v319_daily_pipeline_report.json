@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-07-01 21:17:24 KST",
+  "updatedAt": "2026-07-02 20:43:49 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -15,8 +15,21 @@
     "stock_candidates.json": {
       "exists": true,
       "candidateCount": 80,
-      "sampleNames": [],
-      "sampleVersions": {}
+      "sampleNames": [
+        "원익IPS",
+        "삼성전기",
+        "KODEX CD금리액티브(합성)",
+        "알테오젠",
+        "KODEX 코스닥150레버리지",
+        "KODEX 코스닥150",
+        "두산에너빌리티",
+        "HD현대일렉트릭",
+        "KB금융",
+        "HD현대중공업"
+      ],
+      "sampleVersions": {
+        "unknown": 10
+      }
     },
     "app_data_bundle.json": {
       "exists": true,
@@ -26,12 +39,12 @@
     "stock_lookup_index.json": {
       "exists": true,
       "stockCount": 2527,
-      "recommendedCount": 55
+      "recommendedCount": 59
     },
     "stock_lookup_compact.json": {
       "exists": true,
       "stockCount": 2527,
-      "recommendedCount": 55
+      "recommendedCount": 59
     }
   },
   "dailyUseGuide": {
