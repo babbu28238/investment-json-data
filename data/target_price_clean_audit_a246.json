@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-07-02T16:16:18",
+  "generatedAt": "2026-07-03T16:00:57",
   "details": [
     {
       "code": "042660",
@@ -24,11 +24,16 @@
       "name": "HD현대중공업",
       "currentPrice": 300000,
       "rawPrices": [
+        2026,
         6271,
         860000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
         {
           "price": 6271,
           "reason": "1만원 미만 잡음 제거"
@@ -103,16 +108,9 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [
-        1200
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 1200,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -124,18 +122,13 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        1200,
-        12330
+        2028
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1200,
+          "price": 2028,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 12330,
-          "reason": "현재가 대비 과도하게 낮음"
         }
       ],
       "median": 0,
@@ -205,6 +198,31 @@
       "name": "현대차",
       "currentPrice": 250000,
       "rawPrices": [
+        2027,
+        5000
+      ],
+      "acceptedPrices": [],
+      "rejected": [
+        {
+          "price": 2027,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "currentPrice": 115000,
+      "rawPrices": [
         5000
       ],
       "acceptedPrices": [],
@@ -221,23 +239,11 @@
       "targetCount": 0
     },
     {
-      "code": "000270",
-      "name": "기아",
-      "currentPrice": 115000,
-      "rawPrices": [],
-      "acceptedPrices": [],
-      "rejected": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
-    },
-    {
       "code": "105560",
       "name": "KB금융",
       "currentPrice": 172000,
       "rawPrices": [
+        2024,
         220000,
         225000
       ],
@@ -245,7 +251,12 @@
         220000,
         225000
       ],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 2024,
+          "reason": "연도 숫자 제거"
+        }
+      ],
       "median": 222500,
       "realisticTargetPrice": 178000,
       "observeTimingPrice": 156000,
@@ -257,9 +268,7 @@
       "name": "신한지주",
       "currentPrice": 60000,
       "rawPrices": [
-        1700,
         2026,
-        4000,
         9000,
         74000,
         133000,
@@ -271,16 +280,8 @@
       ],
       "rejected": [
         {
-          "price": 1700,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 4000,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 9000,
@@ -343,8 +344,6 @@
         4429,
         9000,
         9150,
-        43000,
-        105560,
         200000
       ],
       "acceptedPrices": [],
@@ -372,14 +371,6 @@
         {
           "price": 9150,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 43000,
-          "reason": "현재가 대비 과도하게 높음"
-        },
-        {
-          "price": 105560,
-          "reason": "현재가 대비 과도하게 높음"
         },
         {
           "price": 200000,
