@@ -1,7 +1,7 @@
 {
-  "version": "A246",
-  "generatedAt": "2026-07-03T16:00:57",
-  "status": "target_clean_fallback_fix",
+  "version": "A247",
+  "generatedAt": "2026-07-03T16:08:16",
+  "status": "naver_consensus_target",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -215,8 +215,8 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 12,
-  "candidateSource": "built_in_fallback_top25",
+  "targetPriceCandidateCount": 17,
+  "candidateSource": "stock_candidates_ai_scored.json",
   "candidateSourcesTried": [
     {
       "path": "data/stock_candidates_ai_scored.json",
@@ -251,5 +251,7 @@
   "rawTargetRows": 106,
   "reliableTargetCandidateCount": 5,
   "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
-  "source": "target_price_bands_a244.details"
+  "source": "target_price_bands_a244.details",
+  "targetUpsideCandidateCount": 17,
+  "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
 }
