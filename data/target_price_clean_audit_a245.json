@@ -1,6 +1,6 @@
 {
   "version": "A245",
-  "generatedAt": "2026-07-02T16:12:45",
+  "generatedAt": "2026-07-03T15:58:43",
   "details": [
     {
       "code": "042660",
@@ -30,14 +30,21 @@
       "name": "HD현대중공업",
       "currentPrice": 300000,
       "rawPrices": [
+        2,
         6,
+        26,
         271,
         860,
+        2026,
         6271,
         860000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
         {
           "price": 6271,
           "reason": "1만원 미만 잡음 제거"
@@ -45,6 +52,14 @@
         {
           "price": 860000,
           "reason": "현재가 대비 과도하게 높음(860,000 > 750,000)"
+        },
+        {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 26,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 6,
@@ -164,26 +179,9 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [
-        1,
-        200,
-        1200
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 1200,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 1,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 200,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -195,37 +193,22 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        1,
-        12,
-        200,
-        330,
-        1200,
-        12330
+        2,
+        28,
+        2028
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1200,
+          "price": 2028,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 12330,
-          "reason": "현재가 대비 과도하게 낮음(12,330 < 110,000)"
-        },
-        {
-          "price": 1,
+          "price": 2,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 200,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 12,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 330,
+          "price": 28,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -331,6 +314,46 @@
       "name": "현대차",
       "currentPrice": 250000,
       "rawPrices": [
+        2,
+        5,
+        27,
+        2027,
+        5000
+      ],
+      "acceptedPrices": [],
+      "rejected": [
+        {
+          "price": 2027,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 27,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "currentPrice": 115000,
+      "rawPrices": [
         5,
         5000
       ],
@@ -352,25 +375,15 @@
       "targetCount": 0
     },
     {
-      "code": "000270",
-      "name": "기아",
-      "currentPrice": 115000,
-      "rawPrices": [],
-      "acceptedPrices": [],
-      "rejected": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
-    },
-    {
       "code": "105560",
       "name": "KB금융",
       "currentPrice": 172000,
       "rawPrices": [
+        2,
+        24,
         220,
         225,
+        2024,
         220000,
         225000
       ],
@@ -379,6 +392,18 @@
         225000
       ],
       "rejected": [
+        {
+          "price": 2024,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 24,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 220,
           "reason": "1만원 미만 잡음 제거"
@@ -399,18 +424,13 @@
       "name": "신한지주",
       "currentPrice": 60000,
       "rawPrices": [
-        1,
         2,
-        4,
         9,
         26,
         74,
         133,
         157,
-        700,
-        1700,
         2026,
-        4000,
         9000,
         74000,
         133000,
@@ -422,16 +442,8 @@
       ],
       "rejected": [
         {
-          "price": 1700,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 4000,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 9000,
@@ -442,23 +454,11 @@
           "reason": "현재가 대비 과도하게 높음(157,000 > 150,000)"
         },
         {
-          "price": 1,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 700,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
           "price": 2,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 26,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 4,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -560,21 +560,16 @@
         4,
         9,
         26,
-        43,
-        105,
         150,
         200,
         201,
         429,
-        560,
         1201,
         2026,
         3000,
         4429,
         9000,
         9150,
-        43000,
-        105560,
         200000
       ],
       "acceptedPrices": [],
@@ -602,14 +597,6 @@
         {
           "price": 9150,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 43000,
-          "reason": "현재가 대비 과도하게 높음(43,000 > 40,000)"
-        },
-        {
-          "price": 105560,
-          "reason": "현재가 대비 과도하게 높음(105,560 > 40,000)"
         },
         {
           "price": 200000,
@@ -649,18 +636,6 @@
         },
         {
           "price": 150,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 43,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 105,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 560,
           "reason": "1만원 미만 잡음 제거"
         },
         {
