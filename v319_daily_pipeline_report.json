@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-07-03 20:41:58 KST",
+  "updatedAt": "2026-07-06 21:59:12 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -15,8 +15,21 @@
     "stock_candidates.json": {
       "exists": true,
       "candidateCount": 80,
-      "sampleNames": [],
-      "sampleVersions": {}
+      "sampleNames": [
+        "원익IPS",
+        "삼성전기",
+        "TIGER 반도체TOP10",
+        "KODEX CD금리액티브(합성)",
+        "SK",
+        "대한항공",
+        "현대차",
+        "LG전자",
+        "한화에어로스페이스",
+        "신한지주"
+      ],
+      "sampleVersions": {
+        "unknown": 10
+      }
     },
     "app_data_bundle.json": {
       "exists": true,
@@ -25,13 +38,13 @@
     },
     "stock_lookup_index.json": {
       "exists": true,
-      "stockCount": 2527,
-      "recommendedCount": 53
+      "stockCount": 2528,
+      "recommendedCount": 54
     },
     "stock_lookup_compact.json": {
       "exists": true,
-      "stockCount": 2527,
-      "recommendedCount": 53
+      "stockCount": 2528,
+      "recommendedCount": 54
     }
   },
   "dailyUseGuide": {
