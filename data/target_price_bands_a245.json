@@ -1,9 +1,9 @@
 {
   "version": "A245",
-  "generatedAt": "2026-07-03T15:58:43",
+  "generatedAt": "2026-07-06T17:12:04",
   "summary": {
     "version": "A245",
-    "generatedAt": "2026-07-03T15:58:43",
+    "generatedAt": "2026-07-06T17:12:04",
     "status": "target_clean_filter",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -213,12 +213,13 @@
       }
     ],
     "supplyHitCount": 0,
+    "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
     "supplyMergedCount": 0,
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 12,
+    "targetPriceCandidateCount": 13,
     "candidateSource": "built_in_fallback_top25",
     "candidateSourcesTried": [
       {
@@ -251,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 106,
-    "reliableTargetCandidateCount": 5,
+    "rawTargetRows": 99,
+    "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244"
   },
@@ -262,13 +263,23 @@
       "name": "한화오션",
       "currentPrice": 128700,
       "rawPrices": [
+        9,
         167,
+        9000,
         167000
       ],
       "acceptedPrices": [
         167000
       ],
       "rejected": [
+        {
+          "price": 9000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 9,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 167,
           "reason": "1만원 미만 잡음 제거"
@@ -341,35 +352,14 @@
       "currentPrice": 105250,
       "rawPrices": [
         1,
-        2,
-        26,
-        220,
         370,
-        2026,
-        1370000,
-        2220000
+        1370000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
           "price": 1370000,
           "reason": "현재가 대비 과도하게 높음(1,370,000 > 263,125)"
-        },
-        {
-          "price": 2220000,
-          "reason": "현재가 대비 과도하게 높음(2,220,000 > 263,125)"
-        },
-        {
-          "price": 2,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 26,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 1,
@@ -377,10 +367,6 @@
         },
         {
           "price": 370,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 220,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -397,14 +383,11 @@
       "rawPrices": [
         63,
         128,
-        300,
         63000,
-        128000,
-        300000
+        128000
       ],
       "acceptedPrices": [
-        128000,
-        300000
+        128000
       ],
       "rejected": [
         {
@@ -418,30 +401,36 @@
         {
           "price": 128,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 300,
-          "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 214000,
-      "realisticTargetPrice": 171000,
-      "observeTimingPrice": 150000,
-      "stopTimingPrice": 128500,
-      "targetCount": 2
+      "median": 128000,
+      "realisticTargetPrice": 102500,
+      "observeTimingPrice": 89600,
+      "stopTimingPrice": 76800,
+      "targetCount": 1
     },
     {
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [],
-      "acceptedPrices": [],
-      "rejected": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
+      "rawPrices": [
+        500,
+        500000
+      ],
+      "acceptedPrices": [
+        500000
+      ],
+      "rejected": [
+        {
+          "price": 500,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
+      "median": 500000,
+      "realisticTargetPrice": 400000,
+      "observeTimingPrice": 350000,
+      "stopTimingPrice": 300000,
+      "targetCount": 1
     },
     {
       "code": "000660",
@@ -449,21 +438,21 @@
       "currentPrice": 220000,
       "rawPrices": [
         2,
-        28,
-        2028
+        26,
+        2026
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 2028,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2026,
+          "reason": "연도 숫자 제거"
         },
         {
           "price": 2,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 28,
+          "price": 26,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -570,20 +559,25 @@
       "currentPrice": 250000,
       "rawPrices": [
         2,
-        5,
         27,
+        760,
+        2000,
         2027,
-        5000
+        760000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2000,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 2027,
           "reason": "연도 숫자 제거"
         },
         {
-          "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 760000,
+          "reason": "현재가 대비 과도하게 높음(760,000 > 625,000)"
         },
         {
           "price": 2,
@@ -594,7 +588,7 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 5,
+          "price": 760,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -609,17 +603,17 @@
       "name": "기아",
       "currentPrice": 115000,
       "rawPrices": [
-        5,
-        5000
+        2,
+        2000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 5000,
+          "price": 2000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 5,
+          "price": 2,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -682,17 +676,14 @@
         2,
         9,
         26,
-        74,
         133,
         157,
         2026,
         9000,
-        74000,
         133000,
         157000
       ],
       "acceptedPrices": [
-        74000,
         133000
       ],
       "rejected": [
@@ -721,10 +712,6 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 74,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
           "price": 133,
           "reason": "1만원 미만 잡음 제거"
         },
@@ -733,11 +720,11 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 103500,
-      "realisticTargetPrice": 82800,
-      "observeTimingPrice": 72400,
-      "stopTimingPrice": 62100,
-      "targetCount": 2
+      "median": 133000,
+      "realisticTargetPrice": 106500,
+      "observeTimingPrice": 93100,
+      "stopTimingPrice": 79800,
+      "targetCount": 1
     },
     {
       "code": "086790",
@@ -942,10 +929,8 @@
         2,
         5,
         25,
-        26,
         46,
         2025,
-        2026,
         5000,
         46000
       ],
@@ -958,10 +943,6 @@
           "reason": "연도 숫자 제거"
         },
         {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         },
@@ -971,10 +952,6 @@
         },
         {
           "price": 25,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 26,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1393,21 +1370,14 @@
       "name": "에코프로",
       "currentPrice": 70000,
       "rawPrices": [
-        2,
         3,
-        26,
         230,
         300,
-        2026,
         3230,
         300000
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
         {
           "price": 3230,
           "reason": "1만원 미만 잡음 제거"
@@ -1415,14 +1385,6 @@
         {
           "price": 300000,
           "reason": "현재가 대비 과도하게 높음(300,000 > 175,000)"
-        },
-        {
-          "price": 2,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 26,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 3,
