@@ -1,9 +1,9 @@
 {
   "version": "A255-FIX2",
-  "generatedAt": "2026-07-03T17:59:41",
+  "generatedAt": "2026-07-06T18:28:04",
   "summary": {
     "version": "A255-FIX2",
-    "generatedAt": "2026-07-03T17:59:41",
+    "generatedAt": "2026-07-06T18:28:04",
     "status": "stable_invalid_price_ux",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -213,6 +213,7 @@
       }
     ],
     "supplyHitCount": 0,
+    "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
     "supplyMergedCount": 0,
     "newsItemCount": 0,
@@ -251,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 106,
-    "reliableTargetCandidateCount": 5,
+    "rawTargetRows": 99,
+    "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 18,
@@ -267,13 +268,13 @@
     "searchLookupCount": 51,
     "searchPriceConnectedCount": 51,
     "searchTargetConnectedCount": 45,
-    "validPriceCount": 47,
-    "validTargetCount": 41,
-    "priceFixedCount": 4,
-    "targetFixedCount": 4,
-    "invalidPriceCandidateCount": 4,
-    "invalidStopCleanedCount": 4,
-    "normalCandidateCount": 47
+    "validPriceCount": 46,
+    "validTargetCount": 40,
+    "priceFixedCount": 5,
+    "targetFixedCount": 5,
+    "invalidPriceCandidateCount": 5,
+    "invalidStopCleanedCount": 5,
+    "normalCandidateCount": 46
   },
   "details": [
     {
@@ -327,8 +328,8 @@
     {
       "code": "005380",
       "name": "현대차",
-      "priceValidationStatus": "정상",
-      "invalidPriceUxMessage": ""
+      "priceValidationStatus": "검증필요",
+      "invalidPriceUxMessage": "가격 검증 필요: 현재가/목표가/손절선은 검증 후 사용"
     },
     {
       "code": "000270",
