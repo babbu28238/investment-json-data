@@ -1,9 +1,9 @@
 {
   "version": "A256",
-  "generatedAt": "2026-07-06T18:31:52",
+  "generatedAt": "2026-07-07T18:50:20",
   "summary": {
     "version": "A256",
-    "generatedAt": "2026-07-06T18:31:52",
+    "generatedAt": "2026-07-07T18:50:20",
     "status": "manual_price_review",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -252,7 +252,7 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 99,
+    "rawTargetRows": 90,
     "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
@@ -268,14 +268,14 @@
     "searchLookupCount": 51,
     "searchPriceConnectedCount": 51,
     "searchTargetConnectedCount": 45,
-    "validPriceCount": 46,
-    "validTargetCount": 40,
-    "priceFixedCount": 5,
-    "targetFixedCount": 5,
-    "invalidPriceCandidateCount": 5,
-    "invalidStopCleanedCount": 5,
-    "normalCandidateCount": 46,
-    "manualReviewCount": 5,
+    "validPriceCount": 48,
+    "validTargetCount": 42,
+    "priceFixedCount": 3,
+    "targetFixedCount": 3,
+    "invalidPriceCandidateCount": 3,
+    "invalidStopCleanedCount": 3,
+    "normalCandidateCount": 48,
+    "manualReviewCount": 3,
     "outputReview": "manual_price_review_a256.json"
   },
   "details": [
@@ -284,7 +284,7 @@
       "name": "삼성전자",
       "market": "KOSPI",
       "sector": "반도체",
-      "reason": "삼성전자 현재가 318,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "삼성전자 현재가 296,000원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/005930/total"
     },
@@ -293,36 +293,18 @@
       "name": "SK하이닉스",
       "market": "KOSPI",
       "sector": "반도체",
-      "reason": "SK하이닉스 현재가 2,343,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "SK하이닉스 현재가 2,201,000원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/000660/total"
-    },
-    {
-      "code": "005380",
-      "name": "현대차",
-      "market": "KOSPI",
-      "sector": "자동차",
-      "reason": "현대차 현재가 502,000원은 종목별 정상 범위를 벗어나 검증 필요.",
-      "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
-      "naverUrl": "https://m.stock.naver.com/domestic/stock/005380/total"
     },
     {
       "code": "108490",
       "name": "로보티즈",
       "market": "KOSDAQ",
       "sector": "로봇",
-      "reason": "로보티즈 현재가 225,500원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "로보티즈 현재가 212,000원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/108490/total"
-    },
-    {
-      "code": "298040",
-      "name": "효성중공업",
-      "market": "KOSPI",
-      "sector": "전력기기",
-      "reason": "효성중공업 현재가 3,117,000원은 종목별 정상 범위를 벗어나 검증 필요.",
-      "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
-      "naverUrl": "https://m.stock.naver.com/domestic/stock/298040/total"
     }
   ]
 }
