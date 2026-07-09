@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-07-08T16:15:31",
+  "generatedAt": "2026-07-09T17:03:14",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-07-08T16:15:31",
+    "generatedAt": "2026-07-09T17:03:14",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,11 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 30,
-    "priceUpdatedCount": 0,
-    "priceFailedCount": 0,
-    "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
+    "candidateCount": 25,
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -87,8 +83,6 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
-    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -212,6 +206,7 @@
         "error": "empty"
       }
     ],
+    "ready": false,
     "supplyHitCount": 0,
     "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
@@ -219,7 +214,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 20,
+    "targetPriceCandidateCount": 17,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,11 +231,24 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 30
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
-    "rawTargetRows": 120,
-    "reliableTargetCandidateCount": 5,
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 75,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 17,
@@ -251,14 +259,14 @@
       "code": "042660",
       "name": "한화오션",
       "currentPrice": 128700,
-      "targetPrice": 168800,
-      "upsidePercent": 31.2,
-      "realisticTargetPrice": 135000,
-      "observeTimingPrice": 118000,
-      "stopTimingPrice": 101500,
+      "targetPrice": 167350,
+      "upsidePercent": 30.0,
+      "realisticTargetPrice": 134000,
+      "observeTimingPrice": 117000,
+      "stopTimingPrice": 100500,
       "source": "https://m.stock.naver.com/domestic/stock/042660/total",
       "rawCandidates": [
-        168800
+        167350
       ],
       "ok": true,
       "statusCode": 200,
@@ -319,14 +327,14 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "targetPrice": 508958,
-      "upsidePercent": 71.1,
-      "realisticTargetPrice": 407000,
-      "observeTimingPrice": 356500,
-      "stopTimingPrice": 305500,
+      "targetPrice": 513958,
+      "upsidePercent": 72.8,
+      "realisticTargetPrice": 411000,
+      "observeTimingPrice": 360000,
+      "stopTimingPrice": 308500,
       "source": "https://m.stock.naver.com/domestic/stock/005930/total",
       "rawCandidates": [
-        508958
+        513958
       ],
       "ok": true,
       "statusCode": 200,
@@ -355,12 +363,12 @@
       "currentPrice": 70000,
       "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 102500,
-      "observeTimingPrice": 89600,
-      "stopTimingPrice": 76800,
+      "realisticTargetPrice": 77500,
+      "observeTimingPrice": 67800,
+      "stopTimingPrice": 58100,
       "source": "https://m.stock.naver.com/domestic/stock/047810/total",
       "rawCandidates": [
-        221438
+        221533
       ],
       "ok": true,
       "statusCode": 200,
@@ -394,7 +402,7 @@
       "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/005380/total",
       "rawCandidates": [
-        810800
+        812800
       ],
       "ok": true,
       "statusCode": 200,
@@ -404,14 +412,14 @@
       "code": "000270",
       "name": "기아",
       "currentPrice": 115000,
-      "targetPrice": 233043,
-      "upsidePercent": 102.6,
-      "realisticTargetPrice": 186500,
-      "observeTimingPrice": 163000,
-      "stopTimingPrice": 140000,
+      "targetPrice": 234783,
+      "upsidePercent": 104.2,
+      "realisticTargetPrice": 188000,
+      "observeTimingPrice": 164500,
+      "stopTimingPrice": 141000,
       "source": "https://m.stock.naver.com/domestic/stock/000270/total",
       "rawCandidates": [
-        233043
+        234783
       ],
       "ok": true,
       "statusCode": 200,
@@ -421,14 +429,14 @@
       "code": "105560",
       "name": "KB금융",
       "currentPrice": 172000,
-      "targetPrice": 211105,
-      "upsidePercent": 22.7,
-      "realisticTargetPrice": 169000,
-      "observeTimingPrice": 148000,
-      "stopTimingPrice": 126500,
+      "targetPrice": 212833,
+      "upsidePercent": 23.7,
+      "realisticTargetPrice": 170500,
+      "observeTimingPrice": 149000,
+      "stopTimingPrice": 127500,
       "source": "https://m.stock.naver.com/domestic/stock/105560/total",
       "rawCandidates": [
-        211105
+        212833
       ],
       "ok": true,
       "statusCode": 200,
@@ -438,14 +446,14 @@
       "code": "055550",
       "name": "신한지주",
       "currentPrice": 60000,
-      "targetPrice": 130000,
-      "upsidePercent": 116.7,
-      "realisticTargetPrice": 104000,
-      "observeTimingPrice": 91000,
-      "stopTimingPrice": 78000,
+      "targetPrice": 131111,
+      "upsidePercent": 118.5,
+      "realisticTargetPrice": 105000,
+      "observeTimingPrice": 91800,
+      "stopTimingPrice": 78700,
       "source": "https://m.stock.naver.com/domestic/stock/055550/total",
       "rawCandidates": [
-        130000
+        131111
       ],
       "ok": true,
       "statusCode": 200,
@@ -523,14 +531,14 @@
       "code": "033780",
       "name": "KT&G",
       "currentPrice": 110000,
-      "targetPrice": 224615,
-      "upsidePercent": 104.2,
-      "realisticTargetPrice": 179500,
-      "observeTimingPrice": 157000,
-      "stopTimingPrice": 135000,
+      "targetPrice": 226923,
+      "upsidePercent": 106.3,
+      "realisticTargetPrice": 181500,
+      "observeTimingPrice": 159000,
+      "stopTimingPrice": 136000,
       "source": "https://m.stock.naver.com/domestic/stock/033780/total",
       "rawCandidates": [
-        224615
+        226923
       ],
       "ok": true,
       "statusCode": 200,
@@ -576,9 +584,9 @@
       "currentPrice": 45000,
       "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
+      "realisticTargetPrice": 52600,
+      "observeTimingPrice": 46000,
+      "stopTimingPrice": 39400,
       "source": "https://m.stock.naver.com/domestic/stock/108490/total",
       "rawCandidates": [
         398000
@@ -627,9 +635,9 @@
       "currentPrice": 70000,
       "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
+      "realisticTargetPrice": 31600,
+      "observeTimingPrice": 27600,
+      "stopTimingPrice": 23700,
       "source": "https://m.stock.naver.com/domestic/stock/086520/total",
       "rawCandidates": [],
       "ok": true,
@@ -665,87 +673,6 @@
       "source": "https://m.stock.naver.com/domestic/stock/039030/total",
       "rawCandidates": [
         583333
-      ],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "currentPrice": 0,
-      "targetPrice": 585385,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 468500,
-      "observeTimingPrice": 410000,
-      "stopTimingPrice": 351000,
-      "source": "https://m.stock.naver.com/domestic/stock/028260/total",
-      "rawCandidates": [
-        585385
-      ],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "currentPrice": 0,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "source": "https://m.stock.naver.com/domestic/stock/068760/total",
-      "rawCandidates": [],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "currentPrice": 0,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 181000,
-      "observeTimingPrice": 158000,
-      "stopTimingPrice": 135500,
-      "source": "https://m.stock.naver.com/domestic/stock/091990/total",
-      "rawCandidates": [],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "currentPrice": 0,
-      "targetPrice": 136167,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 109000,
-      "observeTimingPrice": 95300,
-      "stopTimingPrice": 81700,
-      "source": "https://m.stock.naver.com/domestic/stock/058470/total",
-      "rawCandidates": [
-        136167
-      ],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "currentPrice": 0,
-      "targetPrice": 30000,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 24000,
-      "observeTimingPrice": 21000,
-      "stopTimingPrice": 18000,
-      "source": "https://m.stock.naver.com/domestic/stock/112040/total",
-      "rawCandidates": [
-        30000
       ],
       "ok": true,
       "statusCode": 200,
