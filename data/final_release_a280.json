@@ -1,9 +1,9 @@
 {
   "version": "A280",
-  "generatedAt": "2026-07-08T18:52:36",
+  "generatedAt": "2026-07-09T19:04:17",
   "summary": {
     "version": "A280",
-    "generatedAt": "2026-07-08T18:52:36",
+    "generatedAt": "2026-07-09T19:04:17",
     "status": "final_release",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,11 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 56,
-    "priceUpdatedCount": 0,
-    "priceFailedCount": 0,
-    "zeroAfterCount": 0,
-    "priceSource": "pykrx_by_date",
+    "candidateCount": 51,
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -87,8 +83,6 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
-    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
-    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -212,6 +206,7 @@
         "error": "empty"
       }
     ],
+    "ready": false,
     "supplyHitCount": 0,
     "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
@@ -219,7 +214,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 22,
+    "targetPriceCandidateCount": 20,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,41 +231,54 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 30
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
-    "rawTargetRows": 120,
-    "reliableTargetCandidateCount": 5,
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 75,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 18,
+    "targetUpsideCandidateCount": 19,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 22,
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 20,
     "chartStopCount": 25,
-    "allStockLookupCount": 56,
+    "allStockLookupCount": 51,
     "outputLookup": "all_stock_lookup_a251.json",
-    "searchLookupCount": 56,
-    "searchPriceConnectedCount": 56,
-    "searchTargetConnectedCount": 48,
-    "validPriceCount": 54,
-    "validTargetCount": 46,
-    "priceFixedCount": 2,
-    "targetFixedCount": 3,
+    "searchLookupCount": 51,
+    "searchPriceConnectedCount": 51,
+    "searchTargetConnectedCount": 45,
+    "validPriceCount": 48,
+    "validTargetCount": 42,
+    "priceFixedCount": 3,
+    "targetFixedCount": 4,
     "invalidPriceCandidateCount": 0,
-    "invalidStopCleanedCount": 2,
-    "normalCandidateCount": 56,
-    "manualReviewCount": 2,
+    "invalidStopCleanedCount": 3,
+    "normalCandidateCount": 51,
+    "manualReviewCount": 3,
     "outputReview": "manual_price_review_a256.json",
-    "invalidRefetchAttemptCount": 2,
-    "invalidRefetchRecoveredCount": 2,
+    "invalidRefetchAttemptCount": 3,
+    "invalidRefetchRecoveredCount": 3,
     "invalidRefetchStillInvalidCount": 0,
-    "priceConnectedCount": 56,
-    "targetConnectedCount": 46,
-    "chartStopConnectedCount": 56,
-    "stopGuideConnectedCount": 56,
+    "priceConnectedCount": 51,
+    "targetConnectedCount": 43,
+    "chartStopConnectedCount": 51,
+    "stopGuideConnectedCount": 51,
     "releaseName": "HSinvest Android A280 Final Release"
   }
 }
