@@ -1,9 +1,9 @@
 {
   "version": "A254",
-  "generatedAt": "2026-07-09T18:14:17",
+  "generatedAt": "2026-07-10T18:04:03",
   "summary": {
     "version": "A254",
-    "generatedAt": "2026-07-09T18:14:17",
+    "generatedAt": "2026-07-10T18:04:03",
     "status": "invalid_stop_cleanup",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -74,6 +74,10 @@
       }
     },
     "candidateCount": 51,
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -83,6 +87,8 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
+    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -206,7 +212,6 @@
         "error": "empty"
       }
     ],
-    "ready": false,
     "supplyHitCount": 0,
     "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
@@ -247,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 75,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 78,
+    "reliableTargetCandidateCount": 5,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 19,
@@ -277,16 +282,16 @@
       "name": "한화오션",
       "status": "정상",
       "before": {
-        "currentPrice": 78600,
-        "targetPrice": 167350,
-        "chartStopPrice": 72300,
-        "stopTimingPrice": 100500
+        "currentPrice": 81300,
+        "targetPrice": 163600,
+        "chartStopPrice": 74800,
+        "stopTimingPrice": 98200
       },
       "after": {
-        "currentPrice": 78600,
-        "targetPrice": 167350,
-        "chartStopPrice": 72300,
-        "stopTimingPrice": 100500
+        "currentPrice": 81300,
+        "targetPrice": 163600,
+        "chartStopPrice": 74800,
+        "stopTimingPrice": 98200
       },
       "cleaned": false
     },
@@ -295,15 +300,15 @@
       "name": "HD현대중공업",
       "status": "정상",
       "before": {
-        "currentPrice": 507000,
+        "currentPrice": 504000,
         "targetPrice": 929143,
-        "chartStopPrice": 466500,
+        "chartStopPrice": 463500,
         "stopTimingPrice": 557500
       },
       "after": {
-        "currentPrice": 507000,
+        "currentPrice": 504000,
         "targetPrice": 929143,
-        "chartStopPrice": 466500,
+        "chartStopPrice": 463500,
         "stopTimingPrice": 557500
       },
       "cleaned": false
@@ -313,15 +318,15 @@
       "name": "두산에너빌리티",
       "status": "정상",
       "before": {
-        "currentPrice": 73200,
+        "currentPrice": 78100,
         "targetPrice": 150200,
-        "chartStopPrice": 67300,
+        "chartStopPrice": 71900,
         "stopTimingPrice": 90100
       },
       "after": {
-        "currentPrice": 73200,
+        "currentPrice": 78100,
         "targetPrice": 150200,
-        "chartStopPrice": 67300,
+        "chartStopPrice": 71900,
         "stopTimingPrice": 90100
       },
       "cleaned": false
@@ -331,16 +336,16 @@
       "name": "한화시스템",
       "status": "정상",
       "before": {
-        "currentPrice": 64700,
-        "targetPrice": 144333,
-        "chartStopPrice": 59500,
-        "stopTimingPrice": 86600
+        "currentPrice": 71700,
+        "targetPrice": 141583,
+        "chartStopPrice": 66000,
+        "stopTimingPrice": 84900
       },
       "after": {
-        "currentPrice": 64700,
-        "targetPrice": 144333,
-        "chartStopPrice": 59500,
-        "stopTimingPrice": 86600
+        "currentPrice": 71700,
+        "targetPrice": 141583,
+        "chartStopPrice": 66000,
+        "stopTimingPrice": 84900
       },
       "cleaned": false
     },
@@ -351,7 +356,7 @@
       "before": {
         "currentPrice": 0,
         "targetPrice": 0,
-        "chartStopPrice": 256000,
+        "chartStopPrice": 262000,
         "stopTimingPrice": 0
       },
       "after": {
@@ -369,7 +374,7 @@
       "before": {
         "currentPrice": 0,
         "targetPrice": 0,
-        "chartStopPrice": 2011000,
+        "chartStopPrice": 2005500,
         "stopTimingPrice": 0
       },
       "after": {
@@ -385,15 +390,15 @@
       "name": "한국항공우주",
       "status": "정상",
       "before": {
-        "currentPrice": 150000,
+        "currentPrice": 144300,
         "targetPrice": 221533,
-        "chartStopPrice": 138000,
+        "chartStopPrice": 133000,
         "stopTimingPrice": 133000
       },
       "after": {
-        "currentPrice": 150000,
+        "currentPrice": 144300,
         "targetPrice": 221533,
-        "chartStopPrice": 138000,
+        "chartStopPrice": 133000,
         "stopTimingPrice": 133000
       },
       "cleaned": false
@@ -403,15 +408,15 @@
       "name": "두산밥캣",
       "status": "정상",
       "before": {
-        "currentPrice": 60100,
+        "currentPrice": 62900,
         "targetPrice": 91071,
-        "chartStopPrice": 55300,
+        "chartStopPrice": 57900,
         "stopTimingPrice": 54600
       },
       "after": {
-        "currentPrice": 60100,
+        "currentPrice": 62900,
         "targetPrice": 91071,
-        "chartStopPrice": 55300,
+        "chartStopPrice": 57900,
         "stopTimingPrice": 54600
       },
       "cleaned": false
@@ -421,15 +426,15 @@
       "name": "현대차",
       "status": "정상",
       "before": {
-        "currentPrice": 445500,
+        "currentPrice": 457500,
         "targetPrice": 812800,
-        "chartStopPrice": 410000,
+        "chartStopPrice": 421000,
         "stopTimingPrice": 487500
       },
       "after": {
-        "currentPrice": 445500,
+        "currentPrice": 457500,
         "targetPrice": 812800,
-        "chartStopPrice": 410000,
+        "chartStopPrice": 421000,
         "stopTimingPrice": 487500
       },
       "cleaned": false
@@ -439,16 +444,16 @@
       "name": "기아",
       "status": "정상",
       "before": {
-        "currentPrice": 144800,
-        "targetPrice": 234783,
-        "chartStopPrice": 133000,
-        "stopTimingPrice": 141000
+        "currentPrice": 147500,
+        "targetPrice": 235652,
+        "chartStopPrice": 135500,
+        "stopTimingPrice": 141500
       },
       "after": {
-        "currentPrice": 144800,
-        "targetPrice": 234783,
-        "chartStopPrice": 133000,
-        "stopTimingPrice": 141000
+        "currentPrice": 147500,
+        "targetPrice": 235652,
+        "chartStopPrice": 135500,
+        "stopTimingPrice": 141500
       },
       "cleaned": false
     },
@@ -457,16 +462,16 @@
       "name": "KB금융",
       "status": "정상",
       "before": {
-        "currentPrice": 171400,
-        "targetPrice": 212833,
-        "chartStopPrice": 157500,
-        "stopTimingPrice": 127500
+        "currentPrice": 184400,
+        "targetPrice": 215611,
+        "chartStopPrice": 169500,
+        "stopTimingPrice": 129500
       },
       "after": {
-        "currentPrice": 171400,
-        "targetPrice": 212833,
-        "chartStopPrice": 157500,
-        "stopTimingPrice": 127500
+        "currentPrice": 184400,
+        "targetPrice": 215611,
+        "chartStopPrice": 169500,
+        "stopTimingPrice": 129500
       },
       "cleaned": false
     },
@@ -475,16 +480,16 @@
       "name": "신한지주",
       "status": "정상",
       "before": {
-        "currentPrice": 105000,
-        "targetPrice": 131111,
-        "chartStopPrice": 96600,
-        "stopTimingPrice": 78700
+        "currentPrice": 109200,
+        "targetPrice": 131667,
+        "chartStopPrice": 100500,
+        "stopTimingPrice": 79000
       },
       "after": {
-        "currentPrice": 105000,
-        "targetPrice": 131111,
-        "chartStopPrice": 96600,
-        "stopTimingPrice": 78700
+        "currentPrice": 109200,
+        "targetPrice": 131667,
+        "chartStopPrice": 100500,
+        "stopTimingPrice": 79000
       },
       "cleaned": false
     },
@@ -493,16 +498,16 @@
       "name": "하나금융지주",
       "status": "정상",
       "before": {
-        "currentPrice": 122600,
-        "targetPrice": 158105,
-        "chartStopPrice": 113000,
-        "stopTimingPrice": 94900
+        "currentPrice": 128500,
+        "targetPrice": 160474,
+        "chartStopPrice": 118000,
+        "stopTimingPrice": 96300
       },
       "after": {
-        "currentPrice": 122600,
-        "targetPrice": 158105,
-        "chartStopPrice": 113000,
-        "stopTimingPrice": 94900
+        "currentPrice": 128500,
+        "targetPrice": 160474,
+        "chartStopPrice": 118000,
+        "stopTimingPrice": 96300
       },
       "cleaned": false
     },
@@ -511,16 +516,16 @@
       "name": "NAVER",
       "status": "정상",
       "before": {
-        "currentPrice": 184400,
-        "targetPrice": 329227,
-        "chartStopPrice": 169500,
-        "stopTimingPrice": 197500
+        "currentPrice": 191300,
+        "targetPrice": 329667,
+        "chartStopPrice": 176000,
+        "stopTimingPrice": 198000
       },
       "after": {
-        "currentPrice": 184400,
-        "targetPrice": 329227,
-        "chartStopPrice": 169500,
-        "stopTimingPrice": 197500
+        "currentPrice": 191300,
+        "targetPrice": 329667,
+        "chartStopPrice": 176000,
+        "stopTimingPrice": 198000
       },
       "cleaned": false
     },
@@ -529,15 +534,15 @@
       "name": "우리금융지주",
       "status": "정상",
       "before": {
-        "currentPrice": 30050,
-        "targetPrice": 43800,
-        "chartStopPrice": 27600,
+        "currentPrice": 31450,
+        "targetPrice": 43850,
+        "chartStopPrice": 28900,
         "stopTimingPrice": 26300
       },
       "after": {
-        "currentPrice": 30050,
-        "targetPrice": 43800,
-        "chartStopPrice": 27600,
+        "currentPrice": 31450,
+        "targetPrice": 43850,
+        "chartStopPrice": 28900,
         "stopTimingPrice": 26300
       },
       "cleaned": false
@@ -547,16 +552,16 @@
       "name": "KT&G",
       "status": "정상",
       "before": {
-        "currentPrice": 176400,
-        "targetPrice": 226923,
-        "chartStopPrice": 162500,
-        "stopTimingPrice": 136000
+        "currentPrice": 173500,
+        "targetPrice": 227143,
+        "chartStopPrice": 159500,
+        "stopTimingPrice": 136500
       },
       "after": {
-        "currentPrice": 176400,
-        "targetPrice": 226923,
-        "chartStopPrice": 162500,
-        "stopTimingPrice": 136000
+        "currentPrice": 173500,
+        "targetPrice": 227143,
+        "chartStopPrice": 159500,
+        "stopTimingPrice": 136500
       },
       "cleaned": false
     },
@@ -565,16 +570,16 @@
       "name": "카카오",
       "status": "정상",
       "before": {
-        "currentPrice": 33650,
-        "targetPrice": 67667,
-        "chartStopPrice": 31000,
-        "stopTimingPrice": 40600
+        "currentPrice": 35350,
+        "targetPrice": 66706,
+        "chartStopPrice": 32500,
+        "stopTimingPrice": 40000
       },
       "after": {
-        "currentPrice": 33650,
-        "targetPrice": 67667,
-        "chartStopPrice": 31000,
-        "stopTimingPrice": 40600
+        "currentPrice": 35350,
+        "targetPrice": 66706,
+        "chartStopPrice": 32500,
+        "stopTimingPrice": 40000
       },
       "cleaned": false
     },
@@ -583,15 +588,15 @@
       "name": "HMM",
       "status": "정상",
       "before": {
-        "currentPrice": 19320,
+        "currentPrice": 19740,
         "targetPrice": 22455,
-        "chartStopPrice": 17800,
+        "chartStopPrice": 18200,
         "stopTimingPrice": 13500
       },
       "after": {
-        "currentPrice": 19320,
+        "currentPrice": 19740,
         "targetPrice": 22455,
-        "chartStopPrice": 17800,
+        "chartStopPrice": 18200,
         "stopTimingPrice": 13500
       },
       "cleaned": false
@@ -603,7 +608,7 @@
       "before": {
         "currentPrice": 0,
         "targetPrice": 0,
-        "chartStopPrice": 187500,
+        "chartStopPrice": 200500,
         "stopTimingPrice": 0
       },
       "after": {
@@ -619,16 +624,16 @@
       "name": "호텔신라",
       "status": "정상",
       "before": {
-        "currentPrice": 49050,
-        "targetPrice": 77750,
-        "chartStopPrice": 45100,
-        "stopTimingPrice": 46600
+        "currentPrice": 50400,
+        "targetPrice": 76769,
+        "chartStopPrice": 46400,
+        "stopTimingPrice": 46100
       },
       "after": {
-        "currentPrice": 49050,
-        "targetPrice": 77750,
-        "chartStopPrice": 45100,
-        "stopTimingPrice": 46600
+        "currentPrice": 50400,
+        "targetPrice": 76769,
+        "chartStopPrice": 46400,
+        "stopTimingPrice": 46100
       },
       "cleaned": false
     },
@@ -637,15 +642,15 @@
       "name": "레인보우로보틱스",
       "status": "정상",
       "before": {
-        "currentPrice": 431000,
+        "currentPrice": 453500,
         "targetPrice": 915000,
-        "chartStopPrice": 396500,
+        "chartStopPrice": 417000,
         "stopTimingPrice": 549000
       },
       "after": {
-        "currentPrice": 431000,
+        "currentPrice": 453500,
         "targetPrice": 915000,
-        "chartStopPrice": 396500,
+        "chartStopPrice": 417000,
         "stopTimingPrice": 549000
       },
       "cleaned": false
@@ -655,15 +660,15 @@
       "name": "에코프로비엠",
       "status": "정상",
       "before": {
-        "currentPrice": 111500,
+        "currentPrice": 121600,
         "targetPrice": 251588,
-        "chartStopPrice": 102500,
+        "chartStopPrice": 112000,
         "stopTimingPrice": 151000
       },
       "after": {
-        "currentPrice": 111500,
+        "currentPrice": 121600,
         "targetPrice": 251588,
-        "chartStopPrice": 102500,
+        "chartStopPrice": 112000,
         "stopTimingPrice": 151000
       },
       "cleaned": false
@@ -673,15 +678,15 @@
       "name": "알테오젠",
       "status": "정상",
       "before": {
-        "currentPrice": 300000,
+        "currentPrice": 324000,
         "targetPrice": 566667,
-        "chartStopPrice": 276000,
+        "chartStopPrice": 298000,
         "stopTimingPrice": 340000
       },
       "after": {
-        "currentPrice": 300000,
+        "currentPrice": 324000,
         "targetPrice": 566667,
-        "chartStopPrice": 276000,
+        "chartStopPrice": 298000,
         "stopTimingPrice": 340000
       },
       "cleaned": false
@@ -691,15 +696,15 @@
       "name": "에코프로",
       "status": "정상",
       "before": {
-        "currentPrice": 79400,
+        "currentPrice": 85800,
         "targetPrice": 0,
-        "chartStopPrice": 73000,
+        "chartStopPrice": 78900,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 79400,
+        "currentPrice": 85800,
         "targetPrice": 0,
-        "chartStopPrice": 73000,
+        "chartStopPrice": 78900,
         "stopTimingPrice": 0
       },
       "cleaned": false
@@ -709,15 +714,15 @@
       "name": "이오테크닉스",
       "status": "정상",
       "before": {
-        "currentPrice": 342500,
+        "currentPrice": 378500,
         "targetPrice": 583333,
-        "chartStopPrice": 315000,
+        "chartStopPrice": 348000,
         "stopTimingPrice": 350000
       },
       "after": {
-        "currentPrice": 342500,
+        "currentPrice": 378500,
         "targetPrice": 583333,
-        "chartStopPrice": 315000,
+        "chartStopPrice": 348000,
         "stopTimingPrice": 350000
       },
       "cleaned": false
@@ -727,15 +732,15 @@
       "name": "로보스타",
       "status": "정상",
       "before": {
-        "currentPrice": 68000,
+        "currentPrice": 71700,
         "targetPrice": 0,
-        "chartStopPrice": 62600,
+        "chartStopPrice": 66000,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 68000,
+        "currentPrice": 71700,
         "targetPrice": 0,
-        "chartStopPrice": 62600,
+        "chartStopPrice": 66000,
         "stopTimingPrice": 0
       },
       "cleaned": false
@@ -745,15 +750,15 @@
       "name": "제이엘케이",
       "status": "정상",
       "before": {
-        "currentPrice": 4205,
+        "currentPrice": 4680,
         "targetPrice": 0,
-        "chartStopPrice": 3870,
+        "chartStopPrice": 4310,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 4205,
+        "currentPrice": 4680,
         "targetPrice": 0,
-        "chartStopPrice": 3870,
+        "chartStopPrice": 4310,
         "stopTimingPrice": 0
       },
       "cleaned": false
@@ -781,15 +786,15 @@
       "name": "티로보틱스",
       "status": "정상",
       "before": {
-        "currentPrice": 3115,
+        "currentPrice": 3260,
         "targetPrice": 0,
-        "chartStopPrice": 2870,
+        "chartStopPrice": 3000,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 3115,
+        "currentPrice": 3260,
         "targetPrice": 0,
-        "chartStopPrice": 2870,
+        "chartStopPrice": 3000,
         "stopTimingPrice": 0
       },
       "cleaned": false
@@ -799,15 +804,15 @@
       "name": "GS",
       "status": "정상",
       "before": {
-        "currentPrice": 75600,
+        "currentPrice": 80200,
         "targetPrice": 98000,
-        "chartStopPrice": 69600,
+        "chartStopPrice": 73800,
         "stopTimingPrice": 58800
       },
       "after": {
-        "currentPrice": 75600,
+        "currentPrice": 80200,
         "targetPrice": 98000,
-        "chartStopPrice": 69600,
+        "chartStopPrice": 73800,
         "stopTimingPrice": 58800
       },
       "cleaned": false
@@ -817,15 +822,15 @@
       "name": "HD한국조선해양",
       "status": "정상",
       "before": {
-        "currentPrice": 327500,
+        "currentPrice": 340500,
         "targetPrice": 598571,
-        "chartStopPrice": 301500,
+        "chartStopPrice": 313500,
         "stopTimingPrice": 359000
       },
       "after": {
-        "currentPrice": 327500,
+        "currentPrice": 340500,
         "targetPrice": 598571,
-        "chartStopPrice": 301500,
+        "chartStopPrice": 313500,
         "stopTimingPrice": 359000
       },
       "cleaned": false
@@ -835,15 +840,15 @@
       "name": "HD현대미포",
       "status": "정상",
       "before": {
-        "currentPrice": 7543,
+        "currentPrice": 7567,
         "targetPrice": 0,
-        "chartStopPrice": 6940,
+        "chartStopPrice": 6960,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 7543,
+        "currentPrice": 7567,
         "targetPrice": 0,
-        "chartStopPrice": 6940,
+        "chartStopPrice": 6960,
         "stopTimingPrice": 0
       },
       "cleaned": false
@@ -853,15 +858,15 @@
       "name": "HD현대일렉트릭",
       "status": "정상",
       "before": {
-        "currentPrice": 815000,
+        "currentPrice": 851000,
         "targetPrice": 1487692,
-        "chartStopPrice": 750000,
+        "chartStopPrice": 783000,
         "stopTimingPrice": 892500
       },
       "after": {
-        "currentPrice": 815000,
+        "currentPrice": 851000,
         "targetPrice": 1487692,
-        "chartStopPrice": 750000,
+        "chartStopPrice": 783000,
         "stopTimingPrice": 892500
       },
       "cleaned": false
@@ -871,15 +876,15 @@
       "name": "LG에너지솔루션",
       "status": "정상",
       "before": {
-        "currentPrice": 313500,
-        "targetPrice": 553957,
-        "chartStopPrice": 288500,
+        "currentPrice": 326000,
+        "targetPrice": 554136,
+        "chartStopPrice": 300000,
         "stopTimingPrice": 332500
       },
       "after": {
-        "currentPrice": 313500,
-        "targetPrice": 553957,
-        "chartStopPrice": 288500,
+        "currentPrice": 326000,
+        "targetPrice": 554136,
+        "chartStopPrice": 300000,
         "stopTimingPrice": 332500
       },
       "cleaned": false
@@ -889,16 +894,16 @@
       "name": "LG화학",
       "status": "정상",
       "before": {
-        "currentPrice": 251500,
-        "targetPrice": 451267,
-        "chartStopPrice": 231500,
-        "stopTimingPrice": 271000
+        "currentPrice": 264000,
+        "targetPrice": 449929,
+        "chartStopPrice": 243000,
+        "stopTimingPrice": 270000
       },
       "after": {
-        "currentPrice": 251500,
-        "targetPrice": 451267,
-        "chartStopPrice": 231500,
-        "stopTimingPrice": 271000
+        "currentPrice": 264000,
+        "targetPrice": 449929,
+        "chartStopPrice": 243000,
+        "stopTimingPrice": 270000
       },
       "cleaned": false
     },
@@ -907,15 +912,15 @@
       "name": "LS ELECTRIC",
       "status": "정상",
       "before": {
-        "currentPrice": 189400,
+        "currentPrice": 202500,
         "targetPrice": 268846,
-        "chartStopPrice": 174000,
+        "chartStopPrice": 186500,
         "stopTimingPrice": 161500
       },
       "after": {
-        "currentPrice": 189400,
+        "currentPrice": 202500,
         "targetPrice": 268846,
-        "chartStopPrice": 174000,
+        "chartStopPrice": 186500,
         "stopTimingPrice": 161500
       },
       "cleaned": false
@@ -925,15 +930,15 @@
       "name": "POSCO홀딩스",
       "status": "정상",
       "before": {
-        "currentPrice": 297000,
+        "currentPrice": 313500,
         "targetPrice": 552588,
-        "chartStopPrice": 273000,
+        "chartStopPrice": 288500,
         "stopTimingPrice": 331500
       },
       "after": {
-        "currentPrice": 297000,
+        "currentPrice": 313500,
         "targetPrice": 552588,
-        "chartStopPrice": 273000,
+        "chartStopPrice": 288500,
         "stopTimingPrice": 331500
       },
       "cleaned": false
@@ -943,15 +948,15 @@
       "name": "SK스퀘어",
       "status": "정상",
       "before": {
-        "currentPrice": 1327000,
+        "currentPrice": 1409000,
         "targetPrice": 1810000,
-        "chartStopPrice": 1221000,
+        "chartStopPrice": 1296500,
         "stopTimingPrice": 1086000
       },
       "after": {
-        "currentPrice": 1327000,
+        "currentPrice": 1409000,
         "targetPrice": 1810000,
-        "chartStopPrice": 1221000,
+        "chartStopPrice": 1296500,
         "stopTimingPrice": 1086000
       },
       "cleaned": false
@@ -961,16 +966,16 @@
       "name": "미래에셋증권",
       "status": "정상",
       "before": {
-        "currentPrice": 40250,
-        "targetPrice": 71813,
-        "chartStopPrice": 37000,
-        "stopTimingPrice": 43100
+        "currentPrice": 42200,
+        "targetPrice": 71188,
+        "chartStopPrice": 38800,
+        "stopTimingPrice": 42700
       },
       "after": {
-        "currentPrice": 40250,
-        "targetPrice": 71813,
-        "chartStopPrice": 37000,
-        "stopTimingPrice": 43100
+        "currentPrice": 42200,
+        "targetPrice": 71188,
+        "chartStopPrice": 38800,
+        "stopTimingPrice": 42700
       },
       "cleaned": false
     },
@@ -979,16 +984,16 @@
       "name": "삼성SDI",
       "status": "정상",
       "before": {
-        "currentPrice": 401500,
-        "targetPrice": 816478,
-        "chartStopPrice": 369500,
-        "stopTimingPrice": 490000
+        "currentPrice": 434000,
+        "targetPrice": 802130,
+        "chartStopPrice": 399500,
+        "stopTimingPrice": 481500
       },
       "after": {
-        "currentPrice": 401500,
-        "targetPrice": 816478,
-        "chartStopPrice": 369500,
-        "stopTimingPrice": 490000
+        "currentPrice": 434000,
+        "targetPrice": 802130,
+        "chartStopPrice": 399500,
+        "stopTimingPrice": 481500
       },
       "cleaned": false
     },
@@ -997,15 +1002,15 @@
       "name": "삼성바이오로직스",
       "status": "정상",
       "before": {
-        "currentPrice": 1325000,
+        "currentPrice": 1395000,
         "targetPrice": 2055000,
-        "chartStopPrice": 1219000,
+        "chartStopPrice": 1283500,
         "stopTimingPrice": 1233000
       },
       "after": {
-        "currentPrice": 1325000,
+        "currentPrice": 1395000,
         "targetPrice": 2055000,
-        "chartStopPrice": 1219000,
+        "chartStopPrice": 1283500,
         "stopTimingPrice": 1233000
       },
       "cleaned": false
@@ -1015,15 +1020,15 @@
       "name": "삼성중공업",
       "status": "정상",
       "before": {
-        "currentPrice": 20950,
+        "currentPrice": 22350,
         "targetPrice": 40050,
-        "chartStopPrice": 19300,
+        "chartStopPrice": 20600,
         "stopTimingPrice": 24000
       },
       "after": {
-        "currentPrice": 20950,
+        "currentPrice": 22350,
         "targetPrice": 40050,
-        "chartStopPrice": 19300,
+        "chartStopPrice": 20600,
         "stopTimingPrice": 24000
       },
       "cleaned": false
@@ -1033,16 +1038,16 @@
       "name": "셀트리온",
       "status": "정상",
       "before": {
-        "currentPrice": 173100,
-        "targetPrice": 264810,
-        "chartStopPrice": 159500,
-        "stopTimingPrice": 159000
+        "currentPrice": 175200,
+        "targetPrice": 265476,
+        "chartStopPrice": 161000,
+        "stopTimingPrice": 159500
       },
       "after": {
-        "currentPrice": 173100,
-        "targetPrice": 264810,
-        "chartStopPrice": 159500,
-        "stopTimingPrice": 159000
+        "currentPrice": 175200,
+        "targetPrice": 265476,
+        "chartStopPrice": 161000,
+        "stopTimingPrice": 159500
       },
       "cleaned": false
     },
@@ -1051,15 +1056,15 @@
       "name": "씨에스윈드",
       "status": "정상",
       "before": {
-        "currentPrice": 39200,
+        "currentPrice": 39850,
         "targetPrice": 77889,
-        "chartStopPrice": 36100,
+        "chartStopPrice": 36700,
         "stopTimingPrice": 46700
       },
       "after": {
-        "currentPrice": 39200,
+        "currentPrice": 39850,
         "targetPrice": 77889,
-        "chartStopPrice": 36100,
+        "chartStopPrice": 36700,
         "stopTimingPrice": 46700
       },
       "cleaned": false
@@ -1069,15 +1074,15 @@
       "name": "코리안리",
       "status": "정상",
       "before": {
-        "currentPrice": 13370,
+        "currentPrice": 13850,
         "targetPrice": 16333,
-        "chartStopPrice": 12300,
+        "chartStopPrice": 12700,
         "stopTimingPrice": 9800
       },
       "after": {
-        "currentPrice": 13370,
+        "currentPrice": 13850,
         "targetPrice": 16333,
-        "chartStopPrice": 12300,
+        "chartStopPrice": 12700,
         "stopTimingPrice": 9800
       },
       "cleaned": false
@@ -1087,15 +1092,15 @@
       "name": "크래프톤",
       "status": "정상",
       "before": {
-        "currentPrice": 238500,
+        "currentPrice": 238000,
         "targetPrice": 379444,
-        "chartStopPrice": 219500,
+        "chartStopPrice": 219000,
         "stopTimingPrice": 227500
       },
       "after": {
-        "currentPrice": 238500,
+        "currentPrice": 238000,
         "targetPrice": 379444,
-        "chartStopPrice": 219500,
+        "chartStopPrice": 219000,
         "stopTimingPrice": 227500
       },
       "cleaned": false
@@ -1105,16 +1110,16 @@
       "name": "하이브",
       "status": "정상",
       "before": {
-        "currentPrice": 216000,
-        "targetPrice": 372000,
-        "chartStopPrice": 198500,
-        "stopTimingPrice": 223000
+        "currentPrice": 220500,
+        "targetPrice": 369500,
+        "chartStopPrice": 203000,
+        "stopTimingPrice": 221500
       },
       "after": {
-        "currentPrice": 216000,
-        "targetPrice": 372000,
-        "chartStopPrice": 198500,
-        "stopTimingPrice": 223000
+        "currentPrice": 220500,
+        "targetPrice": 369500,
+        "chartStopPrice": 203000,
+        "stopTimingPrice": 221500
       },
       "cleaned": false
     },
@@ -1123,16 +1128,16 @@
       "name": "한화에어로스페이스",
       "status": "정상",
       "before": {
-        "currentPrice": 953000,
-        "targetPrice": 1825000,
-        "chartStopPrice": 877000,
-        "stopTimingPrice": 1095000
+        "currentPrice": 967000,
+        "targetPrice": 1803889,
+        "chartStopPrice": 889500,
+        "stopTimingPrice": 1082500
       },
       "after": {
-        "currentPrice": 953000,
-        "targetPrice": 1825000,
-        "chartStopPrice": 877000,
-        "stopTimingPrice": 1095000
+        "currentPrice": 967000,
+        "targetPrice": 1803889,
+        "chartStopPrice": 889500,
+        "stopTimingPrice": 1082500
       },
       "cleaned": false
     },
@@ -1141,15 +1146,15 @@
       "name": "현대로템",
       "status": "정상",
       "before": {
-        "currentPrice": 160600,
+        "currentPrice": 178900,
         "targetPrice": 310500,
-        "chartStopPrice": 148000,
+        "chartStopPrice": 164500,
         "stopTimingPrice": 186500
       },
       "after": {
-        "currentPrice": 160600,
+        "currentPrice": 178900,
         "targetPrice": 310500,
-        "chartStopPrice": 148000,
+        "chartStopPrice": 164500,
         "stopTimingPrice": 186500
       },
       "cleaned": false
@@ -1159,15 +1164,15 @@
       "name": "현대모비스",
       "status": "정상",
       "before": {
-        "currentPrice": 465000,
+        "currentPrice": 488000,
         "targetPrice": 788000,
-        "chartStopPrice": 428000,
+        "chartStopPrice": 449000,
         "stopTimingPrice": 473000
       },
       "after": {
-        "currentPrice": 465000,
+        "currentPrice": 488000,
         "targetPrice": 788000,
-        "chartStopPrice": 428000,
+        "chartStopPrice": 449000,
         "stopTimingPrice": 473000
       },
       "cleaned": false
@@ -1177,15 +1182,15 @@
       "name": "효성중공업",
       "status": "정상",
       "before": {
-        "currentPrice": 2770000,
+        "currentPrice": 2924000,
         "targetPrice": 4661538,
-        "chartStopPrice": 2548500,
+        "chartStopPrice": 2690000,
         "stopTimingPrice": 2797000
       },
       "after": {
-        "currentPrice": 2770000,
+        "currentPrice": 2924000,
         "targetPrice": 4661538,
-        "chartStopPrice": 2548500,
+        "chartStopPrice": 2690000,
         "stopTimingPrice": 2797000
       },
       "cleaned": false
