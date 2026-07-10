@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-07-09T17:03:14",
+  "generatedAt": "2026-07-10T16:37:31",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-07-09T17:03:14",
+    "generatedAt": "2026-07-10T16:37:31",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -74,6 +74,10 @@
       }
     },
     "candidateCount": 25,
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -83,6 +87,8 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
+    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -206,7 +212,6 @@
         "error": "empty"
       }
     ],
-    "ready": false,
     "supplyHitCount": 0,
     "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
@@ -247,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 75,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 78,
+    "reliableTargetCandidateCount": 5,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 17,
@@ -259,14 +264,14 @@
       "code": "042660",
       "name": "한화오션",
       "currentPrice": 128700,
-      "targetPrice": 167350,
-      "upsidePercent": 30.0,
-      "realisticTargetPrice": 134000,
-      "observeTimingPrice": 117000,
-      "stopTimingPrice": 100500,
+      "targetPrice": 163600,
+      "upsidePercent": 27.1,
+      "realisticTargetPrice": 131000,
+      "observeTimingPrice": 114500,
+      "stopTimingPrice": 98200,
       "source": "https://m.stock.naver.com/domestic/stock/042660/total",
       "rawCandidates": [
-        167350
+        163600
       ],
       "ok": true,
       "statusCode": 200,
@@ -310,14 +315,14 @@
       "code": "272210",
       "name": "한화시스템",
       "currentPrice": 132671,
-      "targetPrice": 144333,
-      "upsidePercent": 8.8,
-      "realisticTargetPrice": 115500,
-      "observeTimingPrice": 101000,
-      "stopTimingPrice": 86600,
+      "targetPrice": 141583,
+      "upsidePercent": 6.7,
+      "realisticTargetPrice": 113500,
+      "observeTimingPrice": 99100,
+      "stopTimingPrice": 84900,
       "source": "https://m.stock.naver.com/domestic/stock/272210/total",
       "rawCandidates": [
-        144333
+        141583
       ],
       "ok": true,
       "statusCode": 200,
@@ -412,14 +417,14 @@
       "code": "000270",
       "name": "기아",
       "currentPrice": 115000,
-      "targetPrice": 234783,
-      "upsidePercent": 104.2,
-      "realisticTargetPrice": 188000,
-      "observeTimingPrice": 164500,
-      "stopTimingPrice": 141000,
+      "targetPrice": 235652,
+      "upsidePercent": 104.9,
+      "realisticTargetPrice": 188500,
+      "observeTimingPrice": 165000,
+      "stopTimingPrice": 141500,
       "source": "https://m.stock.naver.com/domestic/stock/000270/total",
       "rawCandidates": [
-        234783
+        235652
       ],
       "ok": true,
       "statusCode": 200,
@@ -429,14 +434,14 @@
       "code": "105560",
       "name": "KB금융",
       "currentPrice": 172000,
-      "targetPrice": 212833,
-      "upsidePercent": 23.7,
-      "realisticTargetPrice": 170500,
-      "observeTimingPrice": 149000,
-      "stopTimingPrice": 127500,
+      "targetPrice": 215611,
+      "upsidePercent": 25.4,
+      "realisticTargetPrice": 172500,
+      "observeTimingPrice": 151000,
+      "stopTimingPrice": 129500,
       "source": "https://m.stock.naver.com/domestic/stock/105560/total",
       "rawCandidates": [
-        212833
+        215611
       ],
       "ok": true,
       "statusCode": 200,
@@ -446,14 +451,14 @@
       "code": "055550",
       "name": "신한지주",
       "currentPrice": 60000,
-      "targetPrice": 131111,
-      "upsidePercent": 118.5,
-      "realisticTargetPrice": 105000,
-      "observeTimingPrice": 91800,
-      "stopTimingPrice": 78700,
+      "targetPrice": 131667,
+      "upsidePercent": 119.4,
+      "realisticTargetPrice": 105500,
+      "observeTimingPrice": 92200,
+      "stopTimingPrice": 79000,
       "source": "https://m.stock.naver.com/domestic/stock/055550/total",
       "rawCandidates": [
-        131111
+        131667
       ],
       "ok": true,
       "statusCode": 200,
@@ -463,14 +468,14 @@
       "code": "086790",
       "name": "하나금융지주",
       "currentPrice": 70000,
-      "targetPrice": 158105,
-      "upsidePercent": 125.9,
-      "realisticTargetPrice": 126500,
-      "observeTimingPrice": 110500,
-      "stopTimingPrice": 94900,
+      "targetPrice": 160474,
+      "upsidePercent": 129.2,
+      "realisticTargetPrice": 128500,
+      "observeTimingPrice": 112500,
+      "stopTimingPrice": 96300,
       "source": "https://m.stock.naver.com/domestic/stock/086790/total",
       "rawCandidates": [
-        158105
+        160474
       ],
       "ok": true,
       "statusCode": 200,
@@ -480,14 +485,14 @@
       "code": "316140",
       "name": "우리금융지주",
       "currentPrice": 16000,
-      "targetPrice": 43800,
-      "upsidePercent": 173.8,
-      "realisticTargetPrice": 35000,
+      "targetPrice": 43850,
+      "upsidePercent": 174.1,
+      "realisticTargetPrice": 35100,
       "observeTimingPrice": 30700,
       "stopTimingPrice": 26300,
       "source": "https://m.stock.naver.com/domestic/stock/316140/total",
       "rawCandidates": [
-        43800
+        43850
       ],
       "ok": true,
       "statusCode": 200,
@@ -497,14 +502,14 @@
       "code": "035420",
       "name": "NAVER",
       "currentPrice": 220000,
-      "targetPrice": 329227,
-      "upsidePercent": 49.6,
+      "targetPrice": 329667,
+      "upsidePercent": 49.8,
       "realisticTargetPrice": 263500,
-      "observeTimingPrice": 230500,
-      "stopTimingPrice": 197500,
+      "observeTimingPrice": 231000,
+      "stopTimingPrice": 198000,
       "source": "https://m.stock.naver.com/domestic/stock/035420/total",
       "rawCandidates": [
-        329227
+        329667
       ],
       "ok": true,
       "statusCode": 200,
@@ -514,14 +519,14 @@
       "code": "035720",
       "name": "카카오",
       "currentPrice": 55000,
-      "targetPrice": 67667,
-      "upsidePercent": 23.0,
-      "realisticTargetPrice": 54100,
-      "observeTimingPrice": 47400,
-      "stopTimingPrice": 40600,
+      "targetPrice": 66706,
+      "upsidePercent": 21.3,
+      "realisticTargetPrice": 53400,
+      "observeTimingPrice": 46700,
+      "stopTimingPrice": 40000,
       "source": "https://m.stock.naver.com/domestic/stock/035720/total",
       "rawCandidates": [
-        67667
+        66706
       ],
       "ok": true,
       "statusCode": 200,
@@ -531,14 +536,14 @@
       "code": "033780",
       "name": "KT&G",
       "currentPrice": 110000,
-      "targetPrice": 226923,
-      "upsidePercent": 106.3,
+      "targetPrice": 227143,
+      "upsidePercent": 106.5,
       "realisticTargetPrice": 181500,
       "observeTimingPrice": 159000,
-      "stopTimingPrice": 136000,
+      "stopTimingPrice": 136500,
       "source": "https://m.stock.naver.com/domestic/stock/033780/total",
       "rawCandidates": [
-        226923
+        227143
       ],
       "ok": true,
       "statusCode": 200,
@@ -565,14 +570,14 @@
       "code": "008770",
       "name": "호텔신라",
       "currentPrice": 50000,
-      "targetPrice": 77750,
-      "upsidePercent": 55.5,
-      "realisticTargetPrice": 62200,
-      "observeTimingPrice": 54400,
-      "stopTimingPrice": 46600,
+      "targetPrice": 76769,
+      "upsidePercent": 53.5,
+      "realisticTargetPrice": 61400,
+      "observeTimingPrice": 53700,
+      "stopTimingPrice": 46100,
       "source": "https://m.stock.naver.com/domestic/stock/008770/total",
       "rawCandidates": [
-        77750
+        76769
       ],
       "ok": true,
       "statusCode": 200,
