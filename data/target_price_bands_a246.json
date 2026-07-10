@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-07-09T16:41:08",
+  "generatedAt": "2026-07-10T16:33:45",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-07-09T16:41:08",
+    "generatedAt": "2026-07-10T16:33:45",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -74,6 +74,10 @@
       }
     },
     "candidateCount": 25,
+    "priceUpdatedCount": 0,
+    "priceFailedCount": 0,
+    "zeroAfterCount": 0,
+    "priceSource": "pykrx_by_date",
     "scoreUpdatedCount": 0,
     "scoreFailedCount": 0,
     "priceCount": 0,
@@ -83,6 +87,8 @@
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
     "supplyOkCount": 0,
     "supplyFailCount": 0,
+    "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+    "ready": false,
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
@@ -206,7 +212,6 @@
         "error": "empty"
       }
     ],
-    "ready": false,
     "supplyHitCount": 0,
     "supplyDiagRows": 117,
     "supplySource": "naver_supply_detail_a234",
@@ -214,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 13,
+    "targetPriceCandidateCount": 12,
     "candidateSource": "built_in_fallback_top25",
     "candidateSourcesTried": [
       {
@@ -247,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 75,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 78,
+    "reliableTargetCandidateCount": 5,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
   },
@@ -258,23 +263,13 @@
       "name": "한화오션",
       "currentPrice": 128700,
       "rawPrices": [
-        2000,
-        2028,
-        9000
+        2027
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 2000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2028,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 9000,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2027,
+          "reason": "연도 숫자 제거"
         }
       ],
       "median": 0,
@@ -288,16 +283,11 @@
       "name": "HD현대중공업",
       "currentPrice": 300000,
       "rawPrices": [
-        2026,
         6271,
         860000
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
         {
           "price": 6271,
           "reason": "1만원 미만 잡음 제거"
@@ -338,11 +328,16 @@
       "name": "한화시스템",
       "currentPrice": 132671,
       "rawPrices": [
+        4000,
         63000,
         65690
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 4000,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 63000,
           "reason": "현재가 대비 과도하게 낮음"
@@ -362,9 +357,26 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [],
+      "rawPrices": [
+        1486,
+        2026,
+        5000
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 1486,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -376,10 +388,15 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
+        2026,
         6000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
         {
           "price": 6000,
           "reason": "1만원 미만 잡음 제거"
@@ -396,7 +413,6 @@
       "name": "한국항공우주",
       "currentPrice": 70000,
       "rawPrices": [
-        7030,
         65690,
         128000
       ],
@@ -404,12 +420,7 @@
         65690,
         128000
       ],
-      "rejected": [
-        {
-          "price": 7030,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 96845,
       "realisticTargetPrice": 77500,
       "observeTimingPrice": 67800,
@@ -473,18 +484,14 @@
       "code": "000270",
       "name": "기아",
       "currentPrice": 115000,
-      "rawPrices": [
-        65690
-      ],
-      "acceptedPrices": [
-        65690
-      ],
+      "rawPrices": [],
+      "acceptedPrices": [],
       "rejected": [],
-      "median": 65690,
-      "realisticTargetPrice": 52600,
-      "observeTimingPrice": 46000,
-      "stopTimingPrice": 39400,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "105560",
@@ -659,12 +666,9 @@
       "currentPrice": 110000,
       "rawPrices": [
         1337,
-        39490,
-        250000
+        39490
       ],
-      "acceptedPrices": [
-        250000
-      ],
+      "acceptedPrices": [],
       "rejected": [
         {
           "price": 1337,
@@ -675,11 +679,11 @@
           "reason": "현재가 대비 과도하게 낮음"
         }
       ],
-      "median": 250000,
-      "realisticTargetPrice": 200000,
-      "observeTimingPrice": 175000,
-      "stopTimingPrice": 150000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "011200",
@@ -747,9 +751,14 @@
         1047,
         9000,
         9150,
+        60000,
+        64000,
         257720
       ],
-      "acceptedPrices": [],
+      "acceptedPrices": [
+        60000,
+        64000
+      ],
       "rejected": [
         {
           "price": 1047,
@@ -768,11 +777,11 @@
           "reason": "현재가 대비 과도하게 높음"
         }
       ],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
+      "median": 62000,
+      "realisticTargetPrice": 49600,
+      "observeTimingPrice": 43400,
+      "stopTimingPrice": 37200,
+      "targetCount": 2
     },
     {
       "code": "108490",
