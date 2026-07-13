@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-07-10T16:33:45",
+  "generatedAt": "2026-07-13T16:43:25",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-07-10T16:33:45",
+    "generatedAt": "2026-07-13T16:43:25",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 12,
+    "targetPriceCandidateCount": 11,
     "candidateSource": "built_in_fallback_top25",
     "candidateSourcesTried": [
       {
@@ -252,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 78,
-    "reliableTargetCandidateCount": 5,
+    "rawTargetRows": 72,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
   },
@@ -262,16 +262,9 @@
       "code": "042660",
       "name": "한화오션",
       "currentPrice": 128700,
-      "rawPrices": [
-        2027
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 2027,
-          "reason": "연도 숫자 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -283,11 +276,16 @@
       "name": "HD현대중공업",
       "currentPrice": 300000,
       "rawPrices": [
+        2026,
         6271,
         860000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
         {
           "price": 6271,
           "reason": "1만원 미만 잡음 제거"
@@ -329,8 +327,7 @@
       "currentPrice": 132671,
       "rawPrices": [
         4000,
-        63000,
-        65690
+        63000
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -340,10 +337,6 @@
         },
         {
           "price": 63000,
-          "reason": "현재가 대비 과도하게 낮음"
-        },
-        {
-          "price": 65690,
           "reason": "현재가 대비 과도하게 낮음"
         }
       ],
@@ -357,26 +350,9 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [
-        1486,
-        2026,
-        5000
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 1486,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -387,21 +363,9 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [
-        2026,
-        6000
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 6000,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -413,19 +377,17 @@
       "name": "한국항공우주",
       "currentPrice": 70000,
       "rawPrices": [
-        65690,
         128000
       ],
       "acceptedPrices": [
-        65690,
         128000
       ],
       "rejected": [],
-      "median": 96845,
-      "realisticTargetPrice": 77500,
-      "observeTimingPrice": 67800,
-      "stopTimingPrice": 58100,
-      "targetCount": 2
+      "median": 128000,
+      "realisticTargetPrice": 102500,
+      "observeTimingPrice": 89600,
+      "stopTimingPrice": 76800,
+      "targetCount": 1
     },
     {
       "code": "241560",
@@ -465,12 +427,17 @@
       "name": "현대차",
       "currentPrice": 250000,
       "rawPrices": [
-        2000
+        2000,
+        5500
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 2000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5500,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -484,9 +451,16 @@
       "code": "000270",
       "name": "기아",
       "currentPrice": 115000,
-      "rawPrices": [],
+      "rawPrices": [
+        5500
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 5500,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -523,23 +497,25 @@
       "name": "신한지주",
       "currentPrice": 60000,
       "rawPrices": [
-        9000,
-        133000
+        7000,
+        9000
       ],
-      "acceptedPrices": [
-        133000
-      ],
+      "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 7000,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 9000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 133000,
-      "realisticTargetPrice": 106500,
-      "observeTimingPrice": 93100,
-      "stopTimingPrice": 79800,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "086790",
@@ -665,18 +641,13 @@
       "name": "KT&G",
       "currentPrice": 110000,
       "rawPrices": [
-        1337,
-        39490
+        1337
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 1337,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 39490,
-          "reason": "현재가 대비 과도하게 낮음"
         }
       ],
       "median": 0,
