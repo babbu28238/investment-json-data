@@ -1,9 +1,9 @@
 {
   "version": "A256",
-  "generatedAt": "2026-07-10T18:11:57",
+  "generatedAt": "2026-07-13T18:21:56",
   "summary": {
     "version": "A256",
-    "generatedAt": "2026-07-10T18:11:57",
+    "generatedAt": "2026-07-13T18:21:56",
     "status": "manual_price_review",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -252,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 78,
-    "reliableTargetCandidateCount": 5,
+    "rawTargetRows": 72,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 19,
@@ -284,7 +284,7 @@
       "name": "삼성전자",
       "market": "KOSPI",
       "sector": "반도체",
-      "reason": "삼성전자 현재가 285,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "삼성전자 현재가 254,500원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/005930/total"
     },
@@ -293,7 +293,7 @@
       "name": "SK하이닉스",
       "market": "KOSPI",
       "sector": "반도체",
-      "reason": "SK하이닉스 현재가 2,180,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "SK하이닉스 현재가 1,845,000원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/000660/total"
     },
@@ -302,7 +302,7 @@
       "name": "로보티즈",
       "market": "KOSDAQ",
       "sector": "로봇",
-      "reason": "로보티즈 현재가 218,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "로보티즈 현재가 206,000원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/108490/total"
     }
