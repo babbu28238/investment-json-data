@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-07-14 19:56:32 KST",
+  "updatedAt": "2026-07-14 20:02:34 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -15,8 +15,21 @@
     "stock_candidates.json": {
       "exists": true,
       "candidateCount": 80,
-      "sampleNames": [],
-      "sampleVersions": {}
+      "sampleNames": [
+        "원익IPS",
+        "KODEX 레버리지",
+        "TIGER 반도체TOP10",
+        "KODEX CD금리액티브(합성)",
+        "SK하이닉스",
+        "삼성전자",
+        "TIGER 반도체",
+        "대한항공",
+        "KODEX 반도체",
+        "LG전자"
+      ],
+      "sampleVersions": {
+        "unknown": 10
+      }
     },
     "app_data_bundle.json": {
       "exists": true,
@@ -26,12 +39,12 @@
     "stock_lookup_index.json": {
       "exists": true,
       "stockCount": 2525,
-      "recommendedCount": 53
+      "recommendedCount": 77
     },
     "stock_lookup_compact.json": {
       "exists": true,
       "stockCount": 2525,
-      "recommendedCount": 53
+      "recommendedCount": 77
     }
   },
   "dailyUseGuide": {
