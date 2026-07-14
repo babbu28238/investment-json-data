@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-07-13T16:43:25",
+  "generatedAt": "2026-07-14T15:44:46",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-07-13T16:43:25",
+    "generatedAt": "2026-07-14T15:44:46",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -252,8 +252,8 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 72,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 83,
+    "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
   },
@@ -350,9 +350,16 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [],
+      "rawPrices": [
+        4500
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 4500,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -363,9 +370,21 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [],
+      "rawPrices": [
+        3000,
+        7000
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 3000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 7000,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -426,21 +445,9 @@
       "code": "005380",
       "name": "현대차",
       "currentPrice": 250000,
-      "rawPrices": [
-        2000,
-        5500
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 2000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5500,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -472,7 +479,7 @@
       "name": "KB금융",
       "currentPrice": 172000,
       "rawPrices": [
-        2024,
+        2600,
         220000,
         225000
       ],
@@ -482,8 +489,8 @@
       ],
       "rejected": [
         {
-          "price": 2024,
-          "reason": "연도 숫자 제거"
+          "price": 2600,
+          "reason": "1만원 미만 잡음 제거"
         }
       ],
       "median": 222500,
@@ -497,11 +504,26 @@
       "name": "신한지주",
       "currentPrice": 60000,
       "rawPrices": [
+        2600,
+        5000,
+        6000,
         7000,
         9000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2600,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 6000,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 7000,
           "reason": "1만원 미만 잡음 제거"
@@ -522,16 +544,19 @@
       "name": "하나금융지주",
       "currentPrice": 70000,
       "rawPrices": [
+        2600,
         5000,
         81000,
-        168000,
         200000
       ],
       "acceptedPrices": [
-        81000,
-        168000
+        81000
       ],
       "rejected": [
+        {
+          "price": 2600,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
@@ -541,11 +566,11 @@
           "reason": "현재가 대비 과도하게 높음"
         }
       ],
-      "median": 124500,
-      "realisticTargetPrice": 99600,
-      "observeTimingPrice": 87200,
-      "stopTimingPrice": 74700,
-      "targetCount": 2
+      "median": 81000,
+      "realisticTargetPrice": 64800,
+      "observeTimingPrice": 56700,
+      "stopTimingPrice": 48600,
+      "targetCount": 1
     },
     {
       "code": "316140",
@@ -553,16 +578,22 @@
       "currentPrice": 16000,
       "rawPrices": [
         1201,
+        2600,
         3000,
         4429,
         9000,
         9150,
+        175330,
         200000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 1201,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 2600,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -580,6 +611,10 @@
         {
           "price": 9150,
           "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 175330,
+          "reason": "현재가 대비 과도하게 높음"
         },
         {
           "price": 200000,
@@ -616,18 +651,33 @@
       "name": "카카오",
       "currentPrice": 55000,
       "rawPrices": [
+        2600,
         5000,
-        7000
+        6000,
+        7000,
+        323410
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2600,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 6000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 7000,
           "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 323410,
+          "reason": "현재가 대비 과도하게 높음"
         }
       ],
       "median": 0,
