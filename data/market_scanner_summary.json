@@ -1,7 +1,7 @@
 {
-  "version": "A243",
-  "generatedAt": "2026-07-14T15:08:06",
-  "status": "report_target_collector",
+  "version": "A244",
+  "generatedAt": "2026-07-14T15:11:49",
+  "status": "target_fallback_candidates",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -70,7 +70,7 @@
       "count": 0
     }
   },
-  "candidateCount": 0,
+  "candidateCount": 25,
   "priceUpdatedCount": 0,
   "priceFailedCount": 0,
   "zeroAfterCount": 0,
@@ -216,8 +216,8 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 0,
-  "candidateSource": "",
+  "targetPriceCandidateCount": 23,
+  "candidateSource": "built_in_fallback_top25",
   "candidateSourcesTried": [
     {
       "path": "data/stock_candidates_ai_scored.json",
@@ -249,5 +249,5 @@
     }
   ],
   "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-  "rawTargetRows": 0
+  "rawTargetRows": 83
 }
