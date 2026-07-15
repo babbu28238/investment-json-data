@@ -1,7 +1,7 @@
 {
-  "version": "A423",
-  "generatedAt": "2026-07-15T11:03:02",
-  "status": "robust_real_data_engine",
+  "version": "A225",
+  "generatedAt": "2026-07-15T11:15:48",
+  "status": "real_score_engine",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -16,7 +16,7 @@
   "averageDataConnectionScore": 0,
   "overallMacroScore": 54,
   "overallMarketView": "중립 / 관망",
-  "output": "realtime_recommendations_a405.json",
+  "output": "stock_candidates_ai_scored.json",
   "universeDebug": {
     "pykrx": {
       "error": "index -1 is out of bounds for axis 0 with size 0"
@@ -69,5 +69,13 @@
     "existing": {
       "count": 0
     }
-  }
+  },
+  "candidateCount": 0,
+  "scoreUpdatedCount": 0,
+  "scoreFailedCount": 0,
+  "priceCount": 0,
+  "chartScoreCount": 0,
+  "supplyScoreCount": 0,
+  "newsScoreCount": 0,
+  "scoreFormula": "chart35+supply30+news20+fundamental10+risk10"
 }
