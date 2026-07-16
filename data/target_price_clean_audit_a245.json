@@ -1,6 +1,6 @@
 {
   "version": "A245",
-  "generatedAt": "2026-07-15T15:43:29",
+  "generatedAt": "2026-07-16T15:44:30",
   "details": [
     {
       "code": "042660",
@@ -105,15 +105,29 @@
       "name": "한화시스템",
       "currentPrice": 132671,
       "rawPrices": [
+        2,
         4,
+        5,
+        27,
         63,
+        650,
+        2027,
         4000,
+        5650,
         63000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
+          "price": 2027,
+          "reason": "연도 숫자 제거"
+        },
+        {
           "price": 4000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5650,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -121,7 +135,23 @@
           "reason": "현재가 대비 과도하게 낮음(63,000 < 66,336)"
         },
         {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 27,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 4,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 650,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -140,13 +170,23 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
+        1,
         8,
+        1000,
         8000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
+          "price": 1000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 8000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 1,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -164,26 +204,9 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [
-        3,
-        169,
-        3169
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 3169,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 3,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 169,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -195,13 +218,28 @@
       "name": "한국항공우주",
       "currentPrice": 70000,
       "rawPrices": [
+        2,
+        26,
         128,
+        2026,
         128000
       ],
       "acceptedPrices": [
         128000
       ],
       "rejected": [
+        {
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 26,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 128,
           "reason": "1만원 미만 잡음 제거"
@@ -270,9 +308,26 @@
       "code": "005380",
       "name": "현대차",
       "currentPrice": 250000,
-      "rawPrices": [],
+      "rawPrices": [
+        4,
+        500,
+        4500
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 4500,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 4,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 500,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -610,23 +665,16 @@
       "name": "카카오",
       "currentPrice": 55000,
       "rawPrices": [
-        2,
         6,
         7,
         323,
         410,
-        600,
-        2600,
         6000,
         7000,
         323410
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 2600,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 6000,
           "reason": "1만원 미만 잡음 제거"
@@ -638,14 +686,6 @@
         {
           "price": 323410,
           "reason": "현재가 대비 과도하게 높음(323,410 > 137,500)"
-        },
-        {
-          "price": 2,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 600,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 6,
@@ -676,8 +716,11 @@
       "currentPrice": 110000,
       "rawPrices": [
         7,
+        32,
         500,
-        7500
+        640,
+        7500,
+        32640
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -686,11 +729,23 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 32640,
+          "reason": "현재가 대비 과도하게 낮음(32,640 < 55,000)"
+        },
+        {
           "price": 7,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 500,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 32,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 640,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
