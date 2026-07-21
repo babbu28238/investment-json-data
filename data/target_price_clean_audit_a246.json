@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-07-20T16:01:27",
+  "generatedAt": "2026-07-21T15:52:59",
   "details": [
     {
       "code": "042660",
@@ -72,6 +72,7 @@
       "rawPrices": [
         2026,
         4000,
+        5100,
         5650
       ],
       "acceptedPrices": [],
@@ -82,6 +83,10 @@
         },
         {
           "price": 4000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5100,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -112,9 +117,16 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [],
+      "rawPrices": [
+        2028
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 2028,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -149,8 +161,6 @@
       "name": "두산밥캣",
       "currentPrice": 55000,
       "rawPrices": [
-        2000,
-        2026,
         3000,
         82000
       ],
@@ -158,14 +168,6 @@
         82000
       ],
       "rejected": [
-        {
-          "price": 2000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
         {
           "price": 3000,
           "reason": "1만원 미만 잡음 제거"
@@ -181,16 +183,9 @@
       "code": "005380",
       "name": "현대차",
       "currentPrice": 250000,
-      "rawPrices": [
-        4500
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 4500,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -202,10 +197,15 @@
       "name": "기아",
       "currentPrice": 115000,
       "rawPrices": [
+        5100,
         5500
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 5100,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 5500,
           "reason": "1만원 미만 잡음 제거"
