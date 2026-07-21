@@ -1,9 +1,9 @@
 {
   "version": "A245",
-  "generatedAt": "2026-07-20T15:59:06",
+  "generatedAt": "2026-07-21T15:49:57",
   "summary": {
     "version": "A245",
-    "generatedAt": "2026-07-20T15:59:06",
+    "generatedAt": "2026-07-21T15:49:57",
     "status": "target_clean_filter",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -252,7 +252,7 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 76,
+    "rawTargetRows": 74,
     "reliableTargetCandidateCount": 1,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244"
@@ -365,9 +365,11 @@
         4,
         5,
         26,
+        100,
         650,
         2026,
         4000,
+        5100,
         5650
       ],
       "acceptedPrices": [],
@@ -378,6 +380,10 @@
         },
         {
           "price": 4000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5100,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -398,6 +404,10 @@
         },
         {
           "price": 5,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 100,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -428,9 +438,26 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [],
+      "rawPrices": [
+        2,
+        28,
+        2028
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 2028,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 28,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -480,12 +507,8 @@
       "name": "두산밥캣",
       "currentPrice": 55000,
       "rawPrices": [
-        2,
         3,
-        26,
         82,
-        2000,
-        2026,
         3000,
         82000
       ],
@@ -494,23 +517,7 @@
       ],
       "rejected": [
         {
-          "price": 2000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
           "price": 3000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 26,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -532,26 +539,9 @@
       "code": "005380",
       "name": "현대차",
       "currentPrice": 250000,
-      "rawPrices": [
-        4,
-        500,
-        4500
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 4500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 4,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 500,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -564,17 +554,27 @@
       "currentPrice": 115000,
       "rawPrices": [
         5,
+        100,
         500,
+        5100,
         5500
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 5100,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 5500,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 5,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 100,
           "reason": "1만원 미만 잡음 제거"
         },
         {
