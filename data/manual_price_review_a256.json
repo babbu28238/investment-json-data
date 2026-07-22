@@ -1,9 +1,9 @@
 {
   "version": "A256",
-  "generatedAt": "2026-07-21T17:59:44",
+  "generatedAt": "2026-07-22T17:54:07",
   "summary": {
     "version": "A256",
-    "generatedAt": "2026-07-21T17:59:44",
+    "generatedAt": "2026-07-22T17:54:07",
     "status": "manual_price_review",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 51,
+    "candidateCount": 56,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 19,
+    "targetPriceCandidateCount": 23,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,46 +236,33 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 30
       }
     ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 74,
-    "reliableTargetCandidateCount": 1,
+    "rawTargetRows": 91,
+    "reliableTargetCandidateCount": 2,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 18,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 25,
-    "targetBasedStopCount": 19,
+    "stopGuideUpdatedCount": 30,
+    "targetBasedStopCount": 23,
     "chartStopCount": 25,
-    "allStockLookupCount": 51,
+    "allStockLookupCount": 56,
     "outputLookup": "all_stock_lookup_a251.json",
-    "searchLookupCount": 51,
-    "searchPriceConnectedCount": 51,
-    "searchTargetConnectedCount": 45,
-    "validPriceCount": 49,
-    "validTargetCount": 43,
-    "priceFixedCount": 2,
-    "targetFixedCount": 2,
-    "invalidPriceCandidateCount": 2,
-    "invalidStopCleanedCount": 2,
-    "normalCandidateCount": 49,
-    "manualReviewCount": 2,
+    "searchLookupCount": 56,
+    "searchPriceConnectedCount": 56,
+    "searchTargetConnectedCount": 48,
+    "validPriceCount": 53,
+    "validTargetCount": 45,
+    "priceFixedCount": 3,
+    "targetFixedCount": 4,
+    "invalidPriceCandidateCount": 3,
+    "invalidStopCleanedCount": 3,
+    "normalCandidateCount": 53,
+    "manualReviewCount": 3,
     "outputReview": "manual_price_review_a256.json"
   },
   "details": [
@@ -284,7 +271,7 @@
       "name": "삼성전자",
       "market": "KOSPI",
       "sector": "반도체",
-      "reason": "삼성전자 현재가 259,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "삼성전자 현재가 260,500원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/005930/total"
     },
@@ -293,9 +280,18 @@
       "name": "SK하이닉스",
       "market": "KOSPI",
       "sector": "반도체",
-      "reason": "SK하이닉스 현재가 1,836,000원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "reason": "SK하이닉스 현재가 1,830,000원은 종목별 정상 범위를 벗어나 검증 필요.",
       "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
       "naverUrl": "https://m.stock.naver.com/domestic/stock/000660/total"
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "market": "KOSDAQ",
+      "sector": "로봇",
+      "reason": "로보티즈 현재가 219,500원은 종목별 정상 범위를 벗어나 검증 필요.",
+      "action": "네이버증권/증권앱 현재가 확인 후 다음 가격 수집 단계에서 재검증",
+      "naverUrl": "https://m.stock.naver.com/domestic/stock/108490/total"
     }
   ]
 }
