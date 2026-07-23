@@ -1,19 +1,23 @@
 {
   "version": "A246",
-  "generatedAt": "2026-07-22T15:51:35",
+  "generatedAt": "2026-07-23T16:02:15",
   "details": [
     {
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [],
-      "acceptedPrices": [],
+      "rawPrices": [
+        600000
+      ],
+      "acceptedPrices": [
+        600000
+      ],
       "rejected": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
+      "median": 600000,
+      "realisticTargetPrice": 480000,
+      "observeTimingPrice": 420000,
+      "stopTimingPrice": 360000,
+      "targetCount": 1
     },
     {
       "code": "000660",
@@ -21,7 +25,8 @@
       "currentPrice": 220000,
       "rawPrices": [
         2027,
-        3000
+        3000,
+        5000
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -31,6 +36,10 @@
         },
         {
           "price": 3000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -83,13 +92,13 @@
       "name": "두산에너빌리티",
       "currentPrice": 105250,
       "rawPrices": [
-        1370000
+        1000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1370000,
-          "reason": "현재가 대비 과도하게 높음"
+          "price": 1000,
+          "reason": "1만원 미만 잡음 제거"
         }
       ],
       "median": 0,
@@ -103,19 +112,19 @@
       "name": "한화시스템",
       "currentPrice": 132671,
       "rawPrices": [
-        2026,
         4000,
+        5000,
         5100,
         5650
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
+          "price": 4000,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 4000,
+          "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -185,7 +194,7 @@
       "currentPrice": 0,
       "rawPrices": [
         2071,
-        4529,
+        3800,
         8000
       ],
       "acceptedPrices": [],
@@ -195,7 +204,7 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 4529,
+          "price": 3800,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -240,7 +249,6 @@
         2600,
         5000,
         6000,
-        7000,
         9000
       ],
       "acceptedPrices": [],
@@ -255,10 +263,6 @@
         },
         {
           "price": 6000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 7000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -352,16 +356,11 @@
       "name": "현대차",
       "currentPrice": 250000,
       "rawPrices": [
-        1550,
         2800,
         9000
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 1550,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 2800,
           "reason": "1만원 미만 잡음 제거"
@@ -424,17 +423,12 @@
       "name": "카카오",
       "currentPrice": 55000,
       "rawPrices": [
-        1000,
-        7000
+        1000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 1000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 7000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -448,16 +442,9 @@
       "code": "033780",
       "name": "KT&G",
       "currentPrice": 110000,
-      "rawPrices": [
-        32640
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 32640,
-          "reason": "현재가 대비 과도하게 낮음"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
