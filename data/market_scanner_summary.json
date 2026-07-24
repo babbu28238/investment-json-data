@@ -1,7 +1,7 @@
 {
-  "version": "A247",
-  "generatedAt": "2026-07-24T15:58:56",
-  "status": "naver_consensus_target",
+  "version": "A249",
+  "generatedAt": "2026-07-24T16:46:28",
+  "status": "stop_guide_card",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -254,5 +254,8 @@
   "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
   "source": "target_price_bands_a244.details",
   "targetUpsideCandidateCount": 16,
-  "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
+  "targetSource": "m.stock.naver.com/domestic/stock/{code}/total",
+  "stopGuideUpdatedCount": 25,
+  "targetBasedStopCount": 20,
+  "chartStopCount": 25
 }
