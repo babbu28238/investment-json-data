@@ -1,9 +1,9 @@
 {
   "version": "A255-FIX2",
-  "generatedAt": "2026-07-23T17:57:10",
+  "generatedAt": "2026-07-27T18:08:57",
   "summary": {
     "version": "A255-FIX2",
-    "generatedAt": "2026-07-23T17:57:10",
+    "generatedAt": "2026-07-27T18:08:57",
     "status": "stable_invalid_price_ux",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 23,
+    "targetPriceCandidateCount": 25,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -239,16 +239,16 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 89,
-    "reliableTargetCandidateCount": 2,
+    "rawTargetRows": 90,
+    "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 18,
+    "targetUpsideCandidateCount": 20,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
     "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 23,
+    "targetBasedStopCount": 25,
     "chartStopCount": 25,
     "allStockLookupCount": 56,
     "outputLookup": "all_stock_lookup_a251.json",
