@@ -1,9 +1,9 @@
 {
   "version": "A255",
-  "generatedAt": "2026-07-27T18:08:21",
+  "generatedAt": "2026-07-28T17:58:56",
   "summary": {
     "version": "A255",
-    "generatedAt": "2026-07-27T18:08:21",
+    "generatedAt": "2026-07-28T17:58:56",
     "status": "invalid_price_ux",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 56,
+    "candidateCount": 51,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 25,
+    "targetPriceCandidateCount": 21,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,32 +236,45 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 30
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
-    "rawTargetRows": 90,
-    "reliableTargetCandidateCount": 3,
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 76,
+    "reliableTargetCandidateCount": 2,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 20,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 25,
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 21,
     "chartStopCount": 25,
-    "allStockLookupCount": 56,
+    "allStockLookupCount": 51,
     "outputLookup": "all_stock_lookup_a251.json",
-    "searchLookupCount": 56,
-    "searchPriceConnectedCount": 56,
-    "searchTargetConnectedCount": 48,
-    "validPriceCount": 53,
-    "validTargetCount": 45,
-    "priceFixedCount": 3,
-    "targetFixedCount": 4,
-    "invalidPriceCandidateCount": 3,
-    "invalidStopCleanedCount": 3,
-    "normalCandidateCount": 53
+    "searchLookupCount": 51,
+    "searchPriceConnectedCount": 51,
+    "searchTargetConnectedCount": 45,
+    "validPriceCount": 49,
+    "validTargetCount": 43,
+    "priceFixedCount": 2,
+    "targetFixedCount": 2,
+    "invalidPriceCandidateCount": 2,
+    "invalidStopCleanedCount": 2,
+    "normalCandidateCount": 49
   },
   "details": [
     {
@@ -269,36 +282,36 @@
       "name": "한화오션",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 88800,
-      "targetMedianPrice": 150905,
-      "chartStopPrice": 81700
+      "currentPrice": 81000,
+      "targetMedianPrice": 149476,
+      "chartStopPrice": 74500
     },
     {
       "code": "329180",
       "name": "HD현대중공업",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 486500,
-      "targetMedianPrice": 911524,
-      "chartStopPrice": 447500
+      "currentPrice": 451000,
+      "targetMedianPrice": 910095,
+      "chartStopPrice": 415000
     },
     {
       "code": "034020",
       "name": "두산에너빌리티",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 70900,
+      "currentPrice": 64700,
       "targetMedianPrice": 149133,
-      "chartStopPrice": 65200
+      "chartStopPrice": 59500
     },
     {
       "code": "272210",
       "name": "한화시스템",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 63000,
+      "currentPrice": 61200,
       "targetMedianPrice": 127833,
-      "chartStopPrice": 58000
+      "chartStopPrice": 56300
     },
     {
       "code": "005930",
@@ -323,234 +336,189 @@
       "name": "한국항공우주",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 146200,
+      "currentPrice": 143000,
       "targetMedianPrice": 214563,
-      "chartStopPrice": 134500
+      "chartStopPrice": 131500
     },
     {
       "code": "241560",
       "name": "두산밥캣",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 64200,
+      "currentPrice": 60400,
       "targetMedianPrice": 92214,
-      "chartStopPrice": 59100
+      "chartStopPrice": 55600
     },
     {
       "code": "005380",
       "name": "현대차",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 403000,
-      "targetMedianPrice": 732000,
-      "chartStopPrice": 371000
+      "currentPrice": 364000,
+      "targetMedianPrice": 724000,
+      "chartStopPrice": 335000
     },
     {
       "code": "000270",
       "name": "기아",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 130400,
-      "targetMedianPrice": 232727,
-      "chartStopPrice": 120000
+      "currentPrice": 121800,
+      "targetMedianPrice": 217800,
+      "chartStopPrice": 112000
     },
     {
       "code": "105560",
       "name": "KB금융",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 172600,
-      "targetMedianPrice": 224056,
-      "chartStopPrice": 159000
+      "currentPrice": 165200,
+      "targetMedianPrice": 224889,
+      "chartStopPrice": 152000
     },
     {
       "code": "055550",
       "name": "신한지주",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 105000,
-      "targetMedianPrice": 136333,
-      "chartStopPrice": 96600
+      "currentPrice": 100900,
+      "targetMedianPrice": 137000,
+      "chartStopPrice": 92800
     },
     {
       "code": "086790",
       "name": "하나금융지주",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 130600,
-      "targetMedianPrice": 161053,
-      "chartStopPrice": 120000
+      "currentPrice": 123000,
+      "targetMedianPrice": 164737,
+      "chartStopPrice": 113000
     },
     {
       "code": "035420",
       "name": "NAVER",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 225000,
+      "currentPrice": 210000,
       "targetMedianPrice": 330143,
-      "chartStopPrice": 207000
+      "chartStopPrice": 193000
     },
     {
       "code": "316140",
       "name": "우리금융지주",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 33100,
-      "targetMedianPrice": 43684,
-      "chartStopPrice": 30500
+      "currentPrice": 31750,
+      "targetMedianPrice": 43778,
+      "chartStopPrice": 29200
     },
     {
       "code": "033780",
       "name": "KT&G",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 182600,
+      "currentPrice": 181700,
       "targetMedianPrice": 232857,
-      "chartStopPrice": 168000
+      "chartStopPrice": 167000
     },
     {
       "code": "035720",
       "name": "카카오",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 37050,
+      "currentPrice": 35650,
       "targetMedianPrice": 63063,
-      "chartStopPrice": 34100
+      "chartStopPrice": 32800
     },
     {
       "code": "011200",
       "name": "HMM",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 20650,
+      "currentPrice": 20000,
       "targetMedianPrice": 22700,
-      "chartStopPrice": 19000
+      "chartStopPrice": 18400
     },
     {
       "code": "108490",
       "name": "로보티즈",
-      "priceValidationStatus": "검증필요",
-      "invalidPriceUxMessage": "가격 검증 필요: 현재가/목표가/손절선 미산출",
-      "currentPrice": 0,
-      "targetMedianPrice": 0,
-      "chartStopPrice": 0
+      "priceValidationStatus": "정상",
+      "invalidPriceUxMessage": "",
+      "currentPrice": 180600,
+      "targetMedianPrice": 398000,
+      "chartStopPrice": 166000
     },
     {
       "code": "008770",
       "name": "호텔신라",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 47600,
-      "targetMedianPrice": 75538,
-      "chartStopPrice": 43800
+      "currentPrice": 46400,
+      "targetMedianPrice": 74818,
+      "chartStopPrice": 42700
     },
     {
       "code": "277810",
       "name": "레인보우로보틱스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 446000,
+      "currentPrice": 400500,
       "targetMedianPrice": 915000,
-      "chartStopPrice": 410500
+      "chartStopPrice": 368500
     },
     {
       "code": "247540",
       "name": "에코프로비엠",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 110500,
+      "currentPrice": 101800,
       "targetMedianPrice": 248722,
-      "chartStopPrice": 101500
+      "chartStopPrice": 93700
     },
     {
       "code": "196170",
       "name": "알테오젠",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 312000,
+      "currentPrice": 296500,
       "targetMedianPrice": 537500,
-      "chartStopPrice": 287000
+      "chartStopPrice": 273000
     },
     {
       "code": "086520",
       "name": "에코프로",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 80600,
+      "currentPrice": 72700,
       "targetMedianPrice": 0,
-      "chartStopPrice": 74200
+      "chartStopPrice": 66900
     },
     {
       "code": "039030",
       "name": "이오테크닉스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 309000,
+      "currentPrice": 270000,
       "targetMedianPrice": 580000,
-      "chartStopPrice": 284500
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "priceValidationStatus": "정상",
-      "invalidPriceUxMessage": "",
-      "currentPrice": 69800,
-      "targetMedianPrice": 136000,
-      "chartStopPrice": 64200
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "priceValidationStatus": "정상",
-      "invalidPriceUxMessage": "",
-      "currentPrice": 339500,
-      "targetMedianPrice": 578571,
-      "chartStopPrice": 312500
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "priceValidationStatus": "정상",
-      "invalidPriceUxMessage": "",
-      "currentPrice": 40850,
-      "targetMedianPrice": 0,
-      "chartStopPrice": 37600
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "priceValidationStatus": "정상",
-      "invalidPriceUxMessage": "",
-      "currentPrice": 7386,
-      "targetMedianPrice": 0,
-      "chartStopPrice": 6800
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "priceValidationStatus": "정상",
-      "invalidPriceUxMessage": "",
-      "currentPrice": 15610,
-      "targetMedianPrice": 30000,
-      "chartStopPrice": 14400
+      "chartStopPrice": 248500
     },
     {
       "code": "090360",
       "name": "로보스타",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 63700,
+      "currentPrice": 57200,
       "targetMedianPrice": 0,
-      "chartStopPrice": 58600
+      "chartStopPrice": 52600
     },
     {
       "code": "322510",
       "name": "제이엘케이",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 5140,
+      "currentPrice": 5080,
       "targetMedianPrice": 0,
-      "chartStopPrice": 4730
+      "chartStopPrice": 4670
     },
     {
       "code": "456190",
@@ -566,207 +534,207 @@
       "name": "티로보틱스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 3090,
+      "currentPrice": 2885,
       "targetMedianPrice": 0,
-      "chartStopPrice": 2840
+      "chartStopPrice": 2650
     },
     {
       "code": "078930",
       "name": "GS",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 91600,
+      "currentPrice": 87500,
       "targetMedianPrice": 103000,
-      "chartStopPrice": 84300
+      "chartStopPrice": 80500
     },
     {
       "code": "009540",
       "name": "HD한국조선해양",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 378500,
-      "targetMedianPrice": 583667,
-      "chartStopPrice": 348000
+      "currentPrice": 354000,
+      "targetMedianPrice": 575667,
+      "chartStopPrice": 325500
     },
     {
       "code": "010620",
       "name": "HD현대미포",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 7386,
+      "currentPrice": 7437,
       "targetMedianPrice": 0,
-      "chartStopPrice": 6800
+      "chartStopPrice": 6840
     },
     {
       "code": "267260",
       "name": "HD현대일렉트릭",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 797000,
+      "currentPrice": 705000,
       "targetMedianPrice": 1442143,
-      "chartStopPrice": 733000
+      "chartStopPrice": 648500
     },
     {
       "code": "373220",
       "name": "LG에너지솔루션",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 333000,
+      "currentPrice": 314000,
       "targetMedianPrice": 549591,
-      "chartStopPrice": 306500
+      "chartStopPrice": 289000
     },
     {
       "code": "051910",
       "name": "LG화학",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 260000,
+      "currentPrice": 240500,
       "targetMedianPrice": 434938,
-      "chartStopPrice": 239000
+      "chartStopPrice": 221500
     },
     {
       "code": "010120",
       "name": "LS ELECTRIC",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 200000,
+      "currentPrice": 175500,
       "targetMedianPrice": 300000,
-      "chartStopPrice": 184000
+      "chartStopPrice": 161500
     },
     {
       "code": "005490",
       "name": "POSCO홀딩스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 316000,
+      "currentPrice": 299000,
       "targetMedianPrice": 535544,
-      "chartStopPrice": 290500
+      "chartStopPrice": 275000
     },
     {
       "code": "402340",
       "name": "SK스퀘어",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 1096000,
+      "currentPrice": 925000,
       "targetMedianPrice": 1900000,
-      "chartStopPrice": 1008500
+      "chartStopPrice": 851000
     },
     {
       "code": "006800",
       "name": "미래에셋증권",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 37050,
+      "currentPrice": 33050,
       "targetMedianPrice": 65313,
-      "chartStopPrice": 34100
+      "chartStopPrice": 30400
     },
     {
       "code": "006400",
       "name": "삼성SDI",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 431000,
+      "currentPrice": 382000,
       "targetMedianPrice": 797783,
-      "chartStopPrice": 396500
+      "chartStopPrice": 351500
     },
     {
       "code": "207940",
       "name": "삼성바이오로직스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 1545000,
-      "targetMedianPrice": 2006667,
-      "chartStopPrice": 1421500
+      "currentPrice": 1549000,
+      "targetMedianPrice": 2010909,
+      "chartStopPrice": 1425000
     },
     {
       "code": "010140",
       "name": "삼성중공업",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 22650,
-      "targetMedianPrice": 39750,
-      "chartStopPrice": 20800
+      "currentPrice": 20700,
+      "targetMedianPrice": 38762,
+      "chartStopPrice": 19000
     },
     {
       "code": "068270",
       "name": "셀트리온",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 178700,
-      "targetMedianPrice": 265398,
-      "chartStopPrice": 164500
+      "currentPrice": 177400,
+      "targetMedianPrice": 266152,
+      "chartStopPrice": 163000
     },
     {
       "code": "112610",
       "name": "씨에스윈드",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 40050,
+      "currentPrice": 37650,
       "targetMedianPrice": 77889,
-      "chartStopPrice": 36800
+      "chartStopPrice": 34600
     },
     {
       "code": "003690",
       "name": "코리안리",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 13950,
+      "currentPrice": 13600,
       "targetMedianPrice": 16333,
-      "chartStopPrice": 12800
+      "chartStopPrice": 12500
     },
     {
       "code": "259960",
       "name": "크래프톤",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 248000,
+      "currentPrice": 244000,
       "targetMedianPrice": 376667,
-      "chartStopPrice": 228000
+      "chartStopPrice": 224500
     },
     {
       "code": "352820",
       "name": "하이브",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 225000,
+      "currentPrice": 188800,
       "targetMedianPrice": 356000,
-      "chartStopPrice": 207000
+      "chartStopPrice": 173500
     },
     {
       "code": "012450",
       "name": "한화에어로스페이스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 899000,
+      "currentPrice": 875000,
       "targetMedianPrice": 1726111,
-      "chartStopPrice": 827000
+      "chartStopPrice": 805000
     },
     {
       "code": "064350",
       "name": "현대로템",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 132500,
-      "targetMedianPrice": 303278,
-      "chartStopPrice": 122000
+      "currentPrice": 122600,
+      "targetMedianPrice": 286813,
+      "chartStopPrice": 113000
     },
     {
       "code": "012330",
       "name": "현대모비스",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 463500,
-      "targetMedianPrice": 774800,
-      "chartStopPrice": 426500
+      "currentPrice": 440000,
+      "targetMedianPrice": 737200,
+      "chartStopPrice": 405000
     },
     {
       "code": "298040",
       "name": "효성중공업",
       "priceValidationStatus": "정상",
       "invalidPriceUxMessage": "",
-      "currentPrice": 2625000,
-      "targetMedianPrice": 4635714,
-      "chartStopPrice": 2415000
+      "currentPrice": 2324000,
+      "targetMedianPrice": 4720000,
+      "chartStopPrice": 2138000
     }
   ]
 }
