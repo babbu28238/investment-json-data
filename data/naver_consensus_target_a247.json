@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-07-28T16:19:35",
+  "generatedAt": "2026-07-29T16:04:31",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-07-28T16:19:35",
+    "generatedAt": "2026-07-29T16:04:31",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 18,
+    "targetPriceCandidateCount": 19,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -252,11 +252,11 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 76,
-    "reliableTargetCandidateCount": 2,
+    "rawTargetRows": 77,
+    "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 17,
+    "targetUpsideCandidateCount": 18,
     "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
   },
   "details": [
@@ -264,14 +264,14 @@
       "code": "042660",
       "name": "한화오션",
       "currentPrice": 128700,
-      "targetPrice": 149476,
-      "upsidePercent": 16.1,
-      "realisticTargetPrice": 119500,
-      "observeTimingPrice": 104500,
-      "stopTimingPrice": 89700,
+      "targetPrice": 141050,
+      "upsidePercent": 9.6,
+      "realisticTargetPrice": 113000,
+      "observeTimingPrice": 98700,
+      "stopTimingPrice": 84600,
       "source": "https://m.stock.naver.com/domestic/stock/042660/total",
       "rawCandidates": [
-        149476
+        141050
       ],
       "ok": true,
       "statusCode": 200,
@@ -298,14 +298,14 @@
       "code": "034020",
       "name": "두산에너빌리티",
       "currentPrice": 105250,
-      "targetPrice": 149133,
-      "upsidePercent": 41.7,
-      "realisticTargetPrice": 119500,
-      "observeTimingPrice": 104500,
-      "stopTimingPrice": 89500,
+      "targetPrice": 133813,
+      "upsidePercent": 27.1,
+      "realisticTargetPrice": 107000,
+      "observeTimingPrice": 93700,
+      "stopTimingPrice": 80300,
       "source": "https://m.stock.naver.com/domestic/stock/034020/total",
       "rawCandidates": [
-        149133
+        133813
       ],
       "ok": true,
       "statusCode": 200,
@@ -315,14 +315,14 @@
       "code": "272210",
       "name": "한화시스템",
       "currentPrice": 132671,
-      "targetPrice": 127833,
-      "upsidePercent": -3.6,
-      "realisticTargetPrice": 102500,
-      "observeTimingPrice": 89500,
-      "stopTimingPrice": 76700,
+      "targetPrice": 124917,
+      "upsidePercent": -5.8,
+      "realisticTargetPrice": 99900,
+      "observeTimingPrice": 87400,
+      "stopTimingPrice": 75000,
       "source": "https://m.stock.naver.com/domestic/stock/272210/total",
       "rawCandidates": [
-        127833
+        124917
       ],
       "ok": true,
       "statusCode": 200,
@@ -502,14 +502,14 @@
       "code": "035420",
       "name": "NAVER",
       "currentPrice": 220000,
-      "targetPrice": 330143,
-      "upsidePercent": 50.1,
-      "realisticTargetPrice": 264000,
+      "targetPrice": 329682,
+      "upsidePercent": 49.9,
+      "realisticTargetPrice": 263500,
       "observeTimingPrice": 231000,
       "stopTimingPrice": 198000,
       "source": "https://m.stock.naver.com/domestic/stock/035420/total",
       "rawCandidates": [
-        330143
+        329682
       ],
       "ok": true,
       "statusCode": 200,
@@ -670,14 +670,14 @@
       "code": "039030",
       "name": "이오테크닉스",
       "currentPrice": 180000,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
+      "targetPrice": 532500,
+      "upsidePercent": 195.8,
+      "realisticTargetPrice": 426000,
+      "observeTimingPrice": 373000,
+      "stopTimingPrice": 319500,
       "source": "https://m.stock.naver.com/domestic/stock/039030/total",
       "rawCandidates": [
-        580000
+        532500
       ],
       "ok": true,
       "statusCode": 200,
