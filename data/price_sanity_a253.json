@@ -1,9 +1,9 @@
 {
   "version": "A253",
-  "generatedAt": "2026-07-28T17:37:57",
+  "generatedAt": "2026-07-29T17:18:04",
   "summary": {
     "version": "A253",
-    "generatedAt": "2026-07-28T17:37:57",
+    "generatedAt": "2026-07-29T17:18:04",
     "status": "price_sanity_filter",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 21,
+    "targetPriceCandidateCount": 22,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -252,16 +252,16 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 76,
-    "reliableTargetCandidateCount": 2,
+    "rawTargetRows": 77,
+    "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 20,
+    "targetUpsideCandidateCount": 21,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
     "stopGuideUpdatedCount": 25,
-    "targetBasedStopCount": 21,
+    "targetBasedStopCount": 22,
     "chartStopCount": 25,
     "allStockLookupCount": 51,
     "outputLookup": "all_stock_lookup_a251.json",
@@ -277,15 +277,15 @@
     {
       "code": "042660",
       "name": "한화오션",
-      "priceAfter": 81000,
-      "targetAfter": 149476,
+      "priceAfter": 74600,
+      "targetAfter": 141050,
       "status": "정상",
       "issues": []
     },
     {
       "code": "329180",
       "name": "HD현대중공업",
-      "priceAfter": 451000,
+      "priceAfter": 434000,
       "targetAfter": 910095,
       "status": "정상",
       "issues": []
@@ -293,16 +293,16 @@
     {
       "code": "034020",
       "name": "두산에너빌리티",
-      "priceAfter": 64700,
-      "targetAfter": 149133,
+      "priceAfter": 60800,
+      "targetAfter": 133813,
       "status": "정상",
       "issues": []
     },
     {
       "code": "272210",
       "name": "한화시스템",
-      "priceAfter": 61200,
-      "targetAfter": 127833,
+      "priceAfter": 54200,
+      "targetAfter": 124917,
       "status": "정상",
       "issues": []
     },
@@ -313,7 +313,7 @@
       "targetAfter": 0,
       "status": "검증필요",
       "issues": [
-        "현재가 범위 이상: 220,000원",
+        "현재가 범위 이상: 208,500원",
         "목표가 비율 이상: 513,958원"
       ]
     },
@@ -324,14 +324,14 @@
       "targetAfter": 0,
       "status": "검증필요",
       "issues": [
-        "현재가 범위 이상: 1,550,000원",
+        "현재가 범위 이상: 1,401,000원",
         "목표가 비율 이상: 3,632,609원"
       ]
     },
     {
       "code": "047810",
       "name": "한국항공우주",
-      "priceAfter": 143000,
+      "priceAfter": 117500,
       "targetAfter": 214563,
       "status": "정상",
       "issues": []
@@ -339,7 +339,7 @@
     {
       "code": "241560",
       "name": "두산밥캣",
-      "priceAfter": 60400,
+      "priceAfter": 58400,
       "targetAfter": 92214,
       "status": "정상",
       "issues": []
@@ -347,7 +347,7 @@
     {
       "code": "005380",
       "name": "현대차",
-      "priceAfter": 364000,
+      "priceAfter": 353500,
       "targetAfter": 724000,
       "status": "정상",
       "issues": []
@@ -355,7 +355,7 @@
     {
       "code": "000270",
       "name": "기아",
-      "priceAfter": 121800,
+      "priceAfter": 120400,
       "targetAfter": 217800,
       "status": "정상",
       "issues": []
@@ -363,7 +363,7 @@
     {
       "code": "105560",
       "name": "KB금융",
-      "priceAfter": 165200,
+      "priceAfter": 160100,
       "targetAfter": 224889,
       "status": "정상",
       "issues": []
@@ -371,7 +371,7 @@
     {
       "code": "055550",
       "name": "신한지주",
-      "priceAfter": 100900,
+      "priceAfter": 98300,
       "targetAfter": 137000,
       "status": "정상",
       "issues": []
@@ -379,7 +379,7 @@
     {
       "code": "086790",
       "name": "하나금융지주",
-      "priceAfter": 123000,
+      "priceAfter": 120400,
       "targetAfter": 164737,
       "status": "정상",
       "issues": []
@@ -387,15 +387,15 @@
     {
       "code": "035420",
       "name": "NAVER",
-      "priceAfter": 210000,
-      "targetAfter": 330143,
+      "priceAfter": 201500,
+      "targetAfter": 329682,
       "status": "정상",
       "issues": []
     },
     {
       "code": "316140",
       "name": "우리금융지주",
-      "priceAfter": 31750,
+      "priceAfter": 32050,
       "targetAfter": 43778,
       "status": "정상",
       "issues": []
@@ -403,7 +403,7 @@
     {
       "code": "033780",
       "name": "KT&G",
-      "priceAfter": 181700,
+      "priceAfter": 182600,
       "targetAfter": 232857,
       "status": "정상",
       "issues": []
@@ -411,7 +411,7 @@
     {
       "code": "035720",
       "name": "카카오",
-      "priceAfter": 35650,
+      "priceAfter": 35300,
       "targetAfter": 63063,
       "status": "정상",
       "issues": []
@@ -419,7 +419,7 @@
     {
       "code": "011200",
       "name": "HMM",
-      "priceAfter": 20000,
+      "priceAfter": 20250,
       "targetAfter": 22700,
       "status": "정상",
       "issues": []
@@ -427,7 +427,7 @@
     {
       "code": "108490",
       "name": "로보티즈",
-      "priceAfter": 180600,
+      "priceAfter": 173400,
       "targetAfter": 398000,
       "status": "정상",
       "issues": []
@@ -435,7 +435,7 @@
     {
       "code": "008770",
       "name": "호텔신라",
-      "priceAfter": 46400,
+      "priceAfter": 43600,
       "targetAfter": 74818,
       "status": "정상",
       "issues": []
@@ -443,7 +443,7 @@
     {
       "code": "277810",
       "name": "레인보우로보틱스",
-      "priceAfter": 400500,
+      "priceAfter": 410500,
       "targetAfter": 915000,
       "status": "정상",
       "issues": []
@@ -451,7 +451,7 @@
     {
       "code": "247540",
       "name": "에코프로비엠",
-      "priceAfter": 101800,
+      "priceAfter": 92600,
       "targetAfter": 248722,
       "status": "정상",
       "issues": []
@@ -459,7 +459,7 @@
     {
       "code": "196170",
       "name": "알테오젠",
-      "priceAfter": 296500,
+      "priceAfter": 282500,
       "targetAfter": 537500,
       "status": "정상",
       "issues": []
@@ -467,7 +467,7 @@
     {
       "code": "086520",
       "name": "에코프로",
-      "priceAfter": 72700,
+      "priceAfter": 67400,
       "targetAfter": 0,
       "status": "정상",
       "issues": []
@@ -475,15 +475,15 @@
     {
       "code": "039030",
       "name": "이오테크닉스",
-      "priceAfter": 270000,
-      "targetAfter": 580000,
+      "priceAfter": 249000,
+      "targetAfter": 532500,
       "status": "정상",
       "issues": []
     },
     {
       "code": "090360",
       "name": "로보스타",
-      "priceAfter": 57200,
+      "priceAfter": 55000,
       "targetAfter": 0,
       "status": "정상",
       "issues": []
@@ -491,7 +491,7 @@
     {
       "code": "322510",
       "name": "제이엘케이",
-      "priceAfter": 5080,
+      "priceAfter": 4515,
       "targetAfter": 0,
       "status": "정상",
       "issues": []
@@ -507,7 +507,7 @@
     {
       "code": "277880",
       "name": "티로보틱스",
-      "priceAfter": 2885,
+      "priceAfter": 2610,
       "targetAfter": 0,
       "status": "정상",
       "issues": []
@@ -515,7 +515,7 @@
     {
       "code": "078930",
       "name": "GS",
-      "priceAfter": 87500,
+      "priceAfter": 84100,
       "targetAfter": 103000,
       "status": "정상",
       "issues": []
@@ -523,7 +523,7 @@
     {
       "code": "009540",
       "name": "HD한국조선해양",
-      "priceAfter": 354000,
+      "priceAfter": 335000,
       "targetAfter": 575667,
       "status": "정상",
       "issues": []
@@ -531,7 +531,7 @@
     {
       "code": "010620",
       "name": "HD현대미포",
-      "priceAfter": 7437,
+      "priceAfter": 7373,
       "targetAfter": 0,
       "status": "정상",
       "issues": []
@@ -539,7 +539,7 @@
     {
       "code": "267260",
       "name": "HD현대일렉트릭",
-      "priceAfter": 705000,
+      "priceAfter": 586000,
       "targetAfter": 1442143,
       "status": "정상",
       "issues": []
@@ -547,7 +547,7 @@
     {
       "code": "373220",
       "name": "LG에너지솔루션",
-      "priceAfter": 314000,
+      "priceAfter": 300500,
       "targetAfter": 549591,
       "status": "정상",
       "issues": []
@@ -555,7 +555,7 @@
     {
       "code": "051910",
       "name": "LG화학",
-      "priceAfter": 240500,
+      "priceAfter": 232500,
       "targetAfter": 434938,
       "status": "정상",
       "issues": []
@@ -563,7 +563,7 @@
     {
       "code": "010120",
       "name": "LS ELECTRIC",
-      "priceAfter": 175500,
+      "priceAfter": 163800,
       "targetAfter": 300000,
       "status": "정상",
       "issues": []
@@ -571,7 +571,7 @@
     {
       "code": "005490",
       "name": "POSCO홀딩스",
-      "priceAfter": 299000,
+      "priceAfter": 288500,
       "targetAfter": 535544,
       "status": "정상",
       "issues": []
@@ -579,7 +579,7 @@
     {
       "code": "402340",
       "name": "SK스퀘어",
-      "priceAfter": 925000,
+      "priceAfter": 850000,
       "targetAfter": 1900000,
       "status": "정상",
       "issues": []
@@ -587,7 +587,7 @@
     {
       "code": "006800",
       "name": "미래에셋증권",
-      "priceAfter": 33050,
+      "priceAfter": 30700,
       "targetAfter": 65313,
       "status": "정상",
       "issues": []
@@ -595,7 +595,7 @@
     {
       "code": "006400",
       "name": "삼성SDI",
-      "priceAfter": 382000,
+      "priceAfter": 364000,
       "targetAfter": 797783,
       "status": "정상",
       "issues": []
@@ -603,7 +603,7 @@
     {
       "code": "207940",
       "name": "삼성바이오로직스",
-      "priceAfter": 1549000,
+      "priceAfter": 1479000,
       "targetAfter": 2010909,
       "status": "정상",
       "issues": []
@@ -611,7 +611,7 @@
     {
       "code": "010140",
       "name": "삼성중공업",
-      "priceAfter": 20700,
+      "priceAfter": 19400,
       "targetAfter": 38762,
       "status": "정상",
       "issues": []
@@ -619,15 +619,15 @@
     {
       "code": "068270",
       "name": "셀트리온",
-      "priceAfter": 177400,
-      "targetAfter": 266152,
+      "priceAfter": 180000,
+      "targetAfter": 274784,
       "status": "정상",
       "issues": []
     },
     {
       "code": "112610",
       "name": "씨에스윈드",
-      "priceAfter": 37650,
+      "priceAfter": 35050,
       "targetAfter": 77889,
       "status": "정상",
       "issues": []
@@ -635,7 +635,7 @@
     {
       "code": "003690",
       "name": "코리안리",
-      "priceAfter": 13600,
+      "priceAfter": 13290,
       "targetAfter": 16333,
       "status": "정상",
       "issues": []
@@ -651,7 +651,7 @@
     {
       "code": "352820",
       "name": "하이브",
-      "priceAfter": 188800,
+      "priceAfter": 170300,
       "targetAfter": 356000,
       "status": "정상",
       "issues": []
@@ -659,7 +659,7 @@
     {
       "code": "012450",
       "name": "한화에어로스페이스",
-      "priceAfter": 875000,
+      "priceAfter": 810000,
       "targetAfter": 1726111,
       "status": "정상",
       "issues": []
@@ -667,7 +667,7 @@
     {
       "code": "064350",
       "name": "현대로템",
-      "priceAfter": 122600,
+      "priceAfter": 120100,
       "targetAfter": 286813,
       "status": "정상",
       "issues": []
@@ -675,15 +675,15 @@
     {
       "code": "012330",
       "name": "현대모비스",
-      "priceAfter": 440000,
-      "targetAfter": 737200,
+      "priceAfter": 445000,
+      "targetAfter": 743750,
       "status": "정상",
       "issues": []
     },
     {
       "code": "298040",
       "name": "효성중공업",
-      "priceAfter": 2324000,
+      "priceAfter": 2006000,
       "targetAfter": 4720000,
       "status": "정상",
       "issues": []
