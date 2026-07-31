@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-07-30T16:09:09",
+  "generatedAt": "2026-07-31T16:17:59",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-07-30T16:09:09",
+    "generatedAt": "2026-07-31T16:17:59",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 20,
+    "targetPriceCandidateCount": 21,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -252,11 +252,11 @@
       }
     ],
     "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 79,
+    "rawTargetRows": 77,
     "reliableTargetCandidateCount": 3,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 19,
+    "targetUpsideCandidateCount": 20,
     "targetSource": "m.stock.naver.com/domestic/stock/{code}/total"
   },
   "details": [
@@ -281,14 +281,14 @@
       "code": "329180",
       "name": "HD현대중공업",
       "currentPrice": 300000,
-      "targetPrice": 898190,
-      "upsidePercent": 199.4,
-      "realisticTargetPrice": 718500,
-      "observeTimingPrice": 628500,
-      "stopTimingPrice": 539000,
+      "targetPrice": 865619,
+      "upsidePercent": 188.5,
+      "realisticTargetPrice": 692500,
+      "observeTimingPrice": 606000,
+      "stopTimingPrice": 519500,
       "source": "https://m.stock.naver.com/domestic/stock/329180/total",
       "rawCandidates": [
-        898190
+        865619
       ],
       "ok": true,
       "statusCode": 200,
@@ -298,14 +298,14 @@
       "code": "034020",
       "name": "두산에너빌리티",
       "currentPrice": 105250,
-      "targetPrice": 132250,
-      "upsidePercent": 25.7,
-      "realisticTargetPrice": 106000,
-      "observeTimingPrice": 92600,
-      "stopTimingPrice": 79400,
+      "targetPrice": 129375,
+      "upsidePercent": 22.9,
+      "realisticTargetPrice": 103500,
+      "observeTimingPrice": 90600,
+      "stopTimingPrice": 77600,
       "source": "https://m.stock.naver.com/domestic/stock/034020/total",
       "rawCandidates": [
-        132250
+        129375
       ],
       "ok": true,
       "statusCode": 200,
@@ -332,14 +332,14 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "targetPrice": 506458,
-      "upsidePercent": 70.2,
-      "realisticTargetPrice": 405000,
-      "observeTimingPrice": 354500,
-      "stopTimingPrice": 304000,
+      "targetPrice": 501042,
+      "upsidePercent": 68.4,
+      "realisticTargetPrice": 401000,
+      "observeTimingPrice": 350500,
+      "stopTimingPrice": 300500,
       "source": "https://m.stock.naver.com/domestic/stock/005930/total",
       "rawCandidates": [
-        506458
+        501042
       ],
       "ok": true,
       "statusCode": 200,
@@ -356,7 +356,7 @@
       "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/000660/total",
       "rawCandidates": [
-        3555652
+        3322083
       ],
       "ok": true,
       "statusCode": 200,
@@ -366,14 +366,14 @@
       "code": "047810",
       "name": "한국항공우주",
       "currentPrice": 70000,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 102500,
-      "observeTimingPrice": 89600,
-      "stopTimingPrice": 76800,
+      "targetPrice": 191474,
+      "upsidePercent": 173.5,
+      "realisticTargetPrice": 153000,
+      "observeTimingPrice": 134000,
+      "stopTimingPrice": 115000,
       "source": "https://m.stock.naver.com/domestic/stock/047810/total",
       "rawCandidates": [
-        214563
+        191474
       ],
       "ok": true,
       "statusCode": 200,
