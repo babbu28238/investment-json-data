@@ -1,9 +1,9 @@
 {
   "version": "A248",
-  "generatedAt": "2026-08-04T16:31:33",
+  "generatedAt": "2026-08-05T16:22:14",
   "summary": {
     "version": "A248",
-    "generatedAt": "2026-08-04T16:31:33",
+    "generatedAt": "2026-08-05T16:22:14",
     "status": "naver_target_chart_stop",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 25,
+    "candidateCount": 30,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -92,64 +92,124 @@
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
       }
     ],
     "supplyHitCount": 0,
@@ -159,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 22,
+    "targetPriceCandidateCount": 26,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -176,24 +236,11 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 30
       }
     ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 77,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 96,
+    "reliableTargetCandidateCount": 5,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 21,
@@ -346,9 +393,9 @@
       "code": "035420",
       "name": "NAVER",
       "currentPrice": 220000,
-      "naverTargetPrice": 329682,
-      "targetUpsidePercent": 49.9,
-      "targetBasedStopPrice": 198000,
+      "naverTargetPrice": 331650,
+      "targetUpsidePercent": 50.7,
+      "targetBasedStopPrice": 199000,
       "chartStopPrice": 202500,
       "chartStopReason": "차트 추천 손절선: 현재가 220,000원 기준 약 -8% 구간 202,500원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
     },
@@ -451,6 +498,56 @@
       "targetBasedStopPrice": 319500,
       "chartStopPrice": 165500,
       "chartStopReason": "차트 추천 손절선: 현재가 180,000원 기준 약 -8% 구간 165,500원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
+    },
+    {
+      "code": "028260",
+      "name": "삼성물산",
+      "currentPrice": 0,
+      "naverTargetPrice": 496667,
+      "targetUpsidePercent": 0.0,
+      "targetBasedStopPrice": 298000,
+      "chartStopPrice": 0,
+      "chartStopReason": ""
+    },
+    {
+      "code": "068760",
+      "name": "셀트리온제약",
+      "currentPrice": 0,
+      "naverTargetPrice": 0,
+      "targetUpsidePercent": 0,
+      "targetBasedStopPrice": 0,
+      "chartStopPrice": 0,
+      "chartStopReason": ""
+    },
+    {
+      "code": "091990",
+      "name": "셀트리온헬스케어",
+      "currentPrice": 0,
+      "naverTargetPrice": 240000,
+      "targetUpsidePercent": 0.0,
+      "targetBasedStopPrice": 144000,
+      "chartStopPrice": 0,
+      "chartStopReason": ""
+    },
+    {
+      "code": "058470",
+      "name": "리노공업",
+      "currentPrice": 0,
+      "naverTargetPrice": 136000,
+      "targetUpsidePercent": 0.0,
+      "targetBasedStopPrice": 81600,
+      "chartStopPrice": 0,
+      "chartStopReason": ""
+    },
+    {
+      "code": "112040",
+      "name": "위메이드",
+      "currentPrice": 0,
+      "naverTargetPrice": 30000,
+      "targetUpsidePercent": 0.0,
+      "targetBasedStopPrice": 18000,
+      "chartStopPrice": 0,
+      "chartStopReason": ""
     }
   ]
 }
