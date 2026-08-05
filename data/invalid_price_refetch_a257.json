@@ -1,9 +1,9 @@
 {
   "version": "A257",
-  "generatedAt": "2026-08-04T18:46:01",
+  "generatedAt": "2026-08-05T18:43:16",
   "summary": {
     "version": "A257",
-    "generatedAt": "2026-08-04T18:46:01",
+    "generatedAt": "2026-08-05T18:43:16",
     "status": "invalid_price_refetch",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 51,
+    "candidateCount": 56,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -92,64 +92,124 @@
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
       }
     ],
     "supplyHitCount": 0,
@@ -159,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 22,
+    "targetPriceCandidateCount": 26,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -176,45 +236,32 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 30
       }
     ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 77,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 96,
+    "reliableTargetCandidateCount": 5,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 21,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 25,
-    "targetBasedStopCount": 22,
+    "stopGuideUpdatedCount": 30,
+    "targetBasedStopCount": 26,
     "chartStopCount": 25,
-    "allStockLookupCount": 51,
+    "allStockLookupCount": 56,
     "outputLookup": "all_stock_lookup_a251.json",
-    "searchLookupCount": 51,
-    "searchPriceConnectedCount": 51,
-    "searchTargetConnectedCount": 45,
-    "validPriceCount": 48,
-    "validTargetCount": 42,
+    "searchLookupCount": 56,
+    "searchPriceConnectedCount": 56,
+    "searchTargetConnectedCount": 48,
+    "validPriceCount": 53,
+    "validTargetCount": 45,
     "priceFixedCount": 3,
-    "targetFixedCount": 3,
+    "targetFixedCount": 4,
     "invalidPriceCandidateCount": 3,
     "invalidStopCleanedCount": 3,
-    "normalCandidateCount": 48,
+    "normalCandidateCount": 53,
     "manualReviewCount": 3,
     "outputReview": "manual_price_review_a256.json",
     "invalidRefetchAttemptCount": 3,
@@ -226,28 +273,28 @@
       "code": "005930",
       "name": "삼성전자",
       "oldStatus": "검증필요",
-      "refetchPrice": 136000,
+      "refetchPrice": 142900,
       "rawPrices": [
+        246000,
         240000,
         239500,
         262500,
         207000,
-        208500,
-        1577000,
-        1060000,
-        203000,
-        136000,
-        79600,
-        64400,
+        1668000,
+        1119000,
+        209000,
+        142900,
+        84700,
+        66900,
+        6000,
         242000,
-        2500,
-        239000,
-        246500,
-        227500,
-        53757630,
-        7103,
-        1403,
-        1069
+        2000,
+        250000,
+        254500,
+        43225082,
+        7334,
+        1438,
+        1845
       ],
       "source": "https://m.stock.naver.com/domestic/stock/005930/total",
       "result": "accepted",
@@ -259,28 +306,28 @@
       "code": "000660",
       "name": "SK하이닉스",
       "oldStatus": "검증필요",
-      "refetchPrice": 240000,
+      "refetchPrice": 246000,
       "rawPrices": [
+        1668000,
         1577000,
         1567000,
         1718000,
         1322000,
-        1401000,
-        240000,
-        1060000,
-        203000,
-        136000,
-        79600,
-        64400,
-        10000,
-        1609000,
-        42000,
-        1580000,
-        1630000,
-        1483000,
-        9224209,
-        3463,
-        1151
+        246000,
+        1119000,
+        209000,
+        142900,
+        84700,
+        66900,
+        91000,
+        1616000,
+        39000,
+        1652000,
+        1701000,
+        1598000,
+        7742531,
+        9373,
+        1218
       ],
       "source": "https://m.stock.naver.com/domestic/stock/000660/total",
       "result": "accepted",
@@ -294,26 +341,26 @@
       "oldStatus": "검증필요",
       "refetchPrice": 183800,
       "rawPrices": [
+        242000,
         232500,
         215500,
         183800,
         158400,
-        173400,
+        77000,
+        484000,
+        141900,
+        64300,
         73000,
-        467000,
-        127100,
-        62700,
-        68500,
-        69200,
-        17000,
-        232000,
-        16500,
-        215000,
+        71200,
+        9500,
         238500,
-        209000,
-        863963,
-        1953,
-        4087
+        6000,
+        236000,
+        243500,
+        226000,
+        467788,
+        1106,
+        5480
       ],
       "source": "https://m.stock.naver.com/domestic/stock/108490/total",
       "result": "accepted",
