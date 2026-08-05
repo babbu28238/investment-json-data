@@ -1,10 +1,10 @@
 {
   "version": "A242",
-  "generatedAt": "2026-08-04T15:38:50",
+  "generatedAt": "2026-08-05T15:30:29",
   "summary": {
     "version": "A242",
-    "generatedAt": "2026-08-04T15:38:50",
-    "status": "target_price_source_empty_guard",
+    "generatedAt": "2026-08-05T15:30:29",
+    "status": "target_price_bands_source_guarded",
     "universeSource": "existing_json",
     "universeCount": 0,
     "includedCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 0,
+    "candidateCount": 30,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -92,64 +92,124 @@
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSPI",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260804",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
       }
     ],
     "supplyHitCount": 0,
@@ -159,8 +219,8 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 0,
-    "candidateSource": "",
+    "targetPriceCandidateCount": 25,
+    "candidateSource": "data/market_universe.json",
     "candidateSourcesTried": [
       {
         "path": "data/stock_candidates_ai_scored.json",
@@ -176,22 +236,2165 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 30
       }
-    ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다."
+    ]
   },
-  "details": []
+  "details": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "prices": [
+        2026,
+        4400,
+        9000,
+        42660,
+        42800,
+        66600,
+        70000,
+        88700,
+        110923,
+        128000,
+        132671,
+        152500,
+        190526,
+        220000,
+        296000,
+        297500,
+        395000,
+        493542
+      ],
+      "median": 119461,
+      "realisticTargetPrice": 95600,
+      "observeTimingPrice": 83600,
+      "stopTimingPrice": 71700,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2026,
+          "snippet": ",\n      \"snippet\": \"한화시스템 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 9000,
+          "snippet": ",\n      \"snippet\": \"한화시스템 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 9000,
+          "snippet": ",\n      \"snippet\": \"삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 128000,
+          "snippet": ",\n      \"snippet\": \"삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2026,
+          "snippet": "템 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 9000,
+          "snippet": "템 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2026,
+          "snippet": " 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 9000,
+          "snippet": " 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2026,
+          "snippet": "동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 \"\n    },\n    {\n      \"code\": \"005930\",\n      \"name\": \"삼성전자\",\n      \"qu"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 9000,
+          "snippet": "동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 \"\n    },\n    {\n      \"code\": \"005930\",\n      \"name\": \"삼성전자\",\n      \"qu"
+        }
+      ]
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "prices": [
+        5530,
+        42800,
+        51500,
+        55000,
+        70000,
+        73800,
+        92214,
+        114500,
+        128000,
+        152500,
+        190526,
+        220000,
+        296000,
+        297500,
+        395000,
+        493542
+      ],
+      "median": 121250,
+      "realisticTargetPrice": 97000,
+      "observeTimingPrice": 84900,
+      "stopTimingPrice": 72800,
+      "sources": [
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 395000,
+          "snippet": "2,\n      \"upsidePercent\": 65.9,\n      \"realisticTargetPrice\": 395000,\n      \"observeTimingPrice\": 345500,\n      \"stopTimingPrice\": 296000,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/005930/total\",\n      \"rawCandidates\": [\n        493542\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 220000,
+          "snippet": "2,\n      \"upsidePercent\": 65.9,\n      \"realisticTargetPrice\": 395000,\n      \"observeTimingPrice\": 345500,\n      \"stopTimingPrice\": 296000,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/005930/total\",\n      \"rawCandidates\": [\n        493542\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 70000,
+          "snippet": "2,\n      \"upsidePercent\": 65.9,\n      \"realisticTargetPrice\": 395000,\n      \"observeTimingPrice\": 345500,\n      \"stopTimingPrice\": 296000,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/005930/total\",\n      \"rawCandidates\": [\n        493542\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 190526,
+          "snippet": "2,\n      \"upsidePercent\": 65.9,\n      \"realisticTargetPrice\": 395000,\n      \"observeTimingPrice\": 345500,\n      \"stopTimingPrice\": 296000,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/005930/total\",\n      \"rawCandidates\": [\n        493542\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 152500,
+          "snippet": "2,\n      \"upsidePercent\": 65.9,\n      \"realisticTargetPrice\": 395000,\n      \"observeTimingPrice\": 345500,\n      \"stopTimingPrice\": 296000,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/005930/total\",\n      \"rawCandidates\": [\n        493542\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 220000,
+          "snippet": "    \"ok\": true,\n      \"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"000660\",\n      \"name\": \"SK하이닉스\",\n      \"currentPrice\": 220000,\n      \"targetPrice\": 0,\n      \"upsidePercent\": 0,\n      \"realisticTargetPrice\": 0,\n      \"observeTimingPrice\":"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 70000,
+          "snippet": "    \"ok\": true,\n      \"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"000660\",\n      \"name\": \"SK하이닉스\",\n      \"currentPrice\": 220000,\n      \"targetPrice\": 0,\n      \"upsidePercent\": 0,\n      \"realisticTargetPrice\": 0,\n      \"observeTimingPrice\":"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 190526,
+          "snippet": "    \"ok\": true,\n      \"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"000660\",\n      \"name\": \"SK하이닉스\",\n      \"currentPrice\": 220000,\n      \"targetPrice\": 0,\n      \"upsidePercent\": 0,\n      \"realisticTargetPrice\": 0,\n      \"observeTimingPrice\":"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 152500,
+          "snippet": "    \"ok\": true,\n      \"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"000660\",\n      \"name\": \"SK하이닉스\",\n      \"currentPrice\": 220000,\n      \"targetPrice\": 0,\n      \"upsidePercent\": 0,\n      \"realisticTargetPrice\": 0,\n      \"observeTimingPrice\":"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 55000,
+          "snippet": "    \"ok\": true,\n      \"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"000660\",\n      \"name\": \"SK하이닉스\",\n      \"currentPrice\": 220000,\n      \"targetPrice\": 0,\n      \"upsidePercent\": 0,\n      \"realisticTargetPrice\": 0,\n      \"observeTimingPrice\":"
+        }
+      ]
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "prices": [
+        51500,
+        77600,
+        84600,
+        88700,
+        96000,
+        103500,
+        105250,
+        110923,
+        113000,
+        120000,
+        128700,
+        129375,
+        132671,
+        141050,
+        300000,
+        519500,
+        692500,
+        865619
+      ],
+      "median": 116500,
+      "realisticTargetPrice": 93200,
+      "observeTimingPrice": 81600,
+      "stopTimingPrice": 69900,
+      "sources": [
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 113000,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 300000,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 865619,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 692500,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 105250,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 129375,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 103500,
+          "snippet": "nt\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 113000,
+          "snippet": "1050,\n      \"upsidePercent\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 300000,
+          "snippet": "1050,\n      \"upsidePercent\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 865619,
+          "snippet": "1050,\n      \"upsidePercent\": 9.6,\n      \"realisticTargetPrice\": 113000,\n      \"observeTimingPrice\": 98700,\n      \"stopTimingPrice\": 84600,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/042660/total\",\n      \"rawCandidates\": [\n        141050\n      ],"
+        }
+      ]
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "prices": [
+        7000,
+        34100,
+        42660,
+        51500,
+        64350,
+        84600,
+        96000,
+        103500,
+        105250,
+        113000,
+        120000,
+        128700,
+        129375,
+        141050,
+        300000,
+        519500,
+        692500,
+        865619
+      ],
+      "median": 109125,
+      "realisticTargetPrice": 87300,
+      "observeTimingPrice": 76400,
+      "stopTimingPrice": 65500,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": ",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": ",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": ",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": ",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        }
+      ]
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "prices": [
+        4000,
+        5000,
+        5100,
+        66600,
+        77600,
+        88700,
+        96000,
+        103500,
+        105250,
+        110923,
+        120000,
+        129375,
+        132671,
+        297500,
+        300000,
+        395000,
+        493542,
+        519500,
+        692500,
+        865619
+      ],
+      "median": 115461,
+      "realisticTargetPrice": 92400,
+      "observeTimingPrice": 80800,
+      "stopTimingPrice": 69300,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": " 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": " 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"034020\",\n      \"name\": \"두산에너빌리티\",\n      \"query\":"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "사전 더보기 지도 인플루언서 검색옵션 공유 한화오션 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"034020\",\n      \"name\": \"두산에너빌리티\",\n      \"query\":"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"034020\",\n      \"name\": \"두산에너빌리티\",\n      \"query\": \"두산에너빌리티 목표주가\",\n      \"price\": 120000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"두산에너빌리티 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"034020\",\n      \"name\": \"두산에너빌리티\",\n      \"query\": \"두산에너빌리티 목표주가\",\n      \"price\": 120000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"두산에너빌리티 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": "1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"034020\",\n      \"name\": \"두산에너빌리티\",\n      \"query\": \"두산에너빌리티 목표주가\",\n      \"price\": 120000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"두산에너빌리티 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": "빌리티 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1"
+        }
+      ]
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "prices": [
+        2026,
+        4000,
+        4400,
+        5000,
+        5100,
+        9000,
+        66600,
+        77600,
+        88700,
+        96000,
+        103500,
+        105250,
+        110923,
+        129375,
+        132671,
+        220000,
+        296000,
+        297500,
+        395000,
+        493542
+      ],
+      "median": 99750,
+      "realisticTargetPrice": 79800,
+      "observeTimingPrice": 69800,
+      "stopTimingPrice": 59800,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": "빌리티 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": "빌리티 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": "N 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 \"\n    },\n    {\n      \"code\": \"272210\",\n      \"name\": \"한화시스템\",\n      \"que"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": "N 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산에너빌리티 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 \"\n    },\n    {\n      \"code\": \"272210\",\n      \"name\": \"한화시스템\",\n      \"que"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": " 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 \"\n    },\n    {\n      \"code\": \"272210\",\n      \"name\": \"한화시스템\",\n      \"query\": \"한화시스템 목표주가\",\n      \"price\": 5100,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화시스템 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": " 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 \"\n    },\n    {\n      \"code\": \"272210\",\n      \"name\": \"한화시스템\",\n      \"query\": \"한화시스템 목표주가\",\n      \"price\": 5100,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화시스템 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": " 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 \"\n    },\n    {\n      \"code\": \"272210\",\n      \"name\": \"한화시스템\",\n      \"query\": \"한화시스템 목표주가\",\n      \"price\": 5100,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화시스템 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": "템 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3"
+        }
+      ]
+    },
+    {
+      "code": "047810",
+      "name": "한국항공우주",
+      "prices": [
+        2500,
+        36500,
+        42660,
+        42800,
+        51500,
+        55000,
+        55300,
+        64350,
+        70000,
+        73800,
+        82000,
+        92214,
+        114500,
+        120000,
+        128000,
+        152500,
+        190526,
+        220000,
+        250000,
+        579000,
+        724000
+      ],
+      "median": 82000,
+      "realisticTargetPrice": 65600,
+      "observeTimingPrice": 57400,
+      "stopTimingPrice": 49200,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 128000,
+          "snippet": ",\n      \"snippet\": \"삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": ",\n      \"snippet\": \"삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2500,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2500,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 128000,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        }
+      ]
+    },
+    {
+      "code": "241560",
+      "name": "두산밥캣",
+      "prices": [
+        2335,
+        3000,
+        4100,
+        4300,
+        5100,
+        9300,
+        36500,
+        51500,
+        55000,
+        55300,
+        70000,
+        73800,
+        80800,
+        82000,
+        92214,
+        114500,
+        115000,
+        120000,
+        152500,
+        174000,
+        190526,
+        217800,
+        241560,
+        250000,
+        434500,
+        579000,
+        724000
+      ],
+      "median": 82000,
+      "realisticTargetPrice": 65600,
+      "observeTimingPrice": 57400,
+      "stopTimingPrice": 49200,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 82000,
+          "snippet": ",\n      \"snippet\": \"한국항공우주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한국항공우주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 82000,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 241560,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 241560,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 241560,
+          "snippet": "검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 \"\n    },\n    {\n  "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": "검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 \"\n    },\n    {\n  "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 120000,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        }
+      ]
+    },
+    {
+      "code": "028260",
+      "name": "삼성물산",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "sources": []
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "prices": [
+        1000,
+        2071,
+        2639,
+        3500,
+        6000,
+        7000,
+        54000,
+        60000,
+        70000,
+        82200,
+        109500,
+        115000,
+        130500,
+        132000,
+        134000,
+        135000,
+        137000,
+        164737,
+        172000,
+        174000,
+        180000,
+        217800,
+        224889
+      ],
+      "median": 115000,
+      "realisticTargetPrice": 92000,
+      "observeTimingPrice": 80500,
+      "stopTimingPrice": 69000,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"105560\",\n      \"name\": \"KB금융\",\n      \"qu"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"105560\",\n      \"name\": \"KB금융\",\n      \"qu"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"105560\",\n      \"name\": \"KB금융\",\n      \"query\": \"KB금융 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"KB금융 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"105560\",\n      \"name\": \"KB금융\",\n      \"query\": \"KB금융 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"KB금융 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": " 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"105560\",\n      \"name\": \"KB금융\",\n      \"query\": \"KB금융 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"KB금융 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        }
+      ]
+    },
+    {
+      "code": "055550",
+      "name": "신한지주",
+      "prices": [
+        1000,
+        16000,
+        35000,
+        43778,
+        54000,
+        60000,
+        70000,
+        72000,
+        82200,
+        98800,
+        107000,
+        109500,
+        132000,
+        134000,
+        135000,
+        137000,
+        164737,
+        172000,
+        175000,
+        180000,
+        200000,
+        224889
+      ],
+      "median": 108250,
+      "realisticTargetPrice": 86600,
+      "observeTimingPrice": 75800,
+      "stopTimingPrice": 65000,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 134000,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 134000,
+          "snippet": "뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": "뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 134000,
+          "snippet": "영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"055550\",\n      \"name\": \"신한지주\",\n      \"quer"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": "영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"055550\",\n      \"name\": \"신한지주\",\n      \"quer"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 134000,
+          "snippet": "옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"055550\",\n      \"name\": \"신한지주\",\n      \"query\": \"신한지주 목표주가\",\n      \"price\": 134000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"신한지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": "옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"055550\",\n      \"name\": \"신한지주\",\n      \"query\": \"신한지주 목표주가\",\n      \"price\": 134000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"신한지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 175000,
+          "snippet": "옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"055550\",\n      \"name\": \"신한지주\",\n      \"query\": \"신한지주 목표주가\",\n      \"price\": 134000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"신한지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        }
+      ]
+    },
+    {
+      "code": "086790",
+      "name": "하나금융지주",
+      "prices": [
+        3000,
+        5000,
+        16000,
+        26300,
+        35000,
+        43778,
+        60000,
+        70000,
+        72000,
+        82200,
+        98800,
+        107000,
+        109500,
+        132000,
+        137000,
+        140000,
+        164737,
+        175000,
+        200000,
+        220000,
+        263500,
+        329682
+      ],
+      "median": 102900,
+      "realisticTargetPrice": 82300,
+      "observeTimingPrice": 72000,
+      "stopTimingPrice": 61700,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 175000,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 175000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 175000,
+          "snippet": "핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"086790\",\n      \"name\": \"하나금융지주\",\n      \"query\""
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 신한지주 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"086790\",\n      \"name\": \"하나금융지주\",\n      \"query\""
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 175000,
+          "snippet": " 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"086790\",\n      \"name\": \"하나금융지주\",\n      \"query\": \"하나금융지주 목표주가\",\n      \"price\": 175000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"하나금융지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": " 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"086790\",\n      \"name\": \"하나금융지주\",\n      \"query\": \"하나금융지주 목표주가\",\n      \"price\": 175000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"하나금융지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": " 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"086790\",\n      \"name\": \"하나금융지주\",\n      \"query\": \"하나금융지주 목표주가\",\n      \"price\": 175000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"하나금융지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월"
+        }
+      ]
+    },
+    {
+      "code": "316140",
+      "name": "우리금융지주",
+      "prices": [
+        1201,
+        3000,
+        4429,
+        16000,
+        26300,
+        35000,
+        43778,
+        50500,
+        55000,
+        63063,
+        70000,
+        98800,
+        132000,
+        140000,
+        164737,
+        198000,
+        200000,
+        220000,
+        263500,
+        320000,
+        329682,
+        400000
+      ],
+      "median": 84400,
+      "realisticTargetPrice": 67500,
+      "observeTimingPrice": 59100,
+      "stopTimingPrice": 50600,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "지주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": "지주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"316140\",\n      \"name\": \"우리금융지주\",\n      \"query\": \"우"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": "사전 더보기 지도 인플루언서 검색옵션 공유 하나금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"316140\",\n      \"name\": \"우리금융지주\",\n      \"query\": \"우"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 200000,
+          "snippet": "주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"316140\",\n      \"name\": \"우리금융지주\",\n      \"query\": \"우리금융지주 리포트 목표주가\",\n      \"price\": 200000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"우리금융지주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": "주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"316140\",\n      \"name\": \"우리금융지주\",\n      \"query\": \"우리금융지주 리포트 목표주가\",\n      \"price\": 200000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"우리금융지주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4429,
+          "snippet": "주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"316140\",\n      \"name\": \"우리금융지주\",\n      \"query\": \"우리금융지주 리포트 목표주가\",\n      \"price\": 200000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"우리금융지주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3000,
+          "snippet": "지주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 우리금융지주 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1"
+        }
+      ]
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "prices": [
+        4000,
+        4100,
+        4300,
+        4800,
+        5000,
+        5100,
+        6000,
+        55000,
+        55300,
+        73800,
+        80800,
+        85000,
+        92214,
+        115000,
+        130500,
+        172000,
+        174000,
+        180000,
+        217800,
+        224889,
+        250000,
+        434500,
+        579000,
+        724000
+      ],
+      "median": 88607,
+      "realisticTargetPrice": 70900,
+      "observeTimingPrice": 62000,
+      "stopTimingPrice": 53200,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4300,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": ",\n      \"snippet\": \"두산밥캣 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 두산밥캣 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": ",\n      \"snippet\": \"현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4800,
+          "snippet": ",\n      \"snippet\": \"현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4800,
+          "snippet": ",\n      \"snippet\": \"현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": ",\n      \"snippet\": \"현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": ",\n      \"snippet\": \"현대차 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4300,
+          "snippet": ",\n      \"snippet\": \"현대차 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4300,
+          "snippet": ",\n      \"snippet\": \"현대차 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 85000,
+          "snippet": ",\n      \"snippet\": \"현대차 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체"
+        }
+      ]
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "prices": [
+        3500,
+        4000,
+        4800,
+        5000,
+        5100,
+        6000,
+        60000,
+        109500,
+        115000,
+        130500,
+        135000,
+        137000,
+        172000,
+        174000,
+        180000,
+        217800,
+        224889,
+        250000,
+        434500,
+        579000,
+        724000
+      ],
+      "median": 135000,
+      "realisticTargetPrice": 108000,
+      "observeTimingPrice": 94500,
+      "stopTimingPrice": 81000,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": ",\n      \"snippet\": \"현대차 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": ",\n      \"snippet\": \"현대차 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": ",\n      \"snippet\": \"기아 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4800,
+          "snippet": ",\n      \"snippet\": \"기아 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 4800,
+          "snippet": ",\n      \"snippet\": \"기아 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": ",\n      \"snippet\": \"기아 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": ",\n      \"snippet\": \"기아 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": ",\n      \"snippet\": \"기아 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 기아 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5100,
+          "snippet": "컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 5000,
+          "snippet": "컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주"
+        }
+      ]
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "prices": [
+        1000,
+        1047,
+        1201,
+        1600,
+        2000,
+        2026,
+        2071,
+        2335,
+        2500,
+        2639,
+        3000,
+        3230,
+        3500,
+        4000,
+        4100,
+        4300,
+        4400,
+        4429,
+        4800,
+        5000,
+        5100,
+        5200,
+        6000,
+        6600,
+        6900,
+        7000,
+        8300,
+        9000,
+        9150,
+        9300,
+        16000,
+        22000,
+        26300,
+        35000,
+        36500,
+        37800,
+        40000,
+        42660,
+        42800,
+        43778,
+        48000,
+        50500,
+        52600,
+        54000,
+        55000,
+        60000,
+        63063,
+        64000,
+        64350,
+        65690,
+        72000,
+        81000,
+        82000,
+        85000,
+        96000,
+        110000,
+        120000,
+        128000,
+        134000,
+        144000,
+        168700,
+        175000,
+        186500,
+        198000,
+        200000,
+        220000,
+        232857,
+        240000,
+        241560,
+        257720,
+        263500,
+        277810,
+        300000,
+        320000,
+        329682,
+        400000,
+        500000
+      ],
+      "median": 42800,
+      "realisticTargetPrice": 34200,
+      "observeTimingPrice": 30000,
+      "stopTimingPrice": 25700,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 400000,
+          "snippet": ",\n      \"snippet\": \"우리금융지주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 우리금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 400000,
+          "snippet": ",\n      \"snippet\": \"우리금융지주 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 우리금융지주 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 400000,
+          "snippet": ",\n      \"snippet\": \"NAVER 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 400000,
+          "snippet": ",\n      \"snippet\": \"NAVER 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 400000,
+          "snippet": ",\n      \"snippet\": \"NAVER 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": ",\n      \"snippet\": \"NAVER 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 42660,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": "{\n  \"version\": \"A244\",\n  \"generatedAt\": \"2026-08-04T16:02:19\",\n  \"rows\": [\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 42660,\n      \"source\": \"naver_search\",\n      \"snippet\": \"한화오션 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 64350,
+          "snippet": "션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 64350,\n      \"sou"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": "션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시\"\n    },\n    {\n      \"code\": \"042660\",\n      \"name\": \"한화오션\",\n      \"query\": \"한화오션 증권사 목표가\",\n      \"price\": 64350,\n      \"sou"
+        }
+      ]
+    },
+    {
+      "code": "035720",
+      "name": "카카오",
+      "prices": [
+        1000,
+        6000,
+        6600,
+        6900,
+        18500,
+        22000,
+        23100,
+        37800,
+        50500,
+        55000,
+        63063,
+        110000,
+        139500,
+        186500,
+        198000,
+        220000,
+        232857,
+        263500,
+        320000,
+        329682
+      ],
+      "median": 59031,
+      "realisticTargetPrice": 47200,
+      "observeTimingPrice": 41300,
+      "stopTimingPrice": 35400,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": ",\n      \"snippet\": \"NAVER 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": ",\n      \"snippet\": \"NAVER 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": "R 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "R 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": " 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시\"\n    },\n    {\n      \"code\": \"035720\",\n      \"name\": \"카카오\",\n      \"quer"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 NAVER 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시\"\n    },\n    {\n      \"code\": \"035720\",\n      \"name\": \"카카오\",\n      \"quer"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1000,
+          "snippet": " 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시\"\n    },\n    {\n      \"code\": \"035720\",\n      \"name\": \"카카오\",\n      \"query\": \"카카오 증권사 목표가\",\n      \"price\": 1000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"카카오 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시\"\n    },\n    {\n      \"code\": \"035720\",\n      \"name\": \"카카오\",\n      \"query\": \"카카오 증권사 목표가\",\n      \"price\": 1000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"카카오 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        }
+      ]
+    },
+    {
+      "code": "033780",
+      "name": "KT&G",
+      "prices": [
+        6000,
+        6600,
+        13900,
+        18500,
+        22000,
+        23100,
+        37800,
+        50000,
+        50500,
+        55000,
+        55900,
+        63063,
+        69846,
+        110000,
+        139500,
+        186500,
+        232857
+      ],
+      "median": 50500,
+      "realisticTargetPrice": 40400,
+      "observeTimingPrice": 35400,
+      "stopTimingPrice": 30300,
+      "sources": [
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 50500,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 110000,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 232857,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 186500,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 22000,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 23100,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 18500,
+          "snippet": "63063,\n      \"upsidePercent\": 14.7,\n      \"realisticTargetPrice\": 50500,\n      \"observeTimingPrice\": 44100,\n      \"stopTimingPrice\": 37800,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/035720/total\",\n      \"rawCandidates\": [\n        63063\n      ],"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 110000,
+          "snippet": "\"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"033780\",\n      \"name\": \"KT&G\",\n      \"currentPrice\": 110000,\n      \"targetPrice\": 232857,\n      \"upsidePercent\": 111.7,\n      \"realisticTargetPrice\": 186500,\n      \"observeTimingPrice\": 163000,\n "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 232857,
+          "snippet": "\"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"033780\",\n      \"name\": \"KT&G\",\n      \"currentPrice\": 110000,\n      \"targetPrice\": 232857,\n      \"upsidePercent\": 111.7,\n      \"realisticTargetPrice\": 186500,\n      \"observeTimingPrice\": 163000,\n "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 186500,
+          "snippet": "\"statusCode\": 200,\n      \"error\": \"\"\n    },\n    {\n      \"code\": \"033780\",\n      \"name\": \"KT&G\",\n      \"currentPrice\": 110000,\n      \"targetPrice\": 232857,\n      \"upsidePercent\": 111.7,\n      \"realisticTargetPrice\": 186500,\n      \"observeTimingPrice\": 163000,\n "
+        }
+      ]
+    },
+    {
+      "code": "011200",
+      "name": "HMM",
+      "prices": [
+        1000,
+        1047,
+        6000,
+        6600,
+        6900,
+        8300,
+        9000,
+        9150,
+        13900,
+        17600,
+        18500,
+        22000,
+        23100,
+        39400,
+        41900,
+        45000,
+        48000,
+        50000,
+        52600,
+        55900,
+        65690,
+        69846,
+        81000,
+        110000,
+        139500,
+        186500,
+        232857
+      ],
+      "median": 39400,
+      "realisticTargetPrice": 31500,
+      "observeTimingPrice": 27600,
+      "stopTimingPrice": 23600,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6900,
+          "snippet": "증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6900,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"011200\",\n      \"name\": \"HMM\",\n      \"q"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6900,
+          "snippet": "동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"011200\",\n      \"name\": \"HMM\",\n      \"q"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"011200\",\n      \"name\": \"HMM\",\n      \"query\": \"HMM 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"HMM 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6900,
+          "snippet": "션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"011200\",\n      \"name\": \"HMM\",\n      \"query\": \"HMM 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"HMM 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 8300,
+          "snippet": "션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"011200\",\n      \"name\": \"HMM\",\n      \"query\": \"HMM 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"HMM 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6900,
+          "snippet": "목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6"
+        }
+      ]
+    },
+    {
+      "code": "008770",
+      "name": "호텔신라",
+      "prices": [
+        1047,
+        6000,
+        9000,
+        9150,
+        13900,
+        17600,
+        18500,
+        22000,
+        23100,
+        39400,
+        41900,
+        45000,
+        48000,
+        50000,
+        51200,
+        52600,
+        55900,
+        60000,
+        64000,
+        65690,
+        69846,
+        81000,
+        170000,
+        257720
+      ],
+      "median": 46500,
+      "realisticTargetPrice": 37200,
+      "observeTimingPrice": 32500,
+      "stopTimingPrice": 27900,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 81000,
+          "snippet": "증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1047,
+          "snippet": "증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 81000,
+          "snippet": "역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1047,
+          "snippet": "역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 81000,
+          "snippet": " 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"008770\",\n      \"name\": \"호텔신라\",\n      \"que"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1047,
+          "snippet": " 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 HMM 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"008770\",\n      \"name\": \"호텔신라\",\n      \"que"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 81000,
+          "snippet": "기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"008770\",\n      \"name\": \"호텔신라\",\n      \"query\": \"호텔신라 목표주가\",\n      \"price\": 81000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"호텔신라 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1047,
+          "snippet": "기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"008770\",\n      \"name\": \"호텔신라\",\n      \"query\": \"호텔신라 목표주가\",\n      \"price\": 81000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"호텔신라 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 257720,
+          "snippet": "기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 \"\n    },\n    {\n      \"code\": \"008770\",\n      \"name\": \"호텔신라\",\n      \"query\": \"호텔신라 목표주가\",\n      \"price\": 81000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"호텔신라 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 1047,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        }
+      ]
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "prices": [
+        5200,
+        6000,
+        7000,
+        39400,
+        41900,
+        45000,
+        50000,
+        51200,
+        52600,
+        55900,
+        65690,
+        69846,
+        130000,
+        152500,
+        170000,
+        190800
+      ],
+      "median": 51900,
+      "realisticTargetPrice": 41500,
+      "observeTimingPrice": 36300,
+      "stopTimingPrice": 31100,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 65690,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 65690,
+          "snippet": "뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 65690,
+          "snippet": "동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"108490\",\n      \"name\": \"로보티즈\",\n      \"que"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"108490\",\n      \"name\": \"로보티즈\",\n      \"que"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 65690,
+          "snippet": " 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"108490\",\n      \"name\": \"로보티즈\",\n      \"query\": \"로보티즈 목표주가\",\n      \"price\": 65690,\n      \"source\": \"naver_search\",\n      \"snippet\": \"로보티즈 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"108490\",\n      \"name\": \"로보티즈\",\n      \"query\": \"로보티즈 목표주가\",\n      \"price\": 65690,\n      \"source\": \"naver_search\",\n      \"snippet\": \"로보티즈 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": " 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"108490\",\n      \"name\": \"로보티즈\",\n      \"query\": \"로보티즈 목표주가\",\n      \"price\": 65690,\n      \"source\": \"naver_search\",\n      \"snippet\": \"로보티즈 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 65690,
+          "snippet": ",\n      \"snippet\": \"호텔신라 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 호텔신라 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        }
+      ]
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "prices": [
+        5200,
+        6000,
+        7000,
+        39400,
+        45000,
+        52600,
+        65690,
+        70000,
+        114500,
+        130000,
+        152500,
+        168700,
+        170000,
+        180000,
+        190800,
+        240000,
+        277810,
+        300000,
+        311000,
+        500000
+      ],
+      "median": 141250,
+      "realisticTargetPrice": 113000,
+      "observeTimingPrice": 98900,
+      "stopTimingPrice": 84800,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": " 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": "가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "지도 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 2시간 \"\n    },\n    {\n      \"code\": \"277810\",\n      \"name\": \"레인보우로보틱스\",\n      \"query\": \"레"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": "지도 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선택 1시간 2시간 \"\n    },\n    {\n      \"code\": \"277810\",\n      \"name\": \"레인보우로보틱스\",\n      \"query\": \"레"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 6000,
+          "snippet": "1년 직접입력 옵션 펼치기 접기 시간선택 1시간 2시간 \"\n    },\n    {\n      \"code\": \"277810\",\n      \"name\": \"레인보우로보틱스\",\n      \"query\": \"레인보우로보틱스 리포트 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"레인보우로보틱스 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": "1년 직접입력 옵션 펼치기 접기 시간선택 1시간 2시간 \"\n    },\n    {\n      \"code\": \"277810\",\n      \"name\": \"레인보우로보틱스\",\n      \"query\": \"레인보우로보틱스 리포트 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"레인보우로보틱스 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": "1년 직접입력 옵션 펼치기 접기 시간선택 1시간 2시간 \"\n    },\n    {\n      \"code\": \"277810\",\n      \"name\": \"레인보우로보틱스\",\n      \"query\": \"레인보우로보틱스 리포트 목표주가\",\n      \"price\": 6000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"레인보우로보틱스 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 7000,
+          "snippet": "로보틱스 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 "
+        }
+      ]
+    },
+    {
+      "code": "247540",
+      "name": "에코프로비엠",
+      "prices": [
+        32250,
+        70000,
+        114500,
+        130000,
+        152500,
+        168700,
+        170000,
+        190800,
+        240000,
+        277810,
+        300000,
+        430000,
+        500000,
+        537500
+      ],
+      "median": 180400,
+      "realisticTargetPrice": 144300,
+      "observeTimingPrice": 126300,
+      "stopTimingPrice": 108200,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": ",\n      \"snippet\": \"레인보우로보틱스 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 P"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": ",\n      \"snippet\": \"레인보우로보틱스 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 P"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": "로보틱스 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": "로보틱스 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": " 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": " 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": "기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코프로비엠 컨센서스 목표주가\",\n      \"price\": 300000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": "기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코프로비엠 컨센서스 목표주가\",\n      \"price\": 300000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        }
+      ]
+    },
+    {
+      "code": "086520",
+      "name": "에코프로",
+      "prices": [
+        3195,
+        32250,
+        70000,
+        114500,
+        130000,
+        152500,
+        168700,
+        170000,
+        180000,
+        190800,
+        240000,
+        277810,
+        300000,
+        311000,
+        322500,
+        426000,
+        430000,
+        500000,
+        532500,
+        537500
+      ],
+      "median": 215400,
+      "realisticTargetPrice": 172300,
+      "observeTimingPrice": 150800,
+      "stopTimingPrice": 129200,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": "로보틱스 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": "로보틱스 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": " 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": " 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": " 어학사전 더보기 지도 인플루언서 검색옵션 공유 레인보우로보틱스 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 300000,
+          "snippet": "기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코프로비엠 컨센서스 목표주가\",\n      \"price\": 300000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": "기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코프로비엠 컨센서스 목표주가\",\n      \"price\": 300000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 500000,
+          "snippet": "기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치\"\n    },\n    {\n      \"code\": \"247540\",\n      \"name\": \"에코프로비엠\",\n      \"query\": \"에코프로비엠 컨센서스 목표주가\",\n      \"price\": 300000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 152500,
+          "snippet": "0,\n      \"upsidePercent\": 46.8,\n      \"realisticTargetPrice\": 152500,\n      \"observeTimingPrice\": 133500,\n      \"stopTimingPrice\": 114500,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/247540/total\",\n      \"rawCandidates\": [\n        190800\n      ],"
+        }
+      ]
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "prices": [
+        1600,
+        2000,
+        3230,
+        70000,
+        144000,
+        168700,
+        180000,
+        277810,
+        300000,
+        311000,
+        319500,
+        322500,
+        426000,
+        430000,
+        500000,
+        532500,
+        537500
+      ],
+      "median": 300000,
+      "realisticTargetPrice": 240000,
+      "observeTimingPrice": 210000,
+      "stopTimingPrice": 180000,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": ",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 에코프로비엠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 500000,
+          "snippet": ",\n      \"snippet\": \"에코프로비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 에코프로비엠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 500000,
+          "snippet": ",\n      \"snippet\": \"알테오젠 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3230,
+          "snippet": ",\n      \"snippet\": \"알테오젠 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 3230,
+          "snippet": ",\n      \"snippet\": \"알테오젠 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 144000,
+          "snippet": ",\n      \"snippet\": \"알테오젠 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 144000,
+          "snippet": ",\n      \"snippet\": \"알테오젠 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2000,
+          "snippet": ",\n      \"snippet\": \"알테오젠 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 277810,
+          "snippet": "비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 에코프로비엠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 500000,
+          "snippet": "비엠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 에코프로비엠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기"
+        }
+      ]
+    },
+    {
+      "code": "068760",
+      "name": "셀트리온제약",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "sources": []
+    },
+    {
+      "code": "091990",
+      "name": "셀트리온헬스케어",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "sources": []
+    },
+    {
+      "code": "039030",
+      "name": "이오테크닉스",
+      "prices": [
+        1600,
+        2000,
+        180000,
+        300000,
+        311000,
+        319500,
+        322500,
+        426000,
+        430000,
+        532500,
+        537500
+      ],
+      "median": 319500,
+      "realisticTargetPrice": 255600,
+      "observeTimingPrice": 223600,
+      "stopTimingPrice": 191700,
+      "sources": [
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2000,
+          "snippet": " 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 "
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2000,
+          "snippet": "영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2000,
+          "snippet": " 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"039030\",\n      \"name\": \"이오테크닉스\",\n      \"query\":"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2000,
+          "snippet": "1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼치기 접기 시간선\"\n    },\n    {\n      \"code\": \"039030\",\n      \"name\": \"이오테크닉스\",\n      \"query\": \"이오테크닉스 증권사 목표가\",\n      \"price\": 2000,\n      \"source\": \"naver_search\",\n      \"snippet\": \"이오테크닉스 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NA"
+        },
+        {
+          "source": "report_target_prices_a244.json",
+          "price": 2000,
+          "snippet": ",\n      \"snippet\": \"알테오젠 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 알테오젠 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사"
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 430000,
+          "snippet": ": 79.2,\n      \"realisticTargetPrice\": 430000,\n      \"observeTimingPrice\": 376000,\n      \"stopTimingPrice\": 322500,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/196170/total\",\n      \"rawCandidates\": [\n        537500\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 180000,
+          "snippet": ": 79.2,\n      \"realisticTargetPrice\": 430000,\n      \"observeTimingPrice\": 376000,\n      \"stopTimingPrice\": 322500,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/196170/total\",\n      \"rawCandidates\": [\n        537500\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 532500,
+          "snippet": ": 79.2,\n      \"realisticTargetPrice\": 430000,\n      \"observeTimingPrice\": 376000,\n      \"stopTimingPrice\": 322500,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/196170/total\",\n      \"rawCandidates\": [\n        537500\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 426000,
+          "snippet": ": 79.2,\n      \"realisticTargetPrice\": 430000,\n      \"observeTimingPrice\": 376000,\n      \"stopTimingPrice\": 322500,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/196170/total\",\n      \"rawCandidates\": [\n        537500\n      ],\n      \"ok\": true,\n     "
+        },
+        {
+          "source": "naver_consensus_target_a247.json",
+          "price": 430000,
+          "snippet": "0,\n      \"upsidePercent\": 79.2,\n      \"realisticTargetPrice\": 430000,\n      \"observeTimingPrice\": 376000,\n      \"stopTimingPrice\": 322500,\n      \"source\": \"https://m.stock.naver.com/domestic/stock/196170/total\",\n      \"rawCandidates\": [\n        537500\n      ],"
+        }
+      ]
+    },
+    {
+      "code": "058470",
+      "name": "리노공업",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "sources": []
+    },
+    {
+      "code": "112040",
+      "name": "위메이드",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "sources": []
+    }
+  ]
 }
