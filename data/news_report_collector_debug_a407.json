@@ -1,7 +1,7 @@
 {
   "summary": {
     "version": "A407",
-    "generatedAt": "2026-08-07T02:55:27",
+    "generatedAt": "2026-08-07T04:59:09",
     "status": "news_report_collector_fix",
     "candidateCount": 20,
     "priceConnectedCount": 20,
@@ -13,1045 +13,11 @@
   },
   "debug": [
     {
-      "code": "042660",
-      "name": "한화오션",
-      "priceSource": "https://m.stock.naver.com/api/stock/042660/basic",
-      "rawPrices": [
-        88100
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/042660?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/042660/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/042660",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/042660?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98",
-            "ok": true,
-            "chars": 401215
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98",
-            "ok": true,
-            "chars": 400894
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=042660",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=042660",
-            "ok": true,
-            "chars": 62810
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=042660",
-            "ok": true,
-            "chars": 127954
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/042660/research",
-            "ok": true,
-            "chars": 56006
-          }
-        ],
-        "search": [
-          {
-            "query": "한화오션 목표가 증권사",
-            "ok": true,
-            "chars": 689637
-          },
-          {
-            "query": "한화오션 리포트 목표가",
-            "ok": true,
-            "chars": 513766
-          },
-          {
-            "query": "한화오션 투자의견 매수",
-            "ok": true,
-            "chars": 451105
-          }
-        ]
-      }
-    },
-    {
-      "code": "329180",
-      "name": "HD현대중공업",
-      "priceSource": "https://m.stock.naver.com/api/stock/329180/basic",
-      "rawPrices": [
-        496500
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/329180?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/329180/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/329180",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/329180?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85",
-            "ok": true,
-            "chars": 399139
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85",
-            "ok": true,
-            "chars": 398818
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=329180",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=329180",
-            "ok": true,
-            "chars": 62444
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=329180",
-            "ok": true,
-            "chars": 128336
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/329180/research",
-            "ok": true,
-            "chars": 56266
-          }
-        ],
-        "search": [
-          {
-            "query": "HD현대중공업 목표가 증권사",
-            "ok": true,
-            "chars": 464629
-          },
-          {
-            "query": "HD현대중공업 리포트 목표가",
-            "ok": true,
-            "chars": 434645
-          },
-          {
-            "query": "HD현대중공업 투자의견 매수",
-            "ok": true,
-            "chars": 446598
-          }
-        ]
-      }
-    },
-    {
-      "code": "034020",
-      "name": "두산에너빌리티",
-      "priceSource": "https://m.stock.naver.com/api/stock/034020/basic",
-      "rawPrices": [
-        75300
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/034020?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/034020/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/034020",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/034020?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0",
-            "ok": true,
-            "chars": 400285
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0",
-            "ok": true,
-            "chars": 399965
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=034020",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=034020",
-            "ok": true,
-            "chars": 62816
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=034020",
-            "ok": true,
-            "chars": 127903
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/034020/research",
-            "ok": true,
-            "chars": 56067
-          }
-        ],
-        "search": [
-          {
-            "query": "두산에너빌리티 목표가 증권사",
-            "ok": true,
-            "chars": 668823
-          },
-          {
-            "query": "두산에너빌리티 리포트 목표가",
-            "ok": true,
-            "chars": 470568
-          },
-          {
-            "query": "두산에너빌리티 투자의견 매수",
-            "ok": true,
-            "chars": 480496
-          }
-        ]
-      }
-    },
-    {
-      "code": "272210",
-      "name": "한화시스템",
-      "priceSource": "https://m.stock.naver.com/api/stock/272210/basic",
-      "rawPrices": [
-        68500
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/272210?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/272210/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/272210",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/272210?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C",
-            "ok": true,
-            "chars": 416483
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C",
-            "ok": true,
-            "chars": 416162
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=272210",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=272210",
-            "ok": true,
-            "chars": 61763
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=272210",
-            "ok": true,
-            "chars": 127950
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/272210/research",
-            "ok": true,
-            "chars": 56246
-          }
-        ],
-        "search": [
-          {
-            "query": "한화시스템 목표가 증권사",
-            "ok": true,
-            "chars": 558123
-          },
-          {
-            "query": "한화시스템 리포트 목표가",
-            "ok": true,
-            "chars": 417309
-          },
-          {
-            "query": "한화시스템 투자의견 매수",
-            "ok": true,
-            "chars": 456509
-          }
-        ]
-      }
-    },
-    {
-      "code": "005930",
-      "name": "삼성전자",
-      "priceSource": "https://m.stock.naver.com/api/stock/005930/integration",
-      "rawPrices": [
-        232500,
-        230500,
-        246000,
-        240000,
-        239500,
-        262500,
-        1434000,
-        940000,
-        191100,
-        81400,
-        126300,
-        64800
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/005930?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/005930/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/005930",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/005930?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
-            "ok": true,
-            "chars": 421216
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
-            "ok": true,
-            "chars": 420895
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=005930",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=005930",
-            "ok": true,
-            "chars": 62956
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=005930",
-            "ok": true,
-            "chars": 128637
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/005930/research",
-            "ok": true,
-            "chars": 56187
-          }
-        ],
-        "search": [
-          {
-            "query": "삼성전자 목표가 증권사",
-            "ok": true,
-            "chars": 741973
-          },
-          {
-            "query": "삼성전자 리포트 목표가",
-            "ok": true,
-            "chars": 551651
-          },
-          {
-            "query": "삼성전자 투자의견 매수",
-            "ok": true,
-            "chars": 646092
-          }
-        ]
-      }
-    },
-    {
-      "code": "000660",
-      "name": "SK하이닉스",
-      "priceSource": "https://m.stock.naver.com/api/stock/000660/integration",
-      "rawPrices": [
-        1434000,
-        1495000,
-        1668000,
-        1577000,
-        1567000,
-        1718000,
-        232500,
-        940000,
-        191100,
-        81400,
-        126300,
-        64800
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/000660?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/000660/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/000660",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/000660?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
-            "ok": true,
-            "chars": 385643
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
-            "ok": true,
-            "chars": 385322
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=000660",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=000660",
-            "ok": true,
-            "chars": 62909
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=000660",
-            "ok": true,
-            "chars": 129716
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/000660/research",
-            "ok": true,
-            "chars": 56387
-          }
-        ],
-        "search": [
-          {
-            "query": "SK하이닉스 목표가 증권사",
-            "ok": true,
-            "chars": 514397
-          },
-          {
-            "query": "SK하이닉스 리포트 목표가",
-            "ok": true,
-            "chars": 575912
-          },
-          {
-            "query": "SK하이닉스 투자의견 매수",
-            "ok": true,
-            "chars": 511609
-          }
-        ]
-      }
-    },
-    {
-      "code": "047810",
-      "name": "한국항공우주",
-      "priceSource": "https://m.stock.naver.com/api/stock/047810/basic",
-      "rawPrices": [
-        155600
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/047810?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/047810/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/047810",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/047810?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
-            "ok": true,
-            "chars": 394351
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
-            "ok": true,
-            "chars": 394030
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=047810",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=047810",
-            "ok": true,
-            "chars": 62181
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=047810",
-            "ok": true,
-            "chars": 128312
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/047810/research",
-            "ok": true,
-            "chars": 57507
-          }
-        ],
-        "search": [
-          {
-            "query": "한국항공우주 목표가 증권사",
-            "ok": true,
-            "chars": 668136
-          },
-          {
-            "query": "한국항공우주 리포트 목표가",
-            "ok": true,
-            "chars": 481100
-          },
-          {
-            "query": "한국항공우주 투자의견 매수",
-            "ok": true,
-            "chars": 451132
-          }
-        ]
-      }
-    },
-    {
-      "code": "005380",
-      "name": "현대차",
-      "priceSource": "https://m.stock.naver.com/api/stock/005380/basic",
-      "rawPrices": [
-        392500
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/005380?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/005380/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/005380",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/005380?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EC%B0%A8",
-            "ok": true,
-            "chars": 428874
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%98%84%EB%8C%80%EC%B0%A8",
-            "ok": true,
-            "chars": 428553
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EC%B0%A8",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=005380",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=005380",
-            "ok": true,
-            "chars": 62643
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=005380",
-            "ok": true,
-            "chars": 128404
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/005380/research",
-            "ok": true,
-            "chars": 56042
-          }
-        ],
-        "search": [
-          {
-            "query": "현대차 목표가 증권사",
-            "ok": true,
-            "chars": 668415
-          },
-          {
-            "query": "현대차 리포트 목표가",
-            "ok": true,
-            "chars": 618090
-          },
-          {
-            "query": "현대차 투자의견 매수",
-            "ok": true,
-            "chars": 558023
-          }
-        ]
-      }
-    },
-    {
-      "code": "000270",
-      "name": "기아",
-      "priceSource": "https://m.stock.naver.com/api/stock/000270/basic",
-      "rawPrices": [
-        134300
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/000270?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/000270/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/000270",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/000270?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EA%B8%B0%EC%95%84",
-            "ok": true,
-            "chars": 392023
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EA%B8%B0%EC%95%84",
-            "ok": true,
-            "chars": 391702
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EA%B8%B0%EC%95%84",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=000270",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=000270",
-            "ok": true,
-            "chars": 62742
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=000270",
-            "ok": true,
-            "chars": 128693
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/000270/research",
-            "ok": true,
-            "chars": 56173
-          }
-        ],
-        "search": [
-          {
-            "query": "기아 목표가 증권사",
-            "ok": true,
-            "chars": 661945
-          },
-          {
-            "query": "기아 리포트 목표가",
-            "ok": true,
-            "chars": 658597
-          },
-          {
-            "query": "기아 투자의견 매수",
-            "ok": true,
-            "chars": 417093
-          }
-        ]
-      }
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "priceSource": "https://m.stock.naver.com/api/stock/105560/basic",
-      "rawPrices": [
-        175500
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/105560?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/105560/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/105560",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/105560?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=KB%EA%B8%88%EC%9C%B5",
-            "ok": true,
-            "chars": 361252
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=KB%EA%B8%88%EC%9C%B5",
-            "ok": true,
-            "chars": 360931
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=KB%EA%B8%88%EC%9C%B5",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=105560",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=105560",
-            "ok": true,
-            "chars": 62711
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=105560",
-            "ok": true,
-            "chars": 128294
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/105560/research",
-            "ok": true,
-            "chars": 56186
-          }
-        ],
-        "search": [
-          {
-            "query": "KB금융 목표가 증권사",
-            "ok": true,
-            "chars": 536720
-          },
-          {
-            "query": "KB금융 리포트 목표가",
-            "ok": true,
-            "chars": 477308
-          },
-          {
-            "query": "KB금융 투자의견 매수",
-            "ok": true,
-            "chars": 473147
-          }
-        ]
-      }
-    },
-    {
-      "code": "035420",
-      "name": "NAVER",
-      "priceSource": "https://m.stock.naver.com/api/stock/035420/basic",
-      "rawPrices": [
-        210000
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/035420?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/035420/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/035420",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/035420?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=NAVER",
-            "ok": true,
-            "chars": 378539
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=NAVER",
-            "ok": true,
-            "chars": 378218
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=NAVER",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=035420",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=035420",
-            "ok": true,
-            "chars": 62894
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=035420",
-            "ok": true,
-            "chars": 128699
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/035420/research",
-            "ok": true,
-            "chars": 56195
-          }
-        ],
-        "search": [
-          {
-            "query": "NAVER 목표가 증권사",
-            "ok": true,
-            "chars": 471029
-          },
-          {
-            "query": "NAVER 리포트 목표가",
-            "ok": true,
-            "chars": 501659
-          },
-          {
-            "query": "NAVER 투자의견 매수",
-            "ok": true,
-            "chars": 488659
-          }
-        ]
-      }
-    },
-    {
       "code": "035720",
       "name": "카카오",
       "priceSource": "https://m.stock.naver.com/api/stock/035720/basic",
       "rawPrices": [
-        39500
+        39750
       ],
       "newsCount": 8,
       "reportCount": 8,
@@ -1081,13 +47,13 @@
         "search": [
           {
             "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%B9%B4%EC%B9%B4%EC%98%A4",
-            "ok": true,
-            "chars": 436458
+            "ok": false,
+            "error": "http 403"
           },
           {
             "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%B9%B4%EC%B9%B4%EC%98%A4",
             "ok": true,
-            "chars": 436137
+            "chars": 436291
           },
           {
             "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%B9%B4%EC%B9%B4%EC%98%A4",
@@ -1106,83 +72,83 @@
           {
             "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=035720",
             "ok": true,
-            "chars": 63295
+            "chars": 63296
           },
           {
             "url": "https://finance.naver.com/item/coinfo.naver?code=035720",
             "ok": true,
-            "chars": 115627
+            "chars": 115637
           },
           {
             "url": "https://m.stock.naver.com/domestic/stock/035720/research",
             "ok": true,
-            "chars": 53353
+            "chars": 53354
           }
         ],
         "search": [
           {
             "query": "카카오 목표가 증권사",
-            "ok": true,
-            "chars": 590630
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "카카오 리포트 목표가",
-            "ok": true,
-            "chars": 502776
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "카카오 투자의견 매수",
-            "ok": true,
-            "chars": 398191
+            "ok": false,
+            "error": "http 403"
           }
         ]
       }
     },
     {
-      "code": "108490",
-      "name": "로보티즈",
-      "priceSource": "https://m.stock.naver.com/api/stock/108490/basic",
+      "code": "068270",
+      "name": "셀트리온",
+      "priceSource": "https://m.stock.naver.com/api/stock/068270/basic",
       "rawPrices": [
-        224000
+        197800
       ],
       "newsCount": 8,
       "reportCount": 8,
       "newsDebug": {
         "stock_api": [
           {
-            "url": "https://m.stock.naver.com/api/news/stock/108490?pageSize=10&page=1",
+            "url": "https://m.stock.naver.com/api/news/stock/068270?pageSize=10&page=1",
             "type": "json",
             "ok": true
           },
           {
-            "url": "https://m.stock.naver.com/api/stock/108490/news?pageSize=10&page=1",
+            "url": "https://m.stock.naver.com/api/stock/068270/news?pageSize=10&page=1",
             "ok": false,
             "error": "http 404"
           },
           {
-            "url": "https://m.stock.naver.com/api/news/stock/108490",
+            "url": "https://m.stock.naver.com/api/news/stock/068270",
             "type": "json",
             "ok": true
           },
           {
-            "url": "https://api.stock.naver.com/news/stock/108490?pageSize=10&page=1",
+            "url": "https://api.stock.naver.com/news/stock/068270?pageSize=10&page=1",
             "type": "json",
             "ok": true
           }
         ],
         "search": [
           {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A1%9C%EB%B3%B4%ED%8B%B0%EC%A6%88",
-            "ok": true,
-            "chars": 372307
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
+            "ok": false,
+            "error": "http 403"
           },
           {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EB%A1%9C%EB%B3%B4%ED%8B%B0%EC%A6%88",
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
             "ok": true,
-            "chars": 371986
+            "chars": 394547
           },
           {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EB%A1%9C%EB%B3%B4%ED%8B%B0%EC%A6%88",
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
             "ok": false,
             "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
           }
@@ -1191,317 +157,41 @@
       "reportDebug": {
         "finance": [
           {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=108490",
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=068270",
             "ok": true,
             "chars": 79
           },
           {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=108490",
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=068270",
             "ok": true,
-            "chars": 55554
+            "chars": 62585
           },
           {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=108490",
+            "url": "https://finance.naver.com/item/coinfo.naver?code=068270",
             "ok": true,
-            "chars": 128910
+            "chars": 129119
           },
           {
-            "url": "https://m.stock.naver.com/domestic/stock/108490/research",
+            "url": "https://m.stock.naver.com/domestic/stock/068270/research",
             "ok": true,
-            "chars": 55581
+            "chars": 56221
           }
         ],
         "search": [
           {
-            "query": "로보티즈 목표가 증권사",
-            "ok": true,
-            "chars": 462058
-          },
-          {
-            "query": "로보티즈 리포트 목표가",
-            "ok": true,
-            "chars": 399416
-          },
-          {
-            "query": "로보티즈 투자의견 매수",
-            "ok": true,
-            "chars": 530234
-          }
-        ]
-      }
-    },
-    {
-      "code": "277810",
-      "name": "레인보우로보틱스",
-      "priceSource": "https://m.stock.naver.com/api/stock/277810/basic",
-      "rawPrices": [
-        451500
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/277810?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/277810/news?pageSize=10&page=1",
+            "query": "셀트리온 목표가 증권사",
             "ok": false,
-            "error": "http 404"
+            "error": "http 403"
           },
           {
-            "url": "https://m.stock.naver.com/api/news/stock/277810",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/277810?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A0%88%EC%9D%B8%EB%B3%B4%EC%9A%B0%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4",
-            "ok": true,
-            "chars": 373953
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EB%A0%88%EC%9D%B8%EB%B3%B4%EC%9A%B0%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4",
-            "ok": true,
-            "chars": 373632
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EB%A0%88%EC%9D%B8%EB%B3%B4%EC%9A%B0%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4",
+            "query": "셀트리온 리포트 목표가",
             "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=277810",
-            "ok": true,
-            "chars": 79
+            "error": "http 403"
           },
           {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=277810",
-            "ok": true,
-            "chars": 42891
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=277810",
-            "ok": true,
-            "chars": 128431
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/277810/research",
-            "ok": true,
-            "chars": 55464
-          }
-        ],
-        "search": [
-          {
-            "query": "레인보우로보틱스 목표가 증권사",
-            "ok": true,
-            "chars": 377134
-          },
-          {
-            "query": "레인보우로보틱스 리포트 목표가",
-            "ok": true,
-            "chars": 394754
-          },
-          {
-            "query": "레인보우로보틱스 투자의견 매수",
-            "ok": true,
-            "chars": 449190
-          }
-        ]
-      }
-    },
-    {
-      "code": "247540",
-      "name": "에코프로비엠",
-      "priceSource": "https://m.stock.naver.com/api/stock/247540/basic",
-      "rawPrices": [
-        102200
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/247540?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/247540/news?pageSize=10&page=1",
+            "query": "셀트리온 투자의견 매수",
             "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/247540",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/247540?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
-            "ok": true,
-            "chars": 402867
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
-            "ok": true,
-            "chars": 402546
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=247540",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=247540",
-            "ok": true,
-            "chars": 62099
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=247540",
-            "ok": true,
-            "chars": 128182
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/247540/research",
-            "ok": true,
-            "chars": 56240
-          }
-        ],
-        "search": [
-          {
-            "query": "에코프로비엠 목표가 증권사",
-            "ok": true,
-            "chars": 614566
-          },
-          {
-            "query": "에코프로비엠 리포트 목표가",
-            "ok": true,
-            "chars": 501557
-          },
-          {
-            "query": "에코프로비엠 투자의견 매수",
-            "ok": true,
-            "chars": 465392
-          }
-        ]
-      }
-    },
-    {
-      "code": "196170",
-      "name": "알테오젠",
-      "priceSource": "https://m.stock.naver.com/api/stock/196170/basic",
-      "rawPrices": [
-        292000
-      ],
-      "newsCount": 8,
-      "reportCount": 8,
-      "newsDebug": {
-        "stock_api": [
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/196170?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://m.stock.naver.com/api/stock/196170/news?pageSize=10&page=1",
-            "ok": false,
-            "error": "http 404"
-          },
-          {
-            "url": "https://m.stock.naver.com/api/news/stock/196170",
-            "type": "json",
-            "ok": true
-          },
-          {
-            "url": "https://api.stock.naver.com/news/stock/196170?pageSize=10&page=1",
-            "type": "json",
-            "ok": true
-          }
-        ],
-        "search": [
-          {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
-            "ok": true,
-            "chars": 405647
-          },
-          {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
-            "ok": true,
-            "chars": 405326
-          },
-          {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
-            "ok": false,
-            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
-          }
-        ]
-      },
-      "reportDebug": {
-        "finance": [
-          {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=196170",
-            "ok": true,
-            "chars": 79
-          },
-          {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=196170",
-            "ok": true,
-            "chars": 59625
-          },
-          {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=196170",
-            "ok": true,
-            "chars": 129121
-          },
-          {
-            "url": "https://m.stock.naver.com/domestic/stock/196170/research",
-            "ok": true,
-            "chars": 56413
-          }
-        ],
-        "search": [
-          {
-            "query": "알테오젠 목표가 증권사",
-            "ok": true,
-            "chars": 483617
-          },
-          {
-            "query": "알테오젠 리포트 목표가",
-            "ok": true,
-            "chars": 396637
-          },
-          {
-            "query": "알테오젠 투자의견 매수",
-            "ok": true,
-            "chars": 433902
+            "error": "http 403"
           }
         ]
       }
@@ -1541,13 +231,13 @@
         "search": [
           {
             "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85",
-            "ok": true,
-            "chars": 390935
+            "ok": false,
+            "error": "http 403"
           },
           {
             "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85",
             "ok": true,
-            "chars": 390614
+            "chars": 390596
           },
           {
             "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85",
@@ -1571,7 +261,7 @@
           {
             "url": "https://finance.naver.com/item/coinfo.naver?code=010140",
             "ok": true,
-            "chars": 128016
+            "chars": 128026
           },
           {
             "url": "https://m.stock.naver.com/domestic/stock/010140/research",
@@ -1582,67 +272,67 @@
         "search": [
           {
             "query": "삼성중공업 목표가 증권사",
-            "ok": true,
-            "chars": 528110
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "삼성중공업 리포트 목표가",
-            "ok": true,
-            "chars": 595677
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "삼성중공업 투자의견 매수",
-            "ok": true,
-            "chars": 448763
+            "ok": false,
+            "error": "http 403"
           }
         ]
       }
     },
     {
-      "code": "068270",
-      "name": "셀트리온",
-      "priceSource": "https://m.stock.naver.com/api/stock/068270/basic",
+      "code": "047810",
+      "name": "한국항공우주",
+      "priceSource": "https://m.stock.naver.com/api/stock/047810/basic",
       "rawPrices": [
-        198200
+        155800
       ],
       "newsCount": 8,
       "reportCount": 8,
       "newsDebug": {
         "stock_api": [
           {
-            "url": "https://m.stock.naver.com/api/news/stock/068270?pageSize=10&page=1",
+            "url": "https://m.stock.naver.com/api/news/stock/047810?pageSize=10&page=1",
             "type": "json",
             "ok": true
           },
           {
-            "url": "https://m.stock.naver.com/api/stock/068270/news?pageSize=10&page=1",
+            "url": "https://m.stock.naver.com/api/stock/047810/news?pageSize=10&page=1",
             "ok": false,
             "error": "http 404"
           },
           {
-            "url": "https://m.stock.naver.com/api/news/stock/068270",
+            "url": "https://m.stock.naver.com/api/news/stock/047810",
             "type": "json",
             "ok": true
           },
           {
-            "url": "https://api.stock.naver.com/news/stock/068270?pageSize=10&page=1",
+            "url": "https://api.stock.naver.com/news/stock/047810?pageSize=10&page=1",
             "type": "json",
             "ok": true
           }
         ],
         "search": [
           {
-            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
-            "ok": true,
-            "chars": 394867
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
+            "ok": false,
+            "error": "http 403"
           },
           {
-            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
             "ok": true,
-            "chars": 394546
+            "chars": 391370
           },
           {
-            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
             "ok": false,
             "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
           }
@@ -1651,41 +341,41 @@
       "reportDebug": {
         "finance": [
           {
-            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=068270",
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=047810",
             "ok": true,
             "chars": 79
           },
           {
-            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=068270",
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=047810",
             "ok": true,
-            "chars": 62585
+            "chars": 62181
           },
           {
-            "url": "https://finance.naver.com/item/coinfo.naver?code=068270",
+            "url": "https://finance.naver.com/item/coinfo.naver?code=047810",
             "ok": true,
-            "chars": 128949
+            "chars": 128310
           },
           {
-            "url": "https://m.stock.naver.com/domestic/stock/068270/research",
+            "url": "https://m.stock.naver.com/domestic/stock/047810/research",
             "ok": true,
-            "chars": 56225
+            "chars": 57505
           }
         ],
         "search": [
           {
-            "query": "셀트리온 목표가 증권사",
-            "ok": true,
-            "chars": 381756
+            "query": "한국항공우주 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
           },
           {
-            "query": "셀트리온 리포트 목표가",
-            "ok": true,
-            "chars": 474752
+            "query": "한국항공우주 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
           },
           {
-            "query": "셀트리온 투자의견 매수",
-            "ok": true,
-            "chars": 468822
+            "query": "한국항공우주 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
           }
         ]
       }
@@ -1695,7 +385,7 @@
       "name": "한화에어로스페이스",
       "priceSource": "https://m.stock.naver.com/api/stock/012450/basic",
       "rawPrices": [
-        1073000
+        1084000
       ],
       "newsCount": 8,
       "reportCount": 8,
@@ -1725,13 +415,13 @@
         "search": [
           {
             "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4",
-            "ok": true,
-            "chars": 383340
+            "ok": false,
+            "error": "http 403"
           },
           {
             "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4",
             "ok": true,
-            "chars": 383019
+            "chars": 383015
           },
           {
             "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4",
@@ -1755,29 +445,765 @@
           {
             "url": "https://finance.naver.com/item/coinfo.naver?code=012450",
             "ok": true,
-            "chars": 129082
+            "chars": 129105
           },
           {
             "url": "https://m.stock.naver.com/domestic/stock/012450/research",
             "ok": true,
-            "chars": 56109
+            "chars": 56107
           }
         ],
         "search": [
           {
             "query": "한화에어로스페이스 목표가 증권사",
-            "ok": true,
-            "chars": 486118
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "한화에어로스페이스 리포트 목표가",
-            "ok": true,
-            "chars": 372111
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "한화에어로스페이스 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "priceSource": "https://m.stock.naver.com/api/stock/329180/basic",
+      "rawPrices": [
+        497500
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/329180?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/329180/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/329180",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/329180?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85",
             "ok": true,
-            "chars": 434108
+            "chars": 402874
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=329180",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=329180",
+            "ok": true,
+            "chars": 62444
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=329180",
+            "ok": true,
+            "chars": 128321
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/329180/research",
+            "ok": true,
+            "chars": 56262
+          }
+        ],
+        "search": [
+          {
+            "query": "HD현대중공업 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "HD현대중공업 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "HD현대중공업 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "priceSource": "https://m.stock.naver.com/api/stock/042660/basic",
+      "rawPrices": [
+        88100
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/042660?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/042660/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/042660",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/042660?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98",
+            "ok": true,
+            "chars": 397699
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=042660",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=042660",
+            "ok": true,
+            "chars": 62810
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=042660",
+            "ok": true,
+            "chars": 127965
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/042660/research",
+            "ok": true,
+            "chars": 56007
+          }
+        ],
+        "search": [
+          {
+            "query": "한화오션 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "한화오션 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "한화오션 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "priceSource": "https://m.stock.naver.com/api/stock/272210/basic",
+      "rawPrices": [
+        69400
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/272210?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/272210/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/272210",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/272210?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C",
+            "ok": true,
+            "chars": 427642
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=272210",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=272210",
+            "ok": true,
+            "chars": 61763
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=272210",
+            "ok": true,
+            "chars": 127830
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/272210/research",
+            "ok": true,
+            "chars": 56238
+          }
+        ],
+        "search": [
+          {
+            "query": "한화시스템 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "한화시스템 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "한화시스템 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "priceSource": "https://m.stock.naver.com/api/stock/034020/basic",
+      "rawPrices": [
+        75500
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/034020?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/034020/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/034020",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/034020?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0",
+            "ok": true,
+            "chars": 399552
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=034020",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=034020",
+            "ok": true,
+            "chars": 62816
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=034020",
+            "ok": true,
+            "chars": 127899
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/034020/research",
+            "ok": true,
+            "chars": 56063
+          }
+        ],
+        "search": [
+          {
+            "query": "두산에너빌리티 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "두산에너빌리티 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "두산에너빌리티 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "priceSource": "https://m.stock.naver.com/api/stock/105560/basic",
+      "rawPrices": [
+        174200
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/105560?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/105560/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/105560",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/105560?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=KB%EA%B8%88%EC%9C%B5",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=KB%EA%B8%88%EC%9C%B5",
+            "ok": true,
+            "chars": 360836
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=KB%EA%B8%88%EC%9C%B5",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=105560",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=105560",
+            "ok": true,
+            "chars": 62711
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=105560",
+            "ok": true,
+            "chars": 128303
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/105560/research",
+            "ok": true,
+            "chars": 56188
+          }
+        ],
+        "search": [
+          {
+            "query": "KB금융 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "KB금융 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "KB금융 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "priceSource": "https://m.stock.naver.com/api/stock/108490/basic",
+      "rawPrices": [
+        223000
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/108490?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/108490/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/108490",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/108490?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A1%9C%EB%B3%B4%ED%8B%B0%EC%A6%88",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EB%A1%9C%EB%B3%B4%ED%8B%B0%EC%A6%88",
+            "ok": true,
+            "chars": 371993
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EB%A1%9C%EB%B3%B4%ED%8B%B0%EC%A6%88",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=108490",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=108490",
+            "ok": true,
+            "chars": 55554
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=108490",
+            "ok": true,
+            "chars": 129010
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/108490/research",
+            "ok": true,
+            "chars": 55588
+          }
+        ],
+        "search": [
+          {
+            "query": "로보티즈 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "로보티즈 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "로보티즈 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "priceSource": "https://m.stock.naver.com/api/stock/035420/basic",
+      "rawPrices": [
+        208250
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/035420?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/035420/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/035420",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/035420?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=NAVER",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=NAVER",
+            "ok": true,
+            "chars": 375501
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=NAVER",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=035420",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=035420",
+            "ok": true,
+            "chars": 62894
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=035420",
+            "ok": true,
+            "chars": 128697
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/035420/research",
+            "ok": true,
+            "chars": 56197
+          }
+        ],
+        "search": [
+          {
+            "query": "NAVER 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "NAVER 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "NAVER 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "priceSource": "https://m.stock.naver.com/api/stock/277810/basic",
+      "rawPrices": [
+        451000
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/277810?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/277810/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/277810",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/277810?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A0%88%EC%9D%B8%EB%B3%B4%EC%9A%B0%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EB%A0%88%EC%9D%B8%EB%B3%B4%EC%9A%B0%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4",
+            "ok": true,
+            "chars": 373631
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EB%A0%88%EC%9D%B8%EB%B3%B4%EC%9A%B0%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=277810",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=277810",
+            "ok": true,
+            "chars": 42891
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=277810",
+            "ok": true,
+            "chars": 128447
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/277810/research",
+            "ok": true,
+            "chars": 55466
+          }
+        ],
+        "search": [
+          {
+            "query": "레인보우로보틱스 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "레인보우로보틱스 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "레인보우로보틱스 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
           }
         ]
       }
@@ -1787,7 +1213,7 @@
       "name": "현대로템",
       "priceSource": "https://m.stock.naver.com/api/stock/064350/basic",
       "rawPrices": [
-        143300
+        144300
       ],
       "newsCount": 8,
       "reportCount": 8,
@@ -1817,13 +1243,13 @@
         "search": [
           {
             "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C",
-            "ok": true,
-            "chars": 384097
+            "ok": false,
+            "error": "http 403"
           },
           {
             "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C",
             "ok": true,
-            "chars": 383776
+            "chars": 386169
           },
           {
             "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C",
@@ -1847,29 +1273,603 @@
           {
             "url": "https://finance.naver.com/item/coinfo.naver?code=064350",
             "ok": true,
-            "chars": 128157
+            "chars": 128094
           },
           {
             "url": "https://m.stock.naver.com/domestic/stock/064350/research",
             "ok": true,
-            "chars": 56053
+            "chars": 56047
           }
         ],
         "search": [
           {
             "query": "현대로템 목표가 증권사",
-            "ok": true,
-            "chars": 718877
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "현대로템 리포트 목표가",
-            "ok": true,
-            "chars": 595193
+            "ok": false,
+            "error": "http 403"
           },
           {
             "query": "현대로템 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "priceSource": "https://m.stock.naver.com/api/stock/196170/basic",
+      "rawPrices": [
+        296500
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/196170?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/196170/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/196170",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/196170?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
             "ok": true,
-            "chars": 438186
+            "chars": 404481
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=196170",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=196170",
+            "ok": true,
+            "chars": 59625
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=196170",
+            "ok": true,
+            "chars": 129014
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/196170/research",
+            "ok": true,
+            "chars": 56398
+          }
+        ],
+        "search": [
+          {
+            "query": "알테오젠 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "알테오젠 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "알테오젠 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "priceSource": "https://m.stock.naver.com/api/stock/005930/integration",
+      "rawPrices": [
+        232750,
+        230500,
+        246000,
+        240000,
+        239500,
+        262500,
+        1422000,
+        939000,
+        191100,
+        82000,
+        126400,
+        65600
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/005930?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/005930/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/005930",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/005930?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
+            "ok": true,
+            "chars": 424962
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=005930",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=005930",
+            "ok": true,
+            "chars": 62956
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=005930",
+            "ok": true,
+            "chars": 128781
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/005930/research",
+            "ok": true,
+            "chars": 56187
+          }
+        ],
+        "search": [
+          {
+            "query": "삼성전자 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "삼성전자 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "삼성전자 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "priceSource": "https://m.stock.naver.com/api/stock/005380/basic",
+      "rawPrices": [
+        392000
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/005380?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/005380/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/005380",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/005380?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EC%B0%A8",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%ED%98%84%EB%8C%80%EC%B0%A8",
+            "ok": true,
+            "chars": 421762
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EC%B0%A8",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=005380",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=005380",
+            "ok": true,
+            "chars": 62643
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=005380",
+            "ok": true,
+            "chars": 128418
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/005380/research",
+            "ok": true,
+            "chars": 56040
+          }
+        ],
+        "search": [
+          {
+            "query": "현대차 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "현대차 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "현대차 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "priceSource": "https://m.stock.naver.com/api/stock/000270/basic",
+      "rawPrices": [
+        134300
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/000270?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/000270/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/000270",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/000270?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EA%B8%B0%EC%95%84",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EA%B8%B0%EC%95%84",
+            "ok": true,
+            "chars": 391363
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EA%B8%B0%EC%95%84",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=000270",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=000270",
+            "ok": true,
+            "chars": 62742
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=000270",
+            "ok": true,
+            "chars": 128739
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/000270/research",
+            "ok": true,
+            "chars": 56170
+          }
+        ],
+        "search": [
+          {
+            "query": "기아 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "기아 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "기아 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "priceSource": "https://m.stock.naver.com/api/stock/000660/integration",
+      "rawPrices": [
+        1422000,
+        1495000,
+        1668000,
+        1577000,
+        1567000,
+        1718000,
+        233000,
+        939000,
+        191100,
+        82000,
+        126400,
+        65600
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/000660?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/000660/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/000660",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/000660?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+            "ok": true,
+            "chars": 389429
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=000660",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=000660",
+            "ok": true,
+            "chars": 62909
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=000660",
+            "ok": true,
+            "chars": 129571
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/000660/research",
+            "ok": true,
+            "chars": 56387
+          }
+        ],
+        "search": [
+          {
+            "query": "SK하이닉스 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "SK하이닉스 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "SK하이닉스 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
+          }
+        ]
+      }
+    },
+    {
+      "code": "247540",
+      "name": "에코프로비엠",
+      "priceSource": "https://m.stock.naver.com/api/stock/247540/basic",
+      "rawPrices": [
+        103800
+      ],
+      "newsCount": 8,
+      "reportCount": 8,
+      "newsDebug": {
+        "stock_api": [
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/247540?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://m.stock.naver.com/api/stock/247540/news?pageSize=10&page=1",
+            "ok": false,
+            "error": "http 404"
+          },
+          {
+            "url": "https://m.stock.naver.com/api/news/stock/247540",
+            "type": "json",
+            "ok": true
+          },
+          {
+            "url": "https://api.stock.naver.com/news/stock/247540?pageSize=10&page=1",
+            "type": "json",
+            "ok": true
+          }
+        ],
+        "search": [
+          {
+            "url": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
+            "ok": true,
+            "chars": 402550
+          },
+          {
+            "url": "https://news.search.naver.com/search.naver?where=news&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
+            "ok": false,
+            "error": "HTTPSConnectionPool(host='news.search.naver.com', port=443): Max retries exceede"
+          }
+        ]
+      },
+      "reportDebug": {
+        "finance": [
+          {
+            "url": "https://finance.naver.com/item/news_read.naver?article_id=&office_id=&code=247540",
+            "ok": true,
+            "chars": 79
+          },
+          {
+            "url": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode=247540",
+            "ok": true,
+            "chars": 62099
+          },
+          {
+            "url": "https://finance.naver.com/item/coinfo.naver?code=247540",
+            "ok": true,
+            "chars": 128187
+          },
+          {
+            "url": "https://m.stock.naver.com/domestic/stock/247540/research",
+            "ok": true,
+            "chars": 56243
+          }
+        ],
+        "search": [
+          {
+            "query": "에코프로비엠 목표가 증권사",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "에코프로비엠 리포트 목표가",
+            "ok": false,
+            "error": "http 403"
+          },
+          {
+            "query": "에코프로비엠 투자의견 매수",
+            "ok": false,
+            "error": "http 403"
           }
         ]
       }
