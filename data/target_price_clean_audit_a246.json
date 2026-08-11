@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-08-10T15:16:24",
+  "generatedAt": "2026-08-11T15:15:49",
   "details": [
     {
       "code": "005930",
@@ -8,39 +8,51 @@
       "currentPrice": 297500,
       "rawPrices": [
         1000,
-        1400,
-        600000
+        2026,
+        2027
       ],
-      "acceptedPrices": [
-        600000
-      ],
+      "acceptedPrices": [],
       "rejected": [
         {
           "price": 1000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 1400,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2026,
+          "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2027,
+          "reason": "연도 숫자 제거"
         }
       ],
-      "median": 600000,
-      "realisticTargetPrice": 480000,
-      "observeTimingPrice": 420000,
-      "stopTimingPrice": 360000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        1400
+        2059,
+        5000,
+        6600
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1400,
+          "price": 2059,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 6600,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -68,7 +80,6 @@
       "name": "한화오션",
       "currentPrice": 128700,
       "rawPrices": [
-        7000,
         42660,
         64350
       ],
@@ -76,10 +87,6 @@
         64350
       ],
       "rejected": [
-        {
-          "price": 7000,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 42660,
           "reason": "현재가 대비 과도하게 낮음"
@@ -96,6 +103,7 @@
       "name": "두산에너빌리티",
       "currentPrice": 105250,
       "rawPrices": [
+        1000,
         5000,
         120000
       ],
@@ -103,6 +111,10 @@
         120000
       ],
       "rejected": [
+        {
+          "price": 1000,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
@@ -149,6 +161,7 @@
       "name": "한국항공우주",
       "currentPrice": 70000,
       "rawPrices": [
+        1600,
         2500,
         42660,
         64350
@@ -158,6 +171,10 @@
         64350
       ],
       "rejected": [
+        {
+          "price": 1600,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 2500,
           "reason": "1만원 미만 잡음 제거"
@@ -466,10 +483,13 @@
       "rawPrices": [
         1000,
         2026,
+        6000,
         7500,
-        200000
+        46000
       ],
-      "acceptedPrices": [],
+      "acceptedPrices": [
+        46000
+      ],
       "rejected": [
         {
           "price": 1000,
@@ -480,19 +500,19 @@
           "reason": "연도 숫자 제거"
         },
         {
-          "price": 7500,
+          "price": 6000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 200000,
-          "reason": "현재가 대비 과도하게 높음"
+          "price": 7500,
+          "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
+      "median": 46000,
+      "realisticTargetPrice": 36800,
+      "observeTimingPrice": 32200,
+      "stopTimingPrice": 27600,
+      "targetCount": 1
     },
     {
       "code": "033780",
@@ -686,15 +706,10 @@
       "name": "알테오젠",
       "currentPrice": 300000,
       "rawPrices": [
-        3230,
         144000
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 3230,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 144000,
           "reason": "현재가 대비 과도하게 낮음"
