@@ -1,7 +1,7 @@
 {
-  "version": "A242",
-  "generatedAt": "2026-08-13T14:33:47",
-  "status": "target_price_bands_source_guarded",
+  "version": "A244",
+  "generatedAt": "2026-08-13T14:46:13",
+  "status": "target_fallback_candidates",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -216,8 +216,8 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 30,
-  "candidateSource": "data/market_universe.json",
+  "targetPriceCandidateCount": 24,
+  "candidateSource": "stock_candidates_ai_scored.json",
   "candidateSourcesTried": [
     {
       "path": "data/stock_candidates_ai_scored.json",
@@ -235,5 +235,6 @@
       "path": "data/market_universe.json",
       "count": 30
     }
-  ]
+  ],
+  "rawTargetRows": 106
 }
