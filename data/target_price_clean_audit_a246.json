@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-08-12T15:14:12",
+  "generatedAt": "2026-08-13T15:14:18",
   "details": [
     {
       "code": "005930",
@@ -19,26 +19,9 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [
-        2026,
-        2059,
-        5000
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 2059,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -63,6 +46,7 @@
       "name": "한화오션",
       "currentPrice": 128700,
       "rawPrices": [
+        10500,
         42660,
         64350
       ],
@@ -70,6 +54,10 @@
         64350
       ],
       "rejected": [
+        {
+          "price": 10500,
+          "reason": "현재가 대비 과도하게 낮음"
+        },
         {
           "price": 42660,
           "reason": "현재가 대비 과도하게 낮음"
@@ -114,15 +102,15 @@
       "name": "한화시스템",
       "currentPrice": 132671,
       "rawPrices": [
-        1400,
+        2027,
         5000,
         37000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 1400,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2027,
+          "reason": "연도 숫자 제거"
         },
         {
           "price": 5000,
@@ -229,27 +217,17 @@
       "name": "삼성물산",
       "currentPrice": 0,
       "rawPrices": [
-        1400,
         2071,
-        5500,
-        8000
+        5500
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 1400,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 2071,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 5500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 8000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -389,8 +367,6 @@
       "rawPrices": [
         3000,
         4300,
-        4800,
-        6000,
         85000
       ],
       "acceptedPrices": [],
@@ -401,14 +377,6 @@
         },
         {
           "price": 4300,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 4800,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 6000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -430,7 +398,7 @@
         1400,
         4800,
         5000,
-        5100
+        7300
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -447,7 +415,7 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 5100,
+          "price": 7300,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -462,12 +430,18 @@
       "name": "NAVER",
       "currentPrice": 220000,
       "rawPrices": [
+        7300,
         400000
       ],
       "acceptedPrices": [
         400000
       ],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 7300,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 400000,
       "realisticTargetPrice": 320000,
       "observeTimingPrice": 280000,
@@ -481,7 +455,7 @@
       "rawPrices": [
         1000,
         2026,
-        6000,
+        2027,
         7500,
         46000
       ],
@@ -498,8 +472,8 @@
           "reason": "연도 숫자 제거"
         },
         {
-          "price": 6000,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2027,
+          "reason": "연도 숫자 제거"
         },
         {
           "price": 7500,
@@ -808,12 +782,13 @@
       "currentPrice": 0,
       "rawPrices": [
         2025,
-        8000,
         9500,
-        30000
+        30000,
+        36570
       ],
       "acceptedPrices": [
-        30000
+        30000,
+        36570
       ],
       "rejected": [
         {
@@ -821,19 +796,15 @@
           "reason": "연도 숫자 제거"
         },
         {
-          "price": 8000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
           "price": 9500,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 30000,
-      "realisticTargetPrice": 24000,
-      "observeTimingPrice": 21000,
-      "stopTimingPrice": 18000,
-      "targetCount": 1
+      "median": 33285,
+      "realisticTargetPrice": 26600,
+      "observeTimingPrice": 23300,
+      "stopTimingPrice": 20000,
+      "targetCount": 2
     }
   ]
 }
