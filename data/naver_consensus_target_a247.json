@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-08-13T15:31:38",
+  "generatedAt": "2026-08-14T15:23:22",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-08-13T15:31:38",
+    "generatedAt": "2026-08-14T15:23:22",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 24,
+    "targetPriceCandidateCount": 23,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -239,8 +239,8 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 106,
-    "reliableTargetCandidateCount": 5,
+    "rawTargetRows": 107,
+    "reliableTargetCandidateCount": 6,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 20,
@@ -370,14 +370,14 @@
       "code": "241560",
       "name": "두산밥캣",
       "currentPrice": 55000,
-      "targetPrice": 92214,
-      "upsidePercent": 67.7,
-      "realisticTargetPrice": 73800,
-      "observeTimingPrice": 64500,
-      "stopTimingPrice": 55300,
+      "targetPrice": 92583,
+      "upsidePercent": 68.3,
+      "realisticTargetPrice": 74100,
+      "observeTimingPrice": 64800,
+      "stopTimingPrice": 55500,
       "source": "https://m.stock.naver.com/domestic/stock/241560/total",
       "rawCandidates": [
-        92214
+        92583
       ],
       "ok": true,
       "statusCode": 200,
@@ -576,9 +576,9 @@
       "currentPrice": 45000,
       "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 52600,
-      "observeTimingPrice": 46000,
-      "stopTimingPrice": 39400,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/108490/total",
       "rawCandidates": [
         390600
@@ -738,15 +738,13 @@
       "code": "112040",
       "name": "위메이드",
       "currentPrice": 0,
-      "targetPrice": 30000,
+      "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 24000,
-      "observeTimingPrice": 21000,
-      "stopTimingPrice": 18000,
+      "realisticTargetPrice": 26600,
+      "observeTimingPrice": 23300,
+      "stopTimingPrice": 20000,
       "source": "https://m.stock.naver.com/domestic/stock/112040/total",
-      "rawCandidates": [
-        30000
-      ],
+      "rawCandidates": [],
       "ok": true,
       "statusCode": 200,
       "error": ""
