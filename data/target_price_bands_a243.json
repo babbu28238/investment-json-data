@@ -1,9 +1,9 @@
 {
   "version": "A243",
-  "generatedAt": "2026-08-18T14:06:02",
+  "generatedAt": "2026-08-19T14:06:17",
   "summary": {
     "version": "A243",
-    "generatedAt": "2026-08-18T14:06:02",
+    "generatedAt": "2026-08-19T14:06:17",
     "status": "report_target_collector",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 0,
+    "candidateCount": 30,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -220,7 +220,7 @@
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
     "targetPriceCandidateCount": 0,
-    "candidateSource": "",
+    "candidateSource": "data/market_universe.json",
     "candidateSourcesTried": [
       {
         "path": "data/stock_candidates_ai_scored.json",
@@ -236,23 +236,341 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 30
       }
     ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
     "rawTargetRows": 0
   },
-  "details": []
+  "details": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "prices": [],
+      "median": 121050,
+      "realisticTargetPrice": 96800,
+      "observeTimingPrice": 84700,
+      "stopTimingPrice": 72600,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "prices": [],
+      "median": 74100,
+      "realisticTargetPrice": 59300,
+      "observeTimingPrice": 51900,
+      "stopTimingPrice": 44500,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "329180",
+      "name": "HD현대중공업",
+      "prices": [],
+      "median": 109429,
+      "realisticTargetPrice": 87500,
+      "observeTimingPrice": 76600,
+      "stopTimingPrice": 65700,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "042660",
+      "name": "한화오션",
+      "prices": [],
+      "median": 103500,
+      "realisticTargetPrice": 82800,
+      "observeTimingPrice": 72400,
+      "stopTimingPrice": 62100,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "prices": [],
+      "median": 107339,
+      "realisticTargetPrice": 85900,
+      "observeTimingPrice": 75100,
+      "stopTimingPrice": 64400,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "prices": [],
+      "median": 96000,
+      "realisticTargetPrice": 76800,
+      "observeTimingPrice": 67200,
+      "stopTimingPrice": 57600,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "047810",
+      "name": "한국항공우주",
+      "prices": [],
+      "median": 74100,
+      "realisticTargetPrice": 59300,
+      "observeTimingPrice": 51900,
+      "stopTimingPrice": 44500,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "241560",
+      "name": "두산밥캣",
+      "prices": [],
+      "median": 82000,
+      "realisticTargetPrice": 65600,
+      "observeTimingPrice": 57400,
+      "stopTimingPrice": 49200,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "028260",
+      "name": "삼성물산",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "prices": [],
+      "median": 122750,
+      "realisticTargetPrice": 98200,
+      "observeTimingPrice": 85900,
+      "stopTimingPrice": 73600,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "055550",
+      "name": "신한지주",
+      "prices": [],
+      "median": 76100,
+      "realisticTargetPrice": 60900,
+      "observeTimingPrice": 53300,
+      "stopTimingPrice": 45700,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "086790",
+      "name": "하나금융지주",
+      "prices": [],
+      "median": 82200,
+      "realisticTargetPrice": 65800,
+      "observeTimingPrice": 57500,
+      "stopTimingPrice": 49300,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "316140",
+      "name": "우리금융지주",
+      "prices": [],
+      "median": 64194,
+      "realisticTargetPrice": 51400,
+      "observeTimingPrice": 44900,
+      "stopTimingPrice": 38500,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "prices": [],
+      "median": 151250,
+      "realisticTargetPrice": 121000,
+      "observeTimingPrice": 105900,
+      "stopTimingPrice": 90800,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "prices": [],
+      "median": 132750,
+      "realisticTargetPrice": 106200,
+      "observeTimingPrice": 92900,
+      "stopTimingPrice": 79600,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "prices": [],
+      "median": 16000,
+      "realisticTargetPrice": 12800,
+      "observeTimingPrice": 11200,
+      "stopTimingPrice": 9600,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "035720",
+      "name": "카카오",
+      "prices": [],
+      "median": 41400,
+      "realisticTargetPrice": 33100,
+      "observeTimingPrice": 29000,
+      "stopTimingPrice": 24800,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "033780",
+      "name": "KT&G",
+      "prices": [],
+      "median": 35900,
+      "realisticTargetPrice": 28700,
+      "observeTimingPrice": 25100,
+      "stopTimingPrice": 21500,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "011200",
+      "name": "HMM",
+      "prices": [],
+      "median": 23000,
+      "realisticTargetPrice": 18400,
+      "observeTimingPrice": 16100,
+      "stopTimingPrice": 13800,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "008770",
+      "name": "호텔신라",
+      "prices": [],
+      "median": 41900,
+      "realisticTargetPrice": 33500,
+      "observeTimingPrice": 29300,
+      "stopTimingPrice": 25100,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "prices": [],
+      "median": 55900,
+      "realisticTargetPrice": 44700,
+      "observeTimingPrice": 39100,
+      "stopTimingPrice": 33500,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "prices": [],
+      "median": 111000,
+      "realisticTargetPrice": 88800,
+      "observeTimingPrice": 77700,
+      "stopTimingPrice": 66600,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "247540",
+      "name": "에코프로비엠",
+      "prices": [],
+      "median": 148000,
+      "realisticTargetPrice": 118400,
+      "observeTimingPrice": 103600,
+      "stopTimingPrice": 88800,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "086520",
+      "name": "에코프로",
+      "prices": [],
+      "median": 170000,
+      "realisticTargetPrice": 136000,
+      "observeTimingPrice": 119000,
+      "stopTimingPrice": 102000,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "prices": [],
+      "median": 273000,
+      "realisticTargetPrice": 218400,
+      "observeTimingPrice": 191100,
+      "stopTimingPrice": 163800,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "068760",
+      "name": "셀트리온제약",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "091990",
+      "name": "셀트리온헬스케어",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "039030",
+      "name": "이오테크닉스",
+      "prices": [],
+      "median": 309750,
+      "realisticTargetPrice": 247800,
+      "observeTimingPrice": 216800,
+      "stopTimingPrice": 185800,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "058470",
+      "name": "리노공업",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "errors": [],
+      "sources": []
+    },
+    {
+      "code": "112040",
+      "name": "위메이드",
+      "prices": [],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "errors": [],
+      "sources": []
+    }
+  ]
 }
