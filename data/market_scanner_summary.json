@@ -1,7 +1,7 @@
 {
-  "version": "A423",
-  "generatedAt": "2026-08-20T09:51:27",
-  "status": "robust_real_data_engine",
+  "version": "A221",
+  "generatedAt": "2026-08-20T09:56:08",
+  "status": "ok",
   "universeSource": "existing_json",
   "universeCount": 30,
   "includedCount": 0,
@@ -16,7 +16,7 @@
   "averageDataConnectionScore": 0,
   "overallMacroScore": 54,
   "overallMarketView": "중립 / 관망",
-  "output": "realtime_recommendations_a405.json",
+  "output": "stock_candidates_ai_scored.json",
   "universeDebug": {
     "pykrx": {
       "error": "index -1 is out of bounds for axis 0 with size 0"
@@ -69,5 +69,14 @@
     "existing": {
       "count": 30
     }
-  }
+  },
+  "candidateCount": 0,
+  "priceUpdatedCount": 0,
+  "priceMissingCount": 0,
+  "zeroAfterCount": 0,
+  "usedPriceDate": {
+    "KOSPI": "",
+    "KOSDAQ": ""
+  },
+  "priceSource": "pykrx_or_fallback_price_map"
 }
