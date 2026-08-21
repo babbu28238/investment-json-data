@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-08-20T14:54:26",
+  "generatedAt": "2026-08-21T14:53:14",
   "details": [
     {
       "code": "005930",
@@ -27,11 +27,16 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
+        1400,
         2865,
         70000
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 1400,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 2865,
           "reason": "1만원 미만 잡음 제거"
@@ -118,6 +123,7 @@
       "rawPrices": [
         2027,
         5000,
+        43000,
         110000
       ],
       "acceptedPrices": [
@@ -131,6 +137,10 @@
         {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 43000,
+          "reason": "현재가 대비 과도하게 낮음"
         }
       ],
       "median": 110000,
@@ -416,9 +426,9 @@
       "name": "카카오",
       "currentPrice": 55000,
       "rawPrices": [
-        1000,
+        2025,
         2026,
-        3000,
+        2030,
         6850,
         7500,
         46000
@@ -428,15 +438,15 @@
       ],
       "rejected": [
         {
-          "price": 1000,
-          "reason": "1만원 미만 잡음 제거"
+          "price": 2025,
+          "reason": "연도 숫자 제거"
         },
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
         },
         {
-          "price": 3000,
+          "price": 2030,
           "reason": "1만원 미만 잡음 제거"
         },
         {
