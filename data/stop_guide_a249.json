@@ -1,9 +1,9 @@
 {
   "version": "A249",
-  "generatedAt": "2026-08-24T15:44:39",
+  "generatedAt": "2026-08-25T15:49:46",
   "summary": {
     "version": "A249",
-    "generatedAt": "2026-08-24T15:44:39",
+    "generatedAt": "2026-08-25T15:49:46",
     "status": "stop_guide_card",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 30,
+    "candidateCount": 25,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 26,
+    "targetPriceCandidateCount": 23,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,19 +236,32 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 30
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
-    "rawTargetRows": 99,
-    "reliableTargetCandidateCount": 8,
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 76,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 21,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 26,
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 23,
     "chartStopCount": 25
   },
   "details": [
@@ -274,10 +287,10 @@
       "code": "034020",
       "name": "두산에너빌리티",
       "currentPrice": 105250,
-      "naverTargetPrice": 129375,
-      "targetBasedStopPrice": 77600,
+      "naverTargetPrice": 129000,
+      "targetBasedStopPrice": 77400,
       "chartStopPrice": 96800,
-      "guide": "중장기 손절은 목표가 기준 77,600원, 단기 손절은 차트 기준 96,800원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
+      "guide": "중장기 손절은 목표가 기준 77,400원, 단기 손절은 차트 기준 96,800원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
     },
     {
       "code": "272210",
@@ -301,10 +314,10 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "naverTargetPrice": 0,
-      "targetBasedStopPrice": 0,
+      "naverTargetPrice": 161890,
+      "targetBasedStopPrice": 97100,
       "chartStopPrice": 202500,
-      "guide": "중장기 손절은 목표가 기준 0원, 단기 손절은 차트 기준 202,500원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
+      "guide": "중장기 손절은 목표가 기준 97,100원, 단기 손절은 차트 기준 202,500원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
     },
     {
       "code": "047810",
@@ -391,10 +404,10 @@
       "code": "035720",
       "name": "카카오",
       "currentPrice": 55000,
-      "naverTargetPrice": 58389,
-      "targetBasedStopPrice": 35000,
+      "naverTargetPrice": 56526,
+      "targetBasedStopPrice": 33900,
       "chartStopPrice": 50600,
-      "guide": "중장기 손절은 목표가 기준 35,000원, 단기 손절은 차트 기준 50,600원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
+      "guide": "중장기 손절은 목표가 기준 33,900원, 단기 손절은 차트 기준 50,600원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
     },
     {
       "code": "033780",
@@ -445,10 +458,10 @@
       "code": "247540",
       "name": "에코프로비엠",
       "currentPrice": 130000,
-      "naverTargetPrice": 179467,
-      "targetBasedStopPrice": 107500,
+      "naverTargetPrice": 175143,
+      "targetBasedStopPrice": 105000,
       "chartStopPrice": 119500,
-      "guide": "중장기 손절은 목표가 기준 107,500원, 단기 손절은 차트 기준 119,500원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
+      "guide": "중장기 손절은 목표가 기준 105,000원, 단기 손절은 차트 기준 119,500원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
     },
     {
       "code": "086520",
@@ -476,51 +489,6 @@
       "targetBasedStopPrice": 319500,
       "chartStopPrice": 165500,
       "guide": "중장기 손절은 목표가 기준 319,500원, 단기 손절은 차트 기준 165,500원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "currentPrice": 0,
-      "naverTargetPrice": 496667,
-      "targetBasedStopPrice": 298000,
-      "chartStopPrice": 0,
-      "guide": "중장기 손절은 목표가 기준 298,000원, 단기 손절은 차트 기준 0원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "currentPrice": 0,
-      "naverTargetPrice": 0,
-      "targetBasedStopPrice": 0,
-      "chartStopPrice": 0,
-      "guide": "손절 기준 산출 불가."
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "currentPrice": 0,
-      "naverTargetPrice": 250000,
-      "targetBasedStopPrice": 150000,
-      "chartStopPrice": 0,
-      "guide": "중장기 손절은 목표가 기준 150,000원, 단기 손절은 차트 기준 0원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "currentPrice": 0,
-      "naverTargetPrice": 115750,
-      "targetBasedStopPrice": 69400,
-      "chartStopPrice": 0,
-      "guide": "중장기 손절은 목표가 기준 69,400원, 단기 손절은 차트 기준 0원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "currentPrice": 0,
-      "naverTargetPrice": 33285,
-      "targetBasedStopPrice": 20000,
-      "chartStopPrice": 0,
-      "guide": "중장기 손절은 목표가 기준 20,000원, 단기 손절은 차트 기준 0원입니다. 단기 매매는 차트 손절 우선, 중장기 보유는 목표가 기준 손절을 참고합니다."
     }
   ]
 }
