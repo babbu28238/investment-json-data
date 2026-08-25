@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-08-24T15:18:11",
+  "generatedAt": "2026-08-25T15:24:04",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-08-24T15:18:11",
+    "generatedAt": "2026-08-25T15:24:04",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 30,
+    "candidateCount": 25,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 23,
+    "targetPriceCandidateCount": 21,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,11 +236,24 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 30
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
-    "rawTargetRows": 99,
-    "reliableTargetCandidateCount": 8,
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 76,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 20,
@@ -285,14 +298,14 @@
       "code": "034020",
       "name": "두산에너빌리티",
       "currentPrice": 105250,
-      "targetPrice": 129375,
-      "upsidePercent": 22.9,
-      "realisticTargetPrice": 103500,
-      "observeTimingPrice": 90600,
-      "stopTimingPrice": 77600,
+      "targetPrice": 129000,
+      "upsidePercent": 22.6,
+      "realisticTargetPrice": 103000,
+      "observeTimingPrice": 90300,
+      "stopTimingPrice": 77400,
       "source": "https://m.stock.naver.com/domestic/stock/034020/total",
       "rawCandidates": [
-        129375
+        129000
       ],
       "ok": true,
       "statusCode": 200,
@@ -338,9 +351,9 @@
       "currentPrice": 220000,
       "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
+      "realisticTargetPrice": 129500,
+      "observeTimingPrice": 113500,
+      "stopTimingPrice": 97100,
       "source": "https://m.stock.naver.com/domestic/stock/000660/total",
       "rawCandidates": [
         3317917
@@ -506,14 +519,14 @@
       "code": "035720",
       "name": "카카오",
       "currentPrice": 55000,
-      "targetPrice": 58389,
-      "upsidePercent": 6.2,
-      "realisticTargetPrice": 46700,
-      "observeTimingPrice": 40900,
-      "stopTimingPrice": 35000,
+      "targetPrice": 56526,
+      "upsidePercent": 2.8,
+      "realisticTargetPrice": 45200,
+      "observeTimingPrice": 39600,
+      "stopTimingPrice": 33900,
       "source": "https://m.stock.naver.com/domestic/stock/035720/total",
       "rawCandidates": [
-        58389
+        56526
       ],
       "ok": true,
       "statusCode": 200,
@@ -581,7 +594,7 @@
       "stopTimingPrice": 37200,
       "source": "https://m.stock.naver.com/domestic/stock/108490/total",
       "rawCandidates": [
-        397167
+        395571
       ],
       "ok": true,
       "statusCode": 200,
@@ -608,14 +621,14 @@
       "code": "247540",
       "name": "에코프로비엠",
       "currentPrice": 130000,
-      "targetPrice": 179467,
-      "upsidePercent": 38.1,
-      "realisticTargetPrice": 143500,
-      "observeTimingPrice": 125500,
-      "stopTimingPrice": 107500,
+      "targetPrice": 175143,
+      "upsidePercent": 34.7,
+      "realisticTargetPrice": 140000,
+      "observeTimingPrice": 122500,
+      "stopTimingPrice": 105000,
       "source": "https://m.stock.naver.com/domestic/stock/247540/total",
       "rawCandidates": [
-        179467
+        175143
       ],
       "ok": true,
       "statusCode": 200,
@@ -666,85 +679,6 @@
       "rawCandidates": [
         532500
       ],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "currentPrice": 0,
-      "targetPrice": 496667,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 397500,
-      "observeTimingPrice": 347500,
-      "stopTimingPrice": 298000,
-      "source": "https://m.stock.naver.com/domestic/stock/028260/total",
-      "rawCandidates": [
-        496667
-      ],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "currentPrice": 0,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "source": "https://m.stock.naver.com/domestic/stock/068760/total",
-      "rawCandidates": [],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "currentPrice": 0,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 200000,
-      "observeTimingPrice": 175000,
-      "stopTimingPrice": 150000,
-      "source": "https://m.stock.naver.com/domestic/stock/091990/total",
-      "rawCandidates": [],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "currentPrice": 0,
-      "targetPrice": 115750,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 92600,
-      "observeTimingPrice": 81000,
-      "stopTimingPrice": 69400,
-      "source": "https://m.stock.naver.com/domestic/stock/058470/total",
-      "rawCandidates": [
-        115750
-      ],
-      "ok": true,
-      "statusCode": 200,
-      "error": ""
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "currentPrice": 0,
-      "targetPrice": 0,
-      "upsidePercent": 0,
-      "realisticTargetPrice": 26600,
-      "observeTimingPrice": 23300,
-      "stopTimingPrice": 20000,
-      "source": "https://m.stock.naver.com/domestic/stock/112040/total",
-      "rawCandidates": [],
       "ok": true,
       "statusCode": 200,
       "error": ""
