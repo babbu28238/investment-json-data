@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-08-26T15:54:14",
+  "generatedAt": "2026-08-27T23:47:08",
   "details": [
     {
       "code": "005930",
@@ -19,21 +19,9 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [
-        2026,
-        2028
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 2028,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -110,7 +98,8 @@
       "currentPrice": 132671,
       "rawPrices": [
         2027,
-        110000
+        110000,
+        760000
       ],
       "acceptedPrices": [
         110000
@@ -119,6 +108,10 @@
         {
           "price": 2027,
           "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 760000,
+          "reason": "현재가 대비 과도하게 높음"
         }
       ],
       "median": 110000,
@@ -302,8 +295,7 @@
       "rawPrices": [
         1201,
         3000,
-        4429,
-        200000
+        4429
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -318,10 +310,6 @@
         {
           "price": 4429,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 200000,
-          "reason": "현재가 대비 과도하게 높음"
         }
       ],
       "median": 0,
@@ -334,9 +322,16 @@
       "code": "005380",
       "name": "현대차",
       "currentPrice": 250000,
-      "rawPrices": [],
+      "rawPrices": [
+        81000
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 81000,
+          "reason": "현재가 대비 과도하게 낮음"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -398,7 +393,6 @@
       "currentPrice": 55000,
       "rawPrices": [
         7000,
-        8000,
         46000
       ],
       "acceptedPrices": [
@@ -407,10 +401,6 @@
       "rejected": [
         {
           "price": 7000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 8000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -611,18 +601,13 @@
       "name": "알테오젠",
       "currentPrice": 300000,
       "rawPrices": [
-        1000,
-        144000
+        1000
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 1000,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 144000,
-          "reason": "현재가 대비 과도하게 낮음"
         }
       ],
       "median": 0,
