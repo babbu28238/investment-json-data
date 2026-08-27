@@ -1,9 +1,9 @@
 {
   "version": "A243",
-  "generatedAt": "2026-08-26T14:11:34",
+  "generatedAt": "2026-08-27T23:01:09",
   "summary": {
     "version": "A243",
-    "generatedAt": "2026-08-26T14:11:34",
+    "generatedAt": "2026-08-27T23:01:09",
     "status": "report_target_collector",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 22,
+    "targetPriceCandidateCount": 23,
     "candidateSource": "data/market_universe.json",
     "candidateSourcesTried": [
       {
@@ -239,7 +239,7 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 64
+    "rawTargetRows": 62
   },
   "details": [
     {
@@ -256,33 +256,13 @@
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "prices": [
-        2026,
-        2028
-      ],
-      "median": 2027,
-      "realisticTargetPrice": 1600,
-      "observeTimingPrice": 1400,
-      "stopTimingPrice": 1200,
+      "prices": [],
+      "median": 88000,
+      "realisticTargetPrice": 70400,
+      "observeTimingPrice": 61600,
+      "stopTimingPrice": 52800,
       "errors": [],
-      "sources": [
-        {
-          "code": "000660",
-          "name": "SK하이닉스",
-          "query": "SK하이닉스 목표주가",
-          "price": 2026,
-          "source": "naver_search",
-          "snippet": "SK하이닉스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 SK하이닉스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
-        },
-        {
-          "code": "000660",
-          "name": "SK하이닉스",
-          "query": "SK하이닉스 증권사 목표가",
-          "price": 2028,
-          "source": "naver_search",
-          "snippet": "SK하이닉스 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 SK하이닉스 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간"
-        }
-      ]
+      "sources": []
     },
     {
       "code": "329180",
@@ -359,13 +339,24 @@
     {
       "code": "272210",
       "name": "한화시스템",
-      "prices": [],
-      "median": 119500,
-      "realisticTargetPrice": 95600,
-      "observeTimingPrice": 83600,
-      "stopTimingPrice": 71700,
+      "prices": [
+        760000
+      ],
+      "median": 760000,
+      "realisticTargetPrice": 608000,
+      "observeTimingPrice": 532000,
+      "stopTimingPrice": 456000,
       "errors": [],
-      "sources": []
+      "sources": [
+        {
+          "code": "272210",
+          "name": "한화시스템",
+          "query": "한화시스템 목표주가",
+          "price": 760000,
+          "source": "naver_search",
+          "snippet": "한화시스템 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 한화시스템 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 "
+        }
+      ]
     },
     {
       "code": "047810",
@@ -460,10 +451,10 @@
       "code": "028260",
       "name": "삼성물산",
       "prices": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
+      "median": 190000,
+      "realisticTargetPrice": 152000,
+      "observeTimingPrice": 133000,
+      "stopTimingPrice": 114000,
       "errors": [],
       "sources": []
     },
@@ -583,13 +574,12 @@
       "prices": [
         1201,
         3000,
-        4429,
-        200000
+        4429
       ],
-      "median": 3714,
-      "realisticTargetPrice": 3000,
-      "observeTimingPrice": 2600,
-      "stopTimingPrice": 2200,
+      "median": 3000,
+      "realisticTargetPrice": 2400,
+      "observeTimingPrice": 2100,
+      "stopTimingPrice": 1800,
       "errors": [],
       "sources": [
         {
@@ -603,10 +593,10 @@
         {
           "code": "316140",
           "name": "우리금융지주",
-          "query": "우리금융지주 리포트 목표주가",
-          "price": 200000,
+          "query": "우리금융지주 목표주가",
+          "price": 3000,
           "source": "naver_search",
-          "snippet": "우리금융지주 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 우리금융지주 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1"
+          "snippet": "우리금융지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 우리금융지주 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
         },
         {
           "code": "316140",
@@ -645,13 +635,24 @@
     {
       "code": "005380",
       "name": "현대차",
-      "prices": [],
-      "median": 151000,
-      "realisticTargetPrice": 120800,
-      "observeTimingPrice": 105700,
-      "stopTimingPrice": 90600,
+      "prices": [
+        81000
+      ],
+      "median": 81000,
+      "realisticTargetPrice": 64800,
+      "observeTimingPrice": 56700,
+      "stopTimingPrice": 48600,
       "errors": [],
-      "sources": []
+      "sources": [
+        {
+          "code": "005380",
+          "name": "현대차",
+          "query": "현대차 목표주가",
+          "price": 81000,
+          "source": "naver_search",
+          "snippet": "현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1"
+        }
+      ]
     },
     {
       "code": "000270",
@@ -710,36 +711,19 @@
       "code": "035720",
       "name": "카카오",
       "prices": [
-        7000,
-        8000
+        7000
       ],
-      "median": 7500,
-      "realisticTargetPrice": 6000,
-      "observeTimingPrice": 5200,
-      "stopTimingPrice": 4500,
+      "median": 7000,
+      "realisticTargetPrice": 5600,
+      "observeTimingPrice": 4900,
+      "stopTimingPrice": 4200,
       "errors": [],
       "sources": [
         {
           "code": "035720",
           "name": "카카오",
-          "query": "카카오 목표주가",
-          "price": 8000,
-          "source": "naver_search",
-          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1"
-        },
-        {
-          "code": "035720",
-          "name": "카카오",
           "query": "카카오 증권사 목표가",
           "price": 7000,
-          "source": "naver_search",
-          "snippet": "카카오 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
-        },
-        {
-          "code": "035720",
-          "name": "카카오",
-          "query": "카카오 증권사 목표가",
-          "price": 8000,
           "source": "naver_search",
           "snippet": "카카오 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
         }
@@ -982,10 +966,10 @@
       "code": "247540",
       "name": "에코프로비엠",
       "prices": [],
-      "median": 140000,
-      "realisticTargetPrice": 112000,
-      "observeTimingPrice": 98000,
-      "stopTimingPrice": 84000,
+      "median": 136000,
+      "realisticTargetPrice": 108800,
+      "observeTimingPrice": 95200,
+      "stopTimingPrice": 81600,
       "errors": [],
       "sources": []
     },
@@ -993,10 +977,10 @@
       "code": "086520",
       "name": "에코프로",
       "prices": [],
-      "median": 170000,
-      "realisticTargetPrice": 136000,
-      "observeTimingPrice": 119000,
-      "stopTimingPrice": 102000,
+      "median": 140000,
+      "realisticTargetPrice": 112000,
+      "observeTimingPrice": 98000,
+      "stopTimingPrice": 84000,
       "errors": [],
       "sources": []
     },
@@ -1026,10 +1010,10 @@
       "code": "068760",
       "name": "셀트리온제약",
       "prices": [],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
+      "median": 200000,
+      "realisticTargetPrice": 160000,
+      "observeTimingPrice": 140000,
+      "stopTimingPrice": 120000,
       "errors": [],
       "sources": []
     },
