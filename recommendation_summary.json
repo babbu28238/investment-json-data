@@ -1,34 +1,36 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-06-26 01:06:32",
-  "startedAt": "2026-06-26 01:06:32",
+  "updatedAt": "2026-08-27 22:04:52",
+  "startedAt": "2026-08-27 22:04:52",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
   "reportSignalCount": 80,
   "supplyRowCount": 80,
   "gradeCounts": {
-    "B": 2,
-    "C": 35,
-    "D": 13
+    "B": 7,
+    "C": 43
   },
   "actionCounts": {
-    "관찰상위": 2,
-    "관찰": 35,
-    "제외검토": 13
+    "관찰상위": 7,
+    "관찰": 43
   },
   "sectorCounts": {
-    "KOSPI 자동선별": 35,
-    "KOSDAQ 자동선별": 9,
-    "반도체·AI": 4,
-    "바이오·제약": 1,
-    "금융·밸류업": 1
+    "KOSPI 자동선별": 26,
+    "KOSDAQ 자동선별": 8,
+    "바이오·제약": 4,
+    "금융·밸류업": 3,
+    "원전·전력·에너지": 2,
+    "2차전지·소재": 4,
+    "방산·우주항공": 1,
+    "반도체·AI": 1,
+    "인터넷·게임·콘텐츠": 1
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "대한항공",
-      "code": "003490",
+      "name": "GS건설",
+      "code": "006360",
       "score": 73,
       "grade": "B",
       "action": "관찰상위",
@@ -50,14 +52,14 @@
     },
     {
       "rank": 2,
-      "name": "TIGER 반도체TOP10레버리지",
-      "code": "488080",
-      "score": 70,
+      "name": "KODEX CD1년금리플러스액티브(합성)",
+      "code": "481050",
+      "score": 71,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 66,
-        "supplyScore": 80,
+        "technicalScore": 70,
+        "supplyScore": 78,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -73,61 +75,15 @@
     },
     {
       "rank": 3,
-      "name": "TIGER 반도체",
-      "code": "091230",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
+      "name": "TIGER CD1년금리액티브(합성)",
+      "code": "475630",
+      "score": 71,
+      "grade": "B",
+      "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 68,
-        "supplyScore": 73,
+        "technicalScore": 70,
+        "supplyScore": 78,
         "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 4,
-      "name": "파마리서치",
-      "code": "214450",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 69,
-        "supplyScore": 73,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 5,
-      "name": "KODEX 레버리지",
-      "code": "122630",
-      "score": 68,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 66,
-        "supplyScore": 80,
-        "newsScore": 85,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -141,60 +97,14 @@
       }
     },
     {
-      "rank": 6,
-      "name": "피에스케이",
-      "code": "319660",
-      "score": 68,
-      "grade": "C",
-      "action": "관찰",
+      "rank": 4,
+      "name": "DL이앤씨",
+      "code": "375500",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
       "breakdown": {
         "technicalScore": 70,
-        "supplyScore": 68,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 7,
-      "name": "브이엠",
-      "code": "089970",
-      "score": 68,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 68,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 8,
-      "name": "후성",
-      "code": "093370",
-      "score": 68,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 65,
         "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
@@ -210,15 +120,107 @@
       }
     },
     {
-      "rank": 9,
-      "name": "원익IPS",
-      "code": "240810",
-      "score": 67,
+      "rank": 5,
+      "name": "파마리서치",
+      "code": "214450",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 70,
+        "supplyScore": 74,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 6,
+      "name": "현대글로비스",
+      "code": "086280",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 70,
+        "supplyScore": 74,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 7,
+      "name": "한화",
+      "code": "000880",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 69,
+        "supplyScore": 74,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 8,
+      "name": "삼성E&A",
+      "code": "028050",
+      "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 72,
-        "supplyScore": 61,
+        "technicalScore": 71,
+        "supplyScore": 68,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 9,
+      "name": "삼양식품",
+      "code": "003230",
+      "score": 69,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 71,
+        "supplyScore": 67,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -234,15 +236,15 @@
     },
     {
       "rank": 10,
-      "name": "KODEX CD금리액티브(합성)",
-      "code": "459580",
-      "score": 67,
+      "name": "농심",
+      "code": "004370",
+      "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 71,
-        "supplyScore": 64,
-        "newsScore": 92,
+        "technicalScore": 69,
+        "supplyScore": 73,
+        "newsScore": 95,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
