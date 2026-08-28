@@ -1,7 +1,7 @@
 {
-  "version": "A228",
-  "generatedAt": "2026-08-28T21:07:38",
-  "status": "supply_engine",
+  "version": "A229",
+  "generatedAt": "2026-08-28T21:11:47",
+  "status": "full_pipeline_partial",
   "universeSource": "existing_json",
   "universeCount": 30,
   "includedCount": 0,
@@ -73,5 +73,17 @@
   "candidateCount": 0,
   "supplyOkCount": 0,
   "supplyFailCount": 0,
-  "supplyScoreCount": 0
+  "supplyScoreCount": 0,
+  "priceUpdatedCount": 0,
+  "priceFailedCount": 0,
+  "zeroAfterCount": 0,
+  "priceSource": "pykrx_by_date",
+  "scoreUpdatedCount": 0,
+  "scoreFailedCount": 0,
+  "priceCount": 0,
+  "chartScoreCount": 0,
+  "newsScoreCount": 0,
+  "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
+  "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
+  "ready": false
 }
