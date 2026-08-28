@@ -1,36 +1,35 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-08-27 22:04:52",
-  "startedAt": "2026-08-27 22:04:52",
+  "updatedAt": "2026-08-28 23:36:19",
+  "startedAt": "2026-08-28 23:36:19",
   "inputCandidateCount": 120,
   "finalCandidateCount": 50,
   "newsSignalCount": 80,
   "reportSignalCount": 80,
   "supplyRowCount": 80,
   "gradeCounts": {
-    "B": 7,
-    "C": 43
+    "B": 8,
+    "C": 42
   },
   "actionCounts": {
-    "관찰상위": 7,
-    "관찰": 43
+    "관찰상위": 8,
+    "관찰": 42
   },
   "sectorCounts": {
     "KOSPI 자동선별": 26,
     "KOSDAQ 자동선별": 8,
-    "바이오·제약": 4,
-    "금융·밸류업": 3,
-    "원전·전력·에너지": 2,
-    "2차전지·소재": 4,
-    "방산·우주항공": 1,
-    "반도체·AI": 1,
-    "인터넷·게임·콘텐츠": 1
+    "원전·전력·에너지": 3,
+    "바이오·제약": 2,
+    "금융·밸류업": 5,
+    "방산·우주항공": 2,
+    "인터넷·게임·콘텐츠": 2,
+    "2차전지·소재": 2
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "GS건설",
-      "code": "006360",
+      "name": "삼성에스디에스",
+      "code": "018260",
       "score": 73,
       "grade": "B",
       "action": "관찰상위",
@@ -52,15 +51,15 @@
     },
     {
       "rank": 2,
-      "name": "KODEX CD1년금리플러스액티브(합성)",
-      "code": "481050",
-      "score": 71,
+      "name": "아모레퍼시픽",
+      "code": "090430",
+      "score": 72,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 78,
-        "newsScore": 100,
+        "technicalScore": 72,
+        "supplyScore": 80,
+        "newsScore": 99,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -75,6 +74,52 @@
     },
     {
       "rank": 3,
+      "name": "LG전자",
+      "code": "066570",
+      "score": 71,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 73,
+        "supplyScore": 74,
+        "newsScore": 98,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 4,
+      "name": "파마리서치",
+      "code": "214450",
+      "score": 71,
+      "grade": "B",
+      "action": "관찰상위",
+      "breakdown": {
+        "technicalScore": 72,
+        "supplyScore": 74,
+        "newsScore": 99,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 5,
       "name": "TIGER CD1년금리액티브(합성)",
       "code": "475630",
       "score": 71,
@@ -97,60 +142,14 @@
       }
     },
     {
-      "rank": 4,
-      "name": "DL이앤씨",
-      "code": "375500",
-      "score": 70,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 74,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 5,
-      "name": "파마리서치",
-      "code": "214450",
-      "score": 70,
-      "grade": "B",
-      "action": "관찰상위",
-      "breakdown": {
-        "technicalScore": 70,
-        "supplyScore": 74,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 6,
-      "name": "현대글로비스",
-      "code": "086280",
+      "name": "LS ELECTRIC",
+      "code": "010120",
       "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 70,
+        "technicalScore": 71,
         "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
@@ -167,13 +166,13 @@
     },
     {
       "rank": 7,
-      "name": "한화",
-      "code": "000880",
+      "name": "GS건설",
+      "code": "006360",
       "score": 70,
       "grade": "B",
       "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 69,
+        "technicalScore": 71,
         "supplyScore": 74,
         "newsScore": 100,
         "reportScore": 50,
@@ -190,14 +189,14 @@
     },
     {
       "rank": 8,
-      "name": "삼성E&A",
-      "code": "028050",
-      "score": 69,
-      "grade": "C",
-      "action": "관찰",
+      "name": "지니언스",
+      "code": "263860",
+      "score": 70,
+      "grade": "B",
+      "action": "관찰상위",
       "breakdown": {
-        "technicalScore": 71,
-        "supplyScore": 68,
+        "technicalScore": 67,
+        "supplyScore": 79,
         "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
@@ -208,20 +207,20 @@
           "report": 15,
           "liquidity": 10
         },
-        "supplyMemo": "수급 중립/혼조"
+        "supplyMemo": "외국인·기관 수급 우위"
       }
     },
     {
       "rank": 9,
-      "name": "삼양식품",
-      "code": "003230",
+      "name": "농심",
+      "code": "004370",
       "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 71,
-        "supplyScore": 67,
-        "newsScore": 100,
+        "technicalScore": 70,
+        "supplyScore": 73,
+        "newsScore": 94,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -236,15 +235,15 @@
     },
     {
       "rank": 10,
-      "name": "농심",
-      "code": "004370",
+      "name": "유한양행",
+      "code": "000100",
       "score": 69,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 69,
-        "supplyScore": 73,
-        "newsScore": 95,
+        "technicalScore": 68,
+        "supplyScore": 74,
+        "newsScore": 99,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
