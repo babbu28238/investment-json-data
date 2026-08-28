@@ -1,12 +1,12 @@
 {
   "version": "A236",
-  "generatedAt": "2026-08-27T21:30:45",
+  "generatedAt": "2026-08-28T21:37:02",
   "summary": {
     "version": "A236",
-    "generatedAt": "2026-08-27T21:30:45",
+    "generatedAt": "2026-08-28T21:37:02",
     "status": "news_merge_engine",
     "universeSource": "existing_json",
-    "universeCount": 0,
+    "universeCount": 30,
     "includedCount": 0,
     "priceConnected": 0,
     "newsConnected": 0,
@@ -15,7 +15,7 @@
     "supplyConnected": 0,
     "supplyPartial": 0,
     "macroApplied": 0,
-    "naverMissing": 0,
+    "naverMissing": 30,
     "averageDataConnectionScore": 0,
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망",
@@ -70,10 +70,13 @@
         "count": 0
       },
       "existing": {
-        "count": 0
+        "count": 30
       }
     },
     "candidateCount": 0,
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
+    "supplyScoreCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -82,11 +85,8 @@
     "scoreFailedCount": 0,
     "priceCount": 0,
     "chartScoreCount": 0,
-    "supplyScoreCount": 0,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 0,
-    "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
     "usedSupplyDates": [],
