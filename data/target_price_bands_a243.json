@@ -1,12 +1,12 @@
 {
   "version": "A243",
-  "generatedAt": "2026-08-27T23:01:09",
+  "generatedAt": "2026-08-28T23:08:49",
   "summary": {
     "version": "A243",
-    "generatedAt": "2026-08-27T23:01:09",
+    "generatedAt": "2026-08-28T23:08:49",
     "status": "report_target_collector",
     "universeSource": "existing_json",
-    "universeCount": 0,
+    "universeCount": 30,
     "includedCount": 0,
     "priceConnected": 0,
     "newsConnected": 0,
@@ -15,7 +15,7 @@
     "supplyConnected": 0,
     "supplyPartial": 0,
     "macroApplied": 0,
-    "naverMissing": 0,
+    "naverMissing": 30,
     "averageDataConnectionScore": 0,
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망",
@@ -70,10 +70,13 @@
         "count": 0
       },
       "existing": {
-        "count": 0
+        "count": 30
       }
     },
     "candidateCount": 30,
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
+    "supplyScoreCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -82,11 +85,8 @@
     "scoreFailedCount": 0,
     "priceCount": 0,
     "chartScoreCount": 0,
-    "supplyScoreCount": 0,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 0,
-    "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
     "usedSupplyDates": [],
@@ -246,32 +246,43 @@
       "code": "005930",
       "name": "삼성전자",
       "prices": [],
-      "median": 132671,
-      "realisticTargetPrice": 106100,
-      "observeTimingPrice": 92900,
-      "stopTimingPrice": 79600,
+      "median": 150500,
+      "realisticTargetPrice": 120400,
+      "observeTimingPrice": 105400,
+      "stopTimingPrice": 90300,
       "errors": [],
       "sources": []
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "prices": [],
-      "median": 88000,
-      "realisticTargetPrice": 70400,
-      "observeTimingPrice": 61600,
-      "stopTimingPrice": 52800,
+      "prices": [
+        7000
+      ],
+      "median": 7000,
+      "realisticTargetPrice": 5600,
+      "observeTimingPrice": 4900,
+      "stopTimingPrice": 4200,
       "errors": [],
-      "sources": []
+      "sources": [
+        {
+          "code": "000660",
+          "name": "SK하이닉스",
+          "query": "SK하이닉스 목표주가",
+          "price": 7000,
+          "source": "naver_search",
+          "snippet": "SK하이닉스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 SK하이닉스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치"
+        }
+      ]
     },
     {
       "code": "329180",
       "name": "HD현대중공업",
       "prices": [],
-      "median": 110000,
-      "realisticTargetPrice": 88000,
-      "observeTimingPrice": 77000,
-      "stopTimingPrice": 66000,
+      "median": 107625,
+      "realisticTargetPrice": 86100,
+      "observeTimingPrice": 75300,
+      "stopTimingPrice": 64600,
       "errors": [],
       "sources": []
     },
@@ -451,10 +462,10 @@
       "code": "028260",
       "name": "삼성물산",
       "prices": [],
-      "median": 190000,
-      "realisticTargetPrice": 152000,
-      "observeTimingPrice": 133000,
-      "stopTimingPrice": 114000,
+      "median": 180000,
+      "realisticTargetPrice": 144000,
+      "observeTimingPrice": 126000,
+      "stopTimingPrice": 108000,
       "errors": [],
       "sources": []
     },
@@ -635,24 +646,13 @@
     {
       "code": "005380",
       "name": "현대차",
-      "prices": [
-        81000
-      ],
-      "median": 81000,
-      "realisticTargetPrice": 64800,
-      "observeTimingPrice": 56700,
-      "stopTimingPrice": 48600,
+      "prices": [],
+      "median": 109500,
+      "realisticTargetPrice": 87600,
+      "observeTimingPrice": 76600,
+      "stopTimingPrice": 65700,
       "errors": [],
-      "sources": [
-        {
-          "code": "005380",
-          "name": "현대차",
-          "query": "현대차 목표주가",
-          "price": 81000,
-          "source": "naver_search",
-          "snippet": "현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 어학사전 더보기 지도 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1"
-        }
-      ]
+      "sources": []
     },
     {
       "code": "000270",
@@ -966,10 +966,10 @@
       "code": "247540",
       "name": "에코프로비엠",
       "prices": [],
-      "median": 136000,
-      "realisticTargetPrice": 108800,
-      "observeTimingPrice": 95200,
-      "stopTimingPrice": 81600,
+      "median": 135000,
+      "realisticTargetPrice": 108000,
+      "observeTimingPrice": 94500,
+      "stopTimingPrice": 81000,
       "errors": [],
       "sources": []
     },
@@ -977,10 +977,10 @@
       "code": "086520",
       "name": "에코프로",
       "prices": [],
-      "median": 140000,
-      "realisticTargetPrice": 112000,
-      "observeTimingPrice": 98000,
-      "stopTimingPrice": 84000,
+      "median": 155000,
+      "realisticTargetPrice": 124000,
+      "observeTimingPrice": 108500,
+      "stopTimingPrice": 93000,
       "errors": [],
       "sources": []
     },
@@ -1010,10 +1010,10 @@
       "code": "068760",
       "name": "셀트리온제약",
       "prices": [],
-      "median": 200000,
-      "realisticTargetPrice": 160000,
-      "observeTimingPrice": 140000,
-      "stopTimingPrice": 120000,
+      "median": 196000,
+      "realisticTargetPrice": 156800,
+      "observeTimingPrice": 137200,
+      "stopTimingPrice": 117600,
       "errors": [],
       "sources": []
     },
