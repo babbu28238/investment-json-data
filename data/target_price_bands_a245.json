@@ -1,12 +1,12 @@
 {
   "version": "A245",
-  "generatedAt": "2026-08-27T23:45:12",
+  "generatedAt": "2026-08-28T23:31:06",
   "summary": {
     "version": "A245",
-    "generatedAt": "2026-08-27T23:45:12",
+    "generatedAt": "2026-08-28T23:31:06",
     "status": "target_clean_filter",
     "universeSource": "existing_json",
-    "universeCount": 0,
+    "universeCount": 30,
     "includedCount": 0,
     "priceConnected": 0,
     "newsConnected": 0,
@@ -15,7 +15,7 @@
     "supplyConnected": 0,
     "supplyPartial": 0,
     "macroApplied": 0,
-    "naverMissing": 0,
+    "naverMissing": 30,
     "averageDataConnectionScore": 0,
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망",
@@ -70,10 +70,13 @@
         "count": 0
       },
       "existing": {
-        "count": 0
+        "count": 30
       }
     },
     "candidateCount": 30,
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
+    "supplyScoreCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -82,11 +85,8 @@
     "scoreFailedCount": 0,
     "priceCount": 0,
     "chartScoreCount": 0,
-    "supplyScoreCount": 0,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 0,
-    "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
     "usedSupplyDates": [],
@@ -250,51 +250,29 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        1,
-        2,
-        26,
         66,
         70,
-        75,
         88,
         100,
         106,
         110,
         132,
         150,
-        161,
         188,
         220,
         294,
         295,
         297,
+        300,
         393,
+        400,
         491,
         500,
-        600,
         671,
-        875,
-        890,
-        900
+        875
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 1,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 600,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 26,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 66,
           "reason": "1만원 미만 잡음 제거"
@@ -304,11 +282,7 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 75,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 900,
+          "price": 400,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -341,210 +315,6 @@
         },
         {
           "price": 500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 161,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 890,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 188,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 294,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 220,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 295,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 297,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 393,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 491,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 875,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
-      "median": 0,
-      "realisticTargetPrice": 0,
-      "observeTimingPrice": 0,
-      "stopTimingPrice": 0,
-      "targetCount": 0
-    },
-    {
-      "code": "000660",
-      "name": "SK하이닉스",
-      "currentPrice": 220000,
-      "rawPrices": [
-        1,
-        2,
-        5,
-        26,
-        28,
-        34,
-        42,
-        55,
-        64,
-        70,
-        74,
-        75,
-        88,
-        92,
-        100,
-        106,
-        113,
-        150,
-        161,
-        188,
-        220,
-        294,
-        295,
-        297,
-        300,
-        350,
-        393,
-        491,
-        500,
-        550,
-        583,
-        600,
-        660,
-        800,
-        875,
-        890,
-        900
-      ],
-      "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 1,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 600,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 26,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 28,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 550,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 34,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 100,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 42,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 660,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 800,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 55,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 64,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 350,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 70,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 74,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 75,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 900,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 88,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 92,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 583,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 106,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 113,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 150,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 161,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 890,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -591,14 +361,42 @@
       "targetCount": 0
     },
     {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "currentPrice": 220000,
+      "rawPrices": [
+        7,
+        7000
+      ],
+      "acceptedPrices": [],
+      "rejected": [
+        {
+          "price": 7000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 7,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
+    },
+    {
       "code": "329180",
       "name": "HD현대중공업",
       "currentPrice": 300000,
       "rawPrices": [
+        2,
+        26,
         34,
         42,
         50,
         51,
+        70,
         77,
         84,
         88,
@@ -606,26 +404,36 @@
         103,
         105,
         110,
+        111,
         113,
         128,
         129,
         132,
         141,
+        220,
         250,
         300,
         400,
         500,
-        524,
+        520,
         600,
         660,
         671,
-        699,
+        693,
         700,
         800,
-        874
+        867
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 26,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 34,
           "reason": "1만원 미만 잡음 제거"
@@ -655,11 +463,15 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 77,
+          "price": 70,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 400,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 77,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -723,19 +535,27 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 220,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 300,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 524,
+          "price": 520,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 699,
+          "price": 693,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 874,
+          "price": 867,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 111,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -1049,19 +869,26 @@
         80,
         92,
         115,
+        120,
         150,
+        152,
+        160,
         172,
         180,
         200,
         250,
+        304,
         305,
         319,
         333,
-        407,
+        405,
         426,
+        429,
         500,
+        506,
         509,
         532,
+        600,
         750,
         800
       ],
@@ -1088,6 +915,10 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 600,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 115,
           "reason": "1만원 미만 잡음 제거"
         },
@@ -1096,7 +927,19 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 120,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 150,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 152,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 160,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1116,6 +959,10 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 304,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 305,
           "reason": "1만원 미만 잡음 제거"
         },
@@ -1128,11 +975,19 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 407,
+          "price": 405,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 426,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 506,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 429,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1344,17 +1199,147 @@
       "name": "현대차",
       "currentPrice": 250000,
       "rawPrices": [
+        3,
+        4,
+        5,
+        55,
+        64,
+        74,
         81,
-        81000
+        92,
+        100,
+        104,
+        115,
+        130,
+        172,
+        173,
+        180,
+        216,
+        224,
+        250,
+        400,
+        422,
+        500,
+        563,
+        583,
+        600,
+        704,
+        800,
+        889,
+        900
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 81000,
-          "reason": "현재가 대비 과도하게 낮음(81,000 < 125,000)"
+          "price": 3,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 900,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 4,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 800,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 5,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 55,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 500,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 64,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 74,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 100,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 81,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 92,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 583,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 104,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 115,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 130,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 172,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 173,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 180,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 216,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 600,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 224,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 889,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 250,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 422,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 563,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 704,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 400,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -1767,33 +1752,40 @@
       "name": "에코프로비엠",
       "currentPrice": 130000,
       "rawPrices": [
+        8,
         27,
-        58,
         70,
         105,
+        108,
         112,
         130,
-        136,
         140,
         143,
         170,
         175,
+        180,
         300,
         364,
-        455
+        408,
+        455,
+        800
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 8,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 408,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 27,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 300,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 58,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1805,15 +1797,19 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 108,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 800,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 112,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 130,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 136,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1830,6 +1826,10 @@
         },
         {
           "price": 143,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 180,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1854,13 +1854,13 @@
       "rawPrices": [
         1,
         3,
+        8,
         27,
-        58,
         70,
         105,
+        108,
         112,
         130,
-        136,
         140,
         143,
         170,
@@ -1870,10 +1870,12 @@
         273,
         300,
         364,
+        408,
         426,
         455,
         500,
-        532
+        532,
+        800
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -1890,15 +1892,19 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 8,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 408,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 27,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 300,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 58,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1910,15 +1916,19 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 108,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 800,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 112,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 130,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 136,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -2002,29 +2012,36 @@
       "name": "셀트리온제약",
       "currentPrice": 0,
       "rawPrices": [
+        1,
         33,
         69,
         92,
         115,
         150,
+        160,
         192,
         200,
-        247,
         250,
         260,
         285,
+        304,
         305,
         333,
         400,
-        407,
+        405,
+        429,
         500,
+        506,
         509,
         600,
-        750,
-        800
+        750
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 1,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 33,
           "reason": "1만원 미만 잡음 제거"
@@ -2062,19 +2079,15 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 160,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 192,
           "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 200,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 247,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 800,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -2086,6 +2099,10 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 304,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 305,
           "reason": "1만원 미만 잡음 제거"
         },
@@ -2094,7 +2111,15 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 407,
+          "price": 405,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 506,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 429,
           "reason": "1만원 미만 잡음 제거"
         },
         {
