@@ -1,12 +1,12 @@
 {
   "version": "A248",
-  "generatedAt": "2026-08-28T23:42:12",
+  "generatedAt": "2026-08-31T20:23:59",
   "summary": {
     "version": "A248",
-    "generatedAt": "2026-08-28T23:42:12",
+    "generatedAt": "2026-08-31T20:23:59",
     "status": "naver_target_chart_stop",
     "universeSource": "existing_json",
-    "universeCount": 30,
+    "universeCount": 0,
     "includedCount": 0,
     "priceConnected": 0,
     "newsConnected": 0,
@@ -15,7 +15,7 @@
     "supplyConnected": 0,
     "supplyPartial": 0,
     "macroApplied": 0,
-    "naverMissing": 30,
+    "naverMissing": 0,
     "averageDataConnectionScore": 0,
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망",
@@ -70,13 +70,10 @@
         "count": 0
       },
       "existing": {
-        "count": 30
+        "count": 0
       }
     },
     "candidateCount": 30,
-    "supplyOkCount": 0,
-    "supplyFailCount": 0,
-    "supplyScoreCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -85,8 +82,11 @@
     "scoreFailedCount": 0,
     "priceCount": 0,
     "chartScoreCount": 0,
+    "supplyScoreCount": 0,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
     "usedSupplyDates": [],
@@ -239,7 +239,7 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 85,
+    "rawTargetRows": 102,
     "reliableTargetCandidateCount": 6,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
@@ -263,9 +263,9 @@
       "code": "329180",
       "name": "HD현대중공업",
       "currentPrice": 300000,
-      "naverTargetPrice": 867111,
-      "targetUpsidePercent": 189.0,
-      "targetBasedStopPrice": 520500,
+      "naverTargetPrice": 871059,
+      "targetUpsidePercent": 190.4,
+      "targetBasedStopPrice": 522500,
       "chartStopPrice": 276000,
       "chartStopReason": "차트 추천 손절선: 현재가 300,000원 기준 약 -8% 구간 276,000원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
     },
@@ -533,9 +533,9 @@
       "code": "058470",
       "name": "리노공업",
       "currentPrice": 0,
-      "naverTargetPrice": 115750,
+      "naverTargetPrice": 107667,
       "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 69400,
+      "targetBasedStopPrice": 64600,
       "chartStopPrice": 0,
       "chartStopReason": ""
     },
