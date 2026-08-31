@@ -1,10 +1,10 @@
 {
   "summary": {
     "version": "A412",
-    "generatedAt": "2026-08-28T08:36:08",
+    "generatedAt": "2026-08-31T03:01:43",
     "status": "supply_data_diagnosis",
     "universeSource": "existing_json",
-    "universeCount": 0,
+    "universeCount": 30,
     "includedCount": 0,
     "priceConnected": 0,
     "newsConnected": 0,
@@ -13,7 +13,7 @@
     "supplyConnected": 0,
     "supplyPartial": 0,
     "macroApplied": 0,
-    "naverMissing": 0,
+    "naverMissing": 30,
     "averageDataConnectionScore": 0,
     "overallMacroScore": 54,
     "overallMarketView": "중립 / 관망",
@@ -68,10 +68,13 @@
         "count": 0
       },
       "existing": {
-        "count": 0
+        "count": 30
       }
     },
     "candidateCount": 56,
+    "supplyOkCount": 0,
+    "supplyFailCount": 0,
+    "supplyScoreCount": 0,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -80,11 +83,8 @@
     "scoreFailedCount": 0,
     "priceCount": 0,
     "chartScoreCount": 0,
-    "supplyScoreCount": 0,
     "newsScoreCount": 0,
     "scoreFormula": "chart35+supply30+news20+fundamental10+risk10",
-    "supplyOkCount": 0,
-    "supplyFailCount": 0,
     "pipeline": "A222_PRICE -> A225_SCORE -> A228_SUPPLY",
     "ready": false,
     "usedSupplyDates": [],
@@ -280,6 +280,13 @@
   },
   "items": [
     {
+      "code": "042660",
+      "name": "한화오션",
+      "status": "neutral",
+      "supplyScore": 50,
+      "supplyOpinion": "수급 원자료가 아직 충분하지 않아 중립 50점으로 처리했습니다."
+    },
+    {
       "code": "329180",
       "name": "HD현대중공업",
       "status": "neutral",
@@ -359,13 +366,6 @@
     {
       "code": "012330",
       "name": "현대모비스",
-      "status": "neutral",
-      "supplyScore": 50,
-      "supplyOpinion": "수급 원자료가 아직 충분하지 않아 중립 50점으로 처리했습니다."
-    },
-    {
-      "code": "042660",
-      "name": "한화오션",
       "status": "neutral",
       "supplyScore": 50,
       "supplyOpinion": "수급 원자료가 아직 충분하지 않아 중립 50점으로 처리했습니다."
