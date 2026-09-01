@@ -1,6 +1,6 @@
 {
-  "version": "A220",
-  "generatedAt": "2026-09-01T14:11:59",
+  "version": "A225",
+  "generatedAt": "2026-09-01T14:19:03",
   "universeCount": 30,
   "candidateCount": 30,
   "rawCandidateCount": 30,
@@ -770,7 +770,7 @@
       "updatedAt": "2026-09-01T14:09:37"
     }
   ],
-  "status": "partial",
+  "status": "real_score_engine",
   "scoreModel": "force-real-candidates",
   "output": "stock_candidates_ai_scored.json",
   "priceUpdatedCount": 0,
@@ -780,5 +780,12 @@
     "KOSPI": "",
     "KOSDAQ": ""
   },
-  "priceSource": "pykrx"
+  "priceSource": "pykrx",
+  "scoreUpdatedCount": 30,
+  "scoreFailedCount": 0,
+  "priceCount": 29,
+  "chartScoreCount": 25,
+  "supplyScoreCount": 0,
+  "newsScoreCount": 0,
+  "scoreFormula": "chart35+supply30+news20+fundamental10+risk10"
 }
