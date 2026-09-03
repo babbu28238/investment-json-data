@@ -1,7 +1,7 @@
 {
   "version": "V319_DAILY_PIPELINE_CHECK",
   "status": "ok",
-  "updatedAt": "2026-09-02 22:47:28 KST",
+  "updatedAt": "2026-09-03 22:36:17 KST",
   "missingFiles": [],
   "checks": {
     "requiredFilesPresent": true,
@@ -15,8 +15,21 @@
     "stock_candidates.json": {
       "exists": true,
       "candidateCount": 80,
-      "sampleNames": [],
-      "sampleVersions": {}
+      "sampleNames": [
+        "KB금융",
+        "신한지주",
+        "삼화콘덴서",
+        "알테오젠",
+        "TIGER 미국S&P500",
+        "KODEX CD금리액티브(합성)",
+        "KODEX 미국S&P500",
+        "주성엔지니어링",
+        "우리금융지주",
+        "대한항공"
+      ],
+      "sampleVersions": {
+        "unknown": 10
+      }
     },
     "app_data_bundle.json": {
       "exists": true,
@@ -25,13 +38,13 @@
     },
     "stock_lookup_index.json": {
       "exists": true,
-      "stockCount": 2524,
-      "recommendedCount": 78
+      "stockCount": 2523,
+      "recommendedCount": 57
     },
     "stock_lookup_compact.json": {
       "exists": true,
-      "stockCount": 2524,
-      "recommendedCount": 78
+      "stockCount": 2523,
+      "recommendedCount": 57
     }
   },
   "dailyUseGuide": {
