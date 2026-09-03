@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-02T17:54:07",
+  "generatedAt": "2026-09-03T17:51:50",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-09-02T17:54:07",
+    "generatedAt": "2026-09-03T17:51:50",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 14,
+    "targetPriceCandidateCount": 13,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -239,7 +239,7 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 108,
+    "rawTargetRows": 106,
     "reliableTargetCandidateCount": 6,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
@@ -249,21 +249,9 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [
-        2017,
-        81000
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 2017,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 81000,
-          "reason": "현재가 대비 과도하게 낮음"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -342,12 +330,9 @@
       "rawPrices": [
         2026,
         3000,
-        5000,
-        120000
+        5000
       ],
-      "acceptedPrices": [
-        120000
-      ],
+      "acceptedPrices": [],
       "rejected": [
         {
           "price": 2026,
@@ -362,11 +347,11 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 120000,
-      "realisticTargetPrice": 96000,
-      "observeTimingPrice": 84000,
-      "stopTimingPrice": 72000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "272210",
@@ -490,6 +475,7 @@
       "rawPrices": [
         2026,
         3000,
+        4889,
         7000
       ],
       "acceptedPrices": [],
@@ -500,6 +486,10 @@
         },
         {
           "price": 3000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 4889,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -518,22 +508,22 @@
       "name": "신한지주",
       "currentPrice": 60000,
       "rawPrices": [
-        1000,
         2026,
-        3000
+        3000,
+        4889
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 1000,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
         },
         {
           "price": 3000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 4889,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -611,18 +601,13 @@
       "name": "현대차",
       "currentPrice": 250000,
       "rawPrices": [
-        2026,
-        3000
+        2026
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 3000,
-          "reason": "1만원 미만 잡음 제거"
         }
       ],
       "median": 0,
@@ -696,7 +681,6 @@
       "name": "카카오",
       "currentPrice": 55000,
       "rawPrices": [
-        2026,
         7000,
         46000
       ],
@@ -704,10 +688,6 @@
         46000
       ],
       "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
         {
           "price": 7000,
           "reason": "1만원 미만 잡음 제거"
@@ -926,7 +906,9 @@
       "currentPrice": 300000,
       "rawPrices": [
         1000,
-        2026
+        2000,
+        2026,
+        8500
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -935,8 +917,16 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 2000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 2026,
           "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 8500,
+          "reason": "1만원 미만 잡음 제거"
         }
       ],
       "median": 0,
