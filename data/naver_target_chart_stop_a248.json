@@ -1,9 +1,9 @@
 {
   "version": "A248",
-  "generatedAt": "2026-09-04T17:49:47",
+  "generatedAt": "2026-09-07T18:52:37",
   "summary": {
     "version": "A248",
-    "generatedAt": "2026-09-04T17:49:47",
+    "generatedAt": "2026-09-07T18:52:37",
     "status": "naver_target_chart_stop",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 30,
+    "candidateCount": 25,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 26,
+    "targetPriceCandidateCount": 21,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -236,11 +236,24 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 30
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates.json",
+        "count": 0
+      },
+      {
+        "path": "data/final_stock_candidates_a207.json",
+        "count": 0
+      },
+      {
+        "path": "data/ai_scored_candidates.json",
+        "count": 0
       }
     ],
-    "rawTargetRows": 116,
-    "reliableTargetCandidateCount": 6,
+    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
+    "rawTargetRows": 92,
+    "reliableTargetCandidateCount": 4,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 20,
@@ -283,9 +296,9 @@
       "code": "272210",
       "name": "한화시스템",
       "currentPrice": 132671,
-      "naverTargetPrice": 110000,
-      "targetUpsidePercent": -17.1,
-      "targetBasedStopPrice": 66000,
+      "naverTargetPrice": 108714,
+      "targetUpsidePercent": -18.1,
+      "targetBasedStopPrice": 65200,
       "chartStopPrice": 122000,
       "chartStopReason": "차트 추천 손절선: 현재가 132,671원 기준 약 -8% 구간 122,000원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
     },
@@ -323,9 +336,9 @@
       "code": "241560",
       "name": "두산밥캣",
       "currentPrice": 55000,
-      "naverTargetPrice": 92583,
-      "targetUpsidePercent": 68.3,
-      "targetBasedStopPrice": 55500,
+      "naverTargetPrice": 94700,
+      "targetUpsidePercent": 72.2,
+      "targetBasedStopPrice": 56800,
       "chartStopPrice": 50600,
       "chartStopReason": "차트 추천 손절선: 현재가 55,000원 기준 약 -8% 구간 50,600원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
     },
@@ -498,56 +511,6 @@
       "targetBasedStopPrice": 319500,
       "chartStopPrice": 165500,
       "chartStopReason": "차트 추천 손절선: 현재가 180,000원 기준 약 -8% 구간 165,500원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "currentPrice": 0,
-      "naverTargetPrice": 500714,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 300500,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "currentPrice": 0,
-      "naverTargetPrice": 61000,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 36600,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "currentPrice": 0,
-      "naverTargetPrice": 250000,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 150000,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "currentPrice": 0,
-      "naverTargetPrice": 103500,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 62100,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "currentPrice": 0,
-      "naverTargetPrice": 33285,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 20000,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
     }
   ]
 }
