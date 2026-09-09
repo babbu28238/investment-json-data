@@ -1,14 +1,21 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-08T17:55:08",
+  "generatedAt": "2026-09-09T17:49:53",
   "details": [
     {
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [],
+      "rawPrices": [
+        2028
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 2028,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -20,12 +27,12 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
-        7300
+        2028
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 7300,
+          "price": 2028,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -334,7 +341,6 @@
       "name": "하나금융지주",
       "currentPrice": 70000,
       "rawPrices": [
-        2026,
         3000,
         4300,
         5000,
@@ -344,10 +350,6 @@
         150000
       ],
       "rejected": [
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
-        },
         {
           "price": 3000,
           "reason": "1만원 미만 잡음 제거"
