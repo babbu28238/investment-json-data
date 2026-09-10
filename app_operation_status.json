@@ -1,68 +1,70 @@
 {
   "version": "V288_APP_OPERATION_STATUS_BRIDGE",
-  "updatedAt": "2026-09-07 21:06:58",
-  "status": "ok",
-  "message": "앱 운영 가능",
-  "candidateCount": 50,
+  "updatedAt": "2026-09-10 20:23:16",
+  "status": "warning",
+  "message": "운영 가능하나 일부 경고 확인 필요",
+  "candidateCount": 24,
   "gradeCounts": {
-    "B": 7,
-    "C": 43
+    "C": 2,
+    "D": 22
   },
   "quoteStats": {
-    "quoteCount": 120,
-    "okCount": 120,
+    "quoteCount": 24,
+    "okCount": 0,
     "failCount": 0,
-    "partialCount": 0,
+    "partialCount": 24,
     "source": "naver_finance",
-    "updatedAt": "2026-09-07 21:06:58"
+    "updatedAt": "2026-09-10 20:23:16"
   },
   "issues": [],
-  "warnings": [],
+  "warnings": [
+    "pipeline_health 상태가 경고/부분성공입니다."
+  ],
   "files": {
     "pipelineHealth": {
       "exists": true,
-      "size": 5734,
-      "modifiedAt": "2026-09-07 21:06:58"
+      "size": 5785,
+      "modifiedAt": "2026-09-10 20:23:16"
     },
     "appDataStatus": {
       "exists": true,
-      "size": 3414,
-      "modifiedAt": "2026-09-07 21:06:58"
+      "size": 3363,
+      "modifiedAt": "2026-09-10 20:23:16"
     },
     "recommendationSummary": {
       "exists": true,
-      "size": 5947,
-      "modifiedAt": "2026-09-07 21:06:58"
+      "size": 5974,
+      "modifiedAt": "2026-09-10 20:23:16"
     },
     "marketValidation": {
       "exists": true,
       "size": 2361,
-      "modifiedAt": "2026-09-07 18:47:51"
+      "modifiedAt": "2026-09-10 20:15:32"
     },
     "liveQuotes": {
       "exists": true,
-      "size": 32022,
-      "modifiedAt": "2026-09-07 21:06:58"
+      "size": 6892,
+      "modifiedAt": "2026-09-10 20:23:16"
     },
     "stockCandidates": {
       "exists": true,
-      "size": 187265,
-      "modifiedAt": "2026-09-07 21:06:58"
+      "size": 86478,
+      "modifiedAt": "2026-09-10 20:23:16"
     },
     "newsSignals": {
       "exists": true,
-      "size": 429873,
-      "modifiedAt": "2026-09-07 20:46:17"
+      "size": 129013,
+      "modifiedAt": "2026-09-10 20:19:03"
     },
     "supplySummary": {
       "exists": true,
-      "size": 25094,
-      "modifiedAt": "2026-09-07 21:04:16"
+      "size": 10384,
+      "modifiedAt": "2026-09-10 20:22:33"
     },
     "reportSummary": {
       "exists": true,
-      "size": 2269,
-      "modifiedAt": "2026-09-07 20:50:56"
+      "size": 2305,
+      "modifiedAt": "2026-09-10 20:21:16"
     }
   },
   "sourceVersions": {

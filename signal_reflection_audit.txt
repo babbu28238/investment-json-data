@@ -1,31 +1,31 @@
 V294 SIGNAL REFLECTION AUDIT
-updatedAt: 2026-09-07 21:06:59 KST
-overallStatus: ok
-checks: 9/9
+updatedAt: 2026-09-10 20:23:16 KST
+overallStatus: warning
+checks: 8/9
 
 [Counts]
-- stockCandidates: 50
-- stockCandidatesInputRows: 120
-- liveQuotes: 120
-- supplyRows: 80
-- reportHintRows: 80
+- stockCandidates: 24
+- stockCandidatesInputRows: 24
+- liveQuotes: 24
+- supplyRows: 24
+- reportHintRows: 24
 - newsSignalItems: 0
 - reportSignalItems: 0
 
 [Candidate Field Reflection]
-- candidateCount: 50
-- hasNewsSignal: 50
-- hasReportSignal: 50
-- hasRiskMemo: 50
-- hasSupplyFields: 50
-- hasLiveFields: 50
-- hasRecommendationMeta: 50
-- hasScore: 50
+- candidateCount: 24
+- hasNewsSignal: 24
+- hasReportSignal: 24
+- hasRiskMemo: 24
+- hasSupplyFields: 0
+- hasLiveFields: 24
+- hasRecommendationMeta: 24
+- hasScore: 24
 - sOrAGrade: 0
 
 [Pass Checks]
 - hasCandidateJson: OK
-- hasMarketScannerInput: OK
+- hasMarketScannerInput: CHECK
 - hasLiveQuotes: OK
 - hasNewsSignals: OK
 - hasSupplyData: OK
@@ -35,13 +35,17 @@ checks: 9/9
 - stockJsonHasScores: OK
 
 [Top Preview]
-- 1. SK이노베이션(096770) score=72 grade=B news=뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 99 / 대표뉴스: 금감원, SK이노-SKIET 합병에 제동…증권신고서 정정 요구 | - 연합인포맥스 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 2. LG전자(066570) score=71 grade=B news=뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: [특징주] LG전자, 로봇 부품 수주 기대감에 6%대 상승(종합) - 연합뉴스 report=리포트 중립: LG전자 (-, -)
-- 3. 로보티즈(108490) score=71 grade=B news=뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: 한달새 18만→33만원…로보티즈, 오늘 또 5% 뛴 이유 - 한국경제 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 4. TIGER CD1년금리액티브(합성)(475630) score=70 grade=B news=뉴스 긍정: 긍정 5 / 부정 0 / 중립 3 / 점수 92 / 대표뉴스: TIGER CD1년금리액티브(합성) ETF, 순자산 1.5조 돌파 - 머니투데이 - 머니투데이 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 5. 한미반도체(042700) score=70 grade=B news=뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 한미반도체, 'FC본더' 추가 수주…TC본더 이어 새 성장축 - MTN 머니투데이방송 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 6. S-Oil(010950) score=70 grade=B news=뉴스 긍정: 긍정 5 / 부정 0 / 중립 3 / 점수 100 / 대표뉴스: [클릭 e종목]"정유 호황 이어진다…S-Oil 목표가↑" - 아시아경제 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 7. 현대글로비스(086280) score=70 grade=B news=뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: 현대글로비스, 21만원선 안착하며 견조한 상승세 마감 : 기업주식정보 - 재경일보 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 8. NAVER(035420) score=69 grade=C news=뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: 9월에는 주식을 매수해야 하나? - 네이버 프리미엄콘텐츠 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 9. 삼성에스디에스(018260) score=69 grade=C news=뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: [마감분석] 삼성에스디에스, IR 개최 기대감에 1.89% 상승 마감 : 기업주식정보 - 재경일보 report=리포트 중립: 최근 공개 리포트 확인 필요
-- 10. 디아이(003160) score=69 grade=C news=뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: 디아이, 디램 고도화·낸드 턴어라운드 '수혜'…'올해 순이익 1270%' 사상 최대 실적 - 네이트 report=리포트 중립: 디아이 (iM증권, 26.09.07)
+- 1. 두산에너빌리티(034020) score=62 grade=C news=뉴스 긍정: 긍정 5 / 부정 1 / 중립 2 / 점수 100 / 대표뉴스: 원전 대미투자, 두산에너빌 32조 잭팟? - v.daum.net report=리포트 중립: 최근 공개 리포트 확인 필요
+- 2. 삼성전자(005930) score=60 grade=C news=뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 90 / 대표뉴스: 이재용, 홍라희 삼성전자 주식 1.9조원에 매입…지분 1.58%로 - 중앙일보 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 3. 이오테크닉스(039030) score=59 grade=D news=뉴스 긍정: 긍정 4 / 부정 1 / 중립 3 / 점수 83 / 대표뉴스: [서치 e종목] 이오테크닉스, PCB 장비군 매출 성장으로 실적 모멘텀 강화될까 - 데일리인베스트 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 4. KB금융(105560) score=57 grade=D news=뉴스 중립: 긍정 2 / 부정 0 / 중립 6 / 점수 64 / 대표뉴스: KB금융, 블룸버그와 자본시장 협력 강화 - 뉴스핌 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 5. POSCO홀딩스(005490) score=56 grade=D news=뉴스 중립: 긍정 4 / 부정 1 / 중립 3 / 점수 60 / 대표뉴스: POSCO홀딩스 주가, 9월 10일 339,000원 0.59% 상승 마감 - 톱스타뉴스 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 6. 한국항공우주(047810) score=56 grade=D news=뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: [리포트 브리핑]한국항공우주, '유무인 복합 전투기 편대 구성의 핵심' 목표가 186,000원 - DS투자증권 - 뉴스핌 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 7. LS ELECTRIC(010120) score=56 grade=D news=뉴스 긍정: 긍정 5 / 부정 2 / 중립 1 / 점수 100 / 대표뉴스: LS일렉트릭, 북미 AIDC 1064억 계약 2309억으로 확대…1.2조 수주로 입증한 ‘AI 전력 경쟁력’ - 업코리아 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 8. 현대차(005380) score=56 grade=D news=뉴스 긍정: 긍정 5 / 부정 0 / 중립 3 / 점수 99 / 대표뉴스: 리테일 성장 넘어 기업금융으로..현대차증권, 수익 기반 넓힌다 - kpenews.com report=리포트 중립: 최근 공개 리포트 확인 필요
+- 9. LG에너지솔루션(373220) score=55 grade=D news=뉴스 긍정: 긍정 4 / 부정 3 / 중립 1 / 점수 72 / 대표뉴스: LG에너지솔루션 주가, 9월 10일 365,000원 1.62% 하락 마감 - 톱스타뉴스 report=리포트 중립: 최근 공개 리포트 확인 필요
+- 10. 한화시스템(272210) score=55 grade=D news=뉴스 긍정: 긍정 5 / 부정 1 / 중립 2 / 점수 100 / 대표뉴스: 한화시스템(KRX:272210)의 주가는 무엇을 시사하는가? - simplywall.st report=리포트 중립: 최근 공개 리포트 확인 필요
+
+[Warnings]
+- stock_candidates_input.csv 행 수가 50개 미만입니다. 시장 스캐너가 충분히 작동했는지 확인하세요.
+- stock_candidates.json에 수급 필드 반영이 확인되지 않습니다.
