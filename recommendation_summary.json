@@ -1,7 +1,7 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-11 15:51:25",
-  "startedAt": "2026-09-11 15:51:25",
+  "updatedAt": "2026-09-11 17:34:53",
+  "startedAt": "2026-09-11 17:34:53",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
@@ -23,8 +23,8 @@
     "방산·우주항공": 4,
     "바이오·제약": 3,
     "조선·해양": 1,
-    "인터넷·게임·콘텐츠": 1,
     "2차전지·소재": 4,
+    "인터넷·게임·콘텐츠": 1,
     "로봇·자동화": 1
   },
   "topCandidates": [
@@ -55,13 +55,13 @@
       "rank": 2,
       "name": "KB금융",
       "code": "105560",
-      "score": 59,
+      "score": 57,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 78,
+        "newsScore": 64,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -78,13 +78,13 @@
       "rank": 3,
       "name": "이오테크닉스",
       "code": "039030",
-      "score": 58,
+      "score": 57,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 61,
         "supplyScore": 50,
-        "newsScore": 83,
+        "newsScore": 76,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -168,29 +168,6 @@
     },
     {
       "rank": 7,
-      "name": "한국항공우주",
-      "code": "047810",
-      "score": 55,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 44,
-        "supplyScore": 50,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 8,
       "name": "삼성바이오로직스",
       "code": "207940",
       "score": 55,
@@ -213,16 +190,39 @@
       }
     },
     {
-      "rank": 9,
-      "name": "기아",
-      "code": "000270",
-      "score": 55,
+      "rank": 8,
+      "name": "한국항공우주",
+      "code": "047810",
+      "score": 54,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 44,
         "supplyScore": 50,
-        "newsScore": 99,
+        "newsScore": 95,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 9,
+      "name": "한화오션",
+      "code": "042660",
+      "score": 54,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 42,
+        "supplyScore": 50,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -237,15 +237,15 @@
     },
     {
       "rank": 10,
-      "name": "한화오션",
-      "code": "042660",
+      "name": "기아",
+      "code": "000270",
       "score": 54,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 42,
+        "technicalScore": 44,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 92,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
