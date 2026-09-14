@@ -1,42 +1,42 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-11 20:25:29",
-  "startedAt": "2026-09-11 20:25:29",
+  "updatedAt": "2026-09-14 15:04:55",
+  "startedAt": "2026-09-14 15:04:55",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 1,
-    "D": 23
+    "C": 3,
+    "D": 21
   },
   "actionCounts": {
-    "관찰": 1,
-    "제외검토": 23
+    "관찰": 3,
+    "제외검토": 21
   },
   "sectorCounts": {
+    "금융·밸류업": 1,
+    "방산·우주항공": 4,
     "원전·전력·에너지": 3,
     "반도체·AI": 4,
-    "금융·밸류업": 1,
-    "자동차·모빌리티": 2,
-    "바이오·제약": 3,
-    "방산·우주항공": 4,
-    "조선·해양": 1,
     "2차전지·소재": 4,
     "인터넷·게임·콘텐츠": 1,
+    "조선·해양": 1,
+    "바이오·제약": 3,
+    "자동차·모빌리티": 2,
     "로봇·자동화": 1
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "두산에너빌리티",
-      "code": "034020",
+      "name": "KB금융",
+      "code": "105560",
       "score": 62,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 63,
+        "technicalScore": 65,
         "supplyScore": 50,
         "newsScore": 100,
         "reportScore": 50,
@@ -53,15 +53,15 @@
     },
     {
       "rank": 2,
-      "name": "이오테크닉스",
-      "code": "039030",
-      "score": 59,
-      "grade": "D",
-      "action": "제외검토",
+      "name": "한화시스템",
+      "code": "272210",
+      "score": 62,
+      "grade": "C",
+      "action": "관찰",
       "breakdown": {
-        "technicalScore": 61,
+        "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 90,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -76,15 +76,15 @@
     },
     {
       "rank": 3,
-      "name": "KB금융",
-      "code": "105560",
-      "score": 56,
-      "grade": "D",
-      "action": "제외검토",
+      "name": "두산에너빌리티",
+      "code": "034020",
+      "score": 61,
+      "grade": "C",
+      "action": "관찰",
       "breakdown": {
-        "technicalScore": 65,
+        "technicalScore": 61,
         "supplyScore": 50,
-        "newsScore": 57,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -99,13 +99,13 @@
     },
     {
       "rank": 4,
-      "name": "현대차",
-      "code": "005380",
-      "score": 56,
+      "name": "한화에어로스페이스",
+      "code": "012450",
+      "score": 59,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 46,
+        "technicalScore": 56,
         "supplyScore": 50,
         "newsScore": 100,
         "reportScore": 50,
@@ -122,13 +122,36 @@
     },
     {
       "rank": 5,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 55,
+      "name": "이오테크닉스",
+      "code": "039030",
+      "score": 58,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 45,
+        "technicalScore": 61,
+        "supplyScore": 50,
+        "newsScore": 83,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 6,
+      "name": "한국항공우주",
+      "code": "047810",
+      "score": 56,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 48,
         "supplyScore": 50,
         "newsScore": 100,
         "reportScore": 50,
@@ -144,9 +167,9 @@
       }
     },
     {
-      "rank": 6,
-      "name": "삼성바이오로직스",
-      "code": "207940",
+      "rank": 7,
+      "name": "LG에너지솔루션",
+      "code": "373220",
       "score": 55,
       "grade": "D",
       "action": "제외검토",
@@ -167,39 +190,16 @@
       }
     },
     {
-      "rank": 7,
-      "name": "한국항공우주",
-      "code": "047810",
-      "score": 54,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 44,
-        "supplyScore": 50,
-        "newsScore": 95,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 8,
-      "name": "한화오션",
-      "code": "042660",
-      "score": 54,
+      "name": "SK하이닉스",
+      "code": "000660",
+      "score": 55,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 42,
+        "technicalScore": 46,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 93,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -237,15 +237,15 @@
     },
     {
       "rank": 10,
-      "name": "기아",
-      "code": "000270",
+      "name": "LS ELECTRIC",
+      "code": "010120",
       "score": 54,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 44,
+        "technicalScore": 41,
         "supplyScore": 50,
-        "newsScore": 92,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
