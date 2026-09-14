@@ -1,9 +1,9 @@
 {
   "version": "A252",
-  "generatedAt": "2026-09-11T18:45:36",
+  "generatedAt": "2026-09-14T19:56:55",
   "summary": {
     "version": "A252",
-    "generatedAt": "2026-09-11T18:45:36",
+    "generatedAt": "2026-09-14T19:56:55",
     "status": "search_real_data",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 26,
+    "targetPriceCandidateCount": 16,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -239,169 +239,153 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 109,
-    "reliableTargetCandidateCount": 6,
+    "rawTargetRows": 116,
+    "reliableTargetCandidateCount": 7,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 20,
+    "targetUpsideCandidateCount": 7,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
     "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 26,
+    "targetBasedStopCount": 16,
     "chartStopCount": 25,
     "allStockLookupCount": 56,
     "outputLookup": "all_stock_lookup_a251.json",
     "searchLookupCount": 56,
     "searchPriceConnectedCount": 56,
-    "searchTargetConnectedCount": 48
+    "searchTargetConnectedCount": 0
   },
   "details": [
     {
       "code": "058470",
       "name": "리노공업",
-      "price": 66400,
+      "price": 64200,
       "priceSource": "https://m.stock.naver.com/domestic/stock/058470/total",
-      "targetPrice": 103500,
-      "rawTargets": [
-        103500
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/058470/total",
-      "chartStopPrice": 61100
+      "chartStopPrice": 59100
     },
     {
       "code": "028260",
       "name": "삼성물산",
-      "price": 367000,
+      "price": 353000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/028260/total",
-      "targetPrice": 500714,
-      "rawTargets": [
-        500714
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/028260/total",
-      "chartStopPrice": 337500
+      "chartStopPrice": 325000
     },
     {
       "code": "068760",
       "name": "셀트리온제약",
-      "price": 39400,
+      "price": 39100,
       "priceSource": "https://m.stock.naver.com/domestic/stock/068760/total",
-      "targetPrice": 61000,
-      "rawTargets": [
-        61000
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/068760/total",
-      "chartStopPrice": 36200
+      "chartStopPrice": 36000
     },
     {
       "code": "091990",
       "name": "셀트리온헬스케어",
-      "price": 7664,
+      "price": 7623,
       "priceSource": "https://m.stock.naver.com/domestic/stock/091990/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/091990/total",
-      "chartStopPrice": 7050
+      "chartStopPrice": 7010
     },
     {
       "code": "112040",
       "name": "위메이드",
-      "price": 15650,
+      "price": 16190,
       "priceSource": "https://m.stock.naver.com/domestic/stock/112040/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/112040/total",
-      "chartStopPrice": 14400
+      "chartStopPrice": 14900
     },
     {
       "code": "277810",
       "name": "레인보우로보틱스",
-      "price": 436000,
+      "price": 417500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/277810/total",
-      "targetPrice": 650000,
-      "rawTargets": [
-        650000
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/277810/total",
-      "chartStopPrice": 401000
+      "chartStopPrice": 384000
     },
     {
       "code": "090360",
       "name": "로보스타",
-      "price": 78000,
+      "price": 74300,
       "priceSource": "https://m.stock.naver.com/domestic/stock/090360/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/090360/total",
-      "chartStopPrice": 71800
+      "chartStopPrice": 68400
     },
     {
       "code": "108490",
       "name": "로보티즈",
-      "price": 323500,
+      "price": 317500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/108490/total",
-      "targetPrice": 392286,
-      "rawTargets": [
-        392286
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/108490/total",
-      "chartStopPrice": 297500
+      "chartStopPrice": 292000
     },
     {
       "code": "196170",
       "name": "알테오젠",
-      "price": 268000,
+      "price": 258000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/196170/total",
-      "targetPrice": 447500,
-      "rawTargets": [
-        447500
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/196170/total",
-      "chartStopPrice": 246500
+      "chartStopPrice": 237500
     },
     {
       "code": "086520",
       "name": "에코프로",
-      "price": 84400,
+      "price": 80300,
       "priceSource": "https://m.stock.naver.com/domestic/stock/086520/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/086520/total",
-      "chartStopPrice": 77600
+      "chartStopPrice": 73900
     },
     {
       "code": "247540",
       "name": "에코프로비엠",
-      "price": 110300,
+      "price": 103500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/247540/total",
-      "targetPrice": 172386,
-      "rawTargets": [
-        172386
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/247540/total",
-      "chartStopPrice": 101500
+      "chartStopPrice": 95200
     },
     {
       "code": "039030",
       "name": "이오테크닉스",
-      "price": 445500,
+      "price": 425500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/039030/total",
-      "targetPrice": 532500,
-      "rawTargets": [
-        532500
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/039030/total",
-      "chartStopPrice": 410000
+      "chartStopPrice": 391500
     },
     {
       "code": "322510",
       "name": "제이엘케이",
-      "price": 5280,
+      "price": 5030,
       "priceSource": "https://m.stock.naver.com/domestic/stock/322510/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/322510/total",
-      "chartStopPrice": 4860
+      "chartStopPrice": 4630
     },
     {
       "code": "456190",
@@ -416,502 +400,422 @@
     {
       "code": "277880",
       "name": "티로보틱스",
-      "price": 3635,
+      "price": 3565,
       "priceSource": "https://m.stock.naver.com/domestic/stock/277880/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/277880/total",
-      "chartStopPrice": 3340
+      "chartStopPrice": 3280
     },
     {
       "code": "078930",
       "name": "GS",
-      "price": 119000,
+      "price": 114400,
       "priceSource": "https://m.stock.naver.com/domestic/stock/078930/total",
-      "targetPrice": 145600,
-      "rawTargets": [
-        145600
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/078930/total",
-      "chartStopPrice": 109500
+      "chartStopPrice": 105000
     },
     {
       "code": "009540",
       "name": "HD한국조선해양",
-      "price": 365500,
+      "price": 361000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/009540/total",
-      "targetPrice": 563231,
-      "rawTargets": [
-        563231
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/009540/total",
-      "chartStopPrice": 336500
+      "chartStopPrice": 332000
     },
     {
       "code": "010620",
       "name": "HD현대미포",
-      "price": 7665,
+      "price": 7621,
       "priceSource": "https://m.stock.naver.com/domestic/stock/010620/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/010620/total",
-      "chartStopPrice": 7050
+      "chartStopPrice": 7010
     },
     {
       "code": "267260",
       "name": "HD현대일렉트릭",
-      "price": 747000,
+      "price": 730000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/267260/total",
-      "targetPrice": 1181000,
-      "rawTargets": [
-        1181000
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/267260/total",
-      "chartStopPrice": 687000
+      "chartStopPrice": 671500
     },
     {
       "code": "329180",
       "name": "HD현대중공업",
-      "price": 479000,
+      "price": 470000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/329180/total",
-      "targetPrice": 871059,
-      "rawTargets": [
-        871059
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/329180/total",
-      "chartStopPrice": 440500
+      "chartStopPrice": 432500
     },
     {
       "code": "011200",
       "name": "HMM",
-      "price": 20850,
+      "price": 21100,
       "priceSource": "https://m.stock.naver.com/domestic/stock/011200/total",
-      "targetPrice": 24818,
-      "rawTargets": [
-        24818
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/011200/total",
-      "chartStopPrice": 19200
+      "chartStopPrice": 19400
     },
     {
       "code": "105560",
       "name": "KB금융",
-      "price": 177900,
+      "price": 181200,
       "priceSource": "https://m.stock.naver.com/domestic/stock/105560/total",
-      "targetPrice": 225444,
-      "rawTargets": [
-        225444
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/105560/total",
-      "chartStopPrice": 163500
+      "chartStopPrice": 166500
     },
     {
       "code": "033780",
       "name": "KT&G",
-      "price": 171800,
+      "price": 172000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/033780/total",
-      "targetPrice": 241538,
-      "rawTargets": [
-        241538
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/033780/total",
       "chartStopPrice": 158000
     },
     {
       "code": "373220",
       "name": "LG에너지솔루션",
-      "price": 360000,
+      "price": 351000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/373220/total",
-      "targetPrice": 519667,
-      "rawTargets": [
-        519667
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/373220/total",
-      "chartStopPrice": 331000
+      "chartStopPrice": 323000
     },
     {
       "code": "051910",
       "name": "LG화학",
-      "price": 273000,
+      "price": 267500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/051910/total",
-      "targetPrice": 376583,
-      "rawTargets": [
-        376583
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/051910/total",
-      "chartStopPrice": 251000
+      "chartStopPrice": 246000
     },
     {
       "code": "010120",
       "name": "LS ELECTRIC",
-      "price": 204500,
+      "price": 197500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/010120/total",
-      "targetPrice": 297500,
-      "rawTargets": [
-        297500
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/010120/total",
-      "chartStopPrice": 188000
+      "chartStopPrice": 181500
     },
     {
       "code": "035420",
       "name": "NAVER",
-      "price": 206500,
+      "price": 203000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/035420/total",
-      "targetPrice": 325783,
-      "rawTargets": [
-        325783
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/035420/total",
-      "chartStopPrice": 190000
+      "chartStopPrice": 187000
     },
     {
       "code": "005490",
       "name": "POSCO홀딩스",
-      "price": 334000,
+      "price": 321500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/005490/total",
-      "targetPrice": 507053,
-      "rawTargets": [
-        507053
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/005490/total",
-      "chartStopPrice": 307500
+      "chartStopPrice": 296000
     },
     {
       "code": "402340",
       "name": "SK스퀘어",
-      "price": 1089000,
+      "price": 1000000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/402340/total",
-      "targetPrice": 1938333,
-      "rawTargets": [
-        1938333
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/402340/total",
-      "chartStopPrice": 1002000
+      "chartStopPrice": 920000
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "price": 1812000,
+      "price": 1683000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/000660/total",
-      "targetPrice": 3305652,
-      "rawTargets": [
-        3305652
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/000660/total",
-      "chartStopPrice": 1667000
+      "chartStopPrice": 1548500
     },
     {
       "code": "000270",
       "name": "기아",
-      "price": 126600,
+      "price": 123500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/000270/total",
-      "targetPrice": 216800,
-      "rawTargets": [
-        216800
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/000270/total",
-      "chartStopPrice": 116500
+      "chartStopPrice": 113500
     },
     {
       "code": "241560",
       "name": "두산밥캣",
-      "price": 61600,
+      "price": 60700,
       "priceSource": "https://m.stock.naver.com/domestic/stock/241560/total",
-      "targetPrice": 91750,
-      "rawTargets": [
-        91750
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/241560/total",
-      "chartStopPrice": 56700
+      "chartStopPrice": 55800
     },
     {
       "code": "034020",
       "name": "두산에너빌리티",
-      "price": 90800,
+      "price": 85600,
       "priceSource": "https://m.stock.naver.com/domestic/stock/034020/total",
-      "targetPrice": 129000,
-      "rawTargets": [
-        129000
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/034020/total",
-      "chartStopPrice": 83500
+      "chartStopPrice": 78800
     },
     {
       "code": "006800",
       "name": "미래에셋증권",
-      "price": 33450,
+      "price": 32650,
       "priceSource": "https://m.stock.naver.com/domestic/stock/006800/total",
-      "targetPrice": 54563,
-      "rawTargets": [
-        54563
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/006800/total",
-      "chartStopPrice": 30800
+      "chartStopPrice": 30000
     },
     {
       "code": "006400",
       "name": "삼성SDI",
-      "price": 545000,
+      "price": 531000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/006400/total",
-      "targetPrice": 698000,
-      "rawTargets": [
-        698000
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/006400/total",
-      "chartStopPrice": 501500
+      "chartStopPrice": 488500
     },
     {
       "code": "207940",
       "name": "삼성바이오로직스",
-      "price": 1415000,
+      "price": 1402000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/207940/total",
-      "targetPrice": 1997143,
-      "rawTargets": [
-        1997143
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/207940/total",
-      "chartStopPrice": 1302000
+      "chartStopPrice": 1290000
     },
     {
       "code": "005930",
       "name": "삼성전자",
-      "price": 259500,
+      "price": 248500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/005930/total",
-      "targetPrice": 488409,
-      "rawTargets": [
-        488409
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/005930/total",
-      "chartStopPrice": 238500
+      "chartStopPrice": 228500
     },
     {
       "code": "010140",
       "name": "삼성중공업",
-      "price": 21400,
+      "price": 22100,
       "priceSource": "https://m.stock.naver.com/domestic/stock/010140/total",
-      "targetPrice": 38579,
-      "rawTargets": [
-        38579
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/010140/total",
-      "chartStopPrice": 19700
+      "chartStopPrice": 20300
     },
     {
       "code": "068270",
       "name": "셀트리온",
-      "price": 178200,
+      "price": 177000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/068270/total",
-      "targetPrice": 274621,
-      "rawTargets": [
-        274621
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/068270/total",
-      "chartStopPrice": 164000
+      "chartStopPrice": 163000
     },
     {
       "code": "055550",
       "name": "신한지주",
-      "price": 112900,
+      "price": 115000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/055550/total",
-      "targetPrice": 137556,
-      "rawTargets": [
-        137556
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/055550/total",
-      "chartStopPrice": 104000
+      "chartStopPrice": 106000
     },
     {
       "code": "112610",
       "name": "씨에스윈드",
-      "price": 52800,
+      "price": 51200,
       "priceSource": "https://m.stock.naver.com/domestic/stock/112610/total",
-      "targetPrice": 75900,
-      "rawTargets": [
-        75900
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/112610/total",
-      "chartStopPrice": 48600
+      "chartStopPrice": 47100
     },
     {
       "code": "316140",
       "name": "우리금융지주",
-      "price": 35100,
+      "price": 36800,
       "priceSource": "https://m.stock.naver.com/domestic/stock/316140/total",
-      "targetPrice": 43778,
-      "rawTargets": [
-        43778
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/316140/total",
-      "chartStopPrice": 32300
+      "chartStopPrice": 33900
     },
     {
       "code": "035720",
       "name": "카카오",
-      "price": 34500,
+      "price": 34550,
       "priceSource": "https://m.stock.naver.com/domestic/stock/035720/total",
-      "targetPrice": 55053,
-      "rawTargets": [
-        55053
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/035720/total",
-      "chartStopPrice": 31700
+      "chartStopPrice": 31800
     },
     {
       "code": "003690",
       "name": "코리안리",
-      "price": 14900,
+      "price": 15080,
       "priceSource": "https://m.stock.naver.com/domestic/stock/003690/total",
-      "targetPrice": 18000,
-      "rawTargets": [
-        18000
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/003690/total",
-      "chartStopPrice": 13700
+      "chartStopPrice": 13900
     },
     {
       "code": "259960",
       "name": "크래프톤",
-      "price": 212500,
+      "price": 211000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/259960/total",
-      "targetPrice": 361667,
-      "rawTargets": [
-        361667
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/259960/total",
-      "chartStopPrice": 195500
+      "chartStopPrice": 194000
     },
     {
       "code": "086790",
       "name": "하나금융지주",
-      "price": 137800,
+      "price": 140400,
       "priceSource": "https://m.stock.naver.com/domestic/stock/086790/total",
-      "targetPrice": 166053,
-      "rawTargets": [
-        166053
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/086790/total",
-      "chartStopPrice": 127000
+      "chartStopPrice": 129000
     },
     {
       "code": "352820",
       "name": "하이브",
-      "price": 173000,
+      "price": 173800,
       "priceSource": "https://m.stock.naver.com/domestic/stock/352820/total",
-      "targetPrice": 325250,
-      "rawTargets": [
-        325250
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/352820/total",
-      "chartStopPrice": 159000
+      "chartStopPrice": 160000
     },
     {
       "code": "047810",
       "name": "한국항공우주",
-      "price": 130500,
+      "price": 131700,
       "priceSource": "https://m.stock.naver.com/domestic/stock/047810/total",
-      "targetPrice": 189471,
-      "rawTargets": [
-        189471
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/047810/total",
-      "chartStopPrice": 120000
+      "chartStopPrice": 121000
     },
     {
       "code": "272210",
       "name": "한화시스템",
-      "price": 70900,
+      "price": 73300,
       "priceSource": "https://m.stock.naver.com/domestic/stock/272210/total",
-      "targetPrice": 108714,
-      "rawTargets": [
-        108714
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/272210/total",
-      "chartStopPrice": 65200
+      "chartStopPrice": 67400
     },
     {
       "code": "012450",
       "name": "한화에어로스페이스",
-      "price": 1081000,
+      "price": 1133000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/012450/total",
-      "targetPrice": 1658889,
-      "rawTargets": [
-        1658889
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/012450/total",
-      "chartStopPrice": 994500
+      "chartStopPrice": 1042500
     },
     {
       "code": "042660",
       "name": "한화오션",
-      "price": 85600,
+      "price": 85200,
       "priceSource": "https://m.stock.naver.com/domestic/stock/042660/total",
-      "targetPrice": 140050,
-      "rawTargets": [
-        140050
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/042660/total",
-      "chartStopPrice": 78800
+      "chartStopPrice": 78400
     },
     {
       "code": "064350",
       "name": "현대로템",
-      "price": 124100,
+      "price": 123000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/064350/total",
-      "targetPrice": 268688,
-      "rawTargets": [
-        268688
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/064350/total",
-      "chartStopPrice": 114000
+      "chartStopPrice": 113000
     },
     {
       "code": "012330",
       "name": "현대모비스",
-      "price": 415500,
+      "price": 397000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/012330/total",
-      "targetPrice": 735200,
-      "rawTargets": [
-        735200
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/012330/total",
-      "chartStopPrice": 382500
+      "chartStopPrice": 365000
     },
     {
       "code": "005380",
       "name": "현대차",
-      "price": 382500,
+      "price": 367500,
       "priceSource": "https://m.stock.naver.com/domestic/stock/005380/total",
-      "targetPrice": 701600,
-      "rawTargets": [
-        701600
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/005380/total",
-      "chartStopPrice": 352000
+      "chartStopPrice": 338000
     },
     {
       "code": "008770",
       "name": "호텔신라",
-      "price": 41100,
+      "price": 41150,
       "priceSource": "https://m.stock.naver.com/domestic/stock/008770/total",
-      "targetPrice": 69833,
-      "rawTargets": [
-        69833
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/008770/total",
-      "chartStopPrice": 37800
+      "chartStopPrice": 37900
     },
     {
       "code": "298040",
       "name": "효성중공업",
-      "price": 2854000,
+      "price": 2791000,
       "priceSource": "https://m.stock.naver.com/domestic/stock/298040/total",
-      "targetPrice": 4254286,
-      "rawTargets": [
-        4254286
-      ],
+      "targetPrice": 0,
+      "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/298040/total",
-      "chartStopPrice": 2625500
+      "chartStopPrice": 2567500
     }
   ]
 }
