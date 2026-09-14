@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-11T17:44:56",
+  "generatedAt": "2026-09-14T19:21:24",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-09-11T17:44:56",
+    "generatedAt": "2026-09-14T19:21:24",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -239,8 +239,8 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 109,
-    "reliableTargetCandidateCount": 6,
+    "rawTargetRows": 116,
+    "reliableTargetCandidateCount": 7,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
   },
@@ -249,9 +249,21 @@
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
-      "rawPrices": [],
+      "rawPrices": [
+        5652,
+        8409
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 5652,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 8409,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -262,9 +274,21 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [],
+      "rawPrices": [
+        5652,
+        8409
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 5652,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 8409,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -465,7 +489,6 @@
       "name": "삼성물산",
       "currentPrice": 0,
       "rawPrices": [
-        1250,
         7300,
         81000
       ],
@@ -473,10 +496,6 @@
         81000
       ],
       "rejected": [
-        {
-          "price": 1250,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 7300,
           "reason": "1만원 미만 잡음 제거"
@@ -496,11 +515,13 @@
         2026,
         3000,
         4889,
-        7000,
-        240000
+        5000,
+        180800,
+        225444
       ],
       "acceptedPrices": [
-        240000
+        180800,
+        225444
       ],
       "rejected": [
         {
@@ -516,15 +537,15 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 7000,
+          "price": 5000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 240000,
-      "realisticTargetPrice": 192000,
-      "observeTimingPrice": 168000,
-      "stopTimingPrice": 144000,
-      "targetCount": 1
+      "median": 203122,
+      "realisticTargetPrice": 162500,
+      "observeTimingPrice": 142000,
+      "stopTimingPrice": 122000,
+      "targetCount": 2
     },
     {
       "code": "055550",
@@ -606,7 +627,8 @@
       "rawPrices": [
         1201,
         3000,
-        4429
+        4429,
+        43778
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -621,6 +643,10 @@
         {
           "price": 4429,
           "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 43778,
+          "reason": "현재가 대비 과도하게 높음"
         }
       ],
       "median": 0,
@@ -635,8 +661,7 @@
       "currentPrice": 250000,
       "rawPrices": [
         1400,
-        1429,
-        2026
+        1429
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -647,10 +672,6 @@
         {
           "price": 1429,
           "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 2026,
-          "reason": "연도 숫자 제거"
         }
       ],
       "median": 0,
@@ -700,19 +721,24 @@
       "currentPrice": 220000,
       "rawPrices": [
         2026,
+        2630,
         4500,
         7500,
         110000,
-        320000
+        325783
       ],
       "acceptedPrices": [
         110000,
-        320000
+        325783
       ],
       "rejected": [
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2630,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 4500,
@@ -723,10 +749,10 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 215000,
-      "realisticTargetPrice": 172000,
-      "observeTimingPrice": 150500,
-      "stopTimingPrice": 129000,
+      "median": 217891,
+      "realisticTargetPrice": 174500,
+      "observeTimingPrice": 152500,
+      "stopTimingPrice": 130500,
       "targetCount": 2
     },
     {
@@ -757,18 +783,13 @@
       "name": "KT&G",
       "currentPrice": 110000,
       "rawPrices": [
-        2027,
-        2700
+        2027
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 2027,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 2700,
-          "reason": "1만원 미만 잡음 제거"
         }
       ],
       "median": 0,
@@ -868,9 +889,16 @@
       "code": "108490",
       "name": "로보티즈",
       "currentPrice": 45000,
-      "rawPrices": [],
+      "rawPrices": [
+        5000
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 5000,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
