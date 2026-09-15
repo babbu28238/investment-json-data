@@ -1,6 +1,6 @@
 {
   "version": "V289_APP_DATA_BUNDLE",
-  "updatedAt": "2026-09-15 15:05:56",
+  "updatedAt": "2026-09-15 15:58:30",
   "status": "ok",
   "candidateCount": 24,
   "liveQuoteCount": 24,
@@ -9,6 +9,14 @@
   "topCandidates": [
     {
       "rank": 1,
+      "name": "KB금융",
+      "code": "105560",
+      "score": 62,
+      "grade": "C",
+      "reason": "관찰 / 최종 62점(C) / 기술 65·수급 50·뉴스 99·리포트 50·유동성 45"
+    },
+    {
+      "rank": 2,
       "name": "두산에너빌리티",
       "code": "034020",
       "score": 61,
@@ -16,7 +24,7 @@
       "reason": "관찰 / 최종 61점(C) / 기술 61·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "LG에너지솔루션",
       "code": "373220",
       "score": 59,
@@ -24,20 +32,12 @@
       "reason": "제외검토 / 최종 59점(D) / 기술 57·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "이오테크닉스",
       "code": "039030",
       "score": 58,
       "grade": "D",
       "reason": "제외검토 / 최종 58점(D) / 기술 61·수급 50·뉴스 83·리포트 50·유동성 45"
-    },
-    {
-      "rank": 4,
-      "name": "KB금융",
-      "code": "105560",
-      "score": 55,
-      "grade": "D",
-      "reason": "제외검토 / 최종 55점(D) / 기술 65·수급 50·뉴스 49·리포트 50·유동성 45"
     },
     {
       "rank": 5,
@@ -65,14 +65,6 @@
     },
     {
       "rank": 8,
-      "name": "삼성바이오로직스",
-      "code": "207940",
-      "score": 53,
-      "grade": "D",
-      "reason": "제외검토 / 최종 53점(D) / 기술 43·수급 50·뉴스 88·리포트 50·유동성 45"
-    },
-    {
-      "rank": 9,
       "name": "한화시스템",
       "code": "272210",
       "score": 53,
@@ -80,12 +72,20 @@
       "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 10,
-      "name": "에코프로",
-      "code": "086520",
+      "rank": 9,
+      "name": "SK하이닉스",
+      "code": "000660",
       "score": 52,
       "grade": "D",
-      "reason": "제외검토 / 최종 52점(D) / 기술 35·수급 50·뉴스 100·리포트 50·유동성 45"
+      "reason": "제외검토 / 최종 52점(D) / 기술 46·수급 50·뉴스 79·리포트 50·유동성 45"
+    },
+    {
+      "rank": 10,
+      "name": "삼성전자",
+      "code": "005930",
+      "score": 52,
+      "grade": "D",
+      "reason": "제외검토 / 최종 52점(D) / 기술 40·수급 50·뉴스 90·리포트 50·유동성 45"
     }
   ],
   "sources": {
@@ -144,14 +144,14 @@
     "candidates": [
       {
         "rank": 1,
-        "name": "두산에너빌리티",
-        "code": "034020",
-        "score": 61,
+        "name": "KB금융",
+        "code": "105560",
+        "score": 62,
         "grade": "C",
-        "reason": "관찰 / 최종 61점(C) / 기술 61·수급 50·뉴스 100·리포트 50·유동성 45",
+        "reason": "관찰 / 최종 62점(C) / 기술 65·수급 50·뉴스 99·리포트 50·유동성 45",
         "market": "KOSPI",
-        "sector": "원전·전력·에너지",
-        "changeRate": "0.58%",
+        "sector": "금융·밸류업",
+        "changeRate": "-2.98%",
         "entryPrice": "20일선 지지 확인",
         "stopLoss": "20일선 이탈",
         "targetPrice": "분할 익절",
@@ -174,7 +174,106 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 2 / 중립 0 / 점수 100 / 대표뉴스: [리포트 브리핑]두산에너빌리티, '대미 원전투자의 Safe pick' 목표가 120,000원 - 미래에셋증권 - 뉴스핌",
+        "newsSignal": "뉴스 긍정: 긍정 4 / 부정 0 / 중립 4 / 점수 99 / 대표뉴스: KB증권, '2026 KB금융 코리아 컨퍼런스' 개최 - 뉴스핌",
+        "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+        "dataStatus": {
+          "baseScore": 88,
+          "supplyBoost": 0,
+          "supplySummary": "수급 중립",
+          "hasSupplyData": true,
+          "hasReportHint": true,
+          "finalRecommendationScore": 62,
+          "recommendationAction": "관찰",
+          "technicalScore": 65,
+          "supplyScore": 50,
+          "newsScore": 99,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
+        },
+        "recommendationAction": "관찰",
+        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
+        "recommendationBreakdown": {
+          "technicalScore": 65,
+          "supplyScore": 50,
+          "newsScore": 99,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        },
+        "livePrice": "-",
+        "liveChangeRate": "-",
+        "liveVolume": "-",
+        "liveUpdatedAt": "2026-09-15 15:57:51",
+        "liveSource": "naver_finance",
+        "liveStatus": "partial",
+        "currentPriceLive": "-",
+        "realTimePrice": "-",
+        "realTimeChangeRate": "-",
+        "realTimeVolume": "-",
+        "hasLiveQuote": false,
+        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
+        "supplyReflectionStatus": "reflected",
+        "recommendationMeta": {
+          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
+          "rank": 1,
+          "score": 62,
+          "grade": "C",
+          "action": "관찰",
+          "basis": [
+            "technical_score",
+            "news_signal",
+            "report_signal",
+            "supply_flow",
+            "live_quote"
+          ],
+          "updatedAt": "2026-09-15 15:58:30 KST"
+        },
+        "recommendationGrade": "C",
+        "recommendationScore": 62,
+        "recommendationReason": "뉴스 긍정: 긍정 4 / 부정 0 / 중립 4 / 점수 99 / 대표뉴스: KB증권, '2026 KB금융 코리아 컨퍼런스' 개최 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "hasRecommendationMeta": true
+      },
+      {
+        "rank": 2,
+        "name": "두산에너빌리티",
+        "code": "034020",
+        "score": 61,
+        "grade": "C",
+        "reason": "관찰 / 최종 61점(C) / 기술 61·수급 50·뉴스 100·리포트 50·유동성 45",
+        "market": "KOSPI",
+        "sector": "원전·전력·에너지",
+        "changeRate": "0.70%",
+        "entryPrice": "20일선 지지 확인",
+        "stopLoss": "20일선 이탈",
+        "targetPrice": "분할 익절",
+        "strategy": "관찰: 수급·뉴스·리포트 확인 후 분할 접근",
+        "weeklyCloud": "주봉 추세 확인",
+        "dailySignal": "일봉 구름대 돌파",
+        "rsi": "RSI 안정권",
+        "macd": "MACD 상승 우위",
+        "volumeSignal": "거래량 확인",
+        "foreign5D": "0",
+        "foreign20D": "0",
+        "foreign60D": "0",
+        "pension5D": "0",
+        "pension20D": "0",
+        "pension60D": "0",
+        "trust5D": "0",
+        "trust20D": "0",
+        "trust60D": "0",
+        "finance5D": "0",
+        "finance20D": "0",
+        "finance60D": "0",
+        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+        "newsSignal": "뉴스 긍정: 긍정 7 / 부정 1 / 중립 0 / 점수 100 / 대표뉴스: [리포트 브리핑]두산에너빌리티, '대미 원전투자의 Safe pick' 목표가 120,000원 - 미래에셋증권 - 뉴스핌",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 81,
@@ -189,7 +288,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "관찰",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -211,7 +310,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:20",
+        "liveUpdatedAt": "2026-09-15 15:57:54",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -223,7 +322,7 @@
         "supplyReflectionStatus": "reflected",
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 1,
+          "rank": 2,
           "score": 61,
           "grade": "C",
           "action": "관찰",
@@ -234,15 +333,15 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "C",
         "recommendationScore": 61,
-        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 2 / 중립 0 / 점수 100 / 대표뉴스: [리포트 브리핑]두산에너빌리티, '대미 원전투자의 Safe pick' 목표가 120,000원 - 미래에셋증권 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 7 / 부정 1 / 중립 0 / 점수 100 / 대표뉴스: [리포트 브리핑]두산에너빌리티, '대미 원전투자의 Safe pick' 목표가 120,000원 - 미래에셋증권 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "LG에너지솔루션",
         "code": "373220",
         "score": 59,
@@ -250,7 +349,7 @@
         "reason": "제외검토 / 최종 59점(D) / 기술 57·수급 50·뉴스 100·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "2차전지·소재",
-        "changeRate": "5.13%",
+        "changeRate": "4.13%",
         "entryPrice": "20일선 지지 확인",
         "stopLoss": "20일선 이탈",
         "targetPrice": "분할 익절",
@@ -273,7 +372,7 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 7 / 부정 1 / 중립 0 / 점수 100 / 대표뉴스: [리포트 브리핑]LG에너지솔루션, '오해가 낳은 기회' 목표가 480,000원 - NH투자증권 - 뉴스핌",
+        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 100 / 대표뉴스: [리포트 브리핑]LG에너지솔루션, '드디어 서프라이즈' 목표가 510,000원 - 미래에셋증권 - 뉴스핌",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 83,
@@ -288,7 +387,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -310,7 +409,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:18",
+        "liveUpdatedAt": "2026-09-15 15:57:53",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -322,7 +421,7 @@
         "supplyReflectionStatus": "reflected",
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 2,
+          "rank": 3,
           "score": 59,
           "grade": "D",
           "action": "보류",
@@ -333,15 +432,15 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 59,
-        "recommendationReason": "뉴스 긍정: 긍정 7 / 부정 1 / 중립 0 / 점수 100 / 대표뉴스: [리포트 브리핑]LG에너지솔루션, '오해가 낳은 기회' 목표가 480,000원 - NH투자증권 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 100 / 대표뉴스: [리포트 브리핑]LG에너지솔루션, '드디어 서프라이즈' 목표가 510,000원 - 미래에셋증권 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "이오테크닉스",
         "code": "039030",
         "score": 58,
@@ -349,7 +448,7 @@
         "reason": "제외검토 / 최종 58점(D) / 기술 61·수급 50·뉴스 83·리포트 50·유동성 45",
         "market": "KOSDAQ",
         "sector": "반도체·AI",
-        "changeRate": "4.58%",
+        "changeRate": "4.94%",
         "entryPrice": "20일선 지지 확인",
         "stopLoss": "20일선 이탈",
         "targetPrice": "분할 익절",
@@ -387,7 +486,7 @@
           "newsScore": 83,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -409,106 +508,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:21",
-        "liveSource": "naver_finance",
-        "liveStatus": "partial",
-        "currentPriceLive": "-",
-        "realTimePrice": "-",
-        "realTimeChangeRate": "-",
-        "realTimeVolume": "-",
-        "hasLiveQuote": false,
-        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
-        "supplyReflectionStatus": "reflected",
-        "recommendationMeta": {
-          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 3,
-          "score": 58,
-          "grade": "D",
-          "action": "보류",
-          "basis": [
-            "technical_score",
-            "news_signal",
-            "report_signal",
-            "supply_flow",
-            "live_quote"
-          ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
-        },
-        "recommendationGrade": "D",
-        "recommendationScore": 58,
-        "recommendationReason": "뉴스 긍정: 긍정 4 / 부정 1 / 중립 3 / 점수 83 / 대표뉴스: [서치 e종목] 이오테크닉스, PCB 장비군 매출 성장으로 실적 모멘텀 강화될까 - 데일리인베스트 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
-        "hasRecommendationMeta": true
-      },
-      {
-        "rank": 4,
-        "name": "KB금융",
-        "code": "105560",
-        "score": 55,
-        "grade": "D",
-        "reason": "제외검토 / 최종 55점(D) / 기술 65·수급 50·뉴스 49·리포트 50·유동성 45",
-        "market": "KOSPI",
-        "sector": "금융·밸류업",
-        "changeRate": "-2.87%",
-        "entryPrice": "20일선 지지 확인",
-        "stopLoss": "20일선 이탈",
-        "targetPrice": "분할 익절",
-        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
-        "weeklyCloud": "주봉 추세 확인",
-        "dailySignal": "일봉 구름대 돌파",
-        "rsi": "RSI 안정권",
-        "macd": "MACD 상승 우위",
-        "volumeSignal": "거래량 확인",
-        "foreign5D": "0",
-        "foreign20D": "0",
-        "foreign60D": "0",
-        "pension5D": "0",
-        "pension20D": "0",
-        "pension60D": "0",
-        "trust5D": "0",
-        "trust20D": "0",
-        "trust60D": "0",
-        "finance5D": "0",
-        "finance20D": "0",
-        "finance60D": "0",
-        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 중립: 긍정 1 / 부정 2 / 중립 5 / 점수 49 / 대표뉴스: KB증권, '2026 KB금융 코리아 컨퍼런스' 개최 - 뉴스핌",
-        "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-        "dataStatus": {
-          "baseScore": 88,
-          "supplyBoost": 0,
-          "supplySummary": "수급 중립",
-          "hasSupplyData": true,
-          "hasReportHint": true,
-          "finalRecommendationScore": 55,
-          "recommendationAction": "제외검토",
-          "technicalScore": 65,
-          "supplyScore": 50,
-          "newsScore": 49,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
-        },
-        "recommendationAction": "보류",
-        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
-        "recommendationBreakdown": {
-          "technicalScore": 65,
-          "supplyScore": 50,
-          "newsScore": 49,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        },
-        "livePrice": "-",
-        "liveChangeRate": "-",
-        "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:16",
+        "liveUpdatedAt": "2026-09-15 15:57:56",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -521,7 +521,7 @@
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
           "rank": 4,
-          "score": 55,
+          "score": 58,
           "grade": "D",
           "action": "보류",
           "basis": [
@@ -531,11 +531,11 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
-        "recommendationScore": 55,
-        "recommendationReason": "뉴스 중립: 긍정 1 / 부정 2 / 중립 5 / 점수 49 / 대표뉴스: KB증권, '2026 KB금융 코리아 컨퍼런스' 개최 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationScore": 58,
+        "recommendationReason": "뉴스 긍정: 긍정 4 / 부정 1 / 중립 3 / 점수 83 / 대표뉴스: [서치 e종목] 이오테크닉스, PCB 장비군 매출 성장으로 실적 모멘텀 강화될까 - 데일리인베스트 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
@@ -547,7 +547,7 @@
         "reason": "제외검토 / 최종 54점(D) / 기술 42·수급 50·뉴스 100·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "방산·우주항공",
-        "changeRate": "-5.83%",
+        "changeRate": "-6.18%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -570,7 +570,7 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 2 / 중립 0 / 점수 100 / 대표뉴스: 방산주 하루 만에 꺾인 오름세…한화에어로 5% 하락[핫종목] - 뉴스1",
+        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 2 / 중립 0 / 점수 100 / 대표뉴스: 쎄크, 한화에어로서 방산 검사장비 74억원 추가 수주 - 디일렉",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 66,
@@ -585,7 +585,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -607,7 +607,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:25",
+        "liveUpdatedAt": "2026-09-15 15:57:59",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -630,11 +630,11 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 54,
-        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 2 / 중립 0 / 점수 100 / 대표뉴스: 방산주 하루 만에 꺾인 오름세…한화에어로 5% 하락[핫종목] - 뉴스1 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 2 / 중립 0 / 점수 100 / 대표뉴스: 쎄크, 한화에어로서 방산 검사장비 74억원 추가 수주 - 디일렉 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
@@ -646,7 +646,7 @@
         "reason": "제외검토 / 최종 54점(D) / 기술 42·수급 50·뉴스 100·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "방산·우주항공",
-        "changeRate": "-1.67%",
+        "changeRate": "-2.05%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -669,7 +669,7 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: [리포트 브리핑]한국항공우주, '양산 본격화, 수출이 여는 다음 성장' 목표가 190,000원 - 리딩투자증권 - 뉴스핌",
+        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: [리포트 브리핑]한국항공우주, '양산 본격화, 수출이 여는 다음 성장' 목표가 190,000원 - 리딩투자증권 - 뉴스핌",
         "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 58,
@@ -684,7 +684,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -706,7 +706,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:30",
+        "liveUpdatedAt": "2026-09-15 15:58:04",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -729,11 +729,11 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 54,
-        "recommendationReason": "뉴스 긍정: 긍정 7 / 부정 0 / 중립 1 / 점수 100 / 대표뉴스: [리포트 브리핑]한국항공우주, '양산 본격화, 수출이 여는 다음 성장' 목표가 190,000원 - 리딩투자증권 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 0 / 중립 2 / 점수 100 / 대표뉴스: [리포트 브리핑]한국항공우주, '양산 본격화, 수출이 여는 다음 성장' 목표가 190,000원 - 리딩투자증권 - 뉴스핌 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
@@ -745,7 +745,7 @@
         "reason": "제외검토 / 최종 53점(D) / 기술 54·수급 50·뉴스 67·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "2차전지·소재",
-        "changeRate": "3.42%",
+        "changeRate": "3.27%",
         "entryPrice": "20일선 지지 확인",
         "stopLoss": "20일선 이탈",
         "targetPrice": "분할 익절",
@@ -783,7 +783,7 @@
           "newsScore": 67,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -805,7 +805,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:23",
+        "liveUpdatedAt": "2026-09-15 15:57:57",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -828,7 +828,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 53,
@@ -837,14 +837,14 @@
       },
       {
         "rank": 8,
-        "name": "삼성바이오로직스",
-        "code": "207940",
+        "name": "한화시스템",
+        "code": "272210",
         "score": 53,
         "grade": "D",
-        "reason": "제외검토 / 최종 53점(D) / 기술 43·수급 50·뉴스 88·리포트 50·유동성 45",
+        "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45",
         "market": "KOSPI",
-        "sector": "바이오·제약",
-        "changeRate": "1.00%",
+        "sector": "방산·우주항공",
+        "changeRate": "-4.91%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -853,7 +853,7 @@
         "dailySignal": "일봉 이평선 확인",
         "rsi": "RSI 회복 확인",
         "macd": "MACD 확인 필요",
-        "volumeSignal": "거래량 확인",
+        "volumeSignal": "거래량 증가",
         "foreign5D": "0",
         "foreign20D": "0",
         "foreign60D": "0",
@@ -867,29 +867,29 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 3 / 부정 2 / 중립 3 / 점수 88 / 대표뉴스: 3조 유증인데 정정 없이 '속전속결'…삼바, 금감원 문턱 넘었다 - 데일리팜",
+        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 100 / 대표뉴스: 한화시스템, '플랫폼을 가리지 않는 성장' 증권사 발표에 강세 - 매일경제 마켓",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
-          "baseScore": 59,
+          "baseScore": 53,
           "supplyBoost": 0,
           "supplySummary": "수급 중립",
           "hasSupplyData": true,
           "hasReportHint": true,
           "finalRecommendationScore": 53,
           "recommendationAction": "제외검토",
-          "technicalScore": 43,
+          "technicalScore": 39,
           "supplyScore": 50,
-          "newsScore": 88,
+          "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
         "recommendationBreakdown": {
-          "technicalScore": 43,
+          "technicalScore": 39,
           "supplyScore": 50,
-          "newsScore": 88,
+          "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -904,7 +904,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:28",
+        "liveUpdatedAt": "2026-09-15 15:58:11",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -927,23 +927,122 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 53,
-        "recommendationReason": "뉴스 긍정: 긍정 3 / 부정 2 / 중립 3 / 점수 88 / 대표뉴스: 3조 유증인데 정정 없이 '속전속결'…삼바, 금감원 문턱 넘었다 - 데일리팜 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 100 / 대표뉴스: 한화시스템, '플랫폼을 가리지 않는 성장' 증권사 발표에 강세 - 매일경제 마켓 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
         "rank": 9,
-        "name": "한화시스템",
-        "code": "272210",
-        "score": 53,
+        "name": "SK하이닉스",
+        "code": "000660",
+        "score": 52,
         "grade": "D",
-        "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45",
+        "reason": "제외검토 / 최종 52점(D) / 기술 46·수급 50·뉴스 79·리포트 50·유동성 45",
         "market": "KOSPI",
-        "sector": "방산·우주항공",
-        "changeRate": "-4.77%",
+        "sector": "반도체·AI",
+        "changeRate": "0.42%",
+        "entryPrice": "20일선 회복 확인",
+        "stopLoss": "전저점 이탈",
+        "targetPrice": "분할 익절",
+        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
+        "weeklyCloud": "주봉 추세 확인",
+        "dailySignal": "일봉 이평선 확인",
+        "rsi": "RSI 안정권",
+        "macd": "MACD 상승 우위",
+        "volumeSignal": "거래량 확인",
+        "foreign5D": "0",
+        "foreign20D": "0",
+        "foreign60D": "0",
+        "pension5D": "0",
+        "pension20D": "0",
+        "pension60D": "0",
+        "trust5D": "0",
+        "trust20D": "0",
+        "trust60D": "0",
+        "finance5D": "0",
+        "finance20D": "0",
+        "finance60D": "0",
+        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+        "newsSignal": "뉴스 긍정: 긍정 5 / 부정 3 / 중립 0 / 점수 79 / 대표뉴스: “이건 정말 드문 일” SK하이닉스 주식, 왜 이래?…개인도 외국인도 기관도 모두 ‘순매도’ [투자360] - v.daum.net",
+        "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+        "dataStatus": {
+          "baseScore": 64,
+          "supplyBoost": 0,
+          "supplySummary": "수급 중립",
+          "hasSupplyData": true,
+          "hasReportHint": true,
+          "finalRecommendationScore": 52,
+          "recommendationAction": "제외검토",
+          "technicalScore": 46,
+          "supplyScore": 50,
+          "newsScore": 79,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
+        },
+        "recommendationAction": "보류",
+        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
+        "recommendationBreakdown": {
+          "technicalScore": 46,
+          "supplyScore": 50,
+          "newsScore": 79,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        },
+        "livePrice": "-",
+        "liveChangeRate": "-",
+        "liveVolume": "-",
+        "liveUpdatedAt": "2026-09-15 15:58:01",
+        "liveSource": "naver_finance",
+        "liveStatus": "partial",
+        "currentPriceLive": "-",
+        "realTimePrice": "-",
+        "realTimeChangeRate": "-",
+        "realTimeVolume": "-",
+        "hasLiveQuote": false,
+        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
+        "supplyReflectionStatus": "reflected",
+        "recommendationMeta": {
+          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
+          "rank": 9,
+          "score": 52,
+          "grade": "D",
+          "action": "보류",
+          "basis": [
+            "technical_score",
+            "news_signal",
+            "report_signal",
+            "supply_flow",
+            "live_quote"
+          ],
+          "updatedAt": "2026-09-15 15:58:30 KST"
+        },
+        "recommendationGrade": "D",
+        "recommendationScore": 52,
+        "recommendationReason": "뉴스 긍정: 긍정 5 / 부정 3 / 중립 0 / 점수 79 / 대표뉴스: “이건 정말 드문 일” SK하이닉스 주식, 왜 이래?…개인도 외국인도 기관도 모두 ‘순매도’ [투자360] - v.daum.net / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "hasRecommendationMeta": true
+      },
+      {
+        "rank": 10,
+        "name": "삼성전자",
+        "code": "005930",
+        "score": 52,
+        "grade": "D",
+        "reason": "제외검토 / 최종 52점(D) / 기술 40·수급 50·뉴스 90·리포트 50·유동성 45",
+        "market": "KOSPI",
+        "sector": "반도체·AI",
+        "changeRate": "0.00%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -966,107 +1065,8 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 100 / 대표뉴스: 한화시스템 주가, 9월 15일 장중 70,400원 6.13% 하락 - 톱스타뉴스",
+        "newsSignal": "뉴스 긍정: 긍정 4 / 부정 1 / 중립 3 / 점수 90 / 대표뉴스: ‘하닉 하락 적중했던 그 보고서’…이번엔 삼성전자 목표가 낮췄다 - 문화일보",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-        "dataStatus": {
-          "baseScore": 53,
-          "supplyBoost": 0,
-          "supplySummary": "수급 중립",
-          "hasSupplyData": true,
-          "hasReportHint": true,
-          "finalRecommendationScore": 53,
-          "recommendationAction": "제외검토",
-          "technicalScore": 39,
-          "supplyScore": 50,
-          "newsScore": 100,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
-        },
-        "recommendationAction": "보류",
-        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
-        "recommendationBreakdown": {
-          "technicalScore": 39,
-          "supplyScore": 50,
-          "newsScore": 100,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        },
-        "livePrice": "-",
-        "liveChangeRate": "-",
-        "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:39",
-        "liveSource": "naver_finance",
-        "liveStatus": "partial",
-        "currentPriceLive": "-",
-        "realTimePrice": "-",
-        "realTimeChangeRate": "-",
-        "realTimeVolume": "-",
-        "hasLiveQuote": false,
-        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
-        "supplyReflectionStatus": "reflected",
-        "recommendationMeta": {
-          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 9,
-          "score": 53,
-          "grade": "D",
-          "action": "보류",
-          "basis": [
-            "technical_score",
-            "news_signal",
-            "report_signal",
-            "supply_flow",
-            "live_quote"
-          ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
-        },
-        "recommendationGrade": "D",
-        "recommendationScore": 53,
-        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 100 / 대표뉴스: 한화시스템 주가, 9월 15일 장중 70,400원 6.13% 하락 - 톱스타뉴스 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
-        "hasRecommendationMeta": true
-      },
-      {
-        "rank": 10,
-        "name": "에코프로",
-        "code": "086520",
-        "score": 52,
-        "grade": "D",
-        "reason": "제외검토 / 최종 52점(D) / 기술 35·수급 50·뉴스 100·리포트 50·유동성 45",
-        "market": "KOSDAQ",
-        "sector": "2차전지·소재",
-        "changeRate": "5.48%",
-        "entryPrice": "20일선 회복 확인",
-        "stopLoss": "전저점 이탈",
-        "targetPrice": "분할 익절",
-        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
-        "weeklyCloud": "주봉 추세 확인",
-        "dailySignal": "일봉 이평선 확인",
-        "rsi": "RSI 안정권",
-        "macd": "MACD 확인 필요",
-        "volumeSignal": "거래량 확인",
-        "foreign5D": "0",
-        "foreign20D": "0",
-        "foreign60D": "0",
-        "pension5D": "0",
-        "pension20D": "0",
-        "pension60D": "0",
-        "trust5D": "0",
-        "trust20D": "0",
-        "trust60D": "0",
-        "finance5D": "0",
-        "finance20D": "0",
-        "finance60D": "0",
-        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 에코프로에이치엔, 올해 수주 1914억원…반도체 투자 확대 수혜 - kyongbuk.co.kr",
-        "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 54,
           "supplyBoost": 0,
@@ -1075,19 +1075,19 @@
           "hasReportHint": true,
           "finalRecommendationScore": 52,
           "recommendationAction": "제외검토",
-          "technicalScore": 35,
+          "technicalScore": 40,
           "supplyScore": 50,
-          "newsScore": 100,
+          "newsScore": 90,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
         "recommendationBreakdown": {
-          "technicalScore": 35,
+          "technicalScore": 40,
           "supplyScore": 50,
-          "newsScore": 100,
+          "newsScore": 90,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -1102,7 +1102,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:34",
+        "liveUpdatedAt": "2026-09-15 15:58:06",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1125,11 +1125,11 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 52,
-        "recommendationReason": "뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 에코프로에이치엔, 올해 수주 1914억원…반도체 투자 확대 수혜 - kyongbuk.co.kr / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 4 / 부정 1 / 중립 3 / 점수 90 / 대표뉴스: ‘하닉 하락 적중했던 그 보고서’…이번엔 삼성전자 목표가 낮췄다 - 문화일보 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
@@ -1179,7 +1179,7 @@
           "newsScore": 90,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -1201,7 +1201,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:37",
+        "liveUpdatedAt": "2026-09-15 15:58:09",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1224,7 +1224,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 52,
@@ -1240,7 +1240,7 @@
         "reason": "제외검토 / 최종 52점(D) / 기술 36·수급 50·뉴스 99·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "자동차·모빌리티",
-        "changeRate": "-1.05%",
+        "changeRate": "-1.38%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -1278,7 +1278,7 @@
           "newsScore": 99,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -1300,7 +1300,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:51",
+        "liveUpdatedAt": "2026-09-15 15:58:25",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1323,7 +1323,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 52,
@@ -1339,7 +1339,7 @@
         "reason": "제외검토 / 최종 52점(D) / 기술 36·수급 50·뉴스 100·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "조선·해양",
-        "changeRate": "-2.70%",
+        "changeRate": "-3.29%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -1377,7 +1377,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -1399,7 +1399,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:53",
+        "liveUpdatedAt": "2026-09-15 15:58:27",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1422,7 +1422,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 52,
@@ -1476,7 +1476,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -1498,7 +1498,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:55",
+        "liveUpdatedAt": "2026-09-15 15:58:29",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1521,7 +1521,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 52,
@@ -1530,21 +1530,21 @@
       },
       {
         "rank": 15,
-        "name": "SK하이닉스",
-        "code": "000660",
+        "name": "LIG넥스원",
+        "code": "079550",
         "score": 51,
         "grade": "D",
-        "reason": "제외검토 / 최종 51점(D) / 기술 46·수급 50·뉴스 72·리포트 50·유동성 45",
+        "reason": "제외검토 / 최종 51점(D) / 기술 44·수급 50·뉴스 72·리포트 50·유동성 45",
         "market": "KOSPI",
-        "sector": "반도체·AI",
-        "changeRate": "0.00%",
+        "sector": "방산·우주항공",
+        "changeRate": "-4.01%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
         "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
         "weeklyCloud": "주봉 추세 확인",
         "dailySignal": "일봉 이평선 확인",
-        "rsi": "RSI 안정권",
+        "rsi": "RSI 회복 확인",
         "macd": "MACD 상승 우위",
         "volumeSignal": "거래량 확인",
         "foreign5D": "0",
@@ -1560,27 +1560,27 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 5 / 부정 3 / 중립 0 / 점수 72 / 대표뉴스: “이건 정말 드문 일” SK하이닉스 주식, 왜 이래?…개인도 외국인도 기관도 모두 ‘순매도’ [투자360] - v.daum.net",
+        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 72 / 대표뉴스: “베트남선 19년간 전쟁” 트럼프 외침에도…LIG넥스원 목표가 하향 왜 [오늘 나온 보고서] - 매일경제 마켓",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
-          "baseScore": 64,
+          "baseScore": 53,
           "supplyBoost": 0,
           "supplySummary": "수급 중립",
           "hasSupplyData": true,
           "hasReportHint": true,
           "finalRecommendationScore": 51,
           "recommendationAction": "제외검토",
-          "technicalScore": 46,
+          "technicalScore": 44,
           "supplyScore": 50,
           "newsScore": 72,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
         "recommendationBreakdown": {
-          "technicalScore": 46,
+          "technicalScore": 44,
           "supplyScore": 50,
           "newsScore": 72,
           "reportScore": 50,
@@ -1597,7 +1597,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:27",
+        "liveUpdatedAt": "2026-09-15 15:58:12",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1620,213 +1620,15 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 51,
-        "recommendationReason": "뉴스 긍정: 긍정 5 / 부정 3 / 중립 0 / 점수 72 / 대표뉴스: “이건 정말 드문 일” SK하이닉스 주식, 왜 이래?…개인도 외국인도 기관도 모두 ‘순매도’ [투자360] - v.daum.net / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 72 / 대표뉴스: “베트남선 19년간 전쟁” 트럼프 외침에도…LIG넥스원 목표가 하향 왜 [오늘 나온 보고서] - 매일경제 마켓 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
         "rank": 16,
-        "name": "삼성전자",
-        "code": "005930",
-        "score": 51,
-        "grade": "D",
-        "reason": "제외검토 / 최종 51점(D) / 기술 40·수급 50·뉴스 81·리포트 50·유동성 45",
-        "market": "KOSPI",
-        "sector": "반도체·AI",
-        "changeRate": "-0.40%",
-        "entryPrice": "20일선 회복 확인",
-        "stopLoss": "전저점 이탈",
-        "targetPrice": "분할 익절",
-        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
-        "weeklyCloud": "주봉 추세 확인",
-        "dailySignal": "일봉 이평선 확인",
-        "rsi": "RSI 회복 확인",
-        "macd": "MACD 확인 필요",
-        "volumeSignal": "거래량 확인",
-        "foreign5D": "0",
-        "foreign20D": "0",
-        "foreign60D": "0",
-        "pension5D": "0",
-        "pension20D": "0",
-        "pension60D": "0",
-        "trust5D": "0",
-        "trust20D": "0",
-        "trust60D": "0",
-        "finance5D": "0",
-        "finance20D": "0",
-        "finance60D": "0",
-        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 4 / 부정 2 / 중립 2 / 점수 81 / 대표뉴스: ‘하닉 하락 적중했던 그 보고서’…이번엔 삼성전자 목표가 낮췄다 - 문화일보",
-        "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-        "dataStatus": {
-          "baseScore": 54,
-          "supplyBoost": 0,
-          "supplySummary": "수급 중립",
-          "hasSupplyData": true,
-          "hasReportHint": true,
-          "finalRecommendationScore": 51,
-          "recommendationAction": "제외검토",
-          "technicalScore": 40,
-          "supplyScore": 50,
-          "newsScore": 81,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
-        },
-        "recommendationAction": "보류",
-        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
-        "recommendationBreakdown": {
-          "technicalScore": 40,
-          "supplyScore": 50,
-          "newsScore": 81,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        },
-        "livePrice": "-",
-        "liveChangeRate": "-",
-        "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:32",
-        "liveSource": "naver_finance",
-        "liveStatus": "partial",
-        "currentPriceLive": "-",
-        "realTimePrice": "-",
-        "realTimeChangeRate": "-",
-        "realTimeVolume": "-",
-        "hasLiveQuote": false,
-        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
-        "supplyReflectionStatus": "reflected",
-        "recommendationMeta": {
-          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 16,
-          "score": 51,
-          "grade": "D",
-          "action": "보류",
-          "basis": [
-            "technical_score",
-            "news_signal",
-            "report_signal",
-            "supply_flow",
-            "live_quote"
-          ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
-        },
-        "recommendationGrade": "D",
-        "recommendationScore": 51,
-        "recommendationReason": "뉴스 긍정: 긍정 4 / 부정 2 / 중립 2 / 점수 81 / 대표뉴스: ‘하닉 하락 적중했던 그 보고서’…이번엔 삼성전자 목표가 낮췄다 - 문화일보 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
-        "hasRecommendationMeta": true
-      },
-      {
-        "rank": 17,
-        "name": "LIG넥스원",
-        "code": "079550",
-        "score": 51,
-        "grade": "D",
-        "reason": "제외검토 / 최종 51점(D) / 기술 44·수급 50·뉴스 72·리포트 50·유동성 45",
-        "market": "KOSPI",
-        "sector": "방산·우주항공",
-        "changeRate": "-4.43%",
-        "entryPrice": "20일선 회복 확인",
-        "stopLoss": "전저점 이탈",
-        "targetPrice": "분할 익절",
-        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
-        "weeklyCloud": "주봉 추세 확인",
-        "dailySignal": "일봉 이평선 확인",
-        "rsi": "RSI 회복 확인",
-        "macd": "MACD 상승 우위",
-        "volumeSignal": "거래량 확인",
-        "foreign5D": "0",
-        "foreign20D": "0",
-        "foreign60D": "0",
-        "pension5D": "0",
-        "pension20D": "0",
-        "pension60D": "0",
-        "trust5D": "0",
-        "trust20D": "0",
-        "trust60D": "0",
-        "finance5D": "0",
-        "finance20D": "0",
-        "finance60D": "0",
-        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 72 / 대표뉴스: LIG넥스원, 사상 최대 실적이지만… 올해 해외 추가 수주와 '고스트로보틱스' 딜레마 해소가 관건 - 녹색경제신문",
-        "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
-        "dataStatus": {
-          "baseScore": 53,
-          "supplyBoost": 0,
-          "supplySummary": "수급 중립",
-          "hasSupplyData": true,
-          "hasReportHint": true,
-          "finalRecommendationScore": 51,
-          "recommendationAction": "제외검토",
-          "technicalScore": 44,
-          "supplyScore": 50,
-          "newsScore": 72,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
-        },
-        "recommendationAction": "보류",
-        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
-        "recommendationBreakdown": {
-          "technicalScore": 44,
-          "supplyScore": 50,
-          "newsScore": 72,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        },
-        "livePrice": "-",
-        "liveChangeRate": "-",
-        "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:40",
-        "liveSource": "naver_finance",
-        "liveStatus": "partial",
-        "currentPriceLive": "-",
-        "realTimePrice": "-",
-        "realTimeChangeRate": "-",
-        "realTimeVolume": "-",
-        "hasLiveQuote": false,
-        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
-        "supplyReflectionStatus": "reflected",
-        "recommendationMeta": {
-          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 17,
-          "score": 51,
-          "grade": "D",
-          "action": "보류",
-          "basis": [
-            "technical_score",
-            "news_signal",
-            "report_signal",
-            "supply_flow",
-            "live_quote"
-          ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
-        },
-        "recommendationGrade": "D",
-        "recommendationScore": 51,
-        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 72 / 대표뉴스: LIG넥스원, 사상 최대 실적이지만… 올해 해외 추가 수주와 '고스트로보틱스' 딜레마 해소가 관건 - 녹색경제신문 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
-        "hasRecommendationMeta": true
-      },
-      {
-        "rank": 18,
         "name": "LS ELECTRIC",
         "code": "010120",
         "score": 51,
@@ -1834,7 +1636,7 @@
         "reason": "제외검토 / 최종 51점(D) / 기술 33·수급 50·뉴스 100·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "원전·전력·에너지",
-        "changeRate": "-1.16%",
+        "changeRate": "-1.42%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -1872,7 +1674,7 @@
           "newsScore": 100,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -1894,7 +1696,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:43",
+        "liveUpdatedAt": "2026-09-15 15:58:16",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -1906,7 +1708,7 @@
         "supplyReflectionStatus": "reflected",
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 18,
+          "rank": 16,
           "score": 51,
           "grade": "D",
           "action": "보류",
@@ -1917,7 +1719,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 51,
@@ -1925,7 +1727,106 @@
         "hasRecommendationMeta": true
       },
       {
-        "rank": 19,
+        "rank": 17,
+        "name": "에코프로",
+        "code": "086520",
+        "score": 51,
+        "grade": "D",
+        "reason": "제외검토 / 최종 51점(D) / 기술 33·수급 50·뉴스 100·리포트 50·유동성 45",
+        "market": "KOSDAQ",
+        "sector": "2차전지·소재",
+        "changeRate": "5.11%",
+        "entryPrice": "20일선 회복 확인",
+        "stopLoss": "전저점 이탈",
+        "targetPrice": "분할 익절",
+        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
+        "weeklyCloud": "주봉 추세 확인",
+        "dailySignal": "일봉 이평선 확인",
+        "rsi": "RSI 안정권",
+        "macd": "MACD 확인 필요",
+        "volumeSignal": "거래량 확인",
+        "foreign5D": "0",
+        "foreign20D": "0",
+        "foreign60D": "0",
+        "pension5D": "0",
+        "pension20D": "0",
+        "pension60D": "0",
+        "trust5D": "0",
+        "trust20D": "0",
+        "trust60D": "0",
+        "finance5D": "0",
+        "finance20D": "0",
+        "finance60D": "0",
+        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+        "newsSignal": "뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 에코프로에이치엔, 올해 1천914억원 수주…작년 매출의 136% - 연합뉴스",
+        "riskMemo": "뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 뉴스 리스크 특이사항 제한적 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+        "dataStatus": {
+          "baseScore": 51,
+          "supplyBoost": 0,
+          "supplySummary": "수급 중립",
+          "hasSupplyData": true,
+          "hasReportHint": true,
+          "finalRecommendationScore": 51,
+          "recommendationAction": "제외검토",
+          "technicalScore": 33,
+          "supplyScore": 50,
+          "newsScore": 100,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
+        },
+        "recommendationAction": "보류",
+        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
+        "recommendationBreakdown": {
+          "technicalScore": 33,
+          "supplyScore": 50,
+          "newsScore": 100,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        },
+        "livePrice": "-",
+        "liveChangeRate": "-",
+        "liveVolume": "-",
+        "liveUpdatedAt": "2026-09-15 15:58:19",
+        "liveSource": "naver_finance",
+        "liveStatus": "partial",
+        "currentPriceLive": "-",
+        "realTimePrice": "-",
+        "realTimeChangeRate": "-",
+        "realTimeVolume": "-",
+        "hasLiveQuote": false,
+        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
+        "supplyReflectionStatus": "reflected",
+        "recommendationMeta": {
+          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
+          "rank": 17,
+          "score": 51,
+          "grade": "D",
+          "action": "보류",
+          "basis": [
+            "technical_score",
+            "news_signal",
+            "report_signal",
+            "supply_flow",
+            "live_quote"
+          ],
+          "updatedAt": "2026-09-15 15:58:30 KST"
+        },
+        "recommendationGrade": "D",
+        "recommendationScore": 51,
+        "recommendationReason": "뉴스 긍정: 긍정 8 / 부정 0 / 중립 0 / 점수 100 / 대표뉴스: 에코프로에이치엔, 올해 1천914억원 수주…작년 매출의 136% - 연합뉴스 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "hasRecommendationMeta": true
+      },
+      {
+        "rank": 18,
         "name": "셀트리온",
         "code": "068270",
         "score": 50,
@@ -1933,7 +1834,7 @@
         "reason": "제외검토 / 최종 50점(D) / 기술 39·수급 50·뉴스 78·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "바이오·제약",
-        "changeRate": "0.34%",
+        "changeRate": "0.28%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -1971,7 +1872,7 @@
           "newsScore": 78,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -1993,7 +1894,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:35",
+        "liveUpdatedAt": "2026-09-15 15:58:07",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -2005,7 +1906,7 @@
         "supplyReflectionStatus": "reflected",
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 19,
+          "rank": 18,
           "score": 50,
           "grade": "D",
           "action": "보류",
@@ -2016,7 +1917,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 50,
@@ -2024,7 +1925,7 @@
         "hasRecommendationMeta": true
       },
       {
-        "rank": 20,
+        "rank": 19,
         "name": "HD현대일렉트릭",
         "code": "267260",
         "score": 50,
@@ -2032,7 +1933,7 @@
         "reason": "제외검토 / 최종 50점(D) / 기술 33·수급 50·뉴스 93·리포트 50·유동성 45",
         "market": "KOSPI",
         "sector": "원전·전력·에너지",
-        "changeRate": "-3.84%",
+        "changeRate": "-4.11%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -2070,7 +1971,7 @@
           "newsScore": 93,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -2092,7 +1993,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:42",
+        "liveUpdatedAt": "2026-09-15 15:58:14",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -2104,7 +2005,7 @@
         "supplyReflectionStatus": "reflected",
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 20,
+          "rank": 19,
           "score": 50,
           "grade": "D",
           "action": "보류",
@@ -2115,7 +2016,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 50,
@@ -2123,15 +2024,15 @@
         "hasRecommendationMeta": true
       },
       {
-        "rank": 21,
+        "rank": 20,
         "name": "레인보우로보틱스",
         "code": "277810",
-        "score": 48,
+        "score": 49,
         "grade": "D",
-        "reason": "제외검토 / 최종 48점(D) / 기술 33·수급 50·뉴스 81·리포트 50·유동성 45",
+        "reason": "제외검토 / 최종 49점(D) / 기술 33·수급 50·뉴스 88·리포트 50·유동성 45",
         "market": "KOSDAQ",
         "sector": "로봇·자동화",
-        "changeRate": "4.19%",
+        "changeRate": "3.83%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -2154,7 +2055,7 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 81 / 대표뉴스: 레인보우로보틱스 주가, 9월 14일 420,500원 3.56% 하락 - 톱스타뉴스",
+        "newsSignal": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 88 / 대표뉴스: [단독] 레인보우로보틱스, 미국에 생산시설 만든다…＂로봇 수출 재개＂ - 한국경제TV",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 51,
@@ -2162,21 +2063,21 @@
           "supplySummary": "수급 중립",
           "hasSupplyData": true,
           "hasReportHint": true,
-          "finalRecommendationScore": 48,
+          "finalRecommendationScore": 49,
           "recommendationAction": "제외검토",
           "technicalScore": 33,
           "supplyScore": 50,
-          "newsScore": 81,
+          "newsScore": 88,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
         "recommendationBreakdown": {
           "technicalScore": 33,
           "supplyScore": 50,
-          "newsScore": 81,
+          "newsScore": 88,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -2191,7 +2092,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:47",
+        "liveUpdatedAt": "2026-09-15 15:58:20",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -2203,8 +2104,8 @@
         "supplyReflectionStatus": "reflected",
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
-          "rank": 21,
-          "score": 48,
+          "rank": 20,
+          "score": 49,
           "grade": "D",
           "action": "보류",
           "basis": [
@@ -2214,23 +2115,23 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
-        "recommendationScore": 48,
-        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 81 / 대표뉴스: 레인보우로보틱스 주가, 9월 14일 420,500원 3.56% 하락 - 톱스타뉴스 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationScore": 49,
+        "recommendationReason": "뉴스 긍정: 긍정 6 / 부정 1 / 중립 1 / 점수 88 / 대표뉴스: [단독] 레인보우로보틱스, 미국에 생산시설 만든다…＂로봇 수출 재개＂ - 한국경제TV / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
-        "rank": 22,
-        "name": "현대차",
-        "code": "005380",
-        "score": 47,
+        "rank": 21,
+        "name": "삼성바이오로직스",
+        "code": "207940",
+        "score": 48,
         "grade": "D",
-        "reason": "제외검토 / 최종 47점(D) / 기술 38·수급 50·뉴스 63·리포트 50·유동성 45",
+        "reason": "제외검토 / 최종 48점(D) / 기술 43·수급 50·뉴스 58·리포트 50·유동성 45",
         "market": "KOSPI",
-        "sector": "자동차·모빌리티",
-        "changeRate": "0.41%",
+        "sector": "바이오·제약",
+        "changeRate": "0.71%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -2253,29 +2154,29 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 중립: 긍정 3 / 부정 2 / 중립 3 / 점수 63 / 대표뉴스: ‘내우외환’ 현대차 주가…재상승 위한 조건은? - 한국경제",
+        "newsSignal": "뉴스 중립: 긍정 2 / 부정 3 / 중립 3 / 점수 58 / 대표뉴스: 3조 유증인데 정정 없이 '속전속결'…삼바, 금감원 문턱 넘었다 - 데일리팜",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
-          "baseScore": 50,
+          "baseScore": 59,
           "supplyBoost": 0,
           "supplySummary": "수급 중립",
           "hasSupplyData": true,
           "hasReportHint": true,
-          "finalRecommendationScore": 47,
+          "finalRecommendationScore": 48,
           "recommendationAction": "제외검토",
-          "technicalScore": 38,
+          "technicalScore": 43,
           "supplyScore": 50,
-          "newsScore": 63,
+          "newsScore": 58,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
         "recommendationBreakdown": {
-          "technicalScore": 38,
+          "technicalScore": 43,
           "supplyScore": 50,
-          "newsScore": 63,
+          "newsScore": 58,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -2290,7 +2191,106 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:48",
+        "liveUpdatedAt": "2026-09-15 15:58:03",
+        "liveSource": "naver_finance",
+        "liveStatus": "partial",
+        "currentPriceLive": "-",
+        "realTimePrice": "-",
+        "realTimeChangeRate": "-",
+        "realTimeVolume": "-",
+        "hasLiveQuote": false,
+        "supplyMemo": "네이버 수급 조회 실패 또는 표 구조 변경",
+        "supplyReflectionStatus": "reflected",
+        "recommendationMeta": {
+          "version": "V299_LIVE_RECOMMENDATION_META_FIX",
+          "rank": 21,
+          "score": 48,
+          "grade": "D",
+          "action": "보류",
+          "basis": [
+            "technical_score",
+            "news_signal",
+            "report_signal",
+            "supply_flow",
+            "live_quote"
+          ],
+          "updatedAt": "2026-09-15 15:58:30 KST"
+        },
+        "recommendationGrade": "D",
+        "recommendationScore": 48,
+        "recommendationReason": "뉴스 중립: 긍정 2 / 부정 3 / 중립 3 / 점수 58 / 대표뉴스: 3조 유증인데 정정 없이 '속전속결'…삼바, 금감원 문턱 넘었다 - 데일리팜 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "hasRecommendationMeta": true
+      },
+      {
+        "rank": 22,
+        "name": "현대차",
+        "code": "005380",
+        "score": 46,
+        "grade": "D",
+        "reason": "제외검토 / 최종 46점(D) / 기술 38·수급 50·뉴스 56·리포트 50·유동성 45",
+        "market": "KOSPI",
+        "sector": "자동차·모빌리티",
+        "changeRate": "-0.14%",
+        "entryPrice": "20일선 회복 확인",
+        "stopLoss": "전저점 이탈",
+        "targetPrice": "분할 익절",
+        "strategy": "제외검토: 수급·뉴스·리포트 확인 후 분할 접근",
+        "weeklyCloud": "주봉 추세 확인",
+        "dailySignal": "일봉 이평선 확인",
+        "rsi": "RSI 회복 확인",
+        "macd": "MACD 확인 필요",
+        "volumeSignal": "거래량 확인",
+        "foreign5D": "0",
+        "foreign20D": "0",
+        "foreign60D": "0",
+        "pension5D": "0",
+        "pension20D": "0",
+        "pension60D": "0",
+        "trust5D": "0",
+        "trust20D": "0",
+        "trust60D": "0",
+        "finance5D": "0",
+        "finance20D": "0",
+        "finance60D": "0",
+        "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
+        "newsSignal": "뉴스 중립: 긍정 2 / 부정 2 / 중립 4 / 점수 56 / 대표뉴스: [현대차증권 재무체력]② 커진 몸집, 걸맞지 않는 수익성 - 블로터",
+        "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
+        "dataStatus": {
+          "baseScore": 50,
+          "supplyBoost": 0,
+          "supplySummary": "수급 중립",
+          "hasSupplyData": true,
+          "hasReportHint": true,
+          "finalRecommendationScore": 46,
+          "recommendationAction": "제외검토",
+          "technicalScore": 38,
+          "supplyScore": 50,
+          "newsScore": 56,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
+        },
+        "recommendationAction": "보류",
+        "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
+        "recommendationBreakdown": {
+          "technicalScore": 38,
+          "supplyScore": 50,
+          "newsScore": 56,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        },
+        "livePrice": "-",
+        "liveChangeRate": "-",
+        "liveVolume": "-",
+        "liveUpdatedAt": "2026-09-15 15:58:22",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -2303,7 +2303,7 @@
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
           "rank": 22,
-          "score": 47,
+          "score": 46,
           "grade": "D",
           "action": "보류",
           "basis": [
@@ -2313,11 +2313,11 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
-        "recommendationScore": 47,
-        "recommendationReason": "뉴스 중립: 긍정 3 / 부정 2 / 중립 3 / 점수 63 / 대표뉴스: ‘내우외환’ 현대차 주가…재상승 위한 조건은? - 한국경제 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationScore": 46,
+        "recommendationReason": "뉴스 중립: 긍정 2 / 부정 2 / 중립 4 / 점수 56 / 대표뉴스: [현대차증권 재무체력]② 커진 몸집, 걸맞지 않는 수익성 - 블로터 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       },
       {
@@ -2329,7 +2329,7 @@
         "reason": "제외검토 / 최종 45점(D) / 기술 43·수급 50·뉴스 35·리포트 50·유동성 45",
         "market": "KOSDAQ",
         "sector": "반도체·AI",
-        "changeRate": "0.62%",
+        "changeRate": "0.16%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -2367,7 +2367,7 @@
           "newsScore": 35,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
@@ -2389,7 +2389,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:50",
+        "liveUpdatedAt": "2026-09-15 15:58:23",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -2412,7 +2412,7 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
         "recommendationScore": 45,
@@ -2423,12 +2423,12 @@
         "rank": 24,
         "name": "에코프로비엠",
         "code": "247540",
-        "score": 39,
+        "score": 38,
         "grade": "D",
-        "reason": "제외검토 / 최종 39점(D) / 기술 33·수급 50·뉴스 19·리포트 50·유동성 45",
+        "reason": "제외검토 / 최종 38점(D) / 기술 33·수급 50·뉴스 10·리포트 50·유동성 45",
         "market": "KOSDAQ",
         "sector": "2차전지·소재",
-        "changeRate": "2.80%",
+        "changeRate": "3.38%",
         "entryPrice": "20일선 회복 확인",
         "stopLoss": "전저점 이탈",
         "targetPrice": "분할 익절",
@@ -2451,7 +2451,7 @@
         "finance20D": "0",
         "finance60D": "0",
         "reportSignal": "리포트 중립: 최근 공개 리포트 확인 필요",
-        "newsSignal": "뉴스 부정/주의: 긍정 1 / 부정 4 / 중립 3 / 점수 19 / 대표뉴스: 에코프로비엠 유증 일정 확정…규모는 3천억가량 감소 - 연합인포맥스",
+        "newsSignal": "뉴스 부정/주의: 긍정 1 / 부정 5 / 중립 2 / 점수 10 / 대표뉴스: 에코프로비엠 유증 일정 확정…규모는 3천억가량 감소 - news.einfomax.co.kr",
         "riskMemo": "부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토 / 부정 키워드 확인 필요 / 리포트 데이터 미확인: 뉴스·수급·차트 신호와 함께 검토",
         "dataStatus": {
           "baseScore": 51,
@@ -2459,21 +2459,21 @@
           "supplySummary": "수급 중립",
           "hasSupplyData": true,
           "hasReportHint": true,
-          "finalRecommendationScore": 39,
+          "finalRecommendationScore": 38,
           "recommendationAction": "제외검토",
           "technicalScore": 33,
           "supplyScore": 50,
-          "newsScore": 19,
+          "newsScore": 10,
           "reportScore": 50,
           "liquidityScore": 45,
-          "recommendationUpdatedAt": "2026-09-15 15:05:56"
+          "recommendationUpdatedAt": "2026-09-15 15:58:30"
         },
         "recommendationAction": "보류",
         "recommendationVersion": "V284_RECOMMENDATION_SCORE_ENGINE",
         "recommendationBreakdown": {
           "technicalScore": 33,
           "supplyScore": 50,
-          "newsScore": 19,
+          "newsScore": 10,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
@@ -2488,7 +2488,7 @@
         "livePrice": "-",
         "liveChangeRate": "-",
         "liveVolume": "-",
-        "liveUpdatedAt": "2026-09-15 15:05:45",
+        "liveUpdatedAt": "2026-09-15 15:58:17",
         "liveSource": "naver_finance",
         "liveStatus": "partial",
         "currentPriceLive": "-",
@@ -2501,7 +2501,7 @@
         "recommendationMeta": {
           "version": "V299_LIVE_RECOMMENDATION_META_FIX",
           "rank": 24,
-          "score": 39,
+          "score": 38,
           "grade": "D",
           "action": "보류",
           "basis": [
@@ -2511,24 +2511,24 @@
             "supply_flow",
             "live_quote"
           ],
-          "updatedAt": "2026-09-15 15:05:56 KST"
+          "updatedAt": "2026-09-15 15:58:30 KST"
         },
         "recommendationGrade": "D",
-        "recommendationScore": 39,
-        "recommendationReason": "뉴스 부정/주의: 긍정 1 / 부정 4 / 중립 3 / 점수 19 / 대표뉴스: 에코프로비엠 유증 일정 확정…규모는 3천억가량 감소 - 연합인포맥스 / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
+        "recommendationScore": 38,
+        "recommendationReason": "뉴스 부정/주의: 긍정 1 / 부정 5 / 중립 2 / 점수 10 / 대표뉴스: 에코프로비엠 유증 일정 확정…규모는 3천억가량 감소 - news.einfomax.co.kr / 리포트 중립: 최근 공개 리포트 확인 필요 / 네이버 수급 조회 실패 또는 표 구조 변경",
         "hasRecommendationMeta": true
       }
     ],
     "liveQuotes": {
       "version": "CV252_REALTIME_NAVER_COLLECTOR",
-      "updatedAt": "2026-09-15 15:05:56",
+      "updatedAt": "2026-09-15 15:58:30",
       "source": "naver_finance",
       "candidateCount": 24,
       "quoteCount": 24,
       "okCount": 0,
       "partialCount": 24,
       "failCount": 0,
-      "startedAt": "2026-09-15 15:05:16",
+      "startedAt": "2026-09-15 15:57:51",
       "quotes": [
         {
           "code": "105560",
@@ -2536,7 +2536,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:16",
+          "updatedAt": "2026-09-15 15:57:51",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2547,7 +2547,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:18",
+          "updatedAt": "2026-09-15 15:57:53",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2558,7 +2558,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:20",
+          "updatedAt": "2026-09-15 15:57:54",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2569,7 +2569,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:21",
+          "updatedAt": "2026-09-15 15:57:56",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2580,7 +2580,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:23",
+          "updatedAt": "2026-09-15 15:57:57",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2591,7 +2591,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:25",
+          "updatedAt": "2026-09-15 15:57:59",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2602,7 +2602,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:27",
+          "updatedAt": "2026-09-15 15:58:01",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2613,7 +2613,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:28",
+          "updatedAt": "2026-09-15 15:58:03",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2624,7 +2624,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:30",
+          "updatedAt": "2026-09-15 15:58:04",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2635,18 +2635,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:32",
-          "source": "naver_finance",
-          "status": "partial",
-          "message": "price parse failed"
-        },
-        {
-          "code": "086520",
-          "name": "에코프로",
-          "price": "-",
-          "changeRate": "-",
-          "volume": "-",
-          "updatedAt": "2026-09-15 15:05:34",
+          "updatedAt": "2026-09-15 15:58:06",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2657,7 +2646,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:35",
+          "updatedAt": "2026-09-15 15:58:07",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2668,7 +2657,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:37",
+          "updatedAt": "2026-09-15 15:58:09",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2679,7 +2668,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:39",
+          "updatedAt": "2026-09-15 15:58:11",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2690,7 +2679,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:40",
+          "updatedAt": "2026-09-15 15:58:12",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2701,7 +2690,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:42",
+          "updatedAt": "2026-09-15 15:58:14",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2712,7 +2701,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:43",
+          "updatedAt": "2026-09-15 15:58:16",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2723,7 +2712,18 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:45",
+          "updatedAt": "2026-09-15 15:58:17",
+          "source": "naver_finance",
+          "status": "partial",
+          "message": "price parse failed"
+        },
+        {
+          "code": "086520",
+          "name": "에코프로",
+          "price": "-",
+          "changeRate": "-",
+          "volume": "-",
+          "updatedAt": "2026-09-15 15:58:19",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2734,7 +2734,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:47",
+          "updatedAt": "2026-09-15 15:58:20",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2745,7 +2745,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:48",
+          "updatedAt": "2026-09-15 15:58:22",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2756,7 +2756,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:50",
+          "updatedAt": "2026-09-15 15:58:23",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2767,7 +2767,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:51",
+          "updatedAt": "2026-09-15 15:58:25",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2778,7 +2778,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:53",
+          "updatedAt": "2026-09-15 15:58:27",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2789,7 +2789,7 @@
           "price": "-",
           "changeRate": "-",
           "volume": "-",
-          "updatedAt": "2026-09-15 15:05:55",
+          "updatedAt": "2026-09-15 15:58:29",
           "source": "naver_finance",
           "status": "partial",
           "message": "price parse failed"
@@ -2798,7 +2798,7 @@
     },
     "appDataStatus": {
       "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-      "updatedAt": "2026-09-15 15:05:56",
+      "updatedAt": "2026-09-15 15:58:30",
       "candidateCount": 24,
       "message": "V284 최종 추천 점수 엔진 반영 완료",
       "supplyMatched": 24,
@@ -2810,16 +2810,39 @@
       "aGradeCount": 0,
       "recommendationSummary": {
         "actionCounts": {
-          "관찰": 1,
-          "제외검토": 23
+          "관찰": 2,
+          "제외검토": 22
         },
         "gradeCounts": {
-          "C": 1,
-          "D": 23
+          "C": 2,
+          "D": 22
         },
         "topCandidates": [
           {
             "rank": 1,
+            "name": "KB금융",
+            "code": "105560",
+            "score": 62,
+            "grade": "C",
+            "action": "관찰",
+            "breakdown": {
+              "technicalScore": 65,
+              "supplyScore": 50,
+              "newsScore": 99,
+              "reportScore": 50,
+              "liquidityScore": 45,
+              "weights": {
+                "technical": 35,
+                "supply": 25,
+                "news": 15,
+                "report": 15,
+                "liquidity": 10
+              },
+              "supplyMemo": "수급 중립/혼조"
+            }
+          },
+          {
+            "rank": 2,
             "name": "두산에너빌리티",
             "code": "034020",
             "score": 61,
@@ -2842,7 +2865,7 @@
             }
           },
           {
-            "rank": 2,
+            "rank": 3,
             "name": "LG에너지솔루션",
             "code": "373220",
             "score": 59,
@@ -2865,7 +2888,7 @@
             }
           },
           {
-            "rank": 3,
+            "rank": 4,
             "name": "이오테크닉스",
             "code": "039030",
             "score": 58,
@@ -2875,29 +2898,6 @@
               "technicalScore": 61,
               "supplyScore": 50,
               "newsScore": 83,
-              "reportScore": 50,
-              "liquidityScore": 45,
-              "weights": {
-                "technical": 35,
-                "supply": 25,
-                "news": 15,
-                "report": 15,
-                "liquidity": 10
-              },
-              "supplyMemo": "수급 중립/혼조"
-            }
-          },
-          {
-            "rank": 4,
-            "name": "KB금융",
-            "code": "105560",
-            "score": 55,
-            "grade": "D",
-            "action": "제외검토",
-            "breakdown": {
-              "technicalScore": 65,
-              "supplyScore": 50,
-              "newsScore": 49,
               "reportScore": 50,
               "liquidityScore": 45,
               "weights": {
@@ -2938,12 +2938,12 @@
     },
     "pipelineHealth": {
       "version": "V287_PIPELINE_HEALTH_MONITOR",
-      "updatedAt": "2026-09-15 15:05:56 KST",
+      "updatedAt": "2026-09-15 15:58:30 KST",
       "status": "warning",
       "candidateCount": 24,
       "gradeCounts": {
-        "C": 1,
-        "D": 23
+        "C": 2,
+        "D": 22
       },
       "liveQuote": {
         "quoteCount": 24,
@@ -2959,6 +2959,14 @@
       "topCandidates": [
         {
           "rank": 1,
+          "name": "KB금융",
+          "code": "105560",
+          "score": 62,
+          "grade": "C",
+          "reason": "관찰 / 최종 62점(C) / 기술 65·수급 50·뉴스 99·리포트 50·유동성 45"
+        },
+        {
+          "rank": 2,
           "name": "두산에너빌리티",
           "code": "034020",
           "score": 61,
@@ -2966,7 +2974,7 @@
           "reason": "관찰 / 최종 61점(C) / 기술 61·수급 50·뉴스 100·리포트 50·유동성 45"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "name": "LG에너지솔루션",
           "code": "373220",
           "score": 59,
@@ -2974,20 +2982,12 @@
           "reason": "제외검토 / 최종 59점(D) / 기술 57·수급 50·뉴스 100·리포트 50·유동성 45"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "name": "이오테크닉스",
           "code": "039030",
           "score": 58,
           "grade": "D",
           "reason": "제외검토 / 최종 58점(D) / 기술 61·수급 50·뉴스 83·리포트 50·유동성 45"
-        },
-        {
-          "rank": 4,
-          "name": "KB금융",
-          "code": "105560",
-          "score": 55,
-          "grade": "D",
-          "reason": "제외검토 / 최종 55점(D) / 기술 65·수급 50·뉴스 49·리포트 50·유동성 45"
         },
         {
           "rank": 5,
@@ -3015,14 +3015,6 @@
         },
         {
           "rank": 8,
-          "name": "삼성바이오로직스",
-          "code": "207940",
-          "score": 53,
-          "grade": "D",
-          "reason": "제외검토 / 최종 53점(D) / 기술 43·수급 50·뉴스 88·리포트 50·유동성 45"
-        },
-        {
-          "rank": 9,
           "name": "한화시스템",
           "code": "272210",
           "score": 53,
@@ -3030,123 +3022,131 @@
           "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45"
         },
         {
-          "rank": 10,
-          "name": "에코프로",
-          "code": "086520",
+          "rank": 9,
+          "name": "SK하이닉스",
+          "code": "000660",
           "score": 52,
           "grade": "D",
-          "reason": "제외검토 / 최종 52점(D) / 기술 35·수급 50·뉴스 100·리포트 50·유동성 45"
+          "reason": "제외검토 / 최종 52점(D) / 기술 46·수급 50·뉴스 79·리포트 50·유동성 45"
+        },
+        {
+          "rank": 10,
+          "name": "삼성전자",
+          "code": "005930",
+          "score": 52,
+          "grade": "D",
+          "reason": "제외검토 / 최종 52점(D) / 기술 40·수급 50·뉴스 90·리포트 50·유동성 45"
         }
       ],
       "files": {
         "stock_candidates.json": {
           "name": "stock_candidates.json",
           "exists": true,
-          "sizeBytes": 87032,
-          "modifiedAt": "2026-09-15 15:05:56 KST"
+          "sizeBytes": 87112,
+          "modifiedAt": "2026-09-15 15:58:30 KST"
         },
         "app_data_status.json": {
           "name": "app_data_status.json",
           "exists": true,
-          "sizeBytes": 3392,
-          "modifiedAt": "2026-09-15 15:05:56 KST"
+          "sizeBytes": 3386,
+          "modifiedAt": "2026-09-15 15:58:30 KST"
         },
         "live_quotes.json": {
           "name": "live_quotes.json",
           "exists": true,
           "sizeBytes": 6892,
-          "modifiedAt": "2026-09-15 15:05:56 KST"
+          "modifiedAt": "2026-09-15 15:58:30 KST"
         },
         "stock_candidates_input.csv": {
           "name": "stock_candidates_input.csv",
           "exists": true,
-          "sizeBytes": 11816,
-          "modifiedAt": "2026-09-15 15:01:52 KST"
+          "sizeBytes": 11835,
+          "modifiedAt": "2026-09-15 15:54:15 KST"
         },
         "v101_generation_summary.json": {
           "name": "v101_generation_summary.json",
           "exists": true,
           "sizeBytes": 1078,
-          "modifiedAt": "2026-09-15 14:59:07 KST"
+          "modifiedAt": "2026-09-15 15:51:26 KST"
         },
         "news_signals.json": {
           "name": "news_signals.json",
           "exists": true,
-          "sizeBytes": 132638,
-          "modifiedAt": "2026-09-15 15:02:09 KST"
+          "sizeBytes": 133334,
+          "modifiedAt": "2026-09-15 15:54:33 KST"
         },
         "news_signals_summary.json": {
           "name": "news_signals_summary.json",
           "exists": true,
-          "sizeBytes": 2414,
-          "modifiedAt": "2026-09-15 15:02:09 KST"
+          "sizeBytes": 2374,
+          "modifiedAt": "2026-09-15 15:54:33 KST"
         },
         "supply_flow_input.csv": {
           "name": "supply_flow_input.csv",
           "exists": true,
           "sizeBytes": 2639,
-          "modifiedAt": "2026-09-15 15:05:16 KST"
+          "modifiedAt": "2026-09-15 15:57:51 KST"
         },
         "supply_flow_summary.json": {
           "name": "supply_flow_summary.json",
           "exists": true,
           "sizeBytes": 10395,
-          "modifiedAt": "2026-09-15 15:05:16 KST"
+          "modifiedAt": "2026-09-15 15:57:51 KST"
         },
         "report_signals.json": {
           "name": "report_signals.json",
           "exists": true,
           "sizeBytes": 16061,
-          "modifiedAt": "2026-09-15 15:04:08 KST"
+          "modifiedAt": "2026-09-15 15:56:39 KST"
         },
         "report_signals_summary.json": {
           "name": "report_signals_summary.json",
           "exists": true,
           "sizeBytes": 2314,
-          "modifiedAt": "2026-09-15 15:04:08 KST"
+          "modifiedAt": "2026-09-15 15:56:39 KST"
         },
         "recommendation_summary.json": {
           "name": "recommendation_summary.json",
           "exists": true,
-          "sizeBytes": 6013,
-          "modifiedAt": "2026-09-15 15:05:56 KST"
+          "sizeBytes": 5996,
+          "modifiedAt": "2026-09-15 15:58:30 KST"
         },
         "market_pipeline_validation.json": {
           "name": "market_pipeline_validation.json",
           "exists": true,
           "sizeBytes": 2361,
-          "modifiedAt": "2026-09-15 14:59:07 KST"
+          "modifiedAt": "2026-09-15 15:51:26 KST"
         },
         "intraday_pipeline_status.json": {
           "name": "intraday_pipeline_status.json",
           "exists": true,
           "sizeBytes": 187,
-          "modifiedAt": "2026-09-15 14:59:07 KST"
+          "modifiedAt": "2026-09-15 15:51:26 KST"
         },
         "live_quotes_validation_report.json": {
           "name": "live_quotes_validation_report.json",
           "exists": true,
           "sizeBytes": 568,
-          "modifiedAt": "2026-09-15 14:59:07 KST"
+          "modifiedAt": "2026-09-15 15:51:26 KST"
         },
         "app_pipeline_status.json": {
           "name": "app_pipeline_status.json",
           "exists": true,
           "sizeBytes": 261,
-          "modifiedAt": "2026-09-15 14:59:07 KST"
+          "modifiedAt": "2026-09-15 15:51:26 KST"
         }
       },
       "nextAction": "앱 데이터 탭에서 저장 URL 새로고침 후 후보/현재가/뉴스·수급·리포트 반영 여부 확인"
     },
     "appOperationStatus": {
       "version": "V288_APP_OPERATION_STATUS_BRIDGE",
-      "updatedAt": "2026-09-15 15:05:56",
+      "updatedAt": "2026-09-15 15:58:30",
       "status": "warning",
       "message": "운영 가능하나 일부 경고 확인 필요",
       "candidateCount": 24,
       "gradeCounts": {
-        "C": 1,
-        "D": 23
+        "C": 2,
+        "D": 22
       },
       "quoteStats": {
         "quoteCount": 24,
@@ -3154,7 +3154,7 @@
         "failCount": 0,
         "partialCount": 24,
         "source": "naver_finance",
-        "updatedAt": "2026-09-15 15:05:56"
+        "updatedAt": "2026-09-15 15:58:30"
       },
       "issues": [],
       "warnings": [
@@ -3163,48 +3163,48 @@
       "files": {
         "pipelineHealth": {
           "exists": true,
-          "size": 5824,
-          "modifiedAt": "2026-09-15 15:05:56"
+          "size": 5807,
+          "modifiedAt": "2026-09-15 15:58:30"
         },
         "appDataStatus": {
           "exists": true,
-          "size": 3392,
-          "modifiedAt": "2026-09-15 15:05:56"
+          "size": 3386,
+          "modifiedAt": "2026-09-15 15:58:30"
         },
         "recommendationSummary": {
           "exists": true,
-          "size": 6013,
-          "modifiedAt": "2026-09-15 15:05:56"
+          "size": 5996,
+          "modifiedAt": "2026-09-15 15:58:30"
         },
         "marketValidation": {
           "exists": true,
           "size": 2361,
-          "modifiedAt": "2026-09-15 14:59:07"
+          "modifiedAt": "2026-09-15 15:51:26"
         },
         "liveQuotes": {
           "exists": true,
           "size": 6892,
-          "modifiedAt": "2026-09-15 15:05:56"
+          "modifiedAt": "2026-09-15 15:58:30"
         },
         "stockCandidates": {
           "exists": true,
-          "size": 87032,
-          "modifiedAt": "2026-09-15 15:05:56"
+          "size": 87112,
+          "modifiedAt": "2026-09-15 15:58:30"
         },
         "newsSignals": {
           "exists": true,
-          "size": 132638,
-          "modifiedAt": "2026-09-15 15:02:09"
+          "size": 133334,
+          "modifiedAt": "2026-09-15 15:54:33"
         },
         "supplySummary": {
           "exists": true,
           "size": 10395,
-          "modifiedAt": "2026-09-15 15:05:16"
+          "modifiedAt": "2026-09-15 15:57:51"
         },
         "reportSummary": {
           "exists": true,
           "size": 2314,
-          "modifiedAt": "2026-09-15 15:04:08"
+          "modifiedAt": "2026-09-15 15:56:39"
         }
       },
       "sourceVersions": {
@@ -3217,36 +3217,59 @@
     },
     "recommendationSummary": {
       "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-      "updatedAt": "2026-09-15 15:05:56",
-      "startedAt": "2026-09-15 15:05:56",
+      "updatedAt": "2026-09-15 15:58:30",
+      "startedAt": "2026-09-15 15:58:30",
       "inputCandidateCount": 24,
       "finalCandidateCount": 24,
       "newsSignalCount": 24,
       "reportSignalCount": 24,
       "supplyRowCount": 24,
       "gradeCounts": {
-        "C": 1,
-        "D": 23
+        "C": 2,
+        "D": 22
       },
       "actionCounts": {
-        "관찰": 1,
-        "제외검토": 23
+        "관찰": 2,
+        "제외검토": 22
       },
       "sectorCounts": {
+        "금융·밸류업": 1,
         "원전·전력·에너지": 3,
         "2차전지·소재": 4,
         "반도체·AI": 4,
-        "금융·밸류업": 1,
         "방산·우주항공": 4,
-        "바이오·제약": 3,
         "인터넷·게임·콘텐츠": 1,
         "자동차·모빌리티": 2,
         "조선·해양": 1,
+        "바이오·제약": 3,
         "로봇·자동화": 1
       },
       "topCandidates": [
         {
           "rank": 1,
+          "name": "KB금융",
+          "code": "105560",
+          "score": 62,
+          "grade": "C",
+          "action": "관찰",
+          "breakdown": {
+            "technicalScore": 65,
+            "supplyScore": 50,
+            "newsScore": 99,
+            "reportScore": 50,
+            "liquidityScore": 45,
+            "weights": {
+              "technical": 35,
+              "supply": 25,
+              "news": 15,
+              "report": 15,
+              "liquidity": 10
+            },
+            "supplyMemo": "수급 중립/혼조"
+          }
+        },
+        {
+          "rank": 2,
           "name": "두산에너빌리티",
           "code": "034020",
           "score": 61,
@@ -3269,7 +3292,7 @@
           }
         },
         {
-          "rank": 2,
+          "rank": 3,
           "name": "LG에너지솔루션",
           "code": "373220",
           "score": 59,
@@ -3292,7 +3315,7 @@
           }
         },
         {
-          "rank": 3,
+          "rank": 4,
           "name": "이오테크닉스",
           "code": "039030",
           "score": 58,
@@ -3302,29 +3325,6 @@
             "technicalScore": 61,
             "supplyScore": 50,
             "newsScore": 83,
-            "reportScore": 50,
-            "liquidityScore": 45,
-            "weights": {
-              "technical": 35,
-              "supply": 25,
-              "news": 15,
-              "report": 15,
-              "liquidity": 10
-            },
-            "supplyMemo": "수급 중립/혼조"
-          }
-        },
-        {
-          "rank": 4,
-          "name": "KB금융",
-          "code": "105560",
-          "score": 55,
-          "grade": "D",
-          "action": "제외검토",
-          "breakdown": {
-            "technicalScore": 65,
-            "supplyScore": 50,
-            "newsScore": 49,
             "reportScore": 50,
             "liquidityScore": 45,
             "weights": {
@@ -3408,29 +3408,6 @@
         },
         {
           "rank": 8,
-          "name": "삼성바이오로직스",
-          "code": "207940",
-          "score": 53,
-          "grade": "D",
-          "action": "제외검토",
-          "breakdown": {
-            "technicalScore": 43,
-            "supplyScore": 50,
-            "newsScore": 88,
-            "reportScore": 50,
-            "liquidityScore": 45,
-            "weights": {
-              "technical": 35,
-              "supply": 25,
-              "news": 15,
-              "report": 15,
-              "liquidity": 10
-            },
-            "supplyMemo": "수급 중립/혼조"
-          }
-        },
-        {
-          "rank": 9,
           "name": "한화시스템",
           "code": "272210",
           "score": 53,
@@ -3453,16 +3430,39 @@
           }
         },
         {
-          "rank": 10,
-          "name": "에코프로",
-          "code": "086520",
+          "rank": 9,
+          "name": "SK하이닉스",
+          "code": "000660",
           "score": 52,
           "grade": "D",
           "action": "제외검토",
           "breakdown": {
-            "technicalScore": 35,
+            "technicalScore": 46,
             "supplyScore": 50,
-            "newsScore": 100,
+            "newsScore": 79,
+            "reportScore": 50,
+            "liquidityScore": 45,
+            "weights": {
+              "technical": 35,
+              "supply": 25,
+              "news": 15,
+              "report": 15,
+              "liquidity": 10
+            },
+            "supplyMemo": "수급 중립/혼조"
+          }
+        },
+        {
+          "rank": 10,
+          "name": "삼성전자",
+          "code": "005930",
+          "score": 52,
+          "grade": "D",
+          "action": "제외검토",
+          "breakdown": {
+            "technicalScore": 40,
+            "supplyScore": 50,
+            "newsScore": 90,
             "reportScore": 50,
             "liquidityScore": 45,
             "weights": {
@@ -3479,7 +3479,7 @@
     },
     "newsSignalsSummary": {
       "version": "CV280_NEWS_SIGNAL_ENGINE",
-      "updatedAt": "2026-09-15 15:02:09",
+      "updatedAt": "2026-09-15 15:54:33",
       "candidateCount": 24,
       "positiveCandidates": 19,
       "negativeCandidates": 2,
@@ -3489,7 +3489,7 @@
           "code": "373220",
           "name": "LG에너지솔루션",
           "newsScore": 100,
-          "headline": "[리포트 브리핑]LG에너지솔루션, '오해가 낳은 기회' 목표가 480,000원 - NH투자증권 - 뉴스핌"
+          "headline": "[리포트 브리핑]LG에너지솔루션, '드디어 서프라이즈' 목표가 510,000원 - 미래에셋증권 - 뉴스핌"
         },
         {
           "code": "034020",
@@ -3501,7 +3501,7 @@
           "code": "012450",
           "name": "한화에어로스페이스",
           "newsScore": 100,
-          "headline": "방산주 하루 만에 꺾인 오름세…한화에어로 5% 하락[핫종목] - 뉴스1"
+          "headline": "쎄크, 한화에어로서 방산 검사장비 74억원 추가 수주 - 디일렉"
         },
         {
           "code": "047810",
@@ -3510,22 +3510,22 @@
           "headline": "[리포트 브리핑]한국항공우주, '양산 본격화, 수출이 여는 다음 성장' 목표가 190,000원 - 리딩투자증권 - 뉴스핌"
         },
         {
-          "code": "086520",
-          "name": "에코프로",
-          "newsScore": 100,
-          "headline": "에코프로에이치엔, 올해 수주 1914억원…반도체 투자 확대 수혜 - kyongbuk.co.kr"
-        },
-        {
           "code": "272210",
           "name": "한화시스템",
           "newsScore": 100,
-          "headline": "한화시스템 주가, 9월 15일 장중 70,400원 6.13% 하락 - 톱스타뉴스"
+          "headline": "한화시스템, '플랫폼을 가리지 않는 성장' 증권사 발표에 강세 - 매일경제 마켓"
         },
         {
           "code": "010120",
           "name": "LS ELECTRIC",
           "newsScore": 100,
           "headline": "LS ELECTRIC 주가, 9월 15일 장중 196,500원 1.40% 하락 - 톱스타뉴스"
+        },
+        {
+          "code": "086520",
+          "name": "에코프로",
+          "newsScore": 100,
+          "headline": "에코프로에이치엔, 올해 1천914억원 수주…작년 매출의 136% - 연합뉴스"
         },
         {
           "code": "042660",
@@ -3540,17 +3540,17 @@
           "headline": "알테오젠 SC제형기술, 기술수출 넘어 실적 연결 주목 - 메디칼업저버"
         },
         {
-          "code": "000270",
-          "name": "기아",
+          "code": "105560",
+          "name": "KB금융",
           "newsScore": 99,
-          "headline": "[리포트 브리핑]기아, '유럽 BEV 전략, 중기 접근이 유효' 목표가 205,000원 - 키움증권 - 뉴스핌"
+          "headline": "KB증권, '2026 KB금융 코리아 컨퍼런스' 개최 - 뉴스핌"
         }
       ]
     },
     "supplyFlowSummary": {
       "version": "V298_NAVER_SUPPLY_FLOW_ENGINE",
-      "updatedAt": "2026-09-15 15:05:16",
-      "startedAt": "2026-09-15 15:04:08",
+      "updatedAt": "2026-09-15 15:57:51",
+      "startedAt": "2026-09-15 15:56:39",
       "candidateCount": 24,
       "outputRows": 24,
       "okCount": 0,
@@ -3791,29 +3791,6 @@
           "sampleRows": []
         },
         {
-          "code": "086520",
-          "name": "에코프로",
-          "status": "fail",
-          "rowCount": 0,
-          "nonZeroFields": 0,
-          "foreign20D": "0",
-          "finance20D": "0",
-          "memo": "네이버 수급 조회 실패 또는 표 구조 변경",
-          "debug": [
-            {
-              "page": 1,
-              "status": "empty",
-              "rowCount": 0
-            },
-            {
-              "page": 2,
-              "status": "empty",
-              "rowCount": 0
-            }
-          ],
-          "sampleRows": []
-        },
-        {
           "code": "068270",
           "name": "셀트리온",
           "status": "fail",
@@ -3975,6 +3952,29 @@
           "sampleRows": []
         },
         {
+          "code": "086520",
+          "name": "에코프로",
+          "status": "fail",
+          "rowCount": 0,
+          "nonZeroFields": 0,
+          "foreign20D": "0",
+          "finance20D": "0",
+          "memo": "네이버 수급 조회 실패 또는 표 구조 변경",
+          "debug": [
+            {
+              "page": 1,
+              "status": "empty",
+              "rowCount": 0
+            },
+            {
+              "page": 2,
+              "status": "empty",
+              "rowCount": 0
+            }
+          ],
+          "sampleRows": []
+        },
+        {
           "code": "277810",
           "name": "레인보우로보틱스",
           "status": "fail",
@@ -4024,7 +4024,7 @@
     },
     "reportSignalsSummary": {
       "version": "V283_REPORT_SIGNAL_ENGINE",
-      "updatedAt": "2026-09-15 15:04:08",
+      "updatedAt": "2026-09-15 15:56:39",
       "candidateCount": 24,
       "analyzedCount": 24,
       "reportHitCount": 0,
