@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-14T19:21:24",
+  "generatedAt": "2026-09-15T18:11:31",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-09-14T19:21:24",
+    "generatedAt": "2026-09-15T18:11:31",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -239,8 +239,8 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 116,
-    "reliableTargetCandidateCount": 7,
+    "rawTargetRows": 118,
+    "reliableTargetCandidateCount": 10,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
   },
@@ -250,13 +250,13 @@
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        5652,
+        6000,
         8409
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 5652,
+          "price": 6000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -276,7 +276,7 @@
       "currentPrice": 220000,
       "rawPrices": [
         5652,
-        8409
+        6000
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -285,7 +285,7 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 8409,
+          "price": 6000,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -329,10 +329,14 @@
         5000,
         7000,
         10500,
-        140050
+        120000,
+        140050,
+        154800
       ],
       "acceptedPrices": [
-        140050
+        120000,
+        140050,
+        154800
       ],
       "rejected": [
         {
@@ -356,7 +360,7 @@
       "realisticTargetPrice": 112000,
       "observeTimingPrice": 98000,
       "stopTimingPrice": 84000,
-      "targetCount": 1
+      "targetCount": 3
     },
     {
       "code": "034020",
@@ -393,9 +397,11 @@
       "rawPrices": [
         2027,
         5000,
+        107467,
         110000
       ],
       "acceptedPrices": [
+        107467,
         110000
       ],
       "rejected": [
@@ -408,11 +414,11 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 110000,
-      "realisticTargetPrice": 88000,
-      "observeTimingPrice": 77000,
-      "stopTimingPrice": 66000,
-      "targetCount": 1
+      "median": 108733,
+      "realisticTargetPrice": 87000,
+      "observeTimingPrice": 76100,
+      "stopTimingPrice": 65200,
+      "targetCount": 2
     },
     {
       "code": "047810",
@@ -513,7 +519,6 @@
       "currentPrice": 172000,
       "rawPrices": [
         2026,
-        3000,
         4889,
         5000,
         180800,
@@ -527,10 +532,6 @@
         {
           "price": 2026,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 3000,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 4889,
@@ -686,9 +687,7 @@
       "currentPrice": 115000,
       "rawPrices": [
         2026,
-        4800,
-        5000,
-        7300
+        4800
       ],
       "acceptedPrices": [],
       "rejected": [
@@ -698,14 +697,6 @@
         },
         {
           "price": 4800,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 7300,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -890,13 +881,18 @@
       "name": "로보티즈",
       "currentPrice": 45000,
       "rawPrices": [
-        5000
+        5000,
+        392286
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 5000,
           "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 392286,
+          "reason": "현재가 대비 과도하게 높음"
         }
       ],
       "median": 0,
@@ -965,9 +961,11 @@
         2026,
         3333,
         5000,
+        263000,
         447500
       ],
       "acceptedPrices": [
+        263000,
         447500
       ],
       "rejected": [
@@ -988,11 +986,11 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 447500,
-      "realisticTargetPrice": 358000,
-      "observeTimingPrice": 313000,
-      "stopTimingPrice": 268500,
-      "targetCount": 1
+      "median": 355250,
+      "realisticTargetPrice": 284000,
+      "observeTimingPrice": 248500,
+      "stopTimingPrice": 213000,
+      "targetCount": 2
     },
     {
       "code": "068760",
