@@ -1,6 +1,6 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-16 16:04:55",
+  "updatedAt": "2026-09-16 18:06:33",
   "candidateCount": 24,
   "message": "V284 최종 추천 점수 엔진 반영 완료",
   "supplyMatched": 24,
@@ -12,85 +12,14 @@
   "aGradeCount": 0,
   "recommendationSummary": {
     "actionCounts": {
-      "관찰": 1,
-      "제외검토": 23
+      "제외검토": 24
     },
     "gradeCounts": {
-      "C": 1,
-      "D": 23
+      "D": 24
     },
     "topCandidates": [
       {
         "rank": 1,
-        "name": "이오테크닉스",
-        "code": "039030",
-        "score": 60,
-        "grade": "C",
-        "action": "관찰",
-        "breakdown": {
-          "technicalScore": 62,
-          "supplyScore": 50,
-          "newsScore": 90,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        }
-      },
-      {
-        "rank": 2,
-        "name": "두산에너빌리티",
-        "code": "034020",
-        "score": 58,
-        "grade": "D",
-        "action": "제외검토",
-        "breakdown": {
-          "technicalScore": 53,
-          "supplyScore": 50,
-          "newsScore": 100,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        }
-      },
-      {
-        "rank": 3,
-        "name": "LG에너지솔루션",
-        "code": "373220",
-        "score": 57,
-        "grade": "D",
-        "action": "제외검토",
-        "breakdown": {
-          "technicalScore": 57,
-          "supplyScore": 50,
-          "newsScore": 86,
-          "reportScore": 50,
-          "liquidityScore": 45,
-          "weights": {
-            "technical": 35,
-            "supply": 25,
-            "news": 15,
-            "report": 15,
-            "liquidity": 10
-          },
-          "supplyMemo": "수급 중립/혼조"
-        }
-      },
-      {
-        "rank": 4,
         "name": "KB금융",
         "code": "105560",
         "score": 55,
@@ -113,16 +42,85 @@
         }
       },
       {
-        "rank": 5,
-        "name": "한국항공우주",
-        "code": "047810",
-        "score": 55,
+        "rank": 2,
+        "name": "이오테크닉스",
+        "code": "039030",
+        "score": 54,
         "grade": "D",
         "action": "제외검토",
         "breakdown": {
-          "technicalScore": 44,
+          "technicalScore": 62,
           "supplyScore": 50,
-          "newsScore": 100,
+          "newsScore": 50,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        }
+      },
+      {
+        "rank": 3,
+        "name": "LG에너지솔루션",
+        "code": "373220",
+        "score": 52,
+        "grade": "D",
+        "action": "제외검토",
+        "breakdown": {
+          "technicalScore": 57,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        }
+      },
+      {
+        "rank": 4,
+        "name": "두산에너빌리티",
+        "code": "034020",
+        "score": 51,
+        "grade": "D",
+        "action": "제외검토",
+        "breakdown": {
+          "technicalScore": 53,
+          "supplyScore": 50,
+          "newsScore": 50,
+          "reportScore": 50,
+          "liquidityScore": 45,
+          "weights": {
+            "technical": 35,
+            "supply": 25,
+            "news": 15,
+            "report": 15,
+            "liquidity": 10
+          },
+          "supplyMemo": "수급 중립/혼조"
+        }
+      },
+      {
+        "rank": 5,
+        "name": "SK하이닉스",
+        "code": "000660",
+        "score": 50,
+        "grade": "D",
+        "action": "제외검토",
+        "breakdown": {
+          "technicalScore": 50,
+          "supplyScore": 50,
+          "newsScore": 50,
           "reportScore": 50,
           "liquidityScore": 45,
           "weights": {
