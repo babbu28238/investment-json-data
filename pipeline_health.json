@@ -1,6 +1,6 @@
 {
   "version": "V287_PIPELINE_HEALTH_MONITOR",
-  "updatedAt": "2026-09-16 14:56:37 KST",
+  "updatedAt": "2026-09-16 16:04:55 KST",
   "status": "warning",
   "candidateCount": 24,
   "gradeCounts": {
@@ -41,7 +41,7 @@
       "code": "373220",
       "score": 57,
       "grade": "D",
-      "reason": "제외검토 / 최종 57점(D) / 기술 57·수급 50·뉴스 81·리포트 50·유동성 45"
+      "reason": "제외검토 / 최종 57점(D) / 기술 57·수급 50·뉴스 86·리포트 50·유동성 45"
     },
     {
       "rank": 4,
@@ -49,7 +49,7 @@
       "code": "105560",
       "score": 55,
       "grade": "D",
-      "reason": "제외검토 / 최종 55점(D) / 기술 65·수급 50·뉴스 51·리포트 50·유동성 45"
+      "reason": "제외검토 / 최종 55점(D) / 기술 65·수급 50·뉴스 50·리포트 50·유동성 45"
     },
     {
       "rank": 5,
@@ -77,6 +77,14 @@
     },
     {
       "rank": 8,
+      "name": "LIG넥스원",
+      "code": "079550",
+      "score": 54,
+      "grade": "D",
+      "reason": "제외검토 / 최종 54점(D) / 기술 44·수급 50·뉴스 93·리포트 50·유동성 45"
+    },
+    {
+      "rank": 9,
       "name": "셀트리온",
       "code": "068270",
       "score": 53,
@@ -84,118 +92,110 @@
       "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "NAVER",
       "code": "035420",
       "score": 53,
       "grade": "D",
       "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 97·리포트 50·유동성 45"
-    },
-    {
-      "rank": 10,
-      "name": "한화시스템",
-      "code": "272210",
-      "score": 53,
-      "grade": "D",
-      "reason": "제외검토 / 최종 53점(D) / 기술 39·수급 50·뉴스 100·리포트 50·유동성 45"
     }
   ],
   "files": {
     "stock_candidates.json": {
       "name": "stock_candidates.json",
       "exists": true,
-      "sizeBytes": 86871,
-      "modifiedAt": "2026-09-16 14:56:37 KST"
+      "sizeBytes": 86891,
+      "modifiedAt": "2026-09-16 16:04:55 KST"
     },
     "app_data_status.json": {
       "name": "app_data_status.json",
       "exists": true,
       "sizeBytes": 3382,
-      "modifiedAt": "2026-09-16 14:56:37 KST"
+      "modifiedAt": "2026-09-16 16:04:55 KST"
     },
     "live_quotes.json": {
       "name": "live_quotes.json",
       "exists": true,
       "sizeBytes": 6892,
-      "modifiedAt": "2026-09-16 14:56:37 KST"
+      "modifiedAt": "2026-09-16 16:04:55 KST"
     },
     "stock_candidates_input.csv": {
       "name": "stock_candidates_input.csv",
       "exists": true,
-      "sizeBytes": 11852,
-      "modifiedAt": "2026-09-16 14:52:34 KST"
+      "sizeBytes": 11850,
+      "modifiedAt": "2026-09-16 15:59:17 KST"
     },
     "v101_generation_summary.json": {
       "name": "v101_generation_summary.json",
       "exists": true,
       "sizeBytes": 1078,
-      "modifiedAt": "2026-09-16 14:49:47 KST"
+      "modifiedAt": "2026-09-16 15:55:33 KST"
     },
     "news_signals.json": {
       "name": "news_signals.json",
       "exists": true,
-      "sizeBytes": 132690,
-      "modifiedAt": "2026-09-16 14:52:51 KST"
+      "sizeBytes": 131869,
+      "modifiedAt": "2026-09-16 15:59:33 KST"
     },
     "news_signals_summary.json": {
       "name": "news_signals_summary.json",
       "exists": true,
-      "sizeBytes": 2374,
-      "modifiedAt": "2026-09-16 14:52:51 KST"
+      "sizeBytes": 2414,
+      "modifiedAt": "2026-09-16 15:59:33 KST"
     },
     "supply_flow_input.csv": {
       "name": "supply_flow_input.csv",
       "exists": true,
       "sizeBytes": 2639,
-      "modifiedAt": "2026-09-16 14:55:59 KST"
+      "modifiedAt": "2026-09-16 16:04:02 KST"
     },
     "supply_flow_summary.json": {
       "name": "supply_flow_summary.json",
       "exists": true,
       "sizeBytes": 10371,
-      "modifiedAt": "2026-09-16 14:55:59 KST"
+      "modifiedAt": "2026-09-16 16:04:02 KST"
     },
     "report_signals.json": {
       "name": "report_signals.json",
       "exists": true,
       "sizeBytes": 16061,
-      "modifiedAt": "2026-09-16 14:54:50 KST"
+      "modifiedAt": "2026-09-16 16:02:21 KST"
     },
     "report_signals_summary.json": {
       "name": "report_signals_summary.json",
       "exists": true,
       "sizeBytes": 2308,
-      "modifiedAt": "2026-09-16 14:54:50 KST"
+      "modifiedAt": "2026-09-16 16:02:21 KST"
     },
     "recommendation_summary.json": {
       "name": "recommendation_summary.json",
       "exists": true,
-      "sizeBytes": 5992,
-      "modifiedAt": "2026-09-16 14:56:37 KST"
+      "sizeBytes": 5988,
+      "modifiedAt": "2026-09-16 16:04:55 KST"
     },
     "market_pipeline_validation.json": {
       "name": "market_pipeline_validation.json",
       "exists": true,
       "sizeBytes": 2361,
-      "modifiedAt": "2026-09-16 14:49:47 KST"
+      "modifiedAt": "2026-09-16 15:55:33 KST"
     },
     "intraday_pipeline_status.json": {
       "name": "intraday_pipeline_status.json",
       "exists": true,
       "sizeBytes": 187,
-      "modifiedAt": "2026-09-16 14:49:47 KST"
+      "modifiedAt": "2026-09-16 15:55:33 KST"
     },
     "live_quotes_validation_report.json": {
       "name": "live_quotes_validation_report.json",
       "exists": true,
       "sizeBytes": 568,
-      "modifiedAt": "2026-09-16 14:49:47 KST"
+      "modifiedAt": "2026-09-16 15:55:33 KST"
     },
     "app_pipeline_status.json": {
       "name": "app_pipeline_status.json",
       "exists": true,
       "sizeBytes": 261,
-      "modifiedAt": "2026-09-16 14:49:47 KST"
+      "modifiedAt": "2026-09-16 15:55:33 KST"
     }
   },
   "nextAction": "앱 데이터 탭에서 저장 URL 새로고침 후 후보/현재가/뉴스·수급·리포트 반영 여부 확인"
