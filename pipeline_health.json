@@ -1,11 +1,11 @@
 {
   "version": "V287_PIPELINE_HEALTH_MONITOR",
-  "updatedAt": "2026-09-18 17:44:57 KST",
+  "updatedAt": "2026-09-18 18:32:55 KST",
   "status": "warning",
   "candidateCount": 24,
   "gradeCounts": {
-    "C": 3,
-    "D": 21
+    "C": 4,
+    "D": 20
   },
   "liveQuote": {
     "quoteCount": 24,
@@ -47,12 +47,20 @@
       "rank": 4,
       "name": "LG에너지솔루션",
       "code": "373220",
-      "score": 59,
-      "grade": "D",
-      "reason": "제외검토 / 최종 59점(D) / 기술 57·수급 50·뉴스 100·리포트 50·유동성 45"
+      "score": 60,
+      "grade": "C",
+      "reason": "관찰 / 최종 60점(C) / 기술 59·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
       "rank": 5,
+      "name": "KB금융",
+      "code": "105560",
+      "score": 58,
+      "grade": "D",
+      "reason": "제외검토 / 최종 58점(D) / 기술 65·수급 50·뉴스 73·리포트 50·유동성 45"
+    },
+    {
+      "rank": 6,
       "name": "SK하이닉스",
       "code": "000660",
       "score": 58,
@@ -60,7 +68,15 @@
       "reason": "제외검토 / 최종 58점(D) / 기술 65·수급 50·뉴스 74·리포트 50·유동성 45"
     },
     {
-      "rank": 6,
+      "rank": 7,
+      "name": "리노공업",
+      "code": "058470",
+      "score": 57,
+      "grade": "D",
+      "reason": "제외검토 / 최종 57점(D) / 기술 55·수급 50·뉴스 86·리포트 50·유동성 45"
+    },
+    {
+      "rank": 8,
       "name": "한화에어로스페이스",
       "code": "012450",
       "score": 56,
@@ -68,7 +84,7 @@
       "reason": "제외검토 / 최종 56점(D) / 기술 48·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "셀트리온",
       "code": "068270",
       "score": 56,
@@ -76,126 +92,110 @@
       "reason": "제외검토 / 최종 56점(D) / 기술 48·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 8,
+      "rank": 10,
       "name": "한국항공우주",
       "code": "047810",
       "score": 56,
       "grade": "D",
       "reason": "제외검토 / 최종 56점(D) / 기술 46·수급 50·뉴스 100·리포트 50·유동성 45"
-    },
-    {
-      "rank": 9,
-      "name": "두산에너빌리티",
-      "code": "034020",
-      "score": 55,
-      "grade": "D",
-      "reason": "제외검토 / 최종 55점(D) / 기술 45·수급 50·뉴스 100·리포트 50·유동성 45"
-    },
-    {
-      "rank": 10,
-      "name": "리노공업",
-      "code": "058470",
-      "score": 55,
-      "grade": "D",
-      "reason": "제외검토 / 최종 55점(D) / 기술 55·수급 50·뉴스 72·리포트 50·유동성 45"
     }
   ],
   "files": {
     "stock_candidates.json": {
       "name": "stock_candidates.json",
       "exists": true,
-      "sizeBytes": 86416,
-      "modifiedAt": "2026-09-18 17:44:57 KST"
+      "sizeBytes": 86323,
+      "modifiedAt": "2026-09-18 18:32:55 KST"
     },
     "app_data_status.json": {
       "name": "app_data_status.json",
       "exists": true,
-      "sizeBytes": 3357,
-      "modifiedAt": "2026-09-18 17:44:57 KST"
+      "sizeBytes": 3345,
+      "modifiedAt": "2026-09-18 18:32:55 KST"
     },
     "live_quotes.json": {
       "name": "live_quotes.json",
       "exists": true,
       "sizeBytes": 6892,
-      "modifiedAt": "2026-09-18 17:44:57 KST"
+      "modifiedAt": "2026-09-18 18:32:55 KST"
     },
     "stock_candidates_input.csv": {
       "name": "stock_candidates_input.csv",
       "exists": true,
-      "sizeBytes": 12042,
-      "modifiedAt": "2026-09-18 17:39:54 KST"
+      "sizeBytes": 12064,
+      "modifiedAt": "2026-09-18 18:27:22 KST"
     },
     "v101_generation_summary.json": {
       "name": "v101_generation_summary.json",
       "exists": true,
       "sizeBytes": 1078,
-      "modifiedAt": "2026-09-18 17:36:39 KST"
+      "modifiedAt": "2026-09-18 18:23:44 KST"
     },
     "news_signals.json": {
       "name": "news_signals.json",
       "exists": true,
-      "sizeBytes": 130914,
-      "modifiedAt": "2026-09-18 17:40:13 KST"
+      "sizeBytes": 131064,
+      "modifiedAt": "2026-09-18 18:27:40 KST"
     },
     "news_signals_summary.json": {
       "name": "news_signals_summary.json",
       "exists": true,
-      "sizeBytes": 2313,
-      "modifiedAt": "2026-09-18 17:40:13 KST"
+      "sizeBytes": 2287,
+      "modifiedAt": "2026-09-18 18:27:40 KST"
     },
     "supply_flow_input.csv": {
       "name": "supply_flow_input.csv",
       "exists": true,
       "sizeBytes": 2639,
-      "modifiedAt": "2026-09-18 17:44:08 KST"
+      "modifiedAt": "2026-09-18 18:32:01 KST"
     },
     "supply_flow_summary.json": {
       "name": "supply_flow_summary.json",
       "exists": true,
       "sizeBytes": 10383,
-      "modifiedAt": "2026-09-18 17:44:08 KST"
+      "modifiedAt": "2026-09-18 18:32:01 KST"
     },
     "report_signals.json": {
       "name": "report_signals.json",
       "exists": true,
       "sizeBytes": 16061,
-      "modifiedAt": "2026-09-18 17:42:41 KST"
+      "modifiedAt": "2026-09-18 18:30:25 KST"
     },
     "report_signals_summary.json": {
       "name": "report_signals_summary.json",
       "exists": true,
       "sizeBytes": 2296,
-      "modifiedAt": "2026-09-18 17:42:41 KST"
+      "modifiedAt": "2026-09-18 18:30:25 KST"
     },
     "recommendation_summary.json": {
       "name": "recommendation_summary.json",
       "exists": true,
-      "sizeBytes": 5986,
-      "modifiedAt": "2026-09-18 17:44:57 KST"
+      "sizeBytes": 5966,
+      "modifiedAt": "2026-09-18 18:32:55 KST"
     },
     "market_pipeline_validation.json": {
       "name": "market_pipeline_validation.json",
       "exists": true,
       "sizeBytes": 2361,
-      "modifiedAt": "2026-09-18 17:36:39 KST"
+      "modifiedAt": "2026-09-18 18:23:44 KST"
     },
     "intraday_pipeline_status.json": {
       "name": "intraday_pipeline_status.json",
       "exists": true,
       "sizeBytes": 187,
-      "modifiedAt": "2026-09-18 17:36:39 KST"
+      "modifiedAt": "2026-09-18 18:23:44 KST"
     },
     "live_quotes_validation_report.json": {
       "name": "live_quotes_validation_report.json",
       "exists": true,
       "sizeBytes": 568,
-      "modifiedAt": "2026-09-18 17:36:39 KST"
+      "modifiedAt": "2026-09-18 18:23:44 KST"
     },
     "app_pipeline_status.json": {
       "name": "app_pipeline_status.json",
       "exists": true,
       "sizeBytes": 261,
-      "modifiedAt": "2026-09-18 17:36:39 KST"
+      "modifiedAt": "2026-09-18 18:23:44 KST"
     }
   },
   "nextAction": "앱 데이터 탭에서 저장 URL 새로고침 후 후보/현재가/뉴스·수급·리포트 반영 여부 확인"
