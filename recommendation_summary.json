@@ -1,42 +1,42 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-17 20:45:02",
-  "startedAt": "2026-09-17 20:45:02",
+  "updatedAt": "2026-09-18 14:50:12",
+  "startedAt": "2026-09-18 14:50:12",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 1,
-    "D": 23
+    "C": 4,
+    "D": 20
   },
   "actionCounts": {
-    "관찰": 1,
-    "제외검토": 23
+    "관찰": 4,
+    "제외검토": 20
   },
   "sectorCounts": {
-    "방산·우주항공": 4,
-    "2차전지·소재": 4,
     "반도체·AI": 4,
     "원전·전력·에너지": 3,
-    "금융·밸류업": 1,
+    "방산·우주항공": 4,
+    "2차전지·소재": 4,
     "바이오·제약": 3,
+    "금융·밸류업": 1,
+    "자동차·모빌리티": 2,
     "조선·해양": 1,
     "로봇·자동화": 1,
-    "인터넷·게임·콘텐츠": 1,
-    "자동차·모빌리티": 2
+    "인터넷·게임·콘텐츠": 1
   },
   "topCandidates": [
     {
       "rank": 1,
-      "name": "한화시스템",
-      "code": "272210",
-      "score": 61,
+      "name": "SK하이닉스",
+      "code": "000660",
+      "score": 62,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 63,
+        "technicalScore": 65,
         "supplyScore": 50,
         "newsScore": 99,
         "reportScore": 50,
@@ -53,6 +53,75 @@
     },
     {
       "rank": 2,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 62,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 63,
+        "supplyScore": 50,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 3,
+      "name": "한화시스템",
+      "code": "272210",
+      "score": 60,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 65,
+        "supplyScore": 50,
+        "newsScore": 85,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 4,
+      "name": "LIG넥스원",
+      "code": "079550",
+      "score": 60,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 61,
+        "supplyScore": 50,
+        "newsScore": 95,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 5,
       "name": "LG에너지솔루션",
       "code": "373220",
       "score": 59,
@@ -75,85 +144,16 @@
       }
     },
     {
-      "rank": 3,
-      "name": "이오테크닉스",
-      "code": "039030",
+      "rank": 6,
+      "name": "한화에어로스페이스",
+      "code": "012450",
       "score": 59,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 62,
-        "supplyScore": 50,
-        "newsScore": 83,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 4,
-      "name": "두산에너빌리티",
-      "code": "034020",
-      "score": 58,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 53,
+        "technicalScore": 56,
         "supplyScore": 50,
         "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 5,
-      "name": "SK하이닉스",
-      "code": "000660",
-      "score": 58,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 52,
-        "supplyScore": 50,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 6,
-      "name": "KB금융",
-      "code": "105560",
-      "score": 57,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 65,
-        "supplyScore": 50,
-        "newsScore": 65,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -168,15 +168,15 @@
     },
     {
       "rank": 7,
-      "name": "한화에어로스페이스",
-      "code": "012450",
+      "name": "리노공업",
+      "code": "058470",
       "score": 57,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 50,
+        "technicalScore": 55,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 86,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -191,31 +191,8 @@
     },
     {
       "rank": 8,
-      "name": "한국항공우주",
-      "code": "047810",
-      "score": 56,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 48,
-        "supplyScore": 50,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 9,
-      "name": "LS ELECTRIC",
-      "code": "010120",
+      "name": "셀트리온",
+      "code": "068270",
       "score": 56,
       "grade": "D",
       "action": "제외검토",
@@ -236,16 +213,39 @@
       }
     },
     {
-      "rank": 10,
-      "name": "셀트리온",
-      "code": "068270",
-      "score": 54,
+      "rank": 9,
+      "name": "KB금융",
+      "code": "105560",
+      "score": 55,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 44,
+        "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 92,
+        "newsScore": 52,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 10,
+      "name": "두산에너빌리티",
+      "code": "034020",
+      "score": 55,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 45,
+        "supplyScore": 50,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
