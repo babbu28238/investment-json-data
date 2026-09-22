@@ -1,11 +1,11 @@
 {
   "version": "V287_PIPELINE_HEALTH_MONITOR",
-  "updatedAt": "2026-09-22 16:06:04 KST",
+  "updatedAt": "2026-09-22 18:01:21 KST",
   "status": "warning",
   "candidateCount": 24,
   "gradeCounts": {
-    "C": 2,
-    "D": 22
+    "C": 3,
+    "D": 21
   },
   "liveQuote": {
     "quoteCount": 24,
@@ -21,27 +21,27 @@
   "topCandidates": [
     {
       "rank": 1,
-      "name": "SK하이닉스",
-      "code": "000660",
+      "name": "한화시스템",
+      "code": "272210",
       "score": 62,
       "grade": "C",
-      "reason": "관찰 / 최종 62점(C) / 기술 65·수급 50·뉴스 100·리포트 50·유동성 45"
+      "reason": "관찰 / 최종 62점(C) / 기술 64·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
       "rank": 2,
-      "name": "한화시스템",
-      "code": "272210",
+      "name": "SK하이닉스",
+      "code": "000660",
       "score": 61,
       "grade": "C",
-      "reason": "관찰 / 최종 61점(C) / 기술 64·수급 50·뉴스 92·리포트 50·유동성 45"
+      "reason": "관찰 / 최종 61점(C) / 기술 65·수급 50·뉴스 92·리포트 50·유동성 45"
     },
     {
       "rank": 3,
       "name": "삼성전자",
       "code": "005930",
-      "score": 59,
-      "grade": "D",
-      "reason": "제외검토 / 최종 59점(D) / 기술 62·수급 50·뉴스 85·리포트 50·유동성 45"
+      "score": 60,
+      "grade": "C",
+      "reason": "관찰 / 최종 60점(C) / 기술 62·수급 50·뉴스 92·리포트 50·유동성 45"
     },
     {
       "rank": 4,
@@ -49,7 +49,7 @@
       "code": "034020",
       "score": 59,
       "grade": "D",
-      "reason": "제외검토 / 최종 59점(D) / 기술 55·수급 50·뉴스 99·리포트 50·유동성 45"
+      "reason": "제외검토 / 최종 59점(D) / 기술 55·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
       "rank": 5,
@@ -77,14 +77,6 @@
     },
     {
       "rank": 8,
-      "name": "한국항공우주",
-      "code": "047810",
-      "score": 56,
-      "grade": "D",
-      "reason": "제외검토 / 최종 56점(D) / 기술 48·수급 50·뉴스 100·리포트 50·유동성 45"
-    },
-    {
-      "rank": 9,
       "name": "LG에너지솔루션",
       "code": "373220",
       "score": 55,
@@ -92,110 +84,118 @@
       "reason": "제외검토 / 최종 55점(D) / 기술 43·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
+      "rank": 9,
+      "name": "한국항공우주",
+      "code": "047810",
+      "score": 55,
+      "grade": "D",
+      "reason": "제외검토 / 최종 55점(D) / 기술 44·수급 50·뉴스 100·리포트 50·유동성 45"
+    },
+    {
       "rank": 10,
       "name": "한화에어로스페이스",
       "code": "012450",
-      "score": 54,
+      "score": 53,
       "grade": "D",
-      "reason": "제외검토 / 최종 54점(D) / 기술 42·수급 50·뉴스 99·리포트 50·유동성 45"
+      "reason": "제외검토 / 최종 53점(D) / 기술 42·수급 50·뉴스 90·리포트 50·유동성 45"
     }
   ],
   "files": {
     "stock_candidates.json": {
       "name": "stock_candidates.json",
       "exists": true,
-      "sizeBytes": 86538,
-      "modifiedAt": "2026-09-22 16:06:04 KST"
+      "sizeBytes": 86744,
+      "modifiedAt": "2026-09-22 18:01:21 KST"
     },
     "app_data_status.json": {
       "name": "app_data_status.json",
       "exists": true,
-      "sizeBytes": 3360,
-      "modifiedAt": "2026-09-22 16:06:04 KST"
+      "sizeBytes": 3355,
+      "modifiedAt": "2026-09-22 18:01:21 KST"
     },
     "live_quotes.json": {
       "name": "live_quotes.json",
       "exists": true,
       "sizeBytes": 6892,
-      "modifiedAt": "2026-09-22 16:06:04 KST"
+      "modifiedAt": "2026-09-22 18:01:21 KST"
     },
     "stock_candidates_input.csv": {
       "name": "stock_candidates_input.csv",
       "exists": true,
-      "sizeBytes": 11914,
-      "modifiedAt": "2026-09-22 16:00:25 KST"
+      "sizeBytes": 11901,
+      "modifiedAt": "2026-09-22 17:57:11 KST"
     },
     "v101_generation_summary.json": {
       "name": "v101_generation_summary.json",
       "exists": true,
       "sizeBytes": 1078,
-      "modifiedAt": "2026-09-22 15:56:45 KST"
+      "modifiedAt": "2026-09-22 17:54:27 KST"
     },
     "news_signals.json": {
       "name": "news_signals.json",
       "exists": true,
-      "sizeBytes": 129881,
-      "modifiedAt": "2026-09-22 16:00:42 KST"
+      "sizeBytes": 129788,
+      "modifiedAt": "2026-09-22 17:57:28 KST"
     },
     "news_signals_summary.json": {
       "name": "news_signals_summary.json",
       "exists": true,
-      "sizeBytes": 2431,
-      "modifiedAt": "2026-09-22 16:00:42 KST"
+      "sizeBytes": 2506,
+      "modifiedAt": "2026-09-22 17:57:28 KST"
     },
     "supply_flow_input.csv": {
       "name": "supply_flow_input.csv",
       "exists": true,
       "sizeBytes": 2639,
-      "modifiedAt": "2026-09-22 16:05:09 KST"
+      "modifiedAt": "2026-09-22 18:00:42 KST"
     },
     "supply_flow_summary.json": {
       "name": "supply_flow_summary.json",
       "exists": true,
       "sizeBytes": 10398,
-      "modifiedAt": "2026-09-22 16:05:09 KST"
+      "modifiedAt": "2026-09-22 18:00:42 KST"
     },
     "report_signals.json": {
       "name": "report_signals.json",
       "exists": true,
       "sizeBytes": 16061,
-      "modifiedAt": "2026-09-22 16:03:30 KST"
+      "modifiedAt": "2026-09-22 17:59:31 KST"
     },
     "report_signals_summary.json": {
       "name": "report_signals_summary.json",
       "exists": true,
-      "sizeBytes": 2287,
-      "modifiedAt": "2026-09-22 16:03:30 KST"
+      "sizeBytes": 2296,
+      "modifiedAt": "2026-09-22 17:59:31 KST"
     },
     "recommendation_summary.json": {
       "name": "recommendation_summary.json",
       "exists": true,
-      "sizeBytes": 5991,
-      "modifiedAt": "2026-09-22 16:06:04 KST"
+      "sizeBytes": 5986,
+      "modifiedAt": "2026-09-22 18:01:21 KST"
     },
     "market_pipeline_validation.json": {
       "name": "market_pipeline_validation.json",
       "exists": true,
       "sizeBytes": 2361,
-      "modifiedAt": "2026-09-22 15:56:45 KST"
+      "modifiedAt": "2026-09-22 17:54:27 KST"
     },
     "intraday_pipeline_status.json": {
       "name": "intraday_pipeline_status.json",
       "exists": true,
       "sizeBytes": 187,
-      "modifiedAt": "2026-09-22 15:56:45 KST"
+      "modifiedAt": "2026-09-22 17:54:27 KST"
     },
     "live_quotes_validation_report.json": {
       "name": "live_quotes_validation_report.json",
       "exists": true,
       "sizeBytes": 568,
-      "modifiedAt": "2026-09-22 15:56:45 KST"
+      "modifiedAt": "2026-09-22 17:54:27 KST"
     },
     "app_pipeline_status.json": {
       "name": "app_pipeline_status.json",
       "exists": true,
       "sizeBytes": 261,
-      "modifiedAt": "2026-09-22 15:56:45 KST"
+      "modifiedAt": "2026-09-22 17:54:27 KST"
     }
   },
   "nextAction": "앱 데이터 탭에서 저장 URL 새로고침 후 후보/현재가/뉴스·수급·리포트 반영 여부 확인"
