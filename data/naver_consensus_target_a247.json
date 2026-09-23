@@ -1,9 +1,9 @@
 {
   "version": "A247",
-  "generatedAt": "2026-09-22T18:14:26",
+  "generatedAt": "2026-09-23T18:34:16",
   "summary": {
     "version": "A247",
-    "generatedAt": "2026-09-22T18:14:26",
+    "generatedAt": "2026-09-23T18:34:16",
     "status": "naver_consensus_target",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 25,
+    "candidateCount": 30,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -92,124 +92,64 @@
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSPI",
         "investor": "외국인",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSDAQ",
         "investor": "외국인",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSPI",
         "investor": "기관합계",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSDAQ",
         "investor": "기관합계",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSPI",
         "investor": "연기금",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSDAQ",
         "investor": "연기금",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSPI",
         "investor": "투신",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSDAQ",
         "investor": "투신",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSPI",
         "investor": "금융투자",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       },
       {
-        "period": 5,
+        "date": "20260923",
         "market": "KOSDAQ",
         "investor": "금융투자",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSPI",
-        "investor": "외국인",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSDAQ",
-        "investor": "외국인",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSPI",
-        "investor": "기관합계",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSDAQ",
-        "investor": "기관합계",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSPI",
-        "investor": "연기금",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSDAQ",
-        "investor": "연기금",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSPI",
-        "investor": "투신",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSDAQ",
-        "investor": "투신",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSPI",
-        "investor": "금융투자",
-        "error": "empty"
-      },
-      {
-        "period": 20,
-        "market": "KOSDAQ",
-        "investor": "금융투자",
-        "error": "empty"
+        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
       }
     ],
     "supplyHitCount": 0,
@@ -236,24 +176,11 @@
       },
       {
         "path": "data/market_universe.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/final_stock_candidates_a207.json",
-        "count": 0
-      },
-      {
-        "path": "data/ai_scored_candidates.json",
-        "count": 0
+        "count": 30
       }
     ],
-    "message": "후보 JSON이 비어 있어 stock_candidates_ai_scored.json을 덮어쓰지 않았습니다.",
-    "rawTargetRows": 111,
-    "reliableTargetCandidateCount": 4,
+    "rawTargetRows": 130,
+    "reliableTargetCandidateCount": 6,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
     "targetUpsideCandidateCount": 0,
@@ -356,9 +283,9 @@
       "currentPrice": 70000,
       "targetPrice": 0,
       "upsidePercent": 0,
-      "realisticTargetPrice": 51500,
-      "observeTimingPrice": 45000,
-      "stopTimingPrice": 38600,
+      "realisticTargetPrice": 42800,
+      "observeTimingPrice": 37500,
+      "stopTimingPrice": 32100,
       "source": "https://m.stock.naver.com/domestic/stock/047810/total",
       "rawCandidates": [],
       "ok": true,
@@ -630,6 +557,81 @@
       "observeTimingPrice": 0,
       "stopTimingPrice": 0,
       "source": "https://m.stock.naver.com/domestic/stock/039030/total",
+      "rawCandidates": [],
+      "ok": true,
+      "statusCode": 200,
+      "error": ""
+    },
+    {
+      "code": "028260",
+      "name": "삼성물산",
+      "currentPrice": 0,
+      "targetPrice": 0,
+      "upsidePercent": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "source": "https://m.stock.naver.com/domestic/stock/028260/total",
+      "rawCandidates": [],
+      "ok": true,
+      "statusCode": 200,
+      "error": ""
+    },
+    {
+      "code": "068760",
+      "name": "셀트리온제약",
+      "currentPrice": 0,
+      "targetPrice": 0,
+      "upsidePercent": 0,
+      "realisticTargetPrice": 45600,
+      "observeTimingPrice": 39900,
+      "stopTimingPrice": 34200,
+      "source": "https://m.stock.naver.com/domestic/stock/068760/total",
+      "rawCandidates": [],
+      "ok": true,
+      "statusCode": 200,
+      "error": ""
+    },
+    {
+      "code": "091990",
+      "name": "셀트리온헬스케어",
+      "currentPrice": 0,
+      "targetPrice": 0,
+      "upsidePercent": 0,
+      "realisticTargetPrice": 208000,
+      "observeTimingPrice": 182000,
+      "stopTimingPrice": 156000,
+      "source": "https://m.stock.naver.com/domestic/stock/091990/total",
+      "rawCandidates": [],
+      "ok": true,
+      "statusCode": 200,
+      "error": ""
+    },
+    {
+      "code": "058470",
+      "name": "리노공업",
+      "currentPrice": 0,
+      "targetPrice": 0,
+      "upsidePercent": 0,
+      "realisticTargetPrice": 200000,
+      "observeTimingPrice": 175000,
+      "stopTimingPrice": 150000,
+      "source": "https://m.stock.naver.com/domestic/stock/058470/total",
+      "rawCandidates": [],
+      "ok": true,
+      "statusCode": 200,
+      "error": ""
+    },
+    {
+      "code": "112040",
+      "name": "위메이드",
+      "currentPrice": 0,
+      "targetPrice": 0,
+      "upsidePercent": 0,
+      "realisticTargetPrice": 26600,
+      "observeTimingPrice": 23300,
+      "stopTimingPrice": 20000,
+      "source": "https://m.stock.naver.com/domestic/stock/112040/total",
       "rawCandidates": [],
       "ok": true,
       "statusCode": 200,
