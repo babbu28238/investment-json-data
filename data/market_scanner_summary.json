@@ -1,7 +1,7 @@
 {
-  "version": "A244",
-  "generatedAt": "2026-09-23T17:58:49",
-  "status": "target_fallback_candidates",
+  "version": "A245",
+  "generatedAt": "2026-09-23T18:21:46",
+  "status": "target_clean_filter",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -156,7 +156,7 @@
   "newsItemCount": 0,
   "newsMergedCount": 0,
   "newsCollectedCandidateCount": 0,
-  "targetPriceCandidateCount": 28,
+  "targetPriceCandidateCount": 13,
   "candidateSource": "stock_candidates_ai_scored.json",
   "candidateSourcesTried": [
     {
@@ -176,5 +176,8 @@
       "count": 30
     }
   ],
-  "rawTargetRows": 130
+  "rawTargetRows": 130,
+  "reliableTargetCandidateCount": 6,
+  "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+  "source": "target_price_bands_a244"
 }
