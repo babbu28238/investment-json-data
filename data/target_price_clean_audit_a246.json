@@ -1,6 +1,6 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-23T18:23:59",
+  "generatedAt": "2026-09-24T18:25:50",
   "details": [
     {
       "code": "005930",
@@ -8,6 +8,7 @@
       "currentPrice": 297500,
       "rawPrices": [
         2027,
+        2963,
         5500,
         8550
       ],
@@ -16,6 +17,10 @@
         {
           "price": 2027,
           "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2963,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 5500,
@@ -36,21 +41,9 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [
-        5000,
-        5380
-      ],
+      "rawPrices": [],
       "acceptedPrices": [],
-      "rejected": [
-        {
-          "price": 5000,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5380,
-          "reason": "1만원 미만 잡음 제거"
-        }
-      ],
+      "rejected": [],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -150,6 +143,7 @@
       "name": "한화시스템",
       "currentPrice": 132671,
       "rawPrices": [
+        1000,
         2027,
         5000,
         6000,
@@ -159,6 +153,10 @@
         110000
       ],
       "rejected": [
+        {
+          "price": 1000,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 2027,
           "reason": "연도 숫자 제거"
@@ -253,15 +251,10 @@
       "name": "삼성물산",
       "currentPrice": 0,
       "rawPrices": [
-        7300,
         8550
       ],
       "acceptedPrices": [],
       "rejected": [
-        {
-          "price": 7300,
-          "reason": "1만원 미만 잡음 제거"
-        },
         {
           "price": 8550,
           "reason": "1만원 미만 잡음 제거"
