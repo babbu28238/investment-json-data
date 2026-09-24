@@ -1,11 +1,10 @@
 {
   "version": "V287_PIPELINE_HEALTH_MONITOR",
-  "updatedAt": "2026-09-24 18:49:51 KST",
+  "updatedAt": "2026-09-24 20:48:38 KST",
   "status": "warning",
   "candidateCount": 24,
   "gradeCounts": {
-    "C": 1,
-    "D": 23
+    "D": 24
   },
   "liveQuote": {
     "quoteCount": 24,
@@ -23,9 +22,9 @@
       "rank": 1,
       "name": "SK하이닉스",
       "code": "000660",
-      "score": 60,
-      "grade": "C",
-      "reason": "관찰 / 최종 60점(C) / 기술 65·수급 50·뉴스 85·리포트 50·유동성 45"
+      "score": 59,
+      "grade": "D",
+      "reason": "제외검토 / 최종 59점(D) / 기술 65·수급 50·뉴스 78·리포트 50·유동성 45"
     },
     {
       "rank": 2,
@@ -53,6 +52,14 @@
     },
     {
       "rank": 5,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 55,
+      "grade": "D",
+      "reason": "제외검토 / 최종 55점(D) / 기술 61·수급 50·뉴스 63·리포트 50·유동성 45"
+    },
+    {
+      "rank": 6,
       "name": "두산에너빌리티",
       "code": "034020",
       "score": 55,
@@ -60,7 +67,15 @@
       "reason": "제외검토 / 최종 55점(D) / 기술 43·수급 50·뉴스 100·리포트 50·유동성 45"
     },
     {
-      "rank": 6,
+      "rank": 7,
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "score": 54,
+      "grade": "D",
+      "reason": "제외검토 / 최종 54점(D) / 기술 45·수급 50·뉴스 95·리포트 50·유동성 45"
+    },
+    {
+      "rank": 8,
       "name": "한국항공우주",
       "code": "047810",
       "score": 54,
@@ -68,28 +83,12 @@
       "reason": "제외검토 / 최종 54점(D) / 기술 42·수급 50·뉴스 97·리포트 50·유동성 45"
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "LIG넥스원",
       "code": "079550",
       "score": 53,
       "grade": "D",
       "reason": "제외검토 / 최종 53점(D) / 기술 47·수급 50·뉴스 81·리포트 50·유동성 45"
-    },
-    {
-      "rank": 8,
-      "name": "LG에너지솔루션",
-      "code": "373220",
-      "score": 53,
-      "grade": "D",
-      "reason": "제외검토 / 최종 53점(D) / 기술 45·수급 50·뉴스 88·리포트 50·유동성 45"
-    },
-    {
-      "rank": 9,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 52,
-      "grade": "D",
-      "reason": "제외검토 / 최종 52점(D) / 기술 61·수급 50·뉴스 40·리포트 50·유동성 45"
     },
     {
       "rank": 10,
@@ -104,98 +103,98 @@
     "stock_candidates.json": {
       "name": "stock_candidates.json",
       "exists": true,
-      "sizeBytes": 86373,
-      "modifiedAt": "2026-09-24 18:49:51 KST"
+      "sizeBytes": 86635,
+      "modifiedAt": "2026-09-24 20:48:37 KST"
     },
     "app_data_status.json": {
       "name": "app_data_status.json",
       "exists": true,
-      "sizeBytes": 3377,
-      "modifiedAt": "2026-09-24 18:49:50 KST"
+      "sizeBytes": 3339,
+      "modifiedAt": "2026-09-24 20:48:37 KST"
     },
     "live_quotes.json": {
       "name": "live_quotes.json",
       "exists": true,
       "sizeBytes": 6892,
-      "modifiedAt": "2026-09-24 18:49:50 KST"
+      "modifiedAt": "2026-09-24 20:48:37 KST"
     },
     "stock_candidates_input.csv": {
       "name": "stock_candidates_input.csv",
       "exists": true,
       "sizeBytes": 11931,
-      "modifiedAt": "2026-09-24 18:45:40 KST"
+      "modifiedAt": "2026-09-24 20:44:18 KST"
     },
     "v101_generation_summary.json": {
       "name": "v101_generation_summary.json",
       "exists": true,
       "sizeBytes": 1078,
-      "modifiedAt": "2026-09-24 18:42:56 KST"
+      "modifiedAt": "2026-09-24 20:41:32 KST"
     },
     "news_signals.json": {
       "name": "news_signals.json",
       "exists": true,
-      "sizeBytes": 130782,
-      "modifiedAt": "2026-09-24 18:45:56 KST"
+      "sizeBytes": 131062,
+      "modifiedAt": "2026-09-24 20:44:35 KST"
     },
     "news_signals_summary.json": {
       "name": "news_signals_summary.json",
       "exists": true,
-      "sizeBytes": 2449,
-      "modifiedAt": "2026-09-24 18:45:56 KST"
+      "sizeBytes": 2490,
+      "modifiedAt": "2026-09-24 20:44:35 KST"
     },
     "supply_flow_input.csv": {
       "name": "supply_flow_input.csv",
       "exists": true,
       "sizeBytes": 2639,
-      "modifiedAt": "2026-09-24 18:49:10 KST"
+      "modifiedAt": "2026-09-24 20:47:58 KST"
     },
     "supply_flow_summary.json": {
       "name": "supply_flow_summary.json",
       "exists": true,
       "sizeBytes": 10398,
-      "modifiedAt": "2026-09-24 18:49:10 KST"
+      "modifiedAt": "2026-09-24 20:47:58 KST"
     },
     "report_signals.json": {
       "name": "report_signals.json",
       "exists": true,
       "sizeBytes": 16061,
-      "modifiedAt": "2026-09-24 18:47:59 KST"
+      "modifiedAt": "2026-09-24 20:46:44 KST"
     },
     "report_signals_summary.json": {
       "name": "report_signals_summary.json",
       "exists": true,
       "sizeBytes": 2281,
-      "modifiedAt": "2026-09-24 18:47:59 KST"
+      "modifiedAt": "2026-09-24 20:46:44 KST"
     },
     "recommendation_summary.json": {
       "name": "recommendation_summary.json",
       "exists": true,
-      "sizeBytes": 6000,
-      "modifiedAt": "2026-09-24 18:49:50 KST"
+      "sizeBytes": 5977,
+      "modifiedAt": "2026-09-24 20:48:37 KST"
     },
     "market_pipeline_validation.json": {
       "name": "market_pipeline_validation.json",
       "exists": true,
       "sizeBytes": 2361,
-      "modifiedAt": "2026-09-24 18:42:56 KST"
+      "modifiedAt": "2026-09-24 20:41:32 KST"
     },
     "intraday_pipeline_status.json": {
       "name": "intraday_pipeline_status.json",
       "exists": true,
       "sizeBytes": 187,
-      "modifiedAt": "2026-09-24 18:42:56 KST"
+      "modifiedAt": "2026-09-24 20:41:32 KST"
     },
     "live_quotes_validation_report.json": {
       "name": "live_quotes_validation_report.json",
       "exists": true,
       "sizeBytes": 568,
-      "modifiedAt": "2026-09-24 18:42:56 KST"
+      "modifiedAt": "2026-09-24 20:41:32 KST"
     },
     "app_pipeline_status.json": {
       "name": "app_pipeline_status.json",
       "exists": true,
       "sizeBytes": 261,
-      "modifiedAt": "2026-09-24 18:42:56 KST"
+      "modifiedAt": "2026-09-24 20:41:32 KST"
     }
   },
   "nextAction": "앱 데이터 탭에서 저장 URL 새로고침 후 후보/현재가/뉴스·수급·리포트 반영 여부 확인"

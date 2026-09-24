@@ -1,19 +1,17 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-24 18:49:50",
-  "startedAt": "2026-09-24 18:49:50",
+  "updatedAt": "2026-09-24 20:48:37",
+  "startedAt": "2026-09-24 20:48:37",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 1,
-    "D": 23
+    "D": 24
   },
   "actionCounts": {
-    "관찰": 1,
-    "제외검토": 23
+    "제외검토": 24
   },
   "sectorCounts": {
     "반도체·AI": 4,
@@ -32,13 +30,13 @@
       "rank": 1,
       "name": "SK하이닉스",
       "code": "000660",
-      "score": 60,
-      "grade": "C",
-      "action": "관찰",
+      "score": 59,
+      "grade": "D",
+      "action": "제외검토",
       "breakdown": {
         "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 85,
+        "newsScore": 78,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -122,6 +120,29 @@
     },
     {
       "rank": 5,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 55,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 61,
+        "supplyScore": 50,
+        "newsScore": 63,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 6,
       "name": "두산에너빌리티",
       "code": "034020",
       "score": 55,
@@ -144,7 +165,30 @@
       }
     },
     {
-      "rank": 6,
+      "rank": 7,
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "score": 54,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 45,
+        "supplyScore": 50,
+        "newsScore": 95,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 8,
       "name": "한국항공우주",
       "code": "047810",
       "score": 54,
@@ -167,7 +211,7 @@
       }
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "LIG넥스원",
       "code": "079550",
       "score": 53,
@@ -177,52 +221,6 @@
         "technicalScore": 47,
         "supplyScore": 50,
         "newsScore": 81,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 8,
-      "name": "LG에너지솔루션",
-      "code": "373220",
-      "score": 53,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 45,
-        "supplyScore": 50,
-        "newsScore": 88,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 9,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 52,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 61,
-        "supplyScore": 50,
-        "newsScore": 40,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
