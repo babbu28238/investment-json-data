@@ -1,9 +1,9 @@
 {
   "version": "A245",
-  "generatedAt": "2026-09-23T18:21:46",
+  "generatedAt": "2026-09-24T18:23:26",
   "summary": {
     "version": "A245",
-    "generatedAt": "2026-09-23T18:21:46",
+    "generatedAt": "2026-09-24T18:23:26",
     "status": "target_clean_filter",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -92,64 +92,124 @@
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
       }
     ],
     "supplyHitCount": 0,
@@ -179,7 +239,7 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 130,
+    "rawTargetRows": 125,
     "reliableTargetCandidateCount": 6,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244"
@@ -196,7 +256,9 @@
         27,
         500,
         550,
+        963,
         2027,
+        2963,
         5500,
         8550
       ],
@@ -205,6 +267,10 @@
         {
           "price": 2027,
           "reason": "연도 숫자 제거"
+        },
+        {
+          "price": 2963,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 5500,
@@ -220,6 +286,10 @@
         },
         {
           "price": 27,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 963,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -250,19 +320,41 @@
       "name": "SK하이닉스",
       "currentPrice": 220000,
       "rawPrices": [
+        4,
         5,
+        6,
+        32,
+        42,
+        50,
+        53,
+        55,
+        60,
+        70,
+        77,
+        80,
+        100,
+        101,
+        186,
+        200,
+        220,
+        297,
+        300,
         380,
-        5000,
-        5380
+        500,
+        505,
+        600,
+        722,
+        727,
+        800
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 5000,
+          "price": 4,
           "reason": "1만원 미만 잡음 제거"
         },
         {
-          "price": 5380,
+          "price": 200,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -271,6 +363,94 @@
         },
         {
           "price": 380,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 6,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 727,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 32,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 100,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 42,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 800,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 50,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 53,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 505,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 55,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 60,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 600,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 70,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 77,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 80,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 101,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 186,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 722,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 220,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 297,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 500,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 300,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -443,11 +623,13 @@
       "name": "한화시스템",
       "currentPrice": 132671,
       "rawPrices": [
+        1,
         2,
         5,
         6,
         27,
         110,
+        1000,
         2027,
         5000,
         6000,
@@ -458,6 +640,10 @@
       ],
       "rejected": [
         {
+          "price": 1000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 2027,
           "reason": "연도 숫자 제거"
         },
@@ -467,6 +653,10 @@
         },
         {
           "price": 6000,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 1,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -656,29 +846,14 @@
       "name": "삼성물산",
       "currentPrice": 0,
       "rawPrices": [
-        7,
         8,
-        300,
         550,
-        7300,
         8550
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 7300,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
           "price": 8550,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 7,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 300,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1532,15 +1707,27 @@
       "name": "에코프로비엠",
       "currentPrice": 130000,
       "rawPrices": [
+        1,
         2,
         70,
         100,
+        104,
         130,
         170,
-        300
+        200,
+        300,
+        700
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 1,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 200,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 2,
           "reason": "1만원 미만 잡음 제거"
@@ -1550,7 +1737,15 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 700,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 70,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 104,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -1577,17 +1772,29 @@
       "name": "에코프로",
       "currentPrice": 70000,
       "rawPrices": [
+        1,
         2,
         26,
         70,
         100,
+        104,
         130,
         170,
         180,
-        300
+        200,
+        300,
+        700
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 1,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 200,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 2,
           "reason": "1만원 미만 잡음 제거"
@@ -1601,7 +1808,15 @@
           "reason": "1만원 미만 잡음 제거"
         },
         {
+          "price": 700,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
           "price": 70,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 104,
           "reason": "1만원 미만 잡음 제거"
         },
         {
