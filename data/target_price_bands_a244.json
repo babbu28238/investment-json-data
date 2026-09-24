@@ -1,9 +1,9 @@
 {
   "version": "A244",
-  "generatedAt": "2026-09-23T17:58:49",
+  "generatedAt": "2026-09-24T17:58:48",
   "summary": {
     "version": "A244",
-    "generatedAt": "2026-09-23T17:58:49",
+    "generatedAt": "2026-09-24T17:58:48",
     "status": "target_fallback_candidates",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -92,64 +92,124 @@
     "usedSupplyDates": [],
     "supplyErrorSample": [
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "외국인",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "기관합계",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "연기금",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "투신",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSPI",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
       },
       {
-        "date": "20260923",
+        "period": 5,
         "market": "KOSDAQ",
         "investor": "금융투자",
-        "error": "module 'pykrx.stock' has no attribute 'get_market_trading_value_by_ticker'"
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "외국인",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "기관합계",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "연기금",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "투신",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSPI",
+        "investor": "금융투자",
+        "error": "empty"
+      },
+      {
+        "period": 20,
+        "market": "KOSDAQ",
+        "investor": "금융투자",
+        "error": "empty"
       }
     ],
     "supplyHitCount": 0,
@@ -159,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 28,
+    "targetPriceCandidateCount": 27,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -179,7 +239,7 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 130
+    "rawTargetRows": 125
   },
   "details": [
     {
@@ -187,20 +247,21 @@
       "name": "삼성전자",
       "prices": [
         2027,
+        2963,
         5500,
         8550
       ],
-      "median": 5500,
-      "realisticTargetPrice": 4400,
-      "observeTimingPrice": 3800,
-      "stopTimingPrice": 3300,
+      "median": 4231,
+      "realisticTargetPrice": 3400,
+      "observeTimingPrice": 3000,
+      "stopTimingPrice": 2500,
       "errors": [],
       "sources": [
         {
           "code": "005930",
           "name": "삼성전자",
           "query": "삼성전자 목표주가",
-          "price": 8550,
+          "price": 2963,
           "source": "naver_search",
           "snippet": "삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
         },
@@ -232,7 +293,7 @@
           "code": "005930",
           "name": "삼성전자",
           "query": "삼성전자 컨센서스 목표주가",
-          "price": 8550,
+          "price": 2963,
           "source": "naver_search",
           "snippet": "삼성전자 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성전자 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
         },
@@ -249,33 +310,13 @@
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "prices": [
-        5000,
-        5380
-      ],
-      "median": 5190,
-      "realisticTargetPrice": 4200,
-      "observeTimingPrice": 3600,
-      "stopTimingPrice": 3100,
+      "prices": [],
+      "median": 55000,
+      "realisticTargetPrice": 44000,
+      "observeTimingPrice": 38500,
+      "stopTimingPrice": 33000,
       "errors": [],
-      "sources": [
-        {
-          "code": "000660",
-          "name": "SK하이닉스",
-          "query": "SK하이닉스 증권사 목표가",
-          "price": 5380,
-          "source": "naver_search",
-          "snippet": "SK하이닉스 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 SK하이닉스 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
-        },
-        {
-          "code": "000660",
-          "name": "SK하이닉스",
-          "query": "SK하이닉스 증권사 목표가",
-          "price": 5000,
-          "source": "naver_search",
-          "snippet": "SK하이닉스 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 SK하이닉스 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
-        }
-      ]
+      "sources": []
     },
     {
       "code": "329180",
@@ -409,25 +450,18 @@
       "code": "272210",
       "name": "한화시스템",
       "prices": [
+        1000,
         2027,
         5000,
         6000,
         110000
       ],
-      "median": 5500,
-      "realisticTargetPrice": 4400,
-      "observeTimingPrice": 3800,
-      "stopTimingPrice": 3300,
+      "median": 5000,
+      "realisticTargetPrice": 4000,
+      "observeTimingPrice": 3500,
+      "stopTimingPrice": 3000,
       "errors": [],
       "sources": [
-        {
-          "code": "272210",
-          "name": "한화시스템",
-          "query": "한화시스템 목표주가",
-          "price": 6000,
-          "source": "naver_search",
-          "snippet": "한화시스템 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 한화시스템 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 "
-        },
         {
           "code": "272210",
           "name": "한화시스템",
@@ -443,6 +477,14 @@
           "price": 6000,
           "source": "naver_search",
           "snippet": "한화시스템 리포트 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 한화시스템 리포트 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
+        },
+        {
+          "code": "272210",
+          "name": "한화시스템",
+          "query": "한화시스템 증권사 목표가",
+          "price": 1000,
+          "source": "naver_search",
+          "snippet": "한화시스템 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 한화시스템 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년"
         },
         {
           "code": "272210",
@@ -598,13 +640,12 @@
       "code": "028260",
       "name": "삼성물산",
       "prices": [
-        7300,
         8550
       ],
-      "median": 7925,
-      "realisticTargetPrice": 6300,
-      "observeTimingPrice": 5500,
-      "stopTimingPrice": 4800,
+      "median": 8550,
+      "realisticTargetPrice": 6800,
+      "observeTimingPrice": 6000,
+      "stopTimingPrice": 5100,
       "errors": [],
       "sources": [
         {
@@ -614,14 +655,6 @@
           "price": 8550,
           "source": "naver_search",
           "snippet": "삼성물산 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성물산 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션"
-        },
-        {
-          "code": "028260",
-          "name": "삼성물산",
-          "query": "삼성물산 컨센서스 목표주가",
-          "price": 7300,
-          "source": "naver_search",
-          "snippet": "삼성물산 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성물산 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
         },
         {
           "code": "028260",
@@ -687,14 +720,6 @@
           "price": 4889,
           "source": "naver_search",
           "snippet": "KB금융 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 KB금융 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직"
-        },
-        {
-          "code": "105560",
-          "name": "KB금융",
-          "query": "KB금융 컨센서스 목표주가",
-          "price": 5000,
-          "source": "naver_search",
-          "snippet": "KB금융 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 KB금융 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
         }
       ]
     },
@@ -1006,7 +1031,7 @@
           "query": "카카오 목표주가",
           "price": 2025,
           "source": "naver_search",
-          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
         },
         {
           "code": "035720",
@@ -1014,7 +1039,7 @@
           "query": "카카오 목표주가",
           "price": 73000,
           "source": "naver_search",
-          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
         },
         {
           "code": "035720",
@@ -1022,7 +1047,7 @@
           "query": "카카오 목표주가",
           "price": 200000,
           "source": "naver_search",
-          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
         },
         {
           "code": "035720",
@@ -1030,7 +1055,7 @@
           "query": "카카오 목표주가",
           "price": 2027,
           "source": "naver_search",
-          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
         },
         {
           "code": "035720",
@@ -1038,7 +1063,7 @@
           "query": "카카오 목표주가",
           "price": 3000,
           "source": "naver_search",
-          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
+          "snippet": "카카오 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 1년 직접입력 옵션 펼"
         },
         {
           "code": "035720",
@@ -1086,14 +1111,6 @@
       "stopTimingPrice": 1200,
       "errors": [],
       "sources": [
-        {
-          "code": "033780",
-          "name": "KT&G",
-          "query": "KT&G 컨센서스 목표주가",
-          "price": 2027,
-          "source": "naver_search",
-          "snippet": "KT&G 컨센서스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 KT&G 컨센서스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 기간 전체 1시간 옵션 펼치기 접기 1일 1주 1개월 3개월 6개월 "
-        },
         {
           "code": "033780",
           "name": "KT&G",
@@ -1388,10 +1405,10 @@
       "code": "247540",
       "name": "에코프로비엠",
       "prices": [],
-      "median": 130000,
-      "realisticTargetPrice": 104000,
-      "observeTimingPrice": 91000,
-      "stopTimingPrice": 78000,
+      "median": 87000,
+      "realisticTargetPrice": 69600,
+      "observeTimingPrice": 60900,
+      "stopTimingPrice": 52200,
       "errors": [],
       "sources": []
     },
@@ -1399,10 +1416,10 @@
       "code": "086520",
       "name": "에코프로",
       "prices": [],
-      "median": 130000,
-      "realisticTargetPrice": 104000,
-      "observeTimingPrice": 91000,
-      "stopTimingPrice": 78000,
+      "median": 87000,
+      "realisticTargetPrice": 69600,
+      "observeTimingPrice": 60900,
+      "stopTimingPrice": 52200,
       "errors": [],
       "sources": []
     },
