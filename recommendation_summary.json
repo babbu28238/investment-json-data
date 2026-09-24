@@ -1,30 +1,28 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-24 15:08:19",
-  "startedAt": "2026-09-24 15:08:19",
+  "updatedAt": "2026-09-24 16:00:50",
+  "startedAt": "2026-09-24 16:00:50",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 1,
-    "D": 23
+    "D": 24
   },
   "actionCounts": {
-    "관찰": 1,
-    "제외검토": 23
+    "제외검토": 24
   },
   "sectorCounts": {
     "반도체·AI": 4,
     "방산·우주항공": 4,
     "원전·전력·에너지": 3,
     "2차전지·소재": 4,
-    "인터넷·게임·콘텐츠": 1,
+    "바이오·제약": 3,
     "자동차·모빌리티": 2,
     "조선·해양": 1,
-    "바이오·제약": 3,
     "금융·밸류업": 1,
+    "인터넷·게임·콘텐츠": 1,
     "로봇·자동화": 1
   },
   "topCandidates": [
@@ -32,13 +30,13 @@
       "rank": 1,
       "name": "SK하이닉스",
       "code": "000660",
-      "score": 60,
-      "grade": "C",
-      "action": "관찰",
+      "score": 59,
+      "grade": "D",
+      "action": "제외검토",
       "breakdown": {
         "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 85,
+        "newsScore": 78,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -84,7 +82,7 @@
       "breakdown": {
         "technicalScore": 53,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 99,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -122,15 +120,15 @@
     },
     {
       "rank": 5,
-      "name": "LS ELECTRIC",
-      "code": "010120",
+      "name": "두산에너빌리티",
+      "code": "034020",
       "score": 55,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 61,
+        "technicalScore": 43,
         "supplyScore": 50,
-        "newsScore": 61,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -145,15 +143,15 @@
     },
     {
       "rank": 6,
-      "name": "두산에너빌리티",
-      "code": "034020",
-      "score": 55,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 54,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 43,
+        "technicalScore": 61,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 54,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -191,6 +189,29 @@
     },
     {
       "rank": 8,
+      "name": "LIG넥스원",
+      "code": "079550",
+      "score": 53,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 47,
+        "supplyScore": 50,
+        "newsScore": 81,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 9,
       "name": "LG에너지솔루션",
       "code": "373220",
       "score": 53,
@@ -213,39 +234,16 @@
       }
     },
     {
-      "rank": 9,
-      "name": "LIG넥스원",
-      "code": "079550",
-      "score": 52,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 47,
-        "supplyScore": 50,
-        "newsScore": 74,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 10,
-      "name": "한화에어로스페이스",
-      "code": "012450",
+      "name": "에코프로",
+      "code": "086520",
       "score": 52,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 37,
+        "technicalScore": 36,
         "supplyScore": 50,
-        "newsScore": 97,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
