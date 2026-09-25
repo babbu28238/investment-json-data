@@ -1,9 +1,9 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-24T18:25:50",
+  "generatedAt": "2026-09-25T18:36:42",
   "summary": {
     "version": "A246",
-    "generatedAt": "2026-09-24T18:25:50",
+    "generatedAt": "2026-09-25T18:36:42",
     "status": "target_clean_fallback_fix",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 13,
+    "targetPriceCandidateCount": 12,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -239,7 +239,7 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 125,
+    "rawTargetRows": 128,
     "reliableTargetCandidateCount": 6,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details"
@@ -252,6 +252,7 @@
       "rawPrices": [
         2027,
         2963,
+        3864,
         5500,
         8550
       ],
@@ -263,6 +264,10 @@
         },
         {
           "price": 2963,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 3864,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -589,12 +594,9 @@
       "rawPrices": [
         3000,
         4300,
-        5000,
-        150000
+        5000
       ],
-      "acceptedPrices": [
-        150000
-      ],
+      "acceptedPrices": [],
       "rejected": [
         {
           "price": 3000,
@@ -609,11 +611,11 @@
           "reason": "1만원 미만 잡음 제거"
         }
       ],
-      "median": 150000,
-      "realisticTargetPrice": 120000,
-      "observeTimingPrice": 105000,
-      "stopTimingPrice": 90000,
-      "targetCount": 1
+      "median": 0,
+      "realisticTargetPrice": 0,
+      "observeTimingPrice": 0,
+      "stopTimingPrice": 0,
+      "targetCount": 0
     },
     {
       "code": "316140",
@@ -845,6 +847,7 @@
       "rawPrices": [
         1000,
         1047,
+        7000,
         9000,
         9150,
         60000,
@@ -865,6 +868,10 @@
         },
         {
           "price": 1047,
+          "reason": "1만원 미만 잡음 제거"
+        },
+        {
+          "price": 7000,
           "reason": "1만원 미만 잡음 제거"
         },
         {
