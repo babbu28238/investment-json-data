@@ -1,17 +1,19 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-09-28 15:41:17",
-  "startedAt": "2026-09-28 15:41:17",
+  "updatedAt": "2026-09-28 16:56:43",
+  "startedAt": "2026-09-28 16:56:43",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "D": 24
+    "C": 1,
+    "D": 23
   },
   "actionCounts": {
-    "제외검토": 24
+    "관찰": 1,
+    "제외검토": 23
   },
   "sectorCounts": {
     "반도체·AI": 4,
@@ -19,24 +21,24 @@
     "2차전지·소재": 4,
     "원전·전력·에너지": 3,
     "바이오·제약": 3,
+    "조선·해양": 1,
     "금융·밸류업": 1,
     "로봇·자동화": 1,
     "자동차·모빌리티": 2,
-    "인터넷·게임·콘텐츠": 1,
-    "조선·해양": 1
+    "인터넷·게임·콘텐츠": 1
   },
   "topCandidates": [
     {
       "rank": 1,
       "name": "삼성전자",
       "code": "005930",
-      "score": 59,
-      "grade": "D",
-      "action": "제외검토",
+      "score": 61,
+      "grade": "C",
+      "action": "관찰",
       "breakdown": {
         "technicalScore": 64,
         "supplyScore": 50,
-        "newsScore": 83,
+        "newsScore": 95,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -53,13 +55,13 @@
       "rank": 2,
       "name": "이오테크닉스",
       "code": "039030",
-      "score": 58,
+      "score": 57,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 61,
         "supplyScore": 50,
-        "newsScore": 83,
+        "newsScore": 76,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -143,29 +145,6 @@
     },
     {
       "rank": 6,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 54,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 61,
-        "supplyScore": 50,
-        "newsScore": 53,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 7,
       "name": "두산에너빌리티",
       "code": "034020",
       "score": 54,
@@ -188,7 +167,7 @@
       }
     },
     {
-      "rank": 8,
+      "rank": 7,
       "name": "셀트리온",
       "code": "068270",
       "score": 53,
@@ -211,7 +190,7 @@
       }
     },
     {
-      "rank": 9,
+      "rank": 8,
       "name": "한화에어로스페이스",
       "code": "012450",
       "score": 52,
@@ -220,7 +199,30 @@
       "breakdown": {
         "technicalScore": 37,
         "supplyScore": 50,
-        "newsScore": 97,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 9,
+      "name": "HD현대일렉트릭",
+      "code": "267260",
+      "score": 52,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 35,
+        "supplyScore": 50,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -235,15 +237,15 @@
     },
     {
       "rank": 10,
-      "name": "HD현대일렉트릭",
-      "code": "267260",
-      "score": 52,
+      "name": "알테오젠",
+      "code": "196170",
+      "score": 51,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 35,
+        "technicalScore": 38,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 85,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
