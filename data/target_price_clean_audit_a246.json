@@ -1,38 +1,23 @@
 {
   "version": "A246",
-  "generatedAt": "2026-09-25T18:36:42",
+  "generatedAt": "2026-09-28T20:33:26",
   "details": [
     {
       "code": "005930",
       "name": "삼성전자",
       "currentPrice": 297500,
       "rawPrices": [
-        2027,
-        2963,
-        3864,
-        5500,
-        8550
+        1300,
+        2963
       ],
       "acceptedPrices": [],
       "rejected": [
         {
-          "price": 2027,
-          "reason": "연도 숫자 제거"
+          "price": 1300,
+          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 2963,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 3864,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5500,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 8550,
           "reason": "1만원 미만 잡음 제거"
         }
       ],
@@ -46,9 +31,16 @@
       "code": "000660",
       "name": "SK하이닉스",
       "currentPrice": 220000,
-      "rawPrices": [],
+      "rawPrices": [
+        1300
+      ],
       "acceptedPrices": [],
-      "rejected": [],
+      "rejected": [
+        {
+          "price": 1300,
+          "reason": "1만원 미만 잡음 제거"
+        }
+      ],
       "median": 0,
       "realisticTargetPrice": 0,
       "observeTimingPrice": 0,
@@ -256,10 +248,15 @@
       "name": "삼성물산",
       "currentPrice": 0,
       "rawPrices": [
+        2800,
         8550
       ],
       "acceptedPrices": [],
       "rejected": [
+        {
+          "price": 2800,
+          "reason": "1만원 미만 잡음 제거"
+        },
         {
           "price": 8550,
           "reason": "1만원 미만 잡음 제거"
@@ -415,17 +412,12 @@
       "currentPrice": 250000,
       "rawPrices": [
         1429,
-        5652,
         7222
       ],
       "acceptedPrices": [],
       "rejected": [
         {
           "price": 1429,
-          "reason": "1만원 미만 잡음 제거"
-        },
-        {
-          "price": 5652,
           "reason": "1만원 미만 잡음 제거"
         },
         {
@@ -503,8 +495,6 @@
       "currentPrice": 55000,
       "rawPrices": [
         2025,
-        2027,
-        3000,
         5000,
         46000,
         73000,
@@ -518,14 +508,6 @@
         {
           "price": 2025,
           "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 2027,
-          "reason": "연도 숫자 제거"
-        },
-        {
-          "price": 3000,
-          "reason": "1만원 미만 잡음 제거"
         },
         {
           "price": 5000,
