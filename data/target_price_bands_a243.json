@@ -1,9 +1,9 @@
 {
   "version": "A243",
-  "generatedAt": "2026-09-28T20:11:15",
+  "generatedAt": "2026-09-29T18:47:48",
   "summary": {
     "version": "A243",
-    "generatedAt": "2026-09-28T20:11:15",
+    "generatedAt": "2026-09-29T18:47:48",
     "status": "report_target_collector",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -239,26 +239,45 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 97
+    "rawTargetRows": 101
   },
   "details": [
     {
       "code": "005930",
       "name": "삼성전자",
       "prices": [
-        1300
+        1280,
+        1300,
+        2000,
+        6500
       ],
-      "median": 1300,
-      "realisticTargetPrice": 1000,
-      "observeTimingPrice": 900,
-      "stopTimingPrice": 800,
+      "median": 1650,
+      "realisticTargetPrice": 1300,
+      "observeTimingPrice": 1200,
+      "stopTimingPrice": 1000,
       "errors": [],
       "sources": [
         {
           "code": "005930",
           "name": "삼성전자",
           "query": "삼성전자 목표주가",
-          "price": 1300,
+          "price": 2000,
+          "source": "naver_search",
+          "snippet": "삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
+        },
+        {
+          "code": "005930",
+          "name": "삼성전자",
+          "query": "삼성전자 목표주가",
+          "price": 1280,
+          "source": "naver_search",
+          "snippet": "삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
+        },
+        {
+          "code": "005930",
+          "name": "삼성전자",
+          "query": "삼성전자 목표주가",
+          "price": 6500,
           "source": "naver_search",
           "snippet": "삼성전자 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성전자 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
         },
@@ -276,14 +295,23 @@
       "code": "000660",
       "name": "SK하이닉스",
       "prices": [
-        1300
+        1300,
+        2000
       ],
-      "median": 1300,
-      "realisticTargetPrice": 1000,
-      "observeTimingPrice": 900,
-      "stopTimingPrice": 800,
+      "median": 1650,
+      "realisticTargetPrice": 1300,
+      "observeTimingPrice": 1200,
+      "stopTimingPrice": 1000,
       "errors": [],
       "sources": [
+        {
+          "code": "000660",
+          "name": "SK하이닉스",
+          "query": "SK하이닉스 목표주가",
+          "price": 2000,
+          "source": "naver_search",
+          "snippet": "SK하이닉스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 SK하이닉스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메"
+        },
         {
           "code": "000660",
           "name": "SK하이닉스",
@@ -308,14 +336,6 @@
       "stopTimingPrice": 3000,
       "errors": [],
       "sources": [
-        {
-          "code": "329180",
-          "name": "HD현대중공업",
-          "query": "HD현대중공업 목표주가",
-          "price": 6727,
-          "source": "naver_search",
-          "snippet": "HD현대중공업 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 HD현대중공업 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC"
-        },
         {
           "code": "329180",
           "name": "HD현대중공업",
@@ -347,14 +367,23 @@
       "name": "한화오션",
       "prices": [
         2026,
-        5000
+        5000,
+        139095
       ],
-      "median": 3513,
-      "realisticTargetPrice": 2800,
-      "observeTimingPrice": 2500,
-      "stopTimingPrice": 2100,
+      "median": 5000,
+      "realisticTargetPrice": 4000,
+      "observeTimingPrice": 3500,
+      "stopTimingPrice": 3000,
       "errors": [],
       "sources": [
+        {
+          "code": "042660",
+          "name": "한화오션",
+          "query": "한화오션 목표주가",
+          "price": 139095,
+          "source": "naver_search",
+          "snippet": "한화오션 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 한화오션 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
+        },
         {
           "code": "042660",
           "name": "한화오션",
@@ -386,14 +415,6 @@
       "stopTimingPrice": 39700,
       "errors": [],
       "sources": [
-        {
-          "code": "034020",
-          "name": "두산에너빌리티",
-          "query": "두산에너빌리티 목표주가",
-          "price": 130333,
-          "source": "naver_search",
-          "snippet": "두산에너빌리티 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 두산에너빌리티 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC"
-        },
         {
           "code": "034020",
           "name": "두산에너빌리티",
@@ -546,14 +567,23 @@
       "name": "삼성물산",
       "prices": [
         2800,
+        5700,
         8550
       ],
-      "median": 5675,
-      "realisticTargetPrice": 4500,
+      "median": 5700,
+      "realisticTargetPrice": 4600,
       "observeTimingPrice": 4000,
       "stopTimingPrice": 3400,
       "errors": [],
       "sources": [
+        {
+          "code": "028260",
+          "name": "삼성물산",
+          "query": "삼성물산 목표주가",
+          "price": 5700,
+          "source": "naver_search",
+          "snippet": "삼성물산 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 삼성물산 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
+        },
         {
           "code": "028260",
           "name": "삼성물산",
@@ -579,14 +609,23 @@
         2026,
         4889,
         5000,
-        5380
+        5380,
+        5700
       ],
-      "median": 4944,
+      "median": 5000,
       "realisticTargetPrice": 4000,
       "observeTimingPrice": 3500,
       "stopTimingPrice": 3000,
       "errors": [],
       "sources": [
+        {
+          "code": "105560",
+          "name": "KB금융",
+          "query": "KB금융 목표주가",
+          "price": 5700,
+          "source": "naver_search",
+          "snippet": "KB금융 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 KB금융 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
+        },
         {
           "code": "105560",
           "name": "KB금융",
@@ -641,22 +680,22 @@
       "code": "055550",
       "name": "신한지주",
       "prices": [
-        1250,
         2026,
         3000,
-        137556
+        137556,
+        140000
       ],
-      "median": 2513,
-      "realisticTargetPrice": 2000,
-      "observeTimingPrice": 1800,
-      "stopTimingPrice": 1500,
+      "median": 70278,
+      "realisticTargetPrice": 56200,
+      "observeTimingPrice": 49200,
+      "stopTimingPrice": 42200,
       "errors": [],
       "sources": [
         {
           "code": "055550",
           "name": "신한지주",
           "query": "신한지주 목표주가",
-          "price": 137556,
+          "price": 140000,
           "source": "naver_search",
           "snippet": "신한지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 신한지주 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
         },
@@ -664,7 +703,7 @@
           "code": "055550",
           "name": "신한지주",
           "query": "신한지주 목표주가",
-          "price": 1250,
+          "price": 137556,
           "source": "naver_search",
           "snippet": "신한지주 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 신한지주 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
         },
@@ -787,14 +826,23 @@
       "code": "005380",
       "name": "현대차",
       "prices": [
+        5700,
         7222
       ],
-      "median": 7222,
-      "realisticTargetPrice": 5800,
-      "observeTimingPrice": 5100,
-      "stopTimingPrice": 4300,
+      "median": 6461,
+      "realisticTargetPrice": 5200,
+      "observeTimingPrice": 4500,
+      "stopTimingPrice": 3900,
       "errors": [],
       "sources": [
+        {
+          "code": "005380",
+          "name": "현대차",
+          "query": "현대차 목표주가",
+          "price": 5700,
+          "source": "naver_search",
+          "snippet": "현대차 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 클립 카페 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 현대차 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론사 "
+        },
         {
           "code": "005380",
           "name": "현대차",
@@ -920,14 +968,6 @@
           "price": 73000,
           "source": "naver_search",
           "snippet": "카카오 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메"
-        },
-        {
-          "code": "035720",
-          "name": "카카오",
-          "query": "카카오 증권사 목표가",
-          "price": 5000,
-          "source": "naver_search",
-          "snippet": "카카오 증권사 목표가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 카카오 증권사 목표가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메"
         }
       ]
     },
@@ -935,10 +975,10 @@
       "code": "033780",
       "name": "KT&G",
       "prices": [],
-      "median": 35700,
-      "realisticTargetPrice": 28600,
-      "observeTimingPrice": 25000,
-      "stopTimingPrice": 21400,
+      "median": 37050,
+      "realisticTargetPrice": 29600,
+      "observeTimingPrice": 25900,
+      "stopTimingPrice": 22200,
       "errors": [],
       "sources": []
     },
@@ -1011,7 +1051,6 @@
       "code": "008770",
       "name": "호텔신라",
       "prices": [
-        1000,
         1047,
         7000,
         9000,
@@ -1019,9 +1058,9 @@
         200000,
         257720
       ],
-      "median": 9000,
-      "realisticTargetPrice": 7200,
-      "observeTimingPrice": 6300,
+      "median": 9075,
+      "realisticTargetPrice": 7300,
+      "observeTimingPrice": 6400,
       "stopTimingPrice": 5400,
       "errors": [],
       "sources": [
@@ -1038,14 +1077,6 @@
           "name": "호텔신라",
           "query": "호텔신라 목표주가",
           "price": 7000,
-          "source": "naver_search",
-          "snippet": "호텔신라 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 호텔신라 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
-        },
-        {
-          "code": "008770",
-          "name": "호텔신라",
-          "query": "호텔신라 목표주가",
-          "price": 1000,
           "source": "naver_search",
           "snippet": "호텔신라 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 호텔신라 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
         },
@@ -1096,15 +1127,14 @@
       "name": "로보티즈",
       "prices": [
         4500,
-        5000,
         135100,
         306500,
         392286
       ],
-      "median": 135100,
-      "realisticTargetPrice": 108100,
-      "observeTimingPrice": 94600,
-      "stopTimingPrice": 81100,
+      "median": 220800,
+      "realisticTargetPrice": 176600,
+      "observeTimingPrice": 154600,
+      "stopTimingPrice": 132500,
       "errors": [],
       "sources": [
         {
@@ -1170,14 +1200,6 @@
           "price": 306500,
           "source": "naver_search",
           "snippet": "로보티즈 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
-        },
-        {
-          "code": "108490",
-          "name": "로보티즈",
-          "query": "로보티즈 목표주가",
-          "price": 5000,
-          "source": "naver_search",
-          "snippet": "로보티즈 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 로보티즈 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
         }
       ]
     },
@@ -1185,14 +1207,23 @@
       "code": "277810",
       "name": "레인보우로보틱스",
       "prices": [
-        6000
+        6000,
+        8400
       ],
-      "median": 6000,
-      "realisticTargetPrice": 4800,
-      "observeTimingPrice": 4200,
-      "stopTimingPrice": 3600,
+      "median": 7200,
+      "realisticTargetPrice": 5800,
+      "observeTimingPrice": 5000,
+      "stopTimingPrice": 4300,
       "errors": [],
       "sources": [
+        {
+          "code": "277810",
+          "name": "레인보우로보틱스",
+          "query": "레인보우로보틱스 목표주가",
+          "price": 8400,
+          "source": "naver_search",
+          "snippet": "레인보우로보틱스 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 레인보우로보틱스 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 "
+        },
         {
           "code": "277810",
           "name": "레인보우로보틱스",
@@ -1207,10 +1238,10 @@
       "code": "247540",
       "name": "에코프로비엠",
       "prices": [],
-      "median": 55800,
-      "realisticTargetPrice": 44600,
-      "observeTimingPrice": 39100,
-      "stopTimingPrice": 33500,
+      "median": 47450,
+      "realisticTargetPrice": 38000,
+      "observeTimingPrice": 33200,
+      "stopTimingPrice": 28500,
       "errors": [],
       "sources": []
     },
@@ -1218,10 +1249,10 @@
       "code": "086520",
       "name": "에코프로",
       "prices": [],
-      "median": 62900,
-      "realisticTargetPrice": 50300,
-      "observeTimingPrice": 44000,
-      "stopTimingPrice": 37700,
+      "median": 50300,
+      "realisticTargetPrice": 40200,
+      "observeTimingPrice": 35200,
+      "stopTimingPrice": 30200,
       "errors": [],
       "sources": []
     },
@@ -1230,14 +1261,23 @@
       "name": "알테오젠",
       "prices": [
         1000,
-        2026
+        2026,
+        438000
       ],
-      "median": 1513,
-      "realisticTargetPrice": 1200,
-      "observeTimingPrice": 1100,
-      "stopTimingPrice": 900,
+      "median": 2026,
+      "realisticTargetPrice": 1600,
+      "observeTimingPrice": 1400,
+      "stopTimingPrice": 1200,
       "errors": [],
       "sources": [
+        {
+          "code": "196170",
+          "name": "알테오젠",
+          "query": "알테오젠 목표주가",
+          "price": 438000,
+          "source": "naver_search",
+          "snippet": "알테오젠 목표주가 : 네이버 뉴스검색 메뉴 영역으로 바로가기 본문 영역으로 바로가기 NAVER 검색 한글 입력기 입력도구 검색 검색 전체 뉴스 AI new 블로그 카페 클립 이미지 지식iN 동영상 쇼핑 새 창 열림 어학사전 새 창 열림 더보기 지도 새 창 열림 인플루언서 검색옵션 공유 알테오젠 목표주가 뉴스검색 결과 옵션 관련도순 최신순 모바일 메인 언론사 옵션 정렬 관련도순 최신순 오래된순 서비스 영역 전체 모바일 메인 언론사 PC 메인 언론"
+        },
         {
           "code": "196170",
           "name": "알테오젠",
