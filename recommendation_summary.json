@@ -1,28 +1,28 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-10-01 17:02:31",
-  "startedAt": "2026-10-01 17:02:31",
+  "updatedAt": "2026-10-01 20:32:49",
+  "startedAt": "2026-10-01 20:32:49",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 5,
-    "D": 19
+    "C": 6,
+    "D": 18
   },
   "actionCounts": {
-    "관찰": 5,
-    "제외검토": 19
+    "관찰": 6,
+    "제외검토": 18
   },
   "sectorCounts": {
     "방산·우주항공": 4,
     "반도체·AI": 4,
+    "원전·전력·에너지": 3,
     "바이오·제약": 3,
     "2차전지·소재": 4,
-    "원전·전력·에너지": 3,
-    "금융·밸류업": 1,
     "로봇·자동화": 1,
+    "금융·밸류업": 1,
     "조선·해양": 1,
     "인터넷·게임·콘텐츠": 1,
     "자동차·모빌리티": 2
@@ -122,6 +122,29 @@
     },
     {
       "rank": 5,
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "score": 60,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 65,
+        "supplyScore": 50,
+        "newsScore": 83,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 6,
       "name": "삼성바이오로직스",
       "code": "207940",
       "score": 60,
@@ -144,39 +167,16 @@
       }
     },
     {
-      "rank": 6,
-      "name": "에코프로",
-      "code": "086520",
+      "rank": 7,
+      "name": "LIG넥스원",
+      "code": "079550",
       "score": 59,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 62,
+        "technicalScore": 61,
         "supplyScore": 50,
-        "newsScore": 86,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 7,
-      "name": "SK하이닉스",
-      "code": "000660",
-      "score": 58,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 65,
-        "supplyScore": 50,
-        "newsScore": 69,
+        "newsScore": 88,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -214,15 +214,15 @@
     },
     {
       "rank": 9,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 57,
+      "name": "SK하이닉스",
+      "code": "000660",
+      "score": 56,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 55,
+        "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 90,
+        "newsScore": 55,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -237,15 +237,15 @@
     },
     {
       "rank": 10,
-      "name": "에코프로비엠",
-      "code": "247540",
+      "name": "에코프로",
+      "code": "086520",
       "score": 55,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 60,
         "supplyScore": 50,
-        "newsScore": 64,
+        "newsScore": 65,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
