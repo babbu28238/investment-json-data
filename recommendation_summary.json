@@ -1,35 +1,58 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-10-01 22:16:47",
-  "startedAt": "2026-10-01 22:16:47",
+  "updatedAt": "2026-10-02 16:00:09",
+  "startedAt": "2026-10-02 16:00:09",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
   "reportSignalCount": 24,
   "supplyRowCount": 24,
   "gradeCounts": {
-    "C": 6,
-    "D": 18
+    "C": 4,
+    "D": 20
   },
   "actionCounts": {
-    "관찰": 6,
-    "제외검토": 18
+    "관찰": 4,
+    "제외검토": 20
   },
   "sectorCounts": {
-    "방산·우주항공": 4,
     "반도체·AI": 4,
+    "방산·우주항공": 4,
     "원전·전력·에너지": 3,
-    "바이오·제약": 3,
     "2차전지·소재": 4,
     "로봇·자동화": 1,
-    "금융·밸류업": 1,
+    "바이오·제약": 3,
     "조선·해양": 1,
-    "인터넷·게임·콘텐츠": 1,
-    "자동차·모빌리티": 2
+    "금융·밸류업": 1,
+    "자동차·모빌리티": 2,
+    "인터넷·게임·콘텐츠": 1
   },
   "topCandidates": [
     {
       "rank": 1,
+      "name": "삼성전자",
+      "code": "005930",
+      "score": 62,
+      "grade": "C",
+      "action": "관찰",
+      "breakdown": {
+        "technicalScore": 65,
+        "supplyScore": 50,
+        "newsScore": 97,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 2,
       "name": "한화시스템",
       "code": "272210",
       "score": 62,
@@ -52,39 +75,16 @@
       }
     },
     {
-      "rank": 2,
-      "name": "삼성전자",
-      "code": "005930",
-      "score": 62,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 64,
-        "supplyScore": 50,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 3,
-      "name": "리노공업",
-      "code": "058470",
+      "name": "LS ELECTRIC",
+      "code": "010120",
       "score": 61,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 61,
+        "technicalScore": 63,
         "supplyScore": 50,
-        "newsScore": 100,
+        "newsScore": 97,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -99,13 +99,13 @@
     },
     {
       "rank": 4,
-      "name": "LS ELECTRIC",
-      "code": "010120",
-      "score": 61,
+      "name": "이오테크닉스",
+      "code": "039030",
+      "score": 60,
       "grade": "C",
       "action": "관찰",
       "breakdown": {
-        "technicalScore": 65,
+        "technicalScore": 64,
         "supplyScore": 50,
         "newsScore": 90,
         "reportScore": 50,
@@ -122,52 +122,6 @@
     },
     {
       "rank": 5,
-      "name": "이오테크닉스",
-      "code": "039030",
-      "score": 60,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 62,
-        "supplyScore": 50,
-        "newsScore": 90,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 6,
-      "name": "삼성바이오로직스",
-      "code": "207940",
-      "score": 60,
-      "grade": "C",
-      "action": "관찰",
-      "breakdown": {
-        "technicalScore": 58,
-        "supplyScore": 50,
-        "newsScore": 100,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 7,
       "name": "LIG넥스원",
       "code": "079550",
       "score": 59,
@@ -190,7 +144,76 @@
       }
     },
     {
+      "rank": 6,
+      "name": "에코프로",
+      "code": "086520",
+      "score": 58,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 62,
+        "supplyScore": 50,
+        "newsScore": 78,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 7,
+      "name": "리노공업",
+      "code": "058470",
+      "score": 58,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 52,
+        "supplyScore": 50,
+        "newsScore": 100,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
       "rank": 8,
+      "name": "레인보우로보틱스",
+      "code": "277810",
+      "score": 58,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 60,
+        "supplyScore": 50,
+        "newsScore": 83,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 9,
       "name": "셀트리온",
       "code": "068270",
       "score": 58,
@@ -213,39 +236,16 @@
       }
     },
     {
-      "rank": 9,
-      "name": "SK하이닉스",
-      "code": "000660",
-      "score": 56,
+      "rank": 10,
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "score": 57,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
         "technicalScore": 65,
         "supplyScore": 50,
-        "newsScore": 55,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
-      "rank": 10,
-      "name": "에코프로비엠",
-      "code": "247540",
-      "score": 55,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 60,
-        "supplyScore": 50,
-        "newsScore": 64,
+        "newsScore": 62,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
