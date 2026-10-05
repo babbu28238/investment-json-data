@@ -1,9 +1,9 @@
 {
   "version": "A248",
-  "generatedAt": "2026-10-02T19:32:17",
+  "generatedAt": "2026-10-05T21:40:12",
   "summary": {
     "version": "A248",
-    "generatedAt": "2026-10-02T19:32:17",
+    "generatedAt": "2026-10-05T21:40:12",
     "status": "naver_target_chart_stop",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 30,
+    "candidateCount": 25,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -213,37 +213,16 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplyDiagRows": 117,
-    "supplySource": "naver_supply_detail_a234",
-    "supplyMergedCount": 0,
-    "newsItemCount": 0,
-    "newsMergedCount": 0,
+    "supplySource": "naver_finance_item_frgn",
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 17,
+    "newsItemCount": 0,
+    "targetPriceCandidateCount": 13,
+    "rawTargetRows": 126,
     "candidateSource": "stock_candidates_ai_scored.json",
-    "candidateSourcesTried": [
-      {
-        "path": "data/stock_candidates_ai_scored.json",
-        "count": 0
-      },
-      {
-        "path": "data/stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_universe.json",
-        "count": 30
-      }
-    ],
-    "rawTargetRows": 141,
-    "reliableTargetCandidateCount": 14,
+    "reliableTargetCandidateCount": 11,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 10,
+    "targetUpsideCandidateCount": 9,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price"
@@ -403,9 +382,9 @@
       "code": "035720",
       "name": "카카오",
       "currentPrice": 55000,
-      "naverTargetPrice": 59500,
-      "targetUpsidePercent": 8.2,
-      "targetBasedStopPrice": 35700,
+      "naverTargetPrice": 50475,
+      "targetUpsidePercent": -8.2,
+      "targetBasedStopPrice": 30300,
       "chartStopPrice": 50600,
       "chartStopReason": "차트 추천 손절선: 현재가 55,000원 기준 약 -8% 구간 50,600원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
     },
@@ -498,56 +477,6 @@
       "targetBasedStopPrice": 0,
       "chartStopPrice": 165500,
       "chartStopReason": "차트 추천 손절선: 현재가 180,000원 기준 약 -8% 구간 165,500원. 실제 매도 판단 시 최근 저점/20일선 이탈 여부와 함께 확인."
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "currentPrice": 0,
-      "naverTargetPrice": 0,
-      "targetUpsidePercent": 0,
-      "targetBasedStopPrice": 0,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "currentPrice": 0,
-      "naverTargetPrice": 57000,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 34200,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "currentPrice": 0,
-      "naverTargetPrice": 260000,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 156000,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "currentPrice": 0,
-      "naverTargetPrice": 250000,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 150000,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "currentPrice": 0,
-      "naverTargetPrice": 33285,
-      "targetUpsidePercent": 0.0,
-      "targetBasedStopPrice": 20000,
-      "chartStopPrice": 0,
-      "chartStopReason": ""
     }
   ]
 }
