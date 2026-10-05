@@ -1,7 +1,7 @@
 {
-  "version": "A244",
-  "generatedAt": "2026-10-05T21:14:46",
-  "status": "target_fallback_candidates",
+  "version": "A245",
+  "generatedAt": "2026-10-05T21:27:14",
+  "status": "target_clean_filter",
   "universeSource": "existing_json",
   "universeCount": 0,
   "includedCount": 0,
@@ -213,7 +213,10 @@
   "supplySource": "naver_finance_item_frgn",
   "newsCollectedCandidateCount": 0,
   "newsItemCount": 0,
-  "targetPriceCandidateCount": 24,
+  "targetPriceCandidateCount": 13,
   "rawTargetRows": 126,
-  "candidateSource": "built_in_fallback_top25"
+  "candidateSource": "built_in_fallback_top25",
+  "reliableTargetCandidateCount": 11,
+  "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
+  "source": "target_price_bands_a244"
 }
