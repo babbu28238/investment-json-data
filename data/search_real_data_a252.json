@@ -1,9 +1,9 @@
 {
   "version": "A252",
-  "generatedAt": "2026-10-02T20:10:01",
+  "generatedAt": "2026-10-05T22:12:23",
   "summary": {
     "version": "A252",
-    "generatedAt": "2026-10-02T20:10:01",
+    "generatedAt": "2026-10-05T22:12:23",
     "status": "search_real_data",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 56,
+    "candidateCount": 51,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -213,100 +213,29 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplyDiagRows": 117,
-    "supplySource": "naver_supply_detail_a234",
-    "supplyMergedCount": 0,
-    "newsItemCount": 0,
-    "newsMergedCount": 0,
+    "supplySource": "naver_finance_item_frgn",
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 17,
+    "newsItemCount": 0,
+    "targetPriceCandidateCount": 13,
+    "rawTargetRows": 126,
     "candidateSource": "stock_candidates_ai_scored.json",
-    "candidateSourcesTried": [
-      {
-        "path": "data/stock_candidates_ai_scored.json",
-        "count": 0
-      },
-      {
-        "path": "data/stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_universe.json",
-        "count": 30
-      }
-    ],
-    "rawTargetRows": 141,
-    "reliableTargetCandidateCount": 14,
+    "reliableTargetCandidateCount": 11,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 10,
+    "targetUpsideCandidateCount": 9,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 17,
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 13,
     "chartStopCount": 25,
-    "allStockLookupCount": 56,
+    "allStockLookupCount": 51,
     "outputLookup": "all_stock_lookup_a251.json",
-    "searchLookupCount": 56,
-    "searchPriceConnectedCount": 56,
+    "searchLookupCount": 51,
+    "searchPriceConnectedCount": 51,
     "searchTargetConnectedCount": 0
   },
   "details": [
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "price": 85100,
-      "priceSource": "https://m.stock.naver.com/domestic/stock/058470/total",
-      "targetPrice": 0,
-      "rawTargets": [],
-      "targetSource": "https://m.stock.naver.com/domestic/stock/058470/total",
-      "chartStopPrice": 78300
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "price": 347000,
-      "priceSource": "https://m.stock.naver.com/domestic/stock/028260/total",
-      "targetPrice": 0,
-      "rawTargets": [],
-      "targetSource": "https://m.stock.naver.com/domestic/stock/028260/total",
-      "chartStopPrice": 319000
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "price": 38500,
-      "priceSource": "https://m.stock.naver.com/domestic/stock/068760/total",
-      "targetPrice": 0,
-      "rawTargets": [],
-      "targetSource": "https://m.stock.naver.com/domestic/stock/068760/total",
-      "chartStopPrice": 35400
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "price": 7722,
-      "priceSource": "https://m.stock.naver.com/domestic/stock/091990/total",
-      "targetPrice": 0,
-      "rawTargets": [],
-      "targetSource": "https://m.stock.naver.com/domestic/stock/091990/total",
-      "chartStopPrice": 7100
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "price": 15660,
-      "priceSource": "https://m.stock.naver.com/domestic/stock/112040/total",
-      "targetPrice": 0,
-      "rawTargets": [],
-      "targetSource": "https://m.stock.naver.com/domestic/stock/112040/total",
-      "chartStopPrice": 14400
-    },
     {
       "code": "277810",
       "name": "레인보우로보틱스",
@@ -430,12 +359,12 @@
     {
       "code": "010620",
       "name": "HD현대미포",
-      "price": 7722,
+      "price": 7773,
       "priceSource": "https://m.stock.naver.com/domestic/stock/010620/total",
       "targetPrice": 0,
       "rawTargets": [],
       "targetSource": "https://m.stock.naver.com/domestic/stock/010620/total",
-      "chartStopPrice": 7100
+      "chartStopPrice": 7150
     },
     {
       "code": "267260",
