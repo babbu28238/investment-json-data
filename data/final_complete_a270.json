@@ -1,9 +1,9 @@
 {
   "version": "A270",
-  "generatedAt": "2026-10-02T21:21:21",
+  "generatedAt": "2026-10-05T23:12:22",
   "summary": {
     "version": "A270",
-    "generatedAt": "2026-10-02T21:21:21",
+    "generatedAt": "2026-10-05T23:12:22",
     "status": "final_complete",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -73,7 +73,7 @@
         "count": 0
       }
     },
-    "candidateCount": 56,
+    "candidateCount": 51,
     "priceUpdatedCount": 0,
     "priceFailedCount": 0,
     "zeroAfterCount": 0,
@@ -213,63 +213,42 @@
       }
     ],
     "supplyHitCount": 0,
-    "supplyDiagRows": 117,
-    "supplySource": "naver_supply_detail_a234",
-    "supplyMergedCount": 0,
-    "newsItemCount": 0,
-    "newsMergedCount": 0,
+    "supplySource": "naver_finance_item_frgn",
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 17,
+    "newsItemCount": 0,
+    "targetPriceCandidateCount": 13,
+    "rawTargetRows": 126,
     "candidateSource": "stock_candidates_ai_scored.json",
-    "candidateSourcesTried": [
-      {
-        "path": "data/stock_candidates_ai_scored.json",
-        "count": 0
-      },
-      {
-        "path": "data/stock_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_candidates.json",
-        "count": 0
-      },
-      {
-        "path": "data/market_universe.json",
-        "count": 30
-      }
-    ],
-    "rawTargetRows": 141,
-    "reliableTargetCandidateCount": 14,
+    "reliableTargetCandidateCount": 11,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 10,
+    "targetUpsideCandidateCount": 9,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
-    "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 17,
+    "stopGuideUpdatedCount": 25,
+    "targetBasedStopCount": 13,
     "chartStopCount": 25,
-    "allStockLookupCount": 56,
+    "allStockLookupCount": 51,
     "outputLookup": "all_stock_lookup_a251.json",
-    "searchLookupCount": 56,
-    "searchPriceConnectedCount": 56,
+    "searchLookupCount": 51,
+    "searchPriceConnectedCount": 51,
     "searchTargetConnectedCount": 0,
-    "validPriceCount": 53,
-    "validTargetCount": 15,
+    "validPriceCount": 48,
+    "validTargetCount": 12,
     "priceFixedCount": 3,
-    "targetFixedCount": 2,
+    "targetFixedCount": 1,
     "invalidPriceCandidateCount": 0,
     "invalidStopCleanedCount": 3,
-    "normalCandidateCount": 56,
+    "normalCandidateCount": 51,
     "manualReviewCount": 3,
     "outputReview": "manual_price_review_a256.json",
     "invalidRefetchAttemptCount": 3,
     "invalidRefetchRecoveredCount": 3,
     "invalidRefetchStillInvalidCount": 0,
-    "priceConnectedCount": 56,
-    "targetConnectedCount": 15,
-    "chartStopConnectedCount": 56
+    "priceConnectedCount": 51,
+    "targetConnectedCount": 12,
+    "chartStopConnectedCount": 51
   },
   "details": [
     {
@@ -308,9 +287,9 @@
       "code": "005930",
       "name": "삼성전자",
       "priceValidationStatus": "정상",
-      "currentPrice": 122000,
+      "currentPrice": 121200,
       "targetMedianPrice": 0,
-      "chartStopPrice": 112000
+      "chartStopPrice": 111500
     },
     {
       "code": "000660",
@@ -405,7 +384,7 @@
       "name": "카카오",
       "priceValidationStatus": "정상",
       "currentPrice": 33400,
-      "targetMedianPrice": 59500,
+      "targetMedianPrice": 50475,
       "chartStopPrice": 30700
     },
     {
@@ -420,9 +399,9 @@
       "code": "108490",
       "name": "로보티즈",
       "priceValidationStatus": "정상",
-      "currentPrice": 81400,
+      "currentPrice": 81100,
       "targetMedianPrice": 0,
-      "chartStopPrice": 74900
+      "chartStopPrice": 74600
     },
     {
       "code": "008770",
@@ -471,46 +450,6 @@
       "currentPrice": 537000,
       "targetMedianPrice": 0,
       "chartStopPrice": 494000
-    },
-    {
-      "code": "058470",
-      "name": "리노공업",
-      "priceValidationStatus": "정상",
-      "currentPrice": 85100,
-      "targetMedianPrice": 250000,
-      "chartStopPrice": 78300
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "priceValidationStatus": "정상",
-      "currentPrice": 347000,
-      "targetMedianPrice": 0,
-      "chartStopPrice": 319000
-    },
-    {
-      "code": "068760",
-      "name": "셀트리온제약",
-      "priceValidationStatus": "정상",
-      "currentPrice": 38500,
-      "targetMedianPrice": 57000,
-      "chartStopPrice": 35400
-    },
-    {
-      "code": "091990",
-      "name": "셀트리온헬스케어",
-      "priceValidationStatus": "정상",
-      "currentPrice": 7722,
-      "targetMedianPrice": 0,
-      "chartStopPrice": 7100
-    },
-    {
-      "code": "112040",
-      "name": "위메이드",
-      "priceValidationStatus": "정상",
-      "currentPrice": 15660,
-      "targetMedianPrice": 33285,
-      "chartStopPrice": 14400
     },
     {
       "code": "090360",
@@ -564,9 +503,9 @@
       "code": "010620",
       "name": "HD현대미포",
       "priceValidationStatus": "정상",
-      "currentPrice": 7722,
+      "currentPrice": 7773,
       "targetMedianPrice": 0,
-      "chartStopPrice": 7100
+      "chartStopPrice": 7150
     },
     {
       "code": "267260",
