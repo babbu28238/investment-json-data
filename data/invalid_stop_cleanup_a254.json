@@ -1,9 +1,9 @@
 {
   "version": "A254",
-  "generatedAt": "2026-10-08T21:23:21",
+  "generatedAt": "2026-10-09T21:00:30",
   "summary": {
     "version": "A254",
-    "generatedAt": "2026-10-08T21:23:21",
+    "generatedAt": "2026-10-09T21:00:30",
     "status": "invalid_stop_cleanup",
     "universeSource": "existing_json",
     "universeCount": 0,
@@ -219,7 +219,7 @@
     "newsItemCount": 0,
     "newsMergedCount": 0,
     "newsCollectedCandidateCount": 0,
-    "targetPriceCandidateCount": 14,
+    "targetPriceCandidateCount": 13,
     "candidateSource": "stock_candidates_ai_scored.json",
     "candidateSourcesTried": [
       {
@@ -239,16 +239,16 @@
         "count": 30
       }
     ],
-    "rawTargetRows": 144,
+    "rawTargetRows": 141,
     "reliableTargetCandidateCount": 8,
     "filterRule": "currentPrice*0.5 <= target <= currentPrice*2.5, remove years and below 10000",
     "source": "target_price_bands_a244.details",
-    "targetUpsideCandidateCount": 6,
+    "targetUpsideCandidateCount": 5,
     "targetSource": "naver_consensus_target",
     "chartStopCandidateCount": 25,
     "stopGuide": "target_60_percent + chart_stop_price",
     "stopGuideUpdatedCount": 30,
-    "targetBasedStopCount": 14,
+    "targetBasedStopCount": 13,
     "chartStopCount": 25,
     "allStockLookupCount": 56,
     "outputLookup": "all_stock_lookup_a251.json",
@@ -256,7 +256,7 @@
     "searchPriceConnectedCount": 56,
     "searchTargetConnectedCount": 0,
     "validPriceCount": 53,
-    "validTargetCount": 12,
+    "validTargetCount": 11,
     "priceFixedCount": 3,
     "targetFixedCount": 2,
     "invalidPriceCandidateCount": 3,
@@ -450,15 +450,15 @@
       "status": "정상",
       "before": {
         "currentPrice": 163400,
-        "targetPrice": 226000,
+        "targetPrice": 0,
         "chartStopPrice": 150500,
-        "stopTimingPrice": 135500
+        "stopTimingPrice": 0
       },
       "after": {
         "currentPrice": 163400,
-        "targetPrice": 226000,
+        "targetPrice": 0,
         "chartStopPrice": 150500,
-        "stopTimingPrice": 135500
+        "stopTimingPrice": 0
       },
       "cleaned": false
     },
@@ -558,15 +558,15 @@
       "status": "정상",
       "before": {
         "currentPrice": 32400,
-        "targetPrice": 54000,
+        "targetPrice": 54131,
         "chartStopPrice": 29800,
-        "stopTimingPrice": 32400
+        "stopTimingPrice": 32500
       },
       "after": {
         "currentPrice": 32400,
-        "targetPrice": 54000,
+        "targetPrice": 54131,
         "chartStopPrice": 29800,
-        "stopTimingPrice": 32400
+        "stopTimingPrice": 32500
       },
       "cleaned": false
     },
@@ -773,15 +773,15 @@
       "name": "셀트리온헬스케어",
       "status": "정상",
       "before": {
-        "currentPrice": 7765,
+        "currentPrice": 7811,
         "targetPrice": 0,
-        "chartStopPrice": 7140,
+        "chartStopPrice": 7190,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 7765,
+        "currentPrice": 7811,
         "targetPrice": 0,
-        "chartStopPrice": 7140,
+        "chartStopPrice": 7190,
         "stopTimingPrice": 0
       },
       "cleaned": false
@@ -917,15 +917,15 @@
       "name": "HD현대미포",
       "status": "정상",
       "before": {
-        "currentPrice": 7765,
+        "currentPrice": 7811,
         "targetPrice": 0,
-        "chartStopPrice": 7140,
+        "chartStopPrice": 7190,
         "stopTimingPrice": 0
       },
       "after": {
-        "currentPrice": 7765,
+        "currentPrice": 7811,
         "targetPrice": 0,
-        "chartStopPrice": 7140,
+        "chartStopPrice": 7190,
         "stopTimingPrice": 0
       },
       "cleaned": false
