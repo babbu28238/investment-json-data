@@ -1,7 +1,7 @@
 {
   "version": "V284_RECOMMENDATION_SCORE_ENGINE",
-  "updatedAt": "2026-10-09 20:48:12",
-  "startedAt": "2026-10-09 20:48:12",
+  "updatedAt": "2026-10-09 22:19:11",
+  "startedAt": "2026-10-09 22:19:11",
   "inputCandidateCount": 24,
   "finalCandidateCount": 24,
   "newsSignalCount": 24,
@@ -16,9 +16,9 @@
   "sectorCounts": {
     "2차전지·소재": 4,
     "반도체·AI": 4,
+    "방산·우주항공": 4,
     "바이오·제약": 3,
     "원전·전력·에너지": 3,
-    "방산·우주항공": 4,
     "인터넷·게임·콘텐츠": 1,
     "로봇·자동화": 1,
     "금융·밸류업": 1,
@@ -97,6 +97,29 @@
     },
     {
       "rank": 4,
+      "name": "한화시스템",
+      "code": "272210",
+      "score": 57,
+      "grade": "D",
+      "action": "제외검토",
+      "breakdown": {
+        "technicalScore": 56,
+        "supplyScore": 50,
+        "newsScore": 88,
+        "reportScore": 50,
+        "liquidityScore": 45,
+        "weights": {
+          "technical": 35,
+          "supply": 25,
+          "news": 15,
+          "report": 15,
+          "liquidity": 10
+        },
+        "supplyMemo": "수급 중립/혼조"
+      }
+    },
+    {
+      "rank": 5,
       "name": "셀트리온",
       "code": "068270",
       "score": 56,
@@ -119,7 +142,7 @@
       }
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "리노공업",
       "code": "058470",
       "score": 55,
@@ -142,7 +165,7 @@
       }
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "두산에너빌리티",
       "code": "034020",
       "score": 54,
@@ -165,7 +188,7 @@
       }
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "LS ELECTRIC",
       "code": "010120",
       "score": 53,
@@ -188,39 +211,16 @@
       }
     },
     {
-      "rank": 8,
-      "name": "에코프로비엠",
-      "code": "247540",
-      "score": 51,
-      "grade": "D",
-      "action": "제외검토",
-      "breakdown": {
-        "technicalScore": 52,
-        "supplyScore": 50,
-        "newsScore": 53,
-        "reportScore": 50,
-        "liquidityScore": 45,
-        "weights": {
-          "technical": 35,
-          "supply": 25,
-          "news": 15,
-          "report": 15,
-          "liquidity": 10
-        },
-        "supplyMemo": "수급 중립/혼조"
-      }
-    },
-    {
       "rank": 9,
-      "name": "한화시스템",
-      "code": "272210",
-      "score": 51,
+      "name": "NAVER",
+      "code": "035420",
+      "score": 52,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 56,
+        "technicalScore": 36,
         "supplyScore": 50,
-        "newsScore": 46,
+        "newsScore": 100,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
@@ -235,15 +235,15 @@
     },
     {
       "rank": 10,
-      "name": "알테오젠",
-      "code": "196170",
+      "name": "에코프로비엠",
+      "code": "247540",
       "score": 51,
       "grade": "D",
       "action": "제외검토",
       "breakdown": {
-        "technicalScore": 37,
+        "technicalScore": 52,
         "supplyScore": 50,
-        "newsScore": 92,
+        "newsScore": 53,
         "reportScore": 50,
         "liquidityScore": 45,
         "weights": {
